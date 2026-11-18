@@ -28,6 +28,8 @@ def _template(story: Story, duration: float) -> dict:
             "y aproximados.\n\n"
             f"Fuentes: {'; '.join(sources)}\n\n"
             "Música y efectos: originales, generados por el canal.\n\n" + " ".join(tags))
+    if m.get("description"):
+        desc = m["description"]
     return {
         "title": title,
         "description": desc,
@@ -63,6 +65,8 @@ def build_metadata(story: Story, duration: float) -> dict:
 
 def make_thumbnail(pipe, meta: dict) -> None:
     """Fotograma promocional: escena marcada (o clímax) + texto grande."""
+    if pipe.story.metadata.get("custom_thumbnail"):
+        return  # miniatura diseñada a mano (scripts/thumbnail_*.py)
     from ..visuals.scene import SceneRenderer
     items = pipe.scene_items()
     want = pipe.story.metadata.get("thumbnail_scene")

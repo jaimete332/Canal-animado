@@ -6,6 +6,7 @@ G = 1200 / 1920  # suelo del jardín
 SUIT = {"outfit": "suit", "helmet": "dome"}
 
 S = []
+DESC = 'Coges una pala y empiezas a cavar hacia el centro de la Tierra. ¿Hasta dónde llegarías? 🌍⛏️\n\nLeo atraviesa la corteza, el manto y el núcleo de la Tierra en menos de un minuto: la mina más profunda del mundo, el pozo de Kola, el mito del «mar de lava», un océano de hierro líquido y el único lugar del planeta donde no pesarías nada.\n\n🧪 DATOS REALES DEL VÍDEO\n• El centro de la Tierra está a unos 6.371 km bajo tus pies.\n• Cavando 1 metro por hora sin parar tardarías más de 700 años.\n• La mina Mponeng (Sudáfrica) supera los 4 km de profundidad, y allí la roca alcanza unos 60 °C.\n• El pozo de Kola (Rusia) llegó a 12.262 m: el agujero más profundo jamás perforado (1970-1989).\n• El manto NO es lava: es roca sólida a más de 1.000 °C que fluye unos centímetros al año.\n• A unos 2.900 km empieza el núcleo externo, de hierro y níquel líquidos.\n• El núcleo interno está a unos 5.400-6.000 °C, tan caliente como la superficie del Sol.\n• En el centro la presión es de unos 3,6 millones de atmósferas y la gravedad neta es casi cero.\n\n⚠️ El viaje de Leo es ficción: ningún traje ni taladro actual sobreviviría. Los datos científicos son reales y aproximados.\n\n📚 Fuentes: NASA (Earth Fact Sheet), USGS, Encyclopaedia Britannica, ICDP / pozo superprofundo de Kola, AngloGold Ashanti (Mponeng), Anzellini et al. – Science (2013), modelo PREM (Dziewonski y Anderson, 1981).\n\n💬 ¿Hasta qué capa crees que llegarías tú: corteza, manto o núcleo? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?» cada semana.\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #centrodelatierra #ciencia #curiosidades #shorts'
 
 
 def sc(id, beat, narration, visual, claims=(), sfx=(), transition="whip", emphasis=(), pause=0.06):
@@ -239,9 +240,12 @@ story = {
     "music_mood": "adventure",
     "scenes": S,
     "metadata": {
-        "title": "¿Y si cavaras hasta el centro de la Tierra? 🌍⛏️",
+        "title": "¿Qué pasaría si cavaras hasta el centro de la Tierra? 🌍",
         "description_intro": "Coges una pala y cavas hacia el centro de la Tierra... ¿hasta dónde llegarías?",
-        "hashtags": ["#centrodelatierra", "#ciencia", "#curiosidades"],
+        "hashtags": ["#quepasariasi", "#centrodelatierra", "#ciencia", "#curiosidades", "#shorts"],
+        "tags": ["qué pasaría si", "centro de la tierra", "cavar hasta el centro de la tierra", "núcleo de la tierra", "pozo de kola", "manto terrestre", "curiosidades", "ciencia", "animación", "hipotéticos"],
+        "custom_thumbnail": True,
+        "description": DESC,
         "pinned_comment": "¿Hasta qué capa crees que llegarías tú? ¿Corteza, manto o núcleo? 👇",
         "thumbnail_text": "¿HASTA EL CENTRO DE LA TIERRA?",
         "thumbnail_scene": "s14",
