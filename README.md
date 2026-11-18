@@ -1,4 +1,4 @@
-# Fábrica de YouTube Shorts animados — «¿Y si...?»
+# Fábrica de YouTube Shorts animados — canal «Hipotéticos»
 
 Sistema que produce **Shorts animados 2D en español de España** del tipo *«¿Qué pasaría si…?»* con un solo comando:
 idea → guion → revisión de datos → voz → música y efectos → animación → subtítulos → render → control de calidad → metadatos.
@@ -101,5 +101,7 @@ Catálogo completo: `python -c "from fabrica.script.writer import catalog; print
   (con Claude para guiones ≈ 0,05-0,10 $; con ElevenLabs ≈ +0,20 $).
 * Claves solo en `.env` (ignorado por git). Reintentos con backoff en todas las APIs y cadena de respaldo de voz.
 * **Nada se publica sin tu aprobación**: `approve` firma el hash del MP4; si cambia, hay que volver a aprobar.
+
+Identidad del canal (nombre, perfil, banner, descripción): [`docs/CANAL.md`](docs/CANAL.md).
 
 Más detalle: [`docs/API_KEYS.md`](docs/API_KEYS.md), [`docs/YOUTUBE.md`](docs/YOUTUBE.md), [`docs/CRECIMIENTO.md`](docs/CRECIMIENTO.md).

@@ -4,10 +4,11 @@
 # ============================================================
 
 channel:
-  name: "¿Y si...? Animado"
+  name: "Hipotéticos"
+  handle: "@HipoteticosES"
   language: es-ES
   mascot: leo              # personaje protagonista (ver fabrica/visuals/character.py)
-  default_hashtags: ["#shorts", "#quepasariasi", "#curiosidades", "#ciencia", "#animacion"]
+  default_hashtags: ["#shorts", "#hipoteticos", "#quepasariasi", "#curiosidades", "#ciencia", "#animacion"]
 
 video:
   width: 1080
