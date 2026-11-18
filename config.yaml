@@ -37,8 +37,8 @@ script:
 
 # --- Voz ---------------------------------------------------
 tts:
-  provider: piper           # kokoro | piper | edge | elevenlabs | openai | google
-  fallback: [kokoro]
+  provider: edge            # kokoro | piper | edge | elevenlabs | openai | google
+  fallback: [piper, kokoro] # si Edge no responde (sin red), se usa voz local
   kokoro:
     model: models/kokoro/kokoro-v1.0.onnx
     voices: models/kokoro/voices-v1.0.bin
@@ -48,9 +48,10 @@ tts:
     model_dir: models/vits-piper-es_ES-sharvard-medium   # o models/vits-piper-es_ES-davefx-medium
     speaker: 0              # sharvard: 0 = hombre, 1 = mujer
     speed: 1.22
-  edge:
-    voice: es-ES-AlvaroNeural
+  edge:                     # gratis; requiere red a speech.platform.bing.com
+    voice: es-ES-AlvaroNeural   # o es-ES-ElviraNeural / es-ES-XimenaNeural
     rate: "+10%"
+    pitch: "+4Hz"
   elevenlabs:
     voice_id: ""            # rellena con el ID de una voz en español de España
     model: eleven_multilingual_v2

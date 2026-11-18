@@ -18,7 +18,7 @@ from ..core.retry import PermanentError, retry
 log = get_logger("llm")
 
 
-class NoLLMAvailable(RuntimeError):
+class NoLLMAvailable(PermanentError):
     pass
 
 

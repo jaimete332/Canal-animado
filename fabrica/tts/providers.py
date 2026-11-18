@@ -120,7 +120,9 @@ class EdgeTTS(TTSProvider):
 
         async def run():
             com = edge_tts.Communicate(text, self.cfg.get("voice", "es-ES-AlvaroNeural"),
-                                       rate=self.cfg.get("rate", "+0%"), boundary="WordBoundary")
+                                       rate=self.cfg.get("rate", "+0%"), pitch=self.cfg.get("pitch", "+0Hz"),
+                                       boundary="WordBoundary",
+                                       proxy=os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy"))
             buf, words = bytearray(), []
             async for ch in com.stream():
                 if ch["type"] == "audio":
