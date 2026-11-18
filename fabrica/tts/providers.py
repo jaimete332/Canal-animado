@@ -61,26 +61,51 @@ class KokoroTTS(TTSProvider):
 
 
 class PiperTTS(TTSProvider):
+    """Piper (voces nativas es_ES) ejecutado directamente con onnxruntime + espeak-ng."""
     name = "piper"
-    _engine = None
+    _cache: dict = {}
 
     def _get(self):
-        if PiperTTS._engine is None:
+        d = _abs(self.cfg["model_dir"])
+        if d not in PiperTTS._cache:
             import glob
+            import json as _json
 
-            import sherpa_onnx
-            d = _abs(self.cfg["model_dir"])
+            import onnxruntime as ort
             model = glob.glob(os.path.join(d, "*.onnx"))[0]
-            conf = sherpa_onnx.OfflineTtsConfig(model=sherpa_onnx.OfflineTtsModelConfig(
-                vits=sherpa_onnx.OfflineTtsVitsModelConfig(
-                    model=model, tokens=os.path.join(d, "tokens.txt"),
-                    data_dir=os.path.join(d, "espeak-ng-data")), num_threads=4))
-            PiperTTS._engine = sherpa_onnx.OfflineTts(conf)
-        return PiperTTS._engine
+            conf = _json.loads(open(model + ".json", encoding="utf-8").read())
+            sess = ort.InferenceSession(model, providers=["CPUExecutionProvider"])
+            PiperTTS._cache[d] = (sess, conf)
+        return PiperTTS._cache[d]
+
+    @staticmethod
+    def _phonemize(text: str, voice: str) -> str:
+        import espeakng_loader
+        from phonemizer.backend import EspeakBackend
+        from phonemizer.backend.espeak.wrapper import EspeakWrapper
+        EspeakWrapper.set_library(espeakng_loader.get_library_path())
+        EspeakWrapper.set_data_path(espeakng_loader.get_data_path())
+        be = EspeakBackend(voice, preserve_punctuation=True, with_stress=True, language_switch="remove-flags")
+        return be.phonemize([text], strip=True)[0]
 
     def synthesize(self, text: str) -> TTSResult:
-        g = self._get().generate(text, sid=0, speed=float(self.cfg.get("speed", 1.0)))
-        return TTSResult(np.asarray(g.samples, dtype=np.float32), g.sample_rate, chars=len(text))
+        sess, conf = self._get()
+        ph = self._phonemize(text, conf["espeak"]["voice"])
+        idmap = conf["phoneme_id_map"]
+        ids = list(idmap["^"]) + list(idmap["_"])
+        for c in ph:
+            if c in idmap:
+                ids += list(idmap[c]) + list(idmap["_"])
+        ids += list(idmap["$"])
+        inf = conf["inference"]
+        length = inf.get("length_scale", 1.0) / float(self.cfg.get("speed", 1.0))
+        feeds = {"input": np.array([ids], dtype=np.int64), "input_lengths": np.array([len(ids)], dtype=np.int64),
+                 "scales": np.array([self.cfg.get("noise_scale", inf["noise_scale"]), length,
+                                     self.cfg.get("noise_w", inf["noise_w"])], dtype=np.float32)}
+        if conf.get("num_speakers", 1) > 1:
+            feeds["sid"] = np.array([int(self.cfg.get("speaker", 0))], dtype=np.int64)
+        audio = sess.run(None, feeds)[0].squeeze().astype(np.float32)
+        return TTSResult(audio, conf["audio"]["sample_rate"], chars=len(text))
 
 
 class EdgeTTS(TTSProvider):

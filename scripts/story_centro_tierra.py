@@ -132,13 +132,13 @@ sc("s10", "development", "A unos treinta y cinco kilómetros llegas al manto. Y 
    sfx=[{"name": "drill", "at": 0.0, "gain_db": -6}, {"name": "riser", "at_word": 9, "gain_db": -3}],
    emphasis=["manto", "sorpresa"])
 
-sc("s11", "development", "No es un mar de lava.", {
+sc("s11", "development", "No, no es un mar de lava.", {
     "background": {"type": "mantle", "flow_arrows": False},
     "character": {"action": "shock", "expression": "shock", "x": 0.5, "y": 0.68, "scale": 1.2, **SUIT},
-    "overlays": [{"type": "myth", "text": "MAR DE LAVA", "y": 400, "stamp_at": 0.55}],
-    "camera": {"move": "punch", "impacts": [0.73]}},
+    "overlays": [{"type": "myth", "text": "MAR DE LAVA", "y": 400, "stamp_at": 0.95}],
+    "camera": {"move": "punch", "impacts": [1.13]}},
    claims=[F("El manto no es lava líquida", "USGS; National Geographic")],
-   sfx=[{"name": "hit", "at": 0.72, "gain_db": -2}], transition="cut", emphasis=["lava"])
+   sfx=[{"name": "hit", "at": 1.12, "gain_db": -2}], transition="cut", emphasis=["lava"])
 
 sc("s12", "development", "Es roca sólida, a más de mil grados, que fluye como un chicle gigante.", {
     "background": {"type": "mantle", "flow_arrows": True},

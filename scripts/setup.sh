@@ -22,6 +22,7 @@ K=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
 S=https://github.com/k2-fsa/sherpa-onnx/releases/download
 if [ ! -d models/vits-piper-es_ES-davefx-medium ]; then
   curl -L $S/tts-models/vits-piper-es_ES-davefx-medium.tar.bz2 | tar xj -C models
+  curl -L $S/tts-models/vits-piper-es_ES-sharvard-medium.tar.bz2 | tar xj -C models
 fi
 if [ ! -d models/whisper-small ]; then
   curl -L $S/asr-models/sherpa-onnx-whisper-small.tar.bz2 | tar xj -C models

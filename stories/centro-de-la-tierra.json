@@ -840,7 +840,7 @@
     {
       "id": "s11",
       "beat": "development",
-      "narration": "No es un mar de lava.",
+      "narration": "No, no es un mar de lava.",
       "visual": {
         "background": {
           "type": "mantle",
@@ -860,13 +860,13 @@
             "type": "myth",
             "text": "MAR DE LAVA",
             "y": 400,
-            "stamp_at": 0.55
+            "stamp_at": 0.95
           }
         ],
         "camera": {
           "move": "punch",
           "impacts": [
-            0.73
+            1.13
           ]
         }
       },
@@ -880,7 +880,7 @@
       "sfx": [
         {
           "name": "hit",
-          "at": 0.72,
+          "at": 1.12,
           "gain_db": -2
         }
       ],

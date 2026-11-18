@@ -36,16 +36,17 @@ script:
 
 # --- Voz ---------------------------------------------------
 tts:
-  provider: kokoro          # kokoro | piper | edge | elevenlabs | openai | google
-  fallback: [piper]
+  provider: piper           # kokoro | piper | edge | elevenlabs | openai | google
+  fallback: [kokoro]
   kokoro:
     model: models/kokoro/kokoro-v1.0.onnx
     voices: models/kokoro/voices-v1.0.bin
     voice: em_alex
     speed: 1.24
-  piper:
-    model_dir: models/vits-piper-es_ES-davefx-medium
-    speed: 1.08
+  piper:                    # voces nativas de España
+    model_dir: models/vits-piper-es_ES-sharvard-medium   # o models/vits-piper-es_ES-davefx-medium
+    speaker: 0              # sharvard: 0 = hombre, 1 = mujer
+    speed: 1.22
   edge:
     voice: es-ES-AlvaroNeural
     rate: "+10%"
