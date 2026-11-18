@@ -1,0 +1,123 @@
+# ============================================================
+#  Fábrica de Shorts — configuración principal
+#  Las API keys NUNCA van aquí: usa variables de entorno (.env)
+# ============================================================
+
+channel:
+  name: "¿Y si...? Animado"
+  language: es-ES
+  mascot: leo              # personaje protagonista (ver fabrica/visuals/character.py)
+  default_hashtags: ["#shorts", "#quepasariasi", "#curiosidades", "#ciencia", "#animacion"]
+
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  target_seconds: [45, 62]   # rango aceptado por el QA
+  crf: 18                    # calidad x264 (menor = mejor)
+  preset: medium
+  audio_bitrate: 192k
+  sample_rate: 48000
+
+# --- Guion -------------------------------------------------
+llm:
+  provider: auto            # auto | anthropic | openai | gemini | offline
+  anthropic_model: claude-sonnet-5-5
+  openai_model: gpt-5-mini
+  gemini_model: gemini-2.5-flash
+  temperature: 0.9
+  max_retries: 3
+
+script:
+  words_per_second: 3.6     # ritmo objetivo de narración
+  max_words: 210
+  min_scenes: 12
+  max_scene_seconds: 5.5    # ninguna escena debe durar más (retención)
+
+# --- Voz ---------------------------------------------------
+tts:
+  provider: kokoro          # kokoro | piper | edge | elevenlabs | openai | google
+  fallback: [piper]
+  kokoro:
+    model: models/kokoro/kokoro-v1.0.onnx
+    voices: models/kokoro/voices-v1.0.bin
+    voice: em_alex
+    speed: 1.24
+  piper:
+    model_dir: models/vits-piper-es_ES-davefx-medium
+    speed: 1.08
+  edge:
+    voice: es-ES-AlvaroNeural
+    rate: "+10%"
+  elevenlabs:
+    voice_id: ""            # rellena con el ID de una voz en español de España
+    model: eleven_multilingual_v2
+  openai:
+    model: gpt-4o-mini-tts
+    voice: ash
+  google:
+    voice: es-ES-Chirp3-HD-Charon
+
+# --- Imágenes generativas (opcional) -----------------------
+images:
+  provider: none            # none | openai | gemini | replicate
+  style_prompt: >-
+    flat 2D cartoon, thick dark outlines, vibrant saturated colors, simple shapes,
+    youtube animated storytelling style, clean vector look, no text
+
+# --- Audio -------------------------------------------------
+audio:
+  music: procedural         # procedural | library (usa assets/music/*.mp3 con licencia)
+  music_gain_db: -20        # bajo la voz
+  duck_db: -9               # atenuación extra mientras habla el narrador
+  sfx_gain_db: -9
+  target_lufs: -14
+
+# --- Subtítulos --------------------------------------------
+subtitles:
+  font: Lilita One
+  size: 92
+  max_words: 3
+  y_position: 0.66          # fracción de altura (zona segura de Shorts: 0.15-0.75)
+  highlight_color: "#FFD23F"
+  base_color: "#FFFFFF"
+  outline: 9
+
+# --- Control de calidad ------------------------------------
+qa:
+  asr_model_dir: models/whisper-small
+  max_wer: 0.18
+  max_silence_s: 0.9
+  min_voice_over_music_db: 10
+  min_motion_score: 0.6
+  loudness_tolerance: 2.0
+
+# --- Costes ------------------------------------------------
+budget:
+  max_usd_per_video: 1.50
+  prices:                   # USD aproximados; revisa la web de cada proveedor
+    anthropic_in_per_mtok: 3.0
+    anthropic_out_per_mtok: 15.0
+    openai_in_per_mtok: 0.25
+    openai_out_per_mtok: 2.0
+    gemini_in_per_mtok: 0.30
+    gemini_out_per_mtok: 2.5
+    elevenlabs_per_1k_chars: 0.18
+    openai_tts_per_1k_chars: 0.015
+    google_tts_per_1k_chars: 0.03
+    image_openai: 0.04
+    image_gemini: 0.039
+    image_replicate: 0.003
+
+# --- Publicación -------------------------------------------
+youtube:
+  enabled: false            # requiere tu autorización (ver docs/YOUTUBE.md)
+  privacy: private          # private | unlisted | public
+  category_id: "27"         # Education
+  client_secrets: secrets/client_secret.json
+  token_file: secrets/youtube_token.json
+
+paths:
+  output: output
+  data: data
+  stories: stories

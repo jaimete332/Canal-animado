@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+models/
+output/
+!output/.gitkeep
+secrets/
+*.log
+.venv/
+data/*.sqlite

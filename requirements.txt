@@ -1,0 +1,18 @@
+# Núcleo
+numpy>=2.0
+scipy>=1.13
+pillow>=10
+pyyaml>=6
+pydantic>=2.6
+requests>=2.31
+soundfile>=0.12
+pycairo>=1.26          # requiere libcairo2-dev (apt) en Linux / `brew install cairo` en macOS
+pyloudnorm>=0.1.1
+# Voz y QA local (gratis, sin GPU)
+kokoro-onnx>=0.4       # TTS neuronal
+sherpa-onnx>=1.10      # Piper es_ES (respaldo) + Whisper (QA)
+librosa>=0.10
+# Opcionales
+edge-tts>=7.0          # voz gratuita es-ES-AlvaroNeural (necesita red a speech.platform.bing.com)
+google-api-python-client>=2.120   # publicación y métricas de YouTube
+google-auth-oauthlib>=1.2
