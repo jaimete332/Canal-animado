@@ -343,6 +343,28 @@ class Character:
             fill_stroke(ctx, self.p["yellow"], lw)
             rrect(ctx, hx - 0.15, hy - 1.14, 0.3, 0.22, 0.06)
             fill_stroke(ctx, (1, 1, 0.85), lw * 0.8)
+        elif pose.helmet == "diving":
+            # gafas de buceo (cristal casi transparente: los ojos siguen viéndose) + tubo
+            for sd in (-1, 1):
+                rrect(ctx, hx + sd * 0.98 - (0.0 if sd > 0 else -0.0) - 0.06, hy - 0.26, 0.12, 0.14, 0.05)
+            ctx.set_source_rgb(*self.p["red"])
+            ctx.fill()
+            rrect(ctx, hx - 0.7 + fx, hy - 0.58, 1.4, 0.8, 0.3)
+            ctx.set_source_rgba(0.7, 0.95, 1.0, 0.18)
+            ctx.fill_preserve()
+            ctx.set_source_rgb(*self.p["red"])
+            ctx.set_line_width(0.09)
+            ctx.stroke_preserve()
+            ctx.set_source_rgb(*INK)
+            ctx.set_line_width(lw * 0.6)
+            ctx.stroke()
+            ctx.move_to(hx - 0.45 + fx, hy - 0.48)
+            ctx.line_to(hx - 0.25 + fx, hy - 0.48)
+            ctx.set_source_rgba(1, 1, 1, 0.8)
+            ctx.set_line_width(0.06)
+            ctx.stroke()
+            limb(ctx, [(hx + 0.95, hy + 0.2), (hx + 1.15, hy - 0.4), (hx + 1.12, hy - 1.2)], 0.14,
+                 self.p["yellow"], out=lw)
         elif pose.helmet == "dome":
             ellipse(ctx, hx, hy - 0.02, 1.32, 1.28)
             ctx.set_source_rgba(0.7, 0.9, 1.0, 0.22)

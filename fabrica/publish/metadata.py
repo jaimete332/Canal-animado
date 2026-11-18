@@ -67,6 +67,8 @@ def make_thumbnail(pipe, meta: dict) -> None:
     """Fotograma promocional: escena marcada (o clímax) + texto grande."""
     if pipe.story.metadata.get("custom_thumbnail"):
         return  # miniatura diseñada a mano (scripts/thumbnail_*.py)
+    if pipe.story.metadata.get("thumbnail"):
+        return designed_thumbnail(pipe, pipe.story.metadata["thumbnail"])
     from ..visuals.scene import SceneRenderer
     items = pipe.scene_items()
     want = pipe.story.metadata.get("thumbnail_scene")
@@ -82,3 +84,87 @@ def make_thumbnail(pipe, meta: dict) -> None:
         {"type": "title", "lines": lines, "y": 300, "size": 130, "at": -5}]
     r = SceneRenderer(item, pipe.fps)
     r.frame(int(item["frames"] * 0.6)).write_to_png(str(pipe.paths.thumbnail))
+
+
+def designed_thumbnail(pipe, spec: dict) -> None:
+    """Miniatura diseñada a partir de una escena:
+    spec = {"scene": "s07", "t": 0.6, "lines": ["¿Y SI...", "..."], "badge": "6.371 km",
+            "character": {...overrides...}, "props": [...extra...], "zoom": 1.1, "focus": [0.5, 0.6]}
+    Genera thumbnail.png (1080x1920) y thumbnail_16x9.png (1280x720)."""
+    import cairo
+
+    from ..visuals.draw import OUT, PAL, fill_stroke, rrect, saved, text
+    from ..visuals.scene import SceneRenderer
+    items = {i["id"]: i for i in pipe.scene_items()}
+    item = json.loads(json.dumps(items[spec["scene"]]))
+    item["trans_in"] = item["trans_out"] = "cut"
+    vis = item["scene"]["visual"]
+    vis["overlays"] = []
+    if spec.get("character") and vis.get("character"):
+        vis["character"].update(spec["character"])
+        for k in ("enter", "path", "actions", "expressions"):
+            if k not in spec["character"]:
+                vis["character"].pop(k, None)
+    vis["props"] = [p for p in vis.get("props", []) if p.get("type") not in spec.get("drop_props", [])]
+    vis["props"] += spec.get("props", [])
+    vis["camera"] = {"move": "static", "zoom_from": spec.get("zoom", 1.0), "focus": spec.get("focus", [0.5, 0.5])}
+    if spec.get("zoom"):
+        vis["camera"] = {"move": "push_in", "zoom_from": spec["zoom"], "zoom_to": spec["zoom"],
+                         "focus": spec.get("focus", [0.5, 0.5])}
+    r = SceneRenderer(item, pipe.fps)
+    base = r.frame(int(item["frames"] * spec.get("t", 0.6)))
+    colors = spec.get("colors", ["white", PAL["yellow"], PAL["yellow"]])
+    lines = spec["lines"]
+
+    def badge(ctx, x, y, size, rot=0.1):
+        if not spec.get("badge"):
+            return
+        with saved(ctx):
+            ctx.translate(x, y)
+            ctx.rotate(rot)
+            ctx.select_font_face("Lilita One")
+            ctx.set_font_size(size)
+            w = ctx.text_extents(spec["badge"]).width
+            rrect(ctx, -w / 2 - 40, -size * 0.8, w + 80, size * 1.6, size * 0.5)
+            fill_stroke(ctx, spec.get("badge_color", PAL["red"]), OUT * 1.2)
+            text(ctx, spec["badge"], 0, 2, size, outline=7, shadow_off=0)
+
+    # vertical
+    v = cairo.ImageSurface(cairo.FORMAT_ARGB32, 1080, 1920)
+    c = cairo.Context(v)
+    c.set_source_surface(base)
+    c.paint()
+    from ..visuals.draw import linear_grad
+    c.rectangle(0, 0, 1080, 700)
+    c.set_source(linear_grad(c, 0, 0, 0, 700, [(0, (0, 0, 0), 0.55), (1, (0, 0, 0), 0)]))
+    c.fill()
+    size = spec.get("size", 150)
+    for i, ln in enumerate(lines):
+        with saved(c):
+            c.translate(540, spec.get("y", 250) + i * size * 1.05)
+            c.rotate(-0.03)
+            text(c, ln, 0, 0, size, color=colors[i % len(colors)], outline=16, max_w=1010)
+    bx, by = spec.get("badge_pos", [760, 1350])
+    badge(c, bx, by, 82)
+    v.write_to_png(str(pipe.paths.thumbnail))
+    # horizontal 16:9: escena a la derecha, texto a la izquierda
+    h = cairo.ImageSurface(cairo.FORMAT_ARGB32, 1280, 720)
+    c = cairo.Context(h)
+    c.set_source_rgb(0.08, 0.07, 0.16)
+    c.paint()
+    with saved(c):
+        sc = spec.get("h_scale", 0.95)
+        c.translate(spec.get("h_shift", 560), 0)
+        c.scale(sc, sc)
+        c.translate(-540, -(1920 * spec.get("crop_y", 0.45)) + 720 / sc / 2)
+        c.set_source_surface(base)
+        c.paint()
+    c.rectangle(0, 0, 1280, 720)
+    c.set_source(linear_grad(c, 0, 0, 1280, 0, [(0, (0.08, 0.07, 0.16), 1), (0.38, (0.08, 0.07, 0.16), 0.85),
+                                                (0.62, (0, 0, 0), 0)]))
+    c.fill()
+    hs = 86
+    for i, ln in enumerate(lines):
+        text(c, ln, 40, 220 + i * hs * 1.08, hs, color=colors[i % len(colors)], outline=11, align="left", max_w=700)
+    badge(c, 260, 220 + len(lines) * hs * 1.08 + 40, 60, rot=-0.04)
+    h.write_to_png(str(pipe.paths.root / "thumbnail_16x9.png"))
