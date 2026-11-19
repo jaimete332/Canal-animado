@@ -215,7 +215,7 @@ def ov_timer(ctx, o, age, dur, t):
         fill_stroke(ctx, (1, 1, 1), OUT)
         rrect(ctx, -25, -165, 50, 45, 10)
         fill_stroke(ctx, PAL["red"], OUT)
-        prog = clamp(age / o.get("over", 1.2))
+        prog = lerp(o.get("p0", 0.0), o.get("p1", 1.0), clamp(age / o.get("over", 1.2)))  # arco parcial opcional
         ctx.move_to(0, 0)
         ctx.arc(0, 0, 100, -math.pi / 2, -math.pi / 2 + prog * 2 * math.pi)
         ctx.close_path()

@@ -1,0 +1,1250 @@
+{
+  "title": "¿Qué le pasaría a tu cuerpo 1 minuto sin casco en el espacio?",
+  "idea": "¿Qué le pasaría a tu cuerpo 1 minuto sin casco en el espacio?",
+  "slug": "sin-casco-en-el-espacio",
+  "category": "espacio",
+  "question": "¿Tú saldrías al espacio?",
+  "music_mood": "mystery",
+  "scenes": [
+    {
+      "id": "e01",
+      "beat": "hook",
+      "narration": "Estás en el espacio y te quitas el casco. Tienes un minuto.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 760,
+            "y": 1650,
+            "r": 520
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.72,
+          "scale": 1.25,
+          "outfit": "suit",
+          "action": "float",
+          "expression": "smug",
+          "actions": [
+            [
+              "w7",
+              "shock"
+            ]
+          ],
+          "expressions": [
+            [
+              "w7",
+              "shock"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "helmet",
+            "x": 0.78,
+            "y": 0.4,
+            "scale": 0.7,
+            "at_word": 6,
+            "enter": "pop",
+            "loop": "spin",
+            "spin": 0.6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿1 MINUTO",
+              "SIN CASCO?"
+            ],
+            "y": 260,
+            "size": 120
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w7"
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at_word": 6
+        },
+        {
+          "name": "hit",
+          "at_word": 9,
+          "gain_db": -6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "casco",
+        "minuto"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e02",
+      "beat": "setup",
+      "narration": "Segundo cero: suelta el aire. Si lo aguantas, tus pulmones pueden romperse.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF6B5C"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "lungs",
+            "x": 0.5,
+            "y": 0.6,
+            "scale": 1.3,
+            "hold": 1.0,
+            "breathe": false,
+            "enter": "pop",
+            "loop": "shake",
+            "at_word": 0
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "SEGUNDO 0",
+            "x": 400,
+            "y": 300,
+            "size": 72,
+            "bg": "#E8392F"
+          },
+          {
+            "type": "timer",
+            "text": "0:00",
+            "x": 870,
+            "y": 300,
+            "p0": 0,
+            "p1": 0,
+            "over": 1.5
+          },
+          {
+            "type": "fact",
+            "label": "OJO",
+            "text": "Aguantar la respiración al perder la presión puede dañar los pulmones",
+            "at_word": 5,
+            "y": 470
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "shake": 0.15
+        }
+      },
+      "claims": [
+        {
+          "text": "Aguantar la respiración durante una descompresión rápida puede dañar gravemente los pulmones",
+          "kind": "fact",
+          "source": "NASA, Bioastronautics Data Book (SP-3006)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "crack",
+          "at_word": 9,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "suelta",
+        "pulmones"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e03",
+      "beat": "setup",
+      "narration": "Ahí fuera no hay presión: el aire de tu pecho se expande de golpe.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 760,
+            "y": 1650,
+            "r": 520
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.72,
+          "scale": 1.25,
+          "outfit": "suit",
+          "action": "float",
+          "expression": "surprised",
+          "extras": {
+            "swell": 0.3
+          }
+        },
+        "props": [
+          {
+            "type": "bubbles",
+            "x": 0.5,
+            "y": 0.42,
+            "at_word": 7
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 101,
+            "to": 0,
+            "suffix": " kPa",
+            "at_word": 2,
+            "over": 1.0,
+            "y": 300,
+            "size": 120,
+            "sub": "PRESIÓN A TU ALREDEDOR"
+          }
+        ],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [
+        {
+          "text": "En el espacio la presión es prácticamente nula, frente a unos 101 kPa a nivel del mar",
+          "kind": "fact",
+          "source": "NASA"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at_word": 9
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "golpe"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e04",
+      "beat": "development",
+      "narration": "Segundo cinco: la saliva de tu lengua empieza a burbujear, como si hirviera.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 760,
+            "y": 1650,
+            "r": 520
+          }
+        },
+        "character": {
+          "x": 0.45,
+          "y": 0.82,
+          "scale": 1.5,
+          "outfit": "suit",
+          "action": "float",
+          "expression": "shock",
+          "extras": {
+            "swell": 0.4
+          }
+        },
+        "props": [
+          {
+            "type": "bubbles",
+            "x": 0.47,
+            "y": 0.42,
+            "at_word": 6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "SEGUNDO 5",
+            "x": 400,
+            "y": 300,
+            "size": 72,
+            "bg": "#FF8A00"
+          },
+          {
+            "type": "timer",
+            "text": "0:05",
+            "x": 870,
+            "y": 300,
+            "p0": 0,
+            "p1": 0.08333333333333333,
+            "over": 1.5
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.35,
+          "focus": [
+            0.47,
+            0.42
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Con presión casi nula, la saliva y las lágrimas empiezan a hervir a temperatura corporal",
+          "kind": "fact",
+          "source": "NASA, Bioastronautics Data Book; testimonio de Jim LeBlanc (1966)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at_word": 6,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "burbujear"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e05",
+      "beat": "development",
+      "narration": "No es calor: sin presión, el agua hierve a la temperatura de tu cuerpo.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "thermometer",
+            "x": 0.3,
+            "y": 0.62,
+            "scale": 1.5,
+            "level": 0.45
+          },
+          {
+            "type": "bubbles",
+            "x": 0.68,
+            "y": 0.6,
+            "at_word": 6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Por encima de unos 19 km de altura, el agua hierve a 37 °C (límite de Armstrong)",
+            "at_word": 5,
+            "y": 230
+          },
+          {
+            "type": "label",
+            "text": "37 °C",
+            "x": 700,
+            "y": 1080,
+            "size": 110,
+            "bg": "#2B6BE8",
+            "at_word": 11
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "A partir de unos 19 km de altura (límite de Armstrong) el agua hierve a la temperatura del cuerpo",
+          "kind": "fact",
+          "source": "NASA; Federal Aviation Administration"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at_word": 6,
+          "gain_db": -8
+        },
+        {
+          "name": "ding",
+          "at_word": 11
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "calor",
+        "cuerpo"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e06",
+      "beat": "development",
+      "narration": "Pero tu sangre no hierve: tus venas la mantienen a presión.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#22B573",
+          "c2": "#6EE7A8"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "heart",
+            "x": 0.5,
+            "y": 0.6,
+            "scale": 1.4,
+            "bpm": 110,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "myth",
+            "text": "TE HIERVE LA SANGRE",
+            "stamp": "¡FALSO!",
+            "y": 330,
+            "stamp_at": 1.0
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "La sangre no llega a hervir porque la presión del sistema circulatorio la mantiene líquida",
+          "kind": "fact",
+          "source": "NASA, Bioastronautics Data Book (SP-3006)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 1.0,
+          "gain_db": -6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "sangre"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e07",
+      "beat": "development",
+      "narration": "Segundo diez: tu piel se hincha, pero no explotas como en las películas.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 760,
+            "y": 1650,
+            "r": 520
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.72,
+          "scale": 1.25,
+          "outfit": "suit",
+          "action": "float",
+          "expression": "dizzy",
+          "extras": {
+            "swell": 1.0
+          },
+          "scale_keys": [
+            [
+              0,
+              1.25
+            ],
+            [
+              "w5",
+              1.4
+            ]
+          ]
+        },
+        "overlays": [
+          {
+            "type": "label",
+            "text": "SEGUNDO 10",
+            "x": 400,
+            "y": 300,
+            "size": 72,
+            "bg": "#9D7BFF"
+          },
+          {
+            "type": "timer",
+            "text": "0:10",
+            "x": 870,
+            "y": 300,
+            "p0": 0.08333333333333333,
+            "p1": 0.16666666666666666,
+            "over": 1.5
+          },
+          {
+            "type": "fact",
+            "text": "El cuerpo puede hincharse mucho (ebullismo), pero la piel resiste: no se revienta",
+            "at_word": 6,
+            "y": 470
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "El ebullismo puede hinchar el cuerpo hasta casi el doble, pero los tejidos son lo bastante elásticos para no romperse",
+          "kind": "fact",
+          "source": "NASA, Bioastronautics Data Book (SP-3006)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 5,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "hincha",
+        "explotas"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e08",
+      "beat": "development",
+      "narration": "Tampoco te congelas al momento: en el vacío, el calor se escapa muy despacio.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 760,
+            "y": 1650,
+            "r": 520
+          }
+        },
+        "character": {
+          "x": 0.35,
+          "y": 0.72,
+          "scale": 1.25,
+          "outfit": "suit",
+          "action": "float",
+          "expression": "surprised",
+          "extras": {
+            "swell": 0.8
+          }
+        },
+        "props": [
+          {
+            "type": "thermometer",
+            "x": 0.78,
+            "y": 0.55,
+            "scale": 1.1,
+            "level": 0.6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "myth",
+            "text": "TE CONGELAS AL INSTANTE",
+            "stamp": "¡FALSO!",
+            "y": 330,
+            "stamp_at": 1.2
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "En el vacío no hay aire que robe el calor; el cuerpo se enfría lentamente, sobre todo por radiación",
+          "kind": "fact",
+          "source": "NASA"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 1.2,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "congelas"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e09",
+      "beat": "climax",
+      "narration": "Segundo quince: el cerebro se queda sin oxígeno y te desmayas.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 760,
+            "y": 1650,
+            "r": 520
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.72,
+          "scale": 1.25,
+          "outfit": "suit",
+          "action": "float",
+          "expression": "dizzy",
+          "extras": {
+            "swell": 0.9
+          },
+          "actions": [
+            [
+              "w8",
+              "fall"
+            ]
+          ],
+          "expressions": [
+            [
+              "w8",
+              "happy_closed"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "brain",
+            "x": 0.78,
+            "y": 0.42,
+            "scale": 0.6,
+            "dirt": 0.6,
+            "at_word": 3,
+            "loop": "wobble"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "SEGUNDO 15",
+            "x": 400,
+            "y": 300,
+            "size": 72,
+            "bg": "#E8392F"
+          },
+          {
+            "type": "timer",
+            "text": "0:15",
+            "x": 870,
+            "y": 300,
+            "p0": 0.16666666666666666,
+            "p1": 0.25,
+            "over": 1.5
+          },
+          {
+            "type": "fact",
+            "text": "Consciencia útil sin presión: unos 10-15 segundos",
+            "at_word": 4,
+            "y": 470
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "tilt": 0.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Con exposición al vacío se pierde la consciencia en unos 10-15 segundos",
+          "kind": "fact",
+          "source": "NASA, Bioastronautics Data Book (SP-3006)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "fall",
+          "at_word": 8,
+          "gain_db": -6
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "desmayas"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e10",
+      "beat": "climax",
+      "narration": "Le pasó de verdad a Jim LeBlanc en mil novecientos sesenta y seis, en una cámara de vacío de la NASA.",
+      "visual": {
+        "background": {
+          "type": "office"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "vacuum_chamber",
+            "x": 0.5,
+            "y": 0.58,
+            "scale": 1.15,
+            "gauge": 0.05,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "JIM LEBLANC · NASA · 1966",
+            "x": 540,
+            "y": 300,
+            "size": 64,
+            "at_word": 4,
+            "bg": "#2B6BE8"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "El 14 de diciembre de 1966, el traje del técnico de la NASA Jim LeBlanc perdió presión dentro de una cámara de vacío en Houston",
+          "kind": "fact",
+          "source": "NASA; Guinness World Records"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 4
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "verdad"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e11",
+      "beat": "climax",
+      "narration": "Su traje perdió el aire. Lo último que recordó fue la saliva burbujeando.",
+      "visual": {
+        "background": {
+          "type": "office"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "vacuum_chamber",
+            "x": 0.5,
+            "y": 0.58,
+            "scale": 1.15,
+            "gauge": 0.0,
+            "enter": "none",
+            "loop": "shake"
+          },
+          {
+            "type": "bubbles",
+            "x": 0.5,
+            "y": 0.42,
+            "at_word": 9
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Contó que notó la saliva burbujear en la lengua justo antes de desmayarse",
+            "at_word": 5,
+            "y": 230
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.25,
+          "focus": [
+            0.5,
+            0.45
+          ],
+          "shake": 0.1
+        }
+      },
+      "claims": [
+        {
+          "text": "LeBlanc recordó notar la saliva burbujear en la lengua antes de perder el conocimiento a los ~14 s",
+          "kind": "fact",
+          "source": "NASA (entrevista a Jim LeBlanc)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at_word": 9,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "saliva"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e12",
+      "beat": "climax",
+      "narration": "Le devolvieron el aire en menos de un minuto y medio, y despertó sin secuelas.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#22B573",
+          "c2": "#6EE7A8"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "suit",
+            "hat": "dome",
+            "x": 0.5,
+            "y": 0.86,
+            "size": 1.3,
+            "expression": "happy",
+            "action": "celebrate",
+            "shirt": "#FFFFFF",
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 87,
+            "suffix": " s",
+            "at_word": 4,
+            "over": 0.8,
+            "y": 330,
+            "size": 130,
+            "sub": "HASTA RECUPERAR LA PRESIÓN"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [
+        {
+          "text": "La cámara se represurizó en unos 87 segundos y LeBlanc se recuperó sin daños duraderos",
+          "kind": "fact",
+          "source": "Guinness World Records; NASA"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 12
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "despertó"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e13",
+      "beat": "climax",
+      "narration": "Segundo sesenta: tu corazón aún late, aunque cada vez más despacio.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 760,
+            "y": 1650,
+            "r": 520
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.68,
+          "scale": 1.25,
+          "outfit": "suit",
+          "action": "float",
+          "expression": "happy_closed",
+          "extras": {
+            "swell": 1.0
+          }
+        },
+        "props": [
+          {
+            "type": "heart",
+            "x": 0.8,
+            "y": 0.4,
+            "scale": 0.55,
+            "bpm": 35,
+            "cold": 0.3
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "SEGUNDO 60",
+            "x": 400,
+            "y": 300,
+            "size": 72,
+            "bg": "#E8392F"
+          },
+          {
+            "type": "timer",
+            "text": "1:00",
+            "x": 870,
+            "y": 300,
+            "p0": 0.25,
+            "p1": 1.0,
+            "over": 1.5
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "En experimentos con perros, el corazón seguía latiendo, muy despacio, tras 90 segundos de vacío",
+          "kind": "fact",
+          "source": "NASA, Bioastronautics Data Book (SP-3006)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "tick",
+          "at": 0.2
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "late"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e14",
+      "beat": "ending",
+      "narration": "En experimentos con animales, casi todos se recuperaban si volvía la presión antes del minuto y medio.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300"
+        },
+        "character": {
+          "visible": false
+        },
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 90,
+            "suffix": " s",
+            "at_word": 13,
+            "over": 0.8,
+            "y": 700,
+            "size": 170,
+            "sub": "EL LÍMITE PARA RECUPERARSE"
+          },
+          {
+            "type": "fact",
+            "text": "Con menos de 90 s de vacío, los animales solían recuperarse por completo",
+            "at_word": 3,
+            "y": 230
+          }
+        ],
+        "props": [
+          {
+            "type": "clock",
+            "x": 0.5,
+            "y": 0.57,
+            "scale": 0.85,
+            "at_word": 10
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Los datos con animales indican recuperación completa con exposiciones al vacío de menos de 90 segundos; más allá de 2 minutos las muertes eran frecuentes",
+          "kind": "fact",
+          "source": "NASA, Bioastronautics Data Book (SP-3006)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 13
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "minuto",
+        "medio"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e15",
+      "beat": "ending",
+      "narration": "Por desgracia, en mil novecientos setenta y uno la Soyuz once perdió el aire, y sus tres cosmonautas murieron.",
+      "visual": {
+        "background": {
+          "type": "space"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "rocket",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 0.9,
+            "enter": "fade",
+            "loop": "bob"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "label": "EN MEMORIA",
+            "text": "Soyuz 11 (1971): las únicas personas fallecidas en el espacio",
+            "at_word": 7,
+            "y": 230
+          }
+        ],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1971 la Soyuz 11 se despresurizó durante el regreso y murieron sus tres cosmonautas: las únicas muertes ocurridas en el espacio",
+          "kind": "fact",
+          "source": "NASA; ESA"
+        }
+      ],
+      "sfx": [],
+      "transition": "circle",
+      "emphasis": [
+        "Soyuz"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e16",
+      "beat": "ending",
+      "narration": "Así que un minuto sin casco no es el final… si alguien te rescata a tiempo.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 760,
+            "y": 1650,
+            "r": 520
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.72,
+          "scale": 1.25,
+          "outfit": "suit",
+          "action": "float",
+          "expression": "happy",
+          "extras": {
+            "swell": 0.4
+          }
+        },
+        "props": [
+          {
+            "type": "helmet",
+            "x": 0.78,
+            "y": 0.4,
+            "scale": 0.7,
+            "loop": "spin",
+            "spin": 0.6,
+            "enter": "none"
+          },
+          {
+            "type": "habitat",
+            "x": 0.22,
+            "y": 0.35,
+            "scale": 0.6,
+            "at_word": 9,
+            "enter": "slide_left"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "timer",
+            "text": "1:00",
+            "x": 870,
+            "y": 300,
+            "p0": 1.0,
+            "p1": 1.0
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 9
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "rescata"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e17",
+      "beat": "ending",
+      "narration": "¿Tú saldrías al espacio? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 760,
+            "y": 1650,
+            "r": 520
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.72,
+          "scale": 1.3,
+          "outfit": "suit",
+          "action": "talk",
+          "expression": "excited",
+          "helmet": "dome",
+          "actions": [
+            [
+              "w4",
+              "point_down"
+            ]
+          ]
+        },
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 4,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 4
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.35
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasaría si te quitaras el casco en el espacio? 🧑‍🚀",
+    "hashtags": [
+      "#quepasariasi",
+      "#espacio",
+      "#cuerpohumano",
+      "#astronauta",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasaría si",
+      "espacio",
+      "sin casco",
+      "vacío",
+      "astronauta",
+      "nasa",
+      "jim leblanc",
+      "ebullismo",
+      "cuerpo humano",
+      "curiosidades",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Cuántos segundos crees que aguantarías tú? ⏱️👇",
+    "description": "Estás en el espacio y te quitas el casco… ¿qué le pasaría a tu cuerpo en un minuto? 🧑‍🚀\n\nLeo flota junto a la Tierra sin casco y descubre, segundo a segundo, lo que hace el vacío: la saliva que burbujea, la piel que se hincha… y la historia real de Jim LeBlanc, el técnico de la NASA que lo vivió en 1966.\n\n🧪 DATOS REALES DEL VÍDEO\n• Lo primero es soltar el aire: aguantar la respiración en una descompresión puede dañar los pulmones.\n• Por encima de unos 19 km (límite de Armstrong), el agua hierve a 37 °C: la saliva y las lágrimas burbujean.\n• La sangre no hierve: la presión del sistema circulatorio la mantiene líquida.\n• El cuerpo se hincha (ebullismo), pero la piel resiste: no explotas.\n• No te congelas al instante: en el vacío el calor se pierde despacio.\n• Se pierde la consciencia en unos 10-15 segundos.\n• En 1966, el traje de Jim LeBlanc perdió presión en una cámara de vacío de la NASA; tras unos 87 s se recuperó la presión y despertó sin secuelas.\n• Con animales, la recuperación era completa con menos de 90 s de vacío.\n• En 1971, la Soyuz 11 se despresurizó y murieron sus tres cosmonautas: las únicas muertes ocurridas en el espacio.\n\n📚 Fuentes: NASA (Bioastronautics Data Book, SP-3006), Guinness World Records, ESA, FAA.\n\n💬 ¿Tú saldrías al espacio? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?».\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #espacio #cuerpohumano #astronauta #shorts",
+    "target_seconds": [
+      50,
+      75
+    ],
+    "thumbnail": {
+      "scene": "e07",
+      "t": 1.8,
+      "lines": [
+        "¿1 MINUTO",
+        "SIN CASCO?"
+      ],
+      "badge": "SEGUNDO 10: TE HINCHAS",
+      "badge_pos": [
+        540,
+        1640
+      ],
+      "y": 260,
+      "character": {
+        "action": "float",
+        "expression": "shock",
+        "x": 0.5,
+        "y": 0.78,
+        "scale": 1.45,
+        "outfit": "suit",
+        "extras": {
+          "swell": 1.0
+        }
+      },
+      "crop_y": 0.55,
+      "h_shift": 800,
+      "h_scale": 0.8
+    }
+  }
+}

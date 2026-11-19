@@ -1081,3 +1081,4 @@ from . import world2  # noqa: E402,F401
 from . import world3  # noqa: E402,F401
 from . import world4  # noqa: E402,F401
 from . import world5  # noqa: E402,F401
+from . import world6  # noqa: E402,F401

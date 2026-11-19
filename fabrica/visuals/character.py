@@ -513,6 +513,49 @@ class Character:
                 ctx.set_source_rgba(0.45, 0.3, 0.55, 0.75 * pose.extras["eyebags"])
                 ctx.set_line_width(0.08)
                 ctx.stroke()
+        if pose.extras.get("frost"):  # frío extremo: piel azulada y escarcha en el pelo
+            fr = float(pose.extras["frost"])
+            ctx.new_path()
+            smooth_closed(ctx, [(hx, hy - 0.98), (hx + 0.86, hy - 0.62), (hx + 1.0, hy + 0.12),
+                                (hx + 0.72, hy + 0.74), (hx, hy + 0.9), (hx - 0.72, hy + 0.74),
+                                (hx - 1.0, hy + 0.12), (hx - 0.86, hy - 0.62)])
+            ctx.set_source_rgba(0.55, 0.75, 1.0, 0.2 * fr)
+            ctx.fill()
+            for k in range(6):
+                x0 = hx - 0.7 + k * 0.28
+                ctx.new_path()
+                ctx.move_to(x0 - 0.06, hy - 0.72)
+                ctx.line_to(x0 + 0.06, hy - 0.72)
+                ctx.line_to(x0, hy - 0.72 + 0.22 * fr)
+                ctx.close_path()
+                ctx.set_source_rgba(0.9, 0.97, 1, 0.95)
+                ctx.fill()
+        if pose.extras.get("swell"):  # hinchazón (ebullismo): mejillas abultadas
+            sw = float(pose.extras["swell"])
+            for s_ in (-1, 1):
+                ellipse(ctx, hx + 0.62 * s_ + fx, hy + 0.36, 0.22 + 0.12 * sw, 0.16 + 0.1 * sw)
+                ctx.set_source_rgba(1.0, 0.6, 0.6, 0.55)
+                ctx.fill()
+        if pose.extras.get("mask"):  # mascarilla FFP2 sobre nariz y boca
+            mc = pose.extras.get("mask_color", (0.96, 0.97, 0.98))
+            ctx.new_path()
+            ctx.move_to(hx - 0.62 + fx, hy + 0.06)
+            ctx.curve_to(hx - 0.2 + fx, hy - 0.08, hx + 0.2 + fx, hy - 0.08, hx + 0.62 + fx, hy + 0.06)
+            ctx.curve_to(hx + 0.66 + fx, hy + 0.45, hx + 0.35 + fx, hy + 0.78, hx + fx, hy + 0.82)
+            ctx.curve_to(hx - 0.35 + fx, hy + 0.78, hx - 0.66 + fx, hy + 0.45, hx - 0.62 + fx, hy + 0.06)
+            ctx.close_path()
+            fill_stroke(ctx, mc, lw * 0.8)
+            ctx.move_to(hx + fx, hy - 0.04)
+            ctx.line_to(hx + fx, hy + 0.8)
+            ctx.set_source_rgba(*INK, 0.35)
+            ctx.set_line_width(0.04)
+            ctx.stroke()
+            for s_ in (-1, 1):
+                ctx.move_to(hx + 0.62 * s_ + fx, hy + 0.12)
+                ctx.line_to(hx + 0.98 * s_, hy + 0.02)
+                ctx.set_source_rgb(*INK)
+                ctx.set_line_width(0.05)
+                ctx.stroke()
         if pose.extras.get("mustache"):
             for sd in (-1, 1):
                 ctx.new_path()

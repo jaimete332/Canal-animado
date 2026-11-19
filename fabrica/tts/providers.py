@@ -117,6 +117,12 @@ class EdgeTTS(TTSProvider):
         import asyncio
 
         import edge_tts
+        import edge_tts.communicate as _ec
+
+        # edge-tts solo confía en certifi: añade el CA del sistema/proxy si está definido (SSL_CERT_FILE)
+        ca = os.environ.get("SSL_CERT_FILE")
+        if ca and os.path.exists(ca):
+            _ec._SSL_CTX.load_verify_locations(ca)
 
         async def run():
             com = edge_tts.Communicate(text, self.cfg.get("voice", "es-ES-AlvaroNeural"),

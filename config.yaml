@@ -43,6 +43,10 @@ tts:
     Buscetta: Buchetta
     Tommaso: Tomaso
     Totò: Totó
+    LeBlanc: Leblán
+    Joughin: Yóquin
+    Carpathia: Carpatia
+    LEBLANC: Leblán
   kokoro:
     model: models/kokoro/kokoro-v1.0.onnx
     voices: models/kokoro/voices-v1.0.bin
