@@ -156,7 +156,7 @@ TITLE_PATTERNS = {
 }
 TOPICS = {
     "espacio": "espacio marte luna sol planeta agujero negro galaxia space mars moon sun planet black hole",
-    "cuerpo humano": "cuerpo dormir sueño comer agua sangre cerebro body sleep brain eat",
+    "cuerpo humano": "cuerpo dormir sueño comer comieras comida beber bebieras agua sangre cerebro respiracion oxigeno pelo piel hueso corazon body sleep brain eat breath heart",
     "supervivencia": "sobrevivir atrapado isla desierto oceano mar selva survive trapped island ocean desert",
     "historia": "medieval edad media roma egipto antiguo historia vikingo history ancient rome egypt",
     "dinero / poder": "millonario dinero rico mafia jefe presidente rey billonario money rich boss king",

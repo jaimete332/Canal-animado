@@ -10,6 +10,7 @@ Si hay métricas de YouTube, la categoría con mejor retención recibe un bonus.
 from __future__ import annotations
 
 import random
+import re
 
 from ..core.log import get_logger
 from ..core.registry import Registry, similarity
@@ -17,56 +18,103 @@ from ..llm.client import NoLLMAvailable, complete
 
 log = get_logger("ideas")
 
+# Banco v2 (2026-11-19), basado en data/research/style_guide.json (334 vídeos medidos con la API):
+#  - temas por tirón medido: cuerpo humano > historia > tierra / catástrofes > espacio;
+#    supervivencia está saturada (solo con giro concreto) y dinero / poder rinde poco.
+#  - cifra concreta en la premisa (41-43 % de los top frente a 22-26 % del resto).
+#  - situación cotidiana o reconocible llevada al extremo, en 2.ª persona, que permita escalada
+#    por niveles (más tiempo, más profundo, más grande) con un número que avanza en pantalla.
+#  - agrupadas en series de plantilla fija (los canales que dominan el top trabajan en serie).
+#  - no repite los Shorts ya hechos en samples/ ni calca títulos ajenos del informe.
 SEED_IDEAS = [
-    ("¿Qué pasaría si cavaras un agujero hasta el centro de la Tierra?", "ciencia"),
-    ("¿Qué pasaría si vivieras 100 días en Marte?", "espacio"),
-    ("¿Qué pasaría si te quedaras atrapado en mitad del océano?", "supervivencia"),
-    ("¿Qué pasaría si fueras inmortal?", "fantasía"),
-    ("¿Qué pasaría si todos los humanos desaparecieran?", "ciencia"),
-    ("¿Qué pasaría si te despertaras en la Edad Media?", "historia"),
-    ("¿Qué pasaría si fueras millonario de la noche a la mañana?", "vida"),
-    ("¿Qué pasaría si te convirtieras en el jefe de la mafia?", "vida"),
-    ("¿Qué pasaría si cayeras en un agujero negro?", "espacio"),
-    ("¿Qué pasaría si no durmieras durante una semana?", "cuerpo"),
-    ("¿Qué pasaría si la Luna desapareciera?", "espacio"),
-    ("¿Qué pasaría si vivieras en la Antártida un año?", "supervivencia"),
-    ("¿Qué pasaría si encogieras al tamaño de una hormiga?", "fantasía"),
-    ("¿Qué pasaría si sobrevivieras a la extinción de los dinosaurios?", "historia"),
-    ("¿Qué pasaría si bebieras solo agua de mar?", "cuerpo"),
-    ("¿Qué pasaría si te tragara una ballena?", "supervivencia"),
-    ("¿Qué pasaría si viajaras a la velocidad de la luz?", "espacio"),
-    ("¿Qué pasaría si la Tierra dejara de girar?", "ciencia"),
-    ("¿Qué pasaría si vivieras en la Estación Espacial un año?", "espacio"),
-    ("¿Qué pasaría si te perdieras en el desierto del Sáhara?", "supervivencia"),
-    ("¿Qué pasaría si fueras el último humano en la Tierra?", "fantasía"),
-    ("¿Qué pasaría si bajaras a la Fosa de las Marianas?", "ciencia"),
-    ("¿Qué pasaría si te quedaras encerrado en un supermercado un mes?", "vida"),
+    # Serie «Tu cuerpo al límite» (cuerpo humano: el tema más estable en ambas pasadas)
+    ("¿Qué pasaría si no bebieras agua en 7 días?", "cuerpo"),
+    ("¿Qué pasaría si aguantaras la respiración 10 minutos?", "cuerpo"),
+    ("¿Qué pasaría si bebieras 6 litros de agua de golpe?", "cuerpo"),
+    ("¿Qué pasaría si comieras solo comida rápida 30 días?", "cuerpo"),
+    ("¿Qué pasaría si subieras al Everest sin oxígeno?", "cuerpo"),
+    ("¿Qué pasaría si te cayera un rayo?", "cuerpo"),
+    ("¿Qué pasaría si no te cortaras el pelo ni las uñas en 10 años?", "cuerpo"),
+    ("¿Qué pasaría si estuvieras 1 hora en agua a 0 grados?", "cuerpo"),
+    ("¿Qué pasa dentro de tu cuerpo si te pica una avispa?", "cuerpo"),
+    ("¿Qué pasaría si no vieras la luz del sol en 1 año?", "cuerpo"),
+    # Serie «Viaje a otra época» (historia: mediana más alta a 12 meses)
+    ("¿Qué pasaría si vivieras en Pompeya el día de la erupción?", "historia"),
+    ("¿Qué pasaría si estuvieras en el Titanic la noche del choque?", "historia"),
+    ("¿Qué pasaría si te tocara construir una pirámide en Egipto?", "historia"),
+    ("¿Qué pasaría si un médico de hoy viajara al año 1348?", "historia"),
+    ("¿Qué pasaría si fueras un vikingo durante 1 año?", "historia"),
+    ("¿Qué pasaría si vivieras 6 meses en un castillo asediado?", "historia"),
+    ("¿Cómo sería tu vida si Roma nunca hubiera caído?", "historia"),
     ("¿Qué pasaría si fueras un gladiador en la antigua Roma?", "historia"),
-    ("¿Qué pasaría si caminaras alrededor del mundo?", "vida"),
-    ("¿Qué pasaría si un asteroide fuera a chocar mañana?", "espacio"),
-    ("¿Qué pasaría si dejaras de comer azúcar un mes?", "cuerpo"),
-    ("¿Qué pasaría si vivieras dentro de un volcán?", "ciencia"),
     ("¿Qué pasaría si fueras pirata en el siglo XVII?", "historia"),
-    ("¿Qué pasaría si pudieras leer la mente?", "fantasía"),
+    # Serie «Planeta al revés» (tierra / catástrofes)
+    ("¿Qué pasaría si entraras en el ojo de un huracán?", "ciencia"),
+    ("¿Qué pasaría si dejara de llover en todo el mundo 1 año?", "ciencia"),
+    ("¿Qué pasaría si el nivel del mar subiera 100 metros?", "ciencia"),
+    ("¿Qué pasaría si la Tierra girara 2 veces más rápido?", "ciencia"),
+    ("¿Qué pasaría si cayera un meteorito de 1 km en el mar?", "ciencia"),
+    ("¿Qué pasaría si todos los volcanes entraran en erupción a la vez?", "ciencia"),
+    ("¿Qué pasaría si bajaras 11.000 metros a la Fosa de las Marianas?", "ciencia"),
+    ("¿Qué pasaría si vivieras dentro de un volcán?", "ciencia"),
+    # Serie «Fuera de la Tierra» (espacio)
+    ("¿Qué pasaría si te quitaras el casco en el espacio 15 segundos?", "espacio"),
+    ("¿Qué pasaría si cayeras hacia Júpiter?", "espacio"),
+    ("¿Qué pasaría si el Sol se apagara 24 horas?", "espacio"),
+    ("¿Qué pasaría si vivieras 1 año en la Luna?", "espacio"),
+    ("¿Qué pasaría si cayeras en un agujero negro?", "espacio"),
+    ("¿Qué pasaría si un asteroide fuera a chocar en 7 días?", "espacio"),
+    # Serie «Tu día a día, al extremo» (situaciones cotidianas llevadas al límite)
+    ("¿Qué pasaría si cayeras de un avión a 10.000 metros?", "supervivencia"),
+    ("¿Qué pasaría si te quedaras encerrado en un ascensor 3 días?", "supervivencia"),
+    ("¿Qué pasaría si internet se apagara en todo el mundo 1 semana?", "vida"),
+    ("¿Qué pasaría si todos los coches del mundo se pararan 1 día?", "vida"),
+    ("¿Qué pasaría si te persiguiera un guepardo 1 minuto?", "supervivencia"),
+    ("¿Qué pasaría si los dinosaurios volvieran 24 horas?", "fantasía"),
+    ("¿Qué pasaría si te congelaran y despertaras dentro de 100 años?", "fantasía"),
 ]
 
+# Shorts ya producidos (samples/<slug>/metadata.json): cuentan como publicados para no repetirlos
+# aunque el registro local esté vacío (p. ej. en una máquina nueva).
+def _already_made() -> list[str]:
+    import json
+    from pathlib import Path
+    out = []
+    for f in sorted((Path(__file__).resolve().parents[2] / "samples").glob("*/metadata.json")):
+        try:
+            t = json.loads(f.read_text(encoding="utf-8")).get("title", "")
+        except (OSError, ValueError):
+            continue
+        if t.startswith("¿"):
+            out.append(t)
+    return out
+
+
 HOOK_WORDS = {
-    "danger": ["sobreviv", "atrapado", "agujero negro", "tragara", "volcán", "asteroide", "perdieras", "cayeras", "gladiador", "pirata"],
-    "scale": ["centro", "todos", "100 días", "año", "velocidad de la luz", "último", "mundo", "inmortal", "fosa"],
-    "visual": ["marte", "océano", "luna", "dinosaurio", "ballena", "hormiga", "volcán", "edad media", "espacial", "desierto", "roma"],
-    "science": ["tierra", "marte", "luz", "luna", "agujero", "fosa", "girar", "agua de mar", "dormir", "durmieras", "azúcar"],
+    "danger": ["atrapado", "encerrado", "agujero negro", "rayo", "volcán", "meteorito", "asteroide", "huracán",
+               "cayeras", "casco", "gladiador", "pirata", "titanic", "pompeya", "guepardo", "asediado"],
+    "scale": ["centro", "todos", "todo el mundo", "año", "siglo", "a la vez", "más rápido", "nunca", "fosa", "everest"],
+    "visual": ["marte", "océano", "luna", "júpiter", "sol", "dinosaurio", "volcán", "pirámide", "castillo", "vikingo",
+               "roma", "titanic", "pompeya", "huracán", "ascensor", "avión", "everest", "espacio", "mar"],
+    "science": ["tierra", "agua", "respiración", "oxígeno", "cuerpo", "dentro de", "comida", "luz", "girar",
+                "grados", "nivel del mar", "lluvia", "llover", "internet", "médico"],
 }
+_NUMBER = re.compile(r"\d|\b(una|un|dos|tres|cien|mil)\s+(día|días|semana|semanas|mes|meses|año|años|hora|horas|minuto|minutos|segundos?)\b")
 
 
 def heuristic_score(idea: str, published: list[str], category_bonus: dict[str, float] | None = None,
                     category: str = "") -> float:
+    """Pesos ajustados a la investigación del nicho: la cifra concreta y la situación reconocible pesan
+    más; el peligro sigue sumando pero menos (en títulos, la palabra «peligro/sobrevivir» rinde peor)."""
     i = idea.lower()
     s = 40.0
-    s += 6 if " te " in f" {i} " or "fueras" in i or "vivieras" in i else 0
-    for k, w in (("danger", 12), ("scale", 9), ("visual", 10), ("science", 8)):
+    s += 6 if " te " in f" {i} " or re.search(r"\b\w+(aras|ieras|eras)\b", i) or " tu " in f" {i} " else 0
+    for k, w in (("danger", 8), ("scale", 7), ("visual", 10), ("science", 8)):
         if any(x in i for x in HOOK_WORDS[k]):
             s += w
-    s -= 4 if len(idea) > 70 else 0
+    s += 8 if _NUMBER.search(i) else 0                       # cifra concreta (medido)
+    s -= 6 if re.search(r"sobreviv|morir|muert|peligr", i) else 0  # peligro dicho, no mostrado (medido)
+    s -= 4 if len(idea) > 65 else 0                           # títulos top: 55-66 caracteres
     max_sim = max((similarity(idea, p) for p in published), default=0)
     s -= 60 * max_sim
     s += (category_bonus or {}).get(category, 0)
@@ -95,7 +143,9 @@ def llm_ideas(n: int, published: list[str]) -> list[tuple[str, str]]:
         r = complete(
             "Eres guionista jefe de un canal de YouTube Shorts animados en español de España del tipo "
             "'¿Qué pasaría si...?'. Respondes solo JSON.",
-            f"Propón {n} ideas originales y muy visuales (mezcla ciencia, historia, supervivencia y humor). "
+            f"Propón {n} ideas originales y muy visuales. Prioriza cuerpo humano, historia, catástrofes naturales "
+            "y espacio; situaciones concretas y reconocibles llevadas al extremo, en segunda persona, con una cifra "
+            "concreta (días, metros, años) cuando encaje; 45-65 caracteres; sin las palabras sobrevivir/morir. "
             f"Evita estas ya publicadas: {published[:50]}. Formato: {{\"ideas\":[{{\"idea\":\"¿Qué pasaría si...?\","
             "\"category\":\"ciencia|espacio|historia|supervivencia|cuerpo|vida|fantasía\"}]}", temperature=1.0)
         return [(x["idea"], x.get("category", "")) for x in r.get("ideas", [])]
@@ -121,12 +171,12 @@ def _niche_bonus(idea: str) -> float:
 
 def ranked_ideas(n: int = 15) -> list[tuple[float, str]]:
     reg = Registry()
-    published = [r["idea"] for r in reg.videos()]
+    published = [r["idea"] for r in reg.videos()] + _already_made()
     bonus = _category_bonus()
     pool = SEED_IDEAS + llm_ideas(12, published)
     scored = []
     for idea, cat in pool:
-        if reg.is_duplicate(idea):
+        if reg.is_duplicate(idea) or any(similarity(idea, p) >= 0.6 for p in published):
             continue
         scored.append((round(min(100, heuristic_score(idea, published, bonus, cat) + _niche_bonus(idea)), 1), idea))
     scored.sort(reverse=True)
