@@ -52,6 +52,8 @@ class Scene(BaseModel):
     sfx: list[SfxCue] = Field(default_factory=list)
     transition: Literal["cut", "whip", "zoom", "flash", "circle", "slide"] = "whip"
     pause_after: float = 0.08
+    voice: dict[str, Any] | None = None      # cambia la voz solo en esta escena, p. ej. {"voice": "es-ES-ElviraNeural"}
+    voice_clip: str | None = None            # vídeo real cuya voz sustituye al TTS (si el archivo existe)
 
     @field_validator("narration")
     @classmethod

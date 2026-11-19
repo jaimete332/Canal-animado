@@ -130,7 +130,7 @@ def run_qa(pipe) -> dict:
     add("códec vídeo", vs["codec_name"] == "h264", vs["codec_name"])
     add("códec audio", bool(aus) and aus[0]["codec_name"] == "aac", aus[0]["codec_name"] if aus else "sin audio")
     add("fps", abs(fps - v["fps"]) < 0.01, f"{fps:.2f}")
-    lo, hi = v["target_seconds"]
+    lo, hi = pipe.story.metadata.get("target_seconds", v["target_seconds"])
     add("duración", lo <= dur <= hi, f"{dur:.1f}s (objetivo {lo}-{hi})")
     add("contenedor mp4", "mp4" in pr["format"]["format_name"], pr["format"]["format_name"])
 

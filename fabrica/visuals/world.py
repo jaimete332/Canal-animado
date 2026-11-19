@@ -1058,3 +1058,4 @@ def draw_prop(ctx, p: dict, t: float, age: float | None = None):
 # Catálogo ampliado (Marte, océano, ballenas...)
 from . import world2  # noqa: E402,F401
 from . import world3  # noqa: E402,F401
+from . import world4  # noqa: E402,F401

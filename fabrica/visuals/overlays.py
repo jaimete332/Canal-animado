@@ -240,7 +240,14 @@ def ov_vignette(ctx, o, age, dur, t):
     ctx.fill()
 
 
+def ov_prop(ctx, o, age, dur, t):
+    """Dibuja cualquier prop en espacio de pantalla (no le afecta la cámara)."""
+    from .world import draw_prop
+    draw_prop(ctx, {**o.get("prop", {}), "abs": False}, t, age=age)
+
+
 OVERLAYS = {
+    "prop": ov_prop,
     "fact": ov_fact, "fiction": ov_fiction, "counter": ov_counter, "depth": ov_depth, "myth": ov_myth,
     "title": ov_title, "label": ov_label, "timer": ov_timer, "flash": ov_flash, "vignette": ov_vignette,
 }

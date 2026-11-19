@@ -136,6 +136,13 @@ class SceneRenderer:
                 setattr(pose, fld, lerp(v[0], v[1], ease_io(clamp(t / max(0.1, v[2] if len(v) > 2 else self.dur)))))
             elif v is not None:
                 setattr(pose, fld, float(v))
+        if cs.get("scale_keys"):
+            ks = [(self.at(k[0]), k[1]) for k in cs["scale_keys"]]
+            sc_ = ks[-1][1] if t >= ks[-1][0] else ks[0][1]
+            for (t0, s0), (t1, s1) in zip(ks, ks[1:]):
+                if t0 <= t <= t1:
+                    sc_ = lerp(s0, s1, ease_io((t - t0) / max(1e-3, t1 - t0)))
+            pose.scale = sc_
         talking = cs.get("talking", action in TALKY)
         if talking and self.mouth:
             pose.mouth_open = self.mouth[min(frame, len(self.mouth) - 1)]

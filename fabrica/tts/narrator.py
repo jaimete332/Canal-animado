@@ -122,11 +122,16 @@ class Narrator:
             t = re.sub(rf"\b{re.escape(k)}\b", v, t)
         return t
 
-    def _synth(self, text: str) -> tuple[TTSResult, str]:
+    def _synth(self, text: str, voice: dict | None = None) -> tuple[TTSResult, str]:
         last: Exception | None = None
         for name in self.chain:
             p = self._prov(name)
-            key = hashlib.sha1(json.dumps([name, self.tts_cfg.get(name), text], sort_keys=True,
+            vcfg = self.tts_cfg.get(name)
+            if voice and name == self.name:
+                from .providers import get_provider
+                vcfg = {**(vcfg or {}), **voice}
+                p = get_provider(name, {**self.tts_cfg, name: vcfg})
+            key = hashlib.sha1(json.dumps([name, vcfg, text], sort_keys=True,
                                           ensure_ascii=False).encode()).hexdigest()[:16]
             wav, meta = self.cache / f"{key}.wav", self.cache / f"{key}.json"
             if wav.exists() and meta.exists():
@@ -146,13 +151,27 @@ class Narrator:
                 last = e
         raise RuntimeError(f"Ningún proveedor TTS funcionó: {last}")
 
-    def narrate_scene(self, text: str, pause_after: float = 0.08) -> tuple[np.ndarray, list[WordTiming]]:
+    def narrate_clip(self, text: str, clip: Path, pause_after: float = 0.08) -> tuple[np.ndarray, list[WordTiming]]:
+        """Usa la voz de un vídeo real; los subtítulos se reparten sobre la parte con voz."""
+        import subprocess
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(clip), "-vn", "-ac", "1", "-ar", str(SR), "-f", "f32le",
+                              "-"], capture_output=True, check=True).stdout
+        a = np.frombuffer(raw, np.float32).copy()
+        _, off = trim_silence(a, SR)
+        voiced, _ = trim_silence(a[int(off * SR):], SR)
+        start, end = off, off + len(voiced) / SR
+        words = _distribute(text.split(), start + 0.03, end - 0.03)
+        a = np.concatenate([a, np.zeros(int(pause_after * SR), np.float32)])
+        return (a / (np.abs(a).max() + 1e-9) * 0.89).astype(np.float32), words
+
+    def narrate_scene(self, text: str, pause_after: float = 0.08, voice: dict | None = None
+                      ) -> tuple[np.ndarray, list[WordTiming]]:
         chunks: list[np.ndarray] = []
         timings: list[WordTiming] = []
         t = 0.0
         clauses = split_clauses(text)
         for i, (clause, punct) in enumerate(clauses):
-            r, used = self._synth(self._spoken(clause))
+            r, used = self._synth(self._spoken(clause), voice)
             a, offset = trim_silence(r.audio, r.sr)
             a = _resample(a, r.sr)
             dur = len(a) / SR

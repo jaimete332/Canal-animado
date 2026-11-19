@@ -71,7 +71,12 @@ class Pipeline:
         self.timeline = []
         nscenes = len(self.story.scenes)
         for i, sc in enumerate(self.story.scenes):
-            audio, words = nar.narrate_scene(sc.narration, sc.pause_after)
+            clip = (ROOT / sc.voice_clip) if sc.voice_clip else None
+            if clip is not None and clip.exists():
+                audio, words = nar.narrate_clip(sc.narration, clip, sc.pause_after)
+                log.info("%s: usando la voz del clip real %s", sc.id, clip.name)
+            else:
+                audio, words = nar.narrate_scene(sc.narration, sc.pause_after, sc.voice)
             # duración en frames exactos para que vídeo y audio no deriven
             f0 = round(t * self.fps)
             dur = len(audio) / SR

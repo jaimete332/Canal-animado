@@ -1,0 +1,631 @@
+{
+  "title": "Leo cruza el espejo con su sudadera Blowfish",
+  "idea": "Anuncio Blowfish: Leo cruza del mundo de cómic al mundo real",
+  "slug": "anuncio-blowfish",
+  "category": "anuncio",
+  "question": "¿La quieres?",
+  "music_mood": "funny",
+  "scenes": [
+    {
+      "id": "b01",
+      "beat": "hook",
+      "narration": "Este es Leo. Vive en un mundo de cómic, donde todo está dibujado…",
+      "visual": {
+        "background": {
+          "type": "comic",
+          "ground": 1360
+        },
+        "character": {
+          "action": "wave",
+          "expression": "excited",
+          "x": 0.5,
+          "y": 0.7083333333333334,
+          "scale": 1.4,
+          "enter": "drop",
+          "outfit": "blowfish"
+        },
+        "props": [
+          {
+            "type": "pow",
+            "x": 0.78,
+            "y": 0.2,
+            "text": "¡HOLA!",
+            "at": 0.5
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.65
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boom",
+          "at": 0.6,
+          "gain_db": -8
+        },
+        {
+          "name": "pop",
+          "at": 0.5
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "leo",
+        "cómic"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "b02",
+      "beat": "setup",
+      "narration": "…menos una cosa: su sudadera Blowfish.",
+      "visual": {
+        "background": {
+          "type": "comic",
+          "ground": 1360,
+          "speedlines": true
+        },
+        "character": {
+          "action": "pose",
+          "expression": "smug",
+          "x": 0.5,
+          "y": 0.7083333333333334,
+          "scale": 1.4,
+          "outfit": "blowfish"
+        },
+        "props": [
+          {
+            "type": "pow",
+            "x": 0.24,
+            "y": 0.22,
+            "text": "¡WOW!",
+            "at_word": 4,
+            "color": "#C4EDC9",
+            "text_color": "#1B2A3D",
+            "tilt": 0.1
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_from": 1.0,
+          "zoom_to": 2.4,
+          "focus": [
+            0.55,
+            0.59
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 4
+        },
+        {
+          "name": "whoosh",
+          "at": 0.1
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "blowfish"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "b03",
+      "beat": "development",
+      "narration": "Y espera a ver la espalda.",
+      "visual": {
+        "background": {
+          "type": "comic",
+          "ground": 1360
+        },
+        "character": {
+          "action": "idle",
+          "expression": "excited",
+          "x": 0.5,
+          "y": 0.7083333333333334,
+          "scale": 1.45,
+          "actions": [
+            [
+              "w2",
+              "turn"
+            ]
+          ],
+          "outfit": "blowfish"
+        },
+        "props": [
+          {
+            "type": "pow",
+            "x": 0.78,
+            "y": 0.22,
+            "text": "¡ZAS!",
+            "at_word": 3
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_from": 1.0,
+          "zoom_to": 1.6,
+          "focus": [
+            0.5,
+            0.56
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at_word": 2
+        },
+        {
+          "name": "pop",
+          "at_word": 3
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "espalda"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "b04",
+      "beat": "development",
+      "narration": "«Incluso el viaje más largo empieza con un solo paso».",
+      "visual": {
+        "background": {
+          "type": "comic",
+          "ground": 1360
+        },
+        "character": {
+          "action": "turn",
+          "expression": "happy",
+          "x": 0.5,
+          "y": 0.7083333333333334,
+          "scale": 1.45,
+          "outfit": "blowfish"
+        },
+        "overlays": [
+          {
+            "type": "prop",
+            "prop": {
+              "type": "jp_text",
+              "x": 0.5,
+              "y": 0.17,
+              "text": "一番長い旅も、一歩から始まる",
+              "size": 74,
+              "enter": "fade",
+              "enter_dur": 0.6,
+              "color": "#C4EDC9"
+            }
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_from": 1.6,
+          "zoom_to": 1.9,
+          "focus": [
+            0.5,
+            0.56
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 0.1
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "paso"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "b05",
+      "beat": "development",
+      "narration": "Así que Leo da ese paso…",
+      "visual": {
+        "background": {
+          "type": "comic",
+          "ground": 1360
+        },
+        "character": {
+          "action": "walk_back",
+          "expression": "happy",
+          "x": 0.5,
+          "y": 0.92,
+          "scale": 1.2,
+          "path": [
+            [
+              0,
+              0.5,
+              0.92
+            ],
+            [
+              "end-0",
+              0.5,
+              0.74
+            ]
+          ],
+          "scale_keys": [
+            [
+              0,
+              1.2
+            ],
+            [
+              "end-0",
+              0.85
+            ]
+          ],
+          "outfit": "blowfish"
+        },
+        "props": [
+          {
+            "type": "mirror",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 0.95,
+            "image": "assets/blowfish/sudadera_frente.jpg",
+            "clip": "assets/blowfish/humano.mp4",
+            "enter": "drop",
+            "img_dy": 40
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08,
+          "focus": [
+            0.5,
+            0.45
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boom",
+          "at": 0.6,
+          "gain_db": -8
+        },
+        {
+          "name": "sparkle",
+          "at": 0.9
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "paso"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "b06",
+      "beat": "climax",
+      "narration": "y cruza al otro lado del espejo.",
+      "visual": {
+        "background": {
+          "type": "comic",
+          "ground": 1360
+        },
+        "character": {
+          "action": "walk_back",
+          "expression": "happy",
+          "x": 0.5,
+          "y": 0.74,
+          "scale": 0.85,
+          "path": [
+            [
+              0,
+              0.5,
+              0.74
+            ],
+            [
+              1.0,
+              0.5,
+              0.6
+            ]
+          ],
+          "scale_keys": [
+            [
+              0,
+              0.85
+            ],
+            [
+              1.0,
+              0.25
+            ]
+          ],
+          "outfit": "blowfish"
+        },
+        "props": [
+          {
+            "type": "mirror",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 0.95,
+            "image": "assets/blowfish/sudadera_frente.jpg",
+            "clip": "assets/blowfish/humano.mp4",
+            "enter": "none",
+            "ripple_anim": true,
+            "img_dy": 40
+          },
+          {
+            "type": "sparks",
+            "x": 0.5,
+            "y": 0.5,
+            "enter": "none",
+            "layer": "front"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_from": 1.08,
+          "zoom_to": 2.3,
+          "focus": [
+            0.5,
+            0.42
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.0,
+          "gain_db": -3
+        },
+        {
+          "name": "whoosh",
+          "at_word": 4
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "espejo"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "b07",
+      "beat": "climax",
+      "narration": "¡Hola, Leo! Bienvenido al mundo real. Aquí tu sudadera existe de verdad.",
+      "visual": {
+        "background": {
+          "type": "clip",
+          "path": "assets/blowfish/humano.mp4",
+          "fallback": {
+            "type": "photo",
+            "path": "assets/blowfish/sudadera_frente.jpg",
+            "bg": "#D7D7D7",
+            "scale": 0.95,
+            "kenburns": 0.1
+          }
+        },
+        "character": {
+          "action": "wave",
+          "expression": "wow",
+          "x": 0.18,
+          "y": 0.97,
+          "scale": 0.75,
+          "enter": "rise",
+          "outfit": "blowfish"
+        },
+        "overlays": [
+          {
+            "type": "flash",
+            "over": 0.35
+          },
+          {
+            "type": "label",
+            "text": "MUNDO REAL",
+            "x": 540,
+            "y": 250,
+            "size": 66,
+            "bg": "#1B2A3D",
+            "color": "#C4EDC9",
+            "at": 0.3
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_from": 1.0,
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 0.0,
+          "gain_db": -4
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "real",
+        "verdad"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/blowfish/humano.mp4",
+      "voice": {
+        "voice": "es-ES-ElviraNeural",
+        "rate": "+8%",
+        "pitch": "+0Hz"
+      }
+    },
+    {
+      "id": "b08",
+      "beat": "climax",
+      "narration": "Azul marino, verde menta y una frase para recordarte que todo empieza con un paso.",
+      "visual": {
+        "background": {
+          "type": "photo",
+          "path": "assets/blowfish/sudadera_espalda.jpg",
+          "bg": "#D7D7D7",
+          "scale": 0.95,
+          "kenburns": 0.12
+        },
+        "character": {
+          "action": "turn",
+          "expression": "happy",
+          "x": 0.85,
+          "y": 0.97,
+          "scale": 0.7,
+          "outfit": "blowfish"
+        },
+        "props": [
+          {
+            "type": "jp_text",
+            "x": 0.5,
+            "y": 0.73,
+            "text": "«El viaje más largo empieza con un paso»",
+            "size": 46,
+            "at_word": 7,
+            "color": "#1B2A3D",
+            "enter": "fade"
+          }
+        ],
+        "camera": {
+          "move": "pan_up",
+          "amount": 90,
+          "zoom": 1.05
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0,
+          "gain_db": -6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "marino",
+        "menta"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "b09",
+      "beat": "ending",
+      "narration": "Blowfish Clothes. Da el primer paso.",
+      "visual": {
+        "background": {
+          "type": "photo",
+          "path": "assets/blowfish/sudadera_espalda.jpg",
+          "bg": "#D7D7D7",
+          "scale": 0.8,
+          "cy": 0.6,
+          "kenburns": 0.05
+        },
+        "character": {
+          "action": "pose",
+          "expression": "smug",
+          "x": 0.82,
+          "y": 0.97,
+          "scale": 0.75,
+          "outfit": "blowfish"
+        },
+        "props": [
+          {
+            "type": "logo",
+            "x": 0.5,
+            "y": 0.16,
+            "text": "BLOWFISH",
+            "sub": "clothes®",
+            "color": "#1B2A3D",
+            "shadow": false,
+            "width": 880,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "DA EL PRIMER PASO",
+            "x": 540,
+            "y": 1560,
+            "size": 60,
+            "bg": "#1B2A3D",
+            "color": "#C4EDC9",
+            "at_word": 2
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.05
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 0.1
+        },
+        {
+          "name": "sparkle",
+          "at_word": 2
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.8
+    }
+  ],
+  "metadata": {
+    "title": "Leo cruza el espejo… y llega al mundo real 🐡 | Blowfish Clothes",
+    "hashtags": [
+      "#publicidad",
+      "#blowfish",
+      "#blowfishclothes",
+      "#streetwear",
+      "#moda"
+    ],
+    "tags": [
+      "blowfish",
+      "blowfish clothes",
+      "sudadera",
+      "streetwear",
+      "moda",
+      "marca emergente",
+      "animación",
+      "anuncio",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Qué te parece la sudadera de Leo? 🐡👇",
+    "description": "Leo vive en un mundo de cómic… hasta que su sudadera Blowfish le lleva al otro lado del espejo. 🐡✨\n\n一番長い旅も、一歩から始まる — «Incluso el viaje más largo empieza con un solo paso».\n\nSudadera Blowfish Clothes® en azul marino con estampado en verde menta.\n\n#publicidad #blowfish #blowfishclothes #streetwear #moda #ropa #hipoteticos",
+    "target_seconds": [
+      20,
+      45
+    ],
+    "thumbnail": {
+      "scene": "b04",
+      "t": 0.8,
+      "lines": [
+        "LEO ESTRENA",
+        "SUDADERA"
+      ],
+      "badge": "BLOWFISH®",
+      "badge_color": "#1B2A3D",
+      "badge_pos": [
+        540,
+        1600
+      ],
+      "y": 260,
+      "crop_y": 0.55,
+      "h_shift": 840,
+      "h_scale": 0.75
+    }
+  }
+}

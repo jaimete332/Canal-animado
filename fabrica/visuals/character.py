@@ -83,7 +83,7 @@ class Character:
         u = 100 * pose.scale
         with saved(ctx):
             ctx.translate(pose.x, pose.y)
-            ctx.scale(u, u)
+            ctx.scale(u * max(0.04, abs(pose.extras.get("turn_sx", 1.0))), u)
             hip_y = -1.0
             ctx.translate(0, hip_y)
             ctx.rotate(pose.rot)
@@ -110,7 +110,10 @@ class Character:
                     ctx.translate(HEAD_C[0], HEAD_C[1] + 0.85)
                     ctx.rotate(pose.head_tilt)
                     ctx.translate(-HEAD_C[0], -(HEAD_C[1] + 0.85))
-                    self._head(ctx, pose, lw)
+                    if pose.extras.get("back"):
+                        self._head_back(ctx, pose, lw)
+                    else:
+                        self._head(ctx, pose, lw)
 
     # ------------------------------------------------------------------
     OUTFITS = {
@@ -120,6 +123,8 @@ class Character:
                      "shoe": (0.25, 0.25, 0.28)},
         "police": {"sleeve": (0.15, 0.24, 0.5), "torso": (0.15, 0.24, 0.5), "pants": (0.12, 0.18, 0.38),
                    "shoe": (0.1, 0.1, 0.12)},
+        "blowfish": {"sleeve": (0.106, 0.165, 0.24), "torso": (0.106, 0.165, 0.24), "pants": (0.86, 0.82, 0.72),
+                     "shoe": (0.95, 0.95, 0.95)},
         "judge": {"sleeve": (0.1, 0.1, 0.12), "torso": (0.1, 0.1, 0.12), "pants": (0.1, 0.1, 0.12),
                   "shoe": (0.1, 0.1, 0.12)},
     }
@@ -280,6 +285,58 @@ class Character:
                 ctx.fill()
             rrect(ctx, -0.7, -1.12, 1.4, 0.14, 0.04)
             fill_stroke(ctx, (0.1, 0.1, 0.12), lw * 0.5)
+        elif o == "blowfish":
+            mint = (0.77, 0.93, 0.79)
+            # puños y cintura acanalados
+            rrect(ctx, -0.68, -1.06, 1.36, 0.14, 0.05)
+            fill_stroke(ctx, (0.09, 0.14, 0.21), lw * 0.6)
+            ctx.set_source_rgba(1, 1, 1, 0.08)
+            ctx.set_line_width(0.012)
+            for k in range(-20, 21):
+                ctx.move_to(k * 0.033, -1.05)
+                ctx.line_to(k * 0.033, -0.93)
+            ctx.stroke()
+            if pose.extras.get("back"):
+                # estampado trasero: BLOWFISH / clothes® / 一番長い旅も、一歩から始まる
+                for txt, font, size, y, sp in (("BLOWFISH", "Michroma", 0.2, -1.96, 0.0),
+                                               ("clothes®", "Jost", 0.095, -1.83, 0.025),
+                                               ("一番長い旅も、一歩から始まる", "Noto Sans JP", 0.06, -1.66, 0.0)):
+                    ctx.select_font_face(font)
+                    ctx.set_font_size(size)
+                    ext = ctx.text_extents(txt)
+                    w = ext.width + sp * (len(txt) - 1)
+                    if txt == "BLOWFISH":
+                        k = 0.9 / w
+                        ctx.save()
+                        ctx.translate(0, y)
+                        ctx.scale(k, k)
+                        ctx.move_to(-ext.width / 2 - ext.x_bearing, -ext.height / 2 - ext.y_bearing)
+                        ctx.text_path(txt)
+                        ctx.set_source_rgb(*mint)
+                        ctx.fill_preserve()
+                        ctx.set_line_width(0.012)
+                        ctx.stroke()
+                        ctx.restore()
+                        continue
+                    x = -w / 2
+                    ctx.set_source_rgb(*mint)
+                    for ch in txt:
+                        ctx.move_to(x, y - ext.height / 2 - ext.y_bearing)
+                        ctx.show_text(ch)
+                        x += ctx.text_extents(ch).x_advance + sp
+            else:
+                # logo pequeño en el pecho (lado izquierdo de quien la lleva)
+                ctx.select_font_face("Jost")
+                ctx.set_font_size(0.085)
+                x = 0.0
+                ctx.set_source_rgb(*mint)
+                for ch in "BLOWFISH":
+                    ctx.move_to(x, -1.9)
+                    ctx.show_text(ch)
+                    x += ctx.text_extents(ch).x_advance + 0.012
+                ctx.set_font_size(0.055)
+                ctx.move_to(x + 0.004, -1.955)
+                ctx.show_text("®")
         elif o == "judge":
             ctx.move_to(-0.26, -2.26)
             ctx.line_to(0, -1.9)
@@ -513,6 +570,29 @@ class Character:
             fill_stroke(ctx, self.p["red"] if blink_on else darken(self.p["red"], 0.5), lw * 0.7)
             if pose.cracks > 0:
                 self._cracks(ctx, pose.cracks, lw)
+
+    def _head_back(self, ctx, pose: Pose, lw):
+        """Cabeza vista por detrás: nuca, orejas y pelo (sin cara)."""
+        hx, hy = HEAD_C
+        rrect(ctx, -0.2, -2.42, 0.4, 0.3, 0.1)
+        fill_stroke(ctx, self.p["skin_sh"], lw)
+        for s_ in (-1, 1):
+            ellipse(ctx, hx + 0.98 * s_, hy + 0.08, 0.17, 0.22)
+            fill_stroke(ctx, self.p["skin"], lw)
+        ctx.new_path()
+        smooth_closed(ctx, [(hx, hy - 0.98), (hx + 0.86, hy - 0.62), (hx + 1.0, hy + 0.12),
+                            (hx + 0.72, hy + 0.74), (hx, hy + 0.9), (hx - 0.72, hy + 0.74),
+                            (hx - 1.0, hy + 0.12), (hx - 0.86, hy - 0.62)])
+        fill_stroke(ctx, self.p["skin"], lw)
+        ctx.new_path()
+        smooth_closed(ctx, [(hx, hy - 1.05), (hx + 0.9, hy - 0.66), (hx + 1.0, hy + 0.05), (hx + 0.7, hy + 0.5),
+                            (hx, hy + 0.62), (hx - 0.7, hy + 0.5), (hx - 1.0, hy + 0.05), (hx - 0.9, hy - 0.66)])
+        fill_stroke(ctx, self.p["hair"], lw)
+        ctx.move_to(hx - 0.1, hy - 1.0)
+        ctx.curve_to(hx - 0.2, hy - 1.5, hx + 0.35, hy - 1.62, hx + 0.62, hy - 1.38)
+        ctx.curve_to(hx + 0.4, hy - 1.3, hx + 0.38, hy - 1.15, hx + 0.48, hy - 1.0)
+        ctx.close_path()
+        fill_stroke(ctx, self.p["hair"], lw)
 
     def _cracks(self, ctx, amount, lw):
         hx, hy = HEAD_C
@@ -915,7 +995,36 @@ def a_walk(t, d, b: Pose, p):
     return b
 
 
+def a_turn(t, d, b: Pose, p):
+    """Se da la vuelta para enseñar la espalda (giro en 0,45 s) y se queda presumiendo."""
+    k = clamp(t / 0.45)
+    b.extras["turn_sx"] = math.cos(math.pi * k)
+    b.extras["back"] = k > 0.5
+    b = a_idle(t, d, b, p)
+    if k >= 1:
+        b.arm_l = (0.55 + 0.1 * math.sin(t * 3), 1.6)
+        b.arm_r = (0.55 + 0.1 * math.sin(t * 3 + 1), 1.6)   # manos a la cintura
+        b.y -= 6 * abs(math.sin(t * 2.5))
+    return b
+
+
+def a_walk_back(t, d, b: Pose, p):
+    b.extras["back"] = True
+    return a_walk(t, d, b, p)
+
+
+def a_pose(t, d, b: Pose, p):
+    """Pose de modelo: manos a los bolsillos, ligero balanceo."""
+    b = a_idle(t, d, b, p)
+    b.hand_l = (-0.5, -1.25)
+    b.hand_r = (0.5, -1.25)
+    b.head_tilt = 0.08 * math.sin(t * 1.5)
+    b.lean = 0.04 * math.sin(t * 1.2)
+    return b
+
+
 ACTIONS = {
+    "turn": a_turn, "walk_back": a_walk_back, "pose": a_pose,
     "idle": a_idle, "talk": a_talk, "present": a_present, "point_up": a_point_up,
     "point_down": a_point_down, "dig": a_dig, "drill": a_drill, "fall": a_fall, "float": a_float,
     "swim": a_swim, "shock": a_shock, "celebrate": a_celebrate, "smug": a_smug, "sweat": a_sweat,
