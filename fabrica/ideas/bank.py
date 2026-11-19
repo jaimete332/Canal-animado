@@ -106,6 +106,19 @@ def llm_ideas(n: int, published: list[str]) -> list[tuple[str, str]]:
         return []
 
 
+def _niche_bonus(idea: str) -> float:
+    """+8 si la idea toca un tema que la investigación del nicho marca como de más tirón."""
+    from ..research.niche import TOPICS, _norm, style_guide
+    g = style_guide()
+    if not g:
+        return 0.0
+    i = _norm(idea)
+    for rank, topic in enumerate(g.get("preferred_topics", [])):
+        if any(w in i for w in TOPICS.get(topic, "").split()):
+            return 8.0 - rank * 1.5
+    return 0.0
+
+
 def ranked_ideas(n: int = 15) -> list[tuple[float, str]]:
     reg = Registry()
     published = [r["idea"] for r in reg.videos()]
@@ -115,7 +128,7 @@ def ranked_ideas(n: int = 15) -> list[tuple[float, str]]:
     for idea, cat in pool:
         if reg.is_duplicate(idea):
             continue
-        scored.append((round(heuristic_score(idea, published, bonus, cat), 1), idea))
+        scored.append((round(min(100, heuristic_score(idea, published, bonus, cat) + _niche_bonus(idea)), 1), idea))
     scored.sort(reverse=True)
     return scored[:n]
 

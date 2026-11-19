@@ -1,0 +1,27 @@
+{
+ "updated": "2026-11-19",
+ "source": "inicial (búsqueda web, sin datos de la API de YouTube) — sustitúyela ejecutando `python -m fabrica research`",
+ "n_videos": 0,
+ "rules": [
+  "Protagonista en segunda persona: el espectador es quien vive la situación («Te tragas…», «Te despiertas…»).",
+  "Gancho visual en el primer segundo: la situación ya está ocurriendo, sin introducción; el título-pregunta aparece en pantalla de inmediato.",
+  "Cambio visual cada 1-3 s (plano, acción, zoom o elemento nuevo); nunca una imagen quieta.",
+  "Duración: probar vídeos más cortos (30-45 s) además de los de 45-60 s; los formatos de referencia suelen ir de 20 a 60 s.",
+  "Título corto con la pregunta y un solo emoji al final (formato «¿Qué pasaría si…? 🤔»).",
+  "Temas de cuerpo humano y supervivencia muy explotados por los referentes (p. ej. el cuerpo por dentro, situaciones peligrosas); explicar «cómo funciona» algo también rinde.",
+  "Final que conecte con el principio (bucle) o con una pregunta abierta para comentarios.",
+  "Narración rápida, frases de 6-12 palabras, un dato o giro por escena."
+ ],
+ "preferred_topics": ["cuerpo humano", "supervivencia", "espacio", "animales"],
+ "title_examples": [
+  "What If Humans Had Hummingbird Hearts 🤔 (~30 M vistas, según chartslist.com)",
+  "How Stitches Work (~253 M vistas, según la wiki de fans de Zack D. Films)"
+ ],
+ "references": [
+  {"channel": "Zack D. Films", "why": "Referente del formato «what if» en 3D, segunda persona, temas médicos; ~79.300 M de vistas totales según una wiki de fans (sin verificar)"},
+  {"channel": "Hasta Que Funcione (@HastaQueFuncione3D)", "why": "Referente en español indicado por el usuario"},
+  {"channel": "AniNova Studios", "why": "Preguntas hipotéticas animadas en español"}
+ ],
+ "target_seconds": {"mediana_s": null, "min_s": 20, "max_s": 60},
+ "principle": "Replicar patrones (estructura, ritmo, formato), nunca guiones, personajes, marcas ni miniaturas ajenas."
+}

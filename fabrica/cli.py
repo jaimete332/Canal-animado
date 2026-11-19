@@ -11,6 +11,8 @@
   python -m fabrica upload centro-de-la-tierra               # sube a YouTube (privado por defecto)
   python -m fabrica tiktok-auth                              # autoriza tu cuenta de TikTok (una vez)
   python -m fabrica tiktok-upload centro-de-la-tierra [--draft]  # sube a TikTok (privado / borradores)
+  python -m fabrica research [--from-file datos.json]        # investiga el nicho → guía de estilo
+  python -m fabrica style                                    # muestra la guía de estilo vigente
   python -m fabrica metrics                                  # descarga métricas de YouTube
   python -m fabrica insights                                 # aprendizajes para próximos guiones
   python -m fabrica doctor                                   # comprueba dependencias, modelos y claves
@@ -112,6 +114,19 @@ def cmd_tiktok_upload(a):
     print(f"TikTok: {'enviado a borradores' if a.draft else 'publicado'} (publish_id {pid})")
 
 
+def cmd_research(a):
+    from .research.niche import run
+    g = run(queries=a.queries, from_file=Path(a.from_file) if a.from_file else None, per_query=a.per_query,
+            months=a.months)
+    print("\n".join(f"• {r}" for r in g["rules"]))
+
+
+def cmd_style(a):
+    from .research.niche import style_guide
+    g = style_guide()
+    print(json.dumps(g, indent=2, ensure_ascii=False) if g else "Aún no hay guía: ejecuta `python -m fabrica research`")
+
+
 def cmd_metrics(a):
     from .analytics.metrics import fetch_all
     fetch_all()
@@ -175,6 +190,10 @@ def main(argv=None):
     s = sub.add_parser("tiktok-upload"); s.add_argument("slug"); s.add_argument("--draft", action="store_true")
     s.add_argument("--privacy", choices=["SELF_ONLY", "MUTUAL_FOLLOW_FRIENDS", "FOLLOWER_OF_CREATOR", "PUBLIC_TO_EVERYONE"])
     s.set_defaults(f=cmd_tiktok_upload)
+    s = sub.add_parser("research", help="investiga el nicho y actualiza la guía de estilo")
+    s.add_argument("--queries", nargs="*"); s.add_argument("--from-file"); s.add_argument("--per-query", type=int, default=25)
+    s.add_argument("--months", type=int, default=12); s.set_defaults(f=cmd_research)
+    sub.add_parser("style", help="muestra la guía de estilo del nicho").set_defaults(f=cmd_style)
     sub.add_parser("metrics").set_defaults(f=cmd_metrics)
     sub.add_parser("insights").set_defaults(f=cmd_insights)
     sub.add_parser("doctor").set_defaults(f=cmd_doctor)

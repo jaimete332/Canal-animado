@@ -97,7 +97,11 @@ def write_story(idea: str, feedback: str | None = None) -> Story:
             feedback = ""
     rules = RULES.format(seconds=58, min_words=150, max_words=sc["max_words"], min_scenes=sc["min_scenes"],
                          catalog=json.dumps(catalog()), example=_example())
-    prompt = f"IDEA: {idea}\n\n{rules}\n\nAPRENDIZAJES DE VÍDEOS ANTERIORES: {feedback or 'ninguno aún'}"
+    from ..research.niche import style_guide
+    guide = style_guide()
+    niche = ("\n".join(f"- {r}" for r in guide["rules"]) + f"\nPRINCIPIO: {guide['principle']}") if guide else "sin datos aún"
+    prompt = (f"IDEA: {idea}\n\n{rules}\n\nAPRENDIZAJES DE VÍDEOS ANTERIORES: {feedback or 'ninguno aún'}"
+              f"\n\nGUÍA DE ESTILO DEL NICHO (investigación de los vídeos que mejor funcionan):\n{niche}")
     try:
         data = complete(SYSTEM, prompt, max_tokens=12000)
     except NoLLMAvailable as e:
