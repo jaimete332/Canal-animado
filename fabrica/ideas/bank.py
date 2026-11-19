@@ -28,6 +28,7 @@ log = get_logger("ideas")
 #  - no repite los Shorts ya hechos en samples/ ni calca títulos ajenos del informe.
 SEED_IDEAS = [
     # Serie «Tu cuerpo al límite» (cuerpo humano: el tema más estable en ambas pasadas)
+    ("¿Qué le pasaría a tu cuerpo si respiraras ceniza de volcán 1 año?", "cuerpo"),
     ("¿Qué pasaría si no bebieras agua en 7 días?", "cuerpo"),
     ("¿Qué pasaría si aguantaras la respiración 10 minutos?", "cuerpo"),
     ("¿Qué pasaría si bebieras 6 litros de agua de golpe?", "cuerpo"),
