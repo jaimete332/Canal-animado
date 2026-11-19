@@ -781,6 +781,13 @@ def _sun(ctx, p, t):
 
 
 def _earth(ctx, p, t):
+    axis = p.get("axis")
+    if axis is not None:  # eje de rotación inclinado (grados); `wobble` lo hace bambolearse
+        a = math.radians(axis + p.get("wobble", 0) * math.sin(t * 2.2))
+        r = p.get("r", 120)
+        with saved(ctx):
+            ctx.rotate(a)
+            limb(ctx, [(0, -r * 1.45), (0, r * 1.45)], 10, PAL["red"], out=OUT * 0.6)
     _earth_globe(ctx, 0, 0, p.get("r", 120), t, p.get("field", False))
 
 
@@ -1053,9 +1060,24 @@ def draw_prop(ctx, p: dict, t: float, age: float | None = None):
             ctx.paint_with_alpha(alpha)
         else:
             f(ctx, q, t)
+        if p.get("crossed"):
+            k = clamp((age - p.get("cross_at", 0.4)) / 0.2)
+            if k > 0:
+                r = p.get("cross_r", 150)
+                ctx.set_line_cap(cairo.LINE_CAP_ROUND)
+                for (x0, y0, x1, y1) in ((-r, -r, r, r), (r, -r, -r, r)):
+                    ctx.move_to(x0, y0)
+                    ctx.line_to(lerp(x0, x1, k), lerp(y0, y1, k))
+                    ctx.set_source_rgb(*INK)
+                    ctx.set_line_width(46)
+                    ctx.stroke_preserve()
+                    ctx.set_source_rgb(*PAL["red"])
+                    ctx.set_line_width(30)
+                    ctx.stroke()
 
 
 # Catálogo ampliado (Marte, océano, ballenas...)
 from . import world2  # noqa: E402,F401
 from . import world3  # noqa: E402,F401
 from . import world4  # noqa: E402,F401
+from . import world5  # noqa: E402,F401

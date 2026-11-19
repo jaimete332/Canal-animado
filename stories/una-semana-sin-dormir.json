@@ -1,0 +1,951 @@
+{
+  "title": "¿Qué pasaría si no durmieras en una semana?",
+  "idea": "¿Qué pasaría si no durmieras durante una semana?",
+  "slug": "una-semana-sin-dormir",
+  "category": "cuerpo",
+  "question": "¿Cuántas horas duermes tú?",
+  "music_mood": "funny",
+  "scenes": [
+    {
+      "id": "d01",
+      "beat": "hook",
+      "narration": "Decides no dormir en toda una semana. Mala idea.",
+      "visual": {
+        "background": {
+          "type": "bedroom"
+        },
+        "character": {
+          "x": 0.32,
+          "y": 0.75,
+          "scale": 1.2,
+          "outfit": "pajamas",
+          "helmet": "nightcap",
+          "action": "smug",
+          "expression": "smug",
+          "actions": [
+            [
+              "w6",
+              "shock"
+            ]
+          ],
+          "expressions": [
+            [
+              "w6",
+              "worried"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "smartphone",
+            "x": 0.78,
+            "y": 0.52,
+            "scale": 0.6,
+            "loop": "bob"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿UNA SEMANA",
+              "SIN DORMIR?"
+            ],
+            "y": 280,
+            "size": 120
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w6"
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 6,
+          "gain_db": -6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "semana"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "d02",
+      "beat": "setup",
+      "narration": "Día uno: a las veinticuatro horas, tu cerebro va como si hubieras bebido de más.",
+      "visual": {
+        "background": {
+          "type": "bedroom"
+        },
+        "character": {
+          "x": 0.32,
+          "y": 0.75,
+          "scale": 1.2,
+          "outfit": "pajamas",
+          "helmet": "nightcap",
+          "action": "float",
+          "expression": "dizzy",
+          "extras": {
+            "eyebags": 0.4
+          }
+        },
+        "props": [
+          {
+            "type": "brain",
+            "x": 0.75,
+            "y": 0.45,
+            "scale": 0.7,
+            "at_word": 6,
+            "loop": "wobble"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "DÍA 1 · 24 H",
+            "x": 540,
+            "y": 300,
+            "size": 70,
+            "bg": "#2B6BE8"
+          },
+          {
+            "type": "fact",
+            "text": "24 horas sin dormir ≈ conducir con una tasa de alcohol de 1 g/l",
+            "at_word": 9,
+            "y": 400
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "tilt": 0.03
+        }
+      },
+      "claims": [
+        {
+          "text": "Tras 24 h despierto, el rendimiento equivale a una alcoholemia de ~0,1 %",
+          "kind": "fact",
+          "source": "Dawson y Reid, Nature (1997)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 6,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "veinticuatro"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "d03",
+      "beat": "setup",
+      "narration": "Te cuesta concentrarte, estás de mal humor y tienes un hambre tremenda.",
+      "visual": {
+        "background": {
+          "type": "bedroom"
+        },
+        "character": {
+          "x": 0.32,
+          "y": 0.75,
+          "scale": 1.2,
+          "outfit": "pajamas",
+          "helmet": "nightcap",
+          "action": "talk",
+          "expression": "angry",
+          "extras": {
+            "eyebags": 0.5
+          },
+          "actions": [
+            [
+              "w9",
+              "sweat"
+            ]
+          ],
+          "expressions": [
+            [
+              "w9",
+              "hot"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "food",
+            "kind": "bread",
+            "x": 0.75,
+            "y": 0.4,
+            "at_word": 9,
+            "scale": 0.9
+          },
+          {
+            "type": "food",
+            "kind": "chocolate",
+            "x": 0.85,
+            "y": 0.58,
+            "at_word": 10,
+            "scale": 0.6
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Dormir poco altera las hormonas del hambre (grelina y leptina)",
+          "kind": "fact",
+          "source": "Spiegel et al., Annals of Internal Medicine (2004)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "gulp",
+          "at_word": 10
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "hambre"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "d04",
+      "beat": "development",
+      "narration": "Día dos: llegan los microsueños. Te duermes unos segundos sin darte cuenta.",
+      "visual": {
+        "background": {
+          "type": "bedroom"
+        },
+        "character": {
+          "x": 0.32,
+          "y": 0.75,
+          "scale": 1.2,
+          "outfit": "pajamas",
+          "helmet": "nightcap",
+          "action": "idle",
+          "expression": "tired",
+          "extras": {
+            "eyebags": 0.8
+          },
+          "actions": [
+            [
+              "w5",
+              "float"
+            ]
+          ],
+          "expressions": [
+            [
+              "w5",
+              "happy_closed"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "zzz",
+            "x": 0.42,
+            "y": 0.42,
+            "at_word": 6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "DÍA 2",
+            "x": 540,
+            "y": 300,
+            "size": 70,
+            "bg": "#9D7BFF"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.15,
+          "focus": [
+            0.35,
+            0.55
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Con privación de sueño aparecen microsueños: episodios de pocos segundos de sueño involuntario",
+          "kind": "fact",
+          "source": "National Sleep Foundation"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "fall",
+          "at_word": 6,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "microsueños"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "d05",
+      "beat": "development",
+      "narration": "Por eso conducir con sueño es tan peligroso.",
+      "visual": {
+        "background": {
+          "type": "city_night",
+          "sign": false
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "car",
+            "x": 0.5,
+            "y": 0.8,
+            "scale": 0.9,
+            "enter": "slide_left",
+            "loop": "shake"
+          },
+          {
+            "type": "zzz",
+            "x": 0.55,
+            "y": 0.68
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "label": "OJO",
+            "text": "La somnolencia al volante causa muchos accidentes de tráfico",
+            "at": 0.3
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La somnolencia al volante es una causa importante de accidentes",
+          "kind": "fact",
+          "source": "DGT; NHTSA"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.1
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "peligroso"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "d06",
+      "beat": "development",
+      "narration": "Día tres: empiezas a ver cosas que no están ahí.",
+      "visual": {
+        "background": {
+          "type": "bedroom"
+        },
+        "character": {
+          "x": 0.32,
+          "y": 0.75,
+          "scale": 1.2,
+          "outfit": "pajamas",
+          "helmet": "nightcap",
+          "action": "shock",
+          "expression": "scared",
+          "extras": {
+            "eyebags": 1.0
+          }
+        },
+        "props": [
+          {
+            "type": "ghost",
+            "x": 0.72,
+            "y": 0.35,
+            "at_word": 4,
+            "seed": 1
+          },
+          {
+            "type": "ghost",
+            "x": 0.85,
+            "y": 0.6,
+            "at_word": 6,
+            "color": "#5CE1E6",
+            "seed": 2,
+            "scale": 0.7
+          },
+          {
+            "type": "ghost",
+            "x": 0.15,
+            "y": 0.3,
+            "at_word": 8,
+            "color": "#FF9EB5",
+            "seed": 3,
+            "scale": 0.6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "DÍA 3",
+            "x": 540,
+            "y": 300,
+            "size": 70,
+            "bg": "#E8392F"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "shake": 0.25,
+          "tilt": 0.05
+        }
+      },
+      "claims": [
+        {
+          "text": "Tras varios días sin dormir aparecen alucinaciones",
+          "kind": "fact",
+          "source": "Waters et al., Frontiers in Psychiatry (2018)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "float",
+          "at_word": 4
+        },
+        {
+          "name": "boing",
+          "at_word": 8,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "ahí"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "d07",
+      "beat": "development",
+      "narration": "Mientras duermes, tu cerebro hace limpieza. Sin dormir, la basura se acumula.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "brain",
+            "x": 0.5,
+            "y": 0.45,
+            "scale": 1.6,
+            "clean": true,
+            "until_word": 6,
+            "enter": "pop"
+          },
+          {
+            "type": "brain",
+            "x": 0.5,
+            "y": 0.45,
+            "scale": 1.6,
+            "dirt": 1.0,
+            "at_word": 6,
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "El sistema glinfático elimina desechos del cerebro sobre todo durante el sueño",
+            "at_word": 2
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Durante el sueño el sistema glinfático elimina desechos del cerebro",
+          "kind": "fact",
+          "source": "Xie et al., Science (2013)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at": 0.2
+        },
+        {
+          "name": "gulp",
+          "at_word": 8
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "limpieza",
+        "basura"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "d08",
+      "beat": "climax",
+      "narration": "El récord lo tiene Randy Gardner: en mil novecientos sesenta y cuatro aguantó once días despierto.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "plain",
+            "hair": "#5A3A20",
+            "x": 0.3,
+            "y": 0.8,
+            "size": 1.2,
+            "expression": "tired",
+            "action": "idle",
+            "shirt": "#E8392F",
+            "enter": "pop"
+          },
+          {
+            "type": "trophy",
+            "x": 0.72,
+            "y": 0.55,
+            "text": "11",
+            "at_word": 13,
+            "scale": 1.0
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "RANDY GARDNER · 1964",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "at_word": 4
+          },
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 11,
+            "suffix": " DÍAS",
+            "at_word": 13,
+            "over": 0.6,
+            "y": 470,
+            "size": 120
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1964 Randy Gardner estuvo unos 11 días (264 h) sin dormir",
+          "kind": "fact",
+          "source": "Stanford Medicine (William Dement); Guinness"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 4
+        },
+        {
+          "name": "sparkle",
+          "at_word": 13
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "randy",
+        "once"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "d09",
+      "beat": "climax",
+      "narration": "Tenía diecisiete años y lo hizo para una feria de ciencias.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "plain",
+            "hair": "#5A3A20",
+            "x": 0.5,
+            "y": 0.82,
+            "size": 1.35,
+            "expression": "happy",
+            "action": "present",
+            "shirt": "#E8392F",
+            "enter": "none"
+          },
+          {
+            "type": "sign",
+            "x": 0.72,
+            "y": 0.38,
+            "text": "FERIA DE\nCIENCIAS",
+            "w": 380,
+            "size": 52,
+            "at_word": 7,
+            "scale": 1.5
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Gardner tenía 17 años y lo hizo para una feria de ciencias de su instituto",
+          "kind": "fact",
+          "source": "Stanford Medicine"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 7
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "diecisiete"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "d10",
+      "beat": "climax",
+      "narration": "Al final le costaba hablar, olvidaba cosas y veía cosas raras.",
+      "visual": {
+        "background": {
+          "type": "bedroom",
+          "night": true
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "plain",
+            "hair": "#5A3A20",
+            "x": 0.4,
+            "y": 0.8,
+            "size": 1.25,
+            "expression": "dizzy",
+            "action": "float",
+            "shirt": "#E8392F",
+            "enter": "none"
+          },
+          {
+            "type": "ghost",
+            "x": 0.8,
+            "y": 0.4,
+            "at_word": 8,
+            "seed": 4
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "tilt": 0.04
+        }
+      },
+      "claims": [
+        {
+          "text": "Al final del experimento tenía problemas de habla, memoria y alucinaciones",
+          "kind": "fact",
+          "source": "Stanford Medicine; Smithsonian"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "raras"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "d11",
+      "beat": "ending",
+      "narration": "Hoy, Guinness ya no acepta este récord: es demasiado peligroso.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF6B5C"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "trophy",
+            "x": 0.5,
+            "y": 0.5,
+            "text": "11",
+            "enter": "none",
+            "scale": 1.4,
+            "crossed": true,
+            "cross_at": 1.2,
+            "cross_r": 230
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            1.3
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Guinness dejó de registrar récords de privación de sueño por el riesgo para la salud",
+          "kind": "fact",
+          "source": "Guinness World Records"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 1.3,
+          "gain_db": -4
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "peligroso"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "d12",
+      "beat": "ending",
+      "narration": "La buena noticia: tras dormir unas catorce horas seguidas, Randy se recuperó.",
+      "visual": {
+        "background": {
+          "type": "bedroom",
+          "night": false
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "plain",
+            "hair": "#5A3A20",
+            "x": 0.62,
+            "y": 0.68,
+            "size": 1.0,
+            "expression": "happy_closed",
+            "action": "float",
+            "shirt": "#E8392F",
+            "enter": "none"
+          },
+          {
+            "type": "zzz",
+            "x": 0.72,
+            "y": 0.4
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 14,
+            "suffix": " HORAS",
+            "at_word": 5,
+            "over": 0.6,
+            "y": 330,
+            "sub": "DURMIENDO"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Después del experimento durmió unas 14 horas y se recuperó sin secuelas aparentes",
+          "kind": "fact",
+          "source": "Stanford Medicine"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 11
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "catorce"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "d13",
+      "beat": "ending",
+      "narration": "Así que deja el móvil y a dormir. ¿Cuántas horas duermes tú? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "bedroom"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.75,
+          "scale": 1.3,
+          "outfit": "pajamas",
+          "helmet": "nightcap",
+          "action": "talk",
+          "expression": "excited",
+          "actions": [
+            [
+              "w12",
+              "point_down"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "smartphone",
+            "x": 0.8,
+            "y": 0.45,
+            "scale": 0.6,
+            "crossed": true,
+            "cross_at": 0.6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 12,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [
+        {
+          "text": "Los adultos necesitan dormir al menos 7 horas",
+          "kind": "fact",
+          "source": "American Academy of Sleep Medicine"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at": 0.6
+        },
+        {
+          "name": "ding",
+          "at_word": 12
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.35
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasaría si no durmieras en una semana? 😵‍💫",
+    "hashtags": [
+      "#quepasariasi",
+      "#sueño",
+      "#cuerpohumano",
+      "#curiosidades",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasaría si",
+      "no dormir",
+      "una semana sin dormir",
+      "privación de sueño",
+      "randy gardner",
+      "cerebro",
+      "salud",
+      "cuerpo humano",
+      "curiosidades",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Cuántas horas duermes tú de media? 😴👇",
+    "description": "Decides no dormir en toda una semana… ¿qué le pasaría a tu cuerpo? 😵‍💫\n\nLeo intenta aguantar despierto y descubre, día a día, lo que hace la falta de sueño: microsueños, alucinaciones, un hambre tremenda… y la historia real de Randy Gardner, el chico que estuvo 11 días sin dormir.\n\n🧪 DATOS REALES DEL VÍDEO\n• Tras 24 horas despierto, el rendimiento se parece al de alguien con una alcoholemia de 1 g/l (Dawson y Reid, Nature, 1997).\n• Dormir poco altera las hormonas del hambre.\n• Con privación de sueño aparecen los microsueños: segundos de sueño involuntario. Por eso conducir con sueño es tan peligroso.\n• Tras varios días sin dormir pueden aparecer alucinaciones.\n• Mientras dormimos, el sistema glinfático limpia de desechos el cerebro (Xie et al., Science, 2013).\n• En 1964, Randy Gardner, de 17 años, estuvo unos 11 días sin dormir para una feria de ciencias. Después durmió unas 14 horas y se recuperó.\n• Guinness ya no registra este tipo de récords por ser peligrosos.\n\n⚠️ No lo intentes: dormir es imprescindible. Los adultos necesitan al menos 7 horas.\n\n📚 Fuentes: Nature (1997), Annals of Internal Medicine (2004), Science (2013), Frontiers in Psychiatry (2018), Stanford Medicine, Guinness World Records, American Academy of Sleep Medicine, DGT.\n\n💬 ¿Cuántas horas duermes tú? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?» cada semana.\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #sueño #cuerpohumano #curiosidades #shorts",
+    "thumbnail": {
+      "scene": "d06",
+      "t": 0.9,
+      "lines": [
+        "¿UNA SEMANA",
+        "SIN DORMIR?"
+      ],
+      "badge": "DÍA 3: ALUCINACIONES",
+      "badge_pos": [
+        540,
+        1640
+      ],
+      "y": 260,
+      "character": {
+        "action": "shock",
+        "expression": "shock",
+        "x": 0.4,
+        "y": 0.8,
+        "scale": 1.35,
+        "extras": {
+          "eyebags": 1.0
+        }
+      },
+      "crop_y": 0.55,
+      "h_shift": 800,
+      "h_scale": 0.8
+    }
+  }
+}

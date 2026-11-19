@@ -125,6 +125,12 @@ class Character:
                    "shoe": (0.1, 0.1, 0.12)},
         "blowfish": {"sleeve": (0.106, 0.165, 0.24), "torso": (0.106, 0.165, 0.24), "pants": (0.86, 0.82, 0.72),
                      "shoe": (0.95, 0.95, 0.95)},
+        "pajamas": {"sleeve": (0.55, 0.68, 0.95), "torso": (0.55, 0.68, 0.95), "pants": (0.55, 0.68, 0.95),
+                    "shoe": (0.95, 0.55, 0.6)},
+        "peasant": {"sleeve": (0.62, 0.45, 0.28), "torso": (0.62, 0.45, 0.28), "pants": (0.45, 0.35, 0.25),
+                    "shoe": (0.35, 0.24, 0.15)},
+        "knight": {"sleeve": (0.72, 0.75, 0.8), "torso": (0.72, 0.75, 0.8), "pants": (0.62, 0.65, 0.7),
+                   "shoe": (0.5, 0.52, 0.56)},
         "judge": {"sleeve": (0.1, 0.1, 0.12), "torso": (0.1, 0.1, 0.12), "pants": (0.1, 0.1, 0.12),
                   "shoe": (0.1, 0.1, 0.12)},
     }
@@ -196,7 +202,7 @@ class Character:
             circle(ctx, 0, -1.78, 0.08)
             ctx.set_source_rgba(1, 1, 1, 0.8 + 0.2 * math.sin(pose.t * 6))
             ctx.fill()
-        else:
+        elif pose.outfit != "plain":
             # emblema "?" del canal
             circle(ctx, 0, -1.72, 0.25)
             fill_stroke(ctx, self.p["yellow"], lw * 0.8)
@@ -337,6 +343,48 @@ class Character:
                 ctx.set_font_size(0.055)
                 ctx.move_to(x + 0.004, -1.955)
                 ctx.show_text("®")
+        elif o == "pajamas":
+            from .draw import star as _star
+            with saved(ctx):
+                clip_torso()
+                for (sx_, sy_) in ((-0.4, -2.0), (0.3, -1.85), (-0.1, -1.45), (0.45, -1.3), (-0.5, -1.2), (0.05, -2.1)):
+                    _star(ctx, sx_, sy_, 0.08, n=5)
+                    ctx.set_source_rgb(1, 0.92, 0.4)
+                    ctx.fill()
+            for sd in (-1, 1):
+                circle(ctx, 0.0, -2.05 + sd * 0.0 + (0.3 if sd > 0 else 0), 0.045)
+            ctx.set_source_rgb(1, 1, 1)
+            ctx.fill()
+        elif o == "peasant":
+            # cinturón de cuerda y cuello en V con cordón
+            rrect(ctx, -0.72, -1.25, 1.44, 0.1, 0.04)
+            fill_stroke(ctx, (0.85, 0.75, 0.5), lw * 0.5)
+            ctx.move_to(-0.2, -2.26)
+            ctx.line_to(0, -1.95)
+            ctx.line_to(0.2, -2.26)
+            ctx.set_source_rgb(*INK)
+            ctx.set_line_width(lw * 0.6)
+            ctx.stroke()
+            for k in range(3):  # remiendo
+                pass
+            rrect(ctx, 0.2, -1.7, 0.28, 0.24, 0.04)
+            fill_stroke(ctx, (0.5, 0.6, 0.35), lw * 0.5)
+        elif o == "knight":
+            # coraza con brillo, cruz y cota de malla
+            ctx.move_to(-0.5, -2.2)
+            ctx.curve_to(-0.6, -1.6, -0.4, -1.2, 0, -1.1)
+            ctx.curve_to(0.4, -1.2, 0.6, -1.6, 0.5, -2.2)
+            ctx.close_path()
+            fill_stroke(ctx, (0.85, 0.87, 0.92), lw * 0.7)
+            rrect(ctx, -0.05, -2.05, 0.1, 0.65, 0.03)
+            rrect(ctx, -0.25, -1.85, 0.5, 0.1, 0.03)
+            ctx.set_source_rgb(*self.p["red"])
+            ctx.fill()
+            ctx.move_to(-0.35, -2.1)
+            ctx.line_to(-0.2, -1.5)
+            ctx.set_source_rgba(1, 1, 1, 0.7)
+            ctx.set_line_width(0.05)
+            ctx.stroke()
         elif o == "judge":
             ctx.move_to(-0.26, -2.26)
             ctx.line_to(0, -1.9)
@@ -458,6 +506,13 @@ class Character:
         ctx.set_line_width(lw * 0.8)
         ctx.stroke()
         self._mouth(ctx, pose, lw, fx)
+        if pose.extras.get("eyebags"):
+            for s_ in (-1, 1):
+                ctx.new_path()
+                ctx.arc(hx + 0.38 * s_ + fx, hy + 0.02, 0.2, 0.25 * math.pi, 0.75 * math.pi)
+                ctx.set_source_rgba(0.45, 0.3, 0.55, 0.75 * pose.extras["eyebags"])
+                ctx.set_line_width(0.08)
+                ctx.stroke()
         if pose.extras.get("mustache"):
             for sd in (-1, 1):
                 ctx.new_path()
@@ -498,6 +553,44 @@ class Character:
             fill_stroke(ctx, self.p["yellow"], lw)
             rrect(ctx, hx - 0.15, hy - 1.14, 0.3, 0.22, 0.06)
             fill_stroke(ctx, (1, 1, 0.85), lw * 0.8)
+        elif pose.helmet == "knight":
+            ctx.new_path()
+            ctx.move_to(hx - 1.0, hy + 0.55)
+            ctx.curve_to(hx - 1.15, hy - 1.4, hx + 1.15, hy - 1.4, hx + 1.0, hy + 0.55)
+            ctx.close_path()
+            fill_stroke(ctx, (0.78, 0.8, 0.86), lw)
+            rrect(ctx, hx - 0.75 + fx, hy - 0.4, 1.5, 0.24, 0.08)
+            fill_stroke(ctx, (0.15, 0.15, 0.2), lw * 0.7)
+            for k in range(5):
+                circle(ctx, hx - 0.3 + k * 0.15 + fx, hy + 0.15, 0.04)
+            ctx.set_source_rgb(0.2, 0.2, 0.25)
+            ctx.fill()
+            ctx.move_to(hx, hy - 1.05)
+            ctx.curve_to(hx + 0.3, hy - 1.6, hx + 0.8, hy - 1.5, hx + 1.0, hy - 1.2)
+            ctx.set_source_rgb(*self.p["red"])
+            ctx.set_line_width(0.22)
+            ctx.stroke()
+        elif pose.helmet == "straw_hat":
+            ellipse(ctx, hx, hy - 0.65, 1.35, 0.26)
+            fill_stroke(ctx, (0.93, 0.8, 0.45), lw)
+            ctx.new_path()
+            ctx.move_to(hx - 0.75, hy - 0.7)
+            ctx.curve_to(hx - 0.8, hy - 1.35, hx + 0.8, hy - 1.35, hx + 0.75, hy - 0.7)
+            ctx.close_path()
+            fill_stroke(ctx, (0.93, 0.8, 0.45), lw)
+            rrect(ctx, hx - 0.76, hy - 0.9, 1.52, 0.14, 0.05)
+            fill_stroke(ctx, (0.7, 0.4, 0.25), lw * 0.6)
+        elif pose.helmet == "nightcap":
+            ctx.new_path()
+            ctx.move_to(hx - 0.95, hy - 0.5)
+            ctx.curve_to(hx - 0.9, hy - 1.5, hx + 0.6, hy - 1.7, hx + 1.4, hy - 0.9)
+            ctx.curve_to(hx + 0.8, hy - 1.1, hx + 0.7, hy - 0.8, hx + 0.95, hy - 0.5)
+            ctx.close_path()
+            fill_stroke(ctx, (0.55, 0.68, 0.95), lw)
+            circle(ctx, hx + 1.42, hy - 0.88, 0.17)
+            fill_stroke(ctx, (1, 1, 1), lw * 0.7)
+            rrect(ctx, hx - 1.0, hy - 0.62, 2.0, 0.2, 0.08)
+            fill_stroke(ctx, (1, 1, 1), lw * 0.7)
         elif pose.helmet == "fedora":
             hc = pose.extras.get("hat_color", (0.2, 0.18, 0.22))
             ellipse(ctx, hx, hy - 0.62, 1.3, 0.24)
@@ -611,7 +704,7 @@ class Character:
 
     def _hair(self, ctx, pose: Pose, lw):
         hx, hy = HEAD_C
-        if pose.helmet in ("hardhat", "fedora", "police_cap"):
+        if pose.helmet in ("hardhat", "fedora", "police_cap", "knight", "straw_hat", "nightcap"):
             return
         wob = 0.03 * math.sin(pose.t * 5)
         ctx.new_path()

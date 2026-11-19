@@ -1,0 +1,941 @@
+{
+  "title": "¿Qué pasaría si te despertaras en la Edad Media?",
+  "idea": "¿Qué pasaría si te despertaras en la Edad Media?",
+  "slug": "despertar-en-la-edad-media",
+  "category": "historia",
+  "question": "¿Sobrevivirías una semana en la Edad Media?",
+  "music_mood": "adventure",
+  "scenes": [
+    {
+      "id": "e01",
+      "beat": "hook",
+      "narration": "Te despiertas y estás en la Edad Media. Y no, no hay wifi.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.2,
+          "outfit": "casual",
+          "helmet": null,
+          "action": "shock",
+          "expression": "surprised",
+          "expressions": [
+            [
+              "w8",
+              "worried"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "wifi",
+            "x": 0.78,
+            "y": 0.22,
+            "at_word": 8,
+            "crossed": true,
+            "cross_at": 0.3,
+            "cross_r": 130,
+            "scale": 0.8
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿Y SI VIVIERAS EN",
+              "LA EDAD MEDIA?"
+            ],
+            "y": 280,
+            "size": 104
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w9"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Despertar en otra época es una situación imaginaria",
+          "kind": "fiction",
+          "source": "Licencia narrativa"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 0.0,
+          "gain_db": -6
+        },
+        {
+          "name": "crack",
+          "at_word": 9
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "edad",
+        "media"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e02",
+      "beat": "setup",
+      "narration": "Para empezar: ni patatas, ni tomates, ni chocolate.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "food",
+            "kind": "potato",
+            "x": 0.22,
+            "y": 0.45,
+            "at_word": 3,
+            "crossed": true
+          },
+          {
+            "type": "food",
+            "kind": "tomato",
+            "x": 0.5,
+            "y": 0.45,
+            "at_word": 5,
+            "crossed": true
+          },
+          {
+            "type": "food",
+            "kind": "chocolate",
+            "x": 0.78,
+            "y": 0.45,
+            "at_word": 7,
+            "crossed": true
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 3
+        },
+        {
+          "name": "pop",
+          "at_word": 5
+        },
+        {
+          "name": "pop",
+          "at_word": 7
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "patatas",
+        "tomates",
+        "chocolate"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e02b",
+      "beat": "setup",
+      "narration": "Todo eso llegó de América después de mil cuatrocientos noventa y dos.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1100
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.5,
+            "y": 0.62,
+            "text": "DE AMÉRICA\nDESDE 1492",
+            "w": 520,
+            "size": 58,
+            "scale": 1.5,
+            "enter": "drop"
+          },
+          {
+            "type": "food",
+            "kind": "potato",
+            "x": 0.2,
+            "y": 0.25,
+            "scale": 0.6,
+            "loop": "bob"
+          },
+          {
+            "type": "food",
+            "kind": "tomato",
+            "x": 0.5,
+            "y": 0.2,
+            "scale": 0.6,
+            "loop": "bob"
+          },
+          {
+            "type": "food",
+            "kind": "chocolate",
+            "x": 0.8,
+            "y": 0.25,
+            "scale": 0.5,
+            "loop": "bob"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La patata, el tomate y el cacao llegaron a Europa desde América tras 1492",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at": 0.5,
+          "gain_db": -8
+        },
+        {
+          "name": "ding",
+          "at_word": 6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "américa"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e03",
+      "beat": "setup",
+      "narration": "Lo más probable es que fueras campesino, como la inmensa mayoría de la gente.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "x": 0.35,
+          "y": 0.8,
+          "scale": 1.2,
+          "outfit": "peasant",
+          "helmet": "straw_hat",
+          "action": "look_up",
+          "expression": "worried",
+          "enter": "pop"
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "peasant",
+            "hat": "straw_hat",
+            "x": 0.68,
+            "y": 0.8,
+            "size": 1.0,
+            "expression": "neutral",
+            "hair": "#4A3520",
+            "at_word": 9
+          },
+          {
+            "type": "npc",
+            "outfit": "peasant",
+            "hat": null,
+            "x": 0.88,
+            "y": 0.82,
+            "size": 0.9,
+            "expression": "happy",
+            "hair": "#C9A24A",
+            "at_word": 11
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La gran mayoría de la población medieval era campesina",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 9
+        },
+        {
+          "name": "pop",
+          "at_word": 11
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "campesino"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e04",
+      "beat": "setup",
+      "narration": "Trabajarías la tierra de sol a sol, y parte de la cosecha sería para tu señor.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "x": 0.38,
+          "y": 0.8,
+          "scale": 1.2,
+          "outfit": "peasant",
+          "helmet": "straw_hat",
+          "action": "dig",
+          "expression": "tired",
+          "sweat": 0.8
+        },
+        "props": [
+          {
+            "type": "food",
+            "kind": "bread",
+            "x": 0.75,
+            "y": 0.62,
+            "at_word": 9,
+            "scale": 0.8,
+            "enter": "pop"
+          },
+          {
+            "type": "arrow",
+            "x": 0.72,
+            "y": 0.5,
+            "rot": -1.2,
+            "scale": 0.45,
+            "at_word": 12
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "PARA EL SEÑOR",
+            "x": 760,
+            "y": 400,
+            "size": 56,
+            "at_word": 12
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Los campesinos debían entregar parte de la cosecha o trabajo al señor feudal",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "dig",
+          "at": 0.3
+        },
+        {
+          "name": "dig",
+          "at": 0.9
+        },
+        {
+          "name": "dig",
+          "at": 1.5
+        },
+        {
+          "name": "ding",
+          "at_word": 12
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "señor"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e05",
+      "beat": "development",
+      "narration": "Pero desmontemos un mito: no todo el mundo moría a los treinta.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.8,
+          "scale": 1.2,
+          "outfit": "peasant",
+          "helmet": "straw_hat",
+          "action": "present",
+          "expression": "smug"
+        },
+        "overlays": [
+          {
+            "type": "myth",
+            "text": "MORÍAN A LOS 30",
+            "y": 400,
+            "stamp_at": 1.6
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            1.75
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 1.75,
+          "gain_db": -3
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "mito"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e06",
+      "beat": "development",
+      "narration": "La media era baja porque morían muchos niños. Quien llegaba a adulto podía pasar de los cincuenta.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "peasant",
+            "hat": null,
+            "x": 0.5,
+            "y": 0.82,
+            "size": 1.3,
+            "hair": "#DDDDDD",
+            "mustache": true,
+            "expression": "happy",
+            "action": "idle",
+            "at_word": 9
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "La esperanza de vida al nacer era baja por la altísima mortalidad infantil",
+            "at_word": 1
+          },
+          {
+            "type": "counter",
+            "from": 30,
+            "to": 60,
+            "suffix": " AÑOS",
+            "at_word": 13,
+            "over": 0.8,
+            "y": 560,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La baja esperanza de vida medieval se debía sobre todo a la mortalidad infantil; muchos adultos superaban los 50",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica; Our World in Data"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 9
+        },
+        {
+          "name": "ding",
+          "at_word": 13
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "niños",
+        "cincuenta"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e07",
+      "beat": "development",
+      "narration": "Otro mito: la gente sí se lavaba. En muchas ciudades había baños públicos.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.88,
+          "scale": 0.9,
+          "outfit": "peasant",
+          "helmet": "straw_hat",
+          "action": "celebrate",
+          "expression": "laugh"
+        },
+        "props": [
+          {
+            "type": "bathhouse",
+            "x": 0.58,
+            "y": 0.6,
+            "scale": 0.9,
+            "at_word": 7,
+            "enter": "drop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "myth",
+            "text": "NO SE BAÑABAN",
+            "y": 350,
+            "stamp_at": 0.8
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "En muchas ciudades medievales existían baños públicos",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica; Smithsonian"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "splash",
+          "at_word": 7,
+          "gain_db": -6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "lavaba"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e08",
+      "beat": "development",
+      "narration": "¿Y los caballeros? No necesitaban grúas para subirse al caballo.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "knight",
+            "hat": "knight",
+            "x": 0.35,
+            "y": 0.82,
+            "size": 1.3,
+            "expression": "smug",
+            "action": "smug",
+            "enter": "pop"
+          },
+          {
+            "type": "crane",
+            "x": 0.75,
+            "y": 0.55,
+            "scale": 0.7,
+            "at_word": 5,
+            "crossed": true,
+            "cross_at": 0.6
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La idea de que los caballeros se subían al caballo con grúas es un mito",
+          "kind": "fact",
+          "source": "Royal Armouries (Leeds)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "crack",
+          "at_word": 6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "grúas"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e09",
+      "beat": "development",
+      "narration": "Sus armaduras pesaban unos veinticinco kilos y con ellas podían correr y saltar.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "knight",
+            "hat": "knight",
+            "x": 0.5,
+            "y": 0.8,
+            "size": 1.25,
+            "expression": "excited",
+            "action": "celebrate",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 25,
+            "prefix": "≈",
+            "suffix": " KG",
+            "at_word": 4,
+            "over": 0.6,
+            "y": 330,
+            "sub": "DE ARMADURA"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Una armadura completa pesaba en torno a 15-25 kg y permitía moverse con agilidad",
+          "kind": "fact",
+          "source": "Royal Armouries (Leeds)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boing",
+          "at": 0.4
+        },
+        {
+          "name": "boing",
+          "at": 1.1
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "veinticinco"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e10",
+      "beat": "climax",
+      "narration": "Lo peor llegaría en mil trescientos cuarenta y siete: la peste negra.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "mode": "plague"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.2,
+          "outfit": "peasant",
+          "helmet": "straw_hat",
+          "action": "squished",
+          "expression": "scared"
+        },
+        "overlays": [
+          {
+            "type": "label",
+            "text": "1347 · PESTE NEGRA",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 8,
+            "bg": "#2B2D3A"
+          },
+          {
+            "type": "vignette",
+            "alpha": 0.6
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "shake": 0.2
+        }
+      },
+      "claims": [
+        {
+          "text": "La peste negra llegó a Europa en 1347",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at": 0.0,
+          "gain_db": -6
+        }
+      ],
+      "transition": "circle",
+      "emphasis": [
+        "peste"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e11",
+      "beat": "climax",
+      "narration": "Mató a entre un tercio y la mitad de la población de Europa.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "mode": "plague"
+        },
+        "character": {
+          "visible": false
+        },
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 50,
+            "suffix": " %",
+            "prefix": "30-",
+            "at_word": 1,
+            "over": 1.0,
+            "y": 600,
+            "sub": "DE LA POBLACIÓN DE EUROPA",
+            "size": 150
+          },
+          {
+            "type": "vignette",
+            "alpha": 0.6
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La peste negra mató a entre un tercio y la mitad de la población europea (1347-1351)",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "tercio",
+        "mitad"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e12",
+      "beat": "ending",
+      "narration": "Así que mejor no te acerques a las ratas… ni a sus pulgas.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "mode": "plague"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.8,
+          "scale": 1.2,
+          "outfit": "peasant",
+          "helmet": "straw_hat",
+          "action": "shock",
+          "expression": "shock"
+        },
+        "props": [
+          {
+            "type": "rat",
+            "x": 0.72,
+            "y": 0.86,
+            "fleas": true,
+            "enter": "slide_right",
+            "loop": "shake"
+          }
+        ],
+        "camera": {
+          "move": "punch"
+        }
+      },
+      "claims": [
+        {
+          "text": "La peste se transmitía sobre todo por las pulgas de las ratas",
+          "kind": "fact",
+          "source": "CDC; Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 9
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "ratas",
+        "pulgas"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "e13",
+      "beat": "ending",
+      "narration": "¿Sobrevivirías una semana en la Edad Media? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#B5532F",
+          "c2": "#D6A84E"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.64,
+          "scale": 1.35,
+          "outfit": "peasant",
+          "helmet": "straw_hat",
+          "action": "talk",
+          "expression": "excited",
+          "enter": "pop",
+          "actions": [
+            [
+              "w7",
+              "point_down"
+            ]
+          ]
+        },
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 7,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at": 0.05
+        },
+        {
+          "name": "ding",
+          "at_word": 7
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.35
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasaría si te despertaras en la Edad Media? 🏰",
+    "hashtags": [
+      "#quepasariasi",
+      "#edadmedia",
+      "#historia",
+      "#curiosidades",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasaría si",
+      "edad media",
+      "vida en la edad media",
+      "mitos de la edad media",
+      "caballeros",
+      "peste negra",
+      "historia",
+      "curiosidades",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Cuántos días aguantarías tú en la Edad Media? 🏰👇",
+    "description": "Te despiertas y estás en la Edad Media… ¿sobrevivirías? 🏰\n\nLeo viaja al pasado y descubre cómo era la vida de verdad: sin patatas ni tomates, trabajando para el señor feudal… y desmonta tres mitos que casi todo el mundo se cree. Hasta que llega la peste negra.\n\n🧪 DATOS REALES DEL VÍDEO\n• La patata, el tomate y el cacao no existían en Europa: llegaron de América después de 1492.\n• La inmensa mayoría de la población medieval era campesina y entregaba parte de la cosecha o de su trabajo al señor.\n• MITO: «todos morían a los 30». La esperanza de vida al nacer era baja por la altísima mortalidad infantil, pero muchos adultos pasaban de los 50.\n• MITO: «no se lavaban». En muchas ciudades había baños públicos.\n• MITO: «los caballeros necesitaban grúas para subir al caballo». Una armadura pesaba unos 15-25 kg y permitía correr y saltar.\n• La peste negra llegó en 1347 y mató a entre un tercio y la mitad de la población de Europa. Se transmitía sobre todo por las pulgas de las ratas.\n\n⚠️ El viaje en el tiempo de Leo es ficción; los datos históricos son reales y aproximados.\n\n📚 Fuentes: Encyclopaedia Britannica, Royal Armouries (Leeds), Our World in Data, Smithsonian, CDC.\n\n💬 ¿Sobrevivirías una semana en la Edad Media? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?» cada semana.\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #edadmedia #historia #curiosidades #shorts",
+    "thumbnail": {
+      "scene": "e03",
+      "t": 0.95,
+      "lines": [
+        "¿Y SI VIVIERAS EN",
+        "LA EDAD MEDIA?"
+      ],
+      "badge": "3 MITOS FALSOS",
+      "badge_pos": [
+        540,
+        1660
+      ],
+      "y": 260,
+      "size": 120,
+      "character": {
+        "action": "shock",
+        "expression": "shock",
+        "x": 0.35,
+        "y": 0.82,
+        "scale": 1.35
+      },
+      "crop_y": 0.58,
+      "h_shift": 800,
+      "h_scale": 0.8
+    }
+  }
+}
