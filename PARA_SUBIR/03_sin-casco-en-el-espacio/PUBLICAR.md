@@ -1,6 +1,6 @@
 # Publicar: «¿Qué pasaría si te quitaras el casco en el espacio? 🧑‍🚀»
 
-**Vídeo:** `final.mp4` (64.8 s) · **Miniatura Shorts:** `thumbnail.png` (1080×1920) · **Miniatura 16:9:** `thumbnail_16x9.png`
+**Vídeo:** `sin-casco-en-el-espacio.mp4` (64.8 s) · **Miniatura:** `miniatura.png` (1080×1920)
 
 ## Título (55 caracteres)
 ```
@@ -34,7 +34,7 @@ Música y efectos de sonido originales del canal. Voz sintética.
 #quepasariasi #espacio #cuerpohumano #astronauta #shorts
 ```
 
-## Etiquetas (YouTube Studio → Más opciones → Etiquetas)
+## Etiquetas (YouTube Studio → Mostrar más → Etiquetas)
 ```
 qué pasaría si, espacio, sin casco, vacío, astronauta, nasa, jim leblanc, ebullismo, cuerpo humano, curiosidades, animación, hipotéticos
 ```

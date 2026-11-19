@@ -1,14 +1,7 @@
-# Publicar: «¿Qué pasaría si cayeras al agua del Titanic 1 hora? 🧊»
-
-**Vídeo:** `final.mp4` (65.4 s) · **Miniatura Shorts:** `thumbnail.png` (1080×1920) · **Miniatura 16:9:** `thumbnail_16x9.png`
-
-## Título (53 caracteres)
-```
+TÍTULO
 ¿Qué pasaría si cayeras al agua del Titanic 1 hora? 🧊
-```
 
-## Descripción
-```
+DESCRIPCIÓN
 El Titanic se hunde y caes al agua a -2 °C… ¿qué le pasaría a tu cuerpo si aguantaras una hora? 🧊
 
 Leo cae al Atlántico Norte la noche del 15 de abril de 1912 y descubre, minuto a minuto, lo que hace el agua helada: el choque por frío, la incapacitación, la hipotermia… y la historia real de Charles Joughin, el panadero jefe que dijo haber pasado unas dos horas en el agua.
@@ -33,18 +26,12 @@ Leo cae al Atlántico Norte la noche del 15 de abril de 1912 y descubre, minuto 
 Música y efectos de sonido originales del canal. Voz sintética.
 
 #quepasariasi #titanic #cuerpohumano #historia #shorts
-```
 
-## Etiquetas (YouTube Studio → Más opciones → Etiquetas)
-```
+ETIQUETAS
 qué pasaría si, titanic, agua helada, hipotermia, choque por frío, charles joughin, 1912, historia, cuerpo humano, curiosidades, animación, hipotéticos
-```
 
-## Comentario fijado
-```
+COMENTARIO FIJADO
 ¿Qué harías tú en el primer minuto en el agua? 🧊👇
-```
 
-## Ajustes
-* Categoría: Educación · Idioma: español (España) · No es contenido para niños
-* «Contenido alterado o sintético»: **Sí** (voz sintética)
+AJUSTES
+Categoría: Educación · Idioma: español (España) · No es contenido para niños · Contenido alterado o sintético: Sí (voz sintética)

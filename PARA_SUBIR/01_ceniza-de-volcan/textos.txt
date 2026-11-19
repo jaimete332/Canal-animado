@@ -1,14 +1,7 @@
-# Publicar: «¿Qué pasaría si respiraras ceniza de volcán 1 año? 🌋»
-
-**Vídeo:** `final.mp4` (63.5 s) · **Miniatura Shorts:** `thumbnail.png` (1080×1920) · **Miniatura 16:9:** `thumbnail_16x9.png`
-
-## Título (52 caracteres)
-```
+TÍTULO
 ¿Qué pasaría si respiraras ceniza de volcán 1 año? 🌋
-```
 
-## Descripción
-```
+DESCRIPCIÓN
 Nieva gris… y no es nieve: es ceniza de volcán. ¿Qué le pasaría a tu cuerpo si la respiraras durante un año? 🌋
 
 Leo vive al pie de un volcán en erupción y descubre, hora a hora y mes a mes, lo que la ceniza hace en sus ojos, su garganta y sus pulmones.
@@ -34,18 +27,12 @@ Leo vive al pie de un volcán en erupción y descubre, hora a hora y mes a mes, 
 Música y efectos de sonido originales del canal. Voz sintética.
 
 #quepasariasi #volcan #cuerpohumano #lapalma #shorts
-```
 
-## Etiquetas (YouTube Studio → Más opciones → Etiquetas)
-```
+ETIQUETAS
 qué pasaría si, ceniza volcánica, volcán, la palma, cumbre vieja, pulmones, silicosis, mascarilla ffp2, cuerpo humano, curiosidades, animación, hipotéticos
-```
 
-## Comentario fijado
-```
+COMENTARIO FIJADO
 ¿Te irías o te quedarías al pie del volcán? 🌋👇
-```
 
-## Ajustes
-* Categoría: Educación · Idioma: español (España) · No es contenido para niños
-* «Contenido alterado o sintético»: **Sí** (voz sintética)
+AJUSTES
+Categoría: Educación · Idioma: español (España) · No es contenido para niños · Contenido alterado o sintético: Sí (voz sintética)

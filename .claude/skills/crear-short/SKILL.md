@@ -36,7 +36,7 @@ python3 scripts/story_<tema>.py                       # exporta el JSON y valida
 python -m fabrica still stories/<slug>.json all       # fotogramas de cada escena → output/<slug>/qa/
 python -m fabrica make stories/<slug>.json            # voz, música, escenas, subtítulos, render, QA
 python -m fabrica regen <slug> s07                    # rehace solo una escena
-python3 scripts/publish_sheet.py <slug>               # samples/<slug>/ + PUBLICAR.md
+python -m fabrica deliver <slug>                     # PARA_SUBIR/<NN>_<slug>/ (vídeo, miniatura, textos)
 ```
 Revisa las imágenes (hoja de contactos `output/<slug>/qa/contact_sheet.jpg`) y corrige solapes,
 textos cortados, elementos fuera de cuadro y personajes tapados antes de dar el vídeo por bueno.
@@ -48,6 +48,6 @@ congelados, escenas ≤ 5,5 s, gancho ≤ 4 s. Si una escena sale «dudosa» en 
 o añade el término a `tts.lexicon`.
 
 ## 4 · Entrega
-Copia a `samples/<slug>/`, haz commit y push en la rama de trabajo, y envía al usuario el MP4, la
+Entrega con `python -m fabrica deliver <slug>` (queda en `PARA_SUBIR/<NN>_<slug>/`; al publicarse, `python -m fabrica published <slug>` lo archiva en `samples/`), haz commit y push en la rama de trabajo, y envía al usuario el MP4, la
 miniatura y `PUBLICAR.md`. Nada se publica sin `python -m fabrica approve <slug>`.
 Indica qué datos conviene verificar si no se pudieron contrastar con fuentes en línea.

@@ -106,6 +106,20 @@ def cmd_upload(a):
     print(f"Subido: https://youtube.com/shorts/{vid}" + (f" · programado para {a.at}" if a.at else ""))
 
 
+def cmd_deliver(a):
+    from .publish.delivery import deliver
+    for slug in a.slugs:
+        print("✓", deliver(slug))
+
+
+def cmd_published(a):
+    from .core.registry import Registry
+    from .publish.delivery import archive
+    for slug in a.slugs:
+        print("archivado:", archive(slug))
+        Registry().upsert_video(slug, status="published")
+
+
 def cmd_schedule(a):
     """python -m fabrica schedule slug1="2026-11-21 18:00" slug2="2026-11-23 18:00" [--dry-run]"""
     from .publish.youtube import parse_when, upload
@@ -206,6 +220,10 @@ def main(argv=None):
     s = sub.add_parser("upload"); s.add_argument("slug"); s.add_argument("--privacy", default=None)
     s.add_argument("--at", help="programa la publicación: 'AAAA-MM-DD HH:MM' (hora de youtube.timezone)")
     s.add_argument("--dry-run", action="store_true"); s.set_defaults(f=cmd_upload)
+    s = sub.add_parser("deliver", help="copia vídeos terminados a PARA_SUBIR/"); s.add_argument("slugs", nargs="+")
+    s.set_defaults(f=cmd_deliver)
+    s = sub.add_parser("published", help="marca vídeos como publicados y los archiva en samples/")
+    s.add_argument("slugs", nargs="+"); s.set_defaults(f=cmd_published)
     s = sub.add_parser("schedule", help="sube y programa varios vídeos: slug=\"AAAA-MM-DD HH:MM\" ...")
     s.add_argument("items", nargs="+"); s.add_argument("--dry-run", action="store_true"); s.set_defaults(f=cmd_schedule)
     sub.add_parser("tiktok-auth").set_defaults(f=cmd_tiktok_auth)

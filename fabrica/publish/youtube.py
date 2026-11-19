@@ -29,11 +29,16 @@ SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
 
 def _files(slug: str) -> dict[str, Path]:
     """Vídeo, metadatos, miniatura y aprobación: de output/<slug>/ o, si no existe (p. ej. en otra máquina
-    tras `git pull`), de samples/<slug>/."""
+    tras `git pull`), de la carpeta de entrega PARA_SUBIR/<NN>_<slug>/ o samples/<slug>/."""
     vp = VideoPaths(slug)
-    root = vp.root if vp.final.exists() else ROOT / "samples" / slug
-    return {"root": root, "final": root / "final.mp4", "metadata": root / "metadata.json",
-            "thumbnail": root / "thumbnail.png", "approved": root / "APPROVED"}
+    if vp.final.exists():
+        return {"root": vp.root, "final": vp.final, "metadata": vp.metadata, "thumbnail": vp.thumbnail,
+                "approved": vp.root / "APPROVED"}
+    from .delivery import files, find
+    d = find(slug)
+    if d is None:
+        raise FileNotFoundError(f"No encuentro '{slug}' en output/, PARA_SUBIR/ ni samples/")
+    return files(d, slug)
 
 
 def parse_when(when: str, tz: str | None = None) -> dt.datetime:

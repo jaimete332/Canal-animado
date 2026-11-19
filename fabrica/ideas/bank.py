@@ -75,20 +75,11 @@ SEED_IDEAS = [
     ("¿Qué pasaría si te congelaran y despertaras dentro de 100 años?", "fantasía"),
 ]
 
-# Shorts ya producidos (samples/<slug>/metadata.json): cuentan como publicados para no repetirlos
+# Shorts ya producidos (PARA_SUBIR/ y samples/): cuentan como publicados para no repetirlos
 # aunque el registro local esté vacío (p. ej. en una máquina nueva).
 def _already_made() -> list[str]:
-    import json
-    from pathlib import Path
-    out = []
-    for f in sorted((Path(__file__).resolve().parents[2] / "samples").glob("*/metadata.json")):
-        try:
-            t = json.loads(f.read_text(encoding="utf-8")).get("title", "")
-        except (OSError, ValueError):
-            continue
-        if t.startswith("¿"):
-            out.append(t)
-    return out
+    from ..publish.delivery import all_titles
+    return [t for t in all_titles() if t.startswith("¿")]
 
 
 HOOK_WORDS = {

@@ -1,0 +1,24 @@
+# Vídeos listos para subir
+
+Cada carpeta es un Short, numerada en el orden de publicación. Dentro tienes:
+
+| Archivo | Para qué |
+|---|---|
+| `<nombre>.mp4` | el vídeo que subes a YouTube |
+| `miniatura.png` | la miniatura (1080×1920) |
+| `PUBLICAR.md` | título, descripción, etiquetas y comentario fijado, listos para copiar |
+| `textos.txt` | lo mismo en texto plano, por si lo abres en el móvil |
+| `extra/` | informe de calidad y hoja de contactos (no hace falta subirlos) |
+
+## Calendario recomendado (uno al día, 18:30 hora de España)
+
+| Carpeta | Día |
+|---|---|
+| `01_ceniza-de-volcan` | viernes 20 de noviembre |
+| `02_agua-helada-del-titanic` | sábado 21 de noviembre |
+| `03_sin-casco-en-el-espacio` | domingo 22 de noviembre |
+
+Al publicar: pega el comentario fijado y fíjalo en YouTube Studio, y responde a los comentarios de la primera hora.
+
+Cuando hayas subido uno, dímelo (o ejecuta `python -m fabrica published <nombre>`) y lo archivo en `samples/`,
+para que aquí solo quede lo pendiente.
