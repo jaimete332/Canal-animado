@@ -124,6 +124,7 @@ budget:
 youtube:
   enabled: false            # requiere tu autorización (ver docs/YOUTUBE.md)
   privacy: private          # private | unlisted | public
+  timezone: Europe/Madrid   # zona horaria de las horas de `upload --at` y `schedule`
   category_id: "27"         # Education
   client_secrets: secrets/client_secret.json
   token_file: secrets/youtube_token.json

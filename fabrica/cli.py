@@ -99,8 +99,26 @@ def cmd_approve(a):
 
 def cmd_upload(a):
     from .publish.youtube import upload
-    vid = upload(a.slug, privacy=a.privacy)
-    print(f"Subido: https://youtube.com/shorts/{vid}")
+    vid = upload(a.slug, privacy=a.privacy, publish_at=a.at, dry_run=a.dry_run)
+    if a.dry_run:
+        print("Simulación correcta: aprobación válida y metadatos listos (no se ha subido nada)")
+        return
+    print(f"Subido: https://youtube.com/shorts/{vid}" + (f" · programado para {a.at}" if a.at else ""))
+
+
+def cmd_schedule(a):
+    """python -m fabrica schedule slug1="2026-11-21 18:00" slug2="2026-11-23 18:00" [--dry-run]"""
+    from .publish.youtube import parse_when, upload
+    pairs = []
+    for it in a.items:
+        if "=" not in it:
+            raise SystemExit(f"Formato: slug=\"AAAA-MM-DD HH:MM\" (recibido {it!r})")
+        slug, when = it.split("=", 1)
+        parse_when(when)  # valida todas las fechas antes de subir nada
+        pairs.append((slug.strip(), when.strip()))
+    for slug, when in pairs:
+        vid = upload(slug, publish_at=when, dry_run=a.dry_run)
+        print(f"{'[simulación] ' if a.dry_run else ''}{slug} → {when}" + ("" if a.dry_run else f" · https://youtube.com/shorts/{vid}"))
 
 
 def cmd_tiktok_auth(a):
@@ -185,7 +203,11 @@ def main(argv=None):
     s = sub.add_parser("ideas"); s.add_argument("--n", type=int, default=15); s.set_defaults(f=cmd_ideas)
     sub.add_parser("list").set_defaults(f=cmd_list)
     s = sub.add_parser("approve"); s.add_argument("slug"); s.set_defaults(f=cmd_approve)
-    s = sub.add_parser("upload"); s.add_argument("slug"); s.add_argument("--privacy", default=None); s.set_defaults(f=cmd_upload)
+    s = sub.add_parser("upload"); s.add_argument("slug"); s.add_argument("--privacy", default=None)
+    s.add_argument("--at", help="programa la publicación: 'AAAA-MM-DD HH:MM' (hora de youtube.timezone)")
+    s.add_argument("--dry-run", action="store_true"); s.set_defaults(f=cmd_upload)
+    s = sub.add_parser("schedule", help="sube y programa varios vídeos: slug=\"AAAA-MM-DD HH:MM\" ...")
+    s.add_argument("items", nargs="+"); s.add_argument("--dry-run", action="store_true"); s.set_defaults(f=cmd_schedule)
     sub.add_parser("tiktok-auth").set_defaults(f=cmd_tiktok_auth)
     s = sub.add_parser("tiktok-upload"); s.add_argument("slug"); s.add_argument("--draft", action="store_true")
     s.add_argument("--privacy", choices=["SELF_ONLY", "MUTUAL_FOLLOW_FRIENDS", "FOLLOWER_OF_CREATOR", "PUBLIC_TO_EVERYONE"])

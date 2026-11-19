@@ -10,6 +10,7 @@ Credenciales: ver docs/YOUTUBE.md (OAuth de escritorio; el token se guarda en se
 """
 from __future__ import annotations
 
+import datetime as dt
 import hashlib
 import json
 import time
@@ -26,6 +27,32 @@ SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
           "https://www.googleapis.com/auth/yt-analytics.readonly"]
 
 
+def _files(slug: str) -> dict[str, Path]:
+    """Vídeo, metadatos, miniatura y aprobación: de output/<slug>/ o, si no existe (p. ej. en otra máquina
+    tras `git pull`), de samples/<slug>/."""
+    vp = VideoPaths(slug)
+    root = vp.root if vp.final.exists() else ROOT / "samples" / slug
+    return {"root": root, "final": root / "final.mp4", "metadata": root / "metadata.json",
+            "thumbnail": root / "thumbnail.png", "approved": root / "APPROVED"}
+
+
+def parse_when(when: str, tz: str | None = None) -> dt.datetime:
+    """'2026-11-21 18:00' (hora local de `youtube.timezone`, por defecto Europe/Madrid) o ISO con zona → UTC."""
+    from zoneinfo import ZoneInfo
+    tz = tz or load_config()["youtube"].get("timezone", "Europe/Madrid")
+    w = when.strip().replace("T", " ")
+    try:
+        d = dt.datetime.fromisoformat(w)
+    except ValueError:
+        raise ValueError(f"Fecha no válida: {when!r}. Usa 'AAAA-MM-DD HH:MM', p. ej. '2026-11-21 18:00'")
+    if d.tzinfo is None:
+        d = d.replace(tzinfo=ZoneInfo(tz))
+    d = d.astimezone(dt.timezone.utc)
+    if d < dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=15):
+        raise ValueError(f"La hora {when} ya ha pasado o está a menos de 15 minutos: elige una más tarde")
+    return d
+
+
 def _sha(p: Path) -> str:
     h = hashlib.sha256()
     with open(p, "rb") as f:
@@ -35,18 +62,18 @@ def _sha(p: Path) -> str:
 
 
 def approve(slug: str) -> None:
-    vp = VideoPaths(slug)
-    if not vp.final.exists():
-        raise FileNotFoundError(vp.final)
-    (vp.root / "APPROVED").write_text(json.dumps({"sha256": _sha(vp.final), "at": time.time()}))
+    f = _files(slug)
+    if not f["final"].exists():
+        raise FileNotFoundError(f["final"])
+    f["approved"].write_text(json.dumps({"sha256": _sha(f["final"]), "at": time.time()}))
 
 
 def _check_approval(slug: str) -> None:
-    vp = VideoPaths(slug)
-    f = vp.root / "APPROVED"
+    fs = _files(slug)
+    f = fs["approved"]
     if not f.exists():
         raise PermissionError(f"'{slug}' no está aprobado. Revísalo y ejecuta: python -m fabrica approve {slug}")
-    if json.loads(f.read_text())["sha256"] != _sha(vp.final):
+    if json.loads(f.read_text())["sha256"] != _sha(fs["final"]):
         raise PermissionError("El vídeo cambió después de aprobarlo: vuelve a revisarlo y aprobarlo")
 
 
@@ -69,36 +96,58 @@ def credentials():
     return creds
 
 
-def upload(slug: str, privacy: str | None = None) -> str:
+def build_body(slug: str, privacy: str | None = None, publish_at: dt.datetime | None = None) -> dict:
+    """Cuerpo de videos.insert. Con `publish_at`, el vídeo se sube privado y YouTube lo publica solo a esa hora."""
     cfg = load_config()["youtube"]
+    meta = json.loads(_files(slug)["metadata"].read_text())
+    status = {"privacyStatus": privacy or cfg.get("privacy", "private"), "selfDeclaredMadeForKids": False,
+              "containsSyntheticMedia": bool(meta.get("contains_synthetic_media", True))}
+    if publish_at:
+        status["privacyStatus"] = "private"  # requisito de la API para programar
+        status["publishAt"] = publish_at.strftime("%Y-%m-%dT%H:%M:%SZ")
+    return {
+        "snippet": {"title": meta["title"][:100], "description": meta["description"][:5000],
+                    "tags": meta.get("tags", [])[:30], "categoryId": meta.get("category_id", "27"),
+                    "defaultLanguage": "es", "defaultAudioLanguage": "es-ES"},
+        "status": status,
+    }
+
+
+def upload(slug: str, privacy: str | None = None, publish_at: str | None = None, dry_run: bool = False) -> str:
+    """Sube un vídeo aprobado. `publish_at` ('AAAA-MM-DD HH:MM', hora local) lo deja programado en YouTube."""
+    cfg = load_config()["youtube"]
+    when = parse_when(publish_at) if publish_at else None
+    fs = _files(slug)
+    body = build_body(slug, privacy, when)
+    if dry_run:
+        _check_approval(slug)
+        log.info("Simulación (no se sube nada): %s", json.dumps(body["status"]))
+        return "dry-run"
     if not cfg.get("enabled"):
         raise PermissionError("La publicación está desactivada (youtube.enabled: false en config.yaml)")
     _check_approval(slug)
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
-    vp = VideoPaths(slug)
-    meta = json.loads(vp.metadata.read_text())
+    meta = json.loads(fs["metadata"].read_text())
     yt = build("youtube", "v3", credentials=credentials())
-    body = {
-        "snippet": {"title": meta["title"][:100], "description": meta["description"][:5000],
-                    "tags": meta.get("tags", [])[:30], "categoryId": meta.get("category_id", "27"),
-                    "defaultLanguage": "es", "defaultAudioLanguage": "es-ES"},
-        "status": {"privacyStatus": privacy or cfg.get("privacy", "private"), "selfDeclaredMadeForKids": False,
-                   "containsSyntheticMedia": bool(meta.get("contains_synthetic_media", True))},
-    }
     req = yt.videos().insert(part="snippet,status", body=body,
-                             media_body=MediaFileUpload(str(vp.final), chunksize=8 << 20, resumable=True))
+                             media_body=MediaFileUpload(str(fs["final"]), chunksize=8 << 20, resumable=True))
     resp = None
     while resp is None:
         status, resp = req.next_chunk()
         if status:
             log.info("Subiendo… %d%%", int(status.progress() * 100))
     vid = resp["id"]
-    log.info("Subido: %s", vid)
+    log.info("Subido: %s%s", vid, f" (se publicará el {body['status']['publishAt']} UTC)" if when else "")
+    if fs["thumbnail"].exists():  # requiere canal verificado por teléfono
+        try:
+            yt.thumbnails().set(videoId=vid, media_body=MediaFileUpload(str(fs["thumbnail"]))).execute()
+        except Exception as e:
+            log.warning("No se pudo poner la miniatura (¿canal sin verificar por teléfono?): %s", e)
     try:  # comentario fijado (YouTube no permite fijarlo por API: se publica y lo fijas en Studio)
         yt.commentThreads().insert(part="snippet", body={"snippet": {"videoId": vid, "topLevelComment": {
             "snippet": {"textOriginal": meta["pinned_comment"]}}}}).execute()
     except Exception as e:
-        log.warning("No se pudo publicar el comentario: %s", e)
-    Registry().upsert_video(slug, status="uploaded", youtube_id=vid)
+        log.warning("No se pudo publicar el comentario (si está programado, publícalo cuando salga): %s", e)
+    Registry().upsert_video(slug, status="scheduled" if when else "uploaded", youtube_id=vid)
     return vid
