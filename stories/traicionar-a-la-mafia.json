@@ -1,0 +1,1058 @@
+{
+  "title": "¿Qué pasaría si traicionaras a la mafia?",
+  "idea": "¿Qué pasaría si traicionaras a la mafia?",
+  "slug": "traicionar-a-la-mafia",
+  "category": "historia",
+  "question": "¿Tú hablarías?",
+  "music_mood": "mystery",
+  "scenes": [
+    {
+      "id": "c01",
+      "beat": "hook",
+      "narration": "Eres un mafioso y decides contárselo todo a la policía.",
+      "visual": {
+        "background": {
+          "type": "city_night",
+          "rain": true
+        },
+        "character": {
+          "action": "sweat",
+          "expression": "worried",
+          "x": 0.38,
+          "y": 0.78,
+          "scale": 1.2,
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "police",
+            "hat": "police_cap",
+            "enter": "slide_right",
+            "x": 0.8,
+            "y": 0.79,
+            "size": 1.1,
+            "facing": -1,
+            "expression": "neutral",
+            "at_word": 7
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿Y SI TRAICIONAS",
+              "A LA MAFIA?"
+            ],
+            "y": 280,
+            "size": 108
+          }
+        ],
+        "camera": {
+          "move": "punch"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 0.0,
+          "gain_db": -6
+        },
+        {
+          "name": "pop",
+          "at_word": 7
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "policía"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c02",
+      "beat": "setup",
+      "narration": "En Italia te llamarían pentito: arrepentido.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#2BAE66",
+          "c2": "#F4F4F4"
+        },
+        "character": {
+          "action": "shrug",
+          "expression": "worried",
+          "x": 0.5,
+          "y": 0.68,
+          "scale": 1.3,
+          "enter": "pop",
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "overlays": [
+          {
+            "type": "label",
+            "text": "«PENTITO» = ARREPENTIDO",
+            "x": 540,
+            "y": 330,
+            "size": 62,
+            "at_word": 4,
+            "bg": "#E8392F"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [
+        {
+          "text": "En Italia se llama «pentito» al mafioso que colabora con la justicia",
+          "kind": "fact",
+          "source": "Treccani; Wikipedia «Pentito»"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 4
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "pentito"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c03",
+      "beat": "setup",
+      "narration": "Y romperías la omertà, la ley del silencio, la regla más sagrada de la mafia.",
+      "visual": {
+        "background": {
+          "type": "city_night"
+        },
+        "character": {
+          "action": "shock",
+          "expression": "scared",
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.1,
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "mobster",
+            "hat": "fedora",
+            "enter": "pop",
+            "x": 0.15,
+            "y": 0.79,
+            "size": 1.05,
+            "facing": 1,
+            "expression": "angry",
+            "at_word": 4
+          },
+          {
+            "type": "npc",
+            "outfit": "mobster",
+            "hat": "fedora",
+            "enter": "pop",
+            "x": 0.85,
+            "y": 0.79,
+            "size": 1.05,
+            "facing": -1,
+            "expression": "angry",
+            "hat_color": "#4A4652",
+            "mustache": true,
+            "at_word": 5
+          },
+          {
+            "type": "speech",
+            "x": 0.5,
+            "y": 0.38,
+            "text": "¡SHHH! OMERTÀ",
+            "size": 70,
+            "at_word": 3,
+            "tail": 0
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La omertà es el código de silencio de la mafia siciliana",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 3
+        },
+        {
+          "name": "riser",
+          "at_word": 8,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "omertà",
+        "silencio"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c04",
+      "beat": "development",
+      "narration": "El más famoso fue Tommaso Buscetta.",
+      "visual": {
+        "background": {
+          "type": "office",
+          "desk": false
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "mobster",
+            "hat": null,
+            "mustache": true,
+            "hair": "#3A3A3A",
+            "skin": "#D9A07A",
+            "x": 0.5,
+            "y": 0.8,
+            "size": 1.35,
+            "expression": "neutral",
+            "action": "think",
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "TOMMASO BUSCETTA",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 4
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Tommaso Buscetta fue el primer gran «pentito» de la Cosa Nostra",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 4
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "buscetta"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c05",
+      "beat": "development",
+      "narration": "En mil novecientos ochenta y cuatro, se lo contó todo al juez Giovanni Falcone.",
+      "visual": {
+        "background": {
+          "type": "office"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "mobster",
+            "hat": null,
+            "mustache": true,
+            "hair": "#3A3A3A",
+            "skin": "#D9A07A",
+            "x": 0.25,
+            "y": 0.72,
+            "size": 1.05,
+            "expression": "worried",
+            "action": "talk",
+            "facing": 1,
+            "enter": "none"
+          },
+          {
+            "type": "npc",
+            "outfit": "judge",
+            "hat": null,
+            "mustache": true,
+            "hair": "#2A2A2A",
+            "skin": "#E8B48A",
+            "x": 0.76,
+            "y": 0.72,
+            "size": 1.05,
+            "expression": "determined",
+            "action": "think",
+            "facing": -1,
+            "at_word": 10,
+            "enter": "pop"
+          },
+          {
+            "type": "typewriter",
+            "x": 0.5,
+            "y": 0.73,
+            "scale": 0.7,
+            "layer": "front",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "JUEZ GIOVANNI FALCONE",
+            "x": 540,
+            "y": 330,
+            "size": 62,
+            "at_word": 10
+          },
+          {
+            "type": "counter",
+            "from": 1950,
+            "to": 1984,
+            "y": 520,
+            "size": 110,
+            "over": 0.8,
+            "plain": true
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1984 Buscetta empezó a colaborar con el juez Giovanni Falcone",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 8
+        },
+        {
+          "name": "ding",
+          "at_word": 10
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "falcone"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c06",
+      "beat": "development",
+      "narration": "Gracias a él se celebró el Maxiproceso de Palermo, con cuatrocientos setenta y cinco acusados.",
+      "visual": {
+        "background": {
+          "type": "courtroom",
+          "label": "MAXIPROCESO",
+          "cages": true,
+          "judge": {
+            "expression": "determined"
+          }
+        },
+        "character": {
+          "visible": false
+        },
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 475,
+            "at_word": 10,
+            "over": 0.8,
+            "y": 300,
+            "sub": "ACUSADOS"
+          }
+        ],
+        "camera": {
+          "move": "pull_out",
+          "zoom_from": 1.25
+        }
+      },
+      "claims": [
+        {
+          "text": "El Maxiproceso de Palermo (1986-1987) juzgó a 475 acusados",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica; Wikipedia «Maxiprocesso di Palermo»"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at": 0.1,
+          "gain_db": -8
+        },
+        {
+          "name": "ding",
+          "at_word": 10
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "maxiproceso",
+        "cuatrocientos"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c07",
+      "beat": "development",
+      "narration": "Construyeron un tribunal blindado, a prueba de bombas, solo para ese juicio.",
+      "visual": {
+        "background": {
+          "type": "city_night",
+          "sign": false
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "bunker",
+            "x": 0.5,
+            "y": 0.6,
+            "scale": 1.1,
+            "enter": "drop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "EL «AULA BÚNKER»",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 3
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.6
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Para el juicio se construyó una sala blindada, el «aula bunker», junto a la cárcel de Ucciardone",
+          "kind": "fact",
+          "source": "Wikipedia «Maxiprocesso di Palermo»"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at": 0.55,
+          "gain_db": -4
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "blindado"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c08",
+      "beat": "development",
+      "narration": "Más de trescientos acusados fueron condenados.",
+      "visual": {
+        "background": {
+          "type": "courtroom",
+          "label": "MAXIPROCESO",
+          "cages": true,
+          "judge": {
+            "expression": "angry"
+          }
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "gavel",
+            "x": 0.74,
+            "y": 0.4,
+            "scale": 0.6,
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 300,
+            "prefix": "+",
+            "at_word": 2,
+            "over": 0.6,
+            "y": 300,
+            "sub": "CONDENADOS"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "impacts": [
+            "w5"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Más de 300 acusados del Maxiproceso fueron condenados",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 5,
+          "gain_db": -3
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "condenados"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c09",
+      "beat": "climax",
+      "narration": "Pero traicionar a la mafia tiene un precio: tendrías que desaparecer.",
+      "visual": {
+        "background": {
+          "type": "city_night",
+          "rain": true
+        },
+        "character": {
+          "action": "look_up",
+          "expression": "scared",
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.15,
+          "actions": [
+            [
+              "w8",
+              "shock"
+            ]
+          ],
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "mobster",
+            "hat": "fedora",
+            "x": 0.88,
+            "y": 0.79,
+            "size": 1.1,
+            "facing": -1,
+            "expression": "angry",
+            "at_word": 4,
+            "enter": "slide_right",
+            "hat_color": "#151318"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.65
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.15
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at": 0.0,
+          "gain_db": -6
+        },
+        {
+          "name": "hit",
+          "at_word": 10,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "precio",
+        "desaparecer"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c10",
+      "beat": "climax",
+      "narration": "Nueva identidad, otra ciudad y escolta las veinticuatro horas.",
+      "visual": {
+        "background": {
+          "type": "city_night"
+        },
+        "character": {
+          "action": "smug",
+          "expression": "smug",
+          "x": 0.5,
+          "y": 0.79,
+          "scale": 1.15,
+          "outfit": "casual",
+          "helmet": "fedora",
+          "extras": {
+            "mustache": true,
+            "hat_color": [
+              0.55,
+              0.42,
+              0.3
+            ]
+          }
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "police",
+            "hat": "police_cap",
+            "enter": "slide_right",
+            "x": 0.16,
+            "y": 0.8,
+            "size": 1.05,
+            "facing": 1,
+            "at_word": 5
+          },
+          {
+            "type": "npc",
+            "outfit": "police",
+            "hat": "police_cap",
+            "enter": "slide_right",
+            "x": 0.84,
+            "y": 0.8,
+            "size": 1.05,
+            "facing": -1,
+            "at_word": 5,
+            "mustache": true
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "NUEVA IDENTIDAD",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 0
+          },
+          {
+            "type": "timer",
+            "text": "24 h",
+            "x": 850,
+            "y": 560,
+            "at_word": 7,
+            "over": 1.0
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Italia protege a los colaboradores de la justicia con nuevas identidades y escolta (ley de 1991)",
+          "kind": "fact",
+          "source": "Ministero dell'Interno (Italia)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at": 0.1
+        },
+        {
+          "name": "pop",
+          "at_word": 5
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "identidad"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c11",
+      "beat": "climax",
+      "narration": "Buscetta pasó sus últimos años lejos de Italia, protegido y con otro nombre.",
+      "visual": {
+        "background": {
+          "type": "ocean"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "plane",
+            "x": 0.55,
+            "y": 0.3,
+            "scale": 1.1,
+            "enter": "slide_left",
+            "enter_dur": 1.5,
+            "loop": "bob"
+          }
+        ],
+        "camera": {
+          "move": "pan_left",
+          "amount": 120
+        }
+      },
+      "claims": [
+        {
+          "text": "Buscetta vivió bajo protección en Estados Unidos hasta su muerte en el año 2000",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.2
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "nombre"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c12",
+      "beat": "climax",
+      "narration": "La mafia se vengó: en mil novecientos noventa y dos asesinó a los jueces Falcone y Borsellino.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#1E2236"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "flowers",
+            "x": 0.5,
+            "y": 0.72,
+            "scale": 1.6,
+            "enter": "rise"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "1992",
+            "x": 540,
+            "y": 330,
+            "size": 90,
+            "at_word": 4,
+            "bg": "#2B2D6E"
+          },
+          {
+            "type": "fact",
+            "label": "EN SU MEMORIA",
+            "text": "Giovanni Falcone y Paolo Borsellino, jueces antimafia",
+            "at_word": 13,
+            "y": 520
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1992 la mafia asesinó a los jueces Giovanni Falcone y Paolo Borsellino",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "circle",
+      "emphasis": [
+        "falcone",
+        "borsellino"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c13",
+      "beat": "ending",
+      "narration": "El Estado respondió con todo y, al año siguiente, detuvo al jefe de jefes, Totò Riina.",
+      "visual": {
+        "background": {
+          "type": "city_night"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "police_car",
+            "x": 0.5,
+            "y": 0.82,
+            "scale": 0.9,
+            "enter": "slide_left",
+            "enter_dur": 0.6,
+            "layer": "front"
+          },
+          {
+            "type": "handcuffs",
+            "x": 0.5,
+            "y": 0.5,
+            "at_word": 9,
+            "enter": "drop",
+            "scale": 1.3
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "1993 · TOTÒ RIINA, DETENIDO",
+            "x": 540,
+            "y": 330,
+            "size": 60,
+            "at_word": 9
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w9"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Totò Riina, jefe de la Cosa Nostra, fue detenido en enero de 1993",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.1
+        },
+        {
+          "name": "hit",
+          "at_word": 9,
+          "gain_db": -4
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "riina"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c14",
+      "beat": "ending",
+      "narration": "Hoy, el aeropuerto de Palermo lleva el nombre de Falcone y Borsellino.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1150
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "plane",
+            "x": 0.5,
+            "y": 0.26,
+            "scale": 0.9,
+            "enter": "none",
+            "loop": "bob"
+          },
+          {
+            "type": "sign",
+            "x": 0.5,
+            "y": 0.62,
+            "text": "AEROPUERTO\nFALCONE-BORSELLINO",
+            "w": 760,
+            "size": 58,
+            "at_word": 2,
+            "enter": "drop"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "El aeropuerto de Palermo se llama Falcone-Borsellino en su honor",
+          "kind": "fact",
+          "source": "Aeroporto di Palermo (GESAP)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 9
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "falcone",
+        "borsellino"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "c15",
+      "beat": "ending",
+      "narration": "¿Tú hablarías? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF6B5C"
+        },
+        "character": {
+          "action": "talk",
+          "expression": "excited",
+          "x": 0.5,
+          "y": 0.64,
+          "scale": 1.35,
+          "enter": "pop",
+          "actions": [
+            [
+              "w2",
+              "point_down"
+            ]
+          ],
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 2,
+            "arrow": "down",
+            "bg": "#2B6BE8"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at": 0.05
+        },
+        {
+          "name": "ding",
+          "at_word": 2
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.35
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasaría si traicionaras a la mafia? 🤫",
+    "hashtags": [
+      "#quepasariasi",
+      "#mafia",
+      "#historia",
+      "#curiosidades",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasaría si",
+      "traicionar a la mafia",
+      "mafia",
+      "pentito",
+      "omertà",
+      "buscetta",
+      "falcone",
+      "borsellino",
+      "maxiproceso",
+      "cosa nostra",
+      "historia",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Tú hablarías o guardarías silencio? 🤫👇",
+    "description": "Eres un mafioso y decides contárselo todo a la policía. ¿Qué te pasaría? 🤫\n\nLeo rompe la omertà, la ley del silencio de la mafia, y descubre la historia real de Tommaso Buscetta, el arrepentido que ayudó a sentar en el banquillo a cientos de mafiosos… y el precio que pagaron quienes se atrevieron a enfrentarse a la Cosa Nostra.\n\n🧪 HISTORIA REAL DEL VÍDEO\n• En Italia, al mafioso que colabora con la justicia se le llama «pentito» (arrepentido).\n• La omertà es el código de silencio de la mafia siciliana.\n• En 1984, Tommaso Buscetta empezó a colaborar con el juez Giovanni Falcone.\n• Su testimonio fue clave en el Maxiproceso de Palermo (1986-1987): 475 acusados y más de 300 condenas.\n• Para el juicio se construyó una sala blindada, el «aula búnker».\n• Los colaboradores reciben nueva identidad y escolta; Buscetta vivió sus últimos años protegido fuera de Italia.\n• En 1992 la mafia asesinó a los jueces Giovanni Falcone y Paolo Borsellino. En 1993 fue detenido Totò Riina, el «jefe de jefes».\n• Hoy el aeropuerto de Palermo se llama Falcone-Borsellino en su honor.\n\n⚠️ Leo es un personaje de ficción. Este vídeo es divulgación histórica en memoria de quienes lucharon contra la mafia.\n\n📚 Fuentes: Encyclopaedia Britannica, Ministero dell'Interno (Italia), Aeroporto di Palermo (GESAP), Wikipedia (Maxiprocesso di Palermo).\n\n💬 ¿Tú hablarías? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?» cada semana.\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #mafia #historia #curiosidades #shorts",
+    "thumbnail": {
+      "scene": "c03",
+      "t": 0.85,
+      "lines": [
+        "¿Y SI",
+        "TRAICIONAS A",
+        "LA MAFIA?"
+      ],
+      "badge": "¡OMERTÀ!",
+      "badge_pos": [
+        540,
+        1640
+      ],
+      "y": 230,
+      "drop_props": [
+        "speech"
+      ],
+      "character": {
+        "action": "shock",
+        "expression": "scared",
+        "y": 0.8,
+        "scale": 1.2
+      },
+      "crop_y": 0.62,
+      "h_shift": 760,
+      "h_scale": 0.78
+    }
+  }
+}

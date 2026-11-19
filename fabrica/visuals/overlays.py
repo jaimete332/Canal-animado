@@ -90,6 +90,8 @@ def ov_counter(ctx, o, age, dur, t):
     v = a + (b - a) * k
     dec = int(o.get("decimals", 0))
     s = f"{v:,.{dec}f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    if o.get("plain"):  # años: sin separador de miles
+        s = f"{v:.{dec}f}"
     label = o.get("prefix", "") + s + o.get("suffix", "")
     pop = ease_back(clamp(age / 0.3))
     y = o.get("y", 420)

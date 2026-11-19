@@ -69,6 +69,7 @@ def transcribe(wav: Path) -> str:
     if a.ndim > 1:
         a = a.mean(axis=1)
     a = resample_poly(a, 1, sr // 16000).astype(np.float32) if sr != 16000 else a
+    a = np.concatenate([np.zeros(3200, np.float32), a, np.zeros(9600, np.float32)])  # Whisper corta el final sin silencio
     r = _recognizer()
     s = r.create_stream()
     s.accept_waveform(16000, a)

@@ -30,6 +30,8 @@ OUT = 7.0   # grosor de contorno base en px (escala 1)
 
 def hexrgb(h: str) -> tuple[float, float, float]:
     h = h.lstrip("#")
+    if len(h) == 3:
+        h = "".join(ch * 2 for ch in h)
     return tuple(int(h[i:i + 2], 16) / 255 for i in (0, 2, 4))  # type: ignore[return-value]
 
 

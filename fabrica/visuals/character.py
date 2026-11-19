@@ -113,7 +113,20 @@ class Character:
                     self._head(ctx, pose, lw)
 
     # ------------------------------------------------------------------
+    OUTFITS = {
+        "mobster": {"sleeve": (0.22, 0.22, 0.27), "torso": (0.22, 0.22, 0.27), "pants": (0.18, 0.18, 0.22),
+                    "shoe": (0.12, 0.1, 0.1)},
+        "prisoner": {"sleeve": (0.95, 0.95, 0.93), "torso": (0.95, 0.95, 0.93), "pants": (0.95, 0.95, 0.93),
+                     "shoe": (0.25, 0.25, 0.28)},
+        "police": {"sleeve": (0.15, 0.24, 0.5), "torso": (0.15, 0.24, 0.5), "pants": (0.12, 0.18, 0.38),
+                   "shoe": (0.1, 0.1, 0.12)},
+        "judge": {"sleeve": (0.1, 0.1, 0.12), "torso": (0.1, 0.1, 0.12), "pants": (0.1, 0.1, 0.12),
+                  "shoe": (0.1, 0.1, 0.12)},
+    }
+
     def _c(self, part: str, pose: Pose):
+        if pose.outfit in self.OUTFITS:
+            return self.OUTFITS[pose.outfit][part]
         if pose.outfit == "suit":
             return {"sleeve": self.p["suit"], "torso": self.p["suit"], "pants": self.p["suit"],
                     "shoe": self.p["suit_acc"]}[part]
@@ -166,7 +179,9 @@ class Character:
             ctx.curve_to(0.5, -0.86, 0.45, -1.5, 0.42, -2.28)
             ctx.set_source_rgba(*darken(c, 0.18), 0.6)
             ctx.fill()
-        if pose.outfit == "suit":
+        if pose.outfit in self.OUTFITS:
+            self._outfit_details(ctx, pose, lw)
+        elif pose.outfit == "suit":
             # franjas del traje y emblema
             ctx.set_source_rgb(*self.p["suit_acc"])
             rrect(ctx, -0.72, -1.38, 1.44, 0.16, 0.06)
@@ -198,6 +213,79 @@ class Character:
             ctx.set_source_rgba(*INK, 0.55)
             ctx.set_line_width(lw * 0.6)
             ctx.stroke()
+
+    def _outfit_details(self, ctx, pose: Pose, lw):
+        o = pose.outfit
+        torso = [(-0.42, -2.28), (-0.9, -2.1, -0.82, -1.1, -0.68, -0.92), (-0.3, -0.78, 0.3, -0.78, 0.68, -0.92),
+                 (0.82, -1.1, 0.9, -2.1, 0.42, -2.28)]
+
+        def clip_torso():
+            ctx.move_to(*torso[0])
+            for c3 in torso[1:]:
+                ctx.curve_to(*c3)
+            ctx.close_path()
+            ctx.clip()
+        if o == "mobster":
+            with saved(ctx):
+                clip_torso()
+                ctx.set_source_rgba(1, 1, 1, 0.22)
+                ctx.set_line_width(0.025)
+                for k in range(-8, 9):
+                    ctx.move_to(k * 0.13, -2.4)
+                    ctx.line_to(k * 0.13, -0.7)
+                ctx.stroke()
+            # camisa en V, solapas y corbata roja
+            ctx.move_to(-0.32, -2.26)
+            ctx.line_to(0, -1.55)
+            ctx.line_to(0.32, -2.26)
+            ctx.close_path()
+            fill_stroke(ctx, (1, 1, 1), lw * 0.7)
+            ctx.move_to(-0.08, -2.2)
+            ctx.line_to(0.08, -2.2)
+            ctx.line_to(0.06, -1.6)
+            ctx.line_to(0, -1.5)
+            ctx.line_to(-0.06, -1.6)
+            ctx.close_path()
+            fill_stroke(ctx, self.p["red"], lw * 0.6)
+            for sd in (-1, 1):
+                ctx.move_to(0.34 * sd, -2.27)
+                ctx.line_to(0.02 * sd, -1.5)
+                ctx.line_to(0.3 * sd, -1.75)
+                ctx.close_path()
+                fill_stroke(ctx, (0.15, 0.15, 0.19), lw * 0.7)
+            circle(ctx, 0.48, -1.95, 0.07)  # flor en el ojal
+            fill_stroke(ctx, self.p["red"], lw * 0.5)
+        elif o == "prisoner":
+            with saved(ctx):
+                clip_torso()
+                ctx.set_source_rgb(0.15, 0.15, 0.18)
+                for k in range(8):
+                    ctx.rectangle(-1, -2.3 + k * 0.2, 2, 0.1)
+                ctx.fill()
+            rrect(ctx, -0.36, -1.62, 0.72, 0.28, 0.05)
+            fill_stroke(ctx, (1, 1, 1), lw * 0.6)
+            ctx.select_font_face("Lilita One")
+            ctx.set_font_size(0.2)
+            ext = ctx.text_extents("85-1931")
+            ctx.move_to(-ext.width / 2 - ext.x_bearing, -1.48 - ext.height / 2 - ext.y_bearing)
+            ctx.set_source_rgb(*INK)
+            ctx.show_text("85-1931")
+        elif o == "police":
+            from .draw import star as _star
+            _star(ctx, 0.36, -1.85, 0.16, n=6, inner=0.55)
+            fill_stroke(ctx, self.p["yellow"], lw * 0.6)
+            for y in (-2.05, -1.75, -1.45):
+                circle(ctx, 0, y, 0.05)
+                ctx.set_source_rgb(*self.p["yellow"])
+                ctx.fill()
+            rrect(ctx, -0.7, -1.12, 1.4, 0.14, 0.04)
+            fill_stroke(ctx, (0.1, 0.1, 0.12), lw * 0.5)
+        elif o == "judge":
+            ctx.move_to(-0.26, -2.26)
+            ctx.line_to(0, -1.9)
+            ctx.line_to(0.26, -2.26)
+            ctx.close_path()
+            fill_stroke(ctx, (1, 1, 1), lw * 0.6)
 
     def _hand(self, ctx, x, y, lw, pose, side):
         circle(ctx, x, y, 0.17)
@@ -313,6 +401,16 @@ class Character:
         ctx.set_line_width(lw * 0.8)
         ctx.stroke()
         self._mouth(ctx, pose, lw, fx)
+        if pose.extras.get("mustache"):
+            for sd in (-1, 1):
+                ctx.new_path()
+                ctx.move_to(hx + fx * 1.2, hy + 0.32)
+                ctx.curve_to(hx + fx * 1.2 + sd * 0.2, hy + 0.22, hx + fx * 1.2 + sd * 0.42, hy + 0.3,
+                             hx + fx * 1.2 + sd * 0.48, hy + 0.44)
+                ctx.curve_to(hx + fx * 1.2 + sd * 0.3, hy + 0.4, hx + fx * 1.2 + sd * 0.15, hy + 0.42,
+                             hx + fx * 1.2, hy + 0.38)
+                ctx.close_path()
+                fill_stroke(ctx, pose.extras.get("hair", (0.2, 0.15, 0.12)), lw * 0.6)
         # sudor
         if pose.sweat > 0.05:
             for i, (sx, sy) in enumerate(((0.9, -0.4), (-0.95, -0.2), (0.75, 0.25))):
@@ -343,6 +441,29 @@ class Character:
             fill_stroke(ctx, self.p["yellow"], lw)
             rrect(ctx, hx - 0.15, hy - 1.14, 0.3, 0.22, 0.06)
             fill_stroke(ctx, (1, 1, 0.85), lw * 0.8)
+        elif pose.helmet == "fedora":
+            hc = pose.extras.get("hat_color", (0.2, 0.18, 0.22))
+            ellipse(ctx, hx, hy - 0.62, 1.3, 0.24)
+            fill_stroke(ctx, hc, lw)
+            ctx.new_path()
+            ctx.move_to(hx - 0.8, hy - 0.66)
+            ctx.curve_to(hx - 0.86, hy - 1.5, hx - 0.3, hy - 1.42, hx, hy - 1.25)
+            ctx.curve_to(hx + 0.3, hy - 1.42, hx + 0.86, hy - 1.5, hx + 0.8, hy - 0.66)
+            ctx.close_path()
+            fill_stroke(ctx, hc, lw)
+            rrect(ctx, hx - 0.82, hy - 0.92, 1.64, 0.2, 0.06)
+            fill_stroke(ctx, pose.extras.get("band_color", (0.85, 0.2, 0.25)), lw * 0.7)
+        elif pose.helmet == "police_cap":
+            ctx.new_path()
+            ctx.move_to(hx - 0.9, hy - 0.62)
+            ctx.curve_to(hx - 1.0, hy - 1.35, hx + 1.0, hy - 1.35, hx + 0.9, hy - 0.62)
+            ctx.close_path()
+            fill_stroke(ctx, (0.15, 0.24, 0.5), lw)
+            ellipse(ctx, hx + 0.1, hy - 0.6, 0.95, 0.16, 0.05)
+            fill_stroke(ctx, (0.1, 0.1, 0.14), lw)
+            from .draw import star as _star
+            _star(ctx, hx, hy - 0.98, 0.16, n=6, inner=0.55)
+            fill_stroke(ctx, self.p["yellow"], lw * 0.6)
         elif pose.helmet == "diving":
             # gafas de buceo (cristal casi transparente: los ojos siguen viéndose) + tubo
             for sd in (-1, 1):
@@ -410,7 +531,7 @@ class Character:
 
     def _hair(self, ctx, pose: Pose, lw):
         hx, hy = HEAD_C
-        if pose.helmet == "hardhat":
+        if pose.helmet in ("hardhat", "fedora", "police_cap"):
             return
         wob = 0.03 * math.sin(pose.t * 5)
         ctx.new_path()

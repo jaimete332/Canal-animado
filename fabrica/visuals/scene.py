@@ -126,7 +126,8 @@ class SceneRenderer:
             if t >= self.at(tt):
                 expr = e
         base = Pose(x=x, y=y, scale=cs.get("scale", 1.35), facing=cs.get("facing", 1.0), expression=expr,
-                    outfit=cs.get("outfit", "casual"), helmet=cs.get("helmet"), sweat=cs.get("sweat", 0.0))
+                    outfit=cs.get("outfit", "casual"), helmet=cs.get("helmet"), sweat=cs.get("sweat", 0.0),
+                    extras=dict(cs.get("extras", {})))
         ad = cs.get("action_params", {})
         pose = act(action, t, self.dur, base, ad)
         for fld in ("beard", "cracks"):

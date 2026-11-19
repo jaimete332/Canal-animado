@@ -1,0 +1,1000 @@
+{
+  "title": "¿Qué pasaría si te convirtieras en el jefe de la mafia?",
+  "idea": "¿Qué pasaría si te convirtieras en el jefe de la mafia?",
+  "slug": "jefe-de-la-mafia",
+  "category": "historia",
+  "question": "¿Seguirías queriendo ser el jefe?",
+  "music_mood": "mystery",
+  "scenes": [
+    {
+      "id": "a01",
+      "beat": "hook",
+      "narration": "Eres el jefe de la mafia. Enhorabuena: tu vida es un infierno.",
+      "visual": {
+        "background": {
+          "type": "office"
+        },
+        "character": {
+          "action": "smug",
+          "expression": "smug",
+          "x": 0.5,
+          "y": 0.72,
+          "scale": 1.25,
+          "actions": [
+            [
+              "w6",
+              "shock"
+            ]
+          ],
+          "expressions": [
+            [
+              "w6",
+              "worried"
+            ]
+          ],
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "props": [
+          {
+            "type": "money",
+            "x": 0.78,
+            "y": 0.69,
+            "scale": 0.8,
+            "enter": "none",
+            "layer": "front"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿JEFE DE",
+              "LA MAFIA?"
+            ],
+            "y": 280,
+            "size": 130
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w6"
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 6,
+          "gain_db": -4
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "mafia",
+        "infierno"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a02",
+      "beat": "setup",
+      "narration": "Primera regla: no te fíes de nadie. Ni siquiera de tu mano derecha.",
+      "visual": {
+        "background": {
+          "type": "city_night"
+        },
+        "character": {
+          "action": "think",
+          "expression": "worried",
+          "x": 0.5,
+          "y": 0.78,
+          "scale": 1.15,
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "mobster",
+            "hat": "fedora",
+            "enter": "pop",
+            "x": 0.17,
+            "y": 0.79,
+            "size": 1.05,
+            "facing": 1,
+            "expression": "neutral"
+          },
+          {
+            "type": "npc",
+            "outfit": "mobster",
+            "hat": "fedora",
+            "enter": "pop",
+            "x": 0.84,
+            "y": 0.79,
+            "size": 1.05,
+            "facing": -1,
+            "expression": "smug",
+            "hat_color": "#4A4652",
+            "at_word": 7,
+            "mustache": true
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "REGLA Nº 1",
+            "x": 540,
+            "y": 330,
+            "size": 70
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 7
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "nadie"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a03",
+      "beat": "setup",
+      "narration": "Los teléfonos pueden estar pinchados, así que nada de llamadas.",
+      "visual": {
+        "background": {
+          "type": "office"
+        },
+        "character": {
+          "action": "shock",
+          "expression": "shock",
+          "x": 0.33,
+          "y": 0.72,
+          "scale": 1.15,
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "props": [
+          {
+            "type": "phone",
+            "x": 0.72,
+            "y": 0.66,
+            "scale": 1.3,
+            "bug": true,
+            "at_word": 0,
+            "layer": "front"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "¡PINCHADO!",
+            "x": 760,
+            "y": 900,
+            "size": 64,
+            "at_word": 4
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "focus": [
+            0.6,
+            0.6
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "La policía usa escuchas telefónicas para investigar a la mafia",
+          "kind": "fact",
+          "source": "Polizia di Stato; DIA (Italia)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 4
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "pinchados"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a04",
+      "beat": "development",
+      "narration": "El capo Bernardo Provenzano se comunicaba con notas escritas a máquina: los pizzini.",
+      "visual": {
+        "background": {
+          "type": "countryside",
+          "farm_x": 760
+        },
+        "character": {
+          "action": "think",
+          "expression": "neutral",
+          "x": 0.3,
+          "y": 0.8,
+          "scale": 1.0,
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "props": [
+          {
+            "type": "typewriter",
+            "x": 0.66,
+            "y": 0.8,
+            "scale": 0.9,
+            "enter": "drop",
+            "layer": "front"
+          },
+          {
+            "type": "note",
+            "x": 0.6,
+            "y": 0.42,
+            "at_word": 7,
+            "tilt": -0.2
+          },
+          {
+            "type": "note",
+            "x": 0.82,
+            "y": 0.5,
+            "at_word": 9,
+            "tilt": 0.15
+          },
+          {
+            "type": "note",
+            "x": 0.7,
+            "y": 0.28,
+            "at_word": 12,
+            "tilt": -0.05
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "«PIZZINI»",
+            "x": 540,
+            "y": 300,
+            "size": 76,
+            "at_word": 11
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Bernardo Provenzano se comunicaba mediante pequeñas notas mecanografiadas llamadas «pizzini»",
+          "kind": "fact",
+          "source": "BBC News (2006); Wikipedia «Bernardo Provenzano»"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 7
+        },
+        {
+          "name": "tick",
+          "at_word": 9
+        },
+        {
+          "name": "pop",
+          "at_word": 12
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "provenzano",
+        "pizzini"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a05",
+      "beat": "development",
+      "narration": "Así logró esconderse de la policía durante cuarenta y tres años.",
+      "visual": {
+        "background": {
+          "type": "countryside",
+          "farm_x": 760
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "wanted",
+            "x": 0.5,
+            "y": 0.6,
+            "scale": 1.0,
+            "enter": "drop",
+            "sub": "43 AÑOS"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 43,
+            "suffix": " AÑOS",
+            "at_word": 7,
+            "over": 0.7,
+            "y": 300,
+            "sub": "ESCONDIDO"
+          }
+        ],
+        "camera": {
+          "move": "pull_out",
+          "zoom_from": 1.2
+        }
+      },
+      "claims": [
+        {
+          "text": "Provenzano estuvo prófugo de 1963 a 2006 (43 años)",
+          "kind": "fact",
+          "source": "BBC News (2006)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.1
+        },
+        {
+          "name": "ding",
+          "at_word": 7
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "cuarenta",
+        "tres"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a06",
+      "beat": "development",
+      "narration": "Lo encontraron en dos mil seis, escondido en una granja cerca de Corleone, su pueblo.",
+      "visual": {
+        "background": {
+          "type": "countryside",
+          "farm_x": 540,
+          "farm_y": 1200
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "police_car",
+            "x": 0.5,
+            "y": 0.8,
+            "scale": 0.85,
+            "at_word": 1,
+            "enter": "slide_right",
+            "enter_dur": 0.6,
+            "layer": "front"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "CORLEONE (SICILIA) · 2006",
+            "x": 540,
+            "y": 330,
+            "size": 60,
+            "at_word": 9
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "focus": [
+            0.5,
+            0.6
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Provenzano fue detenido en abril de 2006 en una granja cerca de Corleone",
+          "kind": "fact",
+          "source": "BBC News (11/04/2006)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at_word": 1
+        },
+        {
+          "name": "ding",
+          "at_word": 9
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "granja",
+        "corleone"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a07",
+      "beat": "development",
+      "narration": "Vivía a base de requesón y achicoria. Muy glamuroso todo.",
+      "visual": {
+        "background": {
+          "type": "countryside",
+          "farm_x": 820,
+          "farm_y": 1150
+        },
+        "character": {
+          "action": "shrug",
+          "expression": "smug",
+          "x": 0.5,
+          "y": 0.76,
+          "scale": 1.2,
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "props": [
+          {
+            "type": "plant",
+            "x": 0.2,
+            "y": 0.66,
+            "at_word": 4,
+            "health": 0.9
+          },
+          {
+            "type": "rock",
+            "x": 0.82,
+            "y": 0.66,
+            "at_word": 4,
+            "color": "#FFF8E6",
+            "scale": 1.6
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "En su escondite comía de forma muy sencilla (requesón, achicoria…)",
+          "kind": "estimate",
+          "source": "Prensa italiana y BBC (2006)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 4
+        },
+        {
+          "name": "boing",
+          "at_word": 7
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "glamuroso"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a08",
+      "beat": "development",
+      "narration": "Y el dinero tampoco es fácil: si no puedes explicar de dónde sale, te pillan.",
+      "visual": {
+        "background": {
+          "type": "office"
+        },
+        "character": {
+          "action": "sweat",
+          "expression": "worried",
+          "x": 0.35,
+          "y": 0.72,
+          "scale": 1.15,
+          "sweat": 1,
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "props": [
+          {
+            "type": "money",
+            "x": 0.75,
+            "y": 0.69,
+            "scale": 1.0,
+            "enter": "none",
+            "layer": "front"
+          },
+          {
+            "type": "handcuffs",
+            "x": 0.7,
+            "y": 0.4,
+            "at_word": 13,
+            "enter": "drop"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "impacts": [
+            "w13"
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boom",
+          "at_word": 13,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "dinero",
+        "pillan"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a09",
+      "beat": "development",
+      "narration": "Que se lo digan a Al Capone, el gánster más famoso de Chicago.",
+      "visual": {
+        "background": {
+          "type": "city_night",
+          "rain": true
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "mobster",
+            "hat": "fedora",
+            "mustache": true,
+            "hair": "#2A1E18",
+            "hat_color": "#D8D2C4",
+            "skin": "#E0A97E",
+            "x": 0.5,
+            "y": 0.78,
+            "size": 1.3,
+            "expression": "smug",
+            "action": "smug",
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "AL CAPONE · CHICAGO",
+            "x": 540,
+            "y": 330,
+            "size": 66,
+            "at_word": 5
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Al Capone fue el gánster más conocido de Chicago en los años 20",
+          "kind": "fact",
+          "source": "FBI (Famous Cases: Al Capone)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.0,
+          "gain_db": -6
+        },
+        {
+          "name": "ding",
+          "at_word": 5
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "capone"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a10",
+      "beat": "climax",
+      "narration": "Nunca lograron condenarlo por sus crímenes… pero sí por no pagar impuestos.",
+      "visual": {
+        "background": {
+          "type": "courtroom",
+          "judge": {
+            "expression": "angry"
+          }
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "mobster",
+            "hat": "fedora",
+            "mustache": true,
+            "hair": "#2A1E18",
+            "hat_color": "#D8D2C4",
+            "skin": "#E0A97E",
+            "x": 0.5,
+            "y": 0.92,
+            "size": 1.0,
+            "expression": "shock",
+            "action": "shock",
+            "at_word": 6,
+            "enter": "rise"
+          },
+          {
+            "type": "gavel",
+            "x": 0.74,
+            "y": 0.4,
+            "scale": 0.6,
+            "at_word": 6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "1931: condenado por evasión de impuestos",
+            "at_word": 7
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "impacts": [
+            "w10"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1931 Al Capone fue condenado por evasión fiscal",
+          "kind": "fact",
+          "source": "FBI (Famous Cases: Al Capone)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 10,
+          "gain_db": -3
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "impuestos"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a11",
+      "beat": "climax",
+      "narration": "Le cayeron once años y acabó en Alcatraz.",
+      "visual": {
+        "background": {
+          "type": "prison"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "prisoner",
+            "hat": null,
+            "mustache": true,
+            "hair": "#2A1E18",
+            "hat_color": "#D8D2C4",
+            "skin": "#E0A97E",
+            "x": 0.45,
+            "y": 0.78,
+            "size": 1.2,
+            "expression": "tired",
+            "action": "sweat",
+            "enter": "none"
+          },
+          {
+            "type": "bars",
+            "x": 0.5,
+            "y": 0.5,
+            "enter": "drop",
+            "layer": "front",
+            "at": 0.2
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 11,
+            "suffix": " AÑOS",
+            "at_word": 2,
+            "over": 0.5,
+            "y": 260,
+            "sub": "DE CONDENA"
+          },
+          {
+            "type": "label",
+            "text": "ALCATRAZ",
+            "x": 540,
+            "y": 1100,
+            "size": 64,
+            "at_word": 7
+          }
+        ],
+        "camera": {
+          "move": "static",
+          "impacts": [
+            0.6
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Capone fue condenado a 11 años y en 1934 lo trasladaron a Alcatraz",
+          "kind": "fact",
+          "source": "FBI; Federal Bureau of Prisons"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at": 0.55,
+          "gain_db": -4
+        },
+        {
+          "name": "ding",
+          "at_word": 2
+        }
+      ],
+      "transition": "circle",
+      "emphasis": [
+        "once",
+        "alcatraz"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a12",
+      "beat": "climax",
+      "narration": "Por cierto, su tarjeta de visita decía que vendía muebles usados.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300"
+        },
+        "character": {
+          "action": "celebrate",
+          "expression": "laugh",
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.05,
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "props": [
+          {
+            "type": "card",
+            "x": 0.5,
+            "y": 0.33,
+            "at_word": 3,
+            "enter": "drop",
+            "lines": [
+              "ALPHONSE CAPONE",
+              "Muebles usados"
+            ]
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [
+        {
+          "text": "La tarjeta de visita de Capone lo presentaba como vendedor de muebles de segunda mano",
+          "kind": "fact",
+          "source": "The Mob Museum (Las Vegas)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 8
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "muebles"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a13",
+      "beat": "ending",
+      "narration": "Casi todos los grandes capos acaban igual: entre rejas… o algo peor.",
+      "visual": {
+        "background": {
+          "type": "prison"
+        },
+        "character": {
+          "action": "sweat",
+          "expression": "worried",
+          "x": 0.5,
+          "y": 0.78,
+          "scale": 1.2,
+          "outfit": "prisoner"
+        },
+        "props": [
+          {
+            "type": "bars",
+            "x": 0.5,
+            "y": 0.5,
+            "at_word": 7,
+            "enter": "drop",
+            "layer": "front"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "impacts": [
+            "w8"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Riina, Provenzano, Capone y Messina Denaro, entre otros, acabaron detenidos",
+          "kind": "estimate",
+          "source": "Hemerotecas (BBC, El País)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at_word": 8,
+          "gain_db": -4
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "rejas"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a14",
+      "beat": "ending",
+      "narration": "¿Seguirías queriendo ser el jefe? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF6B5C"
+        },
+        "character": {
+          "action": "talk",
+          "expression": "excited",
+          "x": 0.5,
+          "y": 0.64,
+          "scale": 1.35,
+          "enter": "pop",
+          "actions": [
+            [
+              "w5",
+              "point_down"
+            ]
+          ],
+          "outfit": "mobster",
+          "helmet": "fedora"
+        },
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 5,
+            "arrow": "down",
+            "bg": "#2B6BE8"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at": 0.05
+        },
+        {
+          "name": "ding",
+          "at_word": 5
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.35
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasaría si fueras el jefe de la mafia? 🎩",
+    "hashtags": [
+      "#quepasariasi",
+      "#mafia",
+      "#historia",
+      "#curiosidades",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasaría si",
+      "jefe de la mafia",
+      "mafia",
+      "al capone",
+      "provenzano",
+      "cosa nostra",
+      "alcatraz",
+      "historia",
+      "curiosidades",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Seguirías queriendo ser el jefe sabiendo cómo acabó Capone? 🎩👇",
+    "description": "Te despiertas siendo el jefe de la mafia… y tu vida se convierte en un infierno. 🕴️🎩\n\nLeo descubre la cara menos glamurosa de ser un capo: no fiarte de nadie, no poder usar el teléfono, vivir escondido durante décadas… y acabar cayendo por algo tan aburrido como los impuestos.\n\n🧪 HISTORIA REAL DEL VÍDEO\n• Bernardo Provenzano, jefe de la Cosa Nostra siciliana, se comunicaba con notitas escritas a máquina llamadas «pizzini» para evitar las escuchas.\n• Estuvo prófugo 43 años (1963-2006) y lo detuvieron en una granja cerca de Corleone, su pueblo.\n• Al Capone, el gánster más famoso de Chicago, nunca fue condenado por sus crímenes violentos… sino por evasión de impuestos en 1931.\n• Le cayeron 11 años de condena y pasó parte de ella en Alcatraz.\n• Su tarjeta de visita decía que se dedicaba a vender muebles usados.\n\n⚠️ Leo es un personaje de ficción. Este vídeo es divulgación histórica: el crimen organizado destroza vidas y casi siempre acaba igual, en la cárcel o algo peor.\n\n📚 Fuentes: FBI (Famous Cases: Al Capone), Federal Bureau of Prisons, The Mob Museum, BBC News (2006), Polizia di Stato.\n\n💬 ¿Seguirías queriendo ser el jefe? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?» cada semana.\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #mafia #historia #curiosidades #shorts",
+    "thumbnail": {
+      "scene": "a01",
+      "t": 0.3,
+      "lines": [
+        "¿Y SI FUERAS",
+        "EL JEFE DE",
+        "LA MAFIA?"
+      ],
+      "badge": "HISTORIA REAL",
+      "badge_pos": [
+        540,
+        1620
+      ],
+      "y": 260,
+      "character": {
+        "action": "smug",
+        "expression": "smug",
+        "y": 0.8,
+        "scale": 1.4
+      },
+      "crop_y": 0.62,
+      "h_shift": 900,
+      "h_scale": 0.85
+    }
+  }
+}

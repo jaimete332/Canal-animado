@@ -116,15 +116,17 @@ def designed_thumbnail(pipe, spec: dict) -> None:
     colors = spec.get("colors", ["white", PAL["yellow"], PAL["yellow"]])
     lines = spec["lines"]
 
-    def badge(ctx, x, y, size, rot=0.1):
+    def badge(ctx, x, y, size, rot=0.1, left=False):
         if not spec.get("badge"):
             return
+        ctx.select_font_face("Lilita One")
+        ctx.set_font_size(size)
+        w = ctx.text_extents(spec["badge"]).width
+        if left:
+            x = x + w / 2 + 40
         with saved(ctx):
             ctx.translate(x, y)
             ctx.rotate(rot)
-            ctx.select_font_face("Lilita One")
-            ctx.set_font_size(size)
-            w = ctx.text_extents(spec["badge"]).width
             rrect(ctx, -w / 2 - 40, -size * 0.8, w + 80, size * 1.6, size * 0.5)
             fill_stroke(ctx, spec.get("badge_color", PAL["red"]), OUT * 1.2)
             text(ctx, spec["badge"], 0, 2, size, outline=7, shadow_off=0)
@@ -166,5 +168,5 @@ def designed_thumbnail(pipe, spec: dict) -> None:
     hs = 86
     for i, ln in enumerate(lines):
         text(c, ln, 40, 220 + i * hs * 1.08, hs, color=colors[i % len(colors)], outline=11, align="left", max_w=700)
-    badge(c, 260, 220 + len(lines) * hs * 1.08 + 40, 60, rot=-0.04)
+    badge(c, 40, 220 + len(lines) * hs * 1.08 + 40, 60, rot=-0.04, left=True)
     h.write_to_png(str(pipe.paths.root / "thumbnail_16x9.png"))

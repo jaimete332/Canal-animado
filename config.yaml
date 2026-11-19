@@ -39,6 +39,10 @@ script:
 tts:
   provider: edge            # kokoro | piper | edge | elevenlabs | openai | google
   fallback: [piper, kokoro] # si Edge no responde (sin red), se usa voz local
+  lexicon:                  # pronunciación: palabra del guion -> cómo debe leerla la voz
+    Buscetta: Buchetta
+    Tommaso: Tomaso
+    Totò: Totó
   kokoro:
     model: models/kokoro/kokoro-v1.0.onnx
     voices: models/kokoro/voices-v1.0.bin
