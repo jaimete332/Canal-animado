@@ -108,13 +108,13 @@ def llm_ideas(n: int, published: list[str]) -> list[tuple[str, str]]:
 
 def _niche_bonus(idea: str) -> float:
     """+8 si la idea toca un tema que la investigación del nicho marca como de más tirón."""
-    from ..research.niche import TOPICS, _norm, style_guide
+    from ..research.niche import TOPICS, _norm, style_guide, topic_hit
     g = style_guide()
     if not g:
         return 0.0
     i = _norm(idea)
     for rank, topic in enumerate(g.get("preferred_topics", [])):
-        if any(w in i for w in TOPICS.get(topic, "").split()):
+        if topic_hit(i, TOPICS.get(topic, "").split()):
             return 8.0 - rank * 1.5
     return 0.0
 

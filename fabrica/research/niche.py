@@ -131,6 +131,18 @@ def _norm(s: str) -> str:
     return "".join(c for c in s if not unicodedata.combining(c))
 
 
+def topic_hit(text: str, words: list[str]) -> bool:
+    """¿Contiene `text` (normalizado) alguna palabra clave? Coincidencia por palabra, no por subcadena
+    («ia» no debe casar con «pasaría» ni «sol» con «solo»); las claves largas admiten sufijos
+    («sobrevivir» → «sobrevivirías»), las cortas solo el plural."""
+    for w in words:
+        w = _norm(w)
+        tail = r"\w*" if len(w) >= 5 else r"(?:s|es)?"
+        if re.search(rf"\b{re.escape(w)}{tail}\b", text):
+            return True
+    return False
+
+
 EMOJI = re.compile("[\U0001F300-\U0001FAFF☀-➿]")
 TITLE_PATTERNS = {
     "pregunta «¿qué pasaría si…?»": r"qu[eé] pasar[ií]a si|what would happen|what if",
@@ -190,7 +202,7 @@ def analyze(vids: list[Video]) -> dict:
     topic_scores = {}
     for name, kw in TOPICS.items():
         words = kw.split()
-        hits = [v for v in ranked if any(w in _norm(v.title) for w in words)]
+        hits = [v for v in ranked if topic_hit(_norm(v.title), words)]
         if hits:
             topic_scores[name] = {
                 "videos": len(hits),
