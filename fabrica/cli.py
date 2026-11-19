@@ -9,6 +9,8 @@
   python -m fabrica list                                     # registro de vídeos
   python -m fabrica approve centro-de-la-tierra              # tu aprobación (obligatoria para subir)
   python -m fabrica upload centro-de-la-tierra               # sube a YouTube (privado por defecto)
+  python -m fabrica tiktok-auth                              # autoriza tu cuenta de TikTok (una vez)
+  python -m fabrica tiktok-upload centro-de-la-tierra [--draft]  # sube a TikTok (privado / borradores)
   python -m fabrica metrics                                  # descarga métricas de YouTube
   python -m fabrica insights                                 # aprendizajes para próximos guiones
   python -m fabrica doctor                                   # comprueba dependencias, modelos y claves
@@ -99,6 +101,17 @@ def cmd_upload(a):
     print(f"Subido: https://youtube.com/shorts/{vid}")
 
 
+def cmd_tiktok_auth(a):
+    from .publish.tiktok import authorize
+    authorize()
+
+
+def cmd_tiktok_upload(a):
+    from .publish.tiktok import upload
+    pid = upload(a.slug, draft=a.draft, privacy=a.privacy)
+    print(f"TikTok: {'enviado a borradores' if a.draft else 'publicado'} (publish_id {pid})")
+
+
 def cmd_metrics(a):
     from .analytics.metrics import fetch_all
     fetch_all()
@@ -126,6 +139,9 @@ def cmd_doctor(a):
     for k in ("ANTHROPIC_API_KEY", "OPENAI_API_KEY", "GEMINI_API_KEY", "ELEVENLABS_API_KEY"):
         print("🔑" if env(k) else "  ", k, "configurada" if env(k) else "no configurada (opcional)")
     print(ok((ROOT / cfg["youtube"]["client_secrets"]).exists()), "YouTube OAuth client_secret.json (opcional)")
+    print(ok(bool(env("TIKTOK_CLIENT_KEY"))), "TikTok TIKTOK_CLIENT_KEY (opcional)")
+    print(ok((ROOT / cfg.get("tiktok", {}).get("token_file", "secrets/tiktok_token.json")).exists()),
+          "TikTok autorizado (opcional)")
 
 
 def _summary(res: dict):
@@ -155,6 +171,10 @@ def main(argv=None):
     sub.add_parser("list").set_defaults(f=cmd_list)
     s = sub.add_parser("approve"); s.add_argument("slug"); s.set_defaults(f=cmd_approve)
     s = sub.add_parser("upload"); s.add_argument("slug"); s.add_argument("--privacy", default=None); s.set_defaults(f=cmd_upload)
+    sub.add_parser("tiktok-auth").set_defaults(f=cmd_tiktok_auth)
+    s = sub.add_parser("tiktok-upload"); s.add_argument("slug"); s.add_argument("--draft", action="store_true")
+    s.add_argument("--privacy", choices=["SELF_ONLY", "MUTUAL_FOLLOW_FRIENDS", "FOLLOWER_OF_CREATOR", "PUBLIC_TO_EVERYONE"])
+    s.set_defaults(f=cmd_tiktok_upload)
     sub.add_parser("metrics").set_defaults(f=cmd_metrics)
     sub.add_parser("insights").set_defaults(f=cmd_insights)
     sub.add_parser("doctor").set_defaults(f=cmd_doctor)

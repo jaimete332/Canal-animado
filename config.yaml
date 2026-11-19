@@ -124,6 +124,14 @@ youtube:
   client_secrets: secrets/client_secret.json
   token_file: secrets/youtube_token.json
 
+tiktok:
+  enabled: false            # requiere tu autorización (ver docs/TIKTOK.md)
+  privacy: SELF_ONLY        # SELF_ONLY (solo tú) hasta que la app pase la auditoría de TikTok
+  redirect_uri: "http://localhost:8765/callback/"
+  token_file: secrets/tiktok_token.json
+  cover_ms: 1500            # fotograma de portada (ms)
+  extra_hashtags: ["#hipoteticos", "#fyp"]
+
 paths:
   output: output
   data: data
