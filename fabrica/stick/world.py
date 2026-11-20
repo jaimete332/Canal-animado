@@ -1256,9 +1256,10 @@ def p_mill(ctx, p, t):
 
 def p_dog(ctx, p, t):
     wag = math.sin(t * 12) * 0.5
-    _animal_body(ctx, "tan", 70, 80, t=t, walk=p.get("walk"))
+    col_ = p.get("color", "tan")
+    _animal_body(ctx, col_, 70, 80, t=t, walk=p.get("walk"))
     circ(ctx, 75, -100, 30)
-    ink_fill(ctx, "tan", OUTLINE)
+    ink_fill(ctx, col_, OUTLINE)
     ctx.save()
     ctx.translate(55, -120)
     ctx.scale(0.5, 1)
@@ -1276,10 +1277,35 @@ def p_dog(ctx, p, t):
 
 
 def p_horse(ctx, p, t):
-    _animal_body(ctx, p.get("color", "brown"), 130, 175, t=t, walk=p.get("walk"))
-    poly(ctx, [(95, -190), (150, -300), (195, -280), (140, -170)])
-    ink_fill(ctx, p.get("color", "brown"), OUTLINE)
-    circ(ctx, 168, -278, 5)
+    col_ = p.get("color", "brown")
+    sw = math.sin(t * 4) * 6
+    ctx.move_to(-120, -170)                      # tail
+    ctx.curve_to(-170, -160 + sw, -175, -90, -160, -60)
+    stroke(ctx, 14, "darkwood")
+    for k, lx in enumerate((-95, -60, 70, 105)):  # long thin legs
+        s_ = 14 * math.sin(t * 6 + k * math.pi) if p.get("walk") else 0
+        line(ctx, lx, -120, lx + s_, 0, 13, shade(col_, 0.1))
+    ctx.save()
+    ctx.translate(0, -165)
+    ctx.scale(1.0, 0.5)
+    circ(ctx, 0, 0, 135)
+    ctx.restore()
+    ink_fill(ctx, col_, OUTLINE)
+    poly(ctx, [(90, -190), (120, -290), (165, -280), (135, -170)])        # neck
+    ink_fill(ctx, col_, OUTLINE)
+    ctx.save()                                                             # head
+    ctx.translate(170, -290)
+    ctx.rotate(0.45)
+    ctx.scale(1.0, 0.55)
+    circ(ctx, 0, 0, 52)
+    ctx.restore()
+    ink_fill(ctx, col_, OUTLINE)
+    poly(ctx, [(125, -320), (135, -350), (148, -318)])                    # ear
+    ink_fill(ctx, col_, 3)
+    ctx.move_to(118, -300)                                                 # mane
+    ctx.curve_to(100, -260, 105, -220, 92, -190)
+    stroke(ctx, 12, "darkwood")
+    circ(ctx, 168, -300, 5)
     ctx.set_source_rgb(*INK)
     ctx.fill()
 
@@ -1478,3 +1504,7 @@ def draw_prop(ctx, p, t, age, absolute=True):
         ctx.pop_group_to_source()
         ctx.paint_with_alpha(alpha)
     ctx.restore()
+
+
+# era sets (Rome, Egypt, Ice Age, ships, trenches, factories) register themselves here
+from . import world2  # noqa: E402,F401

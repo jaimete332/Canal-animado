@@ -1,0 +1,5104 @@
+{
+  "title": "What Did Ancient Romans Actually Do All Day?",
+  "idea": "A full day in the life of an ordinary Roman in ancient Rome, hour by hour",
+  "slug": "roman-day",
+  "category": "history",
+  "question": "Would you trade your life for one day as a Roman? Which part would you skip?",
+  "music_mood": "curious",
+  "scenes": [
+    {
+      "id": "r01",
+      "beat": "hook",
+      "narration": "Rome, around the year one hundred. The biggest city on Earth wakes up, and almost a million people need to get something done today.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "dusk"
+        },
+        "props": [
+          {
+            "type": "crowd",
+            "x": 0.42,
+            "y": 0.95,
+            "n": 14,
+            "cols": 7,
+            "action": "walk",
+            "gap": 90,
+            "fig_scale": 0.5,
+            "outfit": "tunic",
+            "outfit_color": "tan",
+            "at": 3.0
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "ROME · AD 100",
+            "y": 0.15,
+            "at": 0.3
+          }
+        ],
+        "camera": {
+          "move": "pull_out",
+          "zoom_from": 1.25
+        }
+      },
+      "claims": [
+        {
+          "text": "Rome's population in the early Empire is commonly estimated at close to a million",
+          "kind": "estimate",
+          "source": "Mary Beard, SPQR: A History of Ancient Rome (2015)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "r02",
+      "beat": "hook",
+      "narration": "So what did they actually do all day? Where did they eat, work, wash… and, let's be honest, go to the toilet?",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.5,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "think",
+            "expression": "thinking"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "checklist",
+            "x": 0.52,
+            "y": 0.22,
+            "size": 58,
+            "items": [
+              [
+                "eat?",
+                null
+              ],
+              [
+                "work?",
+                null
+              ],
+              [
+                "wash?",
+                null
+              ],
+              [
+                "toilet?!",
+                null
+              ]
+            ],
+            "times": [
+              3.0,
+              3.5,
+              4.0,
+              5.6
+            ]
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "r03",
+      "beat": "hook",
+      "narration": "Let's follow one ordinary Roman from sunrise to midnight. Meet Stan. Or, as his neighbors call him, Stanius.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "wave",
+            "expression": "grin",
+            "at_word": 10,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "STANIUS",
+            "x": 0.4,
+            "y": 0.2,
+            "to_x": 0.4,
+            "to_y": 0.38,
+            "at_word": 15
+          },
+          {
+            "type": "fiction",
+            "text": "STAN'S STORY"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Stanius is a fictional Roman",
+          "kind": "fiction",
+          "source": "Narrative device"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 10
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "r04",
+      "beat": "hook",
+      "narration": "And by the end, you'll know whether you'd rather be a Roman… or stay exactly where you are.",
+      "visual": {
+        "background": {
+          "type": "split",
+          "left": "sky",
+          "right": [
+            0.95,
+            0.88,
+            0.75
+          ],
+          "left_label": "TODAY",
+          "right_label": "ROME"
+        },
+        "cast": [
+          {
+            "id": "you",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.4,
+            "action": "shrug",
+            "expression": "neutral",
+            "preset": "modern"
+          },
+          {
+            "id": "stan",
+            "x": 0.75,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "cheer",
+            "expression": "grin",
+            "facing": -1
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "h01",
+      "beat": "setup",
+      "narration": "Stanius doesn't live in a villa with a garden. Like most Romans, he rents a small room in an apartment block called an insula.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "insulae": [
+            [
+              380,
+              5
+            ],
+            [
+              760,
+              4
+            ]
+          ],
+          "temple": false
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.15,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "point",
+            "expression": "happy",
+            "action_params": {
+              "height": 0.6
+            }
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "insula = apartment block",
+            "x": 0.75,
+            "y": 0.2,
+            "to_x": 0.5,
+            "to_y": 0.3,
+            "at_word": 20
+          }
+        ],
+        "camera": {
+          "move": "pan_up",
+          "amount": 120
+        }
+      },
+      "claims": [
+        {
+          "text": "Most of Rome's population lived in rented flats in multi-storey insulae",
+          "kind": "fact",
+          "source": "Mary Beard, SPQR: A History of Ancient Rome (2015)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25,
+      "chapter": "Waking Up in an Apartment Block"
+    },
+    {
+      "id": "h02",
+      "beat": "setup",
+      "narration": "Some of these buildings were so tall and so badly built that Emperor Augustus put a height limit on them: about twenty meters.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "insulae": [
+            [
+              380,
+              6
+            ]
+          ],
+          "temple": false
+        },
+        "cast": [
+          {
+            "id": "augustus",
+            "x": 0.75,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "hat": "laurel",
+            "action": "point",
+            "facing": -1,
+            "expression": "angry"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "stat",
+            "value": "~20 m",
+            "caption": "max height (70 Roman feet)",
+            "x": 0.75,
+            "y": 0.25,
+            "size": 130,
+            "at_word": 16
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Augustus limited the height of buildings in Rome to 70 Roman feet (about 20 m)",
+          "kind": "fact",
+          "source": "Strabo, Geography 5.3.7 (Augustus' building height limit)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 16
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "h03",
+      "beat": "setup",
+      "narration": "Here's the twist: in Rome, the higher you lived, the poorer you were. No elevator, no running water, and the best view of any fire.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "props": [
+          {
+            "type": "board",
+            "x": 0.3,
+            "y": 0.25,
+            "text": "TOP FLOOR\ncheap · cramped · dangerous",
+            "w": 560,
+            "color": "red",
+            "text_color": "white",
+            "at_word": 6
+          },
+          {
+            "type": "board",
+            "x": 0.3,
+            "y": 0.7,
+            "text": "GROUND FLOOR\nshops & rich flats",
+            "w": 560,
+            "color": "lime",
+            "at_word": 2
+          },
+          {
+            "type": "fire",
+            "x": 0.75,
+            "y": 0.6,
+            "at_word": 22
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.72,
+            "y": 0.92,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "panic",
+            "expression": "scared",
+            "at_word": 22
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Upper floors of insulae were the cheapest and most dangerous; ground floors held shops and better flats",
+          "kind": "fact",
+          "source": "Jérôme Carcopino, Daily Life in Ancient Rome (1940)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at_word": 22
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "h04",
+      "beat": "setup",
+      "narration": "Fires were so common that Augustus created a corps of around seven thousand firefighters and night watchmen, the vigiles.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "dusk"
+        },
+        "cast": [
+          {
+            "id": "vigil",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": "red",
+            "hat": "legion",
+            "item": "bucket",
+            "action": "run",
+            "path": [
+              [
+                0,
+                0.1,
+                0.84
+              ],
+              [
+                5,
+                0.6,
+                0.84
+              ]
+            ],
+            "expression": "determined"
+          },
+          {
+            "id": "vigil2",
+            "x": 0.2,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": "red",
+            "hat": "legion",
+            "item": "axe",
+            "action": "run",
+            "path": [
+              [
+                0.6,
+                -0.05,
+                0.84
+              ],
+              [
+                5.5,
+                0.45,
+                0.84
+              ]
+            ],
+            "expression": "determined"
+          }
+        ],
+        "props": [
+          {
+            "type": "fire",
+            "x": 0.85,
+            "y": 0.84,
+            "scale": 1.4
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "The vigiles (AD 6): seven cohorts, roughly 7,000 men, fighting fires and patrolling at night.",
+            "source": "Suetonius, Life of Augustus 30 & 89; Life of Julius Caesar",
+            "at_word": 12
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Augustus established the vigiles in AD 6: seven cohorts of firefighters/night watchmen",
+          "kind": "fact",
+          "source": "Suetonius, Life of Augustus 30 & 89; Life of Julius Caesar"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "h05",
+      "beat": "setup",
+      "narration": "Stanius wakes at dawn. Romans split the daylight into twelve hours, so a summer hour was much longer than a winter one.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "dusk",
+          "temple": false
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "idle",
+            "expression": "sleepy",
+            "expressions": [
+              [
+                "w4",
+                "neutral"
+              ]
+            ],
+            "actions": [
+              [
+                "w4",
+                "shrug"
+              ]
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "board",
+            "x": 0.75,
+            "y": 0.4,
+            "text": "summer hour ≈ 75 min\nwinter hour ≈ 45 min",
+            "w": 600,
+            "at_word": 14
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "HOUR 1 · DAWN",
+            "value": "",
+            "corner": "tr",
+            "size": 46
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Romans divided daylight into 12 hours whose length varied with the season (~45-75 modern minutes)",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica, 'Roman hour' / 'ancient Rome'"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "h05b",
+      "beat": "setup",
+      "narration": "First job of the day: water. Top-floor flats had no taps, so Stanius walks down to a public fountain on the corner.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple": false
+        },
+        "props": [
+          {
+            "type": "well",
+            "x": 0.68,
+            "y": 0.86
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "walk",
+            "item": "bucket",
+            "path": [
+              [
+                0,
+                0.15,
+                0.84
+              ],
+              [
+                4,
+                0.55,
+                0.84
+              ]
+            ],
+            "expression": "sleepy"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Most insula residents fetched water from public fountains",
+          "kind": "fact",
+          "source": "Frontinus, De aquaeductu (Rome's aqueducts)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "h05c",
+      "beat": "setup",
+      "narration": "That water traveled for miles. Rome was fed by a network of aqueducts, eleven of them by the third century.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "summer"
+        },
+        "props": [
+          {
+            "type": "column",
+            "x": 0.12,
+            "y": 0.84,
+            "h": 420
+          },
+          {
+            "type": "column",
+            "x": 0.3,
+            "y": 0.84,
+            "h": 420
+          },
+          {
+            "type": "column",
+            "x": 0.48,
+            "y": 0.84,
+            "h": 420
+          },
+          {
+            "type": "column",
+            "x": 0.66,
+            "y": 0.84,
+            "h": 420
+          },
+          {
+            "type": "column",
+            "x": 0.84,
+            "y": 0.84,
+            "h": 420
+          },
+          {
+            "type": "board",
+            "x": 0.5,
+            "y": 0.2,
+            "text": "11 AQUEDUCTS",
+            "w": 520,
+            "at_word": 15
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Ancient Rome was supplied by eleven aqueducts by the 3rd century AD",
+          "kind": "fact",
+          "source": "Frontinus, De aquaeductu (Rome's aqueducts)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "h05d",
+      "beat": "setup",
+      "narration": "Then he empties last night's chamber pot. And here's a gross fact: urine was valuable. Laundries collected it to clean clothes.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple": false
+        },
+        "props": [
+          {
+            "type": "barrel",
+            "x": 0.65,
+            "y": 0.86
+          },
+          {
+            "type": "icon",
+            "icon": "stink",
+            "x": 0.65,
+            "y": 0.62
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "hold",
+            "item": "bucket",
+            "expression": "disgusted"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Fullers (laundries) used collected urine for cleaning cloth",
+          "kind": "fact",
+          "source": "Suetonius, Life of Vespasian 23 ('pecunia non olet')"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "h05e",
+      "beat": "setup",
+      "narration": "Emperor Vespasian even taxed it. When his son complained, he held up a coin and said: money doesn't smell.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "dusk"
+        },
+        "cast": [
+          {
+            "id": "vesp",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "hat": "laurel",
+            "belly": 0.6,
+            "action": "hold_up",
+            "item": "coin",
+            "expression": "smug"
+          },
+          {
+            "id": "titus",
+            "x": 0.65,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "facing": -1,
+            "action": "facepalm",
+            "expression": "disgusted"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "quote",
+            "text": "Pecunia non olet. (Money doesn't smell.)",
+            "by": "Vespasian, via Suetonius",
+            "y": 0.22,
+            "at_word": 14,
+            "size": 56
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Vespasian taxed urine collection; 'pecunia non olet' is attributed to him",
+          "kind": "fact",
+          "source": "Suetonius, Life of Vespasian 23 ('pecunia non olet')"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "h06",
+      "beat": "setup",
+      "narration": "Getting dressed takes seconds. He sleeps in his tunic. The famous toga? That's for formal occasions, and honestly, most people hated wearing it.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "shrug",
+            "expression": "smug"
+          },
+          {
+            "id": "rich2",
+            "x": 0.7,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "action": "sad",
+            "expression": "tired",
+            "facing": -1,
+            "at_word": 10,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "heavy wool, metres of it",
+            "x": 0.75,
+            "y": 0.18,
+            "to_x": 0.7,
+            "to_y": 0.45,
+            "at_word": 12
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The toga was heavy formal wear; everyday clothing was the tunic",
+          "kind": "fact",
+          "source": "Alberto Angela, A Day in the Life of Ancient Rome (2009)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 10
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "m01",
+      "beat": "development",
+      "narration": "Breakfast is small: a piece of bread, maybe cheese, some olives, or nothing at all.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "props": [
+          {
+            "type": "item",
+            "item": "bread",
+            "x": 0.3,
+            "y": 0.62,
+            "scale": 4.5,
+            "at_word": 4
+          },
+          {
+            "type": "item",
+            "item": "egg",
+            "x": 0.5,
+            "y": 0.62,
+            "scale": 4.0,
+            "at_word": 9
+          },
+          {
+            "type": "icon",
+            "icon": "x",
+            "x": 0.72,
+            "y": 0.62,
+            "scale": 1.6,
+            "at_word": 13
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "HOUR 1",
+            "value": "",
+            "corner": "tr",
+            "size": 46
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The Roman breakfast (ientaculum) was light, often bread with cheese or fruit, or skipped",
+          "kind": "fact",
+          "source": "Alberto Angela, A Day in the Life of Ancient Rome (2009)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25,
+      "chapter": "Bread, Bosses and Free Grain"
+    },
+    {
+      "id": "m02",
+      "beat": "development",
+      "narration": "Bread came from bakeries. Archaeologists have even found real Roman loaves, burned to charcoal in Pompeii, still cut into eight slices.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple": false
+        },
+        "props": [
+          {
+            "type": "item",
+            "item": "bread",
+            "x": 0.55,
+            "y": 0.6,
+            "scale": 5.0
+          },
+          {
+            "type": "amphora",
+            "x": 0.85,
+            "y": 0.86
+          }
+        ],
+        "cast": [
+          {
+            "id": "baker",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "apron",
+            "outfit_color": "white",
+            "action": "hold",
+            "item": "bread",
+            "expression": "happy"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Carbonised loaves from AD 79 survive at Pompeii, scored into 8 segments.",
+            "source": "Pompeii Archaeological Park (thermopolium of Regio V; carbonised bread)",
+            "at_word": 8
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Carbonised loaves scored into eight segments were found at Pompeii",
+          "kind": "fact",
+          "source": "Pompeii Archaeological Park (thermopolium of Regio V; carbonised bread)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "m03",
+      "beat": "development",
+      "narration": "Then comes a strange morning ritual: the salutatio. Thousands of Romans rush across the city just to say good morning to their boss.",
+      "visual": {
+        "background": {
+          "type": "manor",
+          "manor_x": 0.7
+        },
+        "props": [
+          {
+            "type": "crowd",
+            "x": 0.4,
+            "y": 0.92,
+            "n": 10,
+            "cols": 10,
+            "action": "idle",
+            "gap": 70,
+            "fig_scale": 0.55,
+            "outfit": "toga"
+          }
+        ],
+        "cast": [
+          {
+            "id": "patron",
+            "x": 0.75,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "hat_color": "purple",
+            "belly": 0.8,
+            "beard": "short",
+            "action": "wave",
+            "expression": "smug",
+            "facing": -1
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "THE SALUTATIO",
+            "y": 0.15,
+            "at_word": 6
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Clients paid a morning call (salutatio) on their patron",
+          "kind": "fact",
+          "source": "Mary Beard, SPQR: A History of Ancient Rome (2015)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "m04",
+      "beat": "development",
+      "narration": "That boss is your patron, a rich man who protects you. You're his client. You bring him loyalty, votes and applause.",
+      "visual": {
+        "background": {
+          "type": "manor",
+          "manor_x": 0.72
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "bow",
+            "expression": "happy"
+          },
+          {
+            "id": "patron",
+            "x": 0.62,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "hat_color": "purple",
+            "belly": 0.8,
+            "beard": "short",
+            "action": "talk",
+            "expression": "smug",
+            "facing": -1
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "patron",
+            "x": 0.62,
+            "y": 0.18,
+            "to_x": 0.62,
+            "to_y": 0.32,
+            "at_word": 4
+          },
+          {
+            "type": "label",
+            "text": "client",
+            "x": 0.3,
+            "y": 0.4,
+            "to_x": 0.3,
+            "to_y": 0.55,
+            "at_word": 15
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Roman patronage: clients owed their patron support and attendance",
+          "kind": "fact",
+          "source": "Mary Beard, SPQR: A History of Ancient Rome (2015)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "m05",
+      "beat": "development",
+      "narration": "In return, he might give you a small gift of food or cash, and help you if you get into trouble.",
+      "visual": {
+        "background": {
+          "type": "manor",
+          "manor_x": 0.72
+        },
+        "cast": [
+          {
+            "id": "patron",
+            "x": 0.62,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "hat_color": "purple",
+            "belly": 0.8,
+            "beard": "short",
+            "action": "hold",
+            "item": "bag",
+            "expression": "happy",
+            "facing": -1
+          },
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "cheer",
+            "expression": "grin"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "money",
+            "text": "+ sportula",
+            "x": 0.32,
+            "y": 0.4,
+            "at": 1.0
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Patrons gave clients a handout (sportula) of food or money",
+          "kind": "fact",
+          "source": "Martial, Epigrams 4.8 (the hours of a Roman day); Juvenal, Satire 3"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 1.0
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "m06",
+      "beat": "development",
+      "narration": "Many poor citizens also collect free grain from the state. Under Augustus, around two hundred thousand men received it every month.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "props": [
+          {
+            "type": "sack",
+            "x": 0.55,
+            "y": 0.86,
+            "label": "FREE GRAIN",
+            "scale": 1.3
+          },
+          {
+            "type": "crowd",
+            "x": 0.3,
+            "y": 0.95,
+            "n": 8,
+            "cols": 8,
+            "gap": 60,
+            "fig_scale": 0.45,
+            "outfit": "tunic",
+            "outfit_color": "tan"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "stat",
+            "value": 200000,
+            "caption": "citizens on the grain dole",
+            "y": 0.25,
+            "x": 0.62,
+            "size": 140,
+            "at_word": 13
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Augustus records grain distributions to some 200,000+ citizens",
+          "kind": "fact",
+          "source": "Augustus, Res Gestae 15 (grain distributions)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 13
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "m07",
+      "beat": "development",
+      "narration": "Kids, meanwhile, go to school before sunrise. A teacher, often in a rented corner of the street, drills reading, writing and arithmetic.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "dusk",
+          "temple": false
+        },
+        "cast": [
+          {
+            "id": "teacher",
+            "x": 0.7,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "beard": "long",
+            "action": "point",
+            "item": "scroll",
+            "facing": -1,
+            "expression": "angry"
+          },
+          {
+            "id": "kid1",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "action": "sit",
+            "expression": "sleepy",
+            "preset": "child"
+          },
+          {
+            "id": "kid2",
+            "x": 0.45,
+            "y": 0.84,
+            "scale": 1.4,
+            "action": "sit",
+            "expression": "tired",
+            "preset": "child"
+          }
+        ],
+        "props": [
+          {
+            "type": "stool",
+            "x": 0.3,
+            "y": 0.84
+          },
+          {
+            "type": "stool",
+            "x": 0.45,
+            "y": 0.84
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Roman primary teachers (litteratores) often taught in rented spaces from very early morning",
+          "kind": "fact",
+          "source": "Stanley Bonner, Education in Ancient Rome (1977)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "m08",
+      "beat": "development",
+      "narration": "And teachers were famous for one thing: hitting students. The poet Horace remembered his teacher as Orbilius the flogger.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "dusk",
+          "temple": false
+        },
+        "cast": [
+          {
+            "id": "teacher",
+            "x": 0.65,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "beard": "long",
+            "action": "swing",
+            "item": "crook",
+            "facing": -1,
+            "expression": "angry"
+          },
+          {
+            "id": "kid1",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.4,
+            "action": "cower",
+            "expression": "scared",
+            "preset": "child"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "\"plagosus Orbilius\"",
+            "x": 0.65,
+            "y": 0.18,
+            "at_word": 15
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Horace called his teacher Orbilius 'plagosus' (fond of flogging)",
+          "kind": "fact",
+          "source": "Horace, Epistles 2.1.70"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "w01",
+      "beat": "development",
+      "narration": "Now, work. And here's the part you'll love: for many Romans, the working day was basically over by early afternoon.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "dance",
+            "expression": "laughing"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "HOUR 3",
+            "value": "",
+            "corner": "tr",
+            "size": 46
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Many Romans' business day ended around midday or early afternoon",
+          "kind": "fact",
+          "source": "Martial, Epigrams 4.8 (the hours of a Roman day); Jérôme Carcopino, Daily Life in Ancient Rome (1940)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25,
+      "chapter": "Work (But Only Until Lunch)"
+    },
+    {
+      "id": "w02",
+      "beat": "development",
+      "narration": "The poet Martial described the routine: the first two hours for greetings, the third for lawyers, then business until the sixth or seventh hour.",
+      "visual": {
+        "background": {
+          "type": "chalkboard"
+        },
+        "overlays": [
+          {
+            "type": "bars",
+            "title": "A Roman day, according to Martial",
+            "x": 0.3,
+            "y": 0.27,
+            "items": [
+              [
+                "Hours 1-2",
+                2,
+                "yellow",
+                "greetings"
+              ],
+              [
+                "Hour 3",
+                1,
+                "orange",
+                "lawyers & courts"
+              ],
+              [
+                "Hours 4-6",
+                3,
+                "teal",
+                "business"
+              ],
+              [
+                "Hour 7",
+                1,
+                "lime",
+                "rest"
+              ],
+              [
+                "Hours 8-9",
+                2,
+                "blue",
+                "exercise & baths"
+              ],
+              [
+                "Hour 9+",
+                2,
+                "red",
+                "dinner"
+              ]
+            ],
+            "max": 3.4,
+            "bar_h": 70,
+            "gap": 24
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Martial's Epigram 4.8 sets out the hours of a Roman day",
+          "kind": "fact",
+          "source": "Martial, Epigrams 4.8 (the hours of a Roman day)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "w03",
+      "beat": "development",
+      "narration": "Stanius works in a shop on the ground floor of an insula. Rome's streets were lined with tiny workshops open to the pavement.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "insulae": [
+            [
+              -40,
+              3
+            ],
+            [
+              300,
+              3
+            ],
+            [
+              640,
+              3
+            ],
+            [
+              980,
+              3
+            ]
+          ],
+          "temple": false
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "dig",
+            "item": "hammer",
+            "expression": "determined"
+          },
+          {
+            "id": "buyer",
+            "x": 0.55,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": "teal",
+            "action": "talk",
+            "facing": -1,
+            "expression": "neutral"
+          }
+        ],
+        "props": [
+          {
+            "type": "table",
+            "x": 0.3,
+            "y": 0.9,
+            "w": 300,
+            "items": [
+              "bucket",
+              "mug"
+            ]
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Ground floors of insulae held tabernae (shops and workshops) open to the street",
+          "kind": "fact",
+          "source": "Alberto Angela, A Day in the Life of Ancient Rome (2009)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "dig",
+          "at": 0.4
+        },
+        {
+          "name": "dig",
+          "at": 1.5
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "w04",
+      "beat": "development",
+      "narration": "Bakers, barbers, shoemakers, metalworkers. If you needed something, there was a guy for that within one block.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple": false
+        },
+        "props": [
+          {
+            "type": "crowd",
+            "x": 0.5,
+            "y": 0.95,
+            "n": 6,
+            "cols": 6,
+            "gap": 260,
+            "fig_scale": 0.85,
+            "action": "talk",
+            "outfit": "apron",
+            "outfit_color": "white",
+            "color": "ink"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "checklist",
+            "x": 0.06,
+            "y": 0.18,
+            "size": 50,
+            "items": [
+              [
+                "bakers",
+                true
+              ],
+              [
+                "barbers",
+                true
+              ],
+              [
+                "shoemakers",
+                true
+              ],
+              [
+                "metalworkers",
+                true
+              ]
+            ],
+            "times": [
+              0.2,
+              0.8,
+              1.4,
+              2.2
+            ]
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "w05",
+      "beat": "development",
+      "narration": "Meanwhile, the richer men head to the Forum, the center of politics, law and gossip.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple_x": 0.6,
+          "temple_scale": 1.15,
+          "insulae": []
+        },
+        "cast": [
+          {
+            "id": "senator",
+            "x": 0.2,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "action": "talk",
+            "expression": "smug",
+            "hat_color": "purple"
+          },
+          {
+            "id": "lawyer",
+            "x": 0.85,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "action": "point",
+            "expression": "angry",
+            "facing": -1
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "THE FORUM",
+            "y": 0.12,
+            "at_word": 6
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The Forum Romanum was the center of political, legal and commercial life",
+          "kind": "fact",
+          "source": "Mary Beard, SPQR: A History of Ancient Rome (2015)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "w06",
+      "beat": "development",
+      "narration": "Court cases were public entertainment. Crowds gathered to cheer and boo the lawyers like a sports match.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple_x": 0.6,
+          "temple_scale": 1.15,
+          "insulae": []
+        },
+        "props": [
+          {
+            "type": "crowd",
+            "x": 0.35,
+            "y": 0.95,
+            "n": 12,
+            "cols": 6,
+            "action": "cheer",
+            "gap": 80,
+            "fig_scale": 0.5,
+            "outfit": "toga"
+          }
+        ],
+        "cast": [
+          {
+            "id": "lawyer",
+            "x": 0.75,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "action": "angry",
+            "expression": "angry",
+            "facing": -1,
+            "say": [
+              {
+                "text": "Objection!",
+                "at": 1.2,
+                "kind": "shout"
+              }
+            ]
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Trials in the Forum drew large audiences",
+          "kind": "fact",
+          "source": "Mary Beard, SPQR: A History of Ancient Rome (2015)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at": 1.2
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "w07",
+      "beat": "development",
+      "narration": "And of course, not everyone worked for themselves. Rome was full of enslaved people, doing everything from mining to teaching children.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "grey",
+          "temple": false
+        },
+        "cast": [
+          {
+            "id": "slave",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "rags",
+            "outfit_color": [
+              0.6,
+              0.55,
+              0.45
+            ],
+            "action": "carry",
+            "expression": "tired",
+            "path": [
+              [
+                0,
+                0.2,
+                0.84
+              ],
+              [
+                6,
+                0.55,
+                0.84
+              ]
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "amphora",
+            "x": 0.8,
+            "y": 0.86
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Enslaved people were a large share of Rome's population; estimates for Roman Italy range widely (often 10-20% or more).",
+            "source": "Mary Beard, SPQR: A History of Ancient Rome (2015)",
+            "at": 1.0
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Slavery was widespread in Rome; estimates of the enslaved share of Italy's population vary widely",
+          "kind": "estimate",
+          "source": "Mary Beard, SPQR: A History of Ancient Rome (2015)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "w08",
+      "beat": "development",
+      "narration": "Every eighth day, the routine changes: it's market day, the nundinae. Romans effectively lived in an eight-day week.",
+      "visual": {
+        "background": {
+          "type": "town",
+          "stalls": true
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "walk",
+            "path": [
+              [
+                0,
+                0.15,
+                0.84
+              ],
+              [
+                5,
+                0.5,
+                0.84
+              ]
+            ],
+            "expression": "happy",
+            "item": "bag"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "timeline",
+            "items": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F",
+              "G",
+              "H"
+            ],
+            "at": 7,
+            "from_at": 0,
+            "w": 1100,
+            "colors": [
+              "lightgrey",
+              "lightgrey",
+              "lightgrey",
+              "lightgrey",
+              "lightgrey",
+              "lightgrey",
+              "lightgrey",
+              "yellow"
+            ],
+            "y": 0.1
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Rome had an eight-day market cycle (nundinae), lettered A-H in calendars",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica, 'nundinae' (Roman market day)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "w09",
+      "beat": "development",
+      "narration": "Many workers also stop at the barber. Barbershops were gossip central, and a clean shave was the fashion, until Emperor Hadrian made beards cool again.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple": false
+        },
+        "props": [
+          {
+            "type": "stool",
+            "x": 0.4,
+            "y": 0.86
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "sit",
+            "expression": "worried"
+          },
+          {
+            "id": "barber",
+            "x": 0.58,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "apron",
+            "outfit_color": "white",
+            "action": "stir",
+            "item": "sickle",
+            "facing": -1,
+            "expression": "happy",
+            "say": [
+              {
+                "text": "Did you hear about the senator…",
+                "at": 2.0
+              }
+            ]
+          },
+          {
+            "id": "hadrian",
+            "x": 0.85,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "hat": "laurel",
+            "beard": "short",
+            "facing": -1,
+            "action": "idle",
+            "expression": "smug",
+            "at_word": 21,
+            "enter": "pop"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Barbershops were social hubs; Hadrian popularized beards among Roman men",
+          "kind": "fact",
+          "source": "Alberto Angela, A Day in the Life of Ancient Rome (2009), on barbershops"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "w10",
+      "beat": "development",
+      "narration": "And everywhere you walk, the walls are covered in writing. In Pompeii alone, there are thousands of ancient graffiti.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple": false
+        },
+        "props": [
+          {
+            "type": "board",
+            "x": 0.3,
+            "y": 0.45,
+            "text": "VOTE FOR GAIUS!",
+            "w": 440,
+            "color": [
+              0.98,
+              0.95,
+              0.85
+            ]
+          },
+          {
+            "type": "board",
+            "x": 0.62,
+            "y": 0.3,
+            "text": "Stanius was here",
+            "w": 420,
+            "color": [
+              0.98,
+              0.95,
+              0.85
+            ],
+            "at": 1.5
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Pompeii preserves thousands of painted notices and scratched graffiti.",
+            "source": "Rebecca Benefiel, Ancient Graffiti Project (Washington and Lee University)",
+            "at_word": 14,
+            "x": 0.5,
+            "y": 0.62,
+            "w": 760
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Thousands of graffiti and painted notices survive at Pompeii",
+          "kind": "fact",
+          "source": "Rebecca Benefiel, Ancient Graffiti Project (Washington and Lee University)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "w11",
+      "beat": "development",
+      "narration": "Election ads, love notes, insults, and the timeless classic: somebody was here.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple": false
+        },
+        "props": [
+          {
+            "type": "board",
+            "x": 0.25,
+            "y": 0.35,
+            "text": "Vote Gaius!",
+            "w": 330,
+            "at": 0.2
+          },
+          {
+            "type": "board",
+            "x": 0.5,
+            "y": 0.5,
+            "text": "Marcus ♥ Spendusa",
+            "w": 380,
+            "at": 0.8
+          },
+          {
+            "type": "board",
+            "x": 0.75,
+            "y": 0.35,
+            "text": "Lucius is a thief",
+            "w": 380,
+            "at": 1.4
+          },
+          {
+            "type": "board",
+            "x": 0.5,
+            "y": 0.2,
+            "text": "Gaius was here",
+            "w": 360,
+            "at": 2.6
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Pompeian graffiti include election notices, love messages, insults and 'X was here'",
+          "kind": "fact",
+          "source": "Rebecca Benefiel, Ancient Graffiti Project (Washington and Lee University)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at": 0.2
+        },
+        {
+          "name": "pop",
+          "at": 0.8
+        },
+        {
+          "name": "pop",
+          "at": 1.4
+        },
+        {
+          "name": "pop",
+          "at": 2.6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "l01",
+      "beat": "development",
+      "narration": "Lunch time. Most apartments had no proper kitchen, because cooking fires in a wooden-floored block were a terrible idea.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "scratch",
+            "expression": "thinking"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "x",
+            "x": 0.7,
+            "y": 0.5,
+            "at_word": 7
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "HOUR 6 · NOON",
+            "value": "",
+            "corner": "tr",
+            "size": 46
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Many insula flats lacked kitchens; residents relied on street food",
+          "kind": "fact",
+          "source": "Alberto Angela, A Day in the Life of Ancient Rome (2009)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25,
+      "chapter": "Fast Food, Roman Style"
+    },
+    {
+      "id": "l02",
+      "beat": "development",
+      "narration": "So Romans ate out, at a thermopolium: a street counter with big jars of hot food built right into it. Basically, Roman fast food.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple": false
+        },
+        "props": [
+          {
+            "type": "table",
+            "x": 0.55,
+            "y": 0.9,
+            "w": 520,
+            "items": [
+              "pot",
+              "pot",
+              "pot"
+            ],
+            "item_scale": 0.55
+          }
+        ],
+        "cast": [
+          {
+            "id": "cook",
+            "x": 0.62,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "apron",
+            "outfit_color": "white",
+            "action": "stir",
+            "expression": "happy",
+            "facing": -1
+          },
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "point",
+            "expression": "grin"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "THERMOPOLIUM",
+            "y": 0.13,
+            "at_word": 6
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Thermopolia were street counters with built-in jars (dolia) serving hot food and drink",
+          "kind": "fact",
+          "source": "Pompeii Archaeological Park (thermopolium of Regio V; carbonised bread)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "l03",
+      "beat": "development",
+      "narration": "In Pompeii, archaeologists found one with its painted counter still bright, and traces of duck, pork, snails and fish in the jars.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "props": [
+          {
+            "type": "table",
+            "x": 0.5,
+            "y": 0.85,
+            "w": 700,
+            "items": [
+              "pot",
+              "pot",
+              "pot",
+              "pot"
+            ],
+            "item_scale": 0.6
+          },
+          {
+            "type": "chicken",
+            "x": 0.25,
+            "y": 0.5,
+            "at_word": 15,
+            "scale": 0.9
+          },
+          {
+            "type": "pig",
+            "x": 0.45,
+            "y": 0.5,
+            "at_word": 16,
+            "scale": 0.8
+          },
+          {
+            "type": "item",
+            "item": "egg",
+            "x": 0.62,
+            "y": 0.45,
+            "scale": 2.5,
+            "at_word": 17
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Regio V thermopolium (excavated 2019-20): remains of duck, pig, goat, snails and fish.",
+            "source": "Pompeii Archaeological Park (thermopolium of Regio V; carbonised bread)",
+            "at_word": 4,
+            "x": 0.55,
+            "y": 0.04,
+            "w": 780
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The Regio V thermopolium at Pompeii contained remains of duck, pig, goat, snails and fish",
+          "kind": "fact",
+          "source": "Pompeii Archaeological Park (thermopolium of Regio V; carbonised bread)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "l04",
+      "beat": "development",
+      "narration": "And on almost everything, Romans poured garum: a sauce made from fish left to ferment in the sun. Delicious. Allegedly.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple": false
+        },
+        "props": [
+          {
+            "type": "amphora",
+            "x": 0.6,
+            "y": 0.86,
+            "scale": 1.3
+          },
+          {
+            "type": "icon",
+            "icon": "stink",
+            "x": 0.6,
+            "y": 0.6,
+            "at_word": 14
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "eat",
+            "expression": "happy",
+            "expressions": [
+              [
+                "w19",
+                "disgusted"
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "GARUM",
+            "x": 0.75,
+            "y": 0.35,
+            "to_x": 0.63,
+            "to_y": 0.62,
+            "at_word": 7
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Garum, a fermented fish sauce, was a ubiquitous Roman condiment",
+          "kind": "fact",
+          "source": "Alberto Angela, A Day in the Life of Ancient Rome (2009)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "l04b",
+      "beat": "development",
+      "narration": "Some people linger in a popina, a cheap bar, playing dice. Technically, gambling was illegal, except during one festival.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "wall": [
+            0.7,
+            0.55,
+            0.42
+          ],
+          "hearth": false
+        },
+        "props": [
+          {
+            "type": "table",
+            "x": 0.5,
+            "y": 0.88,
+            "w": 420,
+            "items": [
+              "mug",
+              "coin"
+            ]
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "sit_talk",
+            "expression": "smug"
+          },
+          {
+            "id": "gambler",
+            "x": 0.7,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": "teal",
+            "action": "sit",
+            "expression": "angry",
+            "facing": -1
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Gambling at dice was generally prohibited except during the Saturnalia",
+          "kind": "fact",
+          "source": "Digest 11.5 (gambling laws); Martial 5.84 & 14.1 (dice at the Saturnalia)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "l04c",
+      "beat": "development",
+      "narration": "That festival was the Saturnalia, in December. Gifts, parties, and for a few days, masters even served dinner to their slaves.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "season": "winter",
+          "time": "dusk"
+        },
+        "cast": [
+          {
+            "id": "patron",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "hat_color": "purple",
+            "belly": 0.8,
+            "beard": "short",
+            "action": "carry",
+            "expression": "happy",
+            "facing": -1,
+            "action_params": {
+              "walking": false
+            }
+          },
+          {
+            "id": "servant",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": "white",
+            "action": "laugh",
+            "expression": "laughing"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "sparkle",
+            "x": 0.5,
+            "y": 0.4
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "SATURNALIA",
+            "y": 0.14,
+            "color": "red",
+            "at_word": 3
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "During the Saturnalia gifts were exchanged and social roles were temporarily reversed",
+          "kind": "fact",
+          "source": "Macrobius, Saturnalia; Encyclopaedia Britannica, 'Saturnalia'"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "l05",
+      "beat": "development",
+      "narration": "After lunch, a nap. The sixth hour, around noon, was rest time, and our word siesta may come from the Latin sexta hora.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "day"
+        },
+        "props": [
+          {
+            "type": "bed",
+            "x": 0.4,
+            "y": 0.9,
+            "scale": 1.5
+          },
+          {
+            "type": "icon",
+            "icon": "z",
+            "x": 0.4,
+            "y": 0.66
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.46,
+            "y": 0.88,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "sleep",
+            "expression": "sleepy"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "SEXTA HORA",
+              "→ SIESTA?"
+            ],
+            "colors": [
+              "ink",
+              "red"
+            ],
+            "y": 0.14,
+            "at_word": 17
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "'Siesta' derives from Latin sexta (hora), the sixth hour",
+          "kind": "fact",
+          "source": "Real Academia Española, etymology of 'siesta'"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "b01",
+      "beat": "development",
+      "narration": "Then comes the best part of the Roman day: the baths. Around the eighth or ninth hour, the whole city heads to the thermae.",
+      "visual": {
+        "background": {
+          "type": "baths"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.15,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "walk",
+            "path": [
+              [
+                0,
+                0.05,
+                0.84
+              ],
+              [
+                4,
+                0.35,
+                0.84
+              ]
+            ],
+            "expression": "happy",
+            "actions": [
+              [
+                "w8",
+                "cheer"
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "HOUR 8",
+            "value": "",
+            "corner": "tr",
+            "size": 46
+          },
+          {
+            "type": "title",
+            "text": "THE BATHS",
+            "y": 0.14,
+            "at_word": 8
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Romans typically bathed in the afternoon (8th-9th hour)",
+          "kind": "fact",
+          "source": "Martial, Epigrams 4.8 (the hours of a Roman day)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25,
+      "chapter": "The Baths: Rome's Social Network"
+    },
+    {
+      "id": "b02",
+      "beat": "development",
+      "narration": "Entry was cheap, often just a quarter of an as, the smallest coin around. Even poor people could afford it.",
+      "visual": {
+        "background": {
+          "type": "baths"
+        },
+        "props": [
+          {
+            "type": "coin",
+            "x": 0.6,
+            "y": 0.6,
+            "scale": 1.6,
+            "text": "¼"
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "hold",
+            "item": "coin",
+            "expression": "happy"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Admission to the public baths cost a quadrans (a quarter of an as)",
+          "kind": "fact",
+          "source": "Garrett Fagan, Bathing in Public in the Roman World (1999)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "b03",
+      "beat": "development",
+      "narration": "Romans didn't use soap. They rubbed olive oil on their skin, then scraped it off, with the dirt, using a curved metal tool called a strigil.",
+      "visual": {
+        "background": {
+          "type": "baths"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.45,
+            "y": 0.95,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "scratch",
+            "item": "sickle",
+            "expression": "smug"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "strigil",
+            "x": 0.7,
+            "y": 0.3,
+            "to_x": 0.5,
+            "to_y": 0.45,
+            "at_word": 22
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Bathers oiled their skin and scraped it clean with a strigil",
+          "kind": "fact",
+          "source": "Garrett Fagan, Bathing in Public in the Roman World (1999)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "b04",
+      "beat": "development",
+      "narration": "Then a circuit of rooms: warm, then hot like a sauna, then a plunge in the cold pool to finish.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "props": [
+          {
+            "type": "board",
+            "x": 0.2,
+            "y": 0.5,
+            "text": "TEPIDARIUM\nwarm",
+            "color": "yellow",
+            "w": 380,
+            "at_word": 6
+          },
+          {
+            "type": "board",
+            "x": 0.5,
+            "y": 0.5,
+            "text": "CALDARIUM\nhot",
+            "color": "red",
+            "text_color": "white",
+            "w": 380,
+            "at_word": 8
+          },
+          {
+            "type": "board",
+            "x": 0.8,
+            "y": 0.5,
+            "text": "FRIGIDARIUM\ncold!",
+            "color": "sky",
+            "w": 380,
+            "at_word": 14
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "THE BATH CIRCUIT",
+            "y": 0.15
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Baths had warm (tepidarium), hot (caldarium) and cold (frigidarium) rooms",
+          "kind": "fact",
+          "source": "Garrett Fagan, Bathing in Public in the Roman World (1999)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 6
+        },
+        {
+          "name": "pop",
+          "at_word": 8
+        },
+        {
+          "name": "splash",
+          "at_word": 14
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "b05",
+      "beat": "development",
+      "narration": "But the baths weren't really about getting clean. They were about people. You exercised, gossiped, made deals, ate snacks and got invited to dinner.",
+      "visual": {
+        "background": {
+          "type": "baths"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "laugh",
+            "expression": "laughing"
+          },
+          {
+            "id": "friend",
+            "x": 0.45,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": "teal",
+            "action": "talk",
+            "expression": "happy",
+            "facing": -1
+          },
+          {
+            "id": "patron",
+            "x": 0.75,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "hat_color": "purple",
+            "belly": 0.8,
+            "beard": "short",
+            "action": "wave",
+            "expression": "happy",
+            "facing": -1,
+            "at": 3.0,
+            "enter": "pop"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The baths were major social venues for exercise, conversation and networking",
+          "kind": "fact",
+          "source": "Garrett Fagan, Bathing in Public in the Roman World (1999)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "b06",
+      "beat": "development",
+      "narration": "Some were enormous. The later Baths of Caracalla covered several hectares and could hold well over a thousand bathers at once.",
+      "visual": {
+        "background": {
+          "type": "baths"
+        },
+        "props": [
+          {
+            "type": "crowd",
+            "x": 0.5,
+            "y": 0.97,
+            "n": 20,
+            "cols": 10,
+            "gap": 70,
+            "fig_scale": 0.4
+          }
+        ],
+        "overlays": [
+          {
+            "type": "stat",
+            "value": "1,600+",
+            "caption": "bathers at once (Baths of Caracalla, AD 216)",
+            "y": 0.28,
+            "size": 150,
+            "at_word": 13
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The Baths of Caracalla could accommodate an estimated 1,600 bathers",
+          "kind": "estimate",
+          "source": "Garrett Fagan, Bathing in Public in the Roman World (1999)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 13
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "b06b",
+      "beat": "development",
+      "narration": "Men and women usually bathed at separate times or in separate sections. Mixed bathing happened, and some emperors tried to ban it.",
+      "visual": {
+        "background": {
+          "type": "baths"
+        },
+        "cast": [
+          {
+            "id": "w1",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "action": "talk",
+            "expression": "happy",
+            "hat": null,
+            "preset": "peasant_woman"
+          },
+          {
+            "id": "w2",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.4,
+            "action": "laugh",
+            "expression": "laughing",
+            "facing": -1,
+            "hat": null,
+            "preset": "peasant_woman"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "caption",
+            "text": "Hadrian reportedly separated the sexes in the baths (Historia Augusta)",
+            "at": 3.0
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Bathing was often segregated by time or section; Hadrian is reported to have banned mixed bathing",
+          "kind": "fact",
+          "source": "Historia Augusta, Life of Hadrian 18; Garrett Fagan, Bathing in Public in the Roman World (1999)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "b07",
+      "beat": "development",
+      "narration": "Hygiene, though? Questionable. The water wasn't changed very often, and a Roman doctor might send sick patients to the same pool.",
+      "visual": {
+        "background": {
+          "type": "baths"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.5,
+            "y": 0.97,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "idle",
+            "expression": "disgusted"
+          },
+          {
+            "id": "sick",
+            "x": 0.7,
+            "y": 0.97,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": "lime",
+            "action": "sick",
+            "expression": "sick"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "stink",
+            "x": 0.6,
+            "y": 0.7
+          },
+          {
+            "type": "germ",
+            "x": 0.42,
+            "y": 0.75,
+            "scale": 0.7,
+            "at": 2.0
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Water in public baths was not frequently changed; medical writers recommended bathing for the sick",
+          "kind": "fact",
+          "source": "Garrett Fagan, Bathing in Public in the Roman World (1999)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "t01",
+      "beat": "development",
+      "narration": "Speaking of questionable. Let's talk toilets. Rome had public latrines with long stone benches and a row of holes, side by side.",
+      "visual": {
+        "background": {
+          "type": "baths"
+        },
+        "props": [
+          {
+            "type": "latrine",
+            "x": 0.5,
+            "y": 0.9,
+            "scale": 1.2
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.82,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "sit",
+            "expression": "worried"
+          },
+          {
+            "id": "n1",
+            "x": 0.55,
+            "y": 0.82,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": "teal",
+            "action": "sit_talk",
+            "expression": "happy"
+          },
+          {
+            "id": "n2",
+            "x": 0.75,
+            "y": 0.82,
+            "scale": 1.4,
+            "outfit": "toga",
+            "action": "sit",
+            "expression": "smug"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Roman public latrines had multi-seat benches without partitions",
+          "kind": "fact",
+          "source": "Ann Olga Koloski-Ostrow, The Archaeology of Sanitation in Roman Italy (2015)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25,
+      "chapter": "The Toilets You Don't Want to Know About"
+    },
+    {
+      "id": "t02",
+      "beat": "development",
+      "narration": "No walls, no doors, no privacy. You just sat next to your neighbor and, well, chatted.",
+      "visual": {
+        "background": {
+          "type": "baths"
+        },
+        "props": [
+          {
+            "type": "latrine",
+            "x": 0.5,
+            "y": 0.9,
+            "scale": 1.2
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.82,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "sit",
+            "expression": "disgusted"
+          },
+          {
+            "id": "n1",
+            "x": 0.55,
+            "y": 0.82,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": "teal",
+            "action": "sit_talk",
+            "expression": "laughing",
+            "say": [
+              {
+                "text": "So, how's the family?",
+                "at": 2.4
+              }
+            ]
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "t03",
+      "beat": "development",
+      "narration": "Instead of toilet paper, there was probably a sponge on a stick, shared, and rinsed in a channel of water. Historians still argue about the details.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.5,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "hold",
+            "item": "broom",
+            "expression": "disgusted"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "the xylospongium",
+            "x": 0.65,
+            "y": 0.25,
+            "to_x": 0.36,
+            "to_y": 0.35,
+            "at_word": 8
+          },
+          {
+            "type": "fact",
+            "tag": "DEBATED",
+            "text": "Some scholars think the sponge-stick was mainly for cleaning the latrine itself.",
+            "source": "Ann Olga Koloski-Ostrow, The Archaeology of Sanitation in Roman Italy (2015)",
+            "at_word": 22,
+            "x": 0.5,
+            "y": 0.6,
+            "w": 760
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "A sponge on a stick (xylospongium) is linked to Roman latrines; its exact use is debated",
+          "kind": "fact",
+          "source": "Ann Olga Koloski-Ostrow, The Archaeology of Sanitation in Roman Italy (2015)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "t04",
+      "beat": "development",
+      "narration": "And sometimes, the sewer gases caught fire. Romans even prayed to Fortuna, the goddess of luck, before going in.",
+      "visual": {
+        "background": {
+          "type": "baths"
+        },
+        "props": [
+          {
+            "type": "latrine",
+            "x": 0.5,
+            "y": 0.9,
+            "scale": 1.2
+          },
+          {
+            "type": "fire",
+            "x": 0.5,
+            "y": 0.86,
+            "at_word": 6,
+            "scale": 0.8
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.2,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "pray",
+            "expression": "scared"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Sewer gases could ignite in latrines; images of Fortuna appear near latrines",
+          "kind": "fact",
+          "source": "Ann Olga Koloski-Ostrow, The Archaeology of Sanitation in Roman Italy (2015)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at_word": 6,
+          "gain_db": -6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "t05",
+      "beat": "development",
+      "narration": "Where did it all go? Into the Cloaca Maxima, the Great Sewer, one of the oldest sewers in the world. Parts of it still work today.",
+      "visual": {
+        "background": {
+          "type": "cave",
+          "fire": false,
+          "paintings": false
+        },
+        "props": [
+          {
+            "type": "river",
+            "x": 0.5,
+            "y": 0.92,
+            "w": 1600
+          },
+          {
+            "type": "rat",
+            "x": 0.3,
+            "y": 0.86,
+            "walk": true,
+            "move": [
+              [
+                0,
+                0.1,
+                0.86
+              ],
+              [
+                5,
+                0.6,
+                0.86
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "CLOACA MAXIMA",
+            "y": 0.14,
+            "at_word": 6,
+            "color": "white",
+            "outline_color": "ink"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The Cloaca Maxima is one of the world's earliest sewers and parts remain in use",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica, 'Cloaca Maxima'"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "splash",
+          "at": 0.5,
+          "gain_db": -6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "d01",
+      "beat": "development",
+      "narration": "Late afternoon is time for the main meal, the cena. For the rich, it's a show.",
+      "visual": {
+        "background": {
+          "type": "manor",
+          "time": "dusk"
+        },
+        "cast": [
+          {
+            "id": "patron",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "hat_color": "purple",
+            "belly": 0.8,
+            "beard": "short",
+            "action": "laugh",
+            "expression": "laughing"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "HOUR 9",
+            "value": "",
+            "corner": "tr",
+            "size": 46
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The cena was the main meal, taken in the late afternoon",
+          "kind": "fact",
+          "source": "Martial, Epigrams 4.8 (the hours of a Roman day)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25,
+      "chapter": "Dinner: Couches for the Rich, Bread for Everyone Else"
+    },
+    {
+      "id": "d02",
+      "beat": "development",
+      "narration": "Guests lay on couches around the table, leaning on one elbow, while slaves brought course after course.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "wall": [
+            0.82,
+            0.45,
+            0.35
+          ],
+          "hearth": false,
+          "window": false
+        },
+        "props": [
+          {
+            "type": "table",
+            "x": 0.5,
+            "y": 0.88,
+            "w": 640,
+            "items": [
+              "plate",
+              "mug",
+              "plate"
+            ]
+          }
+        ],
+        "cast": [
+          {
+            "id": "patron",
+            "x": 0.3,
+            "y": 0.9,
+            "scale": 1.4,
+            "outfit": "toga",
+            "hat_color": "purple",
+            "belly": 0.8,
+            "beard": "short",
+            "action": "lie",
+            "expression": "happy"
+          },
+          {
+            "id": "g2",
+            "x": 0.62,
+            "y": 0.9,
+            "scale": 1.4,
+            "outfit": "toga",
+            "action": "lie",
+            "expression": "laughing"
+          },
+          {
+            "id": "servant",
+            "x": 0.85,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": "white",
+            "action": "carry",
+            "expression": "tired",
+            "action_params": {
+              "walking": false
+            },
+            "facing": -1
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Wealthy Romans dined reclining on couches (triclinium)",
+          "kind": "fact",
+          "source": "Alberto Angela, A Day in the Life of Ancient Rome (2009)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "d03",
+      "beat": "development",
+      "narration": "Stanius doesn't have couches. He grabs bread, a bowl of bean or grain porridge, some wine mixed with water, and calls it a night.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "dusk",
+          "temple": false
+        },
+        "props": [
+          {
+            "type": "plate",
+            "x": 0.6,
+            "y": 0.86,
+            "food": "porridge",
+            "scale": 1.6
+          },
+          {
+            "type": "item",
+            "item": "mug",
+            "x": 0.75,
+            "y": 0.84,
+            "scale": 2.2
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "eat",
+            "expression": "happy",
+            "item": "bread"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Ordinary Romans ate grain porridge (puls), bread and legumes, and drank wine mixed with water",
+          "kind": "fact",
+          "source": "Alberto Angela, A Day in the Life of Ancient Rome (2009)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "d04",
+      "beat": "development",
+      "narration": "By the way, Romans almost always mixed their wine with water. Drinking it straight was considered a little barbaric.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "drink",
+            "item": "mug",
+            "expression": "smug"
+          },
+          {
+            "id": "gaul",
+            "x": 0.7,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": "green",
+            "beard": "long",
+            "hair": "messy",
+            "action": "drink",
+            "item": "mug",
+            "expression": "laughing",
+            "facing": -1
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "civilized",
+            "x": 0.3,
+            "y": 0.2,
+            "at": 0.8
+          },
+          {
+            "type": "label",
+            "text": "barbarian",
+            "x": 0.7,
+            "y": 0.2,
+            "at_word": 13
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Romans and Greeks considered drinking undiluted wine uncivilized",
+          "kind": "fact",
+          "source": "Alberto Angela, A Day in the Life of Ancient Rome (2009)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "f01",
+      "beat": "development",
+      "narration": "Back home, every Roman house had a little shrine called a lararium, for the household gods.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "wall": [
+            0.85,
+            0.5,
+            0.38
+          ],
+          "hearth": false
+        },
+        "props": [
+          {
+            "type": "temple",
+            "x": 0.6,
+            "y": 0.62,
+            "scale": 0.35
+          },
+          {
+            "type": "item",
+            "item": "candle",
+            "x": 0.6,
+            "y": 0.64,
+            "scale": 1.6
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "pray",
+            "expression": "neutral"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "lararium",
+            "x": 0.82,
+            "y": 0.25,
+            "to_x": 0.66,
+            "to_y": 0.42,
+            "at_word": 10
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Roman homes kept a lararium shrine to the household gods (Lares)",
+          "kind": "fact",
+          "source": "Harriet Flower, The Dancing Lares and the Serpent in the Garden (2017)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25,
+      "chapter": "Gods, Family and Pets"
+    },
+    {
+      "id": "f02",
+      "beat": "development",
+      "narration": "A pinch of food, a few drops of wine, a little prayer. Religion wasn't just temples. It was part of breakfast.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "wall": [
+            0.85,
+            0.5,
+            0.38
+          ],
+          "hearth": false
+        },
+        "props": [
+          {
+            "type": "temple",
+            "x": 0.6,
+            "y": 0.62,
+            "scale": 0.35
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "hold",
+            "item": "bread",
+            "expression": "happy"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Daily offerings of food and wine were made at the household shrine",
+          "kind": "fact",
+          "source": "Harriet Flower, The Dancing Lares and the Serpent in the Garden (2017)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "f03",
+      "beat": "development",
+      "narration": "The family was ruled by the oldest man, the paterfamilias. Legally, he had enormous power over everyone in the house, even adult sons.",
+      "visual": {
+        "background": {
+          "type": "manor"
+        },
+        "cast": [
+          {
+            "id": "pater",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.6,
+            "outfit": "toga",
+            "beard": "long",
+            "belly": 0.4,
+            "action": "point",
+            "expression": "angry"
+          },
+          {
+            "id": "son",
+            "x": 0.2,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "toga",
+            "action": "cower",
+            "expression": "worried"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The paterfamilias held extensive legal authority (patria potestas) over his household",
+          "kind": "fact",
+          "source": "Suzanne Dixon, The Roman Family (1992)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "f04",
+      "beat": "development",
+      "narration": "Women couldn't vote or hold office. But many ran the household money, owned property and businesses, and some became very rich.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple": false
+        },
+        "cast": [
+          {
+            "id": "matrona",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit_color": "purple",
+            "hat": null,
+            "action": "count",
+            "expression": "smug",
+            "item": "bag",
+            "preset": "peasant_woman"
+          },
+          {
+            "id": "stan",
+            "x": 0.7,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "shrug",
+            "expression": "neutral",
+            "facing": -1
+          }
+        ],
+        "overlays": [
+          {
+            "type": "checklist",
+            "x": 0.06,
+            "y": 0.18,
+            "size": 48,
+            "items": [
+              [
+                "vote",
+                false
+              ],
+              [
+                "hold office",
+                false
+              ],
+              [
+                "own property",
+                true
+              ],
+              [
+                "run a business",
+                true
+              ]
+            ],
+            "times": [
+              0.6,
+              1.2,
+              3.4,
+              4.2
+            ]
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Roman women could not vote or hold office but could own property and run businesses",
+          "kind": "fact",
+          "source": "Suzanne Dixon, The Roman Family (1992)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "f05",
+      "beat": "development",
+      "narration": "Pets? Absolutely. Dogs guarded the door, and Romans also kept birds. Some rich ladies had pet nightingales and tiny lapdogs.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "temple": false
+        },
+        "props": [
+          {
+            "type": "dog",
+            "x": 0.6,
+            "y": 0.9
+          },
+          {
+            "type": "chicken",
+            "x": 0.8,
+            "y": 0.92
+          }
+        ],
+        "cast": [
+          {
+            "id": "kid",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "action": "laugh",
+            "expression": "laughing",
+            "preset": "child"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Romans kept dogs and birds as pets",
+          "kind": "fact",
+          "source": "Pompeii Archaeological Park, 'Cave canem' mosaic (House of the Tragic Poet)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "f06",
+      "beat": "development",
+      "narration": "And children played with dolls, spinning tops, and knucklebones, a game a lot like jacks.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "kid",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.4,
+            "action": "sit",
+            "expression": "grin",
+            "preset": "child"
+          },
+          {
+            "id": "kid2",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.4,
+            "action": "sit_talk",
+            "expression": "happy",
+            "facing": -1,
+            "preset": "child"
+          }
+        ],
+        "props": [
+          {
+            "type": "item",
+            "item": "egg",
+            "x": 0.48,
+            "y": 0.84,
+            "scale": 1.2
+          },
+          {
+            "type": "item",
+            "item": "egg",
+            "x": 0.5,
+            "y": 0.86,
+            "scale": 1.2
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Roman children played with dolls, tops and knucklebones (tali)",
+          "kind": "fact",
+          "source": "Stanley Bonner, Education in Ancient Rome (1977)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "g01",
+      "beat": "climax",
+      "narration": "Now, on festival days, the routine changes completely, and Rome had a lot of festival days.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "cheer",
+            "expression": "grin"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "sparkle",
+            "x": 0.4,
+            "y": 0.4
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The Roman calendar had many festival days with public games (ludi)",
+          "kind": "fact",
+          "source": "Mary Beard, SPQR: A History of Ancient Rome (2015)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25,
+      "chapter": "Holidays: Chariots and Gladiators"
+    },
+    {
+      "id": "g02",
+      "beat": "climax",
+      "narration": "The biggest crowd-pleaser wasn't the gladiators. It was chariot racing, at the Circus Maximus, which held around a hundred and fifty thousand people.",
+      "visual": {
+        "background": {
+          "type": "arena"
+        },
+        "props": [
+          {
+            "type": "chariot",
+            "x": 0.3,
+            "y": 0.92,
+            "move": [
+              [
+                0,
+                -0.2,
+                0.92
+              ],
+              [
+                6,
+                1.2,
+                0.92
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "stat",
+            "value": 150000,
+            "caption": "spectators at the Circus Maximus (estimates vary)",
+            "y": 0.25,
+            "size": 130,
+            "at_word": 18
+          }
+        ],
+        "camera": {
+          "move": "pan_right",
+          "amount": 120
+        }
+      },
+      "claims": [
+        {
+          "text": "The Circus Maximus held an estimated 150,000 or more spectators",
+          "kind": "estimate",
+          "source": "Humphrey, Roman Circuses (1986); Pliny the Elder, Natural History 36.102"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at": 0.5
+        },
+        {
+          "name": "ding",
+          "at_word": 18
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "g02b",
+      "beat": "climax",
+      "narration": "The satirist Juvenal sneered that all the Roman people wanted anymore was two things: bread and circuses.",
+      "visual": {
+        "background": {
+          "type": "arena"
+        },
+        "props": [
+          {
+            "type": "item",
+            "item": "bread",
+            "x": 0.35,
+            "y": 0.62,
+            "scale": 4.0,
+            "at_word": 14
+          },
+          {
+            "type": "chariot",
+            "x": 0.65,
+            "y": 0.9,
+            "scale": 0.8,
+            "at_word": 16
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "PANEM ET",
+              "CIRCENSES"
+            ],
+            "colors": [
+              "ink",
+              "red"
+            ],
+            "y": 0.14,
+            "at_word": 14
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "'Panem et circenses' comes from Juvenal, Satire 10",
+          "kind": "fact",
+          "source": "Juvenal, Satire 10.81"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "g03b",
+      "beat": "climax",
+      "narration": "And the top drivers were superstars. One charioteer, Diocles, won over a thousand races and earned around thirty-five million sesterces.",
+      "visual": {
+        "background": {
+          "type": "arena"
+        },
+        "cast": [
+          {
+            "id": "diocles",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": "red",
+            "hat": "headband",
+            "action": "cheer",
+            "expression": "grin",
+            "item": "flag"
+          }
+        ],
+        "props": [
+          {
+            "type": "coins",
+            "x": 0.7,
+            "y": 0.9,
+            "pile": 20,
+            "scale": 1.6,
+            "at_word": 15
+          }
+        ],
+        "overlays": [
+          {
+            "type": "stat",
+            "value": "35,000,000",
+            "caption": "sesterces in prize money (inscription)",
+            "y": 0.25,
+            "x": 0.62,
+            "size": 110,
+            "at_word": 15
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Gaius Appuleius Diocles won 1,462 races and earned about 35.9 million sesterces",
+          "kind": "fact",
+          "source": "CIL VI 10048 (inscription of the charioteer Gaius Appuleius Diocles)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 15
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "g03",
+      "beat": "climax",
+      "narration": "Fans supported teams by color: Reds, Whites, Greens and Blues. And yes, they rioted when they lost.",
+      "visual": {
+        "background": {
+          "type": "arena"
+        },
+        "overlays": [
+          {
+            "type": "people",
+            "n": 4,
+            "k": 4,
+            "cols": 4,
+            "color": "red",
+            "y": 0.62,
+            "fig_scale": 1.0,
+            "caption": "REDS · WHITES · GREENS · BLUES"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "anger",
+            "x": 0.85,
+            "y": 0.4,
+            "at_word": 15
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Chariot racing factions were the Reds, Whites, Greens and Blues",
+          "kind": "fact",
+          "source": "Humphrey, Roman Circuses (1986); Pliny the Elder, Natural History 36.102"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "g04",
+      "beat": "climax",
+      "narration": "Then there were the gladiators, at the Colosseum, which opened in the year eighty and could seat about fifty thousand.",
+      "visual": {
+        "background": {
+          "type": "arena"
+        },
+        "cast": [
+          {
+            "id": "glad1",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "armor",
+            "hat": "legion",
+            "action": "swing",
+            "item": "gladius",
+            "expression": "angry"
+          },
+          {
+            "id": "glad2",
+            "x": 0.65,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "armor",
+            "hat": "helmet",
+            "item": "spear",
+            "facing": -1,
+            "action": "punch",
+            "expression": "determined"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "stat",
+            "value": "~50,000",
+            "caption": "seats in the Colosseum (opened AD 80)",
+            "y": 0.25,
+            "size": 130,
+            "at_word": 17
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The Colosseum was inaugurated in AD 80 and seated around 50,000",
+          "kind": "fact",
+          "source": "Parco archeologico del Colosseo"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 1.0,
+          "gain_db": -8
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "g05",
+      "beat": "climax",
+      "narration": "But here's a surprise: most fights did not end in death. Gladiators were expensive to train, and their owners wanted them back.",
+      "visual": {
+        "background": {
+          "type": "arena"
+        },
+        "cast": [
+          {
+            "id": "glad1",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "armor",
+            "hat": "legion",
+            "action": "cheer",
+            "item": "gladius",
+            "expression": "grin"
+          },
+          {
+            "id": "glad2",
+            "x": 0.65,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "armor",
+            "hat": "helmet",
+            "facing": -1,
+            "action": "sit",
+            "expression": "tired"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "caption",
+            "text": "Myth: \"every fight was to the death\"",
+            "at": 0.5
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Most gladiator bouts did not end in death; gladiators were costly investments",
+          "kind": "estimate",
+          "source": "Mary Beard, SPQR: A History of Ancient Rome (2015)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "g06",
+      "beat": "climax",
+      "narration": "The thumbs-down gesture from the movies? We're not actually sure which way the thumb pointed.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "emperor",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.5,
+            "outfit": "toga",
+            "hat": "laurel",
+            "action": "hold_up",
+            "expression": "thinking"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "?",
+            "x": 0.7,
+            "y": 0.4,
+            "at_word": 10
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The exact 'pollice verso' gesture is uncertain",
+          "kind": "fact",
+          "source": "Mary Beard, SPQR: A History of Ancient Rome (2015)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "n01",
+      "beat": "climax",
+      "narration": "Finally, night falls. Peace and quiet? Not in Rome.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "night"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "idle",
+            "expression": "sleepy"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "NIGHT",
+            "value": "",
+            "corner": "tr",
+            "size": 46
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "fade",
+      "emphasis": [],
+      "pause_after": 0.25,
+      "chapter": "Night: The Loudest Time in Rome"
+    },
+    {
+      "id": "n02",
+      "beat": "climax",
+      "narration": "Julius Caesar had banned most wagons from the streets during daytime, so all the deliveries happened at night.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "night"
+        },
+        "props": [
+          {
+            "type": "cart",
+            "x": 0.4,
+            "y": 0.92,
+            "moving": true,
+            "load": [
+              "sack",
+              "barrel"
+            ],
+            "move": [
+              [
+                0,
+                -0.1,
+                0.92
+              ],
+              [
+                6,
+                0.9,
+                0.92
+              ]
+            ]
+          },
+          {
+            "type": "horse",
+            "x": 0.6,
+            "y": 0.92,
+            "walk": true,
+            "scale": 0.8,
+            "move": [
+              [
+                0,
+                0.1,
+                0.92
+              ],
+              [
+                6,
+                1.1,
+                0.92
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Caesar's law banned most wheeled carts inside Rome during the day.",
+            "source": "Lex Iulia Municipalis (Tabula Heracleensis), cart ban in daytime",
+            "at": 1.0
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Caesar's legislation restricted wheeled vehicles in Rome during daylight hours",
+          "kind": "fact",
+          "source": "Lex Iulia Municipalis (Tabula Heracleensis), cart ban in daytime"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at": 0.5
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "n03",
+      "beat": "climax",
+      "narration": "Iron-rimmed wheels on stone, drivers shouting, animals braying. The poet Juvenal joked that in Rome, insomnia kills more people than disease.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "night"
+        },
+        "props": [
+          {
+            "type": "cart",
+            "x": 0.6,
+            "y": 0.92,
+            "moving": true
+          },
+          {
+            "type": "icon",
+            "icon": "anger",
+            "x": 0.3,
+            "y": 0.4
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "facepalm",
+            "expression": "tired"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "quote",
+            "text": "Most sick people here die from lack of sleep.",
+            "by": "Juvenal, Satire 3 (paraphrased)",
+            "y": 0.25,
+            "at_word": 12,
+            "size": 54
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Juvenal's Satire 3 complains of sleepless nights caused by traffic",
+          "kind": "fact",
+          "source": "Juvenal, Satire 3"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at": 0.3
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "n04",
+      "beat": "climax",
+      "narration": "And walking home in the dark was risky. No street lights, muggers, and people emptying chamber pots out of windows.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "night",
+          "temple": false
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "sneak",
+            "expression": "scared",
+            "path": [
+              [
+                0,
+                0.15,
+                0.84
+              ],
+              [
+                6,
+                0.6,
+                0.84
+              ]
+            ],
+            "item": "torch"
+          }
+        ],
+        "props": [
+          {
+            "type": "item",
+            "item": "bucket",
+            "x": 0.55,
+            "y": 0.35,
+            "at_word": 15,
+            "move": [
+              [
+                0,
+                0.55,
+                0.3
+              ],
+              [
+                0.6,
+                0.55,
+                0.3
+              ]
+            ],
+            "rot": 2.5
+          }
+        ],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.6
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Juvenal describes night-time dangers: robbers and pots thrown from windows",
+          "kind": "fact",
+          "source": "Juvenal, Satire 3"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "splash",
+          "at_word": 18
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "n04b",
+      "beat": "climax",
+      "narration": "Rich Romans hired slaves with torches to walk them home. Everyone else hurried, and kept a dog at home. Pompeii even has a mosaic that says: beware of the dog.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "time": "night",
+          "temple": false
+        },
+        "props": [
+          {
+            "type": "dog",
+            "x": 0.65,
+            "y": 0.9
+          },
+          {
+            "type": "board",
+            "x": 0.65,
+            "y": 0.4,
+            "text": "CAVE CANEM",
+            "w": 420,
+            "at_word": 25
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "walk",
+            "item": "torch",
+            "expression": "worried"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The 'Cave canem' mosaic is in the House of the Tragic Poet, Pompeii",
+          "kind": "fact",
+          "source": "Pompeii Archaeological Park, 'Cave canem' mosaic (House of the Tragic Poet)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "n05",
+      "beat": "climax",
+      "narration": "Stanius climbs his stairs to the top floor, blows out his oil lamp, and listens to the carts until he falls asleep.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "dark": 0.55,
+          "hearth": false,
+          "season": "summer",
+          "time": "night"
+        },
+        "props": [
+          {
+            "type": "bed",
+            "x": 0.45,
+            "y": 0.9,
+            "scale": 1.5
+          },
+          {
+            "type": "icon",
+            "icon": "z",
+            "x": 0.45,
+            "y": 0.66,
+            "at": 4.0
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.5,
+            "y": 0.88,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "sleep",
+            "expression": "sleepy"
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "fade",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "e01",
+      "beat": "ending",
+      "narration": "So, let's sum up a Roman day. Up at dawn, greet the boss, work until lunch, nap, baths, dinner, and a very loud night.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.18,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "talk",
+            "expression": "happy"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "checklist",
+            "x": 0.36,
+            "y": 0.14,
+            "size": 50,
+            "items": [
+              [
+                "dawn: bread & greetings",
+                true
+              ],
+              [
+                "morning: work",
+                true
+              ],
+              [
+                "noon: street food + nap",
+                true
+              ],
+              [
+                "afternoon: baths",
+                true
+              ],
+              [
+                "evening: dinner",
+                true
+              ],
+              [
+                "night: carts. so many carts.",
+                false
+              ]
+            ],
+            "times": [
+              1.5,
+              2.6,
+              3.3,
+              4.0,
+              4.6,
+              5.6
+            ]
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.25,
+      "chapter": "So, Would You Survive a Roman Day?"
+    },
+    {
+      "id": "e02",
+      "beat": "ending",
+      "narration": "Honestly? The short working day and the baths sound amazing. The toilets, the fires and the top-floor apartments, not so much.",
+      "visual": {
+        "background": {
+          "type": "split",
+          "left": [
+            0.8,
+            0.93,
+            0.8
+          ],
+          "right": [
+            0.98,
+            0.85,
+            0.82
+          ],
+          "left_label": "AMAZING",
+          "right_label": "NOPE"
+        },
+        "props": [
+          {
+            "type": "icon",
+            "icon": "check",
+            "x": 0.25,
+            "y": 0.6
+          },
+          {
+            "type": "icon",
+            "icon": "x",
+            "x": 0.75,
+            "y": 0.6
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "shrug",
+            "expression": "thinking"
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "e03",
+      "beat": "ending",
+      "narration": "So tell me in the comments: would you trade your life for one day as a Roman? And which part would you skip?",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.5,
+            "outfit": "toga",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "point",
+            "expression": "grin",
+            "hat": "laurel"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "?",
+            "x": 0.62,
+            "y": 0.4,
+            "at_word": 18
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
+    },
+    {
+      "id": "e04",
+      "beat": "ending",
+      "narration": "And if you liked spending a day with Stanius, subscribe. Next time, we find out how long you'd last in every era of history.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.32,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.85,
+              0.75,
+              0.55
+            ],
+            "action": "wave",
+            "expression": "grin",
+            "actions": [
+              [
+                "w10",
+                "point"
+              ]
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "board",
+            "x": 0.7,
+            "y": 0.45,
+            "text": "SUBSCRIBE",
+            "color": "red",
+            "text_color": "white",
+            "w": 520,
+            "h": 150,
+            "size": 78,
+            "at_word": 10,
+            "loop": "pulse"
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 10
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.8
+    }
+  ],
+  "metadata": {
+    "title": "What Did Ancient Romans Actually Do All Day?",
+    "description_intro": "Rome, around AD 100: a city of almost a million people. But what did an ordinary Roman actually do all day? Follow Stanius from dawn to midnight — the morning visit to his patron, free grain, a job that ends at lunchtime, street-food counters, the baths, the (very public) toilets, the Circus Maximus… and the loudest nights in the ancient world.\n\nA stickman history story with real facts and sources.",
+    "hashtags": [
+      "#history",
+      "#ancientrome",
+      "#stickman"
+    ],
+    "tags": [
+      "ancient rome",
+      "roman daily life",
+      "what did romans do all day",
+      "day in the life",
+      "roman empire",
+      "roman baths",
+      "gladiators",
+      "circus maximus",
+      "ancient history",
+      "stickman",
+      "stickman animation",
+      "history animated",
+      "roman toilets",
+      "insula",
+      "romans",
+      "history explained",
+      "pompeii"
+    ],
+    "pinned_comment": "Would you trade your life for one day as a Roman? 🏛️ And which part would you skip — the sponge on a stick, or the 3 a.m. carts? 👇",
+    "chapter_moods": [
+      "curious",
+      "calm",
+      "medieval",
+      "curious",
+      "calm",
+      "medieval",
+      "curious",
+      "calm",
+      "medieval",
+      "tense",
+      "somber",
+      "calm"
+    ],
+    "intro_chapter": "Rome Wakes Up",
+    "thumbnail": {
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "outfit": "toga",
+            "x": 0.72,
+            "y": 0.95,
+            "scale": 1.9,
+            "facing": -1,
+            "action": "laugh",
+            "expression": "laughing",
+            "hat": "laurel"
+          }
+        ],
+        "props": [
+          {
+            "type": "amphora",
+            "x": 0.92,
+            "y": 0.95,
+            "scale": 1.3,
+            "enter": "none"
+          }
+        ]
+      },
+      "t": 1.0,
+      "lines": [
+        "A ROMAN'S",
+        "WHOLE DAY"
+      ],
+      "colors": [
+        "white",
+        "yellow"
+      ],
+      "badge": "WORK ENDS AT NOON?!",
+      "badge_color": "red",
+      "size": 120
+    },
+    "thumbnail_alts": [
+      {
+        "visual": {
+          "background": {
+            "type": "baths"
+          },
+          "props": [
+            {
+              "type": "latrine",
+              "x": 0.68,
+              "y": 0.92,
+              "scale": 1.1,
+              "enter": "none"
+            }
+          ],
+          "cast": [
+            {
+              "id": "stan",
+              "outfit": "tunic",
+              "outfit_color": [
+                0.85,
+                0.75,
+                0.55
+              ],
+              "x": 0.62,
+              "y": 0.85,
+              "scale": 1.6,
+              "action": "sit",
+              "expression": "disgusted",
+              "facing": -1
+            },
+            {
+              "id": "n1",
+              "outfit": "toga",
+              "x": 0.82,
+              "y": 0.85,
+              "scale": 1.6,
+              "action": "sit_talk",
+              "expression": "laughing",
+              "facing": -1
+            }
+          ]
+        },
+        "t": 1.0,
+        "lines": [
+          "ROMAN",
+          "TOILETS"
+        ],
+        "colors": [
+          "white",
+          "yellow"
+        ],
+        "badge": "NO WALLS. NO DOORS.",
+        "badge_color": "teal",
+        "size": 130
+      }
+    ]
+  }
+}

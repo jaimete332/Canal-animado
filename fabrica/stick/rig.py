@@ -818,6 +818,79 @@ def draw_hat(ctx, lk, t, back=False):
     elif h == "headband":
         ctx.arc(0, 0, R * 1.0, math.pi * 1.12, math.pi * 1.88)
         stroke(ctx, 9, hc or "red")
+    elif h == "laurel":
+        for k in range(9):
+            a = math.pi * (1.05 + 0.9 * k / 8)
+            x, y = math.cos(a) * R * 1.02, math.sin(a) * R * 1.02
+            ctx.save()
+            ctx.translate(x, y)
+            ctx.rotate(a + math.pi / 2)
+            ctx.scale(0.45, 1)
+            circ(ctx, 0, 0, 9)
+            ctx.restore()
+            ink_fill(ctx, "green", 2.2)
+    elif h == "legion":          # Roman legionary helmet with red crest
+        ctx.arc(0, -R * 0.05, R * 1.1, math.pi, 2 * math.pi)
+        ctx.close_path()
+        ink_fill(ctx, hc or (0.78, 0.66, 0.36), 3.6)
+        poly(ctx, [(-R * 1.1, -R * 0.05), (-R * 1.25, R * 0.45), (-R * 0.8, R * 0.4)])
+        ink_fill(ctx, hc or (0.78, 0.66, 0.36), 3.0)
+        ctx.move_to(-R * 0.7, -R * 1.0)
+        ctx.curve_to(-R * 0.4, -R * 1.75, R * 0.4, -R * 1.75, R * 0.7, -R * 1.0)
+        ctx.close_path()
+        ink_fill(ctx, "red", 3.0)
+    elif h == "viking":
+        ctx.arc(0, -R * 0.05, R * 1.08, math.pi, 2 * math.pi)
+        ctx.close_path()
+        ink_fill(ctx, hc or "grey", 3.6)
+        line(ctx, 0, -R * 1.1, 0, -R * 0.1, 5, "darkgrey")
+        rrect(ctx, R * 0.15, -R * 0.2, R * 0.2, R * 0.7, 3)
+        ink_fill(ctx, "darkgrey", 2.5)
+    elif h == "tricorn":         # pirate hat
+        ctx.move_to(-R * 1.5, -R * 0.55)
+        ctx.curve_to(-R * 0.8, -R * 0.9, -R * 0.6, -R * 1.9, 0, -R * 1.7)
+        ctx.curve_to(R * 0.6, -R * 1.9, R * 0.8, -R * 0.9, R * 1.5, -R * 0.55)
+        ctx.curve_to(R * 0.6, -R * 0.75, -R * 0.6, -R * 0.75, -R * 1.5, -R * 0.55)
+        ink_fill(ctx, hc or "ink", 3.4)
+        circ(ctx, 0, -R * 1.2, 6)
+        ink_fill(ctx, "white", 2)
+    elif h == "brodie":          # WW1 steel helmet
+        ctx.save()
+        ctx.translate(0, -R * 0.55)
+        ctx.scale(1, 0.26)
+        circ(ctx, 0, 0, R * 1.55)
+        ctx.restore()
+        ink_fill(ctx, hc or (0.45, 0.48, 0.36), 3.4)
+        ctx.arc(0, -R * 0.55, R * 0.85, math.pi, 2 * math.pi)
+        ctx.close_path()
+        ink_fill(ctx, hc or (0.45, 0.48, 0.36), 3.4)
+    elif h == "flat_cap":
+        ctx.arc(0, -R * 0.25, R * 1.0, math.pi * 1.05, math.pi * 1.95)
+        ctx.close_path()
+        ink_fill(ctx, hc or "darkgrey", 3.2)
+        ctx.save()
+        ctx.translate(R * 0.75, -R * 0.45)
+        ctx.scale(1, 0.3)
+        circ(ctx, 0, 0, R * 0.55)
+        ctx.restore()
+        ink_fill(ctx, hc or "darkgrey", 3.0)
+    elif h == "fur_hood":
+        ctx.arc(R * 0.1, 0, R * 1.18, math.pi * 1.0, math.pi * 1.95)
+        ctx.arc_negative(R * 0.1, 0, R * 0.9, math.pi * 1.95, math.pi * 1.0)
+        ctx.close_path()
+        ink_fill(ctx, (0.62, 0.47, 0.32), 3.2)
+    elif h == "nemes":           # Egyptian striped headcloth
+        ctx.move_to(-R * 1.15, R * 0.9)
+        ctx.line_to(-R * 1.2, -R * 0.2)
+        ctx.arc(0, -R * 0.1, R * 1.15, math.pi, 2 * math.pi)
+        ctx.line_to(R * 0.95, R * 0.1)
+        ctx.line_to(R * 0.75, -R * 0.35)
+        ctx.arc_negative(0, -R * 0.1, R * 0.82, -0.3, math.pi + 0.2)
+        ctx.line_to(-R * 0.75, R * 0.9)
+        ctx.close_path()
+        ink_fill(ctx, hc or "gold", 3.2)
+        for k in range(-2, 3):
+            line(ctx, k * R * 0.32, -R * 1.1, k * R * 0.36, -R * 0.75, 3, "blue")
 
 
 def draw_outfit(ctx, lk, j, pose):
@@ -831,6 +904,15 @@ def draw_outfit(ctx, lk, j, pose):
 
     o = lk.outfit
     colr = lk.outfit_color
+    extra = None
+    # era outfits built on the base garments
+    if o == "toga":
+        o, colr, extra = "robe", (colr if colr != "brown" else "white"), "toga"
+    elif o in ("fur", "sailor", "uniform", "overalls"):
+        extra = o
+        colr = {"fur": (0.6, 0.45, 0.3), "sailor": "white", "uniform": (0.55, 0.52, 0.36),
+                "overalls": (0.3, 0.4, 0.6)}[o] if colr == "brown" else colr
+        o = "rags" if o == "fur" else "tunic"
     if o in ("tunic", "rags", "apron", "suit", "armor"):
         bottom = -0.32 if o in ("tunic", "rags") else -0.05
         w_top, w_bot = 17, 27 if o in ("tunic", "rags") else 21
@@ -868,8 +950,24 @@ def draw_outfit(ctx, lk, j, pose):
                (hem_x - spread, hem), P_(0.0, -22)]
         poly(ctx, pts)
         ink_fill(ctx, colr, 4.0)
-        if o == "robe":
+        if o == "robe" and extra != "toga":
             line(ctx, *P_(0.1, -21), *P_(0.1, 21), 5, "tan")
+    if extra == "toga":      # draped sash over one shoulder
+        poly(ctx, [P_(0.95, -14), P_(0.95, 2), P_(0.05, 26), P_(-0.12, 18)])
+        ink_fill(ctx, lk.hat_color if lk.hat_color in ("purple", "red") else "purple", 3.0)
+    elif extra == "sailor":
+        for u in (0.7, 0.45, 0.2):
+            line(ctx, *P_(u, -19), *P_(u, 21), 5, "navy")
+    elif extra == "uniform":
+        line(ctx, *P_(0.05, -22), *P_(0.05, 23), 6, "darkwood")
+        line(ctx, *P_(0.92, 8), *P_(0.05, 20), 4, "darkwood")
+    elif extra == "fur":
+        for u in (0.6, 0.25):
+            for v in (-10, 6):
+                line(ctx, *P_(u, v), *P_(u - 0.08, v + 4), 3, "darkwood")
+    elif extra == "overalls":
+        line(ctx, *P_(0.92, -6), *P_(0.4, -6), 5, "navy")
+        line(ctx, *P_(0.92, 10), *P_(0.4, 10), 5, "navy")
 
 
 def draw_scarf(ctx, lk, j, t):
@@ -895,8 +993,9 @@ def draw_scarf(ctx, lk, j, t):
 def draw_item(ctx, name, hand, fa, t):
     ctx.save()
     ctx.translate(*hand)
+    name = {"gladius": "sword", "pickaxe": "hoe", "oar": "staff"}.get(name, name)
     up = name in ("hoe", "pitchfork", "scythe", "spear", "sword", "torch", "axe", "shovel", "staff", "flag",
-                  "hammer", "club", "broom", "candle", "sickle", "crook")
+                  "hammer", "club", "broom", "candle", "sickle", "crook", "musket")
     # tools stay roughly perpendicular to the forearm (held like a real handle)
     ctx.rotate(-fa + (math.pi / 2 if up else 0) + math.pi)
     if name in ("hoe", "shovel", "pitchfork", "scythe", "spear", "staff", "flag", "broom", "axe", "hammer",
@@ -959,6 +1058,9 @@ def draw_item(ctx, name, hand, fa, t):
         elif name == "crook":
             ctx.arc(18, -L, 18, math.pi, 2 * math.pi)
             stroke(ctx, 6.5, "wood")
+    elif name == "musket":
+        line(ctx, 0, 40, 0, -150, 7, "darkwood")
+        line(ctx, 3, -60, 3, -175, 4, "darkgrey")
     elif name == "sword":
         line(ctx, 0, 14, 0, -16, 7, "darkwood")
         line(ctx, -16, -16, 16, -16, 7, "gold")
