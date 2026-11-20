@@ -18,6 +18,12 @@ MOODS = {
     "mystery": {"root": 130.81, "prog": [0, 8, 5, 7], "bpm": 100, "scale": [0, 2, 3, 5, 7, 8, 10]},
     "epic": {"root": 110.0, "prog": [0, 8, 3, 10], "bpm": 120, "scale": [0, 2, 3, 5, 7, 8, 10]},
     "funny": {"root": 174.61, "prog": [0, 3, 4, 0], "bpm": 124, "scale": [0, 2, 4, 5, 7, 9, 11]},
+    # vídeos largos: camas más tranquilas para no cansar en 10 minutos
+    "calm": {"root": 130.81, "prog": [0, 9, 5, 7], "bpm": 86, "scale": [0, 2, 4, 5, 7, 9, 11], "soft": True},
+    "medieval": {"root": 146.83, "prog": [0, 10, 5, 0], "bpm": 92, "scale": [0, 2, 3, 5, 7, 9, 10], "soft": True},
+    "curious": {"root": 164.81, "prog": [0, 5, 9, 7], "bpm": 96, "scale": [0, 2, 4, 5, 7, 9, 11], "soft": True},
+    "somber": {"root": 110.0, "prog": [0, 8, 3, 7], "bpm": 78, "scale": [0, 2, 3, 5, 7, 8, 10], "soft": True},
+    "tense": {"root": 123.47, "prog": [0, 1, 0, 8], "bpm": 104, "scale": [0, 1, 3, 5, 7, 8, 10], "soft": True},
 }
 
 
@@ -85,6 +91,7 @@ def compose(duration: float, mood: str = "adventure", sections: list[tuple[float
     """sections: [(t_inicio, 'intro'|'groove'|'tension'|'climax'|'outro')]"""
     m = MOODS.get(mood, MOODS["adventure"])
     bpm, root, prog, scale = m["bpm"], m["root"], m["prog"], m["scale"]
+    soft = m.get("soft", False)
     beat = 60 / bpm
     bar = beat * 4
     total = int((duration + 2) * SR)
@@ -140,10 +147,45 @@ def compose(duration: float, mood: str = "adventure", sections: list[tuple[float
                     if sec == "tension":
                         f *= 2 ** (melody_seed.choice([0, 1]) / 12)
                     p = pluck(f, int(0.4 * SR)); keys[i:i + len(p)] += p * 0.22
-    mix = drums * 0.8 + bassl + keys + pads * 0.6
+    if soft:   # sin batería fuerte: solo bombo suave y hats bajos; más pad y arpegio
+        mix = drums * 0.35 + bassl * 0.7 + keys * 1.2 + pads * 0.9
+    else:
+        mix = drums * 0.8 + bassl + keys + pads * 0.6
     mix = np.tanh(mix * 1.2)  # saturación suave / glue
     mix = mix[: int(duration * SR)]
     # fundido de salida
     fo = int(1.2 * SR)
     mix[-fo:] *= np.linspace(1, 0, fo) ** 2
     return (mix / (np.abs(mix).max() + 1e-9) * 0.8).astype(np.float32)
+
+
+def compose_long(duration: float, chapters: list[tuple[float, str]], xfade: float = 2.0) -> np.ndarray:
+    """Música para vídeos largos: un tema por capítulo [(t_inicio, mood)], con fundidos cruzados.
+
+    Cada capítulo usa su propio ambiente (calm, medieval, curious, somber, tense…) y una semilla distinta,
+    así 10 minutos no suenan al mismo bucle.
+    """
+    global rng
+    chapters = sorted(chapters) or [(0.0, "calm")]
+    if chapters[0][0] > 0:
+        chapters = [(0.0, chapters[0][1])] + chapters
+    out = np.zeros(int((duration + 0.5) * SR), np.float32)
+    nx = int(xfade * SR)
+    for i, (t0, mood) in enumerate(chapters):
+        t1 = chapters[i + 1][0] if i + 1 < len(chapters) else duration
+        seg_d = max(1.0, t1 - t0 + (xfade if i + 1 < len(chapters) else 0))
+        rng = np.random.default_rng(100 + i)
+        secs = [(0, "intro"), (min(4.0, seg_d / 3), "groove")] if i == 0 else [(0, "groove")]
+        if seg_d > 40:
+            secs.append((seg_d * 0.55, "tension" if MOODS.get(mood, {}).get("soft") else "groove"))
+            secs.append((seg_d * 0.75, "groove"))
+        seg = compose(seg_d, mood, secs)
+        a = int(t0 * SR)
+        if i > 0:   # fundido de entrada sobre la cola del capítulo anterior
+            seg[:nx] *= np.linspace(0, 1, nx) ** 0.5
+        if i + 1 < len(chapters):
+            seg[-nx:] *= np.linspace(1, 0, nx) ** 0.5
+        b = min(len(out), a + len(seg))
+        out[a:b] += seg[: b - a]
+    out = out[: int(duration * SR)]
+    return (out / (np.abs(out).max() + 1e-9) * 0.8).astype(np.float32)

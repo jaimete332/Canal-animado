@@ -31,18 +31,30 @@ from .visuals.fonts import ensure_fonts
 
 log = get_logger("pipeline")
 
-AUTO_SFX = {"whip": "whoosh", "zoom": "whoosh", "slide": "whoosh", "circle": "whoosh", "flash": "pop"}
+AUTO_SFX = {"whip": "whoosh", "zoom": "whoosh", "slide": "whoosh", "circle": "whoosh", "flash": "pop", "wipe": "whoosh"}
 
 
 def _h(obj) -> str:
     return hashlib.sha1(json.dumps(obj, sort_keys=True, ensure_ascii=False, default=str).encode()).hexdigest()[:16]
 
 
+def _engine():
+    """Motor de animación del canal activo: 'leo' (Shorts verticales) o 'stick' (stickman 16:9)."""
+    return load_config()["channel"].get("engine", "leo")
+
+
+def scene_module():
+    if _engine() == "stick":
+        from .stick import scene as mod
+    else:
+        from .visuals import scene as mod
+    return mod
+
+
 def _render_job(item: dict, out: str, fps: int) -> str:
     from .visuals.fonts import ensure_fonts as _ef
-    from .visuals.scene import render_scene
     _ef()
-    render_scene(item, Path(out), fps)
+    scene_module().render_scene(item, Path(out), fps)
     return out
 
 
@@ -66,6 +78,8 @@ class Pipeline:
     # 2) narración ---------------------------------------------------------
     def narrate(self):
         nar = Narrator(self.paths.audio / "cache")
+        nar.prefetch([sc.narration for sc in self.story.scenes if not sc.voice_clip],
+                     {sc.narration: sc.voice for sc in self.story.scenes if sc.voice})
         t = 0.0
         voice_parts = []
         self.timeline = []
@@ -98,6 +112,9 @@ class Pipeline:
                 "trans_in": sc.transition if i > 0 else "cut", "trans_out": nxt,
             })
             t = f1 / self.fps
+        self.tts_used = sorted(nar.used)
+        if len(nar.used) > 1:
+            log.warning("¡Voces mezcladas en el vídeo! Proveedores usados: %s", self.tts_used)
         voice = np.concatenate(voice_parts)
         sf.write(self.paths.audio / "voice.wav", voice, SR)
         self.voice = voice
@@ -122,6 +139,8 @@ class Pipeline:
         music = None
         if acfg.get("music") == "library":
             music = self._library_music()
+        elif acfg.get("long_form"):
+            music = self._long_music()
         if music is None:
             music = musiclib.compose(self.duration, self.story.music_mood, sections)
         cues: list[Cue] = [Cue("hit", 0.0, 2.0)]
@@ -133,12 +152,27 @@ class Pipeline:
                 if c.at_word is not None and it["words"]:
                     tt = it["words"][min(c.at_word, len(it["words"]) - 1)]["start"]
                 cues.append(Cue(c.name, it["start"] + tt, c.gain_db))
+        if acfg.get("long_form"):
+            cues = [c for c in cues if c.name != "hit"]   # sin golpe inicial en vídeos largos
         out, info = mix(self.voice, music, cues, acfg["music_gain_db"], acfg["duck_db"], acfg["sfx_gain_db"],
                         acfg["target_lufs"])
         sf.write(self.paths.audio / "mix.wav", out, SR)
         for k, v in info["stems"].items():
             sf.write(self.paths.audio / f"stem_{k}.wav", v, SR)
         log.info("Mezcla lista (LUFS de entrada %.1f)", info["input_lufs"] or 0)
+
+    def _long_music(self):
+        """Un ambiente musical por capítulo (metadata.chapter_moods o rotación por defecto)."""
+        moods = self.story.metadata.get("chapter_moods") or []
+        default = [self.story.music_mood, "calm", "curious", "medieval", "somber", "calm", "curious"]
+        chapters = []
+        n = 0
+        for it, sc in zip(self.timeline, self.story.scenes):
+            if sc.chapter is not None or it["index"] == 0:
+                mood = moods[n] if n < len(moods) else default[n % len(default)]
+                chapters.append((it["start"], mood))
+                n += 1
+        return musiclib.compose_long(self.duration, chapters)
 
     def _library_music(self):
         files = sorted((ROOT / "assets" / "music").glob("*.mp3")) + sorted((ROOT / "assets" / "music").glob("*.wav"))
@@ -157,7 +191,7 @@ class Pipeline:
 
     # 4) escenas -----------------------------------------------------------
     def scene_items(self) -> list[dict]:
-        from .visuals.scene import mouth_curve
+        mouth_curve = scene_module().mouth_curve
         items = []
         for it, sc in zip(self.timeline, self.story.scenes):
             item = dict(it)
@@ -169,7 +203,7 @@ class Pipeline:
     def render_scenes(self):
         items = self.scene_items()
         jobs = []
-        code_ver = _h([p.stat().st_mtime for p in (ROOT / "fabrica" / "visuals").glob("*.py")])
+        code_ver = _h([p.stat().st_mtime for d in ("visuals", "stick") for p in (ROOT / "fabrica" / d).glob("*.py")])
         for item in items:
             out = self.paths.scenes / f"{item['id']}.mp4"
             hfile = out.with_suffix(".hash")
@@ -198,7 +232,12 @@ class Pipeline:
             emphasis |= {e.lower() for e in sc.emphasis}
             for w in it["words"]:
                 words.append({"word": w["word"], "start": it["start"] + w["start"], "end": it["start"] + w["end"]})
-        self.paths.captions.write_text(build_ass(words, emphasis, self.duration), encoding="utf-8")
+        sub = self.cfg["subtitles"]
+        if sub.get("burn", True):
+            self.paths.captions.write_text(build_ass(words, emphasis, self.duration), encoding="utf-8")
+        if sub.get("srt"):
+            from .edit.srt import build_srt
+            (self.paths.root / "captions.srt").write_text(build_srt(words), encoding="utf-8")
         (self.paths.root / "words.json").write_text(json.dumps(words, ensure_ascii=False, indent=0))
 
     def assemble(self):
@@ -209,10 +248,10 @@ class Pipeline:
         subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy",
                         str(concat)], check=True, cwd=self.paths.root)
         fonts = ROOT / "assets" / "fonts"
-        vf = f"ass={self.paths.captions.name}:fontsdir={fonts}"
+        vf = ["-vf", f"ass={self.paths.captions.name}:fontsdir={fonts}"] if self.cfg["subtitles"].get("burn", True) else []
         subprocess.run([
             "ffmpeg", "-y", "-v", "error", "-i", str(concat), "-i", str(self.paths.audio / "mix.wav"),
-            "-vf", vf, "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", v["preset"], "-crf", str(v["crf"]),
+            *vf, "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", v["preset"], "-crf", str(v["crf"]),
             "-profile:v", "high", "-pix_fmt", "yuv420p", "-r", str(self.fps), "-c:a", "aac",
             "-b:a", v["audio_bitrate"], "-ar", str(v["sample_rate"]), "-movflags", "+faststart", "-shortest",
             str(self.paths.final)], check=True, cwd=self.paths.root)
@@ -237,7 +276,7 @@ class Pipeline:
         self.captions()
         self.assemble()
         from .publish.metadata import build_metadata, make_thumbnail
-        meta = build_metadata(self.story, self.duration)
+        meta = build_metadata(self.story, self.duration, self.timeline)
         self.paths.metadata.write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
         make_thumbnail(self, meta)
         report = {}

@@ -33,7 +33,11 @@ _VOWELS = re.compile(r"[aeiouáéíóúüy]+", re.I)
 
 
 def normalize_numbers(text: str) -> str:
-    """'6.371 km' -> 'seis mil trescientos setenta y uno kilómetros' para el TTS."""
+    """'6.371 km' -> 'seis mil trescientos setenta y uno kilómetros' para el TTS (en inglés: numbers_en)."""
+    from ..core.config import lang
+    if lang() == "en":
+        from .numbers_en import normalize
+        return normalize(text)
     from .numbers_es import to_words
 
     def rep(m: re.Match) -> str:
@@ -110,6 +114,7 @@ class Narrator:
         self.cache.mkdir(parents=True, exist_ok=True)
         self.lexicon: dict[str, str] = self.tts_cfg.get("lexicon", {}) or {}
         self._providers: dict[str, TTSProvider] = {}
+        self.used: set[str] = set()      # proveedores realmente usados (mezclar voces = error de QA)
 
     def _prov(self, name: str) -> TTSProvider:
         if name not in self._providers:
@@ -122,9 +127,9 @@ class Narrator:
             t = re.sub(rf"\b{re.escape(k)}\b", v, t)
         return t
 
-    def _synth(self, text: str, voice: dict | None = None) -> tuple[TTSResult, str]:
+    def _synth(self, text: str, voice: dict | None = None, only_primary: bool = False) -> tuple[TTSResult, str]:
         last: Exception | None = None
-        for name in self.chain:
+        for name in (self.chain[:1] if only_primary else self.chain):
             p = self._prov(name)
             vcfg = self.tts_cfg.get(name)
             if voice and name == self.name:
@@ -137,6 +142,7 @@ class Narrator:
             if wav.exists() and meta.exists():
                 a, sr = sf.read(wav, dtype="float32")
                 words = [WordTiming(**w) for w in json.loads(meta.read_text())["words"]]
+                self.used.add(name)
                 return TTSResult(a, sr, words, len(text)), name
             try:
                 ledger().check(p.estimate_cost(text))
@@ -145,11 +151,33 @@ class Narrator:
                 sf.write(wav, r.audio, r.sr, subtype="FLOAT")
                 meta.write_text(json.dumps({"text": text, "words": [asdict(w) for w in r.words]},
                                            ensure_ascii=False))
+                self.used.add(name)
                 return r, name
             except Exception as e:  # pasa al siguiente proveedor
                 log.warning("TTS %s falló: %s", name, e)
                 last = e
         raise RuntimeError(f"Ningún proveedor TTS funcionó: {last}")
+
+    def prefetch(self, texts: list[str], voice_by_text: dict | None = None, workers: int = 3) -> None:
+        """Sintetiza en paralelo todas las cláusulas (vídeos largos: cientos de llamadas de red).
+        Rellena la caché; luego narrate_scene las lee al instante y en orden."""
+        from concurrent.futures import ThreadPoolExecutor
+        jobs = []
+        for text in texts:
+            for clause, _ in split_clauses(text):
+                jobs.append((self._spoken(clause), (voice_by_text or {}).get(text)))
+        if len(jobs) < 8:
+            return
+        log.info("Sintetizando %d cláusulas en paralelo (%d hilos)", len(jobs), workers)
+
+        def one(j):
+            try:   # solo la voz principal: si falla, la pasada secuencial lo reintenta (y usa respaldo si hace falta)
+                self._synth(*j, only_primary=True)
+            except Exception as e:  # noqa: BLE001
+                log.info("Prefetch: '%s' se reintentará en orden (%s)", j[0][:40], e)
+        with ThreadPoolExecutor(workers) as ex:
+            list(ex.map(one, jobs))
+        self.used.clear()
 
     def narrate_clip(self, text: str, clip: Path, pause_after: float = 0.08) -> tuple[np.ndarray, list[WordTiming]]:
         """Usa la voz de un vídeo real; los subtítulos se reparten sobre la parte con voz."""
@@ -185,7 +213,7 @@ class Narrator:
             chunks.append(a)
             t += dur
             if i < len(clauses) - 1:
-                gap = PAUSES.get(punct, 0.05)
+                gap = PAUSES.get(punct, 0.05) * float(self.tts_cfg.get("pause_scale", 1.0))
                 chunks.append(np.zeros(int(gap * SR), np.float32))
                 t += gap
         chunks.append(np.zeros(int(pause_after * SR), np.float32))

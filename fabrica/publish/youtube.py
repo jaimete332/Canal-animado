@@ -37,7 +37,7 @@ def _files(slug: str) -> dict[str, Path]:
     from .delivery import files, find
     d = find(slug)
     if d is None:
-        raise FileNotFoundError(f"No encuentro '{slug}' en output/, PARA_SUBIR/ ni samples/")
+        raise FileNotFoundError(f"No encuentro '{slug}' en output, en la carpeta de entrega ni en el archivo")
     return files(d, slug)
 
 
@@ -113,7 +113,8 @@ def build_body(slug: str, privacy: str | None = None, publish_at: dt.datetime | 
     return {
         "snippet": {"title": meta["title"][:100], "description": meta["description"][:5000],
                     "tags": meta.get("tags", [])[:30], "categoryId": meta.get("category_id", "27"),
-                    "defaultLanguage": "es", "defaultAudioLanguage": "es-ES"},
+                    "defaultLanguage": cfg.get("default_language", "es"),
+                    "defaultAudioLanguage": cfg.get("default_audio_language", "es-ES")},
         "status": status,
     }
 
@@ -149,6 +150,16 @@ def upload(slug: str, privacy: str | None = None, publish_at: str | None = None,
             yt.thumbnails().set(videoId=vid, media_body=MediaFileUpload(str(fs["thumbnail"]))).execute()
         except Exception as e:
             log.warning("No se pudo poner la miniatura (¿canal sin verificar por teléfono?): %s", e)
+    srt = fs["final"].parent / "captions.srt"
+    if not srt.exists():
+        srt = fs["root"] / "captions.srt"
+    if srt.exists():  # subtítulos exactos del guion (mejor que los automáticos de YouTube)
+        try:
+            yt.captions().insert(part="snippet", body={"snippet": {
+                "videoId": vid, "language": cfg.get("default_language", "es"), "name": "", "isDraft": False}},
+                media_body=MediaFileUpload(str(srt), mimetype="application/octet-stream")).execute()
+        except Exception as e:
+            log.warning("No se pudieron subir los subtítulos %s: %s", srt.name, e)
     try:  # comentario fijado (YouTube no permite fijarlo por API: se publica y lo fijas en Studio)
         yt.commentThreads().insert(part="snippet", body={"snippet": {"videoId": vid, "topLevelComment": {
             "snippet": {"textOriginal": meta["pinned_comment"]}}}}).execute()

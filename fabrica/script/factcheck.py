@@ -17,12 +17,18 @@ log = get_logger("factcheck")
 
 NUM_WORDS = r"\b(mil|millones|millón|cien|doscient|trescient|cuatrocient|quinient|seiscient|setecient|ochocient|novecient|\d+)"
 FICTION_HINTS = ("imagina", "supón", "supongamos", "ficción", "en la vida real", "indestructible", "mágic")
+NUM_WORDS_EN = (r"\b(hundred|thousand|million|billion|half|third|quarter|twice|percent|"
+                r"twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|\d+)")
+FICTION_HINTS_EN = ("imagine", "let's say", "pretend", "what if", "suppose", "our story", "meet stan")
 
 
 def rule_review(story: Story) -> dict:
+    from ..core.config import lang, load_config
+    en = lang() == "en"
+    num_words, hints = (NUM_WORDS_EN, FICTION_HINTS_EN) if en else (NUM_WORDS, FICTION_HINTS)
     warnings, blocking = [], []
     for sc in story.scenes:
-        has_num = re.search(NUM_WORDS, sc.narration.lower())
+        has_num = re.search(num_words, sc.narration.lower())
         facts = [c for c in sc.claims if c.kind == "fact"]
         if has_num and not sc.claims:
             warnings.append(f"{sc.id}: contiene cifras pero no tiene afirmaciones registradas")
@@ -32,10 +38,11 @@ def rule_review(story: Story) -> dict:
         fiction = [c for c in sc.claims if c.kind == "fiction"]
         if fiction:
             ov = {o.get("type") for o in sc.visual.overlays}
-            if "fiction" not in ov and not any(h in sc.narration.lower() for h in FICTION_HINTS):
+            if "fiction" not in ov and not any(h in sc.narration.lower() for h in hints):
                 warnings.append(f"{sc.id}: ficción sin señalizar (añade overlay 'fiction' o 'imagina...')")
-    if story.word_count > 230:
-        warnings.append(f"Guion largo ({story.word_count} palabras): puede pasar de 60 s")
+    max_words = load_config().get_path("script.max_words", 230)
+    if story.word_count > max_words:
+        warnings.append(f"Guion largo ({story.word_count} palabras > {max_words})")
     return {"warnings": warnings, "blocking": blocking}
 
 

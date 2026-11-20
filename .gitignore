@@ -8,3 +8,4 @@ secrets/
 *.log
 .venv/
 data/*.sqlite
+data/**/*.sqlite

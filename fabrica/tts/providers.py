@@ -56,7 +56,7 @@ class KokoroTTS(TTSProvider):
     def synthesize(self, text: str) -> TTSResult:
         k = self._get()
         audio, sr = k.create(text, voice=self.cfg.get("voice", "em_alex"),
-                             speed=float(self.cfg.get("speed", 1.1)), lang="es")
+                             speed=float(self.cfg.get("speed", 1.1)), lang=self.cfg.get("lang", "es"))
         return TTSResult(np.asarray(audio, dtype=np.float32), sr, chars=len(text))
 
 
@@ -112,7 +112,7 @@ class EdgeTTS(TTSProvider):
     name = "edge"
     gives_word_timings = True
 
-    @retry(tries=3)
+    @retry(tries=6, base=1.8)   # el servicio rechaza a veces peticiones seguidas: mejor esperar que cambiar de voz
     def synthesize(self, text: str) -> TTSResult:
         import asyncio
 
@@ -158,7 +158,7 @@ class ElevenLabsTTS(TTSProvider):
             f"https://api.elevenlabs.io/v1/text-to-speech/{vid}/with-timestamps",
             headers={"xi-api-key": key},
             json={"text": text, "model_id": self.cfg.get("model", "eleven_multilingual_v2"),
-                  "language_code": "es",
+                  "language_code": self.cfg.get("language_code", "es"),
                   "voice_settings": {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35}},
             timeout=120)
         if r.status_code in (401, 403, 422):
@@ -185,8 +185,9 @@ class OpenAITTS(TTSProvider):
                           headers={"Authorization": f"Bearer {key}"},
                           json={"model": self.cfg.get("model", "gpt-4o-mini-tts"),
                                 "voice": self.cfg.get("voice", "ash"), "input": text,
-                                "instructions": "Narrador español de España, castellano peninsular, "
-                                                "enérgico y divertido, ritmo rápido de YouTube Shorts.",
+                                "instructions": self.cfg.get("instructions",
+                                                             "Narrador español de España, castellano peninsular, "
+                                                             "enérgico y divertido, ritmo rápido de YouTube Shorts."),
                                 "response_format": "wav"}, timeout=120)
         if r.status_code in (401, 403):
             raise PermanentError(r.text)
@@ -206,7 +207,7 @@ class GoogleTTS(TTSProvider):
             raise PermanentError("Falta GOOGLE_TTS_API_KEY")
         r = requests.post(f"https://texttospeech.googleapis.com/v1/text:synthesize?key={key}",
                           json={"input": {"text": text},
-                                "voice": {"languageCode": "es-ES", "name": self.cfg.get("voice")},
+                                "voice": {"languageCode": self.cfg.get("language_code", "es-ES"), "name": self.cfg.get("voice")},
                                 "audioConfig": {"audioEncoding": "LINEAR16", "sampleRateHertz": 24000}},
                           timeout=120)
         if r.status_code in (400, 401, 403):

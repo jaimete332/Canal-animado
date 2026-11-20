@@ -16,6 +16,9 @@
   python -m fabrica metrics                                  # descarga métricas de YouTube
   python -m fabrica insights                                 # aprendizajes para próximos guiones
   python -m fabrica doctor                                   # comprueba dependencias, modelos y claves
+
+Canal en inglés de stickman (vídeos largos 16:9): añade `--channel stickman_en` a cualquier comando, p. ej.
+  python -m fabrica --channel stickman_en make stories_en/medieval-peasant-year.json
 """
 from __future__ import annotations
 
@@ -60,9 +63,9 @@ def cmd_regen(a):
 
 
 def cmd_still(a):
-    from .pipeline import Pipeline, load_story
+    from .pipeline import Pipeline, load_story, scene_module
     from .visuals.fonts import ensure_fonts
-    from .visuals.scene import render_still
+    render_still = scene_module().render_still
     ensure_fonts()
     story = load_story(Path(a.story))
     pipe = Pipeline(story)
@@ -103,7 +106,12 @@ def cmd_upload(a):
     if a.dry_run:
         print("Simulación correcta: aprobación válida y metadatos listos (no se ha subido nada)")
         return
-    print(f"Subido: https://youtube.com/shorts/{vid}" + (f" · programado para {a.at}" if a.at else ""))
+    print(f"Subido: {_yt_url(vid)}" + (f" · programado para {a.at}" if a.at else ""))
+
+
+def _yt_url(vid: str) -> str:
+    vertical = load_config()["video"]["height"] > load_config()["video"]["width"]
+    return f"https://youtube.com/shorts/{vid}" if vertical else f"https://youtu.be/{vid}"
 
 
 def cmd_deliver(a):
@@ -132,7 +140,7 @@ def cmd_schedule(a):
         pairs.append((slug.strip(), when.strip()))
     for slug, when in pairs:
         vid = upload(slug, publish_at=when, dry_run=a.dry_run)
-        print(f"{'[simulación] ' if a.dry_run else ''}{slug} → {when}" + ("" if a.dry_run else f" · https://youtube.com/shorts/{vid}"))
+        print(f"{'[simulación] ' if a.dry_run else ''}{slug} → {when}" + ("" if a.dry_run else f" · {_yt_url(vid)}"))
 
 
 def cmd_tiktok_auth(a):
@@ -205,6 +213,8 @@ def _summary(res: dict):
 def main(argv=None):
     setup_logging()
     ap = argparse.ArgumentParser(prog="fabrica", description="Fábrica de YouTube Shorts animados")
+    ap.add_argument("--channel", help="perfil de canal de channels/<nombre>.yaml (p. ej. stickman_en); "
+                    "equivale a FABRICA_CHANNEL=<nombre>")
     sub = ap.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("make"); s.add_argument("story"); s.add_argument("--workers", type=int, default=4)
     s.add_argument("--force", nargs="*"); s.add_argument("--no-qa", action="store_true"); s.set_defaults(f=cmd_make)
@@ -238,6 +248,10 @@ def main(argv=None):
     sub.add_parser("insights").set_defaults(f=cmd_insights)
     sub.add_parser("doctor").set_defaults(f=cmd_doctor)
     a = ap.parse_args(argv)
+    if a.channel:
+        import os
+        os.environ["FABRICA_CHANNEL"] = a.channel  # lo heredan también los procesos de render
+        load_config.cache_clear()
     try:
         a.f(a)
     except (RuntimeError, PermissionError, FileNotFoundError) as e:

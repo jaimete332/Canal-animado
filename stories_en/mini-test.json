@@ -1,0 +1,127 @@
+{
+  "title": "Mini test",
+  "idea": "mini test",
+  "slug": "mini-test",
+  "category": "history",
+  "question": "Would you survive?",
+  "music_mood": "medieval",
+  "scenes": [
+    {
+      "id": "a1",
+      "beat": "hook",
+      "narration": "Meet Stan. In 1348, Stan is about to have the worst year of his life.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "wave",
+            "expression": "happy",
+            "talking": true,
+            "expressions": [
+              [
+                "w5",
+                "worried"
+              ]
+            ],
+            "actions": [
+              [
+                "w5",
+                "shrug"
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "1348",
+            "at_word": 3
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "a2",
+      "beat": "setup",
+      "narration": "His job? Farming a strip of land that is not even his.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "crops": 0.5
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "dig",
+            "item": "hoe"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Most peasants farmed strips in huge open fields.",
+            "source": "Dyer, Making a Living in the Middle Ages",
+            "at_word": 2
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Open-field strip farming",
+          "kind": "fact",
+          "source": "Dyer, Making a Living in the Middle Ages"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12,
+      "chapter": "The Farm"
+    },
+    {
+      "id": "a3",
+      "beat": "ending",
+      "narration": "Would you survive? Tell me in the comments.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "point",
+            "expression": "grin",
+            "talking": true
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "fade",
+      "emphasis": [],
+      "pause_after": 0.12,
+      "chapter": "The End"
+    }
+  ],
+  "metadata": {
+    "title": "Mini test",
+    "description_intro": "Test."
+  }
+}

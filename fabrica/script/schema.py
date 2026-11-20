@@ -40,6 +40,7 @@ class Visual(BaseModel):
     overlays: list[dict[str, Any]] = Field(default_factory=list)
     camera: dict[str, Any] = Field(default_factory=lambda: {"move": "push_in"})
     image_prompt: str | None = None   # si hay generador de imágenes, fondo generado por IA
+    cast: list[dict[str, Any]] = Field(default_factory=list)   # motor stickman: varios personajes por escena
 
 
 class Scene(BaseModel):
@@ -50,7 +51,8 @@ class Scene(BaseModel):
     claims: list[Claim] = Field(default_factory=list)
     visual: Visual = Field(default_factory=Visual)
     sfx: list[SfxCue] = Field(default_factory=list)
-    transition: Literal["cut", "whip", "zoom", "flash", "circle", "slide"] = "whip"
+    transition: Literal["cut", "whip", "zoom", "flash", "circle", "slide", "fade", "wipe"] = "whip"
+    chapter: str | None = None               # vídeos largos: esta escena abre un capítulo (marcas de tiempo)
     pause_after: float = 0.08
     voice: dict[str, Any] | None = None      # cambia la voz solo en esta escena, p. ej. {"voice": "es-ES-ElviraNeural"}
     voice_clip: str | None = None            # vídeo real cuya voz sustituye al TTS (si el archivo existe)

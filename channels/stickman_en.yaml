@@ -1,0 +1,78 @@
+# ============================================================
+#  Channel profile: Stickpothetical (English, long-form stickman videos, 16:9)
+#  Merged on top of config.yaml when FABRICA_CHANNEL=stickman_en
+#  (or `python -m fabrica --channel stickman_en ...`).
+#  Only what differs from the Spanish Shorts channel is listed here.
+# ============================================================
+
+channel:
+  name: "Stickpothetical"
+  handle: "@Stickpothetical"
+  language: en-US
+  engine: stick              # stickman engine (fabrica/stick/) instead of Leo (fabrica/visuals/)
+  mascot: stan
+  default_hashtags: ["#stickman", "#whatif", "#animation", "#history", "#explained"]
+
+video:
+  width: 1920
+  height: 1080
+  fps: 30
+  target_seconds: [420, 1080]  # 7-18 min (8+ min unlocks mid-roll ads)
+  crf: 20
+  preset: medium
+
+script:
+  words_per_second: 2.7
+  max_words: 2600
+  min_scenes: 60
+  max_scene_seconds: 9.0      # long-form allows calmer pacing, but keep the picture changing
+
+tts:
+  provider: edge
+  fallback: []             # never mix voices in one video: if Edge is down, retry later or switch provider
+  pause_scale: 1.7          # long-form storytelling: breathe between clauses (Shorts use 1.0)
+  lexicon:
+    _replace: true
+  kokoro:
+    voice: am_michael
+    speed: 1.05
+    lang: en-us
+  edge:
+    voice: en-US-AndrewNeural
+    rate: "+0%"
+    pitch: "+0Hz"
+  elevenlabs:
+    language_code: en
+  google:
+    voice: en-US-Chirp3-HD-Charon
+    language_code: en-US
+
+audio:
+  music_gain_db: -23          # long videos: quieter bed so the voice never tires the ear
+  duck_db: -8
+  long_form: true             # music changes per chapter instead of one loop
+
+subtitles:
+  burn: false                 # long-form: no burned-in karaoke; an .srt is delivered for YouTube CC
+  srt: true
+
+qa:
+  language: en
+  max_scene_hook_s: 9.0
+
+youtube:
+  category_id: "27"           # Education
+  timezone: America/New_York
+  default_language: en
+  default_audio_language: en-US
+  token_file: secrets/youtube_token_stickman_en.json
+
+tiktok:
+  enabled: false
+
+paths:
+  output: output/stickman_en
+  data: data/stickman_en
+  stories: stories_en
+  deliver: TO_UPLOAD
+  archive: samples_en

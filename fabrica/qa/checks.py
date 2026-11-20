@@ -33,6 +33,8 @@ def _norm(s: str) -> list[str]:
     s = normalize_numbers(re.sub(r"(\\d)[.,](\\d{3})", r"\\1\\2", s))
     s = unicodedata.normalize("NFKD", s.lower())
     s = "".join(c for c in s if not unicodedata.combining(c))
+    s = re.sub(r"(?<=[a-z])'(?=[a-z])", "", s)      # don't → dont (igual en guion y ASR)
+    s = s.replace("-", " ")
     s = re.sub(r"[^a-z0-9ñ ]+", " ", s)
     return s.split()
 
@@ -59,7 +61,8 @@ def _recognizer():
         d = load_config().path("qa.asr_model_dir")
         _asr = sherpa_onnx.OfflineRecognizer.from_whisper(
             encoder=str(d / "small-encoder.int8.onnx"), decoder=str(d / "small-decoder.int8.onnx"),
-            tokens=str(d / "small-tokens.txt"), language="es", task="transcribe", num_threads=4)
+            tokens=str(d / "small-tokens.txt"), language=load_config()["qa"].get("language", "es"), task="transcribe",
+            num_threads=4)
     return _asr
 
 
@@ -90,17 +93,21 @@ def _ffmpeg_detect(path: Path, vf: str) -> str:
 
 
 def motion_and_sheet(path: Path, out_sheet: Path, duration: float) -> tuple[float, list[float]]:
-    """Muestras a 4 fps (180x320) → diferencia media entre frames + hoja de contactos."""
-    w, h = 180, 320
-    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-vf", f"fps=4,scale={w}:{h}", "-f", "rawvideo",
+    """Muestras a 4 fps (2 fps en vídeos largos) → diferencia media entre frames + hoja de contactos."""
+    v = load_config()["video"]
+    vertical = v["height"] > v["width"]
+    w, h = (180, 320) if vertical else (320, 180)
+    rate = 4 if duration < 120 else 2
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-vf", f"fps={rate},scale={w}:{h}", "-f", "rawvideo",
                           "-pix_fmt", "rgb24", "-"], capture_output=True, check=True).stdout
     frames = np.frombuffer(raw, np.uint8).reshape(-1, h, w, 3)
     diffs = [float(np.abs(frames[i + 1].astype(int) - frames[i].astype(int)).mean()) for i in range(len(frames) - 1)]
-    moving = float(np.mean(np.array(diffs) > 1.2)) if diffs else 0.0
-    # hoja de contactos: 1 frame/segundo en rejilla
+    moving = float(np.mean(np.array(diffs) > (1.2 if vertical else 0.25))) if diffs else 0.0
+    # hoja de contactos: 60 fotogramas repartidos por todo el vídeo
     from PIL import Image
-    picks = frames[::4][:60]
-    cols = 10
+    idx = np.linspace(0, len(frames) - 1, min(60, len(frames))).astype(int)
+    picks = frames[idx]
+    cols = 10 if vertical else 6
     rows = int(np.ceil(len(picks) / cols))
     sheet = Image.new("RGB", (cols * w, rows * h), (20, 20, 30))
     for i, f in enumerate(picks):
@@ -149,6 +156,10 @@ def run_qa(pipe) -> dict:
     gw = wer(" ".join(total_ref), " ".join(total_hyp))
     bad = [p["scene"] for p in per_scene if p["wer"] > 0.4]
     add("narración inteligible (WER)", gw <= q["max_wer"], f"WER global {gw:.1%}; escenas dudosas: {bad or 'ninguna'}")
+
+    used = getattr(pipe, "tts_used", None)
+    if used is not None:
+        add("una sola voz", len(used) <= 1, f"proveedores TTS usados: {', '.join(used) or '-'}")
 
     # --- silencios ------------------------------------------------------
     voice, sr = sf.read(pipe.paths.audio / "stem_voice.wav", dtype="float32")
@@ -206,7 +217,7 @@ def run_qa(pipe) -> dict:
     scene_lens = [it["dur"] for it in pipe.timeline]
     add("ritmo de escenas", max(scene_lens) <= cfg["script"]["max_scene_seconds"] + 0.5,
         f"escena más larga {max(scene_lens):.1f}s, media {np.mean(scene_lens):.1f}s", "warning")
-    add("gancho rápido", pipe.timeline[0]["dur"] <= 4.0, f"primera escena {pipe.timeline[0]['dur']:.1f}s", "warning")
+    add("gancho rápido", pipe.timeline[0]["dur"] <= q.get("max_scene_hook_s", 4.0), f"primera escena {pipe.timeline[0]['dur']:.1f}s", "warning")
     add("imágenes deformadas", True, "arte vectorial procedural (sin deformaciones de IA); si se usan imágenes IA "
         "se valida su relación de aspecto al importarlas", "warning")
 

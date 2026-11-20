@@ -45,7 +45,69 @@ def _template(story: Story, duration: float) -> dict:
     }
 
 
-def build_metadata(story: Story, duration: float) -> dict:
+def _mmss(t: float) -> str:
+    t = int(t)
+    return f"{t // 3600}:{t % 3600 // 60:02d}:{t % 60:02d}" if t >= 3600 else f"{t // 60}:{t % 60:02d}"
+
+
+def chapters(story: Story, timeline: list[dict] | None) -> list[dict]:
+    """YouTube chapters from scenes marked with `chapter`: first at 0:00, each ≥ 10 s (YouTube's rules)."""
+    if not timeline:
+        return []
+    out = []
+    for it, sc in zip(timeline, story.scenes):
+        if sc.chapter is not None or it["index"] == 0:
+            title = sc.chapter or story.metadata.get("intro_chapter", "Intro")
+            start = 0.0 if not out else it["start"]
+            if out and start - out[-1]["start"] < 10:
+                continue
+            out.append({"start": round(start, 2), "time": _mmss(start), "title": title})
+    return out if len(out) >= 3 else []
+
+
+def _template_en(story: Story, duration: float, timeline: list[dict] | None) -> dict:
+    """English long-form metadata: hook paragraph, chapters, facts with sources, disclaimer, hashtags."""
+    cfg = load_config()["channel"]
+    m = story.metadata
+    title = m.get("title") or story.title
+    if len(title) > 70:
+        title = title[:67].rstrip() + "…"
+    chs = chapters(story, timeline)
+    facts = [c for s in story.scenes for c in s.claims if c.kind == "fact"]
+    sources = list(dict.fromkeys(x.strip() for c in facts for x in re.split(r";", c.source) if x.strip()))
+    tags_h = list(dict.fromkeys(m.get("hashtags", []) + cfg["default_hashtags"]))
+    parts = [m.get("description_intro", story.title)]
+    if chs:
+        parts.append("CHAPTERS\n" + "\n".join(f"{c['time']} {c['title']}" for c in chs))
+    if m.get("description_facts", True) and facts:
+        parts.append("REAL HISTORY IN THIS VIDEO\n" + "\n".join(f"• {c.text}" for c in facts[:12]))
+    parts.append(m.get("disclaimer", "Stan's story is a dramatization; the historical facts are real, simplified "
+                                     "for the video, and sourced below. Numbers are estimates — historians argue "
+                                     "about the details, and that's part of the fun."))
+    if sources:
+        parts.append("SOURCES & FURTHER READING\n" + "\n".join(f"• {x}" for x in sources))
+    parts.append(m.get("cta", f"💬 {story.question}\n🔔 Subscribe to {cfg['name']} for a new stickman "
+                              "what-if every week."))
+    parts.append("Animation, voice and music made by the channel. Narration uses a synthetic voice.")
+    parts.append(" ".join(tags_h[:3]))   # YouTube shows the first 3 hashtags above the title
+    desc = "\n\n".join(parts)
+    if m.get("description"):
+        desc = m["description"]
+    tags = m.get("tags") or [w.strip("#") for w in tags_h]
+    return {
+        "title": title, "description": desc[:5000], "hashtags": tags_h[:3], "tags": tags,
+        "pinned_comment": m.get("pinned_comment") or story.question,
+        "thumbnail_text": m.get("thumbnail_text", story.title.upper()),
+        "category_id": load_config()["youtube"]["category_id"], "language": "en",
+        "duration_s": round(duration, 2), "chapters": chs, "made_for_kids": False,
+        "contains_synthetic_media": True,
+    }
+
+
+def build_metadata(story: Story, duration: float, timeline: list[dict] | None = None) -> dict:
+    from ..core.config import lang
+    if lang() == "en":
+        return _template_en(story, duration, timeline)
     meta = _template(story, duration)
     if story.metadata.get("title"):
         return meta
@@ -65,6 +127,9 @@ def build_metadata(story: Story, duration: float) -> dict:
 
 def make_thumbnail(pipe, meta: dict) -> None:
     """Fotograma promocional: escena marcada (o clímax) + texto grande."""
+    if load_config()["channel"].get("engine") == "stick":
+        from ..stick.thumbnail import stick_thumbnail
+        return stick_thumbnail(pipe, meta)
     if pipe.story.metadata.get("custom_thumbnail"):
         return  # miniatura diseñada a mano (scripts/thumbnail_*.py)
     if pipe.story.metadata.get("thumbnail"):

@@ -1,0 +1,6364 @@
+{
+  "title": "Could You Survive a Year as a Medieval Peasant? (1348)",
+  "idea": "What if you had to survive one year as a medieval English peasant in 1348",
+  "slug": "medieval-peasant-1348",
+  "category": "history",
+  "question": "Would you have survived 1348? What's the first modern thing you'd miss?",
+  "music_mood": "medieval",
+  "scenes": [
+    {
+      "id": "i01",
+      "beat": "hook",
+      "narration": "It's the morning of March twenty-fifth, 1348, and you just woke up on a pile of straw.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "spring",
+          "dark": 0.25,
+          "hearth_x": 0.7
+        },
+        "props": [
+          {
+            "type": "bed",
+            "x": 0.42,
+            "y": 0.9,
+            "scale": 1.3,
+            "enter": "none"
+          },
+          {
+            "type": "icon",
+            "icon": "z",
+            "x": 0.42,
+            "y": 0.72,
+            "until": 2.6
+          },
+          {
+            "type": "chicken",
+            "x": 0.85,
+            "y": 0.94,
+            "at": 2.0
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.48,
+            "y": 0.86,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "sleep",
+            "expression": "sleepy",
+            "actions": [
+              [
+                "w12",
+                "sit"
+              ]
+            ],
+            "expressions": [
+              [
+                "w12",
+                "surprised"
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "MARCH 25, 1348",
+            "y": 0.16,
+            "at": 0.4
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.12,
+          "focus": [
+            0.45,
+            0.65
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Stan waking up in 1348 is a dramatization",
+          "kind": "fiction",
+          "source": "Narrative device"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 12
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "i02",
+      "beat": "hook",
+      "narration": "Congratulations. You are a medieval peasant, and your mission is simple: survive one year.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "spring"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "shrug",
+            "expression": "worried",
+            "actions": [
+              [
+                "w9",
+                "idle"
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "MISSION:",
+              "SURVIVE 1 YEAR"
+            ],
+            "colors": [
+              "red",
+              "ink"
+            ],
+            "y": 0.16,
+            "at_word": 9
+          },
+          {
+            "type": "fiction",
+            "text": "STAN'S STORY"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 9
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "i03",
+      "beat": "hook",
+      "narration": "Oh, and happy New Year! In medieval England, the year officially started on March twenty-fifth.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "props": [
+          {
+            "type": "calendar",
+            "x": 0.68,
+            "y": 0.75,
+            "month": "MARCH",
+            "day": 25,
+            "at_word": 4,
+            "scale": 1.3,
+            "loop": "bob"
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "cheer",
+            "expression": "grin",
+            "actions": [
+              [
+                "w5",
+                "point"
+              ]
+            ],
+            "expressions": [
+              [
+                "w5",
+                "happy"
+              ]
+            ],
+            "facing": 1
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "From the 1100s until 1752, England's legal year began on 25 March (Lady Day).",
+            "source": "Royal Museums Greenwich, 'When did New Year's Day change to 1 January?'",
+            "at_word": 8
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "England's civil/legal year began on 25 March until 1752",
+          "kind": "fact",
+          "source": "Royal Museums Greenwich, 'When did New Year's Day change to 1 January?'"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at": 0.3
+        },
+        {
+          "name": "pop",
+          "at_word": 4
+        }
+      ],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "i04",
+      "beat": "hook",
+      "narration": "Now, I'm going to be honest with you. Of all the years you could have picked…",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "talk",
+            "expression": "neutral"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.18,
+          "focus": "stan"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "i05",
+      "beat": "hook",
+      "narration": "this is the worst one. By the end of it, a huge part of England will be dead.",
+      "visual": {
+        "background": {
+          "type": "solid",
+          "color": [
+            0.25,
+            0.08,
+            0.1
+          ]
+        },
+        "props": [
+          {
+            "type": "skull",
+            "x": 0.5,
+            "y": 0.62,
+            "scale": 2.0,
+            "at_word": 2,
+            "loop": "pulse"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "meter",
+            "label": "STAN'S SURVIVAL ODDS",
+            "from": 0.9,
+            "to": 0.5,
+            "at": 1.0,
+            "y": 0.11,
+            "w": 640
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w2"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "The Black Death reached England in 1348",
+          "kind": "fact",
+          "source": "Rosemary Horrox (ed.), The Black Death (Manchester University Press, 1994)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at_word": 2,
+          "gain_db": -4
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "i06",
+      "beat": "hook",
+      "narration": "So let's see what it takes to make it through 1348, one season at a time. Ready? Let's go.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "spring"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "walk",
+            "path": [
+              [
+                0,
+                0.15,
+                0.84
+              ],
+              [
+                4.5,
+                0.55,
+                0.84
+              ]
+            ],
+            "expression": "determined",
+            "actions": [
+              [
+                "w16",
+                "cheer"
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "timeline",
+            "items": [
+              "SPRING",
+              "SUMMER",
+              "AUTUMN",
+              "WINTER"
+            ],
+            "at": 0,
+            "y": 0.1
+          }
+        ],
+        "camera": {
+          "move": "pan_right",
+          "amount": 120
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "h01",
+      "beat": "setup",
+      "narration": "Let's start with your house. It's one room, built from a wooden frame packed with mud and straw.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "spring"
+        },
+        "props": [
+          {
+            "type": "hut",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.4,
+            "enter": "pop"
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.2,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "point",
+            "expression": "happy",
+            "action_params": {
+              "height": 0.3
+            }
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "wattle & daub",
+            "x": 0.83,
+            "y": 0.42,
+            "to_x": 0.7,
+            "to_y": 0.6,
+            "at_word": 11
+          },
+          {
+            "type": "label",
+            "text": "thatched roof",
+            "x": 0.86,
+            "y": 0.18,
+            "to_x": 0.7,
+            "to_y": 0.3,
+            "at_word": 4
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "focus": [
+            0.55,
+            0.55
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Peasant houses were timber-framed with wattle-and-daub walls and thatched roofs",
+          "kind": "fact",
+          "source": "English Heritage, 'Medieval peasant houses'"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12,
+      "chapter": "Your New Home"
+    },
+    {
+      "id": "h02",
+      "beat": "setup",
+      "narration": "There's no chimney. The fire burns in the middle of the floor, and the smoke just… finds its way out.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "spring",
+          "hearth_x": 0.5
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "sick",
+            "expression": "disgusted",
+            "actions": [
+              [
+                "w15",
+                "facepalm"
+              ]
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "stink",
+            "x": 0.5,
+            "y": 0.45,
+            "at_word": 12
+          }
+        ],
+        "camera": {
+          "move": "pan_up",
+          "amount": 120,
+          "zoom": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Most peasant houses had an open central hearth and no chimney",
+          "kind": "fact",
+          "source": "English Heritage, 'Medieval peasant houses'"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at": 0.2,
+          "gain_db": -10
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "h03",
+      "beat": "setup",
+      "narration": "The floor is packed earth covered in straw, which is cozy, right up until you meet the rats.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "spring",
+          "hearth_x": 0.75
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "idle",
+            "expression": "happy",
+            "actions": [
+              [
+                "w13",
+                "cower"
+              ]
+            ],
+            "expressions": [
+              [
+                "w13",
+                "scared"
+              ]
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "rat",
+            "x": 0.75,
+            "y": 0.95,
+            "walk": true,
+            "at_word": 13,
+            "move": [
+              [
+                0,
+                1.1,
+                0.95
+              ],
+              [
+                1.4,
+                0.62,
+                0.95
+              ]
+            ]
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 15
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "h04",
+      "beat": "setup",
+      "narration": "And you're not alone. Meet your wife, Maud, and your son, Wat.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "spring",
+          "hearth_x": 0.82
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "wave",
+            "expression": "happy"
+          },
+          {
+            "id": "maud",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "at": 1.4,
+            "enter": "pop",
+            "action": "wave",
+            "expression": "happy",
+            "preset": "peasant_woman"
+          },
+          {
+            "id": "wat",
+            "x": 0.66,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "at": 2.6,
+            "enter": "pop",
+            "action": "jump",
+            "expression": "grin",
+            "preset": "child"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "Maud",
+            "x": 0.5,
+            "y": 0.28,
+            "at": 1.6
+          },
+          {
+            "type": "label",
+            "text": "Wat",
+            "x": 0.66,
+            "y": 0.45,
+            "at": 2.8
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Stan's family is fictional",
+          "kind": "fiction",
+          "source": "Narrative device"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at": 1.4
+        },
+        {
+          "name": "pop",
+          "at": 2.6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "h05",
+      "beat": "setup",
+      "narration": "Also living with you: a pig, a few chickens, and, if you're lucky, a cow.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "spring",
+          "hearth": false
+        },
+        "props": [
+          {
+            "type": "pig",
+            "x": 0.25,
+            "y": 0.92,
+            "at_word": 5,
+            "scale": 1.1
+          },
+          {
+            "type": "chicken",
+            "x": 0.48,
+            "y": 0.92,
+            "at_word": 8
+          },
+          {
+            "type": "chicken",
+            "x": 0.56,
+            "y": 0.95,
+            "at_word": 8,
+            "flip": -1
+          },
+          {
+            "type": "cow",
+            "x": 0.78,
+            "y": 0.92,
+            "at_word": 14,
+            "scale": 1.05
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.06,
+            "y": 0.84,
+            "scale": 1.1,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "shrug",
+            "expression": "smug"
+          }
+        ],
+        "camera": {
+          "move": "pan_right",
+          "amount": 140
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 5
+        },
+        {
+          "name": "pop",
+          "at_word": 8
+        },
+        {
+          "name": "pop",
+          "at_word": 14
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "h06",
+      "beat": "setup",
+      "narration": "In many longhouses, the animals lived at one end of the building. Their body heat kept everyone warm.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "props": [
+          {
+            "type": "hut",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.8,
+            "smoke": false
+          },
+          {
+            "type": "cow",
+            "x": 0.68,
+            "y": 0.84,
+            "scale": 0.7,
+            "at_word": 5
+          },
+          {
+            "type": "icon",
+            "icon": "heart",
+            "x": 0.68,
+            "y": 0.5,
+            "at_word": 12,
+            "loop": "bob"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Longhouses sheltered people and livestock under one roof, often with a cross-passage between them.",
+            "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)",
+            "at_word": 3
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "In some regions peasants lived in longhouses shared with livestock",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "h07",
+      "beat": "setup",
+      "narration": "The smell? Let's just say you stop noticing it after a week.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "spring",
+          "hearth_x": 0.8
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "itch",
+            "expression": "smug",
+            "actions": [
+              [
+                "w6",
+                "laugh"
+              ]
+            ],
+            "expressions": [
+              [
+                "w6",
+                "laughing"
+              ]
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "stink",
+            "x": 0.2,
+            "y": 0.84
+          },
+          {
+            "type": "pig",
+            "x": 0.2,
+            "y": 0.93
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "focus": "stan"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o01",
+      "beat": "setup",
+      "narration": "Here's the first bad news. You don't really own anything. Not the land, not the house…",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "spring"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "talk",
+            "expression": "neutral",
+            "expressions": [
+              [
+                "w5",
+                "worried"
+              ]
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "x",
+            "x": 0.6,
+            "y": 0.5,
+            "at_word": 9
+          },
+          {
+            "type": "icon",
+            "icon": "x",
+            "x": 0.75,
+            "y": 0.5,
+            "at_word": 13
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 9
+        },
+        {
+          "name": "pop",
+          "at_word": 13
+        }
+      ],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12,
+      "chapter": "Who Owns You?"
+    },
+    {
+      "id": "o02",
+      "beat": "setup",
+      "narration": "and in a way, not even yourself. Because this guy does.",
+      "visual": {
+        "background": {
+          "type": "manor",
+          "manor_x": 0.66
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.18,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "sad",
+            "expression": "sad"
+          },
+          {
+            "id": "lord",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "at_word": 6,
+            "enter": "slide_left",
+            "action": "laugh",
+            "expression": "smug",
+            "preset": "lord"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "Sir Hugh, your lord",
+            "x": 0.5,
+            "y": 0.2,
+            "to_x": 0.5,
+            "to_y": 0.4,
+            "at_word": 8
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "focus": [
+            0.4,
+            0.55
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Sir Hugh is a fictional lord",
+          "kind": "fiction",
+          "source": "Narrative device"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at_word": 6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o03",
+      "beat": "setup",
+      "narration": "You're a villein, an unfree peasant. You're bound to Sir Hugh's manor, and you can't just leave.",
+      "visual": {
+        "background": {
+          "type": "manor",
+          "manor_x": 0.7
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "walk",
+            "path": [
+              [
+                1.5,
+                0.25,
+                0.84
+              ],
+              [
+                3.5,
+                0.05,
+                0.84
+              ]
+            ],
+            "expression": "worried",
+            "actions": [
+              [
+                "w14",
+                "idle"
+              ]
+            ]
+          },
+          {
+            "id": "lord",
+            "x": 0.55,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "point",
+            "expression": "angry",
+            "at": 0.0,
+            "say": [
+              {
+                "text": "Where do you think you're going?",
+                "at_word": 14
+              }
+            ],
+            "preset": "lord"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "VILLEIN = UNFREE",
+            "y": 0.15,
+            "at_word": 2,
+            "until_word": 13
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Villeins were unfree tenants legally bound to their lord's manor",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o04",
+      "beat": "setup",
+      "narration": "In exchange for your strips of land, you owe him work. Often two or three days a week, every week.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "spring",
+          "crops": 0.1
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "dig",
+            "item": "hoe",
+            "expression": "tired"
+          },
+          {
+            "id": "reeve",
+            "x": 0.78,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "idle",
+            "expression": "neutral",
+            "preset": "reeve"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "UNPAID WORK:",
+            "value": "2-3 DAYS / WEEK",
+            "corner": "tr",
+            "at_word": 13,
+            "color": "red",
+            "size": 48
+          }
+        ],
+        "camera": {
+          "move": "pan_right",
+          "amount": 100
+        }
+      },
+      "claims": [
+        {
+          "text": "Villeins typically owed 'week-work' on the lord's demesne, often 2-3 days per week",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937); Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "dig",
+          "at": 0.5
+        },
+        {
+          "name": "dig",
+          "at": 1.6
+        },
+        {
+          "name": "ding",
+          "at_word": 13
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o05",
+      "beat": "setup",
+      "narration": "That's free labor on his fields, called the demesne, while your own crops wait.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "props": [
+          {
+            "type": "strips",
+            "x": 0.5,
+            "y": 0.78,
+            "scale": 0.95,
+            "mine": [
+              2,
+              9
+            ],
+            "reveal": 3.0
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "the lord's demesne",
+            "x": 0.28,
+            "y": 0.15,
+            "to_x": 0.35,
+            "to_y": 0.4,
+            "at_word": 6
+          },
+          {
+            "type": "label",
+            "text": "your strips",
+            "x": 0.75,
+            "y": 0.15,
+            "to_x": 0.66,
+            "to_y": 0.4,
+            "at_word": 10
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The lord's demesne was farmed using villeins' labor services",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o06",
+      "beat": "setup",
+      "narration": "Making sure you actually show up is the reeve, a fellow peasant with a clipboard energy.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "spring",
+          "crops": 0.1
+        },
+        "cast": [
+          {
+            "id": "reeve",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.4,
+            "facing": -1,
+            "action": "hold",
+            "expression": "smug",
+            "preset": "reeve"
+          },
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "idle",
+            "expression": "worried"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "the reeve",
+            "x": 0.6,
+            "y": 0.13,
+            "to_x": 0.6,
+            "to_y": 0.27,
+            "at_word": 7
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "focus": "reeve"
+        }
+      },
+      "claims": [
+        {
+          "text": "The reeve was a villager chosen to oversee work on the manor",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o07",
+      "beat": "setup",
+      "narration": "And the fees. Oh, the fees. Want your daughter to marry? Pay the lord a fine, called merchet.",
+      "visual": {
+        "background": {
+          "type": "manor"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "hold",
+            "item": "coin",
+            "expression": "sad"
+          },
+          {
+            "id": "lord",
+            "x": 0.62,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "count",
+            "expression": "happy",
+            "preset": "lord"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "money",
+            "text": "-merchet",
+            "x": 0.33,
+            "y": 0.45,
+            "at_word": 15
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Merchet was a fine paid to the lord when an unfree woman married",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 15
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o08",
+      "beat": "setup",
+      "narration": "When you die, he takes your best animal. That one is called heriot.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "spring"
+        },
+        "props": [
+          {
+            "type": "cow",
+            "x": 0.55,
+            "y": 0.86,
+            "move": [
+              [
+                0.8,
+                0.55,
+                0.86
+              ],
+              [
+                3.4,
+                0.9,
+                0.86
+              ]
+            ],
+            "walk": true
+          }
+        ],
+        "cast": [
+          {
+            "id": "lord",
+            "x": 0.75,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "walk",
+            "path": [
+              [
+                0.8,
+                0.7,
+                0.84
+              ],
+              [
+                3.4,
+                1.05,
+                0.84
+              ]
+            ],
+            "expression": "smug",
+            "preset": "lord"
+          },
+          {
+            "id": "stan",
+            "x": 0.2,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "sad",
+            "expression": "crying"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "money",
+            "text": "-heriot (best cow)",
+            "x": 0.6,
+            "y": 0.4,
+            "at_word": 10
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Heriot: on a tenant's death the lord took the best beast",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 10
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o09",
+      "beat": "setup",
+      "narration": "Need flour? You must grind your grain at his mill, and he keeps a cut of it.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "spring",
+          "crops": 0.0
+        },
+        "props": [
+          {
+            "type": "mill",
+            "x": 0.68,
+            "y": 0.84,
+            "scale": 1.15
+          },
+          {
+            "type": "sack",
+            "x": 0.42,
+            "y": 0.86,
+            "label": "GRAIN",
+            "scale": 0.9
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "push",
+            "expression": "tired"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "money",
+            "text": "-1 scoop for the lord",
+            "x": 0.42,
+            "y": 0.45,
+            "at_word": 13
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Tenants were often obliged to use the lord's mill and pay a toll (multure) in grain",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o10",
+      "beat": "setup",
+      "narration": "And then there's the Church, which takes a tithe: one tenth of everything you produce.",
+      "visual": {
+        "background": {
+          "type": "church"
+        },
+        "cast": [
+          {
+            "id": "priest",
+            "x": 0.65,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "hold",
+            "item": "bag",
+            "expression": "happy",
+            "preset": "priest"
+          },
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "sad",
+            "expression": "sad"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "stat",
+            "value": 10,
+            "suffix": "%",
+            "caption": "of your harvest → the Church",
+            "y": 0.3,
+            "at_word": 10,
+            "size": 170
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "A tithe of one tenth of produce was owed to the Church",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 10
+        }
+      ],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o13",
+      "beat": "setup",
+      "narration": "Break the rules, and you'll end up in the manor court, where your own neighbors help decide your fine.",
+      "visual": {
+        "background": {
+          "type": "manor"
+        },
+        "cast": [
+          {
+            "id": "lord",
+            "x": 0.7,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "sit_talk",
+            "expression": "angry",
+            "preset": "lord"
+          },
+          {
+            "id": "reeve",
+            "x": 0.52,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "hold",
+            "expression": "neutral",
+            "preset": "reeve"
+          },
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "cower",
+            "expression": "worried"
+          }
+        ],
+        "props": [
+          {
+            "type": "table",
+            "x": 0.68,
+            "y": 0.86,
+            "w": 420,
+            "items": [
+              "scroll"
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "THE MANOR COURT",
+            "y": 0.14,
+            "at_word": 7
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Manor courts, with juries of tenants, fined villagers for breaches of custom",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o14",
+      "beat": "setup",
+      "narration": "Typical crimes? Letting your pig wander into the lord's crops, or brewing ale that's too weak.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "spring",
+          "crops": 0.4
+        },
+        "props": [
+          {
+            "type": "pig",
+            "x": 0.6,
+            "y": 0.92,
+            "walk": true,
+            "move": [
+              [
+                0,
+                0.3,
+                0.92
+              ],
+              [
+                3,
+                0.65,
+                0.92
+              ]
+            ]
+          },
+          {
+            "type": "item",
+            "item": "mug",
+            "x": 0.85,
+            "y": 0.6,
+            "scale": 2.2,
+            "at_word": 12
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.15,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "panic",
+            "expression": "scared"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "money",
+            "text": "-6d fine",
+            "x": 0.6,
+            "y": 0.4,
+            "at": 1.6
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Common manor-court offences included straying animals and breaches of the assize of ale",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boing",
+          "at": 1.0
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o15",
+      "beat": "setup",
+      "narration": "And if someone shouts that a crime has happened, everyone must drop what they're doing and chase the culprit.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "spring"
+        },
+        "cast": [
+          {
+            "id": "thief",
+            "x": 0.7,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "run",
+            "expression": "scared",
+            "item": "bag",
+            "path": [
+              [
+                0,
+                0.55,
+                0.84
+              ],
+              [
+                5.5,
+                1.1,
+                0.84
+              ]
+            ],
+            "preset": "peasant"
+          },
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "run",
+            "expression": "angry",
+            "item": "pitchfork",
+            "path": [
+              [
+                1.2,
+                0.1,
+                0.84
+              ],
+              [
+                5.5,
+                0.85,
+                0.84
+              ]
+            ]
+          },
+          {
+            "id": "p1",
+            "x": 0.1,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "run",
+            "expression": "angry",
+            "at": 2.0,
+            "path": [
+              [
+                2.0,
+                -0.1,
+                0.84
+              ],
+              [
+                5.5,
+                0.6,
+                0.84
+              ]
+            ],
+            "preset": "peasant"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "THE HUE AND CRY!",
+            "y": 0.15,
+            "at": 0.8,
+            "color": "red"
+          }
+        ],
+        "camera": {
+          "move": "pan_right",
+          "amount": 220
+        }
+      },
+      "claims": [
+        {
+          "text": "The 'hue and cry' obliged villagers to pursue suspected criminals",
+          "kind": "fact",
+          "source": "Ian Mortimer, The Time Traveller's Guide to Medieval England (2008)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 1.2
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o11",
+      "beat": "setup",
+      "narration": "Add it all up, and a big share of your work never feeds your own family.",
+      "visual": {
+        "background": {
+          "type": "chalkboard"
+        },
+        "overlays": [
+          {
+            "type": "bars",
+            "title": "Where your year's effort goes (rough idea)",
+            "x": 0.2,
+            "y": 0.3,
+            "items": [
+              [
+                "Lord's fields",
+                3,
+                "red",
+                "2-3 days/week"
+              ],
+              [
+                "Tithe",
+                1,
+                "gold",
+                "10%"
+              ],
+              [
+                "Rent & fees",
+                1,
+                "orange",
+                "many"
+              ],
+              [
+                "Your family",
+                3,
+                "teal",
+                "what's left"
+              ]
+            ],
+            "max": 3.6
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Labor services, rents, fines and tithe took a large share of a villein's output; exact shares varied by manor",
+          "kind": "estimate",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o16",
+      "beat": "setup",
+      "narration": "Some of your rent isn't even paid in money. It's paid in hens at Christmas and eggs at Easter.",
+      "visual": {
+        "background": {
+          "type": "manor"
+        },
+        "props": [
+          {
+            "type": "chicken",
+            "x": 0.45,
+            "y": 0.9,
+            "at_word": 12
+          },
+          {
+            "type": "chicken",
+            "x": 0.52,
+            "y": 0.92,
+            "at_word": 12,
+            "flip": -1
+          },
+          {
+            "type": "item",
+            "item": "egg",
+            "x": 0.62,
+            "y": 0.86,
+            "scale": 2.0,
+            "at_word": 16
+          },
+          {
+            "type": "item",
+            "item": "egg",
+            "x": 0.68,
+            "y": 0.86,
+            "scale": 2.0,
+            "at_word": 16
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "hold",
+            "expression": "neutral"
+          },
+          {
+            "id": "reeve",
+            "x": 0.82,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "count",
+            "expression": "smug",
+            "preset": "reeve"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Rents in kind such as 'Christmas hens' and Easter eggs were common manorial dues",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 12
+        },
+        {
+          "name": "pop",
+          "at_word": 16
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o17",
+      "beat": "setup",
+      "narration": "Your one legal escape? Run to a chartered town and live there for a year and a day without being caught. Then you're free.",
+      "visual": {
+        "background": {
+          "type": "town"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "sneak",
+            "expression": "worried",
+            "path": [
+              [
+                0,
+                0.05,
+                0.84
+              ],
+              [
+                4,
+                0.45,
+                0.84
+              ]
+            ],
+            "actions": [
+              [
+                "w18",
+                "cheer"
+              ]
+            ],
+            "expressions": [
+              [
+                "w18",
+                "grin"
+              ]
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "calendar",
+            "x": 0.78,
+            "y": 0.75,
+            "month": "1 YEAR",
+            "day": "+1",
+            "at_word": 11,
+            "scale": 1.1
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "A villein who lived unclaimed in a privileged town for a year and a day could gain his freedom.",
+            "source": "Glanvill, Treatise on the Laws of England (c. 1188)",
+            "at_word": 6,
+            "x": 0.03,
+            "y": 0.04,
+            "w": 820
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "A villein residing unclaimed for a year and a day in a privileged town could become free",
+          "kind": "fact",
+          "source": "Glanvill, Treatise on the Laws of England (c. 1188)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "o12",
+      "beat": "setup",
+      "narration": "Still, it's not all misery. Sundays and dozens of holy days are days off from field work.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "spring"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "dance",
+            "expression": "laughing"
+          },
+          {
+            "id": "maud",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "dance",
+            "expression": "happy",
+            "preset": "peasant_woman"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "sparkle",
+            "x": 0.48,
+            "y": 0.45
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "tag": "FACT",
+            "text": "Sundays plus dozens of church feast days were holidays.",
+            "source": "Ian Mortimer, The Time Traveller's Guide to Medieval England (2008)",
+            "at_word": 9
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Sundays and many holy days (feast days) were rest days",
+          "kind": "fact",
+          "source": "Ian Mortimer, The Time Traveller's Guide to Medieval England (2008)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at": 0.3
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p01",
+      "beat": "development",
+      "narration": "It's spring, so it's time to plough. Your village farms huge open fields divided into long strips.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "spring",
+          "crops": 0.0
+        },
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "APRIL",
+            "value": "· MONTH 2",
+            "corner": "tr",
+            "size": 46
+          },
+          {
+            "type": "timeline",
+            "at": 0,
+            "y": 0.1
+          }
+        ],
+        "props": [
+          {
+            "type": "plough",
+            "x": 0.3,
+            "y": 0.9,
+            "move": [
+              [
+                0,
+                0.1,
+                0.9
+              ],
+              [
+                6,
+                0.5,
+                0.9
+              ]
+            ]
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.12,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "push",
+            "path": [
+              [
+                0,
+                0.02,
+                0.88
+              ],
+              [
+                6,
+                0.42,
+                0.88
+              ]
+            ],
+            "expression": "determined"
+          }
+        ],
+        "camera": {
+          "move": "pan_right",
+          "amount": 160
+        }
+      },
+      "claims": [
+        {
+          "text": "Many English villages farmed open fields divided into strips",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12,
+      "chapter": "Spring: Mud, Oxen and Porridge"
+    },
+    {
+      "id": "p02",
+      "beat": "development",
+      "narration": "Your strips are scattered all over, so the good soil and the bad soil get shared around.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "props": [
+          {
+            "type": "strips",
+            "x": 0.5,
+            "y": 0.8,
+            "mine": [
+              1,
+              5,
+              10
+            ],
+            "reveal": 1.0,
+            "scale": 1.05
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "yours!",
+            "x": 0.5,
+            "y": 0.13,
+            "to_x": 0.3,
+            "to_y": 0.35,
+            "at": 1.0
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "A peasant's holding was scattered in strips across the fields",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p03",
+      "beat": "development",
+      "narration": "A typical villein family might hold around thirty acres, but plenty of families had much less.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "talk",
+            "expression": "neutral"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "stat",
+            "value": "~30 acres",
+            "caption": "a 'yardland' (virgate) — if you were lucky",
+            "x": 0.62,
+            "y": 0.4,
+            "size": 150,
+            "at_word": 7
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "A standard villein holding (virgate/yardland) was often around 30 acres, varying by region; many held half that or less",
+          "kind": "estimate",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002); H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p04",
+      "beat": "development",
+      "narration": "Nobody owns enough oxen to pull a heavy plough alone, so neighbors share their animals.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "spring",
+          "crops": 0.0
+        },
+        "props": [
+          {
+            "type": "plough",
+            "x": 0.35,
+            "y": 0.92,
+            "scale": 1.0
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.2,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "push",
+            "expression": "tired"
+          },
+          {
+            "id": "neighbor",
+            "x": 0.75,
+            "y": 0.84,
+            "scale": 1.2,
+            "facing": -1,
+            "action": "wave",
+            "expression": "happy",
+            "preset": "peasant"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Plough teams were often assembled by several tenants pooling their oxen",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p05",
+      "beat": "development",
+      "narration": "Each year, one big field rests, called fallow, so the soil can recover.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "props": [
+          {
+            "type": "board",
+            "x": 0.25,
+            "y": 0.5,
+            "text": "FIELD 1\nwheat",
+            "color": "wheat",
+            "w": 420,
+            "at": 0.3
+          },
+          {
+            "type": "board",
+            "x": 0.5,
+            "y": 0.5,
+            "text": "FIELD 2\noats & peas",
+            "color": "lime",
+            "w": 420,
+            "at": 0.8
+          },
+          {
+            "type": "board",
+            "x": 0.75,
+            "y": 0.5,
+            "text": "FIELD 3\nresting",
+            "color": "white",
+            "w": 420,
+            "at_word": 5
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "THE THREE-FIELD SYSTEM",
+            "y": 0.14
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Crop rotation with a fallow field (two- and three-field systems) was common",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at": 0.3
+        },
+        {
+          "name": "pop",
+          "at": 0.8
+        },
+        {
+          "name": "pop",
+          "at_word": 5
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p06",
+      "beat": "development",
+      "narration": "You work from sunrise until the light is gone. So, what's for lunch?",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "spring",
+          "crops": 0.0,
+          "time": "dusk"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "dig",
+            "item": "hoe",
+            "expression": "tired",
+            "actions": [
+              [
+                "w9",
+                "idle"
+              ]
+            ],
+            "expressions": [
+              [
+                "w9",
+                "happy"
+              ]
+            ]
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "focus": "stan"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "dig",
+          "at": 0.4
+        },
+        {
+          "name": "dig",
+          "at": 1.5
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p07",
+      "beat": "development",
+      "narration": "Pottage. A thick stew of grains, peas, beans and whatever vegetables are growing.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "spring",
+          "hearth_x": 0.45
+        },
+        "props": [
+          {
+            "type": "pot",
+            "x": 0.45,
+            "y": 0.86,
+            "scale": 1.3
+          }
+        ],
+        "cast": [
+          {
+            "id": "maud",
+            "x": 0.68,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "stir",
+            "expression": "happy",
+            "preset": "peasant_woman"
+          },
+          {
+            "id": "stan",
+            "x": 0.2,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "idle",
+            "expression": "happy",
+            "item": "bread"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "POTTAGE",
+            "y": 0.15,
+            "at_word": 0
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Pottage of grains and pulses was a staple of the peasant diet",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at": 0.2,
+          "gain_db": -10
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p08",
+      "beat": "development",
+      "narration": "Tomorrow? Pottage. The day after? You guessed it.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "spring",
+          "hearth_x": 0.45
+        },
+        "props": [
+          {
+            "type": "pot",
+            "x": 0.45,
+            "y": 0.86,
+            "scale": 1.3
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "eat",
+            "expression": "tired",
+            "expressions": [
+              [
+                "w4",
+                "sad"
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "POTTAGE STREAK:",
+            "from": 1,
+            "to": 47,
+            "time": 2.0
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p09",
+      "beat": "development",
+      "narration": "Add dark bread made from rye or barley, and a little cheese, eggs, or bacon when you can get them.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "props": [
+          {
+            "type": "item",
+            "item": "bread",
+            "x": 0.25,
+            "y": 0.6,
+            "scale": 2.4,
+            "at_word": 1
+          },
+          {
+            "type": "item",
+            "item": "egg",
+            "x": 0.45,
+            "y": 0.6,
+            "scale": 2.4,
+            "at_word": 13
+          },
+          {
+            "type": "plate",
+            "x": 0.65,
+            "y": 0.62,
+            "food": "meat",
+            "scale": 1.6,
+            "at_word": 15
+          },
+          {
+            "type": "icon",
+            "icon": "?",
+            "x": 0.82,
+            "y": 0.6,
+            "at_word": 17,
+            "size": 90
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Bread from rye, barley or mixed grains, with some dairy, eggs and occasional bacon",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 1
+        },
+        {
+          "name": "pop",
+          "at_word": 13
+        },
+        {
+          "name": "pop",
+          "at_word": 15
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p10",
+      "beat": "development",
+      "narration": "And to drink? Ale. Lots of it. Weak, cloudy ale was a daily food, not a party drink.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "spring"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "drink",
+            "item": "mug",
+            "expression": "happy",
+            "actions": [
+              [
+                "w5",
+                "cheer"
+              ]
+            ],
+            "expressions": [
+              [
+                "w5",
+                "laughing"
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Ale was a staple: brewed mostly by women ('alewives') and regulated by the Assize of Bread and Ale.",
+            "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)",
+            "at_word": 6
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Ale was a dietary staple, commonly brewed by women",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        },
+        {
+          "text": "The Assize of Bread and Ale regulated prices and quality",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "gulp",
+          "at": 0.6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p11",
+      "beat": "development",
+      "narration": "People did drink water too. But ale was safer, tastier, and it filled you up.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "spring",
+          "crops": 0.0
+        },
+        "props": [
+          {
+            "type": "well",
+            "x": 0.72,
+            "y": 0.84
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "hold",
+            "item": "mug",
+            "expression": "smug"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "caption",
+            "text": "Myth: \"medieval people never drank water\" — they did.",
+            "at_word": 0
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Medieval people did drink water; ale was nonetheless a staple calorie source",
+          "kind": "fact",
+          "source": "Ian Mortimer, The Time Traveller's Guide to Medieval England (2008)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p14",
+      "beat": "development",
+      "narration": "Maud works just as hard as you. She brews, spins wool, makes cheese, keeps the animals, and helps in the fields.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "spring",
+          "hearth_x": 0.82
+        },
+        "props": [
+          {
+            "type": "barrel",
+            "x": 0.2,
+            "y": 0.86,
+            "at_word": 7
+          },
+          {
+            "type": "sheep",
+            "x": 0.6,
+            "y": 0.9,
+            "at_word": 9,
+            "scale": 0.8
+          }
+        ],
+        "cast": [
+          {
+            "id": "maud",
+            "x": 0.38,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "stir",
+            "expression": "determined",
+            "actions": [
+              [
+                "w13",
+                "carry"
+              ]
+            ],
+            "preset": "peasant_woman"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "checklist",
+            "x": 0.62,
+            "y": 0.18,
+            "size": 46,
+            "items": [
+              [
+                "brew ale",
+                true
+              ],
+              [
+                "spin wool",
+                true
+              ],
+              [
+                "make cheese",
+                true
+              ],
+              [
+                "animals",
+                true
+              ],
+              [
+                "field work",
+                true
+              ]
+            ],
+            "times": [
+              1.6,
+              2.4,
+              3.1,
+              3.9,
+              4.8
+            ]
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Peasant women brewed, spun, made dairy produce, tended livestock and worked in the fields",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937); Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p15",
+      "beat": "development",
+      "narration": "And Wat? At seven, he's already working: collecting firewood, minding geese, and scaring birds off the seeds.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "spring",
+          "crops": 0.2
+        },
+        "cast": [
+          {
+            "id": "wat",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "panic",
+            "expression": "angry",
+            "preset": "child"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "anger",
+            "x": 0.4,
+            "y": 0.45
+          },
+          {
+            "type": "chicken",
+            "x": 0.7,
+            "y": 0.92,
+            "move": [
+              [
+                2,
+                0.7,
+                0.92
+              ],
+              [
+                4,
+                1.1,
+                0.7
+              ]
+            ]
+          },
+          {
+            "type": "chicken",
+            "x": 0.8,
+            "y": 0.92,
+            "move": [
+              [
+                2.2,
+                0.8,
+                0.92
+              ],
+              [
+                4.2,
+                1.2,
+                0.6
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "caption",
+            "text": "medieval scarecrow: an actual child",
+            "at": 3.0
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Children did tasks such as gathering fuel, tending animals and bird-scaring",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boing",
+          "at": 2.0
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p16",
+      "beat": "development",
+      "narration": "Your clothes are simple: a wool tunic, linen underneath, and a hood. You own maybe two outfits.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.5,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "hold",
+            "expression": "smug",
+            "hat": "hood",
+            "hat_color": "tan"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "wool tunic",
+            "x": 0.75,
+            "y": 0.55,
+            "to_x": 0.54,
+            "to_y": 0.6,
+            "at_word": 5
+          },
+          {
+            "type": "label",
+            "text": "hood",
+            "x": 0.72,
+            "y": 0.2,
+            "to_x": 0.53,
+            "to_y": 0.27,
+            "at_word": 11
+          },
+          {
+            "type": "label",
+            "text": "linen underneath",
+            "x": 0.25,
+            "y": 0.4,
+            "to_x": 0.45,
+            "to_y": 0.55,
+            "at_word": 8
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Peasants wore woollen outer garments over linen undergarments",
+          "kind": "fact",
+          "source": "Ian Mortimer, The Time Traveller's Guide to Medieval England (2008)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p17",
+      "beat": "development",
+      "narration": "And then there's the hungry gap: late spring, when last year's food is running out, and the new crops aren't ready yet.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "spring",
+          "hearth_x": 0.7,
+          "dark": 0.15
+        },
+        "props": [
+          {
+            "type": "barrel",
+            "x": 0.25,
+            "y": 0.86
+          },
+          {
+            "type": "sack",
+            "x": 0.4,
+            "y": 0.86,
+            "scale": 0.6,
+            "label": ""
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.55,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "sad",
+            "expression": "tired"
+          },
+          {
+            "id": "wat",
+            "x": 0.7,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "idle",
+            "expression": "sad",
+            "preset": "child"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "meter",
+            "label": "FOOD STORES",
+            "from": 0.4,
+            "to": 0.08,
+            "y": 0.12,
+            "time": 3.0
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Late spring/early summer was the leanest time before the new harvest",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p12",
+      "beat": "development",
+      "narration": "Your parents remember the Great Famine of 1315 to 1317. Years of rain, rotting crops, and hunger.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "autumn",
+          "crops": 0.0,
+          "weather": "rain",
+          "time": "grey"
+        },
+        "cast": [
+          {
+            "id": "dad",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "sad",
+            "expression": "crying",
+            "color": [
+              0.4,
+              0.4,
+              0.45
+            ],
+            "preset": "peasant"
+          },
+          {
+            "id": "mum",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "sad",
+            "expression": "sad",
+            "color": [
+              0.4,
+              0.4,
+              0.45
+            ],
+            "preset": "peasant_woman"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "tint",
+            "color": [
+              0.45,
+              0.35,
+              0.2
+            ],
+            "alpha": 0.35
+          },
+          {
+            "type": "title",
+            "text": "1315-1317",
+            "y": 0.15,
+            "at_word": 7
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The Great Famine of 1315-1317 followed years of torrential rain and failed harvests",
+          "kind": "fact",
+          "source": "William Chester Jordan, The Great Famine (Princeton, 1996)"
+        }
+      ],
+      "sfx": [],
+      "transition": "fade",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "p13",
+      "beat": "development",
+      "narration": "So every spring, you plant, you pray, and you hope the weather behaves.",
+      "visual": {
+        "background": {
+          "type": "church"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "pray",
+            "expression": "worried"
+          },
+          {
+            "id": "maud",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "pray",
+            "expression": "worried",
+            "preset": "peasant_woman"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "fade",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "m01",
+      "beat": "development",
+      "narration": "Quick myth check. You've probably heard that medieval people never washed. Not true.",
+      "visual": {
+        "background": {
+          "type": "paper",
+          "lines": true,
+          "floor": false
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "talk",
+            "expression": "neutral",
+            "actions": [
+              [
+                "w12",
+                "point_up"
+              ]
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "x",
+            "x": 0.7,
+            "y": 0.6,
+            "at_word": 12,
+            "scale": 1.5
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "MYTH BUSTING",
+            "y": 0.15,
+            "color": "red"
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 12
+        }
+      ],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12,
+      "chapter": "Wait… Were They Really That Dirty?"
+    },
+    {
+      "id": "m02",
+      "beat": "development",
+      "narration": "Washing your hands and face every morning was normal, and towns had public bathhouses, called stews.",
+      "visual": {
+        "background": {
+          "type": "town"
+        },
+        "props": [
+          {
+            "type": "tub",
+            "x": 0.6,
+            "y": 0.92,
+            "scale": 1.3,
+            "at_word": 11
+          },
+          {
+            "type": "item",
+            "item": "bucket",
+            "x": 0.25,
+            "y": 0.9,
+            "scale": 1.5
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "scratch",
+            "expression": "happy",
+            "actions": [
+              [
+                "w11",
+                "point"
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "a 'stew' (bathhouse)",
+            "x": 0.82,
+            "y": 0.35,
+            "to_x": 0.65,
+            "to_y": 0.7,
+            "at_word": 14
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Daily washing of hands and face was customary; towns had public bathhouses ('stews')",
+          "kind": "fact",
+          "source": "Katherine Harvey, The Fires of Lust / Smithsonian, 'Medieval people did bathe'; Ian Mortimer, The Time Traveller's Guide to Medieval England (2008)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "m03",
+      "beat": "development",
+      "narration": "And the idea that everyone died at thirty? That average is dragged down by children.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "overlays": [
+          {
+            "type": "stat",
+            "value": "30?",
+            "caption": "average life expectancy at birth",
+            "y": 0.38,
+            "at_word": 6,
+            "color": "red"
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.18,
+            "y": 0.84,
+            "scale": 1.1,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "shrug",
+            "expression": "thinking"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Low average life expectancy at birth was driven by high infant and child mortality",
+          "kind": "estimate",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "m04",
+      "beat": "development",
+      "narration": "Sadly, around one in three children didn't reach adulthood. But if you did, reaching your fifties or sixties was normal.",
+      "visual": {
+        "background": {
+          "type": "paper",
+          "lines": true,
+          "floor": false
+        },
+        "overlays": [
+          {
+            "type": "people",
+            "n": 9,
+            "k": 3,
+            "cols": 9,
+            "color": [
+              0.5,
+              0.5,
+              0.55
+            ],
+            "dim": "ink",
+            "from_end": false,
+            "y": 0.6,
+            "caption": "≈ 1 in 3 children didn't make it to adulthood",
+            "fig_scale": 0.6
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Roughly a third of children may have died before adulthood; adults commonly lived into their 50s-60s",
+          "kind": "estimate",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002); Ian Mortimer, The Time Traveller's Guide to Medieval England (2008)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "m05",
+      "beat": "development",
+      "narration": "So, rule one of surviving 1348: get past childhood. Good news: you already did.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "spring"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.45,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "cheer",
+            "expression": "grin"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "checklist",
+            "items": [
+              [
+                "Survive childhood",
+                true
+              ]
+            ],
+            "x": 0.6,
+            "y": 0.35,
+            "at_word": 4
+          },
+          {
+            "type": "meter",
+            "label": "STAN'S SURVIVAL ODDS",
+            "from": 0.5,
+            "to": 0.6,
+            "at": 0.4,
+            "y": 0.11,
+            "w": 640
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 11
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s01",
+      "beat": "development",
+      "narration": "Summer. The crops are growing, the hay needs cutting, and the village is busy.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "summer",
+          "crops": 0.7
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "swing",
+            "item": "scythe",
+            "expression": "happy"
+          },
+          {
+            "id": "maud",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "carry",
+            "expression": "happy",
+            "action_params": {
+              "walking": false
+            },
+            "preset": "peasant_woman"
+          },
+          {
+            "id": "wat",
+            "x": 0.78,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "jump",
+            "expression": "grin",
+            "preset": "child"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "JUNE",
+            "value": "· MONTH 4",
+            "corner": "tr",
+            "size": 46
+          },
+          {
+            "type": "timeline",
+            "at": 1,
+            "from_at": 0,
+            "y": 0.1
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.6,
+          "gain_db": -6
+        }
+      ],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12,
+      "chapter": "Summer: Something Is Coming"
+    },
+    {
+      "id": "s02",
+      "beat": "development",
+      "narration": "But around the end of June, a ship docks at Melcombe, a port in Dorset.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "summer",
+          "ground": "sand"
+        },
+        "props": [
+          {
+            "type": "sea",
+            "x": 0.5,
+            "y": 0.84
+          },
+          {
+            "type": "ship",
+            "x": 0.55,
+            "y": 0.86,
+            "scale": 1.0,
+            "move": [
+              [
+                0,
+                1.2,
+                0.86
+              ],
+              [
+                3.5,
+                0.55,
+                0.86
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "MELCOMBE, DORSET",
+            "y": 0.15,
+            "at_word": 10
+          },
+          {
+            "type": "counter",
+            "label": "JUNE",
+            "value": "1348",
+            "corner": "tr"
+          }
+        ],
+        "camera": {
+          "move": "pan_left",
+          "amount": 120
+        }
+      },
+      "claims": [
+        {
+          "text": "The Black Death arrived in England at Melcombe (Weymouth), Dorset, in June 1348",
+          "kind": "fact",
+          "source": "Rosemary Horrox (ed.), The Black Death (Manchester University Press, 1994)"
+        }
+      ],
+      "sfx": [],
+      "transition": "fade",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s03",
+      "beat": "climax",
+      "narration": "On board is something nobody can see: plague. The Black Death has reached England.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "summer",
+          "ground": "sand",
+          "time": "grey"
+        },
+        "props": [
+          {
+            "type": "sea",
+            "x": 0.5,
+            "y": 0.84
+          },
+          {
+            "type": "ship",
+            "x": 0.55,
+            "y": 0.86
+          },
+          {
+            "type": "rat",
+            "x": 0.4,
+            "y": 0.9,
+            "walk": true,
+            "move": [
+              [
+                0.5,
+                0.5,
+                0.9
+              ],
+              [
+                2.5,
+                0.2,
+                0.9
+              ]
+            ]
+          },
+          {
+            "type": "germ",
+            "x": 0.7,
+            "y": 0.45,
+            "at_word": 7,
+            "scale": 1.6,
+            "loop": "bob"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "tint",
+            "color": [
+              0.2,
+              0.35,
+              0.1
+            ],
+            "alpha": 0.3,
+            "at_word": 7
+          },
+          {
+            "type": "title",
+            "text": "THE BLACK DEATH",
+            "color": "red",
+            "y": 0.15,
+            "at_word": 9
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.15,
+          "impacts": [
+            "w7"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Plague (the Black Death) spread through England from summer 1348",
+          "kind": "fact",
+          "source": "Rosemary Horrox (ed.), The Black Death (Manchester University Press, 1994)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at_word": 7
+        },
+        {
+          "name": "boom",
+          "at_word": 9,
+          "gain_db": -6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s04",
+      "beat": "climax",
+      "narration": "It's caused by a bacterium, Yersinia pestis, carried by fleas that live on rats, and on people.",
+      "visual": {
+        "background": {
+          "type": "solid",
+          "color": [
+            0.16,
+            0.2,
+            0.16
+          ]
+        },
+        "props": [
+          {
+            "type": "germ",
+            "x": 0.25,
+            "y": 0.6,
+            "scale": 2.0
+          },
+          {
+            "type": "rat",
+            "x": 0.6,
+            "y": 0.7,
+            "scale": 2.0,
+            "at_word": 11
+          },
+          {
+            "type": "fleas",
+            "x": 0.6,
+            "y": 0.55,
+            "n": 9,
+            "at_word": 8
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "Yersinia pestis",
+            "x": 0.25,
+            "y": 0.2,
+            "to_x": 0.25,
+            "to_y": 0.38,
+            "at_word": 5,
+            "outline_color": "ink",
+            "color": "white"
+          },
+          {
+            "type": "label",
+            "text": "fleas",
+            "x": 0.82,
+            "y": 0.25,
+            "to_x": 0.63,
+            "to_y": 0.35,
+            "at_word": 8,
+            "outline_color": "ink",
+            "color": "white"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Plague is caused by Yersinia pestis, transmitted by fleas from rats; human-to-human spread (including via human fleas/lice and pneumonic form) is also discussed by historians",
+          "kind": "fact",
+          "source": "CDC, 'Plague: symptoms and transmission'; Ole J. Benedictow, The Black Death 1346-1353 (Boydell, 2004)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 11
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s05",
+      "beat": "climax",
+      "narration": "Of course, nobody in 1348 knows that. Doctors blame bad air, the stars, or God's anger.",
+      "visual": {
+        "background": {
+          "type": "town",
+          "time": "grey"
+        },
+        "cast": [
+          {
+            "id": "doc",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "robe",
+            "outfit_color": "purple",
+            "hat": "cap",
+            "hat_color": "purple",
+            "action": "talk",
+            "expression": "thinking",
+            "item": "book",
+            "preset": "modern"
+          },
+          {
+            "id": "stan",
+            "x": 0.7,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "facing": -1,
+            "action": "scratch",
+            "expression": "worried"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "?",
+            "x": 0.7,
+            "y": 0.35,
+            "at_word": 6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "checklist",
+            "x": 0.06,
+            "y": 0.2,
+            "items": [
+              [
+                "bad air (miasma)",
+                null
+              ],
+              [
+                "the stars",
+                null
+              ],
+              [
+                "God's anger",
+                null
+              ]
+            ],
+            "times": [
+              1.8,
+              2.6,
+              3.4
+            ],
+            "size": 48
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Contemporaries blamed corrupted air (miasma), planetary conjunctions and divine punishment",
+          "kind": "fact",
+          "source": "Rosemary Horrox (ed.), The Black Death (Manchester University Press, 1994)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s06",
+      "beat": "climax",
+      "narration": "And no, the famous beaked plague doctor mask wasn't around yet. That shows up in the sixteen hundreds.",
+      "visual": {
+        "background": {
+          "type": "paper",
+          "lines": true,
+          "floor": false
+        },
+        "cast": [
+          {
+            "id": "doctor",
+            "x": 0.5,
+            "y": 0.84,
+            "scale": 1.4,
+            "action": "idle",
+            "expression": "neutral",
+            "preset": "doctor"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "x",
+            "x": 0.72,
+            "y": 0.4,
+            "at_word": 8,
+            "scale": 1.3
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "WRONG CENTURY!",
+            "color": "red",
+            "y": 0.15,
+            "at_word": 8
+          },
+          {
+            "type": "fact",
+            "text": "The beaked costume is described in the 1600s, not 1348.",
+            "source": "British Library, 'Medieval medicine and the plague doctor'",
+            "at_word": 12,
+            "x": 0.03,
+            "y": 0.68,
+            "w": 640
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The beaked plague-doctor costume dates from the 17th century",
+          "kind": "fact",
+          "source": "British Library, 'Medieval medicine and the plague doctor'"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 8
+        }
+      ],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s07",
+      "beat": "climax",
+      "narration": "By July the plague is spreading inland. Village by village, the news arrives before the disease does.",
+      "visual": {
+        "background": {
+          "type": "map",
+          "seed": 5
+        },
+        "props": [
+          {
+            "type": "germ",
+            "x": 0.42,
+            "y": 0.78,
+            "scale": 0.9,
+            "at": 0.2
+          },
+          {
+            "type": "germ",
+            "x": 0.5,
+            "y": 0.66,
+            "scale": 0.8,
+            "at": 1.4
+          },
+          {
+            "type": "germ",
+            "x": 0.58,
+            "y": 0.55,
+            "scale": 0.8,
+            "at": 2.6
+          },
+          {
+            "type": "germ",
+            "x": 0.47,
+            "y": 0.42,
+            "scale": 0.8,
+            "at": 3.8
+          },
+          {
+            "type": "hut",
+            "x": 0.62,
+            "y": 0.62,
+            "scale": 0.25,
+            "smoke": false
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "Stan's village",
+            "x": 0.8,
+            "y": 0.45,
+            "to_x": 0.64,
+            "to_y": 0.55,
+            "at": 1.0
+          },
+          {
+            "type": "counter",
+            "label": "JULY",
+            "value": "· MONTH 5",
+            "corner": "tr",
+            "size": 46
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.1
+        }
+      },
+      "claims": [
+        {
+          "text": "Plague spread from Dorset across southern England through summer and autumn 1348",
+          "kind": "fact",
+          "source": "Rosemary Horrox (ed.), The Black Death (Manchester University Press, 1994)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at": 0.2
+        },
+        {
+          "name": "pop",
+          "at": 1.4
+        },
+        {
+          "name": "pop",
+          "at": 2.6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s07b",
+      "beat": "climax",
+      "narration": "It reaches Bristol in August, and London by the autumn. Wherever people travel, it travels too.",
+      "visual": {
+        "background": {
+          "type": "map",
+          "seed": 5
+        },
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.3,
+            "y": 0.62,
+            "text": "BRISTOL\nAUGUST",
+            "post": false,
+            "w": 300,
+            "h": 140,
+            "size": 40,
+            "at_word": 2
+          },
+          {
+            "type": "sign",
+            "x": 0.72,
+            "y": 0.52,
+            "text": "LONDON\nAUTUMN",
+            "post": false,
+            "w": 300,
+            "h": 140,
+            "size": 40,
+            "at_word": 7
+          },
+          {
+            "type": "arrow",
+            "x": 0.4,
+            "y": 0.6,
+            "dx": 330,
+            "dy": -90,
+            "at_word": 7,
+            "color": "red"
+          },
+          {
+            "type": "cart",
+            "x": 0.55,
+            "y": 0.86,
+            "scale": 0.6,
+            "moving": true,
+            "move": [
+              [
+                0,
+                0.3,
+                0.86
+              ],
+              [
+                5.5,
+                0.8,
+                0.86
+              ]
+            ]
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Plague reached Bristol by August 1348 and London by autumn 1348",
+          "kind": "fact",
+          "source": "Rosemary Horrox (ed.), The Black Death (Manchester University Press, 1994); Ole J. Benedictow, The Black Death 1346-1353 (Boydell, 2004)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 2
+        },
+        {
+          "name": "pop",
+          "at_word": 7
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s08",
+      "beat": "climax",
+      "narration": "The symptoms are terrifying: fever, and painful swellings called buboes in the armpits or groin.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "summer",
+          "dark": 0.35,
+          "hearth_x": 0.8
+        },
+        "props": [
+          {
+            "type": "bed",
+            "x": 0.45,
+            "y": 0.9,
+            "scale": 1.3
+          }
+        ],
+        "cast": [
+          {
+            "id": "neighbor",
+            "x": 0.48,
+            "y": 0.87,
+            "scale": 1.25,
+            "action": "lie",
+            "expression": "sick",
+            "preset": "peasant"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "checklist",
+            "x": 0.6,
+            "y": 0.2,
+            "title": "SYMPTOMS",
+            "items": [
+              [
+                "high fever",
+                null
+              ],
+              [
+                "swollen 'buboes'",
+                null
+              ],
+              [
+                "exhaustion",
+                null
+              ]
+            ],
+            "times": [
+              1.5,
+              3.0,
+              4.5
+            ],
+            "size": 50
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Bubonic plague causes fever and swollen lymph nodes (buboes) in groin, armpit or neck",
+          "kind": "fact",
+          "source": "CDC, 'Plague: symptoms and transmission'"
+        }
+      ],
+      "sfx": [],
+      "transition": "fade",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s09",
+      "beat": "climax",
+      "narration": "Many of the sick die within a week. Some recover. Nobody knows why.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "summer",
+          "dark": 0.45,
+          "hearth": false
+        },
+        "props": [
+          {
+            "type": "hourglass",
+            "x": 0.75,
+            "y": 0.8,
+            "period": 4
+          }
+        ],
+        "cast": [
+          {
+            "id": "maud",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "pray",
+            "expression": "crying",
+            "preset": "peasant_woman"
+          },
+          {
+            "id": "stan",
+            "x": 0.18,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "sad",
+            "expression": "sad"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Many bubonic plague victims died within about a week; some survived",
+          "kind": "fact",
+          "source": "Rosemary Horrox (ed.), The Black Death (Manchester University Press, 1994)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "clock",
+          "at": 0.5,
+          "gain_db": -8
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s10",
+      "beat": "climax",
+      "narration": "By autumn, the plague is in your village. Your neighbor goes first. Then the priest.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "autumn",
+          "time": "grey"
+        },
+        "props": [
+          {
+            "type": "cross",
+            "x": 0.62,
+            "y": 0.86,
+            "at_word": 9
+          },
+          {
+            "type": "cross",
+            "x": 0.75,
+            "y": 0.86,
+            "at_word": 12
+          },
+          {
+            "type": "bell",
+            "x": 0.85,
+            "y": 0.35,
+            "scale": 0.8
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "sad",
+            "expression": "crying"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "tint",
+            "color": [
+              0.2,
+              0.2,
+              0.3
+            ],
+            "alpha": 0.25
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Parish clergy, who visited the dying, suffered very high death rates",
+          "kind": "fact",
+          "source": "Rosemary Horrox (ed.), The Black Death (Manchester University Press, 1994)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 9,
+          "gain_db": -6
+        },
+        {
+          "name": "ding",
+          "at_word": 12,
+          "gain_db": -6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s14",
+      "beat": "climax",
+      "narration": "People try everything. Processions, prayers, bonfires, fleeing to the countryside. Nothing seems to work.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "autumn",
+          "time": "grey"
+        },
+        "props": [
+          {
+            "type": "fire",
+            "x": 0.8,
+            "y": 0.86,
+            "at_word": 5
+          }
+        ],
+        "cast": [
+          {
+            "id": "priest",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "walk",
+            "item": "candle",
+            "expression": "worried",
+            "path": [
+              [
+                0,
+                0.15,
+                0.84
+              ],
+              [
+                5,
+                0.45,
+                0.84
+              ]
+            ],
+            "preset": "priest"
+          },
+          {
+            "id": "p1",
+            "x": 0.1,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "pray",
+            "expression": "crying",
+            "color": [
+              0.3,
+              0.3,
+              0.35
+            ],
+            "preset": "peasant"
+          },
+          {
+            "id": "p2",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "run",
+            "expression": "scared",
+            "at_word": 7,
+            "path": [
+              [
+                2.5,
+                0.6,
+                0.84
+              ],
+              [
+                5.5,
+                1.1,
+                0.84
+              ]
+            ],
+            "preset": "peasant_woman"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Responses included religious processions, prayer and flight",
+          "kind": "fact",
+          "source": "Rosemary Horrox (ed.), The Black Death (Manchester University Press, 1994)"
+        }
+      ],
+      "sfx": [],
+      "transition": "fade",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s15",
+      "beat": "climax",
+      "narration": "Graveyards fill up so fast that new burial grounds are opened, like the one at East Smithfield in London.",
+      "visual": {
+        "background": {
+          "type": "church"
+        },
+        "props": [
+          {
+            "type": "grave",
+            "x": 0.2,
+            "y": 0.92,
+            "scale": 0.8
+          },
+          {
+            "type": "grave",
+            "x": 0.35,
+            "y": 0.9,
+            "scale": 0.8,
+            "at": 0.6
+          },
+          {
+            "type": "grave",
+            "x": 0.5,
+            "y": 0.92,
+            "scale": 0.8,
+            "at": 1.2
+          },
+          {
+            "type": "grave",
+            "x": 0.65,
+            "y": 0.9,
+            "scale": 0.8,
+            "at": 1.8
+          },
+          {
+            "type": "grave",
+            "x": 0.8,
+            "y": 0.92,
+            "scale": 0.8,
+            "at": 2.4
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "East Smithfield, London: an emergency cemetery opened for plague victims in 1348-49.",
+            "source": "Museum of London Archaeology",
+            "at_word": 13
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "East Smithfield was an emergency Black Death cemetery in London (1348-49)",
+          "kind": "fact",
+          "source": "Museum of London Archaeology"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at": 0.6
+        },
+        {
+          "name": "pop",
+          "at": 1.2
+        },
+        {
+          "name": "pop",
+          "at": 1.8
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s11",
+      "beat": "climax",
+      "narration": "Across England, somewhere between a third and a half of the population dies. Possibly more.",
+      "visual": {
+        "background": {
+          "type": "paper",
+          "lines": true,
+          "floor": false
+        },
+        "overlays": [
+          {
+            "type": "people",
+            "n": 10,
+            "k": 5,
+            "cols": 10,
+            "color": [
+              0.6,
+              0.6,
+              0.64
+            ],
+            "dim": "ink",
+            "reveal_at": 1.6,
+            "y": 0.6,
+            "caption": "Out of every 10 people, 3 to 5 died",
+            "fig_scale": 0.6
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Estimates of Black Death mortality in England range from about a third to a half or more; Benedictow argues for ~60%",
+          "kind": "estimate",
+          "source": "Rosemary Horrox (ed.), The Black Death (Manchester University Press, 1994); Ole J. Benedictow, The Black Death 1346-1353 (Boydell, 2004)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s12",
+      "beat": "climax",
+      "narration": "Whole families vanish. Some villages are simply abandoned.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "autumn",
+          "time": "dusk",
+          "n_clouds": 2
+        },
+        "props": [
+          {
+            "type": "grave",
+            "x": 0.3,
+            "y": 0.9,
+            "scale": 0.8
+          },
+          {
+            "type": "grave",
+            "x": 0.45,
+            "y": 0.92,
+            "scale": 0.8
+          },
+          {
+            "type": "grave",
+            "x": 0.6,
+            "y": 0.9,
+            "scale": 0.8
+          }
+        ],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.6
+          }
+        ],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [
+        {
+          "text": "Some settlements were deserted after the plague, though many 'lost villages' declined over a longer period",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "fade",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "s13",
+      "beat": "climax",
+      "narration": "And Stan? Stan gets lucky. Maud and Wat too. Nobody really knows why some survived.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "autumn"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "idle",
+            "expression": "sad",
+            "expressions": [
+              [
+                "w4",
+                "happy"
+              ]
+            ],
+            "actions": [
+              [
+                "w4",
+                "cheer"
+              ]
+            ]
+          },
+          {
+            "id": "maud",
+            "x": 0.55,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "idle",
+            "expression": "happy",
+            "at_word": 5,
+            "enter": "pop",
+            "preset": "peasant_woman"
+          },
+          {
+            "id": "wat",
+            "x": 0.68,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "jump",
+            "expression": "grin",
+            "at_word": 7,
+            "enter": "pop",
+            "preset": "child"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "meter",
+            "label": "STAN'S SURVIVAL ODDS",
+            "from": 0.35,
+            "to": 0.8,
+            "at": 0.6,
+            "y": 0.11,
+            "w": 640
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Stan's family surviving is fictional",
+          "kind": "fiction",
+          "source": "Narrative device"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 5
+        },
+        {
+          "name": "pop",
+          "at_word": 7
+        }
+      ],
+      "transition": "fade",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "a01",
+      "beat": "development",
+      "narration": "Now it's harvest time, the most important weeks of the year. But half the workers are gone.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "autumn",
+          "crops": 1.0
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "swing",
+            "item": "sickle",
+            "expression": "tired"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "SEPTEMBER",
+            "value": "· MONTH 7",
+            "corner": "tr",
+            "size": 46
+          },
+          {
+            "type": "timeline",
+            "at": 2,
+            "from_at": 1,
+            "y": 0.1
+          }
+        ],
+        "camera": {
+          "move": "pan_right",
+          "amount": 140
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12,
+      "chapter": "Autumn: The Harvest Nobody Can Bring In"
+    },
+    {
+      "id": "a02",
+      "beat": "development",
+      "narration": "Chroniclers describe crops rotting in the fields and animals wandering with nobody to look after them.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "autumn",
+          "crops": 1.0,
+          "time": "grey"
+        },
+        "props": [
+          {
+            "type": "sheep",
+            "x": 0.3,
+            "y": 0.92,
+            "move": [
+              [
+                0,
+                0.2,
+                0.92
+              ],
+              [
+                5,
+                0.4,
+                0.92
+              ]
+            ]
+          },
+          {
+            "type": "cow",
+            "x": 0.7,
+            "y": 0.9,
+            "walk": true,
+            "move": [
+              [
+                0,
+                0.85,
+                0.9
+              ],
+              [
+                5,
+                0.65,
+                0.9
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "quote",
+            "text": "Sheep and cattle strayed through the fields and among the crops, and there was no one to drive them off.",
+            "by": "Henry Knighton, chronicler (paraphrased)",
+            "y": 0.3,
+            "size": 50,
+            "w": 1350
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Henry Knighton described livestock wandering untended after the plague",
+          "kind": "fact",
+          "source": "Rosemary Horrox (ed.), The Black Death (Manchester University Press, 1994)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "a03",
+      "beat": "development",
+      "narration": "Which means, for the first time in your life, you have something the lord desperately needs.",
+      "visual": {
+        "background": {
+          "type": "manor"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "idle",
+            "expression": "smug"
+          },
+          {
+            "id": "lord",
+            "x": 0.62,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "cower",
+            "expression": "worried",
+            "preset": "lord"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "!",
+            "x": 0.3,
+            "y": 0.4,
+            "at_word": 10
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 10
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "a04",
+      "beat": "development",
+      "narration": "Your labor. Workers are suddenly rare, so they start demanding higher wages.",
+      "visual": {
+        "background": {
+          "type": "manor"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "point",
+            "expression": "determined",
+            "say": [
+              {
+                "text": "Double pay. Or do it yourself.",
+                "at": 1.2
+              }
+            ]
+          },
+          {
+            "id": "lord",
+            "x": 0.66,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "angry",
+            "expression": "angry",
+            "preset": "lord"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "WAGES:",
+            "from": 1,
+            "to": 3,
+            "suffix": "d / day",
+            "time": 1.6,
+            "icon": "coin",
+            "at_word": 8
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "After the Black Death labor shortages pushed wages sharply upward",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 8
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "a05",
+      "beat": "development",
+      "narration": "The government panics. In 1349, a new law tries to freeze wages at pre-plague levels.",
+      "visual": {
+        "background": {
+          "type": "castle"
+        },
+        "cast": [
+          {
+            "id": "king",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "angry",
+            "expression": "angry",
+            "item": "scroll",
+            "preset": "king"
+          }
+        ],
+        "props": [
+          {
+            "type": "scroll",
+            "x": 0.72,
+            "y": 0.86,
+            "lines": [
+              "ORDINANCE OF",
+              "LABOURERS, 1349",
+              "",
+              "No raises.",
+              "No moving.",
+              "Back to work!"
+            ],
+            "w": 460,
+            "h": 540,
+            "size": 44,
+            "at_word": 7
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "The Ordinance of Labourers (1349) and Statute of Labourers (1351) tried to cap wages.",
+            "source": "Ordinance of Labourers (1349) & Statute of Labourers (1351), UK Parliament",
+            "at": 2.0,
+            "x": 0.03,
+            "y": 0.04
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The Ordinance of Labourers (1349) and Statute of Labourers (1351) attempted to fix wages at pre-plague levels",
+          "kind": "fact",
+          "source": "Ordinance of Labourers (1349) & Statute of Labourers (1351), UK Parliament"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "a06",
+      "beat": "development",
+      "narration": "It doesn't really work. Lords quietly break it themselves, because otherwise their crops rot.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "autumn",
+          "crops": 1.0
+        },
+        "cast": [
+          {
+            "id": "lord",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "hold",
+            "item": "bag",
+            "expression": "worried",
+            "preset": "lord"
+          },
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "count",
+            "expression": "happy"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "money",
+            "text": "+3d",
+            "x": 0.32,
+            "y": 0.4,
+            "at": 1.4
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Wage laws were widely evaded as employers competed for scarce labor",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 1.4
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "a08",
+      "beat": "development",
+      "narration": "There's also empty land now. Holdings whose families died are suddenly available, and some survivors grab them.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "props": [
+          {
+            "type": "strips",
+            "x": 0.5,
+            "y": 0.8,
+            "mine": [
+              1,
+              2,
+              5,
+              6,
+              10
+            ],
+            "reveal": 2.5,
+            "scale": 1.0
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.12,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "cheer",
+            "expression": "grin",
+            "at": 2.5,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "more strips for Stan!",
+            "x": 0.5,
+            "y": 0.13,
+            "to_x": 0.45,
+            "to_y": 0.35,
+            "at": 2.8
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Vacant holdings after the plague were taken up by survivors, often on better terms",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at": 2.5
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "a09",
+      "beat": "development",
+      "narration": "It's a strange feeling. The worst year in memory is also the first time peasants hold some real power.",
+      "visual": {
+        "background": {
+          "type": "field",
+          "season": "autumn",
+          "crops": 0.0,
+          "time": "dusk"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.45,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "think",
+            "expression": "thinking"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "focus": "stan"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "fade",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "a07",
+      "beat": "development",
+      "narration": "Before winter, you thresh the grain, store it, and pay your tithe. Again.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "autumn"
+        },
+        "props": [
+          {
+            "type": "sack",
+            "x": 0.55,
+            "y": 0.86,
+            "label": "GRAIN"
+          },
+          {
+            "type": "sack",
+            "x": 0.65,
+            "y": 0.86,
+            "label": "GRAIN",
+            "at": 0.8
+          },
+          {
+            "type": "barrel",
+            "x": 0.75,
+            "y": 0.86,
+            "at": 1.6
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "dig",
+            "item": "club",
+            "expression": "determined"
+          },
+          {
+            "id": "priest",
+            "x": 0.88,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "at_word": 10,
+            "enter": "slide_left",
+            "action": "hold",
+            "item": "bag",
+            "expression": "happy",
+            "preset": "priest"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "money",
+            "text": "-10%",
+            "x": 0.85,
+            "y": 0.4,
+            "at_word": 11
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "dig",
+          "at": 0.3
+        },
+        {
+          "name": "dig",
+          "at": 1.0
+        },
+        {
+          "name": "whoosh",
+          "at_word": 10
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "w01",
+      "beat": "development",
+      "narration": "November is slaughter month. Animals you can't feed through winter are killed, and their meat is salted.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "winter",
+          "snowfall": false
+        },
+        "props": [
+          {
+            "type": "barrel",
+            "x": 0.6,
+            "y": 0.86
+          },
+          {
+            "type": "pig",
+            "x": 0.8,
+            "y": 0.88
+          },
+          {
+            "type": "sack",
+            "x": 0.45,
+            "y": 0.86,
+            "label": "SALT",
+            "color": "white",
+            "at_word": 15
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "idle",
+            "expression": "neutral"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "label": "NOVEMBER",
+            "value": "· MONTH 9",
+            "corner": "tr",
+            "size": 46
+          },
+          {
+            "type": "timeline",
+            "at": 3,
+            "from_at": 2,
+            "y": 0.1
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Livestock were slaughtered in late autumn and the meat salted or smoked for winter",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12,
+      "chapter": "Winter: Salt, Smoke and Christmas"
+    },
+    {
+      "id": "w02",
+      "beat": "development",
+      "narration": "Winter is long, dark and cold. The whole family sleeps close together by the fire.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "winter",
+          "hearth_x": 0.5,
+          "dark": 0.2
+        },
+        "props": [
+          {
+            "type": "bed",
+            "x": 0.3,
+            "y": 0.9,
+            "scale": 1.4
+          },
+          {
+            "type": "icon",
+            "icon": "z",
+            "x": 0.3,
+            "y": 0.68
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.24,
+            "y": 0.87,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "sleep",
+            "expression": "sleepy"
+          },
+          {
+            "id": "maud",
+            "x": 0.36,
+            "y": 0.87,
+            "scale": 1.25,
+            "action": "sleep",
+            "expression": "sleepy",
+            "preset": "peasant_woman"
+          },
+          {
+            "id": "wat",
+            "x": 0.75,
+            "y": 0.84,
+            "scale": 1.1,
+            "action": "shiver",
+            "expression": "scared",
+            "preset": "child"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at": 0.2,
+          "gain_db": -12
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "w03",
+      "beat": "development",
+      "narration": "But then comes the best part of the year: Christmas. Twelve whole days of it.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "winter"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "cheer",
+            "expression": "grin"
+          },
+          {
+            "id": "wat",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "jump",
+            "expression": "grin",
+            "preset": "child"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "12 DAYS",
+              "OF CHRISTMAS"
+            ],
+            "colors": [
+              "red",
+              "green"
+            ],
+            "y": 0.15,
+            "at_word": 11
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The twelve days of Christmas were a major holiday period",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 11
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "w04",
+      "beat": "development",
+      "narration": "Work on the lord's land stops, and on many manors, the lord even provides a feast for his tenants.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "winter",
+          "hearth_x": 0.85
+        },
+        "props": [
+          {
+            "type": "table",
+            "x": 0.5,
+            "y": 0.9,
+            "w": 720,
+            "items": [
+              "plate",
+              "bread",
+              "mug",
+              "plate"
+            ],
+            "item_scale": 0.9
+          }
+        ],
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "eat",
+            "expression": "happy"
+          },
+          {
+            "id": "maud",
+            "x": 0.42,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "laugh",
+            "expression": "laughing",
+            "preset": "peasant_woman"
+          },
+          {
+            "id": "lord",
+            "x": 0.7,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "drink",
+            "item": "mug",
+            "expression": "happy",
+            "preset": "lord"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "On many manors labor services were suspended at Christmas and lords provided a feast (sometimes the tenants contributed food)",
+          "kind": "fact",
+          "source": "H. S. Bennett, Life on the English Manor (Cambridge, 1937)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "w05",
+      "beat": "development",
+      "narration": "For a few days, there's meat, ale, and music. And then, slowly, the light returns.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "winter",
+          "time": "dusk"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "dance",
+            "expression": "laughing"
+          },
+          {
+            "id": "maud",
+            "x": 0.55,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "dance",
+            "expression": "happy",
+            "preset": "peasant_woman"
+          }
+        ],
+        "props": [
+          {
+            "type": "fire",
+            "x": 0.75,
+            "y": 0.86
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at": 0.5
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "w06",
+      "beat": "development",
+      "narration": "The rest of winter is quiet work indoors: mending tools, spinning, telling stories by the fire, and waiting for spring.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "winter",
+          "hearth_x": 0.5
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "sit",
+            "item": "hammer",
+            "expression": "neutral"
+          },
+          {
+            "id": "maud",
+            "x": 0.72,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "sit_talk",
+            "expression": "happy",
+            "preset": "peasant_woman"
+          },
+          {
+            "id": "wat",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.25,
+            "facing": -1,
+            "action": "sit",
+            "expression": "grin",
+            "preset": "child"
+          }
+        ],
+        "props": [
+          {
+            "type": "stool",
+            "x": 0.25,
+            "y": 0.84
+          },
+          {
+            "type": "stool",
+            "x": 0.72,
+            "y": 0.84
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Winter was used for indoor work such as repairs and spinning",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "fade",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "f01",
+      "beat": "ending",
+      "narration": "March twenty-fourth, 1349. The last day of your year. Let's check the score.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "spring"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "idle",
+            "expression": "happy"
+          },
+          {
+            "id": "maud",
+            "x": 0.48,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "idle",
+            "expression": "happy",
+            "preset": "peasant_woman"
+          },
+          {
+            "id": "wat",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "idle",
+            "expression": "grin",
+            "preset": "child"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "MARCH 24, 1349",
+            "y": 0.15,
+            "at_word": 0
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "wipe",
+      "emphasis": [],
+      "pause_after": 0.12,
+      "chapter": "Did You Survive?"
+    },
+    {
+      "id": "f02",
+      "beat": "ending",
+      "narration": "You survived the work, the fees, the pottage, the winter, and the deadliest pandemic in European history.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.2,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "point",
+            "expression": "happy",
+            "action_params": {
+              "height": 0.2
+            }
+          }
+        ],
+        "overlays": [
+          {
+            "type": "checklist",
+            "x": 0.42,
+            "y": 0.18,
+            "items": [
+              [
+                "the work",
+                true
+              ],
+              [
+                "the fees",
+                true
+              ],
+              [
+                "the pottage",
+                true
+              ],
+              [
+                "the winter",
+                true
+              ],
+              [
+                "the Black Death",
+                true
+              ]
+            ],
+            "times": [
+              0.8,
+              1.6,
+              2.4,
+              3.3,
+              4.6
+            ],
+            "size": 56
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "The Black Death is considered the deadliest pandemic in recorded European history",
+          "kind": "fact",
+          "source": "Ole J. Benedictow, The Black Death 1346-1353 (Boydell, 2004)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 0.8
+        },
+        {
+          "name": "ding",
+          "at": 1.6
+        },
+        {
+          "name": "ding",
+          "at": 2.4
+        },
+        {
+          "name": "ding",
+          "at": 3.3
+        },
+        {
+          "name": "ding",
+          "at": 4.6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "f03",
+      "beat": "ending",
+      "narration": "And here's the twist. Your world is about to change. With so few workers left, peasants start to push back.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "spring"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "angry",
+            "expression": "determined"
+          },
+          {
+            "id": "p1",
+            "x": 0.45,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "angry",
+            "expression": "determined",
+            "preset": "peasant"
+          },
+          {
+            "id": "p2",
+            "x": 0.6,
+            "y": 0.84,
+            "scale": 1.25,
+            "action": "angry",
+            "expression": "angry",
+            "item": "pitchfork",
+            "preset": "peasant"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Post-plague labor scarcity strengthened peasants' bargaining position",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "f04",
+      "beat": "ending",
+      "narration": "In 1381, they rise up in the Peasants' Revolt. Within a few generations, serfdom in England fades away.",
+      "visual": {
+        "background": {
+          "type": "castle",
+          "time": "dusk"
+        },
+        "props": [
+          {
+            "type": "crowd",
+            "x": 0.4,
+            "y": 0.92,
+            "n": 18,
+            "cols": 9,
+            "action": "angry",
+            "gap": 80,
+            "fig_scale": 0.45,
+            "color": "ink",
+            "outfit": "tunic"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "1381: THE PEASANTS' REVOLT",
+            "y": 0.15,
+            "at_word": 1
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "The Peasants' Revolt took place in 1381",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        },
+        {
+          "text": "Villeinage largely disappeared in England by the 1500s",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at_word": 1,
+          "gain_db": -6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "f05",
+      "beat": "ending",
+      "narration": "So, would you have survived 1348? And what's the first modern thing you'd miss?",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "shrug",
+            "expression": "thinking"
+          }
+        ],
+        "props": [
+          {
+            "type": "icon",
+            "icon": "?",
+            "x": 0.62,
+            "y": 0.4,
+            "at_word": 4
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "focus": "stan"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.12
+    },
+    {
+      "id": "f06",
+      "beat": "ending",
+      "narration": "Tell me in the comments. And if you enjoyed surviving with Stan, subscribe. Next time, we go somewhere even worse.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.35,
+            "y": 0.84,
+            "scale": 1.25,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "wave",
+            "expression": "grin",
+            "actions": [
+              [
+                "w10",
+                "point"
+              ]
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "board",
+            "x": 0.7,
+            "y": 0.45,
+            "text": "SUBSCRIBE",
+            "color": "red",
+            "text_color": "white",
+            "w": 520,
+            "h": 150,
+            "size": 78,
+            "at_word": 12,
+            "loop": "pulse"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "text": "SEE YOU NEXT TIME!",
+            "y": 0.15,
+            "at_word": 15
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 12
+        },
+        {
+          "name": "sparkle",
+          "at_word": 15
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.8
+    }
+  ],
+  "metadata": {
+    "title": "Could You Survive a Year as a Medieval Peasant? (1348)",
+    "description_intro": "You wake up on March 25th, 1348 — New Year's Day in medieval England — as Stan, an unfree peasant on a manor in Dorset. Your mission: survive one year. You'll deal with a lord who owns your labor, the tithe, endless pottage, the harvest… and the Black Death, which lands in England that very summer.\n\nA stickman history story with real facts and sources.",
+    "hashtags": [
+      "#history",
+      "#medieval",
+      "#stickman"
+    ],
+    "tags": [
+      "medieval peasant",
+      "black death",
+      "1348",
+      "middle ages",
+      "medieval history",
+      "what if",
+      "stickman",
+      "stickman animation",
+      "history animated",
+      "serfdom",
+      "feudalism",
+      "plague",
+      "could you survive",
+      "medieval life",
+      "peasant life",
+      "english history",
+      "animated history"
+    ],
+    "pinned_comment": "Would you have survived 1348? 🤔 And what's the first modern thing you'd miss? Mine is definitely not-pottage. 👇",
+    "chapter_moods": [
+      "medieval",
+      "calm",
+      "curious",
+      "medieval",
+      "calm",
+      "somber",
+      "curious",
+      "calm",
+      "medieval"
+    ],
+    "intro_chapter": "Waking Up in 1348",
+    "thumbnail": {
+      "visual": {
+        "background": {
+          "type": "village",
+          "season": "autumn",
+          "time": "dusk"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "x": 0.74,
+            "y": 0.92,
+            "scale": 1.9,
+            "action": "cower",
+            "expression": "scared",
+            "facing": -1
+          }
+        ],
+        "props": [
+          {
+            "type": "rat",
+            "x": 0.52,
+            "y": 0.96,
+            "scale": 1.8,
+            "enter": "none"
+          },
+          {
+            "type": "germ",
+            "x": 0.9,
+            "y": 0.3,
+            "scale": 1.5,
+            "enter": "none"
+          },
+          {
+            "type": "cross",
+            "x": 0.55,
+            "y": 0.84,
+            "scale": 0.9,
+            "enter": "none"
+          }
+        ]
+      },
+      "t": 1.0,
+      "lines": [
+        "SURVIVE 1 YEAR",
+        "AS A PEASANT"
+      ],
+      "colors": [
+        "white",
+        "yellow"
+      ],
+      "badge": "1348 = PLAGUE",
+      "badge_color": "red",
+      "size": 104
+    },
+    "thumbnail_alts": [
+      {
+        "visual": {
+          "background": {
+            "type": "interior",
+            "season": "spring",
+            "hearth_x": 0.8
+          },
+          "cast": [
+            {
+              "id": "stan",
+              "outfit": "tunic",
+              "outfit_color": [
+                0.55,
+                0.42,
+                0.3
+              ],
+              "x": 0.7,
+              "y": 0.95,
+              "scale": 1.9,
+              "action": "eat",
+              "expression": "disgusted",
+              "facing": -1
+            }
+          ],
+          "props": [
+            {
+              "type": "pot",
+              "x": 0.86,
+              "y": 0.95,
+              "scale": 1.4,
+              "enter": "none"
+            }
+          ]
+        },
+        "t": 0.8,
+        "lines": [
+          "POTTAGE.",
+          "EVERY. DAY."
+        ],
+        "colors": [
+          "white",
+          "yellow"
+        ],
+        "badge": "1 YEAR IN 1348",
+        "badge_color": "teal",
+        "size": 120
+      }
+    ]
+  }
+}
