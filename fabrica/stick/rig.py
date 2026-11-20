@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 
 import cairo
 
-from ..visuals.draw import clamp, ease_io, ease_out, lerp, noise1
+from ..visuals.draw import clamp, ease_back, ease_io, ease_out, lerp, noise1
 from .style import INK, LW, P, c, circ, ink_fill, line, poly, rrect, shade, stroke
 
 # body proportions (px at scale 1)
