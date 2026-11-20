@@ -13,6 +13,9 @@ CALENDARIO = {  # slug -> fecha y hora de publicación (hora de España)
     "ceniza-de-volcan": "2026-11-20T18:30",
     "agua-helada-del-titanic": "2026-11-21T18:30",
     "sin-casco-en-el-espacio": "2026-11-22T18:30",
+    "everest-sin-oxigeno": "2026-11-23T18:30",
+    "fosa-de-las-marianas": "2026-11-24T18:30",
+    "aguantar-la-respiracion": "2026-11-25T18:30",
 }
 
 assets = json.loads(Path(sys.argv[1]).read_text()) if len(sys.argv) > 1 else {}

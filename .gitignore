@@ -10,3 +10,4 @@ secrets/
 data/*.sqlite
 data/**/*.sqlite
 panel/_en_upload/
+panel/_es_upload/
