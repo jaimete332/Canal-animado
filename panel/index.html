@@ -1,0 +1,285 @@
+<title>Cola de publicación · Hipotéticos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Cola de publicación: una tarjeta por Short, pendientes primero; la tipografía y los colores son los del canal. */
+:root {
+  --bg: #EEF0F5; --surface: #FFFFFF; --ink: #19162B; --muted: #5C5874; --line: #D9D7E4;
+  --brand: #FFD23F; --brand-ink: #19162B; --red: #D8352B; --ok: #157F55; --ok-bg: #DDF3E8;
+  --chip: #E7E5F0; --shadow: 0 1px 2px rgba(25,22,43,.06), 0 6px 18px rgba(25,22,43,.06);
+  --display: "Lilita One", "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #13111E; --surface: #1E1B2E; --ink: #F1EFF8; --muted: #A9A4C2; --line: #332F48;
+  --brand: #FFD23F; --brand-ink: #19162B; --red: #FF6B5C; --ok: #45D69A; --ok-bg: #173A2C;
+  --chip: #2A2640; --shadow: 0 1px 2px rgba(0,0,0,.3); color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #13111E; --surface: #1E1B2E; --ink: #F1EFF8; --muted: #A9A4C2; --line: #332F48;
+  --brand: #FFD23F; --brand-ink: #19162B; --red: #FF6B5C; --ok: #45D69A; --ok-bg: #173A2C;
+  --chip: #2A2640; --shadow: 0 1px 2px rgba(0,0,0,.3); color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.45;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 760px; margin: 0 auto; padding-block: 28px 56px; display: grid; gap: 22px; }
+header { display: grid; gap: 14px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 6vw, 42px); line-height: 1.05; margin: 0; text-wrap: balance; }
+.progress { display: grid; gap: 8px; }
+.bar { height: 12px; border-radius: 99px; background: var(--chip); overflow: hidden; }
+.bar > i { display: block; height: 100%; width: 0; background: var(--brand); border-right: 3px solid var(--ink); border-radius: 99px; transition: width .4s ease; }
+.progress-line { display: flex; flex-wrap: wrap; gap: 4px 14px; justify-content: space-between; font-size: 14px; color: var(--muted); }
+.progress-line b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.note { font-size: 13px; color: var(--muted); background: var(--chip); border-radius: 10px; padding: 9px 12px; }
+.note[data-kind="warn"] { color: var(--ink); }
+
+.list { display: grid; gap: 14px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow);
+  display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 16px; padding: 14px; }
+.card.done { opacity: .62; }
+.card.done:hover, .card.done:focus-within { opacity: 1; }
+.thumb { position: relative; width: 132px; aspect-ratio: 9 / 16; max-width: 100%; border-radius: 10px; overflow: hidden;
+  background: var(--chip); border: 0; padding: 0; cursor: pointer; }
+.thumb img, .thumb video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb .play { position: absolute; inset: auto 8px 8px auto; width: 34px; height: 34px; border-radius: 50%;
+  background: var(--brand); border: 2px solid var(--brand-ink); display: grid; place-items: center; }
+.thumb .play::before { content: ""; margin-left: 3px; border-left: 11px solid var(--brand-ink); border-block: 7px solid transparent; }
+.thumb.playing .play { display: none; }
+.thumb .ph { position: absolute; inset: 0; display: grid; place-items: center; font-size: 12px; color: var(--muted); padding: 8px; text-align: center; }
+
+.body { display: grid; gap: 10px; align-content: start; min-width: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.chip { font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; border-radius: 99px; padding: 3px 9px; background: var(--chip); color: var(--ink); font-variant-numeric: tabular-nums; }
+.chip.next { background: var(--brand); color: var(--brand-ink); }
+.chip.ok { background: var(--ok-bg); color: var(--ok); }
+.chip.late { background: transparent; color: var(--red); border: 1.5px solid var(--red); }
+h2 { font-family: var(--display); font-weight: 400; font-size: 21px; line-height: 1.15; margin: 0; overflow-wrap: anywhere; }
+.sub { font-size: 13px; color: var(--muted); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { font: 600 14px/1 var(--body); border-radius: 10px; padding: 10px 13px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; display: inline-flex; gap: 7px; align-items: center; }
+.btn:hover { border-color: var(--ink); }
+.btn.primary { background: var(--brand); color: var(--brand-ink); border-color: var(--brand-ink); }
+.btn[disabled] { opacity: .5; cursor: not-allowed; }
+.btn small { font-weight: 500; opacity: .75; font-variant-numeric: tabular-nums; }
+.btn:focus-visible, .thumb:focus-visible, summary:focus-visible, .toggle input:focus-visible + span { outline: 3px solid var(--ink); outline-offset: 2px; }
+
+.toggle { display: flex; gap: 10px; align-items: center; font-weight: 600; cursor: pointer; padding: 10px 12px; border-radius: 12px; border: 1.5px dashed var(--line); width: fit-content; max-width: 100%; }
+.toggle input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.toggle .box { width: 22px; height: 22px; border-radius: 6px; border: 2px solid var(--ink); display: grid; place-items: center; flex: none; background: var(--surface); }
+.toggle input:checked + .box { background: var(--ok); border-color: var(--ok); }
+.toggle input:checked + .box::after { content: ""; width: 6px; height: 11px; border: solid var(--surface); border-width: 0 3px 3px 0; transform: rotate(45deg) translate(-1px, -1px); }
+.toggle.saving { opacity: .6; }
+.toggle.locked { cursor: not-allowed; }
+
+details { border-top: 1px solid var(--line); padding-top: 8px; }
+summary { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--muted); padding: 4px 0; width: fit-content; }
+.fields { display: grid; gap: 10px; margin-top: 8px; }
+.field { display: grid; gap: 4px; min-width: 0; }
+.field-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.field-head span { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.copy { font: 600 12px/1 var(--body); border-radius: 8px; padding: 6px 9px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.copy.done { background: var(--ok-bg); color: var(--ok); border-color: transparent; }
+.field pre { margin: 0; font: 13px/1.45 var(--body); white-space: pre-wrap; overflow-wrap: anywhere; background: var(--bg); border-radius: 8px; padding: 9px 10px; max-height: 180px; overflow: auto; }
+
+.toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--bg); font-weight: 600; font-size: 14px; padding: 10px 16px; border-radius: 99px; max-width: calc(100% - 32px); }
+.empty { text-align: center; color: var(--muted); padding: 30px 0; }
+
+@media (max-width: 520px) {
+  .card { grid-template-columns: 96px minmax(0, 1fr); gap: 12px; padding: 12px; }
+  .thumb { width: 96px; }
+  h2 { font-size: 18px; }
+  .actions .btn { flex: 1 1 auto; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Hipotéticos · Shorts</div>
+    <h1>Cola de publicación</h1>
+    <div class="progress" aria-live="polite">
+      <div class="bar" role="progressbar" aria-label="Vídeos subidos" aria-valuemin="0" id="bar"><i></i></div>
+      <div class="progress-line"><span id="count">Cargando…</span><span id="next"></span></div>
+    </div>
+    <div class="note" id="note" hidden></div>
+  </header>
+  <main class="list" id="list"><p class="empty">Cargando vídeos…</p></main>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+const $ = (s, el = document) => el.querySelector(s);
+const state = { videos: [], uploaded: {}, saving: {}, dbReady: false, db: null, downloads: null, dbState: "loading" };
+const DAYS = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
+const MONTHS = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+
+function fmtDate(iso) {
+  if (!iso) return "Sin fecha";
+  const [d, t] = iso.split("T"); const [y, m, dd] = d.split("-").map(Number);
+  const wd = new Date(Date.UTC(y, m - 1, dd)).getUTCDay();
+  return `${DAYS[wd]} ${dd} ${MONTHS[m - 1]} · ${t}`;
+}
+function madridNow() {
+  try {
+    const p = new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Madrid", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date());
+    return p.replace(" ", "T");
+  } catch { return new Date().toISOString().slice(0, 16); }
+}
+function toast(msg) {
+  const t = $("#toast"); t.textContent = msg; t.hidden = false;
+  clearTimeout(toast._t); toast._t = setTimeout(() => (t.hidden = true), 2600);
+}
+function note(msg, kind) { const n = $("#note"); n.hidden = !msg; n.textContent = msg || ""; n.dataset.kind = kind || ""; }
+function plainText(v) {
+  return `TÍTULO\n${v.titulo}\n\nDESCRIPCIÓN\n${v.descripcion}\n\nETIQUETAS\n${v.etiquetas}\n\nCOMENTARIO FIJADO\n${v.comentario}\n\n` +
+    `AJUSTES\nCategoría: Educación · Idioma: español (España) · No es contenido para niños · Contenido alterado o sintético: Sí (voz sintética)\n`;
+}
+
+function ordered() {
+  return [...state.videos].sort((a, b) => (!!state.uploaded[a.slug] - !!state.uploaded[b.slug]) || (a.fecha || "").localeCompare(b.fecha || "") || a.orden - b.orden);
+}
+
+function renderHeader() {
+  const total = state.videos.length, done = state.videos.filter(v => state.uploaded[v.slug]).length;
+  const bar = $("#bar"); bar.setAttribute("aria-valuemax", total); bar.setAttribute("aria-valuenow", done);
+  $("#bar > i").style.width = total ? `${(done / total) * 100}%` : "0";
+  $("#count").innerHTML = state.dbState === "loading" ? "Cargando estado…" : `<b>${done} de ${total}</b> subidos`;
+  const next = ordered().find(v => !state.uploaded[v.slug]);
+  $("#next").textContent = next ? `Próximo: ${fmtDate(next.fecha)}` : (total ? "Todo subido" : "");
+}
+
+function card(v, nextSlug, now) {
+  const up = !!state.uploaded[v.slug];
+  const late = !up && v.fecha && v.fecha < now;
+  const el = document.createElement("article");
+  el.className = "card" + (up ? " done" : "");
+  el.dataset.slug = v.slug;
+  const chip = up ? `<span class="chip ok">Subido</span>` : late ? `<span class="chip late">Toca subirlo</span>` : v.slug === nextSlug ? `<span class="chip next">El próximo</span>` : "";
+  el.innerHTML = `
+    <button class="thumb" type="button" aria-label="Ver el vídeo">
+      ${v.miniatura ? `<img alt="" loading="lazy">` : `<span class="ph">Miniatura pendiente</span>`}
+      ${v.video ? `<span class="play" aria-hidden="true"></span>` : ""}
+    </button>
+    <div class="body">
+      <div class="meta"><span class="chip">${fmtDate(v.fecha)}</span>${chip}</div>
+      <h2></h2>
+      <div class="sub">${String(v.duracion).replace(".", ",")} s · vídeo vertical 1080×1920</div>
+      <div class="actions">
+        <button class="btn primary" data-dl="video" type="button" ${v.video ? "" : "disabled"}>Descargar vídeo <small>${String(v.video_mb).replace(".", ",")} MB</small></button>
+        <button class="btn" data-dl="miniatura" type="button" ${v.miniatura ? "" : "disabled"}>Miniatura</button>
+        <button class="btn" data-dl="textos" type="button">Textos .txt</button>
+      </div>
+      <label class="toggle${state.saving[v.slug] ? " saving" : ""}${state.db ? "" : " locked"}">
+        <input type="checkbox" id="subido-${v.slug}" ${up ? "checked" : ""} ${state.db ? "" : "disabled"}>
+        <span class="box" aria-hidden="true"></span>
+        <span>${up ? "Ya está subido" : "Marcar como subido"}</span>
+      </label>
+      <details>
+        <summary>Textos para copiar en YouTube</summary>
+        <div class="fields"></div>
+      </details>
+    </div>`;
+  $("h2", el).textContent = v.titulo;
+  if (v.miniatura) $(".thumb img", el).src = v.miniatura;
+  const fields = $(".fields", el);
+  [["Título", v.titulo], ["Descripción", v.descripcion], ["Etiquetas", v.etiquetas], ["Comentario fijado", v.comentario]].forEach(([label, text]) => {
+    const f = document.createElement("div"); f.className = "field";
+    f.innerHTML = `<div class="field-head"><span></span><button class="copy" type="button">Copiar</button></div><pre></pre>`;
+    $("span", f).textContent = label; $("pre", f).textContent = text;
+    $(".copy", f).addEventListener("click", e => copy(e.currentTarget, text, $("pre", f)));
+    fields.appendChild(f);
+  });
+  $(".thumb", el).addEventListener("click", e => play(e.currentTarget, v));
+  el.querySelectorAll("[data-dl]").forEach(b => b.addEventListener("click", () => download(b, v, b.dataset.dl)));
+  $("input", el).addEventListener("change", e => setUploaded(v.slug, e.target.checked));
+  return el;
+}
+
+function render() {
+  renderHeader();
+  const list = $("#list");
+  if (!state.videos.length) { list.innerHTML = `<p class="empty">No hay vídeos en la cola.</p>`; return; }
+  const open = new Set([...list.querySelectorAll("details[open]")].map(d => d.closest(".card").dataset.slug));
+  const now = madridNow();
+  const next = ordered().find(v => !state.uploaded[v.slug]);
+  list.replaceChildren(...ordered().map(v => card(v, next && next.slug, now)));
+  open.forEach(s => { const d = list.querySelector(`.card[data-slug="${s}"] details`); if (d) d.open = true; });
+}
+
+function play(btn, v) {
+  if (!v.video || btn.classList.contains("playing")) return;
+  const vid = document.createElement("video");
+  vid.src = v.video; vid.controls = true; vid.playsInline = true; vid.autoplay = true; if (v.miniatura) vid.poster = v.miniatura;
+  btn.replaceChildren(vid); btn.classList.add("playing");
+}
+
+async function copy(btn, text, pre) {
+  try { await navigator.clipboard.writeText(text); btn.textContent = "Copiado"; btn.classList.add("done"); setTimeout(() => { btn.textContent = "Copiar"; btn.classList.remove("done"); }, 1800); }
+  catch { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast("Texto seleccionado: cópialo con el menú del sistema"); }
+}
+
+async function download(btn, v, kind) {
+  if (!state.downloads) { toast("Las descargas no están disponibles en esta vista"); return; }
+  const label = btn.innerHTML; btn.disabled = true;
+  try {
+    let filename, data;
+    if (kind === "textos") { filename = `${v.slug}_textos.txt`; data = plainText(v); }
+    else {
+      btn.textContent = "Preparando…";
+      const url = kind === "video" ? v.video : v.miniatura;
+      const r = await fetch(url); if (!r.ok) throw { code: "fetch" };
+      data = await r.blob(); filename = kind === "video" ? `${String(v.orden).padStart(2, "0")}_${v.slug}.mp4` : `${v.slug}_miniatura.png`;
+    }
+    btn.textContent = "Confirma la descarga…";
+    await state.downloads.save({ filename, data });
+    toast(`Descargado: ${filename}`);
+  } catch (e) {
+    const c = e && e.code;
+    if (c === "declined") toast("Descarga cancelada");
+    else if (c === "rate_limited") toast("Ya hay una descarga esperando confirmación");
+    else if (c === "fetch") toast("No se pudo leer el archivo. Recarga la página e inténtalo de nuevo.");
+    else toast("No se pudo descargar en esta vista");
+  } finally { btn.disabled = false; btn.innerHTML = label; }
+}
+
+async function setUploaded(slug, value) {
+  if (!state.db) return;
+  const prev = !!state.uploaded[slug];
+  state.uploaded[slug] = value; state.saving[slug] = true; render();
+  try {
+    await state.db.doc(`estado/${slug}`).set(value ? { subido: true, fecha: new Date().toISOString() } : { subido: false });
+    toast(value ? "Marcado como subido" : "Marcado como pendiente");
+  } catch (e) {
+    state.uploaded[slug] = prev;
+    toast(e && e.code === "not_granted" ? "No tienes permiso para guardar cambios" : "No se pudo guardar. Inténtalo de nuevo.");
+  } finally { delete state.saving[slug]; render(); }
+}
+
+async function start() {
+  try {
+    const r = await fetch("videos.json"); state.videos = await r.json();
+  } catch { $("#list").innerHTML = `<p class="empty">No se pudo cargar la lista de vídeos. Recarga la página.</p>`; return; }
+  render();
+  const [db, downloads] = await Promise.all([
+    window.claude?.use ? window.claude.use("db").catch(() => null) : null,
+    window.claude?.use ? window.claude.use("downloads").catch(() => null) : null,
+  ]);
+  state.downloads = downloads;
+  if (!db) {
+    state.dbState = "off"; render();
+    note("Inicia sesión en claude.ai para ver y guardar qué vídeos has subido.", "warn"); return;
+  }
+  state.db = db; render();
+  const timer = setTimeout(() => note("No se puede leer el estado guardado todavía; puede que no esté al día."), 10000);
+  db.collection("estado").onSnapshot(snap => {
+    if (!snap.metadata.fromCache) { clearTimeout(timer); note(""); }
+    const up = {};
+    snap.docs.forEach(d => { const x = d.data(); if (x && x.subido) up[d.id] = true; });
+    Object.keys(state.saving).forEach(s => (up[s] = state.uploaded[s]));
+    state.uploaded = up; state.dbState = "ready"; render();
+  }, () => { clearTimeout(timer); state.dbState = "ready"; render(); note("Se perdió la conexión con el estado guardado. Recarga la página para verlo al día.", "warn"); });
+}
+start();
+</script>

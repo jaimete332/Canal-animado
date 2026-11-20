@@ -1,5 +1,7 @@
 # Vídeos listos para subir
 
+**Panel de descarga:** https://claude.ai/artifact/5bSfNZRkaBZDPC6LaHV1W8 (descarga vídeo, miniatura y textos, y marca lo que ya has subido).
+
 Cada carpeta es un Short, numerada en el orden de publicación. Dentro tienes:
 
 | Archivo | Para qué |
