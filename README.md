@@ -8,6 +8,10 @@ python -m fabrica make stories/centro-de-la-tierra.json   # vídeo desde un guio
 python -m fabrica auto                                     # todo automático (requiere API key de LLM)
 ```
 
+> **Segundo canal — Stickpothetical (inglés, vídeos largos de stickman 16:9):** misma fábrica con el perfil
+> `--channel stickman_en`. Ver [`docs/CANAL_EN.md`](docs/CANAL_EN.md).
+> `python -m fabrica --channel stickman_en make stories_en/medieval-peasant-1348.json`
+
 Resultado en `output/<slug>/final.mp4` (1080×1920, H.264 + AAC, 30 fps, ~60 s) con `metadata.json`
 (título, descripción, hashtags, comentario fijado), `thumbnail.png` e informe `qa/report.md`.
 

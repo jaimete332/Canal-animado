@@ -116,6 +116,12 @@ sc("i04", "hook", "Now, I'm going to be honest with you. Of all the years you co
     "cast": [stan(x=0.5, action="talk", expression="neutral", scale=1.4)],
     "camera": {"move": "push_in", "zoom_to": 1.18, "focus": "stan"}})
 
+sc("i04b", "hook", "Here's how this works: every chapter, Stan's survival odds go up or down, depending on what life throws at him.", {
+    "background": PAPER,
+    "cast": [stan(x=0.25, action="talk", expression="happy", actions=[["w12", "point_up"]])],
+    "overlays": [odds(0.9, 0.95, 0.5), {"type": "label", "text": "keep an eye on this", "x": 0.68, "y": 0.3,
+                                         "to_x": 0.62, "to_y": 0.13, "at": 1.2}]})
+
 sc("i05", "hook", "this is the worst one. By the end of it, a huge part of England will be dead.", {
     "background": {"type": "solid", "color": (0.25, 0.08, 0.1)},
     "props": [{"type": "skull", "x": 0.5, "y": 0.62, "scale": 2.0, "at_word": 2, "loop": "pulse"}],
@@ -183,8 +189,8 @@ sc("h05", "setup", "Also living with you: a pig, a few chickens, and, if you're 
               {"type": "chicken", "x": 0.48, "y": 0.92, "at_word": 8},
               {"type": "chicken", "x": 0.56, "y": 0.95, "at_word": 8, "flip": -1},
               {"type": "cow", "x": 0.78, "y": 0.92, "at_word": 14, "scale": 1.05}],
-    "cast": [stan(x=0.06, action="shrug", expression="smug", scale=1.1)],
-    "camera": {"move": "pan_right", "amount": 140}},
+    "cast": [stan(x=0.1, action="shrug", expression="smug", scale=1.1)],
+    "camera": {"move": "static"}},
     sfx=[{"name": "pop", "at_word": 5}, {"name": "pop", "at_word": 8}, {"name": "pop", "at_word": 14}])
 
 sc("h06", "setup", "In many longhouses, the animals lived at one end of the building. Their body heat kept everyone warm.", {
@@ -304,7 +310,7 @@ sc("o13", "setup", "Break the rules, and you'll end up in the manor court, where
     "cast": [lord(x=0.7, facing=-1, action="sit_talk", expression="angry"),
              reeve(x=0.52, facing=-1, action="hold", expression="neutral"),
              stan(x=0.25, action="cower", expression="worried")],
-    "props": [{"type": "table", "x": 0.68, "y": 0.86, "w": 420, "items": ["scroll"]}],
+    "props": [{"type": "table", "x": 0.68, "y": 0.86, "w": 420, "items": ["book"]}],
     "overlays": [{"type": "title", "text": "THE MANOR COURT", "y": 0.14, "at_word": 7}]},
     claims=[F("Manor courts, with juries of tenants, fined villagers for breaches of custom", SRC["bennett"])],
     transition="wipe")
@@ -447,10 +453,10 @@ sc("p08", "development", "Tomorrow? Pottage. The day after? You guessed it.", {
 
 sc("p09", "development", "Add dark bread made from rye or barley, and a little cheese, eggs, or bacon when you can get them.", {
     "background": PAPER,
-    "props": [{"type": "item", "item": "bread", "x": 0.25, "y": 0.6, "scale": 2.4, "at_word": 1},
-              {"type": "item", "item": "egg", "x": 0.45, "y": 0.6, "scale": 2.4, "at_word": 13},
-              {"type": "plate", "x": 0.65, "y": 0.62, "food": "meat", "scale": 1.6, "at_word": 15},
-              {"type": "icon", "icon": "?", "x": 0.82, "y": 0.6, "at_word": 17, "size": 90}]},
+    "props": [{"type": "item", "item": "bread", "x": 0.2, "y": 0.62, "scale": 4.5, "at": 0.2},
+              {"type": "item", "item": "egg", "x": 0.42, "y": 0.62, "scale": 4.5, "at_word": 13},
+              {"type": "plate", "x": 0.64, "y": 0.66, "food": "meat", "scale": 2.4, "at_word": 15},
+              {"type": "icon", "icon": "?", "x": 0.84, "y": 0.62, "at_word": 17, "size": 130}]},
     claims=[F("Bread from rye, barley or mixed grains, with some dairy, eggs and occasional bacon", SRC["dyer"])],
     sfx=[{"name": "pop", "at_word": 1}, {"name": "pop", "at_word": 13}, {"name": "pop", "at_word": 15}])
 
@@ -472,7 +478,7 @@ sc("p11", "development", "People did drink water too. But ale was safer, tastier
     claims=[F("Medieval people did drink water; ale was nonetheless a staple calorie source", SRC["mortimer"])])
 
 sc("p14", "development", "Maud works just as hard as you. She brews, spins wool, makes cheese, keeps the animals, and helps in the fields.", {
-    "background": hut("spring", hearth_x=0.82),
+    "background": hut("spring", hearth_x=0.82, window_x=0.08),
     "props": [{"type": "barrel", "x": 0.2, "y": 0.86, "at_word": 7}, {"type": "sheep", "x": 0.6, "y": 0.9,
                                                                        "at_word": 9, "scale": 0.8}],
     "cast": [maud(x=0.38, action="stir", expression="determined", actions=[["w13", "carry"]])],
@@ -505,10 +511,10 @@ sc("p16", "development", "Your clothes are simple: a wool tunic, linen underneat
     claims=[F("Peasants wore woollen outer garments over linen undergarments", SRC["mortimer"])])
 
 sc("p17", "development", "And then there's the hungry gap: late spring, when last year's food is running out, and the new crops aren't ready yet.", {
-    "background": hut("spring", hearth_x=0.7, dark=0.15),
-    "props": [{"type": "barrel", "x": 0.25, "y": 0.86}, {"type": "sack", "x": 0.4, "y": 0.86, "scale": 0.6,
-                                                          "label": ""}],
-    "cast": [stan(x=0.55, action="sad", expression="tired"), wat(x=0.7, action="idle", expression="sad")],
+    "background": hut("spring", hearth_x=0.88, dark=0.15),
+    "props": [{"type": "barrel", "x": 0.2, "y": 0.86}, {"type": "sack", "x": 0.32, "y": 0.86, "scale": 0.6,
+                                                         "label": ""}],
+    "cast": [stan(x=0.5, action="sad", expression="tired"), wat(x=0.66, action="idle", expression="sad")],
     "overlays": [{"type": "meter", "label": "FOOD STORES", "from": 0.4, "to": 0.08, "y": 0.12, "time": 3.0}]},
     claims=[F("Late spring/early summer was the leanest time before the new harvest", SRC["dyer"])])
 
@@ -609,7 +615,7 @@ sc("s04", "climax", "It's caused by a bacterium, Yersinia pestis, carried by fle
     "background": {"type": "solid", "color": (0.16, 0.2, 0.16)},
     "props": [{"type": "germ", "x": 0.25, "y": 0.6, "scale": 2.0},
               {"type": "rat", "x": 0.6, "y": 0.7, "scale": 2.0, "at_word": 11},
-              {"type": "fleas", "x": 0.6, "y": 0.55, "n": 9, "at_word": 8}],
+              {"type": "fleas", "x": 0.6, "y": 0.6, "n": 9, "at_word": 8, "scale": 2.5}],
     "overlays": [{"type": "label", "text": "Yersinia pestis", "x": 0.25, "y": 0.2, "to_x": 0.25, "to_y": 0.38,
                   "at_word": 5, "outline_color": "ink", "color": "white"},
                  {"type": "label", "text": "fleas", "x": 0.82, "y": 0.25, "to_x": 0.63, "to_y": 0.35, "at_word": 8,
@@ -683,6 +689,15 @@ sc("s09", "climax", "Many of the sick die within a week. Some recover. Nobody kn
     "camera": {"move": "push_in"}},
     claims=[F("Many bubonic plague victims died within about a week; some survived", SRC["horrox"])],
     sfx=[{"name": "clock", "at": 0.5, "gain_db": -8}])
+
+sc("s09b", "climax", "Stan's family stays home, prays, and waits. Every cough in the night sounds like a death sentence.", {
+    "background": hut("autumn", dark=0.5, hearth_x=0.5),
+    "cast": [stan(x=0.3, action="shiver", expression="scared"), maud(x=0.68, facing=-1, action="pray",
+                                                                      expression="worried"),
+             wat(x=0.8, facing=-1, action="cower", expression="scared")],
+    "overlays": [{"type": "vignette", "alpha": 0.6}, WHATIF],
+    "camera": {"move": "push_in", "zoom_to": 1.12}},
+    sfx=[{"name": "clock", "at": 0.3, "gain_db": -10}])
 
 sc("s10", "climax", "By autumn, the plague is in your village. Your neighbor goes first. Then the priest.", {
     "background": village("autumn", time="grey"),
@@ -794,6 +809,14 @@ sc("a05", "development", "The government panics. In 1349, a new law tries to fre
               "pre-plague levels", SRC["statute"])],
     transition="wipe")
 
+sc("a05b", "development", "On many manors, lords also start swapping your labor services for a simple money rent. Fewer days working his fields.", {
+    "background": {"type": "manor"},
+    "cast": [stan(x=0.3, action="hold", item="coin", expression="happy"),
+             lord(x=0.66, facing=-1, action="shrug", expression="worried")],
+    "overlays": [{"type": "checklist", "x": 0.55, "y": 0.18, "size": 50,
+                  "items": [["2-3 days of unpaid work", False], ["a cash rent instead", True]], "times": [1.5, 3.2]}]},
+    claims=[F("After the Black Death labor services were increasingly commuted to money rents", SRC["dyer"])])
+
 sc("a06", "development", "It doesn't really work. Lords quietly break it themselves, because otherwise their crops rot.", {
     "background": field("autumn", crops=1.0),
     "cast": [lord(x=0.6, facing=-1, action="hold", item="bag", expression="worried"),
@@ -843,9 +866,9 @@ sc("w01", "development", "November is slaughter month. Animals you can't feed th
 
 sc("w02", "development", "Winter is long, dark and cold. The whole family sleeps close together by the fire.", {
     "background": hut("winter", hearth_x=0.5, dark=0.2),
-    "props": [{"type": "bed", "x": 0.3, "y": 0.9, "scale": 1.4}, {"type": "icon", "icon": "z", "x": 0.3, "y": 0.68}],
-    "cast": [stan(x=0.24, y=0.87, action="sleep", expression="sleepy"),
-             maud(x=0.36, y=0.87, action="sleep", expression="sleepy"),
+    "props": [{"type": "bed", "x": 0.3, "y": 0.9, "scale": 1.7}, {"type": "icon", "icon": "z", "x": 0.3, "y": 0.66}],
+    "cast": [stan(x=0.4, y=0.88, action="sleep", expression="sleepy", scale=1.1),
+             maud(x=0.4, y=0.84, action="sleep", expression="sleepy", scale=1.1),
              cast("wat", "child", x=0.75, action="shiver", expression="scared", scale=1.1)],
     "camera": {"move": "push_in"}},
     sfx=[{"name": "sizzle", "at": 0.2, "gain_db": -12}])
@@ -906,6 +929,14 @@ sc("f02", "ending", "You survived the work, the fees, the pottage, the winter, a
     claims=[F("The Black Death is considered the deadliest pandemic in recorded European history", SRC["benedictow"])],
     sfx=[{"name": "ding", "at": 0.8}, {"name": "ding", "at": 1.6}, {"name": "ding", "at": 2.4},
          {"name": "ding", "at": 3.3}, {"name": "ding", "at": 4.6}])
+
+sc("f02b", "ending", "Final tally: a penny or two a day before the plague, and up to three pennies after. Around three hundred bowls of pottage. And one very lucky family.", {
+    "background": {"type": "chalkboard"},
+    "overlays": [{"type": "bars", "title": "Stan's year in numbers", "x": 0.3, "y": 0.32,
+                  "items": [["Wage before", 1.5, "grey", "1-2d/day"], ["Wage after", 3, "green", "up to 3d/day"],
+                            ["Pottage", 3.4, "wheat", "~300 bowls"]], "max": 3.6}]},
+    claims=[F("Unskilled daily wages of roughly 1-2d before 1348 rose substantially afterwards", SRC["dyer"],
+              "estimate")])
 
 sc("f03", "ending", "And here's the twist. Your world is about to change. With so few workers left, peasants start to push back.", {
     "background": village("spring"),

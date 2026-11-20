@@ -170,7 +170,7 @@ def o_people(ctx, s, age, dur, t):
     n, k = s.get("n", 10), s.get("k", 1)
     cols = s.get("cols", min(n, 10))
     rows = math.ceil(n / cols)
-    gx, gy = s.get("gap_x", 165), s.get("gap_y", 300)
+    gx, gy = s.get("gap_x", 175), s.get("gap_y", 330)
     x0 = s.get("x", 0.5) * W - (cols - 1) * gx / 2
     y0 = s.get("y", 0.62) * H - (rows - 1) * gy / 2
     for i in range(n):
@@ -181,7 +181,7 @@ def o_people(ctx, s, age, dur, t):
         hl = (i < k) if not s.get("from_end") else (i >= n - k)
         col_ = c(s.get("color", "red")) if hl and age > s.get("reveal_at", 0) else c(s.get("dim", (0.62, 0.62, 0.65)))
         look = Look(color=col_, seed=i, outfit=s.get("outfit"), outfit_color=s.get("outfit_color", "brown"))
-        Stickman(look).draw(ctx, Pose(), Placement(x0 + cc * gx, y0 + r * gy + 120, s.get("fig_scale", 0.72) * g, 1,
+        Stickman(look).draw(ctx, Pose(), Placement(x0 + cc * gx, y0 + r * gy + 120, s.get("fig_scale", 0.95) * g, 1,
                                                     "happy" if hl else "neutral"), t + i)
     if s.get("caption"):
         write_block(ctx, s["caption"], W / 2, s.get("caption_y", 0.12) * H, 64, W - 300, INK, MARKER,
@@ -278,7 +278,7 @@ def o_timeline(ctx, s, age, dur, t):
     if k <= 0.01:
         return
     y = s.get("y", 0.08) * H - (1 - k) * 150
-    w = s.get("w", 1300)
+    w = s.get("w", 1000)
     x0 = W / 2 - w / 2
     seg = w / len(items)
     cols = s.get("colors", ["green", "yellow", "orange", "blue"])

@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 GROUND = 0.84
 
 
-def cast(id, preset=None, x=0.5, y=GROUND, scale=1.25, **kw):
+def cast(id, preset=None, x=0.5, y=GROUND, scale=1.4, **kw):
     """One stickman in a scene. `preset` defaults to `id` (stan, peasant, lord, priest, knight...)."""
     d = {"id": id, "x": x, "y": y, "scale": scale, **kw}
     if preset:
@@ -34,7 +34,7 @@ class Story:
     def chapter(self, title):
         self._chapter = title
 
-    def sc(self, id, beat, narration, visual, claims=(), sfx=(), transition="cut", emphasis=(), pause=0.12):
+    def sc(self, id, beat, narration, visual, claims=(), sfx=(), transition="cut", emphasis=(), pause=0.25):
         self._n += 1
         sid = id or f"s{self._n:03d}"
         d = {"id": sid, "beat": beat, "narration": narration, "visual": visual, "claims": list(claims),

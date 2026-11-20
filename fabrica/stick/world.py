@@ -170,9 +170,9 @@ def bg_field(ctx, spec, t):
     sky(ctx, spec, t, gy)
     hills(ctx, spec, gy - 40)
     if spec.get("village"):
-        for i, x in enumerate((300, 520, 1450, 1640)):
+        for i, x in enumerate((180, 400, 1280, 1820)):
             hut(ctx, x, gy - 70, 0.45, spec, t, seed=i)
-        church(ctx, 1000, gy - 70, 0.5)
+        church(ctx, W * spec.get("church_x", 0.82), gy - 70, 0.5)
     if spec.get("castle"):
         castle(ctx, *px(*spec.get("castle_pos", (0.78, 0.0))) if False else (W * spec.get("castle_x", 0.78), gy - 90),
                spec.get("castle_scale", 0.6))
@@ -869,7 +869,9 @@ def p_table(ctx, p, t):
         ctx.save()
         n = len(p.get("items", []))
         ctx.translate((i - (n - 1) / 2) * (w / max(n, 1)) * 0.8, -112)
-        draw_prop(ctx, {"type": it, "x": 0, "y": 0, "scale": p.get("item_scale", 0.6)}, t, 10.0, absolute=False)
+        q = {"type": it} if it in PROPS else {"type": "item", "item": it}
+        q.update({"x": 0, "y": 0, "scale": p.get("item_scale", 0.6) * (1 if it in PROPS else 1.6)})
+        draw_prop(ctx, q, t, 10.0, absolute=False)
         ctx.restore()
 
 

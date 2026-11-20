@@ -44,7 +44,7 @@
             "id": "stan",
             "x": 0.48,
             "y": 0.86,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -99,7 +99,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "i02",
@@ -115,7 +115,7 @@
             "id": "stan",
             "x": 0.5,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -164,7 +164,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "i03",
@@ -191,7 +191,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -243,7 +243,7 @@
       ],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "i04",
@@ -279,7 +279,64 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
+    },
+    {
+      "id": "i04b",
+      "beat": "hook",
+      "narration": "Here's how this works: every chapter, Stan's survival odds go up or down, depending on what life throws at him.",
+      "visual": {
+        "background": {
+          "type": "paper"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.25,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "talk",
+            "expression": "happy",
+            "actions": [
+              [
+                "w12",
+                "point_up"
+              ]
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "meter",
+            "label": "STAN'S SURVIVAL ODDS",
+            "from": 0.9,
+            "to": 0.95,
+            "at": 0.5,
+            "y": 0.11,
+            "w": 640
+          },
+          {
+            "type": "label",
+            "text": "keep an eye on this",
+            "x": 0.68,
+            "y": 0.3,
+            "to_x": 0.62,
+            "to_y": 0.13,
+            "at": 1.2
+          }
+        ]
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
     },
     {
       "id": "i05",
@@ -338,7 +395,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "i06",
@@ -354,7 +411,7 @@
             "id": "stan",
             "x": 0.25,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -405,7 +462,7 @@
       "sfx": [],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "h01",
@@ -430,7 +487,7 @@
             "id": "stan",
             "x": 0.2,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -482,7 +539,7 @@
       "sfx": [],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12,
+      "pause_after": 0.25,
       "chapter": "Your New Home"
     },
     {
@@ -500,7 +557,7 @@
             "id": "stan",
             "x": 0.25,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -548,7 +605,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "h03",
@@ -565,7 +622,7 @@
             "id": "stan",
             "x": 0.35,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -622,7 +679,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "h04",
@@ -639,7 +696,7 @@
             "id": "stan",
             "x": 0.25,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -653,7 +710,7 @@
             "id": "maud",
             "x": 0.5,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "at": 1.4,
             "enter": "pop",
@@ -665,7 +722,7 @@
             "id": "wat",
             "x": 0.66,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "at": 2.6,
             "enter": "pop",
@@ -713,7 +770,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "h05",
@@ -757,7 +814,7 @@
         "cast": [
           {
             "id": "stan",
-            "x": 0.06,
+            "x": 0.1,
             "y": 0.84,
             "scale": 1.1,
             "outfit": "tunic",
@@ -771,8 +828,7 @@
           }
         ],
         "camera": {
-          "move": "pan_right",
-          "amount": 140
+          "move": "static"
         }
       },
       "claims": [],
@@ -792,7 +848,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "h06",
@@ -845,7 +901,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "h07",
@@ -862,7 +918,7 @@
             "id": "stan",
             "x": 0.4,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -907,7 +963,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o01",
@@ -923,7 +979,7 @@
             "id": "stan",
             "x": 0.35,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -973,7 +1029,7 @@
       ],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12,
+      "pause_after": 0.25,
       "chapter": "Who Owns You?"
     },
     {
@@ -990,7 +1046,7 @@
             "id": "stan",
             "x": 0.18,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -1004,7 +1060,7 @@
             "id": "lord",
             "x": 0.5,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "at_word": 6,
             "enter": "slide_left",
@@ -1047,7 +1103,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o03",
@@ -1063,7 +1119,7 @@
             "id": "stan",
             "x": 0.25,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -1095,7 +1151,7 @@
             "id": "lord",
             "x": 0.55,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "point",
             "expression": "angry",
@@ -1129,7 +1185,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o04",
@@ -1146,7 +1202,7 @@
             "id": "stan",
             "x": 0.4,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -1161,7 +1217,7 @@
             "id": "reeve",
             "x": 0.78,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "idle",
             "expression": "neutral",
@@ -1207,7 +1263,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o05",
@@ -1261,7 +1317,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o06",
@@ -1288,7 +1344,7 @@
             "id": "stan",
             "x": 0.25,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -1325,7 +1381,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o07",
@@ -1340,7 +1396,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -1355,7 +1411,7 @@
             "id": "lord",
             "x": 0.62,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "count",
             "expression": "happy",
@@ -1390,7 +1446,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o08",
@@ -1426,7 +1482,7 @@
             "id": "lord",
             "x": 0.75,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "walk",
             "path": [
@@ -1448,7 +1504,7 @@
             "id": "stan",
             "x": 0.2,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -1484,7 +1540,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o09",
@@ -1516,7 +1572,7 @@
             "id": "stan",
             "x": 0.25,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -1550,7 +1606,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o10",
@@ -1565,7 +1621,7 @@
             "id": "priest",
             "x": 0.65,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "hold",
             "item": "bag",
@@ -1576,7 +1632,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -1614,7 +1670,7 @@
       ],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o13",
@@ -1629,7 +1685,7 @@
             "id": "lord",
             "x": 0.7,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "sit_talk",
             "expression": "angry",
@@ -1639,7 +1695,7 @@
             "id": "reeve",
             "x": 0.52,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "hold",
             "expression": "neutral",
@@ -1649,7 +1705,7 @@
             "id": "stan",
             "x": 0.25,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -1667,7 +1723,7 @@
             "y": 0.86,
             "w": 420,
             "items": [
-              "scroll"
+              "book"
             ]
           }
         ],
@@ -1690,7 +1746,7 @@
       "sfx": [],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o14",
@@ -1735,7 +1791,7 @@
             "id": "stan",
             "x": 0.15,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -1771,7 +1827,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o15",
@@ -1787,7 +1843,7 @@
             "id": "thief",
             "x": 0.7,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "run",
             "expression": "scared",
             "item": "bag",
@@ -1809,7 +1865,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -1836,7 +1892,7 @@
             "id": "p1",
             "x": 0.1,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "run",
             "expression": "angry",
             "at": 2.0,
@@ -1884,7 +1940,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o11",
@@ -1940,7 +1996,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o16",
@@ -1986,7 +2042,7 @@
             "id": "stan",
             "x": 0.25,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -2000,7 +2056,7 @@
             "id": "reeve",
             "x": 0.82,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "count",
             "expression": "smug",
@@ -2027,7 +2083,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o17",
@@ -2042,7 +2098,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -2110,7 +2166,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "o12",
@@ -2126,7 +2182,7 @@
             "id": "stan",
             "x": 0.35,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -2140,7 +2196,7 @@
             "id": "maud",
             "x": 0.6,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "dance",
             "expression": "happy",
@@ -2180,7 +2236,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p01",
@@ -2230,7 +2286,7 @@
             "id": "stan",
             "x": 0.12,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -2268,7 +2324,7 @@
       "sfx": [],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12,
+      "pause_after": 0.25,
       "chapter": "Spring: Mud, Oxen and Porridge"
     },
     {
@@ -2315,7 +2371,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p03",
@@ -2330,7 +2386,7 @@
             "id": "stan",
             "x": 0.25,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -2363,7 +2419,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p04",
@@ -2388,7 +2444,7 @@
             "id": "stan",
             "x": 0.2,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -2423,7 +2479,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p05",
@@ -2493,7 +2549,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p06",
@@ -2511,7 +2567,7 @@
             "id": "stan",
             "x": 0.4,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -2553,7 +2609,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p07",
@@ -2578,7 +2634,7 @@
             "id": "maud",
             "x": 0.68,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "stir",
             "expression": "happy",
@@ -2588,7 +2644,7 @@
             "id": "stan",
             "x": 0.2,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -2625,7 +2681,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p08",
@@ -2650,7 +2706,7 @@
             "id": "stan",
             "x": 0.25,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -2681,7 +2737,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p09",
@@ -2695,34 +2751,34 @@
           {
             "type": "item",
             "item": "bread",
-            "x": 0.25,
-            "y": 0.6,
-            "scale": 2.4,
-            "at_word": 1
+            "x": 0.2,
+            "y": 0.62,
+            "scale": 4.5,
+            "at": 0.2
           },
           {
             "type": "item",
             "item": "egg",
-            "x": 0.45,
-            "y": 0.6,
-            "scale": 2.4,
+            "x": 0.42,
+            "y": 0.62,
+            "scale": 4.5,
             "at_word": 13
           },
           {
             "type": "plate",
-            "x": 0.65,
-            "y": 0.62,
+            "x": 0.64,
+            "y": 0.66,
             "food": "meat",
-            "scale": 1.6,
+            "scale": 2.4,
             "at_word": 15
           },
           {
             "type": "icon",
             "icon": "?",
-            "x": 0.82,
-            "y": 0.6,
+            "x": 0.84,
+            "y": 0.62,
             "at_word": 17,
-            "size": 90
+            "size": 130
           }
         ]
       },
@@ -2749,7 +2805,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p10",
@@ -2765,7 +2821,7 @@
             "id": "stan",
             "x": 0.4,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -2818,7 +2874,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p11",
@@ -2842,7 +2898,7 @@
             "id": "stan",
             "x": 0.4,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -2872,7 +2928,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p14",
@@ -2882,7 +2938,8 @@
         "background": {
           "type": "interior",
           "season": "spring",
-          "hearth_x": 0.82
+          "hearth_x": 0.82,
+          "window_x": 0.08
         },
         "props": [
           {
@@ -2904,7 +2961,7 @@
             "id": "maud",
             "x": 0.38,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "stir",
             "expression": "determined",
             "actions": [
@@ -2964,7 +3021,7 @@
       "sfx": [],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p15",
@@ -2981,7 +3038,7 @@
             "id": "wat",
             "x": 0.4,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "panic",
             "expression": "angry",
             "preset": "child"
@@ -3052,7 +3109,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p16",
@@ -3120,7 +3177,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p17",
@@ -3130,18 +3187,18 @@
         "background": {
           "type": "interior",
           "season": "spring",
-          "hearth_x": 0.7,
+          "hearth_x": 0.88,
           "dark": 0.15
         },
         "props": [
           {
             "type": "barrel",
-            "x": 0.25,
+            "x": 0.2,
             "y": 0.86
           },
           {
             "type": "sack",
-            "x": 0.4,
+            "x": 0.32,
             "y": 0.86,
             "scale": 0.6,
             "label": ""
@@ -3150,9 +3207,9 @@
         "cast": [
           {
             "id": "stan",
-            "x": 0.55,
+            "x": 0.5,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -3164,9 +3221,9 @@
           },
           {
             "id": "wat",
-            "x": 0.7,
+            "x": 0.66,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "idle",
             "expression": "sad",
             "preset": "child"
@@ -3193,7 +3250,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p12",
@@ -3212,7 +3269,7 @@
             "id": "dad",
             "x": 0.4,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "sad",
             "expression": "crying",
             "color": [
@@ -3226,7 +3283,7 @@
             "id": "mum",
             "x": 0.6,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "sad",
             "expression": "sad",
@@ -3266,7 +3323,7 @@
       "sfx": [],
       "transition": "fade",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "p13",
@@ -3281,7 +3338,7 @@
             "id": "stan",
             "x": 0.4,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -3295,7 +3352,7 @@
             "id": "maud",
             "x": 0.6,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "pray",
             "expression": "worried",
             "preset": "peasant_woman"
@@ -3309,7 +3366,7 @@
       "sfx": [],
       "transition": "fade",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "m01",
@@ -3326,7 +3383,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -3371,7 +3428,7 @@
       ],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12,
+      "pause_after": 0.25,
       "chapter": "Wait… Were They Really That Dirty?"
     },
     {
@@ -3403,7 +3460,7 @@
             "id": "stan",
             "x": 0.35,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -3442,7 +3499,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "m03",
@@ -3489,7 +3546,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "m04",
@@ -3530,7 +3587,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "m05",
@@ -3546,7 +3603,7 @@
             "id": "stan",
             "x": 0.45,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -3590,7 +3647,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s01",
@@ -3607,7 +3664,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -3622,7 +3679,7 @@
             "id": "maud",
             "x": 0.6,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "carry",
             "expression": "happy",
@@ -3635,7 +3692,7 @@
             "id": "wat",
             "x": 0.78,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "jump",
             "expression": "grin",
             "preset": "child"
@@ -3667,7 +3724,7 @@
       ],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12,
+      "pause_after": 0.25,
       "chapter": "Summer: Something Is Coming"
     },
     {
@@ -3734,7 +3791,7 @@
       "sfx": [],
       "transition": "fade",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s03",
@@ -3832,7 +3889,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s04",
@@ -3864,9 +3921,10 @@
           {
             "type": "fleas",
             "x": 0.6,
-            "y": 0.55,
+            "y": 0.6,
             "n": 9,
-            "at_word": 8
+            "at_word": 8,
+            "scale": 2.5
           }
         ],
         "overlays": [
@@ -3909,7 +3967,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s05",
@@ -3925,7 +3983,7 @@
             "id": "doc",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "robe",
             "outfit_color": "purple",
             "hat": "cap",
@@ -3939,7 +3997,7 @@
             "id": "stan",
             "x": 0.7,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -3998,7 +4056,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s06",
@@ -4065,7 +4123,7 @@
       ],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s07",
@@ -4159,7 +4217,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s07b",
@@ -4242,7 +4300,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s08",
@@ -4268,7 +4326,7 @@
             "id": "neighbor",
             "x": 0.48,
             "y": 0.87,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "lie",
             "expression": "sick",
             "preset": "peasant"
@@ -4313,7 +4371,7 @@
       "sfx": [],
       "transition": "fade",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s09",
@@ -4339,7 +4397,7 @@
             "id": "maud",
             "x": 0.35,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "pray",
             "expression": "crying",
             "preset": "peasant_woman"
@@ -4348,7 +4406,7 @@
             "id": "stan",
             "x": 0.18,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -4379,7 +4437,81 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
+    },
+    {
+      "id": "s09b",
+      "beat": "climax",
+      "narration": "Stan's family stays home, prays, and waits. Every cough in the night sounds like a death sentence.",
+      "visual": {
+        "background": {
+          "type": "interior",
+          "season": "autumn",
+          "dark": 0.5,
+          "hearth_x": 0.5
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "shiver",
+            "expression": "scared"
+          },
+          {
+            "id": "maud",
+            "x": 0.68,
+            "y": 0.84,
+            "scale": 1.4,
+            "facing": -1,
+            "action": "pray",
+            "expression": "worried",
+            "preset": "peasant_woman"
+          },
+          {
+            "id": "wat",
+            "x": 0.8,
+            "y": 0.84,
+            "scale": 1.4,
+            "facing": -1,
+            "action": "cower",
+            "expression": "scared",
+            "preset": "child"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.6
+          },
+          {
+            "type": "fiction",
+            "text": "STAN'S STORY"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.12
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "clock",
+          "at": 0.3,
+          "gain_db": -10
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
     },
     {
       "id": "s10",
@@ -4416,7 +4548,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -4463,7 +4595,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s14",
@@ -4488,7 +4620,7 @@
             "id": "priest",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "walk",
             "item": "candle",
             "expression": "worried",
@@ -4510,7 +4642,7 @@
             "id": "p1",
             "x": 0.1,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "pray",
             "expression": "crying",
             "color": [
@@ -4524,7 +4656,7 @@
             "id": "p2",
             "x": 0.6,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "run",
             "expression": "scared",
             "at_word": 7,
@@ -4554,7 +4686,7 @@
       "sfx": [],
       "transition": "fade",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s15",
@@ -4632,7 +4764,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s11",
@@ -4673,7 +4805,7 @@
       "sfx": [],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s12",
@@ -4726,7 +4858,7 @@
       "sfx": [],
       "transition": "fade",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "s13",
@@ -4742,7 +4874,7 @@
             "id": "stan",
             "x": 0.35,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -4768,7 +4900,7 @@
             "id": "maud",
             "x": 0.55,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "idle",
             "expression": "happy",
             "at_word": 5,
@@ -4779,7 +4911,7 @@
             "id": "wat",
             "x": 0.68,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "jump",
             "expression": "grin",
             "at_word": 7,
@@ -4818,7 +4950,7 @@
       ],
       "transition": "fade",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "a01",
@@ -4835,7 +4967,7 @@
             "id": "stan",
             "x": 0.35,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -4871,7 +5003,7 @@
       "sfx": [],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12,
+      "pause_after": 0.25,
       "chapter": "Autumn: The Harvest Nobody Can Bring In"
     },
     {
@@ -4943,7 +5075,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "a03",
@@ -4958,7 +5090,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -4972,7 +5104,7 @@
             "id": "lord",
             "x": 0.62,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "cower",
             "expression": "worried",
@@ -5001,7 +5133,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "a04",
@@ -5016,7 +5148,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -5036,7 +5168,7 @@
             "id": "lord",
             "x": 0.66,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "angry",
             "expression": "angry",
@@ -5071,7 +5203,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "a05",
@@ -5086,7 +5218,7 @@
             "id": "king",
             "x": 0.4,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "angry",
             "expression": "angry",
             "item": "scroll",
@@ -5133,7 +5265,77 @@
       "sfx": [],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
+    },
+    {
+      "id": "a05b",
+      "beat": "development",
+      "narration": "On many manors, lords also start swapping your labor services for a simple money rent. Fewer days working his fields.",
+      "visual": {
+        "background": {
+          "type": "manor"
+        },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.3,
+            "y": 0.84,
+            "scale": 1.4,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "hold",
+            "item": "coin",
+            "expression": "happy"
+          },
+          {
+            "id": "lord",
+            "x": 0.66,
+            "y": 0.84,
+            "scale": 1.4,
+            "facing": -1,
+            "action": "shrug",
+            "expression": "worried",
+            "preset": "lord"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "checklist",
+            "x": 0.55,
+            "y": 0.18,
+            "size": 50,
+            "items": [
+              [
+                "2-3 days of unpaid work",
+                false
+              ],
+              [
+                "a cash rent instead",
+                true
+              ]
+            ],
+            "times": [
+              1.5,
+              3.2
+            ]
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "After the Black Death labor services were increasingly commuted to money rents",
+          "kind": "fact",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
     },
     {
       "id": "a06",
@@ -5150,7 +5352,7 @@
             "id": "lord",
             "x": 0.6,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "hold",
             "item": "bag",
@@ -5161,7 +5363,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -5197,7 +5399,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "a08",
@@ -5228,7 +5430,7 @@
             "id": "stan",
             "x": 0.12,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -5268,7 +5470,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "a09",
@@ -5306,7 +5508,7 @@
       "sfx": [],
       "transition": "fade",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "a07",
@@ -5343,7 +5545,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -5358,7 +5560,7 @@
             "id": "priest",
             "x": 0.88,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "at_word": 10,
             "enter": "slide_left",
@@ -5395,7 +5597,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "w01",
@@ -5432,7 +5634,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -5469,7 +5671,7 @@
       "sfx": [],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12,
+      "pause_after": 0.25,
       "chapter": "Winter: Salt, Smoke and Christmas"
     },
     {
@@ -5488,21 +5690,21 @@
             "type": "bed",
             "x": 0.3,
             "y": 0.9,
-            "scale": 1.4
+            "scale": 1.7
           },
           {
             "type": "icon",
             "icon": "z",
             "x": 0.3,
-            "y": 0.68
+            "y": 0.66
           }
         ],
         "cast": [
           {
             "id": "stan",
-            "x": 0.24,
-            "y": 0.87,
-            "scale": 1.25,
+            "x": 0.4,
+            "y": 0.88,
+            "scale": 1.1,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -5514,9 +5716,9 @@
           },
           {
             "id": "maud",
-            "x": 0.36,
-            "y": 0.87,
-            "scale": 1.25,
+            "x": 0.4,
+            "y": 0.84,
+            "scale": 1.1,
             "action": "sleep",
             "expression": "sleepy",
             "preset": "peasant_woman"
@@ -5545,7 +5747,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "w03",
@@ -5561,7 +5763,7 @@
             "id": "stan",
             "x": 0.4,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -5575,7 +5777,7 @@
             "id": "wat",
             "x": 0.6,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "jump",
             "expression": "grin",
             "preset": "child"
@@ -5612,7 +5814,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "w04",
@@ -5644,7 +5846,7 @@
             "id": "stan",
             "x": 0.25,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -5658,7 +5860,7 @@
             "id": "maud",
             "x": 0.42,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "laugh",
             "expression": "laughing",
             "preset": "peasant_woman"
@@ -5667,7 +5869,7 @@
             "id": "lord",
             "x": 0.7,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "drink",
             "item": "mug",
@@ -5689,7 +5891,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "w05",
@@ -5706,7 +5908,7 @@
             "id": "stan",
             "x": 0.35,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -5720,7 +5922,7 @@
             "id": "maud",
             "x": 0.55,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "dance",
             "expression": "happy",
@@ -5744,7 +5946,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "w06",
@@ -5761,7 +5963,7 @@
             "id": "stan",
             "x": 0.25,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -5776,7 +5978,7 @@
             "id": "maud",
             "x": 0.72,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "sit_talk",
             "expression": "happy",
@@ -5786,7 +5988,7 @@
             "id": "wat",
             "x": 0.6,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "facing": -1,
             "action": "sit",
             "expression": "grin",
@@ -5819,7 +6021,7 @@
       "sfx": [],
       "transition": "fade",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "f01",
@@ -5835,7 +6037,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -5849,7 +6051,7 @@
             "id": "maud",
             "x": 0.48,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "idle",
             "expression": "happy",
             "preset": "peasant_woman"
@@ -5858,7 +6060,7 @@
             "id": "wat",
             "x": 0.6,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "idle",
             "expression": "grin",
             "preset": "child"
@@ -5877,7 +6079,7 @@
       "sfx": [],
       "transition": "wipe",
       "emphasis": [],
-      "pause_after": 0.12,
+      "pause_after": 0.25,
       "chapter": "Did You Survive?"
     },
     {
@@ -5893,7 +6095,7 @@
             "id": "stan",
             "x": 0.2,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -5976,7 +6178,57 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
+    },
+    {
+      "id": "f02b",
+      "beat": "ending",
+      "narration": "Final tally: a penny or two a day before the plague, and up to three pennies after. Around three hundred bowls of pottage. And one very lucky family.",
+      "visual": {
+        "background": {
+          "type": "chalkboard"
+        },
+        "overlays": [
+          {
+            "type": "bars",
+            "title": "Stan's year in numbers",
+            "x": 0.3,
+            "y": 0.32,
+            "items": [
+              [
+                "Wage before",
+                1.5,
+                "grey",
+                "1-2d/day"
+              ],
+              [
+                "Wage after",
+                3,
+                "green",
+                "up to 3d/day"
+              ],
+              [
+                "Pottage",
+                3.4,
+                "wheat",
+                "~300 bowls"
+              ]
+            ],
+            "max": 3.6
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "Unskilled daily wages of roughly 1-2d before 1348 rose substantially afterwards",
+          "kind": "estimate",
+          "source": "Christopher Dyer, Making a Living in the Middle Ages (Yale, 2002)"
+        }
+      ],
+      "sfx": [],
+      "transition": "cut",
+      "emphasis": [],
+      "pause_after": 0.25
     },
     {
       "id": "f03",
@@ -5992,7 +6244,7 @@
             "id": "stan",
             "x": 0.3,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
@@ -6006,7 +6258,7 @@
             "id": "p1",
             "x": 0.45,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "angry",
             "expression": "determined",
             "preset": "peasant"
@@ -6015,7 +6267,7 @@
             "id": "p2",
             "x": 0.6,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "action": "angry",
             "expression": "angry",
             "item": "pitchfork",
@@ -6036,7 +6288,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "f04",
@@ -6094,7 +6346,7 @@
       ],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "f05",
@@ -6138,7 +6390,7 @@
       "sfx": [],
       "transition": "cut",
       "emphasis": [],
-      "pause_after": 0.12
+      "pause_after": 0.25
     },
     {
       "id": "f06",
@@ -6153,7 +6405,7 @@
             "id": "stan",
             "x": 0.35,
             "y": 0.84,
-            "scale": 1.25,
+            "scale": 1.4,
             "outfit": "tunic",
             "outfit_color": [
               0.55,
