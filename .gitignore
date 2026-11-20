@@ -9,3 +9,4 @@ secrets/
 .venv/
 data/*.sqlite
 data/**/*.sqlite
+panel/_en_upload/

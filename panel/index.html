@@ -1,9 +1,10 @@
-<title>Cola de publicación · Hipotéticos</title>
+<title>Cola de publicación</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
-/* Cola de publicación: una tarjeta por Short, pendientes primero; la tipografía y los colores son los del canal. */
+/* Cola de publicación: una pestaña por canal (Shorts en español, vídeos largos de stickman en inglés),
+   una tarjeta por vídeo, pendientes primero; la tipografía y los colores son los de los canales. */
 :root {
   --bg: #EEF0F5; --surface: #FFFFFF; --ink: #19162B; --muted: #5C5874; --line: #D9D7E4;
   --brand: #FFD23F; --brand-ink: #19162B; --red: #D8352B; --ok: #157F55; --ok-bg: #DDF3E8;
@@ -34,7 +35,19 @@ h1 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 6vw, 
 .note { font-size: 13px; color: var(--muted); background: var(--chip); border-radius: 10px; padding: 9px 12px; }
 .note[data-kind="warn"] { color: var(--ink); }
 
+.tabs { display: flex; gap: 6px; padding: 5px; background: var(--chip); border-radius: 14px; width: fit-content; max-width: 100%; }
+.tab { font: 600 14px/1.2 var(--body); border: 0; background: transparent; color: var(--muted); border-radius: 10px;
+  padding: 9px 13px; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; text-align: left; }
+.tab b { font-family: var(--display); font-weight: 400; font-size: 17px; color: inherit; }
+.tab .count { font-size: 12px; font-weight: 700; border-radius: 99px; padding: 2px 7px; background: var(--surface); color: var(--muted); font-variant-numeric: tabular-nums; }
+.tab[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+.tab[aria-selected="true"] .count { background: var(--brand); color: var(--brand-ink); }
+.tab:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
 .list { display: grid; gap: 14px; }
+.card.wide { grid-template-columns: 1fr; }
+.card.wide .thumb { width: 100%; aspect-ratio: 16 / 9; }
+.chapters { margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); columns: 2 220px; column-gap: 20px; }
+.chapters li { break-inside: avoid; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow);
   display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 16px; padding: 14px; }
 .card.done { opacity: .62; }
@@ -89,6 +102,11 @@ summary { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--muted
 @media (max-width: 520px) {
   .card { grid-template-columns: 96px minmax(0, 1fr); gap: 12px; padding: 12px; }
   .thumb { width: 96px; }
+  .card.wide .thumb { width: 100%; }
+  .tabs { width: 100%; }
+  .tab { flex: 1 1 0; min-width: 0; padding: 8px; flex-wrap: wrap; justify-content: center; text-align: center; gap: 4px 6px; }
+  .tab b { font-size: 15px; }
+  .tab > span:not(.count) { display: none; }
   h2 { font-size: 18px; }
   .actions .btn { flex: 1 1 auto; justify-content: center; }
 }
@@ -97,21 +115,31 @@ summary { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--muted
 
 <div class="wrap">
   <header>
-    <div class="eyebrow">Hipotéticos · Shorts</div>
+    <div class="eyebrow" id="eyebrow">Hipotéticos · Shorts</div>
     <h1>Cola de publicación</h1>
+    <div class="tabs" role="tablist" aria-label="Canal">
+      <button class="tab" role="tab" type="button" id="tab-es" data-ch="es" aria-controls="list" aria-selected="true"><b>Hipotéticos</b><span>Shorts · ES</span><span class="count" id="count-es">–</span></button>
+      <button class="tab" role="tab" type="button" id="tab-en" data-ch="en" aria-controls="list" aria-selected="false" tabindex="-1"><b>Stickpothetical</b><span>Long-form · EN</span><span class="count" id="count-en">–</span></button>
+    </div>
     <div class="progress" aria-live="polite">
       <div class="bar" role="progressbar" aria-label="Vídeos subidos" aria-valuemin="0" id="bar"><i></i></div>
       <div class="progress-line"><span id="count">Cargando…</span><span id="next"></span></div>
     </div>
     <div class="note" id="note" hidden></div>
   </header>
-  <main class="list" id="list"><p class="empty">Cargando vídeos…</p></main>
+  <main class="list" id="list" role="tabpanel" aria-labelledby="tab-es"><p class="empty">Cargando vídeos…</p></main>
 </div>
 <div class="toast" id="toast" role="status" hidden></div>
 
 <script>
 const $ = (s, el = document) => el.querySelector(s);
-const state = { videos: [], uploaded: {}, saving: {}, dbReady: false, db: null, downloads: null, dbState: "loading" };
+const state = { videos: [], uploaded: {}, saving: {}, dbReady: false, db: null, downloads: null, dbState: "loading", ch: "es" };
+// Un canal por pestaña: sus datos (JSON publicado junto a la página) y su colección de estado en la base de datos.
+const CH = {
+  es: { json: "videos.json", coll: "estado", eyebrow: "Hipotéticos · Shorts en español", vertical: true },
+  en: { json: "videos_en.json", coll: "estado_en", eyebrow: "Stickpothetical · vídeos largos en inglés", vertical: false },
+};
+const store = { es: { videos: [], uploaded: {}, loaded: false }, en: { videos: [], uploaded: {}, loaded: false } };
 const DAYS = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
 const MONTHS = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
 
@@ -133,6 +161,8 @@ function toast(msg) {
 }
 function note(msg, kind) { const n = $("#note"); n.hidden = !msg; n.textContent = msg || ""; n.dataset.kind = kind || ""; }
 function plainText(v) {
+  if (state.ch === "en") return `TITLE\n${v.titulo}\n\nDESCRIPTION\n${v.descripcion}\n\nTAGS\n${v.etiquetas}\n\nPINNED COMMENT\n${v.comentario}\n\n` +
+    `SETTINGS\nCategory: Education · Video language: English · Not made for kids · Altered or synthetic content: Yes (synthetic voice) · Upload captions.srt as English subtitles\n`;
   return `TÍTULO\n${v.titulo}\n\nDESCRIPCIÓN\n${v.descripcion}\n\nETIQUETAS\n${v.etiquetas}\n\nCOMENTARIO FIJADO\n${v.comentario}\n\n` +
     `AJUSTES\nCategoría: Educación · Idioma: español (España) · No es contenido para niños · Contenido alterado o sintético: Sí (voz sintética)\n`;
 }
@@ -148,27 +178,35 @@ function renderHeader() {
   $("#count").innerHTML = state.dbState === "loading" ? "Cargando estado…" : `<b>${done} de ${total}</b> subidos`;
   const next = ordered().find(v => !state.uploaded[v.slug]);
   $("#next").textContent = next ? `Próximo: ${fmtDate(next.fecha)}` : (total ? "Todo subido" : "");
+  $("#eyebrow").textContent = CH[state.ch].eyebrow;
+  for (const k of Object.keys(CH)) {
+    const st = store[k], pend = st.videos.filter(v => !st.uploaded[v.slug]).length;
+    $(`#count-${k}`).textContent = st.loaded ? (pend ? `${pend} pendiente${pend > 1 ? "s" : ""}` : "al día") : "–";
+  }
 }
 
 function card(v, nextSlug, now) {
   const up = !!state.uploaded[v.slug];
   const late = !up && v.fecha && v.fecha < now;
   const el = document.createElement("article");
-  el.className = "card" + (up ? " done" : "");
+  const wide = !CH[state.ch].vertical;
+  el.className = "card" + (wide ? " wide" : "") + (up ? " done" : "");
   el.dataset.slug = v.slug;
   const chip = up ? `<span class="chip ok">Subido</span>` : late ? `<span class="chip late">Toca subirlo</span>` : v.slug === nextSlug ? `<span class="chip next">El próximo</span>` : "";
   el.innerHTML = `
     <button class="thumb" type="button" aria-label="Ver el vídeo">
       ${v.miniatura ? `<img alt="" loading="lazy">` : `<span class="ph">Miniatura pendiente</span>`}
-      ${v.video ? `<span class="play" aria-hidden="true"></span>` : ""}
+      ${(v.video || v.preview) ? `<span class="play" aria-hidden="true"></span>` : ""}
     </button>
     <div class="body">
       <div class="meta"><span class="chip">${fmtDate(v.fecha)}</span>${chip}</div>
       <h2></h2>
-      <div class="sub">${String(v.duracion).replace(".", ",")} s · vídeo vertical 1080×1920</div>
+      <div class="sub">${wide ? `${Math.floor(v.duracion / 60)} min ${Math.round(v.duracion % 60)} s · vídeo horizontal 1920×1080${v.capitulos?.length ? ` · ${v.capitulos.length} capítulos` : ""}` : `${String(v.duracion).replace(".", ",")} s · vídeo vertical 1080×1920`}</div>
       <div class="actions">
-        <button class="btn primary" data-dl="video" type="button" ${v.video ? "" : "disabled"}>Descargar vídeo <small>${String(v.video_mb).replace(".", ",")} MB</small></button>
+        <button class="btn primary" data-dl="video" type="button" ${(v.video || v.video_parts?.length) ? "" : "disabled"}>Descargar vídeo <small>${String(v.video_mb).replace(".", ",")} MB</small></button>
         <button class="btn" data-dl="miniatura" type="button" ${v.miniatura ? "" : "disabled"}>Miniatura</button>
+        ${v.miniatura2 ? `<button class="btn" data-dl="miniatura2" type="button">Miniatura B</button>` : ""}
+        ${v.srt ? `<button class="btn" data-dl="srt" type="button">Subtítulos .srt</button>` : ""}
         <button class="btn" data-dl="textos" type="button">Textos .txt</button>
       </div>
       <label class="toggle${state.saving[v.slug] ? " saving" : ""}${state.db ? "" : " locked"}">
@@ -184,6 +222,11 @@ function card(v, nextSlug, now) {
   $("h2", el).textContent = v.titulo;
   if (v.miniatura) $(".thumb img", el).src = v.miniatura;
   const fields = $(".fields", el);
+  if (v.capitulos?.length) {
+    const ol = document.createElement("ol"); ol.className = "chapters";
+    v.capitulos.forEach(c => { const li = document.createElement("li"); li.textContent = c; ol.appendChild(li); });
+    fields.appendChild(ol);
+  }
   [["Título", v.titulo], ["Descripción", v.descripcion], ["Etiquetas", v.etiquetas], ["Comentario fijado", v.comentario]].forEach(([label, text]) => {
     const f = document.createElement("div"); f.className = "field";
     f.innerHTML = `<div class="field-head"><span></span><button class="copy" type="button">Copiar</button></div><pre></pre>`;
@@ -209,9 +252,10 @@ function render() {
 }
 
 function play(btn, v) {
-  if (!v.video || btn.classList.contains("playing")) return;
+  const src = v.preview || v.video;
+  if (!src || btn.classList.contains("playing")) return;
   const vid = document.createElement("video");
-  vid.src = v.video; vid.controls = true; vid.playsInline = true; vid.autoplay = true; if (v.miniatura) vid.poster = v.miniatura;
+  vid.src = src; vid.controls = true; vid.playsInline = true; vid.autoplay = true; if (v.miniatura) vid.poster = v.miniatura;
   btn.replaceChildren(vid); btn.classList.add("playing");
 }
 
@@ -225,16 +269,27 @@ async function download(btn, v, kind) {
   const label = btn.innerHTML; btn.disabled = true;
   try {
     let filename, data;
-    if (kind === "textos") { filename = `${v.slug}_textos.txt`; data = plainText(v); }
+    if (kind === "textos") { filename = `${v.slug}_${state.ch === "en" ? "texts" : "textos"}.txt`; data = plainText(v); }
+    else if (kind === "srt") { filename = `${v.slug}_captions.srt.txt`; data = v.srt; }
+    else if (kind === "video" && v.video_parts?.length) {
+      // vídeo largo guardado en trozos de 18 MB: se descargan y se unen; el archivo es idéntico al original
+      const parts = [];
+      for (let i = 0; i < v.video_parts.length; i++) {
+        btn.textContent = `Descargando ${i + 1}/${v.video_parts.length}…`;
+        const r = await fetch(v.video_parts[i]); if (!r.ok) throw { code: "fetch" };
+        parts.push(await r.blob());
+      }
+      data = new Blob(parts, { type: "video/mp4" }); filename = `${String(v.orden).padStart(2, "0")}_${v.slug}.mp4`;
+    }
     else {
       btn.textContent = "Preparando…";
-      const url = kind === "video" ? v.video : v.miniatura;
+      const url = kind === "video" ? v.video : kind === "miniatura2" ? v.miniatura2 : v.miniatura;
       const r = await fetch(url); if (!r.ok) throw { code: "fetch" };
-      data = await r.blob(); filename = kind === "video" ? `${String(v.orden).padStart(2, "0")}_${v.slug}.mp4` : `${v.slug}_miniatura.png`;
+      data = await r.blob(); filename = kind === "video" ? `${String(v.orden).padStart(2, "0")}_${v.slug}.mp4` : `${v.slug}_${kind === "miniatura2" ? "miniatura_B" : "miniatura"}.png`;
     }
     btn.textContent = "Confirma la descarga…";
     await state.downloads.save({ filename, data });
-    toast(`Descargado: ${filename}`);
+    toast(kind === "srt" ? "Descargado. Quita «.txt» del nombre (déjalo en .srt) antes de subirlo a YouTube" : `Descargado: ${filename}`);
   } catch (e) {
     const c = e && e.code;
     if (c === "declined") toast("Descarga cancelada");
@@ -249,7 +304,7 @@ async function setUploaded(slug, value) {
   const prev = !!state.uploaded[slug];
   state.uploaded[slug] = value; state.saving[slug] = true; render();
   try {
-    await state.db.doc(`estado/${slug}`).set(value ? { subido: true, fecha: new Date().toISOString() } : { subido: false });
+    await state.db.doc(`${CH[state.ch].coll}/${slug}`).set(value ? { subido: true, fecha: new Date().toISOString() } : { subido: false });
     toast(value ? "Marcado como subido" : "Marcado como pendiente");
   } catch (e) {
     state.uploaded[slug] = prev;
@@ -257,10 +312,60 @@ async function setUploaded(slug, value) {
   } finally { delete state.saving[slug]; render(); }
 }
 
-async function start() {
+function setChannel(ch, focus) {
+  if (!CH[ch]) return;
+  state.ch = ch;
+  state.videos = store[ch].videos; state.uploaded = store[ch].uploaded;
+  document.querySelectorAll(".tab").forEach(t => {
+    const on = t.dataset.ch === ch;
+    t.setAttribute("aria-selected", on); t.tabIndex = on ? 0 : -1;
+    if (on && focus) t.focus();
+  });
+  $("#list").setAttribute("aria-labelledby", `tab-${ch}`);
+  try { localStorage.setItem("cola-canal", ch); } catch {}
+  render();
+}
+
+function setupTabs() {
+  const tabs = [...document.querySelectorAll(".tab")];
+  tabs.forEach(t => {
+    t.addEventListener("click", () => setChannel(t.dataset.ch));
+    t.addEventListener("keydown", e => {
+      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+      const i = tabs.indexOf(t), j = (i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length;
+      setChannel(tabs[j].dataset.ch, true); e.preventDefault();
+    });
+  });
+  let saved = null;
+  try { saved = localStorage.getItem("cola-canal"); } catch {}
+  setChannel(CH[saved] ? saved : "es");
+}
+
+async function loadChannel(ch) {
   try {
-    const r = await fetch("videos.json"); state.videos = await r.json();
-  } catch { $("#list").innerHTML = `<p class="empty">No se pudo cargar la lista de vídeos. Recarga la página.</p>`; return; }
+    const r = await fetch(CH[ch].json); if (!r.ok) throw 0;
+    store[ch].videos = await r.json();
+  } catch { store[ch].videos = []; store[ch].error = true; }
+  store[ch].loaded = true;
+  if (state.ch === ch) state.videos = store[ch].videos;
+}
+
+function watchChannel(db, ch, timer) {
+  db.collection(CH[ch].coll).onSnapshot(snap => {
+    if (!snap.metadata.fromCache) { clearTimeout(timer[ch]); if (!Object.values(timer).some(Boolean)) note(""); timer[ch] = null; }
+    const up = {};
+    snap.docs.forEach(d => { const x = d.data(); if (x && x.subido) up[d.id] = true; });
+    if (state.ch === ch) Object.keys(state.saving).forEach(s => (up[s] = state.uploaded[s]));
+    store[ch].uploaded = up;
+    if (state.ch === ch) state.uploaded = up;
+    state.dbState = "ready"; render();
+  }, () => { clearTimeout(timer[ch]); state.dbState = "ready"; render(); note("Se perdió la conexión con el estado guardado. Recarga la página para verlo al día.", "warn"); });
+}
+
+async function start() {
+  setupTabs();
+  await Promise.all(Object.keys(CH).map(loadChannel));
+  if (Object.values(store).every(x => x.error)) { $("#list").innerHTML = `<p class="empty">No se pudo cargar la lista de vídeos. Recarga la página.</p>`; return; }
   render();
   const [db, downloads] = await Promise.all([
     window.claude?.use ? window.claude.use("db").catch(() => null) : null,
@@ -272,14 +377,11 @@ async function start() {
     note("Inicia sesión en claude.ai para ver y guardar qué vídeos has subido.", "warn"); return;
   }
   state.db = db; render();
-  const timer = setTimeout(() => note("No se puede leer el estado guardado todavía; puede que no esté al día."), 10000);
-  db.collection("estado").onSnapshot(snap => {
-    if (!snap.metadata.fromCache) { clearTimeout(timer); note(""); }
-    const up = {};
-    snap.docs.forEach(d => { const x = d.data(); if (x && x.subido) up[d.id] = true; });
-    Object.keys(state.saving).forEach(s => (up[s] = state.uploaded[s]));
-    state.uploaded = up; state.dbState = "ready"; render();
-  }, () => { clearTimeout(timer); state.dbState = "ready"; render(); note("Se perdió la conexión con el estado guardado. Recarga la página para verlo al día.", "warn"); });
+  const timer = {};
+  Object.keys(CH).forEach(ch => {
+    timer[ch] = setTimeout(() => note("No se puede leer el estado guardado todavía; puede que no esté al día."), 10000);
+    watchChannel(db, ch, timer);
+  });
 }
 start();
 </script>
