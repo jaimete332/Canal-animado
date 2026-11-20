@@ -27,14 +27,14 @@ SRC_PARKES = "M. J. Parkes, 'Breath-holding and its breakpoint', Experimental Ph
 SRC_REFLEX = "Godek & Freeman, 'Physiology, Diving Reflex', StatPearls (NCBI)"
 SRC_DAN = "Divers Alert Network (DAN), 'Shallow water blackout'"
 
-sc("r01", "hook", "Coges aire, metes la cabeza en el agua y aguantas. Objetivo: diez minutos.", {
+sc("r01", "hook", "Coges aire y metes la cabeza bajo el agua. Diez minutos.", {
     "background": POOL,
     "character": leo(expression="smug", actions=[["w8", "shock"]], expressions=[["w8", "surprised"]]),
     "props": [{"type": "bubbles", "x": 0.52, "y": 0.4, "until_word": 6}],
     "overlays": [{"type": "title", "lines": ["¿10 MINUTOS", "SIN RESPIRAR?"], "y": 250, "size": 115},
-                 clock("10:00", 0, 0, at_word=10)],
-    "camera": {"move": "punch", "impacts": ["w10"]}},
-   sfx=[{"name": "splash", "at": 0.2, "gain_db": -8}, {"name": "hit", "at_word": 10, "gain_db": -6}],
+                 clock("10:00", 0, 0, at_word=9)],
+    "camera": {"move": "punch", "impacts": ["w9"]}},
+   sfx=[{"name": "splash", "at": 0.2, "gain_db": -8}, {"name": "hit", "at_word": 9, "gain_db": -6}],
    transition="cut", emphasis=["diez"])
 
 sc("r02", "setup", "Segundo treinta: todo va bien. Tienes oxígeno de sobra en la sangre.", {

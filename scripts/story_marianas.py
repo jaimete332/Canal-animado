@@ -37,7 +37,7 @@ def leo(**kw):
 
 SRC_NOAA = "NOAA Ocean Exploration, 'How deep is the ocean?' / 'Challenger Deep'"
 
-sc("m01", "hook", "Te metes en el mar y empiezas a bajar. Destino: el punto más profundo del planeta.", {
+sc("m01", "hook", "Bajas al fondo del mar y no paras: once mil metros.", {
     "background": deep(0.0),
     "character": leo(expression="excited", actions=[["w7", "shock"]], expressions=[["w7", "surprised"]]),
     "overlays": [{"type": "title", "lines": ["¿11.000 METROS", "BAJO EL MAR?"], "y": 250, "size": 110}],

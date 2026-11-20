@@ -1,0 +1,52 @@
+# Publicar: «¿Qué pasaría si aguantaras 10 minutos sin respirar? 💀»
+
+**Vídeo:** `aguantar-la-respiracion.mp4` (60.2 s) · **Miniatura:** `miniatura.png` (1080×1920)
+
+## Título (53 caracteres)
+```
+¿Qué pasaría si aguantaras 10 minutos sin respirar? 💀
+```
+
+## Descripción
+```
+Coges aire, metes la cabeza en el agua… ¿qué le pasaría a tu cuerpo si aguantaras 10 minutos sin respirar? 🫁
+
+Leo aguanta minuto a minuto: las ganas de respirar, los espasmos, el reflejo de inmersión, el bazo… y el peligro real, el desmayo sin aviso.
+
+🧪 DATOS REALES DEL VÍDEO
+• Las ganas de respirar las provoca sobre todo el CO2 acumulado, no la falta de oxígeno.
+• La mayoría de personas sin entrenar aguanta entre 30 y 90 segundos.
+• El diafragma da contracciones involuntarias.
+• Con la cara en agua fría el corazón se frena (reflejo de inmersión).
+• El bazo se contrae y suelta glóbulos rojos de reserva.
+• La apnea larga puede causar desmayo sin aviso; bajo el agua eso provoca ahogamiento.
+• Sin oxígeno, el cerebro empieza a dañarse en unos minutos.
+• Récord de apnea estática (sin oxígeno puro): más de 11 minutos.
+• Con oxígeno puro antes: 24 min 37 s (Budimir Šobat, 2021).
+• Un zifio de Cuvier aguantó 222 minutos sumergido.
+
+⚠️ Nunca practiques apnea solo ni en el agua sin supervisión.
+
+📚 Fuentes: Parkes (Experimental Physiology, 2006), StatPearls (NCBI), Schagatay et al., DAN, NINDS, Cleveland Clinic, AIDA, Guinness World Records, Quick et al. (J. Exp. Biol., 2020).
+
+💬 ¿Cuánto crees que aguantarías tú? Te leo en comentarios.
+🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?».
+
+Música y efectos de sonido originales del canal. Voz sintética.
+
+#quepasariasi #cuerpohumano #apnea #curiosidades #shorts
+```
+
+## Etiquetas (YouTube Studio → Mostrar más → Etiquetas)
+```
+qué pasaría si, aguantar la respiración, apnea, 10 minutos sin respirar, cuerpo humano, reflejo de inmersión, récord, ballena, curiosidades, animación, hipotéticos
+```
+
+## Comentario fijado
+```
+¿Cuántos segundos aguantas tú? (en seco y sentado, ¡nunca en el agua solo!) ⏱️👇
+```
+
+## Ajustes
+* Categoría: Educación · Idioma: español (España) · No es contenido para niños
+* «Contenido alterado o sintético»: **Sí** (voz sintética)

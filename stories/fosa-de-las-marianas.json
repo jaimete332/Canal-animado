@@ -9,7 +9,7 @@
     {
       "id": "m01",
       "beat": "hook",
-      "narration": "Te metes en el mar y empiezas a bajar. Destino: el punto más profundo del planeta.",
+      "narration": "Bajas al fondo del mar y no paras: once mil metros.",
       "visual": {
         "background": {
           "type": "underwater",
