@@ -177,7 +177,7 @@ sc("i06", "development", "But you don't know how to hunt, track or make a spear.
 
 # ================================================================================================ L2 EGYPT
 ch("Level 2: Building the Pyramids")
-sc("e01", "development", "Level two. Egypt, around twenty-five sixty B.C. The Great Pyramid of Giza is going up, and you've just been put on a work crew.", {
+sc("e01", "development", "Level two. Egypt, around twenty-five sixty BC. The Great Pyramid of Giza is going up, and you've just been put on a work crew.", {
     "background": {"type": "desert"},
     "cast": [stan(x=0.3, action="pull", expression="tired", outfit="tunic", outfit_color="white")],
     "props": [{"type": "sack", "x": 0.18, "y": 0.86, "label": "STONE", "color": "stone"}],
@@ -489,11 +489,12 @@ sc("f04b", "development", "The machines had no guards. Children crawled undernea
 
 sc("f05", "development", "A government report in 1842 found that the average age at death for laborers in Manchester was just seventeen. Mostly because so many children died.", {
     "background": LINED,
+    "cast": [stan(x=0.15, y=0.95, action="sad", expression="sad", outfit="overalls", hat="flat_cap", scale=1.1)],
     "overlays": [{"type": "stat", "value": 17, "caption": "average age at death, Manchester laborers (1842)",
-                  "y": 0.38, "size": 220, "at_word": 18}]},
+                  "y": 0.38, "size": 220, "at": 0.8}]},
     claims=[F("Chadwick's 1842 report gave an average age at death of 17 for Manchester labourers' families",
               SRC["chadwick"])],
-    sfx=[{"name": "ding", "at_word": 18}])
+    sfx=[{"name": "ding", "at": 0.8}])
 
 sc("f06", "development", "As an adult, though, you'd probably survive. Verdict: years, but long, grey, exhausting ones.", {
     "background": {"type": "factory"},
@@ -574,7 +575,7 @@ sc("n02", "ending", "Global life expectancy today is around seventy-three years.
                   head_fill=(0.17, 0.27, 0.22))],
     "overlays": [{"type": "bars", "title": "Life expectancy at birth (rough)", "x": 0.36, "y": 0.3,
                   "items": [["Most of history", 30, "grey", "~30 years"], ["Today (world)", 73, "green", "~73 years"]],
-                  "max": 80, "bar_h": 90}]},
+                  "max": 100, "bar_h": 90}]},
     claims=[F("Global life expectancy is about 73 years", SRC["who"] + "; " + SRC["unwpp"]),
             F("Historic life expectancy at birth was typically around 30, mainly due to child mortality",
               SRC["hg"], "estimate")])
@@ -587,7 +588,10 @@ sc("n03", "ending", "Verdict for level eight: decades. You're living in the safe
 
 sc("n04", "ending", "So, final ranking. The deadliest levels: the Ice Age alone, and the trenches on day one. The safest past era? Surprisingly, the pyramid site.", {
     "background": {"type": "chalkboard"},
-    "overlays": [{"type": "bars", "title": "How long you'd last", "x": 0.3, "y": 0.18, "bar_h": 50, "gap": 14,
+    "cast": [stan(x=0.12, y=0.95, action="talk", expression="happy", scale=1.15, color=(0.95, 0.95, 0.92),
+                  head_fill=(0.17, 0.27, 0.22))],
+    "camera": {"move": "pan_right", "amount": 60, "zoom": 1.04},
+    "overlays": [{"type": "bars", "title": "How long you'd last", "x": 0.34, "y": 0.18, "bar_h": 50, "gap": 14,
                   "items": [["Ice Age (alone)", 1, "red", "days"], ["WW1 (day one)", 0.5, "red", "minutes"],
                             ["Vikings", 2, "orange", "weeks"], ["Black Death", 3, "yellow", "coin flip"],
                             ["Pirates", 3.5, "yellow", "1-2 years"], ["Factory", 4.5, "lime", "years"],

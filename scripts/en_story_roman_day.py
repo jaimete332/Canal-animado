@@ -283,7 +283,10 @@ sc("w01", "development", "Now, work. And here's the part you'll love: for many R
 
 sc("w02", "development", "The poet Martial described the routine: the first two hours for greetings, the third for lawyers, then business until the sixth or seventh hour.", {
     "background": {"type": "chalkboard"},
-    "overlays": [{"type": "bars", "title": "A Roman day, according to Martial", "x": 0.3, "y": 0.27,
+    "cast": [stan(x=0.12, y=0.95, action="talk", expression="happy", scale=1.15, color=(0.95, 0.95, 0.92),
+                  head_fill=(0.17, 0.27, 0.22))],
+    "camera": {"move": "pan_right", "amount": 60, "zoom": 1.04},
+    "overlays": [{"type": "bars", "title": "A Roman day, according to Martial", "x": 0.34, "y": 0.27,
                   "items": [["Hours 1-2", 2, "yellow", "greetings"], ["Hour 3", 1, "orange", "lawyers & courts"],
                             ["Hours 4-6", 3, "teal", "business"], ["Hour 7", 1, "lime", "rest"],
                             ["Hours 8-9", 2, "blue", "exercise & baths"], ["Hour 9+", 2, "red", "dinner"]],
@@ -555,9 +558,10 @@ sc("d01", "development", "Late afternoon is time for the main meal, the cena. Fo
 
 sc("d02", "development", "Guests lay on couches around the table, leaning on one elbow, while slaves brought course after course.", {
     "background": {"type": "interior", "wall": (0.82, 0.45, 0.35), "hearth": False, "window": False},
-    "props": [{"type": "table", "x": 0.5, "y": 0.88, "w": 640, "items": ["plate", "mug", "plate"]}],
-    "cast": [rich(x=0.3, y=0.9, action="lie", expression="happy"),
-             cast("g2", outfit="toga", x=0.62, y=0.9, action="lie", expression="laughing"),
+    "props": [{"type": "bed", "x": 0.22, "y": 0.9, "scale": 1.1}, {"type": "bed", "x": 0.73, "y": 0.9, "scale": 1.1},
+              {"type": "table", "x": 0.48, "y": 0.9, "w": 360, "items": ["plate", "mug", "plate"]}],
+    "cast": [rich(x=0.25, y=0.86, action="sit_talk", expression="happy"),
+             cast("g2", outfit="toga", x=0.7, y=0.86, action="sit", expression="laughing", facing=-1, item="mug"),
              cast("servant", outfit="tunic", outfit_color="white", x=0.85, action="carry", expression="tired",
                   action_params={"walking": False}, facing=-1)]},
     claims=[F("Wealthy Romans dined reclining on couches (triclinium)", SRC["angela"])])
@@ -637,7 +641,7 @@ sc("g01", "climax", "Now, on festival days, the routine changes completely, and 
 
 sc("g02", "climax", "The biggest crowd-pleaser wasn't the gladiators. It was chariot racing, at the Circus Maximus, which held around a hundred and fifty thousand people.", {
     "background": {"type": "arena"},
-    "props": [{"type": "chariot", "x": 0.3, "y": 0.92, "move": [[0, -0.2, 0.92], [6, 1.2, 0.92]]}],
+    "props": [{"type": "chariot", "x": 0.3, "y": 0.92, "move": [[0, -0.2, 0.92], [9.5, 1.2, 0.92]]}],
     "overlays": [{"type": "stat", "value": 150000, "caption": "spectators at the Circus Maximus (estimates vary)",
                   "y": 0.25, "size": 130, "at_word": 18}],
     "camera": {"move": "pan_right", "amount": 120}},
