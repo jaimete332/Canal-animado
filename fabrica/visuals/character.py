@@ -127,6 +127,8 @@ class Character:
                      "shoe": (0.95, 0.95, 0.95)},
         "pajamas": {"sleeve": (0.55, 0.68, 0.95), "torso": (0.55, 0.68, 0.95), "pants": (0.55, 0.68, 0.95),
                     "shoe": (0.95, 0.55, 0.6)},
+        "climber": {"sleeve": (0.9, 0.2, 0.18), "torso": (0.9, 0.2, 0.18), "pants": (0.15, 0.15, 0.2),
+                    "shoe": (0.98, 0.78, 0.15)},
         "peasant": {"sleeve": (0.62, 0.45, 0.28), "torso": (0.62, 0.45, 0.28), "pants": (0.45, 0.35, 0.25),
                     "shoe": (0.35, 0.24, 0.15)},
         "knight": {"sleeve": (0.72, 0.75, 0.8), "torso": (0.72, 0.75, 0.8), "pants": (0.62, 0.65, 0.7),
@@ -596,6 +598,16 @@ class Character:
             fill_stroke(ctx, self.p["yellow"], lw)
             rrect(ctx, hx - 0.15, hy - 1.14, 0.3, 0.22, 0.06)
             fill_stroke(ctx, (1, 1, 0.85), lw * 0.8)
+        elif pose.helmet == "beanie":       # gorro de lana con pompón (alpinista)
+            ctx.new_path()
+            ctx.move_to(hx - 0.98, hy - 0.4)
+            ctx.curve_to(hx - 0.98, hy - 1.5, hx + 0.98, hy - 1.5, hx + 0.98, hy - 0.4)
+            ctx.close_path()
+            fill_stroke(ctx, (0.15, 0.45, 0.9), lw)
+            rrect(ctx, hx - 1.04, hy - 0.58, 2.08, 0.32, 0.12)
+            fill_stroke(ctx, (0.95, 0.95, 0.98), lw)
+            circle(ctx, hx, hy - 1.38, 0.24)
+            fill_stroke(ctx, (0.95, 0.95, 0.98), lw)
         elif pose.helmet == "knight":
             ctx.new_path()
             ctx.move_to(hx - 1.0, hy + 0.55)
@@ -747,7 +759,7 @@ class Character:
 
     def _hair(self, ctx, pose: Pose, lw):
         hx, hy = HEAD_C
-        if pose.helmet in ("hardhat", "fedora", "police_cap", "knight", "straw_hat", "nightcap"):
+        if pose.helmet in ("hardhat", "fedora", "police_cap", "knight", "straw_hat", "nightcap", "beanie"):
             return
         wob = 0.03 * math.sin(pose.t * 5)
         ctx.new_path()

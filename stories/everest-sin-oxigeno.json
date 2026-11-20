@@ -1,0 +1,1072 @@
+{
+  "title": "¿Qué pasaría si subieras al Everest sin oxígeno?",
+  "idea": "¿Qué pasaría si subieras al Everest sin oxígeno?",
+  "slug": "everest-sin-oxigeno",
+  "category": "cuerpo humano",
+  "question": "¿Tú subirías al Everest sin oxígeno?",
+  "music_mood": "epic",
+  "scenes": [
+    {
+      "id": "v01",
+      "beat": "hook",
+      "narration": "Subes al Everest sin bombona de oxígeno. Cada metro, el aire es más fino.",
+      "visual": {
+        "background": {
+          "type": "mountain",
+          "alt": 0.2
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.76,
+          "scale": 1.25,
+          "outfit": "climber",
+          "helmet": "beanie",
+          "action": "walk",
+          "expression": "determined",
+          "actions": [
+            [
+              "w9",
+              "sweat"
+            ]
+          ],
+          "expressions": [
+            [
+              "w9",
+              "worried"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "oxygen",
+            "x": 0.82,
+            "y": 0.8,
+            "scale": 0.6,
+            "level": 1.0,
+            "until_word": 6
+          },
+          {
+            "type": "prayer_flags",
+            "x": 0.5,
+            "y": 0.42,
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿EVEREST",
+              "SIN OXÍGENO?"
+            ],
+            "y": 250,
+            "size": 120
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w6"
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at_word": 6
+        },
+        {
+          "name": "hit",
+          "at_word": 6,
+          "gain_db": -6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "oxígeno",
+        "fino"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v02",
+      "beat": "setup",
+      "narration": "Campo base, a cinco mil trescientos metros: ya respiras la mitad de oxígeno.",
+      "visual": {
+        "background": {
+          "type": "mountain",
+          "alt": 0.1
+        },
+        "character": {
+          "x": 0.42,
+          "y": 0.76,
+          "scale": 1.25,
+          "outfit": "climber",
+          "helmet": "beanie",
+          "action": "idle",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "tent",
+            "x": 0.2,
+            "y": 0.84,
+            "scale": 0.8
+          },
+          {
+            "type": "tent",
+            "x": 0.82,
+            "y": 0.76,
+            "scale": 0.7,
+            "color": "#2B6BE8"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 5364,
+            "suffix": " m",
+            "over": 1.0,
+            "y": 300,
+            "size": 130,
+            "sub": "CAMPO BASE"
+          },
+          {
+            "type": "label",
+            "text": "½ DE OXÍGENO",
+            "x": 540,
+            "y": 470,
+            "size": 68,
+            "bg": "#2B6BE8",
+            "at_word": 9
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "El campo base sur del Everest está a unos 5.364 m; allí la presión del aire es aproximadamente la mitad que a nivel del mar",
+          "kind": "fact",
+          "source": "John B. West, 'Barometric pressures on Mt. Everest', J. Appl. Physiol. (1999)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 9
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "mitad"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v03",
+      "beat": "setup",
+      "narration": "Te duele la cabeza, no duermes y el corazón va a mil: mal de altura.",
+      "visual": {
+        "background": {
+          "type": "mountain",
+          "alt": 0.1
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.76,
+          "scale": 1.25,
+          "outfit": "climber",
+          "helmet": "beanie",
+          "action": "sweat",
+          "expression": "dizzy"
+        },
+        "props": [
+          {
+            "type": "heart",
+            "x": 0.78,
+            "y": 0.45,
+            "scale": 0.6,
+            "bpm": 130,
+            "at_word": 7
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Dolor de cabeza, insomnio, náuseas y mareo son síntomas del mal de altura",
+            "at_word": 10,
+            "y": 250
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "shake": 0.1
+        }
+      },
+      "claims": [
+        {
+          "text": "Los síntomas del mal agudo de montaña incluyen dolor de cabeza, náuseas, mareo e insomnio",
+          "kind": "fact",
+          "source": "NHS, 'Altitude sickness'"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 7
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "cabeza"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v04",
+      "beat": "setup",
+      "narration": "Por eso nadie sube del tirón: pasas semanas subiendo y bajando para aclimatarte.",
+      "visual": {
+        "background": {
+          "type": "mountain",
+          "alt": 0.3
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.76,
+          "scale": 1.25,
+          "outfit": "climber",
+          "helmet": "beanie",
+          "action": "walk",
+          "expression": "tired",
+          "path": [
+            [
+              0,
+              0.25,
+              0.79
+            ],
+            [
+              2.0,
+              0.7,
+              0.73
+            ],
+            [
+              4.0,
+              0.3,
+              0.78
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "calendar",
+            "x": 0.8,
+            "y": 0.35,
+            "scale": 0.7,
+            "at_word": 6
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Las expediciones al Everest dedican varias semanas a la aclimatación con rotaciones entre campos",
+          "kind": "fact",
+          "source": "Himalayan Database; Everest expedition practice"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "semanas"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v05",
+      "beat": "development",
+      "narration": "Tu cuerpo responde: fabrica más glóbulos rojos para cargar más oxígeno.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF6B5C"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "heart",
+            "x": 0.5,
+            "y": 0.6,
+            "scale": 1.3,
+            "bpm": 90,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 100,
+            "to": 140,
+            "suffix": " %",
+            "at_word": 4,
+            "over": 1.2,
+            "y": 320,
+            "size": 120,
+            "sub": "GLÓBULOS ROJOS (APROX.)"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Con la aclimatación aumenta la producción de glóbulos rojos (eritropoyetina)",
+          "kind": "estimate",
+          "source": "NHS, 'Altitude sickness'; John B. West, 'Barometric pressures on Mt. Everest', J. Appl. Physiol. (1999)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 4
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "glóbulos"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v06",
+      "beat": "development",
+      "narration": "Siete mil metros: cada paso te cuesta varias respiraciones.",
+      "visual": {
+        "background": {
+          "type": "mountain",
+          "alt": 0.55
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.76,
+          "scale": 1.25,
+          "outfit": "climber",
+          "helmet": "beanie",
+          "action": "walk",
+          "expression": "tired",
+          "extras": {
+            "frost": 0.2
+          }
+        },
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 5364,
+            "to": 7000,
+            "suffix": " m",
+            "over": 1.0,
+            "y": 300,
+            "size": 130
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "shake": 0.15
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.3,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "paso"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v07",
+      "beat": "development",
+      "narration": "Ocho mil metros: entras en la zona de la muerte.",
+      "visual": {
+        "background": {
+          "type": "mountain",
+          "alt": 0.8
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.76,
+          "scale": 1.25,
+          "outfit": "climber",
+          "helmet": "beanie",
+          "action": "sweat",
+          "expression": "scared",
+          "extras": {
+            "frost": 0.4
+          }
+        },
+        "props": [
+          {
+            "type": "skull",
+            "x": 0.82,
+            "y": 0.42,
+            "scale": 0.7,
+            "at_word": 4,
+            "loop": "wobble"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 7000,
+            "to": 8000,
+            "suffix": " m",
+            "over": 1.0,
+            "y": 300,
+            "size": 130
+          },
+          {
+            "type": "label",
+            "text": "ZONA DE LA MUERTE",
+            "x": 540,
+            "y": 470,
+            "size": 68,
+            "bg": "#E8392F",
+            "at_word": 4
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w4"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Por encima de unos 8.000 m se habla de 'zona de la muerte': el cuerpo no puede aclimatarse",
+          "kind": "fact",
+          "source": "John B. West, 'Barometric pressures on Mt. Everest', J. Appl. Physiol. (1999)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at_word": 4,
+          "gain_db": -8
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "muerte"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v08",
+      "beat": "development",
+      "narration": "Aquí arriba, cada bocanada trae solo un tercio del oxígeno que abajo.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#2B6BE8",
+          "c2": "#5C8FE6"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "lungs",
+            "x": 0.5,
+            "y": 0.62,
+            "scale": 1.2,
+            "hold": 0.3,
+            "breathe": true
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "⅓ DE OXÍGENO",
+            "x": 540,
+            "y": 330,
+            "size": 90,
+            "bg": "#E8392F",
+            "at_word": 6
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "En la cima del Everest la presión atmosférica es aproximadamente un tercio de la del nivel del mar",
+          "kind": "fact",
+          "source": "John B. West, 'Barometric pressures on Mt. Everest', J. Appl. Physiol. (1999)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "tercio"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v09",
+      "beat": "development",
+      "narration": "Tu cuerpo ya no se adapta: se va gastando, hora a hora.",
+      "visual": {
+        "background": {
+          "type": "mountain",
+          "alt": 0.85
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.76,
+          "scale": 1.25,
+          "outfit": "climber",
+          "helmet": "beanie",
+          "action": "sweat",
+          "expression": "dizzy",
+          "extras": {
+            "frost": 0.5
+          }
+        },
+        "props": [
+          {
+            "type": "oxygen",
+            "x": 0.82,
+            "y": 0.8,
+            "scale": 0.6,
+            "level": 0.1
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "En la zona de la muerte el deterioro físico continúa aunque se esté aclimatado",
+          "kind": "fact",
+          "source": "John B. West, 'Barometric pressures on Mt. Everest', J. Appl. Physiol. (1999)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "gastando"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v10",
+      "beat": "development",
+      "narration": "Puede encharcarse tu pulmón o hincharse tu cerebro, y casi no te das cuenta.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#9D7BFF",
+          "c2": "#C2B0FF"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "lungs",
+            "x": 0.3,
+            "y": 0.6,
+            "scale": 0.9,
+            "hold": 0.8,
+            "at_word": 2
+          },
+          {
+            "type": "brain",
+            "x": 0.72,
+            "y": 0.6,
+            "scale": 0.8,
+            "dirt": 0.5,
+            "at_word": 7,
+            "loop": "wobble"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "label": "PELIGRO",
+            "text": "Edema pulmonar y cerebral de altura: pueden ser mortales",
+            "at_word": 10,
+            "y": 250
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "shake": 0.1
+        }
+      },
+      "claims": [
+        {
+          "text": "El edema pulmonar (HAPE) y cerebral (HACE) de altura son complicaciones potencialmente mortales",
+          "kind": "fact",
+          "source": "NHS, 'Altitude sickness'"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "crack",
+          "at_word": 7,
+          "gain_db": -8
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "pulmón",
+        "cerebro"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v11",
+      "beat": "climax",
+      "narration": "Y por fin: ocho mil ochocientos cuarenta y nueve metros. La cima.",
+      "visual": {
+        "background": {
+          "type": "mountain",
+          "alt": 1.0,
+          "summit": true
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.74,
+          "scale": 1.25,
+          "outfit": "climber",
+          "helmet": "beanie",
+          "action": "celebrate",
+          "expression": "excited",
+          "extras": {
+            "frost": 0.5
+          }
+        },
+        "props": [
+          {
+            "type": "prayer_flags",
+            "x": 0.5,
+            "y": 0.6,
+            "w": 700,
+            "scale": 0.8
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 8000,
+            "to": 8849,
+            "suffix": " m",
+            "over": 1.0,
+            "y": 300,
+            "size": 130,
+            "sub": "CIMA DEL EVEREST",
+            "at_word": 4
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [
+        {
+          "text": "La altura oficial del Everest es de 8.848,86 m (medición de China y Nepal, 2020)",
+          "kind": "fact",
+          "source": "Gobiernos de Nepal y China, 2020"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0
+        },
+        {
+          "name": "ding",
+          "at_word": 4
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "cima"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v12",
+      "beat": "climax",
+      "narration": "¿Imposible? No: en mil novecientos setenta y ocho, Messner y Habeler lo lograron sin oxígeno.",
+      "visual": {
+        "background": {
+          "type": "mountain",
+          "alt": 1.0,
+          "summit": true
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.74,
+          "scale": 1.25,
+          "outfit": "climber",
+          "helmet": "beanie",
+          "action": "present",
+          "expression": "wow"
+        },
+        "overlays": [
+          {
+            "type": "label",
+            "text": "8 DE MAYO DE 1978",
+            "x": 540,
+            "y": 330,
+            "size": 72,
+            "bg": "#22B573",
+            "at_word": 2
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Reinhold Messner y Peter Habeler hicieron la primera ascensión al Everest sin oxígeno embotellado el 8 de mayo de 1978",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 2
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "Messner"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v13",
+      "beat": "climax",
+      "narration": "Aun así, solo un pequeño porcentaje de quienes hacen cumbre lo consigue sin bombona.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FF8A00",
+          "c2": "#FFB24D"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "oxygen",
+            "x": 0.3,
+            "y": 0.75,
+            "scale": 0.9,
+            "level": 1.0
+          },
+          {
+            "type": "oxygen",
+            "x": 0.5,
+            "y": 0.75,
+            "scale": 0.9,
+            "level": 1.0
+          },
+          {
+            "type": "oxygen",
+            "x": 0.7,
+            "y": 0.75,
+            "scale": 0.9,
+            "level": 1.0
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "MENOS DEL 5 %",
+            "x": 540,
+            "y": 330,
+            "size": 90,
+            "bg": "#E8392F",
+            "at_word": 4
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Solo una pequeña parte (en torno al 3-5 %) de las ascensiones al Everest se han hecho sin oxígeno embotellado",
+          "kind": "estimate",
+          "source": "Himalayan Database"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "porcentaje"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v14",
+      "beat": "climax",
+      "narration": "Y lo peor viene después: la mayoría de muertes en la zona alta ocurren al bajar.",
+      "visual": {
+        "background": {
+          "type": "mountain",
+          "alt": 0.85
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.76,
+          "scale": 1.25,
+          "outfit": "climber",
+          "helmet": "beanie",
+          "action": "walk_back",
+          "expression": "dizzy",
+          "extras": {
+            "frost": 0.6
+          },
+          "path": [
+            [
+              0,
+              0.7,
+              0.72
+            ],
+            [
+              4,
+              0.3,
+              0.79
+            ]
+          ]
+        },
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Un estudio de 1921-2006 halló que la mayoría de muertes cerca de la cima ocurrieron durante el descenso",
+            "at_word": 9,
+            "y": 250
+          }
+        ],
+        "camera": {
+          "move": "pan_down",
+          "amount": 160
+        }
+      },
+      "claims": [
+        {
+          "text": "La mayoría de muertes de escaladores en la zona alta del Everest ocurren durante el descenso",
+          "kind": "fact",
+          "source": "Firth et al., 'Mortality on Mount Everest, 1921-2006', BMJ (2008)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "fall",
+          "at_word": 9,
+          "gain_db": -8
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "bajar"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v15",
+      "beat": "ending",
+      "narration": "Y si te dejaran en la cima sin aclimatarte, te desmayarías en pocos minutos.",
+      "visual": {
+        "background": {
+          "type": "mountain",
+          "alt": 1.0,
+          "summit": true
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.74,
+          "scale": 1.25,
+          "outfit": "climber",
+          "helmet": "beanie",
+          "action": "fall",
+          "expression": "happy_closed"
+        },
+        "overlays": [
+          {
+            "type": "timer",
+            "text": "2 MIN",
+            "x": 860,
+            "y": 320,
+            "p0": 0,
+            "p1": 1,
+            "over": 2.0,
+            "at_word": 10
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.2
+        }
+      },
+      "claims": [
+        {
+          "text": "A unos 8.500-9.000 m sin aclimatar ni oxígeno, el tiempo de conciencia útil es de solo 1-3 minutos",
+          "kind": "estimate",
+          "source": "FAA, 'Hypoxia: the higher you fly…' (tiempo de conciencia útil)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "fall",
+          "at_word": 9,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "minutos"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "v16",
+      "beat": "ending",
+      "narration": "¿Tú subirías al Everest sin oxígeno? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "mountain",
+          "alt": 0.2
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.76,
+          "scale": 1.25,
+          "outfit": "climber",
+          "helmet": "beanie",
+          "action": "talk",
+          "expression": "excited",
+          "actions": [
+            [
+              "w5",
+              "point_down"
+            ]
+          ]
+        },
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 5,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 5
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.35
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasaría si subieras 8.849 m sin oxígeno? 💀",
+    "hashtags": [
+      "#quepasariasi",
+      "#everest",
+      "#cuerpohumano",
+      "#montaña",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasaría si",
+      "everest",
+      "sin oxígeno",
+      "zona de la muerte",
+      "mal de altura",
+      "messner",
+      "montaña",
+      "alpinismo",
+      "cuerpo humano",
+      "curiosidades",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Hasta qué altura crees que llegarías tú? 🏔️👇",
+    "description": "Subes al Everest sin bombona de oxígeno… ¿qué le pasa a tu cuerpo metro a metro? 🏔️\n\nLeo sube desde el campo base hasta la cima y descubre qué hace la falta de oxígeno: mal de altura, aclimatación, la zona de la muerte y por qué lo más peligroso es bajar.\n\n🧪 DATOS REALES DEL VÍDEO\n• En el campo base (unos 5.364 m) la presión del aire es más o menos la mitad que a nivel del mar.\n• Dolor de cabeza, insomnio, náuseas y mareo: síntomas del mal de altura.\n• Las expediciones pasan semanas aclimatándose; el cuerpo fabrica más glóbulos rojos.\n• Por encima de unos 8.000 m está la «zona de la muerte»: el cuerpo ya no puede aclimatarse.\n• En la cima la presión es aproximadamente un tercio de la del nivel del mar.\n• El edema pulmonar y el cerebral de altura pueden ser mortales.\n• Altura oficial: 8.848,86 m (medición de 2020).\n• Messner y Habeler subieron sin oxígeno embotellado el 8 de mayo de 1978.\n• Solo una pequeña parte de las ascensiones se hacen sin oxígeno (estimación).\n• La mayoría de muertes en la zona alta ocurren durante el descenso (BMJ, 2008).\n• Sin aclimatar, a esa altura perderías el conocimiento en pocos minutos.\n\n📚 Fuentes: J. B. West (J. Appl. Physiol.), NHS, Himalayan Database, Firth et al. (BMJ 2008), Encyclopaedia Britannica, FAA.\n\n💬 ¿Tú subirías al Everest sin oxígeno? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?».\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #everest #cuerpohumano #montaña #shorts",
+    "target_seconds": [
+      50,
+      75
+    ],
+    "thumbnail": {
+      "scene": "v07",
+      "t": 1.5,
+      "lines": [
+        "¿EVEREST",
+        "SIN OXÍGENO?"
+      ],
+      "badge": "8.000 m: ZONA DE LA MUERTE",
+      "badge_pos": [
+        540,
+        1640
+      ],
+      "y": 260,
+      "character": {
+        "action": "sweat",
+        "expression": "scared",
+        "x": 0.5,
+        "y": 0.8,
+        "scale": 1.5,
+        "outfit": "climber",
+        "helmet": "beanie",
+        "extras": {
+          "frost": 0.4
+        }
+      },
+      "crop_y": 0.55,
+      "h_shift": 800,
+      "h_scale": 0.8
+    }
+  }
+}
