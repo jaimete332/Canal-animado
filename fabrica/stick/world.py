@@ -983,6 +983,8 @@ def p_bubble(ctx, p, t):
     bx, by = side * (w / 2 - 60), -h / 2 - 70
     age = p.get("_age", 10)
     k = ease_back(clamp(age / 0.3))
+    if k <= 0.01:
+        return
     ctx.save()
     ctx.scale(k, k)
     if kind == "thought":

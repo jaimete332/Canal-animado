@@ -203,6 +203,8 @@ def o_checklist(ctx, s, age, dur, t):
         if a < 0:
             continue
         g = ease_back(clamp(a / 0.3)) * _out_k(age, dur)
+        if g <= 0.01:
+            continue
         y = y0 + i * size * 1.6
         ctx.save()
         ctx.translate(x0 + 30, y)

@@ -436,6 +436,8 @@ class Stickman:
     def draw(self, ctx: cairo.Context, pose: Pose, pl: Placement, t: float = 0.0):
         lk = self.look
         j = skeleton(pose)
+        if abs(pl.scale) < 0.01:
+            return j
         ctx.save()
         ctx.translate(pl.x, pl.y)
         ctx.scale(pl.scale * pl.facing, pl.scale)
