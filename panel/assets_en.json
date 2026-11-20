@@ -1,8 +1,38 @@
 {
  "medieval-peasant-1348": {
-  "video_parts": ["/_blob/a4e3eea83a9a7171322e5f4bc16aae12", "/_blob/99e49b70654d993df450a3edf53a34a6", "/_blob/e121a93b9a550703c0a756cdbb848cbb", "/_blob/e31d70eec67a31bdee3cc7fbec81ac80", "/_blob/fd511ff9a311cb9ef05cdc2aabb3dff6"],
+  "video_parts": [
+   "/_blob/a4e3eea83a9a7171322e5f4bc16aae12",
+   "/_blob/99e49b70654d993df450a3edf53a34a6",
+   "/_blob/e121a93b9a550703c0a756cdbb848cbb",
+   "/_blob/e31d70eec67a31bdee3cc7fbec81ac80",
+   "/_blob/fd511ff9a311cb9ef05cdc2aabb3dff6"
+  ],
   "preview": "/_blob/89335b2d39f6e5fcfc7e738dc45783f3",
   "miniatura": "/_blob/e10025588e2c2f748ea30351eaf90873",
   "miniatura2": "/_blob/43dd86401d062134e429533285953d99"
+ },
+ "roman-day": {
+  "video_parts": [
+   "/_blob/e84bddf3c14e0c1dd1d792e369109c53",
+   "/_blob/4b614fd39de3855c2d77f56851fcb512",
+   "/_blob/453a51bd2578e7a5db3f53fd8f328694",
+   "/_blob/3b011c61d9058921ee1ca9372cc122dd",
+   "/_blob/f77e977eee8b313e9a9846e5e3f5faad"
+  ],
+  "preview": "/_blob/3539de36e7d40f48a5d5329d49358ac7",
+  "miniatura": "/_blob/f560c02ac649910b33596b55a00b4508",
+  "miniatura2": "/_blob/3807f0a1d2bd8c4ebb01b4edcb252f35"
+ },
+ "every-era": {
+  "video_parts": [
+   "/_blob/ce4b3d9780ca4cbb95c92242dca82892",
+   "/_blob/99435ebe7ab0fb799c2393675f8cdfa6",
+   "/_blob/4e61357c07039efc6e14dd48dbc95363",
+   "/_blob/fb31498290906764af07bfedb8ca1203",
+   "/_blob/62b540bb805f012d4c3783542275b82f"
+  ],
+  "preview": "/_blob/76c8aaf555118677d01b96168ce9b023",
+  "miniatura": "/_blob/7f95f7c0f0b07362c737c26d21048e2b",
+  "miniatura2": "/_blob/fae369d908f562cf8216fd88f4ece846"
  }
 }

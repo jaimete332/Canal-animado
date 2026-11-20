@@ -12,6 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CALENDARIO = {  # slug -> fecha y hora de publicación (hora de España; 21:00 = 15:00 en Nueva York)
     "medieval-peasant-1348": "2026-11-21T21:00",
+    "roman-day": "2026-11-28T21:00",
+    "every-era": "2026-12-05T21:00",
 }
 
 assets = json.loads(Path(sys.argv[1]).read_text()) if len(sys.argv) > 1 else {}
