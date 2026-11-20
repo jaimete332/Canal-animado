@@ -238,7 +238,8 @@ class StickScene:
             z = cam.get("zoom", 1.1)
             pxo, pyo = {"pan_left": (amt, 0), "pan_right": (-amt, 0), "pan_up": (0, amt), "pan_down": (0, -amt)}[mv]
         else:
-            z = cam.get("zoom", 1.0) + 0.015 * ease_io(k)
+            # "static" still breathes: a slow continuous push keeps long-form shots alive (no frozen frames)
+            z = cam.get("zoom", 1.0) + cam.get("drift", 0.05) * ease_io(k)
         focus = cam.get("focus", [0.5, 0.5])
         if isinstance(focus, str):
             spec = next((s for s, _, _ in self.cast if s.get("id") == focus), None)

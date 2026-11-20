@@ -166,7 +166,7 @@ def o_bars(ctx, s, age, dur, t):
 
 def o_people(ctx, s, age, dur, t):
     """Pictogram grid: n stickmen, the first `k` highlighted (e.g. 9 out of 10 were peasants)."""
-    from .rig import Look, Placement, Pose, Stickman
+    from .rig import ACTIONS, Look, Placement, Stickman
     n, k = s.get("n", 10), s.get("k", 1)
     cols = s.get("cols", min(n, 10))
     rows = math.ceil(n / cols)
@@ -181,7 +181,7 @@ def o_people(ctx, s, age, dur, t):
         hl = (i < k) if not s.get("from_end") else (i >= n - k)
         col_ = c(s.get("color", "red")) if hl and age > s.get("reveal_at", 0) else c(s.get("dim", (0.62, 0.62, 0.65)))
         look = Look(color=col_, seed=i, outfit=s.get("outfit"), outfit_color=s.get("outfit_color", "brown"))
-        Stickman(look).draw(ctx, Pose(), Placement(x0 + cc * gx, y0 + r * gy + 120, s.get("fig_scale", 0.95) * g, 1,
+        Stickman(look).draw(ctx, ACTIONS["idle"](t + i * 0.7, 5, {}), Placement(x0 + cc * gx, y0 + r * gy + 120, s.get("fig_scale", 0.95) * g, 1,
                                                     "happy" if hl else "neutral"), t + i)
     if s.get("caption"):
         write_block(ctx, s["caption"], W / 2, s.get("caption_y", 0.12) * H, 64, W - 300, INK, MARKER,
