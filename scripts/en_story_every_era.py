@@ -661,6 +661,6 @@ st.save(
                        "cast": [{"id": "stan", "outfit": "tunic", "outfit_color": "sky", "x": 0.6, "y": 0.96,
                                  "scale": 1.8, "action": "shiver", "expression": "scared", "facing": -1}]},
             "t": 1.0, "lines": ["SURVIVE", "EVERY ERA?"], "colors": ["white", "yellow"],
-            "badge": "ICE AGE → TODAY", "badge_color": "teal", "size": 120}],
+            "badge": "ICE AGE TO TODAY", "badge_color": "teal", "size": 120}],
     },
 )
