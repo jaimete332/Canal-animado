@@ -932,7 +932,8 @@ sc("f02", "ending", "You survived the work, the fees, the pottage, the winter, a
 
 sc("f02b", "ending", "Final tally: a penny or two a day before the plague, and up to three pennies after. Around three hundred bowls of pottage. And one very lucky family.", {
     "background": {"type": "chalkboard"},
-    "cast": [stan(x=0.12, y=0.95, action="talk", expression="happy", scale=1.15, actions=[["w20", "cheer"]])],
+    "cast": [stan(x=0.12, y=0.95, action="talk", expression="happy", scale=1.15, actions=[["w20", "cheer"]],
+                  color=(0.95, 0.95, 0.92), head_fill=(0.17, 0.27, 0.22))],
     "camera": {"move": "pan_right", "amount": 60, "zoom": 1.04},
     "overlays": [{"type": "bars", "title": "Stan's year in numbers", "x": 0.36, "y": 0.32,
                   "items": [["Wage before", 1.5, "grey", "1-2d/day"], ["Wage after", 3, "green", "up to 3d/day"],
