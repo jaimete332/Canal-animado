@@ -1,0 +1,55 @@
+{
+ "updated": "2026-11-20",
+ "n_videos": 222,
+ "rules": [
+  "Título: evitar abusar de segunda persona (tú/te) (menos frecuente en los top).",
+  "Título: evitar abusar de supervivencia / peligro (menos frecuente en los top).",
+  "Duración: la mediana de los top es 12.5 min (rango 5-20 min).",
+  "Título de unos 47 caracteres (mediana de los top).",
+  "Temas con más tirón ahora: prison / punishment, pirates / sailors, ancient egypt, survival.",
+  "Formato estrella (medido): pregunta de curiosidad sobre la vida cotidiana — «What Did X Actually Do All Day?», «…at Night?», «…For Fun?» (19 M, 8 M, 5,6 M vistas).",
+  "Formato 2 (medido): ranking por niveles — «How Long You'd Last in Every …», «Every … Level Explained» (13 M, 3,8 M, 0,8 M). Un capítulo por nivel, de menos a más extremo, con veredicto por nivel.",
+  "Duración: 10-13 min (mediana de los top 12,5 min). Más largo que el episodio 1 (8 min).",
+  "Título: tono de curiosidad («Actually», «Every», «Worst») mejor que amenaza; ~45-50 caracteres; sin emoji; casi sin MAYÚSCULAS.",
+  "Gancho (observado): responde en 1 frase por qué la pregunta importa y promete una sorpresa concreta; nada de saludos.",
+  "Miniatura (observado): stickman grande con emoción clara + 2-4 palabras; escenario reconocible de la época.",
+  "Temas con tirón (medido): vida diaria en la Antigüedad, Roma, prehistoria, cárceles/castigos, piratas, Egipto; medieval está más saturado."
+ ],
+ "preferred_topics": [
+  "prison / punishment",
+  "pirates / sailors",
+  "ancient egypt",
+  "survival"
+ ],
+ "title_examples": [
+  "What Did Ancient Humans Actually Do All Day?",
+  "What Did Ancient Humans Do For Pleasure?",
+  "How Long You’d Last in Every Prehistoric Era",
+  "Zombie Outbreak: 30 Days Locked Inside a Supermarket",
+  "Why Attacking a Sleeping Roman Army Was a Death Trap",
+  "What If Your Reaction Time Was 10x Faster?",
+  "How Long You'd Last in Every Prehistoric Ocean",
+  "Stay in Your Room, Room 214 (School, Part 1)",
+  "Every Tornado Strength Level Explained",
+  "How Every Infamous Dictator Died"
+ ],
+ "target_seconds": {
+  "mediana_s": 749,
+  "min_s": 321,
+  "max_s": 1194
+ },
+ "principle": "Replicar patrones (estructura, ritmo, formato), nunca guiones, personajes, marcas ni miniaturas ajenas.",
+ "references": [
+  "Ink Explainer",
+  "Lore Explained",
+  "Fossil",
+  "The Curious Stick",
+  "The Scribble Scholar",
+  "Zenn",
+  "Barely Evolved",
+  "What If Stickman",
+  "The Paint Explainer",
+  "Simple Paint"
+ ],
+ "source": "YouTube Data API v3 (datos medidos, 2026-11-20, región US, 4-25 min, últimos 24 meses) + observaciones (marcadas)"
+}

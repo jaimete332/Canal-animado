@@ -76,3 +76,33 @@ paths:
   stories: stories_en
   deliver: TO_UPLOAD
   archive: samples_en
+
+research:                     # `python -m fabrica --channel stickman_en research`
+  name: "stickman what-if / could you survive (long-form, EN)"
+  language: en
+  region: US
+  video_duration: medium      # YouTube's 4-20 min bucket
+  min_duration_s: 300
+  max_duration_s: 1500
+  queries:
+    - "could you survive medieval"
+    - "what if you lived in medieval times"
+    - "stickman history"
+    - "what if you were a peasant"
+    - "life as a roman soldier"
+    - "what if you lived in ancient rome"
+    - "could you survive history"
+    - "stickman what if"
+    - "worst jobs in history"
+    - "a day in the life medieval"
+  topics:
+    medieval: "medieval middle ages peasant knight castle king serf plague black death crusade"
+    ancient rome / greece: "rome roman legion gladiator caesar ancient greece greek sparta spartan"
+    ancient egypt: "egypt egyptian pharaoh pyramid mummy"
+    vikings: "viking vikings norse raider"
+    pirates / sailors: "pirate pirates sailor navy ship titanic"
+    wars / soldiers: "war ww1 ww2 trench soldier army samurai"
+    wild west / frontier: "wild west cowboy oregon trail frontier gold rush"
+    prison / punishment: "prison jail punishment execution alcatraz"
+    jobs / daily life: "job jobs work life day worst daily"
+    survival: "survive surviving survival trapped stranded"
