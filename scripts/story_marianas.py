@@ -67,6 +67,7 @@ sc("m03", "setup", "Cuarenta metros: el límite del buceo recreativo. Más abajo
 sc("m04", "setup", "Trescientos treinta y dos metros: el récord humano con botella. Desde aquí, solo en submarino.", {
     "background": deep(0.45),
     "character": {"visible": False},
+    "character": {"visible": False},
     "props": [sub(at_word=10, enter="drop")],
     "overlays": [metros(40, 332), lbl("RÉCORD DE BUCEO", "#22B573", at_word=7)],
     "camera": {"move": "push_in"}},
@@ -75,6 +76,7 @@ sc("m04", "setup", "Trescientos treinta y dos metros: el récord humano con bote
 
 sc("m05", "development", "Mil metros: la luz del sol desaparece del todo. Oscuridad total, para siempre.", {
     "background": deep(0.95, surface=False),
+    "character": {"visible": False},
     "props": [sub()],
     "overlays": [metros(332, 1000), lbl("ZONA SIN LUZ", "#19162B", at_word=7)],
     "camera": {"move": "push_in"}},
@@ -83,6 +85,7 @@ sc("m05", "development", "Mil metros: la luz del sol desaparece del todo. Oscuri
 
 sc("m06", "development", "Pero no estás solo: aquí cazan peces con linternas en la cabeza.", {
     "background": ABYSS,
+    "character": {"visible": False},
     "props": [sub(light=True), {"type": "anglerfish", "x": 0.72, "y": 0.72, "scale": 0.9, "at_word": 4,
                                 "enter": "slide_right"}],
     "camera": {"move": "push_in", "focus": [0.7, 0.7]}},
@@ -91,6 +94,7 @@ sc("m06", "development", "Pero no estás solo: aquí cazan peces con linternas e
 
 sc("m07", "development", "Tres mil ochocientos metros: pasas junto al Titanic, que descansa a esta profundidad.", {
     "background": ABYSS,
+    "character": {"visible": False},
     "props": [sub(), {"type": "liner", "x": 0.6, "y": 0.86, "scale": 0.5, "tilt": 0.12, "sink": 0.0,
                       "at_word": 5, "enter": "rise"}],
     "overlays": [metros(1000, 3800)],
@@ -100,6 +104,7 @@ sc("m07", "development", "Tres mil ochocientos metros: pasas junto al Titanic, q
 
 sc("m08", "development", "La presión aquí aplastaría una lata de refresco como si fuera papel.", {
     "background": ABYSS,
+    "character": {"visible": False},
     "props": [sub(), {"type": "pressure", "x": 0.75, "y": 0.4, "scale": 0.7, "at_word": 2, "loop": "shake"}],
     "overlays": [{"type": "fact", "text": "A 4.000 m la presión es unas 400 veces la de la superficie",
                   "at_word": 3, "y": 250}],
@@ -109,6 +114,7 @@ sc("m08", "development", "La presión aquí aplastaría una lata de refresco com
 
 sc("m09", "development", "Ocho mil trescientos metros: el pez más profundo jamás filmado. Un pez caracol rosa.", {
     "background": ABYSS,
+    "character": {"visible": False},
     "props": [sub(), {"type": "snailfish", "x": 0.72, "y": 0.75, "scale": 1.0, "at_word": 6}],
     "overlays": [metros(3800, 8336), lbl("RÉCORD: 8.336 m", "#FF6B5C", at_word=6)],
     "camera": {"move": "push_in", "focus": [0.7, 0.72]}},
@@ -118,6 +124,7 @@ sc("m09", "development", "Ocho mil trescientos metros: el pez más profundo jam�
 
 sc("m10", "climax", "Y por fin, el fondo: casi once mil metros. El abismo Challenger.", {
     "background": {"type": "trench_deep", "floor": 1500},
+    "character": {"visible": False},
     "props": [sub(y=0.62)],
     "overlays": [metros(8336, 10935, sub="ABISMO CHALLENGER")],
     "camera": {"move": "zoom_burst"}},
@@ -137,6 +144,7 @@ sc("m11", "climax", "Aquí la presión es más de mil veces la de la superficie.
 
 sc("m12", "climax", "Hace mucho frío, apenas unos grados, y el suelo es un barro finísimo.", {
     "background": {"type": "trench_deep", "floor": 1500},
+    "character": {"visible": False},
     "props": [sub(y=0.62), {"type": "thermometer", "x": 0.82, "y": 0.4, "scale": 0.8, "level": 0.12, "at_word": 3}],
     "camera": {"move": "static"}},
    claims=[F("El agua en el fondo de la fosa está a unos 1-4 °C", SRC_NOAA)],
@@ -144,6 +152,7 @@ sc("m12", "climax", "Hace mucho frío, apenas unos grados, y el suelo es un barr
 
 sc("m13", "ending", "Solo un puñado de personas ha llegado hasta aquí. La primera vez fue en mil novecientos sesenta.", {
     "background": {"type": "trench_deep", "floor": 1500},
+    "character": {"visible": False},
     "props": [sub(y=0.62)],
     "overlays": [{"type": "label", "text": "TRIESTE · 23/1/1960", "x": 540, "y": 330, "size": 72, "bg": "#FFD23F",
                   "color": "#19162B", "at_word": 11}],
@@ -155,7 +164,7 @@ sc("m13", "ending", "Solo un puñado de personas ha llegado hasta aquí. La prim
    sfx=[{"name": "sparkle", "at_word": 11}], emphasis=["puñado"])
 
 sc("m14", "ending", "Han subido más personas a la Luna que las que bajaron aquí durante décadas.", {
-    "background": {"type": "night_sky"},
+    "background": {"type": "night_sky", "moon": False},
     "character": {"visible": False},
     "props": [{"type": "moon", "x": 0.5, "y": 0.45, "r": 220}],
     "overlays": [{"type": "label", "text": "12 EN LA LUNA", "x": 540, "y": 1200, "size": 80, "bg": "#9D7BFF",

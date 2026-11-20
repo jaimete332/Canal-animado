@@ -64,7 +64,7 @@ sc("v03", "setup", "Te duele la cabeza, no duermes y el corazón va a mil: mal d
 sc("v04", "setup", "Por eso nadie sube del tirón: pasas semanas subiendo y bajando para aclimatarte.", {
     "background": mt(0.3),
     "character": leo(action="walk", expression="tired", path=[[0, 0.25, 0.79], [2.0, 0.7, 0.73], [4.0, 0.3, 0.78]]),
-    "props": [{"type": "calendar", "x": 0.8, "y": 0.35, "scale": 0.7, "at_word": 6}],
+    "overlays": [{"type": "label", "text": "4-8 SEMANAS", "x": 540, "y": 330, "size": 80, "bg": "#2B6BE8", "at_word": 6}],
     "camera": {"move": "static"}},
    claims=[F("Las expediciones al Everest dedican varias semanas a la aclimatación con rotaciones entre campos",
              "Himalayan Database; Everest expedition practice")],
@@ -101,7 +101,7 @@ sc("v08", "development", "Aquí arriba, cada bocanada trae solo un tercio del ox
     "background": {"type": "burst", "c1": "#2B6BE8", "c2": "#5C8FE6"},
     "character": {"visible": False},
     "props": [{"type": "lungs", "x": 0.5, "y": 0.62, "scale": 1.2, "hold": 0.3, "breathe": True}],
-    "overlays": [{"type": "label", "text": "⅓ DE OXÍGENO", "x": 540, "y": 330, "size": 90, "bg": "#E8392F",
+    "overlays": [{"type": "label", "text": "1/3 DE OXÍGENO", "x": 540, "y": 330, "size": 90, "bg": "#E8392F",
                   "at_word": 6}],
     "camera": {"move": "static"}},
    claims=[F("En la cima del Everest la presión atmosférica es aproximadamente un tercio de la del nivel del mar",

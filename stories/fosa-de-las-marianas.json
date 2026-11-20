@@ -298,6 +298,9 @@
           "floor": 2400,
           "surface": false
         },
+        "character": {
+          "visible": false
+        },
         "props": [
           {
             "type": "bathyscaphe",
@@ -361,6 +364,9 @@
           "type": "trench_deep",
           "floor": 2400
         },
+        "character": {
+          "visible": false
+        },
         "props": [
           {
             "type": "bathyscaphe",
@@ -414,6 +420,9 @@
         "background": {
           "type": "trench_deep",
           "floor": 2400
+        },
+        "character": {
+          "visible": false
         },
         "props": [
           {
@@ -474,6 +483,9 @@
           "type": "trench_deep",
           "floor": 2400
         },
+        "character": {
+          "visible": false
+        },
         "props": [
           {
             "type": "bathyscaphe",
@@ -532,6 +544,9 @@
         "background": {
           "type": "trench_deep",
           "floor": 2400
+        },
+        "character": {
+          "visible": false
         },
         "props": [
           {
@@ -605,6 +620,9 @@
         "background": {
           "type": "trench_deep",
           "floor": 1500
+        },
+        "character": {
+          "visible": false
         },
         "props": [
           {
@@ -724,6 +742,9 @@
           "type": "trench_deep",
           "floor": 1500
         },
+        "character": {
+          "visible": false
+        },
         "props": [
           {
             "type": "bathyscaphe",
@@ -767,6 +788,9 @@
         "background": {
           "type": "trench_deep",
           "floor": 1500
+        },
+        "character": {
+          "visible": false
         },
         "props": [
           {
@@ -823,7 +847,8 @@
       "narration": "Han subido más personas a la Luna que las que bajaron aquí durante décadas.",
       "visual": {
         "background": {
-          "type": "night_sky"
+          "type": "night_sky",
+          "moon": false
         },
         "character": {
           "visible": false
