@@ -6188,11 +6188,38 @@
         "background": {
           "type": "chalkboard"
         },
+        "cast": [
+          {
+            "id": "stan",
+            "x": 0.12,
+            "y": 0.95,
+            "scale": 1.15,
+            "outfit": "tunic",
+            "outfit_color": [
+              0.55,
+              0.42,
+              0.3
+            ],
+            "action": "talk",
+            "expression": "happy",
+            "actions": [
+              [
+                "w20",
+                "cheer"
+              ]
+            ]
+          }
+        ],
+        "camera": {
+          "move": "pan_right",
+          "amount": 60,
+          "zoom": 1.04
+        },
         "overlays": [
           {
             "type": "bars",
             "title": "Stan's year in numbers",
-            "x": 0.3,
+            "x": 0.36,
             "y": 0.32,
             "items": [
               [
