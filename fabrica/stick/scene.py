@@ -225,9 +225,9 @@ class StickScene:
         k = t / max(self.dur, 1e-3)
         z, pxo, pyo = 1.0, 0.0, 0.0
         if mv == "push_in":
-            z = lerp(cam.get("zoom_from", 1.0), cam.get("zoom_to", 1.08), ease_io(k))
+            z = lerp(cam.get("zoom_from", 1.0), cam.get("zoom_to", 1.08), 0.6 * ease_io(k) + 0.4 * k)
         elif mv == "pull_out":
-            z = lerp(cam.get("zoom_from", 1.18), cam.get("zoom_to", 1.0), ease_out(k))
+            z = lerp(cam.get("zoom_from", 1.18), cam.get("zoom_to", 1.0), 0.6 * ease_out(k) + 0.4 * k)
         elif mv == "zoom_to":
             t0 = self.at(cam.get("at"), 0.0)
             z = lerp(cam.get("zoom_from", 1.0), cam.get("zoom_to", 1.6), ease_io(clamp((t - t0) / cam.get("time", 0.8))))
