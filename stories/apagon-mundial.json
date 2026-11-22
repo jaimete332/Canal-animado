@@ -1,0 +1,7929 @@
+{
+  "title": "¿Qué pasaría si se apagara la electricidad en todo el mundo?",
+  "idea": "¿Qué pasaría si se apagara la electricidad en todo el mundo?",
+  "slug": "apagon-mundial",
+  "category": "ciencia",
+  "question": "¿Qué echarías más de menos?",
+  "music_mood": "mystery",
+  "scenes": [
+    {
+      "id": "i01",
+      "beat": "hook",
+      "narration": "Imagina que ahora mismo, en todo el planeta a la vez, se apagan todas las luces.",
+      "visual": {
+        "background": {
+          "type": "space"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "earth_night",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.35,
+            "off_at": 2.2,
+            "off_spread": 1.6,
+            "enter": "none",
+            "loop": "bob"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿Y SI SE APAGARA",
+              "TODO EL MUNDO?"
+            ],
+            "y": 130,
+            "size": 92
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.12
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.0,
+          "gain_db": -6
+        },
+        {
+          "name": "boom",
+          "at_word": 13,
+          "gain_db": -4
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "planeta",
+        "luces"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i02",
+      "beat": "setup",
+      "narration": "Y no vuelven. Ni en un minuto, ni en una hora, ni mañana.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "lights": 0,
+          "stars": 1,
+          "milky": 0.0
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shock",
+          "expression": "scared"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.55
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.1
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 0
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "vuelven"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i03",
+      "beat": "setup",
+      "narration": "Parece ciencia ficción, pero una parte de esto ya ocurrió hace muy poco, aquí al lado.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "28 DE ABRIL DE 2025",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#E8392F",
+            "at_word": 9
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 9
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i04",
+      "beat": "setup",
+      "narration": "El veintiocho de abril de 2025, a las doce y treinta y tres, España y Portugal se quedaron sin luz.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shock",
+          "expression": "shock",
+          "actions": [
+            [
+              0,
+              "talk"
+            ],
+            [
+              "w14",
+              "shock"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "traffic_light",
+            "x": 0.62,
+            "y": 0.97,
+            "scale": 1.0,
+            "state": "green",
+            "off_at": 4.6
+          },
+          {
+            "type": "traffic_light",
+            "x": 0.86,
+            "y": 0.97,
+            "scale": 1.0,
+            "state": "red",
+            "off_at": 4.7
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "12:33",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#1B1B3A",
+            "at_word": 6
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "El apagón ibérico empezó a las 12:33 del 28 de abril de 2025",
+          "kind": "fact",
+          "source": "La Moncloa (declaración del presidente del Gobierno, 28/04/2025)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "crack",
+          "at_word": 15
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i05",
+      "beat": "setup",
+      "narration": "En apenas cinco segundos desaparecieron quince gigavatios: alrededor del sesenta por ciento de lo que consumía España en ese momento.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#1B1B3A",
+          "c2": "#3B3F78",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 60,
+            "suffix": " %",
+            "at_word": 9,
+            "over": 0.8,
+            "y": 380,
+            "size": 220,
+            "sub": "DE LA DEMANDA, EN 5 SEGUNDOS"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Se perdieron 15 GW de generación en unos cinco segundos, cerca del 60 % de la demanda",
+          "kind": "fact",
+          "source": "La Moncloa (declaración del presidente del Gobierno, 28/04/2025)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 9
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "quince",
+        "sesenta"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i05b",
+      "beat": "setup",
+      "narration": "Y no es el récord. En julio de 2012, en la India, un apagón dejó sin luz a más de seiscientos veinte millones de personas.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FF8A3D",
+          "c2": "#FFB36B",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 620,
+            "suffix": " MILLONES",
+            "at_word": 17,
+            "over": 0.8,
+            "y": 300,
+            "size": 150,
+            "sub": "INDIA · JULIO 2012"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "El apagón de la India del 30-31 de julio de 2012 afectó a más de 620 millones de personas",
+          "kind": "fact",
+          "source": "Gobierno de la India / prensa internacional"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 17
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "seiscientos"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i05c",
+      "beat": "setup",
+      "narration": "Y en 2003, otro dejó a oscuras a unos cincuenta y cinco millones en el noreste de Estados Unidos y Canadá.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "lights": 0,
+          "stars": 1,
+          "milky": 0.0
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "surprised"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "2003 · 55 MILLONES",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#3B82F6",
+            "at_word": 1
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "El apagón del noreste de 2003 afectó a unos 55 millones de personas en EE. UU. y Canadá",
+          "kind": "fact",
+          "source": "U.S.-Canada Power System Outage Task Force (2004)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i06",
+      "beat": "setup",
+      "narration": "Millones de personas pasaron casi un día entero descubriendo cuántas cosas dependen de un enchufe.",
+      "visual": {
+        "background": {
+          "type": "kitchen",
+          "native": true,
+          "day": true,
+          "lights": 0,
+          "blink": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shrug",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "fridge",
+            "x": 0.8,
+            "y": 0.92,
+            "scale": 0.95,
+            "lights": 0,
+            "enter": "none"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i07",
+      "beat": "setup",
+      "narration": "Hoy lo llevamos al extremo: un apagón total, en todo el mundo, que dura minutos, horas, días… y luego años.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "excited"
+        },
+        "props": [
+          {
+            "type": "clock",
+            "x": 0.68,
+            "y": 0.47,
+            "scale": 1.2,
+            "speed": 14,
+            "loop": "bob"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "extremo",
+        "años"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i08",
+      "beat": "setup",
+      "narration": "Con datos reales: lo que pasó en apagones de verdad y lo que cuentan los ingenieros.",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "red",
+          "label": "RED ELÉCTRICA · SIN TENSIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "point_up",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "magnifier",
+            "x": 0.72,
+            "y": 0.5,
+            "scale": 1.0,
+            "at_word": 3
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 3
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i09",
+      "beat": "setup",
+      "narration": "Vamos a ver cuánto tarda en romperse cada cosa que das por hecha. Empieza la cuenta atrás.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "talk",
+          "expression": "excited"
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 1.0,
+            "label": "¿CUÁNTO SIGUE FUNCIONANDO?",
+            "ticks": [
+              "NADA",
+              "POCO",
+              "LA MITAD",
+              "CASI TODO",
+              "TODO"
+            ],
+            "at_word": 4,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [
+        "romperse"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m01",
+      "beat": "development",
+      "narration": "Segundo cero. Estás en casa, es mediodía… y de repente la nevera deja de zumbar.",
+      "visual": {
+        "background": {
+          "type": "kitchen",
+          "native": true,
+          "day": true,
+          "off_at": 4.4
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "idle",
+          "expression": "happy",
+          "expressions": [
+            [
+              "w11",
+              "surprised"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "fridge",
+            "x": 0.8,
+            "y": 0.92,
+            "scale": 0.95,
+            "enter": "none",
+            "off_at": 4.4
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "SEGUNDO 0"
+            ],
+            "y": 120,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "nevera"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m01b",
+      "beat": "development",
+      "narration": "Si estabas con el ordenador de sobremesa, lo que no hubieras guardado acaba de desaparecer. Primera pérdida del día.",
+      "visual": {
+        "background": {
+          "type": "office"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shock",
+          "expression": "angry",
+          "actions": [
+            [
+              0,
+              "talk"
+            ],
+            [
+              "w11",
+              "shock"
+            ]
+          ]
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "crack",
+          "at_word": 11
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "guardado"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m02",
+      "beat": "development",
+      "narration": "Lo primero que notas es el silencio: ni la nevera, ni el router, ni el aire acondicionado.",
+      "visual": {
+        "background": {
+          "type": "kitchen",
+          "native": true,
+          "day": true,
+          "lights": 0,
+          "blink": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "look_up",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "wifi",
+            "x": 0.72,
+            "y": 0.4,
+            "scale": 1.0,
+            "crossed": true,
+            "at_word": 10
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 10
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "silencio"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m03",
+      "beat": "development",
+      "narration": "Miras el móvil: la batería va bien, pero el wifi ha desaparecido. Y fuera empieza el lío.",
+      "visual": {
+        "background": {
+          "type": "kitchen",
+          "native": true,
+          "day": true,
+          "lights": 0,
+          "blink": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "talk",
+          "expression": "surprised"
+        },
+        "props": [
+          {
+            "type": "smartphone",
+            "x": 0.7,
+            "y": 0.45,
+            "scale": 0.9,
+            "loop": "bob"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m04",
+      "beat": "development",
+      "narration": "En la calle, los semáforos se apagan de golpe. Así se dieron cuenta muchos el veintiocho de abril.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "look_up",
+          "expression": "surprised"
+        },
+        "props": [
+          {
+            "type": "traffic_light",
+            "x": 0.55,
+            "y": 0.97,
+            "scale": 1.0,
+            "state": "green",
+            "off_at": 1.6
+          },
+          {
+            "type": "traffic_light",
+            "x": 0.82,
+            "y": 0.97,
+            "scale": 1.0,
+            "state": "red",
+            "off_at": 1.7
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "La desconexión de los semáforos fue uno de los primeros síntomas visibles del apagón",
+          "kind": "fact",
+          "source": "Prensa española, 28/04/2025"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "crack",
+          "at_word": 5
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m05",
+      "beat": "development",
+      "narration": "Cada cruce se convierte en una negociación entre conductores, hasta que llegan los agentes a dirigir el tráfico.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shrug",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "car",
+            "x": 0.5,
+            "y": 0.86,
+            "scale": 0.8,
+            "enter": "slide_left"
+          },
+          {
+            "type": "car",
+            "x": 0.82,
+            "y": 0.9,
+            "scale": 0.8,
+            "flip": -1,
+            "enter": "slide_right"
+          },
+          {
+            "type": "traffic_light",
+            "x": 0.66,
+            "y": 0.97,
+            "scale": 0.9,
+            "state": "off",
+            "layer": "back"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 5
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m05b",
+      "beat": "development",
+      "narration": "Las fábricas se detienen en seco: hornos, cintas y robots se quedan quietos a mitad de tarea.",
+      "visual": {
+        "background": {
+          "type": "grid_field",
+          "native": true
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "look_up",
+          "expression": "surprised"
+        },
+        "props": [
+          {
+            "type": "crane",
+            "x": 0.68,
+            "y": 0.9,
+            "scale": 0.8
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m06",
+      "beat": "development",
+      "narration": "Arriba, en los edificios, mucha gente se queda encerrada en ascensores, parados entre dos plantas.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#3B3F78",
+          "c2": "#5A5FA0",
+          "window": 960
+        },
+        "character": {
+          "x": 0.28,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "sweat",
+          "expression": "scared",
+          "sweat": 0.8
+        },
+        "props": [
+          {
+            "type": "elevator",
+            "x": 0.68,
+            "y": 0.98,
+            "scale": 1.15,
+            "display": "--",
+            "alarm": true
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 7
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "encerrada"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m07",
+      "beat": "development",
+      "narration": "Aquel día, solo en Madrid, los servicios de emergencia hicieron doscientos ochenta y seis rescates en ascensores.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#3B3F78",
+          "c2": "#5A5FA0",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "elevator",
+            "x": 0.5,
+            "y": 1.0,
+            "scale": 0.9,
+            "display": "--",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 286,
+            "suffix": "",
+            "at_word": 10,
+            "over": 0.8,
+            "y": 230,
+            "size": 180,
+            "sub": "RESCATES EN ASCENSORES · MADRID"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "En Madrid se realizaron 286 rescates en ascensores durante el apagón",
+          "kind": "fact",
+          "source": "El País, 29/04/2025"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 10
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m08",
+      "beat": "development",
+      "narration": "Bajo tierra es peor: el metro se para en mitad del túnel y las luces se apagan.",
+      "visual": {
+        "background": {
+          "type": "metro",
+          "native": true,
+          "moving": true,
+          "off_at": 3.2
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shock",
+          "expression": "shock",
+          "actions": [
+            [
+              0,
+              "talk"
+            ],
+            [
+              "w9",
+              "shock"
+            ]
+          ]
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "crack",
+          "at_word": 9
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "túnel"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m09",
+      "beat": "development",
+      "narration": "Las luces de emergencia aguantan un rato con baterías, y toca bajar a las vías y caminar hasta la estación.",
+      "visual": {
+        "background": {
+          "type": "metro",
+          "native": true,
+          "lights": 0,
+          "dark": 0.45
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "walk",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "flashlight",
+            "x": 0.46,
+            "y": 0.6,
+            "scale": 0.9,
+            "flip": 1
+          }
+        ],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.55
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m10",
+      "beat": "development",
+      "narration": "En España se quedaron parados más de cien trenes y hubo que evacuar a unos treinta y cinco mil pasajeros.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#1B1B3A",
+          "c2": "#3B3F78",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 35000,
+            "suffix": "",
+            "at_word": 13,
+            "over": 0.8,
+            "y": 330,
+            "size": 190,
+            "sub": "PASAJEROS EVACUADOS DE TRENES"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "El apagón dejó parados más de un centenar de trenes y obligó a evacuar a unos 35.000 pasajeros",
+          "kind": "fact",
+          "source": "Ministerio de Transportes, recogido por la prensa (29/04/2025)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 13
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "cien",
+        "treinta"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m10b",
+      "beat": "development",
+      "narration": "¿Tienes coche eléctrico? Pues lo que lleve en la batería es todo lo que vas a tener durante mucho tiempo.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shrug",
+          "expression": "smug"
+        },
+        "props": [
+          {
+            "type": "car",
+            "x": 0.6,
+            "y": 0.88,
+            "scale": 0.9
+          },
+          {
+            "type": "battery",
+            "x": 0.6,
+            "y": 0.42,
+            "scale": 0.7,
+            "level": 0.64,
+            "at_word": 6
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m11",
+      "beat": "development",
+      "narration": "Mientras tanto, en los hospitales, pasa algo que casi nadie ve.",
+      "visual": {
+        "background": {
+          "type": "hospital",
+          "native": true,
+          "off_at": 2.6
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "think",
+          "expression": "surprised"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "crack",
+          "at": 2.6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m12",
+      "beat": "development",
+      "narration": "Al caer la red arrancan solos los generadores. En muchos países la norma les exige dar corriente en unos diez segundos.",
+      "visual": {
+        "background": {
+          "type": "hospital",
+          "native": true,
+          "lights": 0,
+          "backup": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "point_up",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "generator",
+            "x": 0.68,
+            "y": 0.92,
+            "scale": 0.8,
+            "fuel": 0.95
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 10,
+            "suffix": " s",
+            "at_word": 16,
+            "over": 0.8,
+            "y": 170,
+            "size": 120,
+            "sub": "PARA QUE ENTRE EL GENERADOR"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "La norma NFPA 110 exige que la energía de emergencia de los sistemas de seguridad vital entre en 10 segundos",
+          "kind": "fact",
+          "source": "NFPA 99/110 (EE. UU.)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at_word": 4,
+          "gain_db": -6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "diez"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m13",
+      "beat": "development",
+      "narration": "Pero el generador no da para todo: se reserva para quirófanos, cuidados intensivos y las máquinas que mantienen a gente con vida.",
+      "visual": {
+        "background": {
+          "type": "hospital",
+          "native": true,
+          "lights": 0,
+          "backup": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "heart",
+            "x": 0.6,
+            "y": 0.4,
+            "scale": 0.8,
+            "loop": "pulse",
+            "at_word": 8
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m14",
+      "beat": "development",
+      "narration": "¿Y los aviones que están volando? Tranquilo: producen su propia electricidad con los motores.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "look_up",
+          "expression": "surprised",
+          "expressions": [
+            [
+              "w5",
+              "happy"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "plane",
+            "x": 0.66,
+            "y": 0.28,
+            "scale": 0.9,
+            "enter": "slide_right"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at_word": 1
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m15",
+      "beat": "development",
+      "narration": "El problema es aterrizar: torres de control, radares y luces de pista tendrían que tirar de generadores de emergencia.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "think",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "plane",
+            "x": 0.66,
+            "y": 0.35,
+            "scale": 0.8,
+            "enter": "none",
+            "rot": 0.15
+          },
+          {
+            "type": "generator",
+            "x": 0.82,
+            "y": 0.92,
+            "scale": 0.6,
+            "at_word": 12
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m16",
+      "beat": "development",
+      "narration": "Balance del primer minuto: el mundo aún funciona a medias, gracias a pilas, baterías y generadores.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#22B573",
+          "c2": "#6EE7A8",
+          "window": 960
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.78,
+            "label": "¿CUÁNTO SIGUE FUNCIONANDO?",
+            "ticks": [
+              "NADA",
+              "POCO",
+              "LA MITAD",
+              "CASI TODO",
+              "TODO"
+            ],
+            "at_word": 3,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 3
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h01",
+      "beat": "development",
+      "narration": "Hora uno. Pruebas a llamar a casa… y la llamada no entra.",
+      "visual": {
+        "background": {
+          "type": "kitchen",
+          "native": true,
+          "day": true,
+          "lights": 0,
+          "blink": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "talk",
+          "expression": "worried",
+          "expressions": [
+            [
+              "w6",
+              "surprised"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "smartphone",
+            "x": 0.66,
+            "y": 0.45,
+            "scale": 0.9,
+            "crossed": true,
+            "cross_at": 0.6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "HORA 1"
+            ],
+            "y": 120,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h02",
+      "beat": "development",
+      "narration": "Las antenas de telefonía tienen baterías de respaldo, pero suelen durar solo entre dos y cuatro horas.",
+      "visual": {
+        "background": {
+          "type": "grid_field",
+          "native": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "cell_tower",
+            "x": 0.52,
+            "y": 0.95,
+            "scale": 1.15
+          },
+          {
+            "type": "battery",
+            "x": 0.8,
+            "y": 0.4,
+            "scale": 0.9,
+            "level": [
+              1.0,
+              0.25,
+              5.0
+            ],
+            "label": "BATERÍA DE LA ANTENA"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Las baterías de respaldo de las antenas suelen durar entre 2 y 4 horas",
+          "kind": "fact",
+          "source": "FCC / informes del sector de telecomunicaciones"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "dos",
+        "cuatro"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h03",
+      "beat": "development",
+      "narration": "Además, millones de personas llaman a la vez para saber si su familia está bien. La red se satura.",
+      "visual": {
+        "background": {
+          "type": "grid_field",
+          "native": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "sweat",
+          "expression": "scared",
+          "sweat": 0.5
+        },
+        "props": [
+          {
+            "type": "cell_tower",
+            "x": 0.55,
+            "y": 0.95,
+            "scale": 1.15,
+            "on": false
+          },
+          {
+            "type": "message",
+            "x": 0.78,
+            "y": 0.3,
+            "scale": 0.8,
+            "at_word": 4
+          },
+          {
+            "type": "message",
+            "x": 0.84,
+            "y": 0.5,
+            "scale": 0.7,
+            "at_word": 7
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 4
+        },
+        {
+          "name": "pop",
+          "at_word": 7
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "satura"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h04",
+      "beat": "development",
+      "narration": "Internet aguanta algo más, porque los grandes centros de datos tienen generadores. Pero si tu router no tiene luz, da igual.",
+      "visual": {
+        "background": {
+          "type": "kitchen",
+          "native": true,
+          "day": true,
+          "lights": 0,
+          "blink": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shrug",
+          "expression": "smug"
+        },
+        "props": [
+          {
+            "type": "wifi",
+            "x": 0.72,
+            "y": 0.42,
+            "scale": 1.0,
+            "crossed": true,
+            "at_word": 14
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 18
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h04b",
+      "beat": "development",
+      "narration": "Colegios y oficinas mandan a todo el mundo a casa. Sin metro ni trenes, miles de personas vuelven andando kilómetros.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "walk",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "npc",
+            "x": 0.55,
+            "y": 0.93,
+            "scale": 0.7
+          },
+          {
+            "type": "npc",
+            "x": 0.7,
+            "y": 0.93,
+            "scale": 0.7,
+            "seed": 5
+          },
+          {
+            "type": "npc",
+            "x": 0.85,
+            "y": 0.93,
+            "scale": 0.7,
+            "seed": 6
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "pan_right"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h05",
+      "beat": "development",
+      "narration": "Vas a comprar agua y pan. El datáfono no funciona, el cajero tampoco: solo vale el efectivo.",
+      "visual": {
+        "background": {
+          "type": "supermarket",
+          "native": true,
+          "lights": 0,
+          "dark": 0.35,
+          "stock": 0.8
+        },
+        "character": {
+          "x": 0.28,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "talk",
+          "expression": "surprised"
+        },
+        "props": [
+          {
+            "type": "atm",
+            "x": 0.6,
+            "y": 0.95,
+            "scale": 0.85,
+            "on": false,
+            "at_word": 8
+          },
+          {
+            "type": "money",
+            "x": 0.82,
+            "y": 0.7,
+            "scale": 0.8,
+            "at_word": 15
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 8
+        },
+        {
+          "name": "ding",
+          "at_word": 15
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "efectivo"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h06",
+      "beat": "development",
+      "narration": "El veintiocho de abril pasó justo eso: colas en supermercados y cajeros, y gente sin un euro en el bolsillo.",
+      "visual": {
+        "background": {
+          "type": "supermarket",
+          "native": true,
+          "lights": 0,
+          "dark": 0.35,
+          "stock": 0.8
+        },
+        "character": {
+          "x": 0.28,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shrug",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "npc",
+            "x": 0.55,
+            "y": 0.93,
+            "scale": 0.7
+          },
+          {
+            "type": "npc",
+            "x": 0.68,
+            "y": 0.93,
+            "scale": 0.7,
+            "seed": 2
+          },
+          {
+            "type": "npc",
+            "x": 0.81,
+            "y": 0.93,
+            "scale": 0.7,
+            "seed": 3
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Durante el apagón se formaron aglomeraciones en supermercados y cajeros",
+          "kind": "fact",
+          "source": "Prensa (Primicias/EFE, 28/04/2025)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h07",
+      "beat": "development",
+      "narration": "Muchas tiendas cerraron: sin luz no hay cajas, ni neveras, ni puertas automáticas. Solo aguantaron las que tenían generador.",
+      "visual": {
+        "background": {
+          "type": "supermarket",
+          "native": true,
+          "lights": 0,
+          "dark": 0.35,
+          "stock": 0.12,
+          "sign_text": "CERRADO"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "worried"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Muchos supermercados cerraron por falta de refrigeración y cobro; otros siguieron abiertos con generadores",
+          "kind": "fact",
+          "source": "Prensa española (El Cronista, Xataka, 28/04/2025)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h07b",
+      "beat": "development",
+      "narration": "Lo primero que vuela de las estanterías es el agua embotellada, las pilas, las velas y las linternas.",
+      "visual": {
+        "background": {
+          "type": "supermarket",
+          "native": true,
+          "lights": 0,
+          "dark": 0.35,
+          "stock": 0.12,
+          "sign_text": "CERRADO"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "sweat",
+          "expression": "worried",
+          "sweat": 0.4
+        },
+        "props": [
+          {
+            "type": "water_bottle",
+            "x": 0.62,
+            "y": 0.8,
+            "scale": 0.5,
+            "at_word": 9
+          },
+          {
+            "type": "candle",
+            "x": 0.76,
+            "y": 0.8,
+            "scale": 0.6,
+            "at_word": 14
+          },
+          {
+            "type": "flashlight",
+            "x": 0.86,
+            "y": 0.5,
+            "scale": 0.5,
+            "at_word": 17,
+            "on": false
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 9
+        },
+        {
+          "name": "pop",
+          "at_word": 14
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h08",
+      "beat": "development",
+      "narration": "Piensas en llenar el depósito del coche, por si acaso. Mala idea.",
+      "visual": {
+        "background": {
+          "type": "gas_station",
+          "native": true,
+          "lights": 0,
+          "error": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "walk",
+          "expression": "determined",
+          "actions": [
+            [
+              "w8",
+              "shock"
+            ]
+          ],
+          "expressions": [
+            [
+              "w8",
+              "surprised"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "car",
+            "x": 0.83,
+            "y": 0.9,
+            "scale": 0.8,
+            "enter": "slide_right"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 9
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h09",
+      "beat": "development",
+      "narration": "Los surtidores son bombas eléctricas. Sin corriente, la gasolina está ahí abajo… y no hay forma de sacarla.",
+      "visual": {
+        "background": {
+          "type": "gas_station",
+          "native": true,
+          "lights": 0,
+          "error": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shrug",
+          "expression": "angry"
+        },
+        "props": [
+          {
+            "type": "jerrycan",
+            "x": 0.86,
+            "y": 0.92,
+            "scale": 0.7,
+            "at_word": 15
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Sin electricidad no funcionan las bombas de combustible ni los sistemas de pago de las gasolineras",
+          "kind": "fact",
+          "source": "Motorpasión / El Debate, 28/04/2025"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "eléctricas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h09b",
+      "beat": "development",
+      "narration": "Las radios y las teles públicas tienen generadores para seguir emitiendo. El problema es que en tu casa la tele no se enciende.",
+      "visual": {
+        "background": {
+          "type": "living_room",
+          "native": true,
+          "day": true,
+          "tv": 0
+        },
+        "character": {
+          "x": 0.62,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shrug",
+          "expression": "smug"
+        },
+        "props": [
+          {
+            "type": "radio",
+            "x": 0.35,
+            "y": 0.82,
+            "scale": 0.6
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 19
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h10",
+      "beat": "development",
+      "narration": "Vuelves a casa. La nevera lleva una hora apagada, y empieza una cuenta atrás que sí importa.",
+      "visual": {
+        "background": {
+          "type": "kitchen",
+          "native": true,
+          "day": true,
+          "lights": 0,
+          "blink": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "think",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "fridge",
+            "x": 0.8,
+            "y": 0.92,
+            "scale": 0.95,
+            "lights": 0,
+            "temp": "6 °C",
+            "enter": "none"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h11",
+      "beat": "development",
+      "narration": "Con la puerta cerrada, la comida de la nevera se mantiene segura unas cuatro horas. Cada vez que la abres, pierdes frío.",
+      "visual": {
+        "background": {
+          "type": "kitchen",
+          "native": true,
+          "day": true,
+          "lights": 0,
+          "blink": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "point_up",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "fridge",
+            "x": 0.8,
+            "y": 0.92,
+            "scale": 0.95,
+            "lights": 0,
+            "open": 0.0,
+            "temp": "4 H",
+            "temp_color": "#FFD23F",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Nevera cerrada: comida segura ≈ 4 horas sin luz",
+            "at_word": 7,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Una nevera cerrada mantiene la comida segura unas 4 horas sin electricidad",
+          "kind": "fact",
+          "source": "USDA FSIS, «Keeping Food Safe During an Emergency»"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "cuatro"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h12",
+      "beat": "development",
+      "narration": "Un congelador lleno aguanta unas cuarenta y ocho horas. Si está a medias, solo unas veinticuatro.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "surprised"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 48,
+            "suffix": " H",
+            "at_word": 4,
+            "over": 0.8,
+            "y": 260,
+            "size": 170,
+            "sub": "CONGELADOR LLENO"
+          },
+          {
+            "type": "label",
+            "text": "MEDIO LLENO: 24 H",
+            "x": 1250,
+            "y": 720,
+            "size": 64,
+            "bg": "#E8392F",
+            "at_word": 11
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Un congelador lleno mantiene la temperatura unas 48 horas; medio lleno, unas 24",
+          "kind": "fact",
+          "source": "USDA FSIS, «Keeping Food Safe During an Emergency»"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 11
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "h13",
+      "beat": "development",
+      "narration": "Balance de la primera hora: sin cobertura, sin pagos con tarjeta y sin gasolina. Y todavía es de día.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "sweat",
+          "expression": "worried",
+          "sweat": 0.4
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.6,
+            "label": "¿CUÁNTO SIGUE FUNCIONANDO?",
+            "ticks": [
+              "NADA",
+              "POCO",
+              "LA MITAD",
+              "CASI TODO",
+              "TODO"
+            ],
+            "at_word": 3,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 3
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n01",
+      "beat": "development",
+      "narration": "Y llega algo que no has vivido nunca: la primera noche sin luz.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "off_at": 2.8,
+          "off_spread": 1.4
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "look_up",
+          "expression": "surprised",
+          "expressions": [
+            [
+              "w8",
+              "scared"
+            ]
+          ]
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "NOCHE 1"
+            ],
+            "y": 120,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 1.6,
+          "gain_db": -8
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "noche"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n02",
+      "beat": "development",
+      "narration": "Sin farolas, sin ventanas encendidas, sin carteles. La ciudad queda tan oscura como el campo.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "lights": 0,
+          "stars": 1,
+          "milky": 0.0
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "sweat",
+          "expression": "scared",
+          "sweat": 0.4
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.55
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n03",
+      "beat": "development",
+      "narration": "Y entonces miras hacia arriba.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "lights": 0,
+          "stars": 1,
+          "milky": 1.0,
+          "moon": false
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "look_up",
+          "expression": "wow"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 3
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n04",
+      "beat": "development",
+      "narration": "Ahí está la Vía Láctea. Más de un tercio de la humanidad no puede verla desde casa por la contaminación lumínica.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "lights": 0,
+          "stars": 1,
+          "milky": 1.0,
+          "moon": false
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "wow"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "La Vía Láctea está oculta para más de un tercio de la humanidad por la contaminación lumínica",
+          "kind": "fact",
+          "source": "Falchi et al., Science Advances (2016)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "Láctea",
+        "tercio"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n05",
+      "beat": "development",
+      "narration": "En Europa, el sesenta por ciento de la gente. En Norteamérica, casi el ochenta.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "lights": 0,
+          "stars": 1,
+          "milky": 1.0,
+          "moon": false
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 60,
+            "suffix": " %",
+            "at_word": 2,
+            "over": 0.8,
+            "y": 280,
+            "size": 170,
+            "sub": "DE LOS EUROPEOS NO LA VE"
+          },
+          {
+            "type": "label",
+            "text": "NORTEAMÉRICA: ≈80 %",
+            "x": 960,
+            "y": 720,
+            "size": 66,
+            "bg": "#E8392F",
+            "at_word": 9
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "El 60 % de los europeos y casi el 80 % de los norteamericanos no pueden ver la Vía Láctea",
+          "kind": "fact",
+          "source": "Falchi et al., Science Advances (2016)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 9
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n06",
+      "beat": "development",
+      "narration": "Esa noche, millones de personas verían por primera vez el cielo que veían sus bisabuelos.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "lights": 0,
+          "stars": 1,
+          "milky": 1.0,
+          "moon": false
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "look_up",
+          "expression": "happy"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n07",
+      "beat": "development",
+      "narration": "Pero lo bonito dura poco. Velas encendidas en millones de casas a la vez disparan el riesgo de incendio.",
+      "visual": {
+        "background": {
+          "type": "living_room",
+          "native": true,
+          "lights": 0,
+          "dark": 0.72,
+          "glows": [
+            [
+              1190.4,
+              664.0,
+              360.0
+            ],
+            [
+              1536.0,
+              684.0,
+              324.0
+            ]
+          ]
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "sweat",
+          "expression": "worried",
+          "sweat": 0.4
+        },
+        "props": [
+          {
+            "type": "candle",
+            "x": 0.62,
+            "y": 0.8,
+            "scale": 1.0
+          },
+          {
+            "type": "candle",
+            "x": 0.8,
+            "y": 0.8,
+            "scale": 0.9,
+            "seed": 4
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "incendio"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n08",
+      "beat": "development",
+      "narration": "Y pedir ayuda no es fácil: si las antenas se han quedado sin batería, llamar a emergencias se vuelve casi imposible.",
+      "visual": {
+        "background": {
+          "type": "grid_field",
+          "native": true,
+          "night": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "talk",
+          "expression": "scared"
+        },
+        "props": [
+          {
+            "type": "cell_tower",
+            "x": 0.55,
+            "y": 0.95,
+            "scale": 1.15,
+            "on": false
+          },
+          {
+            "type": "battery",
+            "x": 0.82,
+            "y": 0.4,
+            "scale": 0.8,
+            "level": 0.0,
+            "label": "SIN BATERÍA"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.55
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n09",
+      "beat": "development",
+      "narration": "Lo que más se agradece esa noche es una linterna y una radio a pilas. Muchos se enteraron así de lo que pasaba en abril.",
+      "visual": {
+        "background": {
+          "type": "living_room",
+          "native": true,
+          "lights": 0,
+          "dark": 0.7,
+          "glows": [
+            [
+              1150,
+              560,
+              520
+            ]
+          ]
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "radio",
+            "x": 0.66,
+            "y": 0.78,
+            "scale": 0.8
+          },
+          {
+            "type": "flashlight",
+            "x": 0.42,
+            "y": 0.5,
+            "scale": 0.8
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 11
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "radio"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n09b",
+      "beat": "development",
+      "narration": "Sin calefacción ni aire acondicionado, la temperatura de tu casa empieza a parecerse a la de la calle.",
+      "visual": {
+        "background": {
+          "type": "living_room",
+          "native": true,
+          "lights": 0,
+          "dark": 0.7,
+          "glows": [
+            [
+              1344.0,
+              705.5999999999999,
+              324.0
+            ]
+          ]
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "sweat",
+          "expression": "worried",
+          "sweat": 0.3
+        },
+        "props": [
+          {
+            "type": "candle",
+            "x": 0.7,
+            "y": 0.82,
+            "scale": 0.9
+          },
+          {
+            "type": "thermometer",
+            "x": 0.86,
+            "y": 0.6,
+            "scale": 0.8,
+            "level": 0.3
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n09c",
+      "beat": "development",
+      "narration": "Y un aviso importante: nunca enciendas un generador dentro de casa. Su gas, el monóxido de carbono, no huele y puede matar.",
+      "visual": {
+        "background": {
+          "type": "living_room",
+          "native": true,
+          "lights": 0,
+          "dark": 0.65,
+          "glows": [
+            [
+              1150,
+              560,
+              520
+            ]
+          ]
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "point_up",
+          "expression": "angry"
+        },
+        "props": [
+          {
+            "type": "generator",
+            "x": 0.68,
+            "y": 0.92,
+            "scale": 0.7,
+            "running": true,
+            "crossed": true,
+            "cross_at": 0.4
+          },
+          {
+            "type": "skull",
+            "x": 0.86,
+            "y": 0.4,
+            "scale": 0.6,
+            "at_word": 21
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Los generadores nunca deben usarse en interiores por el riesgo de intoxicación por monóxido de carbono",
+          "kind": "fact",
+          "source": "CDC (EE. UU.)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 21
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "nunca",
+        "monóxido"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n09d",
+      "beat": "development",
+      "narration": "Y entonces lo notas: el silencio. Sin tráfico, sin aires acondicionados, sin zumbidos. Solo grillos y algún perro.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "lights": 0,
+          "stars": 1,
+          "milky": 1.0,
+          "moon": false
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "idle",
+          "expression": "happy_closed"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n10",
+      "beat": "development",
+      "narration": "En los pisos altos, alguien abre el grifo… y no sale nada.",
+      "visual": {
+        "background": {
+          "type": "kitchen",
+          "native": true,
+          "lights": 0,
+          "dark": 0.6,
+          "glows": [
+            [
+              806.4,
+              529.6,
+              251.99999999999997
+            ]
+          ]
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shock",
+          "expression": "shock",
+          "actions": [
+            [
+              0,
+              "idle"
+            ],
+            [
+              "w7",
+              "shock"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "tap",
+            "x": 0.68,
+            "y": 0.4,
+            "scale": 1.1,
+            "flow": [
+              1.0,
+              0.0,
+              2.2
+            ]
+          },
+          {
+            "type": "candle",
+            "x": 0.42,
+            "y": 0.62,
+            "scale": 0.7
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "gulp",
+          "at_word": 9
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n11",
+      "beat": "development",
+      "narration": "El agua no sube sola: la empujan bombas eléctricas. Los edificios altos y las depuradoras dependen de ellas.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#3B82F6",
+          "c2": "#7FB8E6",
+          "window": 960
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "pipe",
+            "x": 0.68,
+            "y": 0.5,
+            "scale": 1.0
+          },
+          {
+            "type": "splash",
+            "x": 0.75,
+            "y": 0.35,
+            "color": "#5CE1E6",
+            "at_word": 5
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "El bombeo y el tratamiento del agua dependen de la electricidad; los edificios altos necesitan bombas para subirla",
+          "kind": "fact",
+          "source": "EPA (EE. UU.), guía de resiliencia energética para servicios de agua"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n12",
+      "beat": "development",
+      "narration": "Hay depósitos elevados que dan presión durante un tiempo. Pero cuando se vacían y nadie los rellena, el grifo se seca.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#3B82F6",
+          "c2": "#7FB8E6",
+          "window": 960
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shrug",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "tap",
+            "x": 0.7,
+            "y": 0.42,
+            "scale": 1.1,
+            "flow": [
+              0.8,
+              0.0,
+              6.0
+            ]
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "n13",
+      "beat": "development",
+      "narration": "Balance de la primera noche: a oscuras, sin agua en muchos pisos… y con un cielo espectacular.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shrug",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.47,
+            "label": "¿CUÁNTO SIGUE FUNCIONANDO?",
+            "ticks": [
+              "NADA",
+              "POCO",
+              "LA MITAD",
+              "CASI TODO",
+              "TODO"
+            ],
+            "at_word": 3,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 3
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d01",
+      "beat": "development",
+      "narration": "Día tres. Te despiertas con barba de un par de días, y la casa empieza a oler raro.",
+      "visual": {
+        "background": {
+          "type": "kitchen",
+          "native": true,
+          "day": true,
+          "lights": 0,
+          "blink": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "sweat",
+          "expression": "tired",
+          "sweat": 0.3
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "DÍA 3"
+            ],
+            "y": 120,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "oler"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d02",
+      "beat": "development",
+      "narration": "El congelador se ha rendido. Lo que había dentro hay que cocinarlo hoy… o tirarlo.",
+      "visual": {
+        "background": {
+          "type": "kitchen",
+          "native": true,
+          "day": true,
+          "lights": 0,
+          "blink": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "shock",
+          "expression": "angry"
+        },
+        "props": [
+          {
+            "type": "fridge",
+            "x": 0.78,
+            "y": 0.92,
+            "scale": 0.95,
+            "lights": 0,
+            "open_at": 0.6,
+            "drip": true,
+            "enter": "none"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "splash",
+          "at_word": 4,
+          "gain_db": -6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d03",
+      "beat": "development",
+      "narration": "En el supermercado, los estantes se vacían. Sin frío, lo fresco se estropea; y sin luz, no hay forma de cobrar.",
+      "visual": {
+        "background": {
+          "type": "supermarket",
+          "native": true,
+          "lights": 0,
+          "dark": 0.35,
+          "stock": 0.12,
+          "sign_text": "CERRADO"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "walk",
+          "expression": "worried"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.55
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d04",
+      "beat": "development",
+      "narration": "Tras el apagón de abril, las tiendas tuvieron que tirar toneladas de fruta, verdura, carne y pescado.",
+      "visual": {
+        "background": {
+          "type": "supermarket",
+          "native": true,
+          "lights": 0,
+          "dark": 0.35,
+          "stock": 0.12,
+          "sign_text": "CERRADO"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "shrug",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "food",
+            "x": 0.68,
+            "y": 0.8,
+            "scale": 0.9,
+            "at_word": 8
+          },
+          {
+            "type": "meat",
+            "x": 0.82,
+            "y": 0.75,
+            "scale": 0.6,
+            "at_word": 12
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Tras el apagón, trabajadores de supermercados tiraron toneladas de fruta, verdura, carne y pescado",
+          "kind": "fact",
+          "source": "Prensa española (Vozpópuli, 2025)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d05",
+      "beat": "development",
+      "narration": "Y reponer es imposible: los camiones necesitan gasóleo, y los almacenes funcionan con ordenadores y cintas eléctricas.",
+      "visual": {
+        "background": {
+          "type": "gas_station",
+          "native": true,
+          "lights": 0,
+          "error": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "present",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "cart",
+            "x": 0.6,
+            "y": 0.9,
+            "scale": 0.9
+          },
+          {
+            "type": "jerrycan",
+            "x": 0.84,
+            "y": 0.92,
+            "scale": 0.7,
+            "crossed": true,
+            "cross_at": 0.5
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d06",
+      "beat": "development",
+      "narration": "Los hospitales siguen en pie con sus generadores. En Estados Unidos, por ejemplo, se les pide prepararse para aguantar noventa y seis horas.",
+      "visual": {
+        "background": {
+          "type": "hospital",
+          "native": true,
+          "lights": 0,
+          "backup": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "point_up",
+          "expression": "determined"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 96,
+            "suffix": " H",
+            "at_word": 18,
+            "over": 0.8,
+            "y": 200,
+            "size": 150,
+            "sub": "DE AUTONOMÍA PLANIFICADA"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Los hospitales acreditados en EE. UU. deben planificar cómo sostener sus servicios durante 96 horas",
+          "kind": "fact",
+          "source": "The Joint Commission, estándares de gestión de emergencias"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "noventa"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d06b",
+      "beat": "development",
+      "narration": "El problema serio está en las casas: hay personas que dependen de concentradores de oxígeno o de otras máquinas eléctricas para vivir.",
+      "visual": {
+        "background": {
+          "type": "living_room",
+          "native": true,
+          "day": true,
+          "tv": 0
+        },
+        "character": {
+          "x": 0.62,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "sweat",
+          "expression": "worried",
+          "sweat": 0.5
+        },
+        "props": [
+          {
+            "type": "battery",
+            "x": 0.3,
+            "y": 0.4,
+            "scale": 0.7,
+            "level": [
+              0.5,
+              0.1,
+              6.0
+            ]
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d07",
+      "beat": "development",
+      "narration": "Cuatro días. Después, todo depende de que lleguen camiones de gasóleo… que también lo necesitan para moverse.",
+      "visual": {
+        "background": {
+          "type": "hospital",
+          "native": true,
+          "lights": 0,
+          "backup": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "sweat",
+          "expression": "scared",
+          "sweat": 0.6
+        },
+        "props": [
+          {
+            "type": "generator",
+            "x": 0.68,
+            "y": 0.92,
+            "scale": 0.8,
+            "fuel": [
+              0.45,
+              0.05,
+              6.0
+            ]
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d08",
+      "beat": "development",
+      "narration": "Por cierto: la Unión Europea recomienda que cada hogar pueda arreglárselas solo durante setenta y dos horas.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#3B82F6",
+          "c2": "#7FB8E6",
+          "window": 960
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 72,
+            "suffix": " H",
+            "at_word": 14,
+            "over": 0.8,
+            "y": 260,
+            "size": 170,
+            "sub": "RECOMENDACIÓN DE LA UE"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "La Estrategia de Preparación de la UE (26/03/2025) recomienda que la población pueda ser autosuficiente al menos 72 horas",
+          "kind": "fact",
+          "source": "Comisión Europea, Estrategia de la Unión de Preparación (2025)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 14
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "setenta"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d09",
+      "beat": "development",
+      "narration": "Agua, comida en conserva, linterna, radio, algo de efectivo y tus medicinas. Justo lo que ahora echas de menos.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#22B573",
+          "c2": "#6EE7A8",
+          "window": 960
+        },
+        "character": {
+          "x": 0.18,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "talk",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "water_bottle",
+            "x": 0.38,
+            "y": 0.62,
+            "scale": 0.6,
+            "at_word": 0
+          },
+          {
+            "type": "food_can",
+            "x": 0.52,
+            "y": 0.62,
+            "scale": 0.7,
+            "at_word": 1
+          },
+          {
+            "type": "flashlight",
+            "x": 0.62,
+            "y": 0.4,
+            "scale": 0.55,
+            "at_word": 4,
+            "on": false
+          },
+          {
+            "type": "radio",
+            "x": 0.8,
+            "y": 0.6,
+            "scale": 0.6,
+            "at_word": 5,
+            "on": false
+          },
+          {
+            "type": "money",
+            "x": 0.55,
+            "y": 0.86,
+            "scale": 0.6,
+            "at_word": 8
+          },
+          {
+            "type": "heart",
+            "x": 0.8,
+            "y": 0.86,
+            "scale": 0.45,
+            "at_word": 11
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 0
+        },
+        {
+          "name": "pop",
+          "at_word": 4
+        },
+        {
+          "name": "pop",
+          "at_word": 8
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d09b",
+      "beat": "development",
+      "narration": "La basura se acumula en las esquinas: los camiones necesitan gasóleo, y las plantas de tratamiento, electricidad.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "sweat",
+          "expression": "angry",
+          "sweat": 0.4
+        },
+        "props": [
+          {
+            "type": "debris",
+            "x": 0.68,
+            "y": 0.85,
+            "scale": 0.9
+          },
+          {
+            "type": "rat",
+            "x": 0.82,
+            "y": 0.9,
+            "scale": 0.6,
+            "at_word": 6
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d09c",
+      "beat": "development",
+      "narration": "Policías, bomberos y ambulancias siguen comunicándose por sus propias redes de radio, que también tiran de baterías y generadores.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "police_car",
+            "x": 0.68,
+            "y": 0.88,
+            "scale": 0.8,
+            "enter": "slide_right"
+          },
+          {
+            "type": "radio",
+            "x": 0.7,
+            "y": 0.45,
+            "scale": 0.5,
+            "at_word": 8
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d10",
+      "beat": "development",
+      "narration": "Sin agua corriente, las cisternas y las depuradoras dejan de funcionar bien. La higiene se convierte en un problema de salud.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#8A5A30",
+          "c2": "#B07A48",
+          "window": 960
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "sweat",
+          "expression": "worried",
+          "sweat": 0.5
+        },
+        "props": [
+          {
+            "type": "tap",
+            "x": 0.7,
+            "y": 0.42,
+            "scale": 1.0,
+            "flow": 0
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "d11",
+      "beat": "development",
+      "narration": "Balance del día tres: la nevera perdida, las tiendas vacías y el gasóleo convertido en oro.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.18,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.35
+          },
+          "action": "shrug",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.33,
+            "label": "¿CUÁNTO SIGUE FUNCIONANDO?",
+            "ticks": [
+              "NADA",
+              "POCO",
+              "LA MITAD",
+              "CASI TODO",
+              "TODO"
+            ],
+            "at_word": 3,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 3
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s01",
+      "beat": "development",
+      "narration": "Semana uno. A estas alturas, muchos generadores empiezan a quedarse sin combustible.",
+      "visual": {
+        "background": {
+          "type": "hospital",
+          "native": true,
+          "lights": 0,
+          "backup": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "sweat",
+          "expression": "tired",
+          "sweat": 0.4
+        },
+        "props": [
+          {
+            "type": "generator",
+            "x": 0.68,
+            "y": 0.92,
+            "scale": 0.8,
+            "fuel": [
+              0.12,
+              0.0,
+              4.0
+            ],
+            "running": true
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "SEMANA 1"
+            ],
+            "y": 120,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s02",
+      "beat": "development",
+      "narration": "Y aparece una pregunta que da miedo: ¿qué pasa con las centrales nucleares?",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "red",
+          "label": "RED ELÉCTRICA · SIN TENSIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "shock",
+          "expression": "scared"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.4
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 10
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "nucleares"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s03",
+      "beat": "development",
+      "narration": "Cuando cae la red, el reactor se detiene automáticamente. Pero el combustible sigue dando calor, y hay que refrigerarlo.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#3B82F6",
+          "c2": "#7FB8E6",
+          "window": 960
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "thermometer",
+            "x": 0.7,
+            "y": 0.62,
+            "scale": 1.1,
+            "level": 0.8,
+            "at_word": 10
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Tras la parada, el combustible nuclear sigue generando calor residual y necesita refrigeración",
+          "kind": "fact",
+          "source": "World Nuclear Association"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s04",
+      "beat": "development",
+      "narration": "Para eso tienen generadores diésel y baterías. En Fukushima, en 2011, el tsunami inundó esos generadores.",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "red",
+          "label": "RED ELÉCTRICA · SIN TENSIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "sweat",
+          "expression": "scared",
+          "sweat": 0.6
+        },
+        "props": [
+          {
+            "type": "generator",
+            "x": 0.7,
+            "y": 0.92,
+            "scale": 0.75,
+            "running": false
+          },
+          {
+            "type": "splash",
+            "x": 0.7,
+            "y": 0.75,
+            "color": "#5CE1E6",
+            "at_word": 12
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "En Fukushima Daiichi (2011) el tsunami inundó los generadores diésel y dejó la central sin corriente",
+          "kind": "fact",
+          "source": "World Nuclear Association; OIEA (2011)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "splash",
+          "at_word": 12
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s05",
+      "beat": "development",
+      "narration": "Sin refrigeración, tres reactores se fundieron. Desde entonces, las centrales guardan más equipos portátiles para emergencias.",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "red",
+          "label": "RED ELÉCTRICA · SIN TENSIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "present",
+          "expression": "worried"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Los núcleos de tres reactores de Fukushima Daiichi se fundieron; después las centrales de EE. UU. añadieron equipos portátiles de refrigeración",
+          "kind": "fact",
+          "source": "World Nuclear Association; National Research Council (EE. UU.)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s06",
+      "beat": "development",
+      "narration": "En el campo, las granjas modernas también sufren: las ordeñadoras son eléctricas, y las vacas hay que ordeñarlas cada día.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "shrug",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "cow",
+            "x": 0.62,
+            "y": 0.92,
+            "scale": 0.85
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 17
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s07",
+      "beat": "development",
+      "narration": "Y las naves de pollos dependen de ventiladores. Sin ellos, el calor puede acabar con muchísimos animales en pocas horas.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "sweat",
+          "expression": "hot",
+          "sweat": 0.8
+        },
+        "props": [
+          {
+            "type": "heatwaves",
+            "x": 0.65,
+            "y": 0.55,
+            "scale": 1.0
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s08",
+      "beat": "development",
+      "narration": "Las ciudades empiezan a vaciarse. Quien tiene familia en un pueblo, con pozo y huerto, coge lo que puede y se va.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "walk",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "jerrycan",
+            "x": 0.45,
+            "y": 0.92,
+            "scale": 0.45
+          },
+          {
+            "type": "car",
+            "x": 0.8,
+            "y": 0.9,
+            "scale": 0.8,
+            "enter": "slide_left"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "pan_right"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s09",
+      "beat": "development",
+      "narration": "Para enterarse de algo, se vuelve a lo de siempre: la radio a pilas, los bandos del ayuntamiento y el boca a boca.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "talk",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "radio",
+            "x": 0.6,
+            "y": 0.75,
+            "scale": 0.75
+          },
+          {
+            "type": "newspaper",
+            "x": 0.83,
+            "y": 0.5,
+            "scale": 0.8,
+            "at_word": 12
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s10",
+      "beat": "development",
+      "narration": "Los diabéticos que usan insulina tienen otra cuenta atrás: muchas insulinas aguantan unos veintiocho días fuera de la nevera.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "point_up",
+          "expression": "determined"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 28,
+            "suffix": " DÍAS",
+            "at_word": 12,
+            "over": 0.8,
+            "y": 260,
+            "size": 160,
+            "sub": "INSULINA ENTRE 15 Y 30 °C"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Muchos viales y plumas de insulina pueden estar hasta 28 días sin refrigerar entre 15 y 30 °C (depende del producto)",
+          "kind": "fact",
+          "source": "FDA, información sobre insulina en emergencias"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "veintiocho"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s10b",
+      "beat": "development",
+      "narration": "Hay que hervir el agua de ríos y pozos para beberla. Pero cocinar sin vitrocerámica significa hacer fuego… y la leña se acaba rápido.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "present",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "lamp",
+            "x": 0.6,
+            "y": 0.75,
+            "scale": 0.8
+          },
+          {
+            "type": "splash",
+            "x": 0.78,
+            "y": 0.7,
+            "color": "#5CE1E6",
+            "at_word": 9
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at_word": 15,
+          "gain_db": -6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s10c",
+      "beat": "development",
+      "narration": "El vecino con un pequeño panel solar portátil se convierte en la persona más popular del barrio: cargar un móvil vale oro.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "laugh",
+          "expression": "laugh"
+        },
+        "props": [
+          {
+            "type": "smartphone",
+            "x": 0.62,
+            "y": 0.5,
+            "scale": 0.7,
+            "at_word": 19
+          },
+          {
+            "type": "sun",
+            "x": 0.82,
+            "y": 0.28,
+            "scale": 0.7
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 19
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s11",
+      "beat": "development",
+      "narration": "Las farmacias, sin ordenadores y sin nadie que les traiga más, empiezan a racionar.",
+      "visual": {
+        "background": {
+          "type": "supermarket",
+          "native": true,
+          "lights": 0,
+          "dark": 0.35,
+          "stock": 0.12,
+          "sign_text": "CERRADO"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "shrug",
+          "expression": "worried"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.55
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "s12",
+      "beat": "development",
+      "narration": "Balance de la primera semana: menos generadores, ciudades medio vacías y un país pegado a la radio.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.4,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.5
+          },
+          "action": "sweat",
+          "expression": "tired",
+          "sweat": 0.4
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.22,
+            "label": "¿CUÁNTO SIGUE FUNCIONANDO?",
+            "ticks": [
+              "NADA",
+              "POCO",
+              "LA MITAD",
+              "CASI TODO",
+              "TODO"
+            ],
+            "at_word": 3,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 3
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me01",
+      "beat": "development",
+      "narration": "Un mes. Tu barba ya es oficial, y la vida se parece cada vez más a la de hace siglo y medio.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6
+          },
+          "action": "laugh",
+          "expression": "laugh"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "MES 1"
+            ],
+            "y": 120,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        },
+        {
+          "name": "boing",
+          "at_word": 5
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "barba"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me02",
+      "beat": "development",
+      "narration": "Si es invierno, el frío se convierte en el gran peligro: hasta las calderas de gas necesitan electricidad para funcionar.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "lights": 0,
+          "stars": 1,
+          "milky": 0.0
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6,
+            "frost": 0.5
+          },
+          "action": "sweat",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "thermometer",
+            "x": 0.72,
+            "y": 0.62,
+            "scale": 1.1,
+            "level": 0.1
+          }
+        ],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.55
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me03",
+      "beat": "development",
+      "narration": "En febrero de 2021, una ola de frío dejó sin luz a millones de hogares de Texas durante varios días.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6,
+            "frost": 0.7
+          },
+          "action": "present",
+          "expression": "scared"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "TEXAS · FEBRERO 2021",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#3B82F6",
+            "at_word": 2
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "La tormenta invernal de febrero de 2021 dejó sin electricidad a más de 4,5 millones de hogares y negocios de Texas",
+          "kind": "fact",
+          "source": "FERC/NERC, informe de la tormenta Uri (2021)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me04",
+      "beat": "development",
+      "narration": "Murieron doscientas cuarenta y seis personas, según las cifras oficiales. Y aquello duró días, no un mes.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#1B1B3A",
+          "c2": "#3B3F78",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 246,
+            "suffix": "",
+            "at_word": 1,
+            "over": 0.8,
+            "y": 330,
+            "size": 200,
+            "sub": "MUERTES OFICIALES EN TEXAS"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "El estado de Texas atribuyó oficialmente 246 muertes a la tormenta invernal de 2021",
+          "kind": "fact",
+          "source": "Texas Department of State Health Services (2021)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 1
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me05",
+      "beat": "development",
+      "narration": "En verano pasa lo contrario: sin aire acondicionado ni ventiladores, las olas de calor golpean sobre todo a los mayores.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6
+          },
+          "action": "sweat",
+          "expression": "hot",
+          "sweat": 1.0
+        },
+        "props": [
+          {
+            "type": "sun",
+            "x": 0.75,
+            "y": 0.28,
+            "scale": 1.0
+          },
+          {
+            "type": "heatwaves",
+            "x": 0.6,
+            "y": 0.6,
+            "scale": 1.0
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me06",
+      "beat": "development",
+      "narration": "Sin neveras, la comida vuelve a guardarse como antes: en sal, en aceite, ahumada o en conserva.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6
+          },
+          "action": "present",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "meat",
+            "x": 0.58,
+            "y": 0.6,
+            "scale": 0.7,
+            "at_word": 9
+          },
+          {
+            "type": "food_can",
+            "x": 0.78,
+            "y": 0.8,
+            "scale": 0.7,
+            "at_word": 15,
+            "label": "CONSERVA"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me06b",
+      "beat": "development",
+      "narration": "Y tu reloj biológico cambia. En un experimento, una semana de acampada sin luz artificial adelantó unas dos horas el reloj interno de los participantes.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6
+          },
+          "action": "talk",
+          "expression": "tired",
+          "actions": [
+            [
+              "w14",
+              "sweat"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "clock",
+            "x": 0.72,
+            "y": 0.4,
+            "scale": 0.9,
+            "speed": -3
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Tras una semana de acampada solo con luz natural, el reloj interno de los participantes se adelantó unas 2 horas",
+          "kind": "fact",
+          "source": "Wright et al., Current Biology (2013)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "dos"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me06c",
+      "beat": "development",
+      "narration": "Te acostarías poco después de anochecer y te despertarías con el sol, como casi todo el mundo antes de la bombilla.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6
+          },
+          "action": "idle",
+          "expression": "happy_closed"
+        },
+        "props": [
+          {
+            "type": "zzz",
+            "x": 0.42,
+            "y": 0.4,
+            "scale": 0.8
+          },
+          {
+            "type": "sun",
+            "x": 0.8,
+            "y": 0.3,
+            "scale": 0.8,
+            "at_word": 12
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me06d",
+      "beat": "development",
+      "narration": "¿Y las placas solares del tejado? Sorpresa: la mayoría se desconectan solas cuando cae la red. Es una protección obligatoria.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6
+          },
+          "action": "shock",
+          "expression": "surprised"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "PROTECCIÓN ANTI-ISLA",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#FF8A3D",
+            "at_word": 18
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Las instalaciones de autoconsumo conectadas a la red se desconectan en un apagón por la protección anti-isla del RD 244/2019",
+          "kind": "fact",
+          "source": "Energías Renovables (2025); Real Decreto 244/2019"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me06e",
+      "beat": "development",
+      "narration": "Sirve para no electrocutar a los técnicos que reparan los cables. Solo las que tienen un sistema de respaldo pueden seguir dando luz.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6
+          },
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "battery",
+            "x": 0.72,
+            "y": 0.42,
+            "scale": 0.7,
+            "level": 0.9,
+            "label": "SISTEMA DE RESPALDO",
+            "at_word": 16
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me07",
+      "beat": "development",
+      "narration": "El trabajo cambia por completo. Sin ordenadores ni internet, oficinas enteras dejan de tener sentido.",
+      "visual": {
+        "background": {
+          "type": "office"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6
+          },
+          "action": "shrug",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "wifi",
+            "x": 0.72,
+            "y": 0.38,
+            "scale": 0.9,
+            "crossed": true
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me08",
+      "beat": "development",
+      "narration": "Y tu dinero del banco existe… pero no puedes tocarlo. Vuelve el trueque: gasóleo por comida, pilas por agua.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#22B573",
+          "c2": "#6EE7A8",
+          "window": 960
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6
+          },
+          "action": "smug",
+          "expression": "smug"
+        },
+        "props": [
+          {
+            "type": "jerrycan",
+            "x": 0.48,
+            "y": 0.75,
+            "scale": 0.55,
+            "at_word": 13
+          },
+          {
+            "type": "arrow",
+            "x": 0.6,
+            "y": 0.62,
+            "scale": 0.7,
+            "at_word": 14
+          },
+          {
+            "type": "food_can",
+            "x": 0.72,
+            "y": 0.75,
+            "scale": 0.6,
+            "at_word": 15
+          },
+          {
+            "type": "water_bottle",
+            "x": 0.88,
+            "y": 0.75,
+            "scale": 0.5,
+            "at_word": 18
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 13
+        },
+        {
+          "name": "pop",
+          "at_word": 15
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "trueque"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me08b",
+      "beat": "development",
+      "narration": "La ropa se lava a mano, las noticias llegan con días de retraso y un viaje de cien kilómetros vuelve a ser una aventura.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6
+          },
+          "action": "shrug",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "newspaper",
+            "x": 0.7,
+            "y": 0.45,
+            "scale": 0.8,
+            "at_word": 6
+          },
+          {
+            "type": "cart",
+            "x": 0.82,
+            "y": 0.88,
+            "scale": 0.8,
+            "at_word": 14
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me08c",
+      "beat": "development",
+      "narration": "Pero también pasa algo bueno: los vecinos se organizan. Cocinas comunitarias, huertos compartidos y turnos para buscar agua.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6
+          },
+          "action": "celebrate",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "plant",
+            "x": 0.68,
+            "y": 0.9,
+            "scale": 0.8
+          },
+          {
+            "type": "plant",
+            "x": 0.8,
+            "y": 0.9,
+            "scale": 0.7
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "me09",
+      "beat": "development",
+      "narration": "Balance del primer mes: frío o calor sin defensas, comida en salazón y una economía de trueque.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 0.65,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.6
+          },
+          "action": "shrug",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.14,
+            "label": "¿CUÁNTO SIGUE FUNCIONANDO?",
+            "ticks": [
+              "NADA",
+              "POCO",
+              "LA MITAD",
+              "CASI TODO",
+              "TODO"
+            ],
+            "at_word": 3,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 3
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "a01",
+      "beat": "development",
+      "narration": "Un año. Barba de náufrago.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.4,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 1.0,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.4
+          },
+          "action": "pose",
+          "expression": "smug"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "AÑO 1"
+            ],
+            "y": 120,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        },
+        {
+          "name": "boing",
+          "at_word": 3
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "a02",
+      "beat": "development",
+      "narration": "Sin electricidad, el mundo vuelve a antes de 1882, cuando Thomas Edison abrió en Nueva York una de las primeras centrales eléctricas.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.5
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 1.0,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.4
+          },
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "bulb",
+            "x": 0.72,
+            "y": 0.45,
+            "scale": 1.0,
+            "at_word": 11
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "1882",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#1B1B3A",
+            "at_word": 6
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "La central de Pearl Street de Edison empezó a dar servicio en Nueva York en septiembre de 1882",
+          "kind": "fact",
+          "source": "Smithsonian / IEEE History Center"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 11
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "a03",
+      "beat": "development",
+      "narration": "Pero ahora somos más de ocho mil millones de personas, y casi todo lo que nos mantiene vivos funciona con enchufe.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#3B82F6",
+          "c2": "#7FB8E6",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 8000,
+            "suffix": " MILLONES",
+            "at_word": 4,
+            "over": 0.8,
+            "y": 330,
+            "size": 150,
+            "sub": "DE PERSONAS"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "La población mundial superó los 8.000 millones en noviembre de 2022",
+          "kind": "fact",
+          "source": "Naciones Unidas"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "ocho"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "a04",
+      "beat": "development",
+      "narration": "Bombear agua limpia, fabricar medicinas, llevar comida del campo a las ciudades… Todo habría que reinventarlo con músculo, vapor y leña.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 1.0,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.4
+          },
+          "action": "dig",
+          "expression": "tired",
+          "tool": {
+            "type": "shovel"
+          }
+        },
+        "props": [
+          {
+            "type": "water_pump",
+            "x": 0.72,
+            "y": 0.95,
+            "scale": 0.8,
+            "pumping": true
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "a04b",
+      "beat": "development",
+      "narration": "Los hospitales funcionarían como en el siglo diecinueve: sin rayos X, sin máquinas de diálisis y sin neveras para las vacunas.",
+      "visual": {
+        "background": {
+          "type": "hospital",
+          "native": true,
+          "lights": 0,
+          "dark": 0.5,
+          "glows": [
+            [
+              1190.4,
+              509.6,
+              288.0
+            ]
+          ]
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 1.0,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.4
+          },
+          "action": "sweat",
+          "expression": "worried",
+          "sweat": 0.4
+        },
+        "props": [
+          {
+            "type": "candle",
+            "x": 0.62,
+            "y": 0.62,
+            "scale": 0.8
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "a04c",
+      "beat": "development",
+      "narration": "Y el campo produciría mucho menos: sin gasóleo para tractores ni bombas de riego, la comida se volvería muy cara.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 1.0,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.4
+          },
+          "action": "dig",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "jerrycan",
+            "x": 0.72,
+            "y": 0.9,
+            "scale": 0.5,
+            "crossed": true,
+            "cross_at": 0.3
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "a05",
+      "beat": "development",
+      "narration": "Las ciudades gigantes serían muy difíciles de mantener. Lo más probable es que mucha gente volviera al campo, cerca de ríos y pozos.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "lights": 0,
+          "stars": 1,
+          "milky": 0.0
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 1.0,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.4
+          },
+          "action": "walk",
+          "expression": "worried"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.55
+          }
+        ],
+        "camera": {
+          "move": "pan_left"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "a05b",
+      "beat": "development",
+      "narration": "¿Quién lo pasaría mejor? Quien sabe cultivar, hacer fuego, conservar comida y arreglar cosas con las manos.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 1.0,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.4
+          },
+          "action": "smug",
+          "expression": "smug"
+        },
+        "props": [
+          {
+            "type": "plant",
+            "x": 0.7,
+            "y": 0.9,
+            "scale": 0.9
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "a05c",
+      "beat": "development",
+      "narration": "Los amish de Estados Unidos, que viven casi sin conectarse a la red eléctrica, apenas notarían la diferencia.",
+      "visual": {
+        "background": {
+          "type": "countryside"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 1.0,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.4
+          },
+          "action": "laugh",
+          "expression": "laugh"
+        },
+        "props": [
+          {
+            "type": "cart",
+            "x": 0.72,
+            "y": 0.88,
+            "scale": 0.9
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Las comunidades amish evitan, por norma general, conectarse a la red eléctrica pública",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "a06",
+      "beat": "development",
+      "narration": "Y ojo: para unos setecientos treinta millones de personas, vivir sin electricidad no es un hipotético. Es su día a día.",
+      "visual": {
+        "background": {
+          "type": "space"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "earth_night",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.2,
+            "lights": 0.55,
+            "enter": "none",
+            "loop": "bob"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 730,
+            "suffix": " MILLONES",
+            "at_word": 4,
+            "over": 0.8,
+            "y": 150,
+            "size": 120,
+            "sub": "SIN ELECTRICIDAD HOY (AIE, 2024)"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Unos 730 millones de personas no tenían acceso a la electricidad en 2024",
+          "kind": "fact",
+          "source": "Agencia Internacional de la Energía (2025)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "setecientos"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "a07",
+      "beat": "development",
+      "narration": "Balance del primer año: un mundo de 1880… con ocho mil millones de personas. Una combinación muy difícil.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "beard": 1.0,
+          "extras": {
+            "beard_color": "hair",
+            "eyebags": 0.4
+          },
+          "action": "sweat",
+          "expression": "tired",
+          "sweat": 0.3
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.06,
+            "label": "¿CUÁNTO SIGUE FUNCIONANDO?",
+            "ticks": [
+              "NADA",
+              "POCO",
+              "LA MITAD",
+              "CASI TODO",
+              "TODO"
+            ],
+            "at_word": 3,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 3
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c01",
+      "beat": "climax",
+      "narration": "Vale. Pero ¿de verdad podría apagarse el mundo entero? Hay un sospechoso principal: el Sol.",
+      "visual": {
+        "background": {
+          "type": "solar_storm",
+          "native": true
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿PODRÍA PASAR?"
+            ],
+            "y": 120,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.1
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.0,
+          "gain_db": -6
+        },
+        {
+          "name": "boom",
+          "at_word": 13,
+          "gain_db": -6
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "Sol"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c02",
+      "beat": "climax",
+      "narration": "A veces el Sol escupe una nube gigantesca de partículas cargadas: una eyección de masa coronal.",
+      "visual": {
+        "background": {
+          "type": "solar_storm",
+          "native": true
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "EYECCIÓN DE MASA CORONAL",
+            "x": 960,
+            "y": 1000,
+            "size": 64,
+            "bg": "#FF8A3D",
+            "at_word": 11
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Una eyección de masa coronal es una expulsión de plasma y campo magnético desde la corona solar",
+          "kind": "fact",
+          "source": "NOAA Space Weather Prediction Center"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c03",
+      "beat": "climax",
+      "narration": "Si golpea la Tierra, sacude su campo magnético y hace que corran corrientes por los cables largos de la red eléctrica.",
+      "visual": {
+        "background": {
+          "type": "solar_storm",
+          "native": true,
+          "impact": true,
+          "speed": 0.7
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "CORRIENTES INDUCIDAS",
+            "x": 960,
+            "y": 1000,
+            "size": 64,
+            "bg": "#E8392F",
+            "at_word": 12
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Las tormentas geomagnéticas inducen corrientes en las líneas largas que pueden dañar transformadores",
+          "kind": "fact",
+          "source": "NOAA SWPC; Departamento de Energía de EE. UU."
+        }
+      ],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at_word": 3,
+          "gain_db": -6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c04",
+      "beat": "climax",
+      "narration": "Ya pasó en 1859. Se llama evento Carrington, por el astrónomo que vio el destello en el Sol.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.5
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "victorian",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "surprised"
+        },
+        "props": [
+          {
+            "type": "telegraph",
+            "x": 0.7,
+            "y": 0.7,
+            "scale": 0.9
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "1859",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#1B1B3A",
+            "at_word": 3
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "El 1 de septiembre de 1859 Richard Carrington observó la fulguración que precedió a la gran tormenta geomagnética",
+          "kind": "fact",
+          "source": "NASA / Royal Astronomical Society"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c05",
+      "beat": "climax",
+      "narration": "Los telégrafos se volvieron locos: algunos operadores recibieron descargas, y de los aparatos saltaban chispas.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.5
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "victorian",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shock",
+          "expression": "shock",
+          "sweat": 0.6
+        },
+        "props": [
+          {
+            "type": "telegraph",
+            "x": 0.68,
+            "y": 0.7,
+            "scale": 1.0,
+            "sparks": true
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.3
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Durante la tormenta de 1859 fallaron sistemas de telégrafo, hubo operadores que recibieron descargas y chispas en los equipos",
+          "kind": "fact",
+          "source": "NASA Science; registros históricos de 1859"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "crack",
+          "at_word": 8
+        },
+        {
+          "name": "crack",
+          "at_word": 13
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "chispas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c06",
+      "beat": "climax",
+      "narration": "Y hubo auroras en lugares donde casi nunca se ven, muy cerca del trópico.",
+      "visual": {
+        "background": {
+          "type": "grid_field",
+          "native": true,
+          "night": true,
+          "aurora": 1.0,
+          "lights": 0
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "victorian",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "look_up",
+          "expression": "wow"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [
+        {
+          "text": "Las auroras de 1859 se vieron a latitudes muy bajas, cerca del trópico",
+          "kind": "fact",
+          "source": "NASA Science"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 2
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c07",
+      "beat": "climax",
+      "narration": "En 1859 casi nada dependía de la electricidad. Hoy, una tormenta así sería otra historia.",
+      "visual": {
+        "background": {
+          "type": "grid_field",
+          "native": true,
+          "night": true,
+          "aurora": 1.0,
+          "sparks": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "sweat",
+          "expression": "worried",
+          "sweat": 0.5
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "otra"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c08",
+      "beat": "climax",
+      "narration": "Tenemos un aviso más reciente: en marzo de 1989, una tormenta solar tumbó la red eléctrica de Quebec, en Canadá.",
+      "visual": {
+        "background": {
+          "type": "grid_field",
+          "native": true,
+          "night": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "surprised"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "QUEBEC · 1989",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#3B82F6",
+            "at_word": 8
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "El 13 de marzo de 1989 una tormenta geomagnética provocó el colapso de la red de Hydro-Québec",
+          "kind": "fact",
+          "source": "NASA; Hydro-Québec"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c09",
+      "beat": "climax",
+      "narration": "Seis millones de personas se quedaron sin luz en noventa segundos, y tardaron unas nueve horas en recuperarla.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#1B1B3A",
+          "c2": "#3B3F78",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 90,
+            "suffix": " S",
+            "at_word": 8,
+            "over": 0.8,
+            "y": 330,
+            "size": 200,
+            "sub": "Y 6 MILLONES A OSCURAS"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "La red de Quebec cayó en unos 90 segundos; 6 millones de personas pasaron unas 9 horas sin electricidad",
+          "kind": "fact",
+          "source": "NASA, «The Day the Sun Brought Darkness» (2009)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 8
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "noventa"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c10",
+      "beat": "climax",
+      "narration": "Y en mayo de 2024, la tormenta más fuerte desde 2003 pintó auroras sobre buena parte de España.",
+      "visual": {
+        "background": {
+          "type": "grid_field",
+          "native": true,
+          "night": true,
+          "aurora": 1.0,
+          "lights": 0
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "look_up",
+          "expression": "wow"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "ESPAÑA · MAYO 2024",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#22B573",
+            "at_word": 2
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "La tormenta geomagnética G5 del 10-11 de mayo de 2024, la más intensa desde 2003, dejó auroras visibles en gran parte de España",
+          "kind": "fact",
+          "source": "NOAA SWPC; AEMET"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 11
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c10b",
+      "beat": "climax",
+      "narration": "Y en julio de 2012 nos libramos por poco: una eyección tan fuerte como la de Carrington cruzó la órbita de la Tierra.",
+      "visual": {
+        "background": {
+          "type": "solar_storm",
+          "native": true
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "JULIO 2012",
+            "x": 960,
+            "y": 1000,
+            "size": 64,
+            "bg": "#E8392F",
+            "at_word": 2
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "La eyección del 23 de julio de 2012 habría sido comparable al evento Carrington si hubiera alcanzado la Tierra",
+          "kind": "fact",
+          "source": "NASA Science, «Near Miss: The Solar Superstorm of July 2012» (2014); Baker et al., Space Weather (2013)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c10c",
+      "beat": "climax",
+      "narration": "Si hubiera salido del Sol más o menos una semana antes, nos habría dado de lleno.",
+      "visual": {
+        "background": {
+          "type": "solar_storm",
+          "native": true,
+          "impact": true,
+          "speed": 0.7
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shock",
+          "expression": "shock",
+          "sweat": 0.8
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.6
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boom",
+          "at_word": 13,
+          "gain_db": -6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "semana"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c11",
+      "beat": "climax",
+      "narration": "Lo que más preocupa a los ingenieros son los grandes transformadores: piezas de cientos de toneladas que se fabrican por encargo.",
+      "visual": {
+        "background": {
+          "type": "grid_field",
+          "native": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "transformer",
+            "x": 0.66,
+            "y": 0.92,
+            "scale": 1.0,
+            "label": "100-400 TONELADAS"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Los grandes transformadores de potencia pesan entre 100 y 400 toneladas y se fabrican a medida",
+          "kind": "fact",
+          "source": "Departamento de Energía de EE. UU. (2024)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c12",
+      "beat": "climax",
+      "narration": "Hoy, conseguir uno nuevo puede llevar de dos a cuatro años. Si se quemaran muchos a la vez, no habría repuestos para todos.",
+      "visual": {
+        "background": {
+          "type": "grid_field",
+          "native": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "sweat",
+          "expression": "scared",
+          "sweat": 0.6
+        },
+        "props": [
+          {
+            "type": "transformer",
+            "x": 0.66,
+            "y": 0.92,
+            "scale": 1.0,
+            "burning": true
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "ESPERA: 2-4 AÑOS",
+            "x": 960,
+            "y": 90,
+            "size": 64,
+            "bg": "#E8392F",
+            "at_word": 5
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "En 2024 los plazos de entrega de transformadores rondaban las 120 semanas, y hasta 210 para los grandes",
+          "kind": "fact",
+          "source": "NERC, recogido por la prensa especializada (2024)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at_word": 15
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "cuatro"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c13",
+      "beat": "climax",
+      "narration": "¿Y la probabilidad? Los estudios no se ponen de acuerdo: van desde un uno hasta un doce por ciento por década.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "think",
+          "expression": "surprised"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "1 % – 12 % POR DÉCADA",
+            "x": 1200,
+            "y": 400,
+            "size": 90,
+            "bg": "#1B1B3A",
+            "at_word": 9
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Las estimaciones de una tormenta tipo Carrington van de ~1 % (Moriña et al., 2019) a ~12 % por década (Riley, 2012)",
+          "kind": "fact",
+          "source": "Riley, Space Weather (2012); Moriña et al., Scientific Reports (2019)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 9
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c14",
+      "beat": "climax",
+      "narration": "La buena noticia: estas nubes tardan uno o varios días en llegar, y hay satélites vigilando el Sol que las ven salir.",
+      "visual": {
+        "background": {
+          "type": "solar_storm",
+          "native": true
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "AVISO: 1-3 DÍAS",
+            "x": 960,
+            "y": 1000,
+            "size": 64,
+            "bg": "#22B573",
+            "at_word": 7
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Las eyecciones de masa coronal suelen tardar entre 1 y 3 días en llegar a la Tierra",
+          "kind": "fact",
+          "source": "NOAA SWPC"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c15",
+      "beat": "climax",
+      "narration": "Con ese aviso, las eléctricas pueden proteger la red, repartir la carga e incluso desconectar equipos antes del golpe.",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "mixed",
+          "restored": [
+            0.0,
+            1.05,
+            7.0
+          ],
+          "label": "REPOSICIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "happy"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c15b",
+      "beat": "climax",
+      "narration": "El Sol no es el único sospechoso. En diciembre de 2015, un ciberataque dejó sin luz a unos doscientos veinticinco mil clientes en Ucrania.",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "red",
+          "label": "RED ELÉCTRICA · SIN TENSIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shock",
+          "expression": "angry"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "UCRANIA · 2015",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#E8392F",
+            "at_word": 8
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "El 23 de diciembre de 2015 un ciberataque contra distribuidoras ucranianas dejó sin luz a unos 225.000 clientes durante horas",
+          "kind": "fact",
+          "source": "CISA (EE. UU.), alerta ICS IR-ALERT-H-16-056-01"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 8
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c15c",
+      "beat": "climax",
+      "narration": "Los operadores tuvieron que ir a las subestaciones y volver a conectarlo todo a mano. Tardaron unas horas, no años.",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "red",
+          "label": "RED ELÉCTRICA · SIN TENSIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c16",
+      "beat": "climax",
+      "narration": "Por eso, el escenario realista no es un planeta a oscuras durante años, sino apagones grandes en algunas regiones.",
+      "visual": {
+        "background": {
+          "type": "grid_field",
+          "native": true
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "smug",
+          "expression": "happy"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "realista"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r01",
+      "beat": "climax",
+      "narration": "Y si todo se apaga, ¿cómo se vuelve a encender? No basta con darle a un interruptor.",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "red",
+          "label": "RED ELÉCTRICA · SIN TENSIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "think",
+          "expression": "surprised"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿CÓMO SE ENCIENDE?"
+            ],
+            "y": 120,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r02",
+      "beat": "climax",
+      "narration": "Muchas centrales necesitan electricidad para arrancar. Es como arrancar un coche que tiene la batería muerta.",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "red",
+          "label": "RED ELÉCTRICA · SIN TENSIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shrug",
+          "expression": "smug"
+        },
+        "props": [
+          {
+            "type": "car",
+            "x": 0.7,
+            "y": 0.86,
+            "scale": 0.8
+          },
+          {
+            "type": "battery",
+            "x": 0.7,
+            "y": 0.4,
+            "scale": 0.7,
+            "level": 0.02
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r03",
+      "beat": "climax",
+      "narration": "Por eso se empieza con centrales que pueden arrancar solas, como las hidroeléctricas, y la red se enciende por islas.",
+      "visual": {
+        "background": {
+          "type": "grid_field",
+          "native": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "dam",
+            "x": 0.68,
+            "y": 0.75,
+            "scale": 0.6
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "La reposición tras un apagón total empieza por centrales con arranque autónomo, como las hidroeléctricas",
+          "kind": "fact",
+          "source": "Red Eléctrica (REE)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r03b",
+      "beat": "climax",
+      "narration": "Y no se puede ir con prisas: toda la red de Europa gira sincronizada a cincuenta hercios, como una orquesta enorme.",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "mixed",
+          "restored": [
+            0.0,
+            1.05,
+            7.0
+          ],
+          "label": "REPOSICIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 50,
+            "suffix": " Hz",
+            "at_word": 12,
+            "over": 0.8,
+            "y": 230,
+            "size": 150,
+            "sub": "LA RED EUROPEA, SINCRONIZADA"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "La red síncrona de Europa continental funciona a una frecuencia de 50 Hz",
+          "kind": "fact",
+          "source": "ENTSO-E"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "cincuenta"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r03c",
+      "beat": "climax",
+      "narration": "Si conectas demasiados consumidores de golpe, la frecuencia cae y la isla que acabas de encender se vuelve a apagar.",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "red",
+          "label": "RED ELÉCTRICA · SIN TENSIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shock",
+          "expression": "shock"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.5
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "crack",
+          "at_word": 12
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r04",
+      "beat": "climax",
+      "narration": "En España, el veintiocho de abril, ayudaron las hidroeléctricas, las centrales de gas y la electricidad que llegó desde Francia y Marruecos.",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "mixed",
+          "restored": [
+            0.0,
+            1.05,
+            7.0
+          ],
+          "label": "REPOSICIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "point_up",
+          "expression": "happy"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "La reposición se apoyó en las interconexiones con Francia y Marruecos, ciclos combinados e hidroeléctricas",
+          "kind": "fact",
+          "source": "La Moncloa (declaración del presidente del Gobierno, 28/04/2025)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r05",
+      "beat": "climax",
+      "narration": "A la mañana siguiente, ya estaba recuperada prácticamente toda la demanda. En un apagón mundial, no habría vecinos a los que pedir ayuda.",
+      "visual": {
+        "background": {
+          "type": "control_room",
+          "native": true,
+          "state": "mixed",
+          "restored": [
+            0.0,
+            1.05,
+            7.0
+          ],
+          "label": "REPOSICIÓN"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "celebrate",
+          "expression": "happy",
+          "actions": [
+            [
+              "w12",
+              "think"
+            ]
+          ],
+          "expressions": [
+            [
+              "w12",
+              "worried"
+            ]
+          ]
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [
+        {
+          "text": "Red Eléctrica dio por recuperada la totalidad de la demanda la mañana del 29 de abril de 2025",
+          "kind": "fact",
+          "source": "Red Eléctrica (REE), 29/04/2025"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "vecinos"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f01",
+      "beat": "ending",
+      "narration": "Resumiendo: en un minuto, caos en la calle. En unas horas, sin cobertura ni gasolina.",
+      "visual": {
+        "background": {
+          "type": "modern_city",
+          "native": true,
+          "day": true
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "traffic_light",
+            "x": 0.66,
+            "y": 0.97,
+            "scale": 0.9,
+            "state": "off"
+          },
+          {
+            "type": "cell_tower",
+            "x": 0.86,
+            "y": 0.97,
+            "scale": 0.8,
+            "on": false,
+            "at_word": 7
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "flash",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f02",
+      "beat": "ending",
+      "narration": "En unos días, sin comida fresca. Y en un año, un salto atrás de casi siglo y medio.",
+      "visual": {
+        "background": {
+          "type": "supermarket",
+          "native": true,
+          "lights": 0,
+          "dark": 0.35,
+          "stock": 0.12,
+          "sign_text": "CERRADO"
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "shrug",
+          "expression": "worried",
+          "beard": 0.8
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "vignette",
+            "alpha": 0.55
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f03",
+      "beat": "ending",
+      "narration": "La electricidad es tan invisible que solo nos acordamos de ella cuando se va.",
+      "visual": {
+        "background": {
+          "type": "living_room",
+          "native": true,
+          "lights": 0.0
+        },
+        "character": {
+          "x": 0.6,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "look_up",
+          "expression": "happy",
+          "actions": [
+            [
+              "w5",
+              "celebrate"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "bulb",
+            "x": 0.5,
+            "y": 0.28,
+            "scale": 0.9,
+            "flicker": true,
+            "at_word": 6
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "invisible"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f04",
+      "beat": "ending",
+      "narration": "Un consejo práctico: ten en casa una linterna, una radio a pilas, agua, comida en lata y algo de efectivo.",
+      "visual": {
+        "background": {
+          "type": "living_room",
+          "native": true
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "talk",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "flashlight",
+            "x": 0.42,
+            "y": 0.45,
+            "scale": 0.55,
+            "at_word": 7,
+            "on": false
+          },
+          {
+            "type": "radio",
+            "x": 0.6,
+            "y": 0.62,
+            "scale": 0.6,
+            "at_word": 9,
+            "on": false
+          },
+          {
+            "type": "water_bottle",
+            "x": 0.74,
+            "y": 0.68,
+            "scale": 0.5,
+            "at_word": 13
+          },
+          {
+            "type": "food_can",
+            "x": 0.86,
+            "y": 0.66,
+            "scale": 0.55,
+            "at_word": 14
+          },
+          {
+            "type": "money",
+            "x": 0.6,
+            "y": 0.88,
+            "scale": 0.55,
+            "at_word": 18
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 7
+        },
+        {
+          "name": "pop",
+          "at_word": 13
+        },
+        {
+          "name": "pop",
+          "at_word": 18
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f05",
+      "beat": "ending",
+      "narration": "Y ahora te toca a ti: ¿qué es lo que más echarías de menos en un apagón mundial? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "living_room",
+          "native": true
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "talk",
+          "expression": "excited",
+          "actions": [
+            [
+              "w16",
+              "point_down"
+            ]
+          ]
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 960,
+            "y": 120,
+            "size": 70,
+            "at_word": 16,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 16
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f06",
+      "beat": "ending",
+      "narration": "Y si quieres más «¿qué pasaría si…?» como este, suscríbete a Hipotéticos. ¡Nos vemos en el próximo!",
+      "visual": {
+        "background": {
+          "type": "living_room",
+          "native": true
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "extras": {
+            "beard_color": "hair"
+          },
+          "action": "wave",
+          "expression": "happy"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.06
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.5
+    }
+  ],
+  "metadata": {
+    "format": "landscape",
+    "title": "¿Qué pasaría si se apagara la electricidad en todo el mundo? ⚡",
+    "hashtags": [
+      "#quepasariasi",
+      "#apagon",
+      "#documental"
+    ],
+    "tags": [
+      "qué pasaría si",
+      "apagón",
+      "apagón mundial",
+      "sin electricidad",
+      "apagón españa",
+      "28 de abril",
+      "tormenta solar",
+      "evento carrington",
+      "quebec 1989",
+      "red eléctrica",
+      "kit de emergencia",
+      "72 horas",
+      "vía láctea",
+      "contaminación lumínica",
+      "fukushima",
+      "texas 2021",
+      "supervivencia",
+      "ciencia",
+      "documental",
+      "hipotéticos",
+      "qué pasaría si se va la luz"
+    ],
+    "pinned_comment": "¿Qué es lo que más echarías de menos en un apagón mundial? ⚡👇",
+    "description": "¿Qué pasaría si mañana se apagara la electricidad en todo el planeta a la vez… y no volviera? ⚡\n\nLeo lo cuenta minuto a minuto, hora a hora, día a día, hasta un año entero sin luz, con datos reales: el apagón ibérico del 28 de abril de 2025, la ola de frío de Texas de 2021, la tormenta solar que tumbó Quebec en 1989 y el evento Carrington de 1859.\n\n{CAPITULOS}\n\n🧪 ALGUNOS DATOS DEL VÍDEO\n• El 28 de abril de 2025, a las 12:33, la península ibérica perdió unos 15 GW de generación en cinco segundos, cerca del 60 % de la demanda española en ese momento (Gobierno de España).\n• En España se quedaron parados más de cien trenes y hubo que evacuar a unos 35.000 pasajeros; solo en Madrid hubo 286 rescates en ascensores.\n• Las baterías de respaldo de las antenas de móvil suelen durar entre 2 y 4 horas.\n• Una nevera cerrada mantiene la comida segura unas 4 horas sin luz; un congelador lleno, unas 48 (USDA).\n• La Vía Láctea está oculta para más de un tercio de la humanidad por la contaminación lumínica: el 60 % de los europeos y casi el 80 % de los norteamericanos no la ven (Falchi et al., 2016).\n• Los hospitales acreditados en EE. UU. deben planificar 96 horas de autonomía; la UE recomienda que cada hogar aguante 72 horas por sí mismo (2025).\n• En Fukushima (2011) el tsunami inundó los generadores diésel que refrigeraban los reactores.\n• Muchas insulinas aguantan unos 28 días sin nevera entre 15 y 30 °C (FDA; depende del producto).\n• La tormenta invernal de Texas de 2021 dejó sin luz a más de 4,5 millones de hogares y negocios; las cifras oficiales hablan de 246 muertes.\n• En 1859, durante el evento Carrington, fallaron los telégrafos y saltaron chispas de los aparatos. En 1989, una tormenta solar tumbó la red de Quebec en unos 90 segundos.\n• Los grandes transformadores pesan entre 100 y 400 toneladas y en 2024 tardaban de dos a cuatro años en entregarse.\n• Unos 730 millones de personas siguen sin acceso a la electricidad (AIE, 2024).\n\n⚠️ El apagón mundial es un escenario hipotético. El «medidor» de cuánto sigue funcionando es una estimación divulgativa, no un cálculo científico.\n\n📚 Fuentes: La Moncloa (28/04/2025); Red Eléctrica; Ministerio de Transportes; El País; USDA FSIS; FCC; Falchi et al., Science Advances (2016); NFPA 99/110; The Joint Commission; Comisión Europea, Estrategia de Preparación de la Unión (2025); World Nuclear Association; OIEA; National Research Council; FDA; FERC/NERC (2021); Texas DSHS; NOAA Space Weather Prediction Center; NASA; Hydro-Québec; AEMET; Departamento de Energía de EE. UU. (2024); Riley (2012); Moriña et al. (2019); Smithsonian; Naciones Unidas; Agencia Internacional de la Energía.\n\n💬 ¿Qué es lo que más echarías de menos en un apagón mundial? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?».\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #apagon #electricidad #tormentasolar #ciencia #documental",
+    "target_seconds": [
+      840,
+      1080
+    ],
+    "custom_thumbnail": true,
+    "chapters": {
+      "i01": "Intro: el día que se apagó España",
+      "m01": "Minuto 1: semáforos, ascensores y metro",
+      "h01": "Hora 1: sin cobertura, sin tarjeta, sin gasolina",
+      "n01": "Noche 1: la Vía Láctea… y el agua",
+      "d01": "Día 3: neveras, tiendas y hospitales",
+      "s01": "Semana 1: nucleares, granjas y la radio",
+      "me01": "Mes 1: frío, calor y trueque",
+      "a01": "Año 1: de vuelta a 1882",
+      "c01": "¿Podría pasar? Las tormentas solares",
+      "r01": "Cómo se vuelve a encender la red",
+      "f01": "Resumen y kit de emergencia"
+    }
+  }
+}

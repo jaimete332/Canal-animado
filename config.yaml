@@ -58,6 +58,10 @@ tts:
     Pigafetta: Pigafeta
     Vespasiano: Vespasiano
     LEBLANC: Leblán
+    Carrington: Cárrington
+    Edison: Édison
+    amish: ámish
+    router: rúter
   kokoro:
     model: models/kokoro/kokoro-v1.0.onnx
     voices: models/kokoro/voices-v1.0.bin

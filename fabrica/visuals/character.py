@@ -10,7 +10,7 @@ from dataclasses import dataclass, field, replace
 
 import cairo
 
-from .draw import (INK, OUT, PAL, circle, clamp, col, darken, ellipse, fill_stroke, lerp, lighten,
+from .draw import (INK, OUT, PAL, circle, clamp, col, darken, ellipse, fill_stroke, lerp, lighten, mix,
                    limb, noise1, rrect, saved, smooth_closed)
 
 U_ARM1, U_ARM2 = 0.62, 0.58
@@ -498,7 +498,15 @@ class Character:
                                 (hx, hy + 0.95 + 1.3 * b), (hx + 0.6, hy + 0.75 + 0.6 * b),
                                 (hx + 0.8, hy + 0.3), (hx + 0.4, hy + 0.55), (hx, hy + 0.62),
                                 (hx - 0.4, hy + 0.55)])
-            fill_stroke(ctx, lighten((0.55, 0.55, 0.6), 0.35 * b), lw)
+            if pose.extras.get("beard_color") == "hair":  # barba pelirroja que crece (días sin afeitar)
+                c = mix(self.p["hair"], self.p["hair_sh"], 0.5)
+                if b < 0.35:  # barba de pocos días: sombra sin contorno
+                    ctx.set_source_rgba(*c, 0.35 + 1.5 * b)
+                    ctx.fill()
+                else:
+                    fill_stroke(ctx, c, lw)
+            else:
+                fill_stroke(ctx, lighten((0.55, 0.55, 0.6), 0.35 * b), lw)
         # pelo (tupé característico)
         self._hair(ctx, pose, lw)
         # mejillas

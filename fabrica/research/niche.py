@@ -73,11 +73,12 @@ def _key() -> str:
 @retry(tries=3)
 def _get(path: str, **params) -> dict:
     params = {k: v for k, v in params.items() if v is not None}
-    r = requests.get(f"{API}/{path}", params={**params, "key": _key()}, timeout=30,
-                     headers={"X-Goog-Api-Key": _key()})
+    # la clave va solo en la cabecera: así nunca aparece en URLs de errores ni en registros
+    r = requests.get(f"{API}/{path}", params=params, timeout=30, headers={"X-Goog-Api-Key": _key()})
     if r.status_code in (400, 401, 403):
         raise PermanentError(f"YouTube API {r.status_code}: {r.text[:300]}")
-    r.raise_for_status()
+    if r.status_code >= 400:
+        raise requests.HTTPError(f"YouTube API {r.status_code} en /{path}: {r.text[:200]}")
     return r.json()
 
 
