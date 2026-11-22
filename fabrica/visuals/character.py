@@ -829,18 +829,22 @@ class Character:
             "dizzy": (0.12, -0.2), "laugh": (0.12, 0.0), "happy_closed": (0.1, 0.0), "tired": (0.0, -0.15),
         }.get(ex, (0.05, 0.0))
         raise_, tilt = brow
+        # anclaje: justo encima del ojo (antes, a altura fija: con sorpresa se metían en el flequillo)
+        eye_top = hy - 0.18 - (0.34 if big else 0.30)
         for s in (-1, 1):
             cx = hx + 0.38 * s + fx
-            y0 = hy - 0.6 - raise_
-            ctx.move_to(cx - 0.2 * s - 0.0, y0 + (tilt * 0.12 if s == -1 else tilt * 0.12) * (1))
+            y0 = eye_top - 0.08 - 0.22 * raise_
             inner_y = y0 + tilt * 0.12
             outer_y = y0 - tilt * 0.08
             ctx.new_path()
             ctx.move_to(cx + 0.2 * s, outer_y)
             ctx.curve_to(cx + 0.05 * s, outer_y - 0.08, cx - 0.1 * s, inner_y - 0.05, cx - 0.2 * s, inner_y)
-            ctx.set_source_rgb(*darken(self.p["hair"], 0.55))
-            ctx.set_line_width(0.11)
+            ctx.set_source_rgb(*INK)  # contorno fino para que se lean sobre el pelo
+            ctx.set_line_width(0.15)
             ctx.set_line_cap(cairo.LINE_CAP_ROUND)
+            ctx.stroke_preserve()
+            ctx.set_source_rgb(*darken(self.p["hair"], 0.6))
+            ctx.set_line_width(0.1)
             ctx.stroke()
 
     def _mouth(self, ctx, pose: Pose, lw, fx):
@@ -855,35 +859,48 @@ class Character:
                     "laugh": 0.2, "excited": 0.14}.get(ex, 0.0)
             h = max(base, 0.05 + 0.3 * o)
             w = 0.3 if ex in ("surprised", "scared", "shock", "wow") else 0.36 + 0.06 * o
-            if ex in ("happy", "excited", "laugh", "smug", "determined", "neutral", "hot", "happy_closed"):
-                # boca en D (sonriente hablando)
-                ctx.new_path()
-                ctx.move_to(mx - w, my - 0.05)
-                ctx.curve_to(mx - w * 0.6, my - 0.1, mx + w * 0.6, my - 0.1, mx + w, my - 0.05)
-                ctx.curve_to(mx + w * 0.9, my + h * 1.5, mx - w * 0.9, my + h * 1.5, mx - w, my - 0.05)
-                ctx.close_path()
+            d_shape = ex in ("happy", "excited", "laugh", "smug", "determined", "neutral", "hot", "happy_closed")
+            if d_shape:
+                h = min(h, 0.24)  # que no se salga por la barbilla (está en hy + 0.9)
             else:
-                ellipse(ctx, mx, my + h * 0.4, w * 0.75, h)
-            fill_stroke(ctx, (0.45, 0.08, 0.15), lw)
-            with saved(ctx):
-                if ex in ("happy", "excited", "laugh", "smug", "determined", "neutral", "hot", "happy_closed"):
-                    ctx.new_path()
+                h = min(h, 0.24 if ex in ("shock", "scared") else 0.2)
+            oy = my + 0.1  # centro de la boca ovalada: entre la nariz (hy + 0.26) y la barbilla
+
+            def shape():
+                ctx.new_path()
+                if d_shape:  # boca en D (sonriente hablando)
                     ctx.move_to(mx - w, my - 0.05)
                     ctx.curve_to(mx - w * 0.6, my - 0.1, mx + w * 0.6, my - 0.1, mx + w, my - 0.05)
                     ctx.curve_to(mx + w * 0.9, my + h * 1.5, mx - w * 0.9, my + h * 1.5, mx - w, my - 0.05)
                     ctx.close_path()
                 else:
-                    ellipse(ctx, mx, my + h * 0.4, w * 0.75, h)
+                    ellipse(ctx, mx, oy, w * 0.72, h)
+
+            shape()
+            ctx.set_source_rgb(0.45, 0.08, 0.15)
+            ctx.fill()
+            with saved(ctx):
+                shape()
                 ctx.clip()
-                # dientes y lengua
-                rrect(ctx, mx - w, my - 0.12, 2 * w, 0.1, 0.03)
+                # dientes de arriba (fila corta con separación) y lengua al fondo
+                top = (my - 0.09) if d_shape else (oy - h)
+                tw = w * (1.7 if d_shape else 1.2)
+                rrect(ctx, mx - tw / 2, top - 0.02, tw, 0.1 if d_shape else 0.12, 0.03)
                 ctx.set_source_rgb(1, 1, 1)
                 ctx.fill()
-                ellipse(ctx, mx + 0.04, my + h * 1.1, w * 0.6, h * 0.55)
+                ctx.move_to(mx, top - 0.02)
+                ctx.line_to(mx, top + (0.08 if d_shape else 0.1))
+                ctx.set_source_rgba(0.75, 0.75, 0.8, 1)
+                ctx.set_line_width(0.02)
+                ctx.stroke()
+                ty = (my + h * 1.15) if d_shape else (oy + h * 0.72)
+                ellipse(ctx, mx + 0.02, ty, w * (0.55 if d_shape else 0.45), h * 0.5)
                 ctx.set_source_rgb(1.0, 0.45, 0.5)
                 ctx.fill()
-                if ex == "hot":
-                    pass
+            shape()
+            ctx.set_source_rgb(*INK)
+            ctx.set_line_width(lw)
+            ctx.stroke()
         else:
             ctx.new_path()
             if ex in ("worried", "scared", "tired", "dizzy"):

@@ -64,15 +64,27 @@ def main():
     g.add_color_stop_rgba(1, 0.05, 0.04, 0.1, 0.55)
     ctx.set_source(g)
     ctx.fill()
-    # Leo asustado, grande, abajo a la derecha
-    p = act("shock", 0.4, 2, Pose(x=1450, y=1240, scale=1.55, expression="shock", outfit="casual"))
-    p.mouth_open = 0.9
+    # etiqueta de cada época al pie de su franja (la última la tapa Leo)
+    tags = [("EGIPTO", "2560 a. C."), ("PESTE NEGRA", "1348"), ("PIRATAS", "1720")]
+    for i, (name, year) in enumerate(tags):
+        x = max(190, i * W / n + W / n / 2 - slant * 0.9)
+        with saved(ctx):
+            ctx.translate(x, 985)
+            ctx.rotate(-0.04)
+            rrect(ctx, -165, -52, 330, 104, 24)
+            fill_stroke(ctx, (1, 1, 1), OUT * 1.1)
+            text(ctx, name, 0, -12, 50, color=INK, outline=0, shadow_off=0, max_w=300)
+            text(ctx, year, 0, 30, 30, color=PAL["red"], outline=0, shadow_off=0)
+    # Leo asustado, grande, abajo a la derecha, sudando
+    p = act("shock", 0.4, 2, Pose(x=1480, y=1330, scale=1.85, expression="shock", outfit="casual", sweat=1.0))
+    p.mouth_open = 1.0
+    p.blink = 0
     Character().draw(ctx, p)
     # título
     text(ctx, "¿CUÁNTO", 620, 190, 190, color="white", outline=16, font="Lilita One")
     text(ctx, "DURARÍAS?", 620, 390, 200, color=PAL["yellow"], outline=16, font="Lilita One")
     # medidor
-    draw_prop(ctx, {"type": "survival_meter", "x": 620, "y": 700, "abs": True, "scale": 1.05, "value": 0.32,
+    draw_prop(ctx, {"type": "survival_meter", "x": 620, "y": 680, "abs": True, "scale": 1.05, "value": 0.32,
                     "label": "9 ÉPOCAS DE LA HISTORIA", "enter": "none", "animate": False}, 2.0)
     with saved(ctx):
         ctx.translate(1580, 120)
