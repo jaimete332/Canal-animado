@@ -2,8 +2,23 @@
  "cuanto-durarias-en-cada-epoca": {
   "fecha": "2026-11-28T17:00",
   "miniatura": "/_blob/a7db9d3e05e162b1f3a2433faeae58da",
-  "video_parts": ["/_blob/901673dd920c88b96bf148e02ec04e8a", "/_blob/ee3f88aa40a85572b16f2a66b19deb80",
-                  "/_blob/91ee3ade7c5175ab65c8e93b05751b79", "/_blob/bbe0f4378df8c00f18dad17987fdddc7",
-                  "/_blob/b6d2409be9181f3400235555463af82f"]
+  "video_parts": [
+   "/_blob/901673dd920c88b96bf148e02ec04e8a",
+   "/_blob/ee3f88aa40a85572b16f2a66b19deb80",
+   "/_blob/91ee3ade7c5175ab65c8e93b05751b79",
+   "/_blob/bbe0f4378df8c00f18dad17987fdddc7",
+   "/_blob/b6d2409be9181f3400235555463af82f"
+  ]
+ },
+ "apagon-mundial": {
+  "fecha": "2026-12-05T17:00",
+  "miniatura": "/_blob/5412ab60f7b1170926ad43da1c034f2d",
+  "video_parts": [
+   "/_blob/84da801f4407495d0815790a94d5508a",
+   "/_blob/8a0ff547928387923d60b852b4f44b72",
+   "/_blob/e32349db306d689d8989743b61c1d4d9",
+   "/_blob/4a9b10bd21e55b54c2fe35d9e0490edf",
+   "/_blob/b22c99cb39a6be53631eec7cb4b9560b"
+  ]
  }
 }
