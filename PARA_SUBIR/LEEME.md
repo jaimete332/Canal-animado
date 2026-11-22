@@ -9,16 +9,18 @@ Cada carpeta es un Short, numerada en el orden de publicación. Dentro tienes:
 | `<nombre>.mp4` | el vídeo que subes a YouTube |
 | `miniatura.png` | la miniatura (1080×1920) |
 | `PUBLICAR.md` | título, descripción, etiquetas y comentario fijado, listos para copiar |
-| `textos.txt` | lo mismo en texto plano, por si lo abres en el móvil |
+| `textos.txt` | lo mismo en texto plano, por si lo abres en el móvil (en vídeos largos, con capítulos) |
 | `extra/` | informe de calidad y hoja de contactos (no hace falta subirlos) |
 
-## Calendario recomendado (uno al día, 18:30 hora de España)
+## Calendario recomendado
 
 | Carpeta | Día |
 |---|---|
-| `01_ceniza-de-volcan` | viernes 20 de noviembre |
-| `02_agua-helada-del-titanic` | sábado 21 de noviembre |
-| `03_sin-casco-en-el-espacio` | domingo 22 de noviembre |
+| `04_cuanto-durarias-en-cada-epoca` (vídeo largo, 16 min) | sábado 28 de noviembre, 17:00 |
+
+Los vídeos largos están en la pestaña «Largos» del panel. El MP4 de la carpeta es una versión ligera
+(86 MB, SSIM 0,99 frente al original) para que quepa en GitHub; el original sin recomprimir (313 MB) solo está en
+`output/` de la máquina donde se produjo.
 
 Al publicar: pega el comentario fijado y fíjalo en YouTube Studio, y responde a los comentarios de la primera hora.
 
