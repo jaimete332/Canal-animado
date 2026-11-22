@@ -1,0 +1,7558 @@
+{
+  "title": "¿Cuánto durarías en cada época de la historia?",
+  "idea": "¿Cuánto durarías en cada época de la historia?",
+  "slug": "cuanto-durarias-en-cada-epoca",
+  "category": "historia",
+  "question": "¿A qué época viajarías?",
+  "music_mood": "adventure",
+  "scenes": [
+    {
+      "id": "i01",
+      "beat": "hook",
+      "narration": "Esta noche, una máquina del tiempo te lanza al pasado.",
+      "visual": {
+        "background": {
+          "type": "time_tunnel",
+          "window": 960
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.75,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "float",
+          "expression": "shock"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿CUÁNTO DURARÍAS",
+              "EN CADA ÉPOCA?"
+            ],
+            "y": 150,
+            "size": 96
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.2
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.0,
+          "gain_db": -6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "pasado"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i02",
+      "beat": "setup",
+      "narration": "Sin móvil, sin vacunas y sin billete de vuelta.",
+      "visual": {
+        "background": {
+          "type": "time_tunnel",
+          "window": 960
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.75,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "float",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "smartphone",
+            "x": 0.25,
+            "y": 0.4,
+            "scale": 0.8,
+            "crossed": true,
+            "cross_at": 0.5,
+            "loop": "bob"
+          },
+          {
+            "type": "question",
+            "x": 0.76,
+            "y": 0.38,
+            "at_word": 4
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 4
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i03",
+      "beat": "setup",
+      "narration": "Vas a visitar nueve épocas de la historia, y en cada una la pregunta será la misma: ¿cuánto durarías?",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "present",
+          "expression": "excited"
+        },
+        "props": [
+          {
+            "type": "calendar",
+            "x": 0.68,
+            "y": 0.5,
+            "scale": 1.1,
+            "loop": "bob",
+            "from": 2026,
+            "to": -2560,
+            "over": 4.0
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "ocho",
+        "durarías"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i04",
+      "beat": "setup",
+      "narration": "Para saberlo usaremos este medidor: desde unas pocas horas… hasta toda una vida.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.98,
+            "label": "¿CUÁNTO DURARÍAS?",
+            "at_word": 0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 1.2
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "horas",
+        "vida"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i04b",
+      "beat": "setup",
+      "narration": "Las reglas: llegas solo, con ropa de la época, y sabiendo lo mismo que la gente de ese tiempo. Ni más ni menos.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "note",
+            "x": 0.7,
+            "y": 0.45,
+            "scale": 1.0,
+            "loop": "wobble",
+            "at_word": 1
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "reglas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i05",
+      "beat": "setup",
+      "narration": "Nada de magia: todo lo que vas a ver sale de arqueólogos, historiadores y médicos.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "talk",
+          "expression": "determined"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "DATOS REALES · FUENTES EN LA DESCRIPCIÓN",
+            "x": 960,
+            "y": 80,
+            "size": 54,
+            "bg": "#22B573"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i05b",
+      "beat": "setup",
+      "narration": "Nueve paradas, miles de años y una sola misión: volver vivo para contarlo.",
+      "visual": {
+        "background": {
+          "type": "time_tunnel",
+          "window": 960
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.75,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "float",
+          "expression": "determined"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 9,
+            "suffix": " ÉPOCAS",
+            "at_word": 0,
+            "over": 0.6,
+            "y": 150,
+            "size": 120
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "vivo"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "i06",
+      "beat": "setup",
+      "narration": "Y al final te diré cuál es la época más peligrosa de todas. Agárrate: primera parada.",
+      "visual": {
+        "background": {
+          "type": "time_tunnel",
+          "window": 960
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.75,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "float",
+          "expression": "excited"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at_word": 13
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e01",
+      "beat": "development",
+      "narration": "Abres los ojos y el calor te golpea. Estás en Giza, Egipto, hacia el año dos mil quinientos sesenta antes de Cristo.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.6
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "shock",
+          "expression": "hot",
+          "sweat": 0.6
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "1 · EGIPTO · ≈2560 a. C.",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#E8A33A"
+          }
+        ],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "Giza"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e02",
+      "beat": "development",
+      "narration": "Delante de ti, miles de personas levantan la Gran Pirámide, la tumba del faraón Keops.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.35
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "point_up",
+          "expression": "wow"
+        },
+        "props": [
+          {
+            "type": "stone_block",
+            "x": 0.68,
+            "y": 0.9,
+            "scale": 0.8
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "pan_right",
+          "amount": 160
+        }
+      },
+      "claims": [
+        {
+          "text": "La Gran Pirámide de Giza se construyó como tumba del faraón Keops (Jufu), hacia 2560 a. C.",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e03",
+      "beat": "development",
+      "narration": "Y antes de que lo pienses: no, no la construían esclavos.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.6
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "talk",
+          "expression": "smug"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "myth",
+            "text": "LA HICIERON ESCLAVOS",
+            "stamp": "¡FALSO!",
+            "y": 160,
+            "stamp_at": 1.2
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 1.2,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "esclavos"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e04",
+      "beat": "development",
+      "narration": "Junto a la pirámide se encontraron las tumbas de los obreros. Y a un esclavo jamás le habrían dado un sitio tan cerca del faraón.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.6
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Tumbas de los constructores halladas junto a las pirámides de Giza (desde 1990)",
+            "at_word": 4,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Las tumbas de los trabajadores, junto a las pirámides, indican que no eran esclavos",
+          "kind": "fact",
+          "source": "Zahi Hawass, Consejo Supremo de Antigüedades de Egipto (2010)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e05",
+      "beat": "development",
+      "narration": "Eran trabajadores organizados en cuadrillas que se turnaban durante meses, y comían a cuenta del Estado.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.6
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "walk",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "linen",
+            "hair": "#2A1A10",
+            "skin": "#B9825A",
+            "x": 0.62,
+            "y": 0.93,
+            "size": 0.8,
+            "action": "walk",
+            "shirt": "#F2EAD6"
+          },
+          {
+            "type": "npc",
+            "outfit": "linen",
+            "hair": "#1A1210",
+            "skin": "#A8704A",
+            "x": 0.78,
+            "y": 0.93,
+            "size": 0.8,
+            "action": "walk",
+            "shirt": "#F2EAD6",
+            "seed": 2
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Trabajaban por turnos de unos tres meses y recibían raciones del Estado",
+          "kind": "fact",
+          "source": "Zahi Hawass (2010); Mark Lehner, AERA"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e05b",
+      "beat": "development",
+      "narration": "¿Cuántos eran? Según quién haga la cuenta, entre diez mil y veinte mil personas trabajando a la vez.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.35
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "think",
+          "expression": "wow"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 20000,
+            "prefix": "10.000-",
+            "suffix": " OBREROS",
+            "at_word": 8,
+            "over": 0.8,
+            "y": 160,
+            "size": 100,
+            "sub": "ESTIMACIONES DE LOS ARQUEÓLOGOS"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Las estimaciones de la mano de obra simultánea en Giza van de unos 10.000 (Lehner) a 20.000 o más (Hawass)",
+          "kind": "fact",
+          "source": "Mark Lehner, AERA; Zahi Hawass"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "veinte"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e06",
+      "beat": "development",
+      "narration": "Lo sabemos, en parte, por el diario de un inspector llamado Merer: los papiros escritos más antiguos que conocemos.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8A33A",
+          "c2": "#F6C46A",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "note",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.4,
+            "loop": "wobble"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Diario de Merer: anota cómo su equipo transportaba piedra de Tura a la Gran Pirámide",
+            "at_word": 4,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Los papiros de Merer (Wadi al-Jarf) son el diario de un inspector que llevaba piedra caliza de Tura a la Gran Pirámide",
+          "kind": "fact",
+          "source": "Pierre Tallet (2017)"
+        }
+      ],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [
+        "Merer"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e07",
+      "beat": "development",
+      "narration": "Cuenta, con la calma de un parte de trabajo, cómo su equipo llevaba bloques de piedra por el Nilo.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.6
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "stone_block",
+            "x": 0.5,
+            "y": 0.86,
+            "scale": 0.9,
+            "enter": "slide_left"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "pan_left",
+          "amount": 140
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e08",
+      "beat": "development",
+      "narration": "Tu primer trabajo: arrastrar un bloque de unas dos toneladas sobre un trineo de madera.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.35
+        },
+        "character": {
+          "x": 0.78,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "walk",
+          "facing": -1.0,
+          "expression": "determined",
+          "sweat": 0.8
+        },
+        "props": [
+          {
+            "type": "stone_block",
+            "x": 0.42,
+            "y": 0.92,
+            "scale": 0.9
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 2,
+            "suffix": " TONELADAS",
+            "at_word": 9,
+            "over": 0.7,
+            "y": 160,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Los bloques de la Gran Pirámide pesan de media unas 2-2,5 toneladas",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "toneladas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e09",
+      "beat": "development",
+      "narration": "Truco egipcio: mojar la arena delante del trineo. Con la humedad justa, hace falta la mitad de fuerza.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "stone_block",
+            "x": 0.5,
+            "y": 0.62,
+            "scale": 1.1
+          },
+          {
+            "type": "splash",
+            "x": 0.3,
+            "y": 0.66,
+            "at_word": 2,
+            "color": "#5CE1E6"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Física (2014): con la humedad adecuada, la arena reduce a la mitad la fuerza para arrastrar un trineo",
+            "at_word": 5,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Mojar la arena con la cantidad justa de agua reduce a la mitad la fuerza necesaria para arrastrar un trineo",
+          "kind": "fact",
+          "source": "Fall et al., Physical Review Letters (2014), Universidad de Ámsterdam"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "splash",
+          "at_word": 2
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "mitad"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e10",
+      "beat": "development",
+      "narration": "Hay pinturas egipcias que muestran justo eso: un hombre echando agua delante de una estatua gigante.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.6
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "point_up",
+          "expression": "surprised"
+        },
+        "props": [
+          {
+            "type": "splash",
+            "x": 0.62,
+            "y": 0.8,
+            "color": "#5CE1E6",
+            "at_word": 6
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En la tumba de Djehutihotep, una pintura muestra a un hombre vertiendo agua delante del trineo de una estatua colosal",
+          "kind": "fact",
+          "source": "Fall et al. (2014)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e11",
+      "beat": "development",
+      "narration": "¿La comida? Pan y cerveza a diario, repartidos desde enormes silos reales. Y, según los arqueólogos, carne con frecuencia.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8A33A",
+          "c2": "#F6C46A",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "food",
+            "kind": "bread",
+            "x": 0.3,
+            "y": 0.55,
+            "scale": 1.3
+          },
+          {
+            "type": "amphora",
+            "x": 0.55,
+            "y": 0.55,
+            "scale": 0.7,
+            "label": "CERVEZA",
+            "at_word": 3
+          },
+          {
+            "type": "meat",
+            "x": 0.78,
+            "y": 0.55,
+            "scale": 1.2,
+            "at_word": 14
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Silos reales repartían grano para pan y cerveza; los obreros comían carne con regularidad",
+          "kind": "fact",
+          "source": "AERA (Mark Lehner); Zahi Hawass (2010)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 3
+        },
+        {
+          "name": "pop",
+          "at_word": 14
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "cerveza"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e12",
+      "beat": "development",
+      "narration": "Era una cerveza espesa y floja: más alimento que bebida de fiesta.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.6
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "celebrate",
+          "expression": "laugh"
+        },
+        "props": [
+          {
+            "type": "amphora",
+            "x": 0.6,
+            "y": 0.75,
+            "scale": 0.5,
+            "label": "CERVEZA"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e12b",
+      "beat": "development",
+      "narration": "La jornada empieza con la luz del sol. Las herramientas son de cobre y de piedra: nada de hierro todavía.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.35
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "dig",
+          "expression": "determined"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En el Reino Antiguo se trabajaba con herramientas de cobre, piedra y madera; el hierro no se generalizó en Egipto hasta mucho después",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "cobre"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e12c",
+      "beat": "development",
+      "narration": "Y viven en una auténtica ciudad de trabajadores, con panaderías y cervecerías a escala industrial, junto a la obra.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.6
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "walk",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "food",
+            "kind": "bread",
+            "x": 0.66,
+            "y": 0.6,
+            "scale": 1.0,
+            "at_word": 9
+          },
+          {
+            "type": "amphora",
+            "x": 0.82,
+            "y": 0.72,
+            "scale": 0.45,
+            "label": "CERVEZA",
+            "at_word": 11
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Mark Lehner excavó junto a Giza la «ciudad perdida de los constructores de pirámides», con panaderías y almacenes",
+          "kind": "fact",
+          "source": "AERA (Ancient Egypt Research Associates); Harvard Magazine"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "ciudad"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e13",
+      "beat": "climax",
+      "narration": "El peligro no son los látigos: es el trabajo. Los esqueletos tienen artritis y la espalda destrozada.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.35
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "sweat",
+          "expression": "tired",
+          "sweat": 1.0
+        },
+        "props": [
+          {
+            "type": "bone",
+            "x": 0.72,
+            "y": 0.55,
+            "scale": 1.0,
+            "loop": "wobble",
+            "at_word": 8
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "shake": 0.1
+        }
+      },
+      "claims": [
+        {
+          "text": "Los esqueletos de los constructores muestran artritis y lesiones en la columna por el trabajo duro",
+          "kind": "fact",
+          "source": "Adel Okasha, excavación de Giza (2010)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "trabajo",
+        "espalda"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e14",
+      "beat": "climax",
+      "narration": "Pero aquí viene la sorpresa: muchas fracturas se habían curado bien alineadas, como si alguien las hubiera entablillado.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#22B573",
+          "c2": "#6EE7A8",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "bone",
+            "x": 0.5,
+            "y": 0.6,
+            "scale": 1.8,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Las fracturas de los obreros soldaron bien alineadas: se las entablillaban",
+            "at_word": 6,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La mayoría de las fracturas soldaron con buena alineación, lo que indica que se entablillaban",
+          "kind": "fact",
+          "source": "Excavación de las tumbas de Giza (Okasha, 2010)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 6
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "sorpresa"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e14b",
+      "beat": "climax",
+      "narration": "Siglos después, el papiro quirúrgico Edwin Smith ya explicaba cómo inmovilizar fracturas con tablillas.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8A33A",
+          "c2": "#F6C46A",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "note",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.4,
+            "loop": "wobble"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "El papiro Edwin Smith (h. 1600 a. C., copia de un texto más antiguo) describe el tratamiento de fracturas con tablillas",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica; Biblioteca de la Academia de Medicina de Nueva York"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "Edwin",
+        "Smith"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e15",
+      "beat": "climax",
+      "narration": "Es decir: había médicos cuidando de los obreros de las pirámides.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.6
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "celebrate",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "linen",
+            "hair": "#1A1210",
+            "skin": "#A8704A",
+            "x": 0.65,
+            "y": 0.93,
+            "size": 0.85,
+            "action": "present",
+            "shirt": "#FFFFFF",
+            "expression": "happy"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e15b",
+      "beat": "climax",
+      "narration": "¿Cuánto se tardó? El historiador griego Heródoto, dos mil años después, habló de unos veinte años de obra.",
+      "visual": {
+        "background": {
+          "type": "egypt",
+          "progress": 0.6
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "think",
+          "expression": "surprised"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 20,
+            "prefix": "≈",
+            "suffix": " AÑOS DE OBRA",
+            "at_word": 15,
+            "over": 0.6,
+            "y": 175,
+            "size": 100
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Heródoto atribuyó unos 20 años a la construcción de la Gran Pirámide",
+          "kind": "fact",
+          "source": "Heródoto, Historias II, 124"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "veinte"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "e16",
+      "beat": "ending",
+      "narration": "Veredicto egipcio: si no te aplasta un bloque, podrías aguantar años. Eso sí, con la espalda hecha polvo.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.76,
+            "label": "EGIPTO · ≈2560 a. C.",
+            "at_word": 0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 1.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "años"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r01",
+      "beat": "development",
+      "narration": "Segunda parada: Roma, año sesenta y cuatro después de Cristo. La ciudad más grande del mundo conocido.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "look_up",
+          "expression": "wow"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "2 · ROMA · 64 d. C.",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#C9543A"
+          }
+        ],
+        "camera": {
+          "move": "pan_up",
+          "amount": 160
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "Roma"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r02",
+      "beat": "development",
+      "narration": "Unos historiadores calculan que vivían en ella cerca de un millón de personas; otros, la mitad. Aun así, una barbaridad.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "shrug",
+          "expression": "surprised"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 1000000,
+            "suffix": " HABITANTES",
+            "prefix": "≈",
+            "at_word": 8,
+            "over": 0.9,
+            "y": 160,
+            "size": 96,
+            "sub": "SEGÚN OTROS CÁLCULOS, UNOS 450.000"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Las estimaciones de población de Roma en el siglo I van de unos 450.000 a cerca de un millón",
+          "kind": "fact",
+          "source": "Glenn Storey, Antiquity (1997); estimaciones clásicas"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "millón"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r03",
+      "beat": "development",
+      "narration": "La mayoría vive en ínsulas: bloques de pisos de cuatro, cinco, seis plantas… y alguno más.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "character": {
+          "x": 0.15,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "point_up",
+          "expression": "wow"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "pan_up",
+          "amount": 200
+        }
+      },
+      "claims": [
+        {
+          "text": "La mayoría de los romanos vivía en ínsulas, bloques de 4 a 6 plantas, algunos de más",
+          "kind": "fact",
+          "source": "Catálogos Regionarios (s. IV); historiografía sobre la vivienda romana"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r04",
+      "beat": "development",
+      "narration": "Sin agua corriente en casa, y pagando un alquiler carísimo. Cuanto más alto, más pobre el inquilino.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "talk",
+          "expression": "angry"
+        },
+        "props": [
+          {
+            "type": "money",
+            "x": 0.7,
+            "y": 0.6,
+            "scale": 1.0,
+            "at_word": 7,
+            "loop": "bob"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Las ínsulas no tenían agua corriente en los pisos; los pisos altos eran los más baratos y precarios",
+          "kind": "fact",
+          "source": "Juvenal, Sátiras III; historiografía"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r04b",
+      "beat": "development",
+      "narration": "El agua la traían los acueductos: Roma llegó a tener once, algunos con decenas de kilómetros de recorrido.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "window": 900
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "point_up",
+          "expression": "wow"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 11,
+            "suffix": " ACUEDUCTOS",
+            "at_word": 7,
+            "over": 0.6,
+            "y": 160,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "pan_up",
+          "amount": 140
+        }
+      },
+      "claims": [
+        {
+          "text": "Roma llegó a tener once acueductos principales; Frontino describe los nueve de su época (s. I)",
+          "kind": "fact",
+          "source": "Frontino, De aquaeductu; historiografía"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "once"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r04c",
+      "beat": "development",
+      "narration": "¿Y para comer? Como casi nadie tenía cocina, había bares de comida caliente para llevar en cada esquina: los termopolios.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "celebrate",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "food",
+            "kind": "bread",
+            "x": 0.62,
+            "y": 0.62,
+            "scale": 1.0,
+            "at_word": 10
+          },
+          {
+            "type": "amphora",
+            "x": 0.78,
+            "y": 0.72,
+            "scale": 0.45,
+            "label": "VINO",
+            "at_word": 12
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Los termopolios vendían comida y bebida caliente; muchos romanos no cocinaban en casa por riesgo de incendio y falta de espacio",
+          "kind": "fact",
+          "source": "Arqueología de Pompeya (termopolio de la Regio V, 2020)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "termopolios"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r05",
+      "beat": "development",
+      "narration": "Con estructuras de madera, braseros y lámparas de aceite, un edificio así ardía con facilidad. Y a veces, directamente, se derrumbaba.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "fire": 0.9
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "shock",
+          "expression": "scared"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "shake": 0.15
+        }
+      },
+      "claims": [
+        {
+          "text": "Los incendios por braseros y lámparas y los derrumbes de ínsulas eran frecuentes",
+          "kind": "fact",
+          "source": "Juvenal, Sátiras III; Estrabón"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at": 0.2,
+          "gain_db": -8
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "ardía",
+        "derrumbaba"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r06",
+      "beat": "development",
+      "narration": "Por eso Roma tenía bomberos, los vigiles, con cubos, ganchos y hasta bombas de agua.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "present",
+          "expression": "excited"
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "police",
+            "hair": "#3A2A20",
+            "x": 0.66,
+            "y": 0.93,
+            "size": 0.85,
+            "action": "walk",
+            "shirt": "#C9543A",
+            "hat": "hardhat",
+            "hat_color": "#B0B0B0"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Augusto creó los vigiles, cuerpo de bomberos y guardia nocturna, equipados con cubos, ganchos y bombas",
+          "kind": "fact",
+          "source": "Suetonio; Digesto"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r07",
+      "beat": "climax",
+      "narration": "Y aquí está tu mala suerte: en julio del año sesenta y cuatro, un incendio arrasa Roma durante días.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "fire": 0.9
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "shock",
+          "expression": "shock"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "JULIO DEL 64 · EL GRAN INCENDIO",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#E8392F"
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            1.0
+          ],
+          "shake": 0.25
+        }
+      },
+      "claims": [
+        {
+          "text": "El gran incendio de Roma comenzó en julio del año 64 y duró varios días",
+          "kind": "fact",
+          "source": "Tácito, Anales XV"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at": 1.0,
+          "gain_db": -6
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "incendio"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r08",
+      "beat": "climax",
+      "narration": "Según el historiador Tácito, de los catorce barrios de Roma, tres quedaron destruidos por completo y siete muy dañados.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF6B5C",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "sparks",
+            "x": 0.5,
+            "y": 0.75,
+            "scale": 1.4
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 3,
+            "suffix": " DE 14 BARRIOS",
+            "at_word": 11,
+            "over": 0.6,
+            "y": 300,
+            "size": 120,
+            "sub": "DESTRUIDOS POR COMPLETO · OTROS 7, MUY DAÑADOS"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "De los 14 distritos de Roma, 3 quedaron arrasados y 7 gravemente dañados",
+          "kind": "fact",
+          "source": "Tácito, Anales XV, 40"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "catorce",
+        "tres"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r08b",
+      "beat": "development",
+      "narration": "Y si sobrevives al fuego, prepárate para no dormir: los carros de mercancías solo podían circular por la ciudad de noche.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "window": 1020
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "idle",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "cart",
+            "x": 0.68,
+            "y": 0.9,
+            "scale": 0.9,
+            "enter": "slide_right"
+          },
+          {
+            "type": "zzz",
+            "x": 0.35,
+            "y": 0.45,
+            "crossed": true,
+            "cross_at": 1.0
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Una ley de época de César prohibía los carros de carga en Roma durante el día; el poeta Juvenal se quejaba del ruido nocturno",
+          "kind": "fact",
+          "source": "Lex Iulia Municipalis (45 a. C.); Juvenal, Sátiras III"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at": 0.4,
+          "gain_db": -10
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "noche"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r08c",
+      "beat": "development",
+      "narration": "Lo bueno: por una moneda pequeñísima podías pasar la tarde en las termas, con agua caliente, sauna y hasta biblioteca.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "window": 1020
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "celebrate",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "bathhouse",
+            "x": 0.7,
+            "y": 0.86,
+            "scale": 0.9
+          },
+          {
+            "type": "coin",
+            "x": 0.55,
+            "y": 0.45,
+            "scale": 0.6,
+            "at_word": 4
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La entrada a las termas públicas costaba muy poco (un cuadrante) y las grandes termas imperiales incluían bibliotecas",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica; historiografía"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "termas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r09",
+      "beat": "development",
+      "narration": "Vamos a lo cotidiano. ¿Necesitas ir al baño? Letrinas públicas: en fila, sin paredes, charlando con el de al lado.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "shrug",
+          "expression": "laugh"
+        },
+        "props": [
+          {
+            "type": "bathhouse",
+            "x": 0.7,
+            "y": 0.86,
+            "scale": 0.9
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Las letrinas públicas romanas eran bancos corridos compartidos, sin separaciones",
+          "kind": "fact",
+          "source": "Arqueología de Ostia y Pompeya"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "letrinas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r10",
+      "beat": "development",
+      "narration": "¿Y la orina? No se tiraba: se vendía a las lavanderías, que la usaban para limpiar la ropa.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFE48A",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "amphora",
+            "x": 0.4,
+            "y": 0.6,
+            "scale": 0.9,
+            "color": "#E8C25A"
+          },
+          {
+            "type": "money",
+            "x": 0.68,
+            "y": 0.6,
+            "scale": 1.0,
+            "at_word": 6
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La orina de las letrinas se vendía a lavanderías (fullonicae) por su amoniaco",
+          "kind": "fact",
+          "source": "Suetonio, Vespasiano 23; arqueología de Pompeya"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "orina"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r11",
+      "beat": "development",
+      "narration": "Tanto negocio movía, que el emperador Vespasiano le puso un impuesto.",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "talk",
+          "expression": "surprised"
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "toga",
+            "hair": "#6A6A6A",
+            "x": 0.68,
+            "y": 0.93,
+            "size": 0.9,
+            "action": "smug",
+            "shirt": "#7A2A6A",
+            "expression": "smug"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Vespasiano estableció un impuesto sobre la orina recogida en las letrinas",
+          "kind": "fact",
+          "source": "Suetonio, Vida de Vespasiano 23"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r12",
+      "beat": "development",
+      "narration": "Cuando su hijo se quejó, le acercó una moneda a la nariz y le preguntó si olía mal.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E6B830",
+          "c2": "#FFE48A",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "coin",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.6,
+            "text": "$"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [
+        "olía"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r12b",
+      "beat": "development",
+      "narration": "Según el historiador Suetonio, de ahí viene la famosa frase: el dinero no huele.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#7A2A6A",
+          "c2": "#A64A92",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "coin",
+            "x": 0.5,
+            "y": 0.62,
+            "scale": 1.2,
+            "text": "$",
+            "spinning": false
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "«PECUNIA NON OLET»",
+            "x": 960,
+            "y": 160,
+            "size": 80,
+            "bg": "#E6B830",
+            "color": "#19162B",
+            "at_word": 7
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Suetonio cuenta que Vespasiano acercó a Tito una moneda del impuesto y le preguntó si olía; de ahí «pecunia non olet»",
+          "kind": "fact",
+          "source": "Suetonio, Vespasiano 23"
+        }
+      ],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [
+        "huele"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r12c",
+      "beat": "development",
+      "narration": "¿Y los gladiadores? En las películas mueren en cada combate. En realidad eran caros de entrenar, y muchos combates acababan sin muertos.",
+      "visual": {
+        "background": {
+          "type": "rome",
+          "window": 1020
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "shrug",
+          "expression": "smug"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "myth",
+            "text": "SIEMPRE A MUERTE",
+            "stamp": "¡FALSO!",
+            "y": 120,
+            "stamp_at": 2.4
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Los gladiadores eran costosos de formar y una parte importante de los combates terminaba sin la muerte de ninguno",
+          "kind": "fact",
+          "source": "Georges Ville; Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 2.4,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "películas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r12d",
+      "beat": "development",
+      "narration": "Si te pones enfermo, los médicos romanos operaban cataratas y usaban pinzas y bisturís, como se ha visto en Pompeya.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "magnifier",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.0,
+            "view": "ice"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En Pompeya se han hallado instrumentos quirúrgicos (bisturís, pinzas, espéculos); los médicos romanos practicaban operaciones de cataratas",
+          "kind": "fact",
+          "source": "Museo Arqueológico Nacional de Nápoles; Celso, De medicina"
+        }
+      ],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [
+        "Pompeya"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r13",
+      "beat": "climax",
+      "narration": "¿Y cuánto vivía un romano? La esperanza de vida al nacer rondaba los veinticinco años…",
+      "visual": {
+        "background": {
+          "type": "rome"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "toga",
+          "action": "shock",
+          "expression": "worried"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 25,
+            "suffix": " AÑOS",
+            "at_word": 11,
+            "over": 0.6,
+            "y": 160,
+            "size": 120,
+            "sub": "ESPERANZA DE VIDA AL NACER"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La esperanza de vida al nacer en el Imperio romano se estima en unos 25 años",
+          "kind": "fact",
+          "source": "Tablas de vida modelo (Frier; Scheidel)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "veinticinco"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r14",
+      "beat": "climax",
+      "narration": "Pero ojo, es una trampa estadística: morían muchísimos bebés. Si pasabas la infancia, lo normal era llegar a los cincuenta o más.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#22B573",
+          "c2": "#6EE7A8",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "toga",
+            "hair": "#C8C8C8",
+            "x": 0.5,
+            "y": 0.93,
+            "size": 0.95,
+            "action": "wave",
+            "shirt": "#FFFFFF",
+            "expression": "happy",
+            "mustache": true
+          }
+        ],
+        "overlays": [
+          {
+            "type": "myth",
+            "text": "A LOS 25 YA ERAS VIEJO",
+            "stamp": "¡FALSO!",
+            "y": 160,
+            "stamp_at": 1.6
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Descontando la mortalidad infantil, la esperanza de vida de los adultos romanos llegaba a los 50-60 años",
+          "kind": "fact",
+          "source": "Scheidel, demografía romana"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 1.6,
+          "gain_db": -6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "trampa",
+        "cincuenta"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r15",
+      "beat": "ending",
+      "narration": "Veredicto romano: con dinero y lejos de los pisos altos, décadas. Pobre y en un sexto piso de madera… ojo con el fuego.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.68,
+            "label": "ROMA · 64 d. C.",
+            "at_word": 0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 1.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "décadas",
+        "fuego"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "r16",
+      "beat": "ending",
+      "narration": "Hasta aquí, vas sobreviviendo bastante bien. Pero lo más peligroso del viaje todavía está por llegar.",
+      "visual": {
+        "background": {
+          "type": "time_tunnel",
+          "window": 960
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.75,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "float",
+          "expression": "worried"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.5,
+          "gain_db": -8
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "peligroso"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "v01",
+      "beat": "development",
+      "narration": "Tercera parada: Escandinavia, hacia el año novecientos. Estás en una aldea vikinga, junto a un fiordo.",
+      "visual": {
+        "background": {
+          "type": "fjord"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "look_up",
+          "expression": "wow"
+        },
+        "props": [
+          {
+            "type": "longship",
+            "x": 0.72,
+            "y": 0.6,
+            "scale": 0.55
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "3 · ESCANDINAVIA · ≈900",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#3F6E96"
+          }
+        ],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "vikinga"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "v01b",
+      "beat": "development",
+      "narration": "Sus vecinos los temían por algo: en el año setecientos noventa y tres asaltaron el monasterio de Lindisfarne, en Inglaterra.",
+      "visual": {
+        "background": {
+          "type": "ocean"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "longship",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 0.9,
+            "enter": "slide_left"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "LINDISFARNE · 793",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#E8392F",
+            "at_word": 10
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "El ataque al monasterio de Lindisfarne en 793 se considera el inicio de la era vikinga en Inglaterra",
+          "kind": "fact",
+          "source": "Crónica anglosajona; Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "Lindisfarne"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "v02",
+      "beat": "development",
+      "narration": "Primera decepción: nadie lleva cascos con cuernos. Eso salió del vestuario de una ópera de Wagner, en mil ochocientos setenta y seis.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#9D7BFF",
+          "c2": "#C4B0FF",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "horned_helmet",
+            "x": 0.5,
+            "y": 0.62,
+            "scale": 1.4
+          }
+        ],
+        "overlays": [
+          {
+            "type": "myth",
+            "text": "CASCOS CON CUERNOS",
+            "stamp": "¡FALSO!",
+            "y": 120,
+            "stamp_at": 1.8
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Los cascos vikingos con cuernos se popularizaron con el vestuario de Carl Emil Doepler para El anillo del nibelungo de Wagner (Bayreuth, 1876); los cascos vikingos conocidos no tienen cuernos",
+          "kind": "fact",
+          "source": "Museo Nacional de Dinamarca; History.com"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 1.8,
+          "gain_db": -6
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "cuernos"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "v03",
+      "beat": "development",
+      "narration": "El único casco vikingo casi completo que se conoce, el de Gjermundbu, es redondo, de hierro y con protección para los ojos.",
+      "visual": {
+        "background": {
+          "type": "fjord"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "present",
+          "expression": "smug",
+          "helmet": "knight"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "El casco de Gjermundbu (Noruega, siglo X) es el único casco vikingo casi completo hallado: redondo, de hierro, con protección ocular",
+          "kind": "fact",
+          "source": "Museo de Historia Cultural de Oslo"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "Gjermundbu"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "v04",
+      "beat": "development",
+      "narration": "Segunda sorpresa: eran bastante limpios. Los arqueólogos encuentran peines de hueso y asta por todas partes.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "comb",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.5,
+            "loop": "wobble"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Los peines de hueso y asta son de los objetos más frecuentes en yacimientos vikingos",
+          "kind": "fact",
+          "source": "Universidad de York; Smithsonian Magazine"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "peines"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "v05",
+      "beat": "development",
+      "narration": "Y en islandés, el sábado se sigue llamando laugardagur: literalmente, el día de lavarse.",
+      "visual": {
+        "background": {
+          "type": "fjord"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "celebrate",
+          "expression": "laugh"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "LAUGARDAGUR = DÍA DE LAVARSE",
+            "x": 960,
+            "y": 120,
+            "size": 64,
+            "bg": "#2B6BE8",
+            "at_word": 7
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "El sábado en islandés es laugardagur, «día de lavarse»",
+          "kind": "fact",
+          "source": "Diccionarios de nórdico antiguo e islandés"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "lavarse"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "v06",
+      "beat": "development",
+      "narration": "Lo de los peines no era solo coquetería: también servían para quitarse los piojos, que estaban por todas partes.",
+      "visual": {
+        "background": {
+          "type": "fjord"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "sweat",
+          "expression": "angry"
+        },
+        "props": [
+          {
+            "type": "comb",
+            "x": 0.7,
+            "y": 0.5,
+            "scale": 0.7,
+            "loop": "wobble"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Los peines servían también para combatir los piojos, omnipresentes en la época",
+          "kind": "fact",
+          "source": "Museo Nacional de Dinamarca"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "v07",
+      "beat": "development",
+      "narration": "¿Te apuntas a una expedición? Un barco largo navegaba a unos cinco o diez nudos, y con buen viento, bastante más.",
+      "visual": {
+        "background": {
+          "type": "ocean"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "longship",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.0,
+            "enter": "slide_left"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 10,
+            "prefix": "5-",
+            "suffix": " NUDOS",
+            "at_word": 12,
+            "over": 0.6,
+            "y": 175,
+            "size": 100,
+            "sub": "VELOCIDAD MEDIA DE UN BARCO LARGO (RÉPLICAS)"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Las réplicas de barcos vikingos navegan de media a 5-10 nudos y pueden superar los 13 nudos con buen viento",
+          "kind": "fact",
+          "source": "Museo de Barcos Vikingos de Roskilde (réplicas de Skuldelev)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "nudos"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "v07b",
+      "beat": "development",
+      "narration": "Con esos barcos llegaron muy lejos: a Bagdad por los ríos de Rusia, y a América cinco siglos antes que Colón.",
+      "visual": {
+        "background": {
+          "type": "ocean"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "longship",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 0.8
+          },
+          {
+            "type": "dotted_path",
+            "x": 0.5,
+            "y": 0.35,
+            "at_word": 8
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Los vikingos comerciaron hasta el califato abasí por las rutas fluviales rusas y se asentaron hacia el año 1000 en L'Anse aux Meadows (Terranova)",
+          "kind": "fact",
+          "source": "UNESCO (L'Anse aux Meadows); Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "América"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "v08",
+      "beat": "climax",
+      "narration": "Pero cuidado: en las incursiones se moría mucho. Y los esqueletos muestran que pocos vikingos pasaban de los cincuenta años.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF6B5C",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "bone",
+            "x": 0.5,
+            "y": 0.6,
+            "scale": 1.5
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 50,
+            "suffix": " AÑOS",
+            "at_word": 18,
+            "over": 0.6,
+            "y": 175,
+            "size": 110,
+            "sub": "POCOS LLEGABAN MÁS ALLÁ"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Los vikingos rara vez superaban los 35-40 años y pocos pasaban de los 50",
+          "kind": "fact",
+          "source": "Museo Nacional de Dinamarca"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "cincuenta"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "v09",
+      "beat": "climax",
+      "narration": "Sus cráneos cuentan más: sinusitis, infecciones de oído y caries. Una vida dura, sin médicos de verdad.",
+      "visual": {
+        "background": {
+          "type": "fjord"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "idle",
+          "expression": "tired"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.25,
+          "focus": [
+            0.3,
+            0.6
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Un estudio con TAC de cráneos vikingos de Varnhem (Suecia) halló sinusitis, infecciones de oído, caries y artrosis",
+          "kind": "fact",
+          "source": "Discover Magazine (estudio de cráneos de Varnhem)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "caries"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "v10",
+      "beat": "ending",
+      "narration": "Veredicto vikingo: como granjero en tu aldea, años. Si te subes al barco de las incursiones… lanza una moneda.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.6,
+            "label": "ESCANDINAVIA · ≈900",
+            "at_word": 0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 1.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "años",
+        "moneda"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p01",
+      "beat": "development",
+      "narration": "Cuarta parada, y esta es dura: el año mil trescientos cuarenta y ocho.",
+      "visual": {
+        "background": {
+          "type": "time_tunnel",
+          "window": 960
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.75,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "float",
+          "expression": "scared"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "dura"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p02",
+      "beat": "development",
+      "narration": "Llegas a un pueblo de Europa justo cuando llega la peste negra.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "mode": "plague"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "look_up",
+          "expression": "worried"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "4 · EUROPA · 1348",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#4A4458"
+          }
+        ],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "peste"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p03",
+      "beat": "development",
+      "narration": "Entre mil trescientos cuarenta y siete y mil trescientos cincuenta y uno, mató a entre un tercio y la mitad de los europeos.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#4A4458",
+          "c2": "#6E6680",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "rat",
+            "x": 0.5,
+            "y": 0.8,
+            "scale": 1.4,
+            "enter": "slide_right"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 50,
+            "prefix": "30-",
+            "suffix": " %",
+            "at_word": 18,
+            "over": 0.8,
+            "y": 300,
+            "size": 150,
+            "sub": "DE LA POBLACIÓN DE EUROPA (ESTIMACIONES)"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "La peste negra (1347-1351) mató a entre un tercio y la mitad de la población europea, con grandes diferencias regionales",
+          "kind": "fact",
+          "source": "Estimaciones historiográficas; Izdebski et al., Nature Ecology & Evolution (2022)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "mitad"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p04",
+      "beat": "development",
+      "narration": "Durante siglos se discutió qué la causaba. En dos mil once, el ADN de víctimas de un cementerio de Londres lo confirmó.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "skull",
+            "x": 0.35,
+            "y": 0.58,
+            "scale": 1.3
+          },
+          {
+            "type": "magnifier",
+            "x": 0.66,
+            "y": 0.55,
+            "scale": 0.8,
+            "view": "bubbles",
+            "at_word": 11
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "El ADN antiguo de víctimas del cementerio de East Smithfield (Londres) permitió reconstruir el genoma de la bacteria",
+          "kind": "fact",
+          "source": "Bos et al., Nature (2011)"
+        }
+      ],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p05",
+      "beat": "development",
+      "narration": "La culpable era una bacteria, Yersinia pestis, que transmitían sobre todo las pulgas de las ratas.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "mode": "plague"
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "shock",
+          "expression": "scared"
+        },
+        "props": [
+          {
+            "type": "rat",
+            "x": 0.62,
+            "y": 0.9,
+            "scale": 1.0,
+            "enter": "slide_right"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Yersinia pestis: bacteria de la peste, transmitida sobre todo por pulgas de roedores",
+            "at_word": 4,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La peste la causa Yersinia pestis, que se transmite sobre todo por picaduras de pulgas infectadas",
+          "kind": "fact",
+          "source": "OMS, nota descriptiva sobre la peste"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "pulgas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p06",
+      "beat": "development",
+      "narration": "Si te pica una pulga infectada, en pocos días aparecen los bubones: ganglios hinchados y muy dolorosos.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "mode": "plague"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "sweat",
+          "expression": "hot",
+          "sweat": 0.8
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.25,
+          "focus": [
+            0.3,
+            0.6
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Tras 1-7 días de incubación aparecen fiebre y bubones (ganglios inflamados y dolorosos)",
+          "kind": "fact",
+          "source": "OMS, nota descriptiva sobre la peste"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "bubones"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p07",
+      "beat": "climax",
+      "narration": "Sin antibióticos, la peste bubónica mata a entre el treinta y el sesenta por ciento de los enfermos.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF6B5C",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "thermometer",
+            "x": 0.5,
+            "y": 0.8,
+            "scale": 1.0,
+            "level": 0.9
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 60,
+            "prefix": "30-",
+            "suffix": " %",
+            "at_word": 8,
+            "over": 0.7,
+            "y": 300,
+            "size": 150,
+            "sub": "MORTALIDAD SIN TRATAMIENTO (OMS)"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "La peste bubónica sin tratar tiene una letalidad del 30 % al 60 %",
+          "kind": "fact",
+          "source": "OMS, nota descriptiva sobre la peste"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "sesenta"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p08",
+      "beat": "climax",
+      "narration": "Y si pasa a los pulmones y se contagia al toser, sin tratamiento es casi siempre mortal.",
+      "visual": {
+        "background": {
+          "type": "village",
+          "mode": "plague"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "shock",
+          "expression": "shock"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.4
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "La peste neumónica, sin tratamiento, es siempre mortal",
+          "kind": "fact",
+          "source": "OMS, nota descriptiva sobre la peste"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "mortal"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p08b",
+      "beat": "development",
+      "narration": "Y llega rapidísimo: en solo unos años recorrió Europa entera, de los puertos del Mediterráneo hasta Escandinavia.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#4A4458",
+          "c2": "#6E6680",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "dotted_path",
+            "x": 0.5,
+            "y": 0.5
+          },
+          {
+            "type": "rat",
+            "x": 0.3,
+            "y": 0.75,
+            "loop": "bob"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La peste negra llegó a Europa por los puertos del Mediterráneo en 1347 y alcanzó Escandinavia y Rusia hacia 1349-1351",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p09",
+      "beat": "development",
+      "narration": "Los médicos de la época no tenían ni idea. En París culparon a una conjunción de planetas y al aire corrupto.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "planet",
+            "x": 0.3,
+            "y": 0.3,
+            "scale": 0.9,
+            "loop": "spin"
+          },
+          {
+            "type": "planet",
+            "x": 0.7,
+            "y": 0.25,
+            "scale": 0.7,
+            "loop": "spin",
+            "color": "#E8A33A"
+          },
+          {
+            "type": "npc",
+            "outfit": "judge",
+            "hair": "#7A7A7A",
+            "x": 0.5,
+            "y": 0.93,
+            "size": 0.9,
+            "action": "think",
+            "expression": "worried"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1348 la Facultad de Medicina de París atribuyó la peste a una conjunción de Saturno, Júpiter y Marte y a la corrupción del aire",
+          "kind": "fact",
+          "source": "Informe de la Facultad de Medicina de París (1348)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p10",
+      "beat": "development",
+      "narration": "Por cierto, un mito: la famosa máscara de pájaro del médico de la peste aún no existía. Apareció unos trescientos años después.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#9D7BFF",
+          "c2": "#C4B0FF",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "calendar",
+            "x": 0.5,
+            "y": 0.62,
+            "scale": 1.0,
+            "at_word": 15,
+            "from": 1348,
+            "to": 1619,
+            "over": 1.5
+          }
+        ],
+        "overlays": [
+          {
+            "type": "myth",
+            "text": "MÁSCARA DE PÁJARO EN 1348",
+            "stamp": "¡FALSO!",
+            "y": 160,
+            "stamp_at": 2.0
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "El traje con máscara de pico del médico de la peste se atribuye al siglo XVII (Charles de Lorme, h. 1619)",
+          "kind": "fact",
+          "source": "Historiografía médica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 2.0,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "mito"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p10b",
+      "beat": "development",
+      "narration": "Lo que sí funcionó fue aislar a los recién llegados: en mil trescientos setenta y siete, Ragusa les hizo esperar treinta días.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "walk",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "calendar",
+            "x": 0.68,
+            "y": 0.5,
+            "scale": 1.0,
+            "at_word": 17,
+            "from": 1377,
+            "to": 1377
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "RAGUSA (DUBROVNIK) · 1377",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#2B6BE8"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1377 Ragusa (Dubrovnik) impuso un aislamiento de 30 días a quienes llegaban de zonas con peste",
+          "kind": "fact",
+          "source": "Historiografía de la salud pública; Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "treinta"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p10c",
+      "beat": "development",
+      "narration": "Después se amplió a cuarenta días. En italiano, quaranta giorni. De ahí viene nuestra palabra: cuarentena.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 40,
+            "suffix": " DÍAS",
+            "at_word": 4,
+            "over": 0.6,
+            "y": 220,
+            "size": 150,
+            "sub": "QUARANTA GIORNI → CUARENTENA"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "La palabra cuarentena procede del italiano quaranta giorni, el aislamiento de 40 días",
+          "kind": "fact",
+          "source": "RAE; historiografía"
+        }
+      ],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [
+        "cuarentena"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p11",
+      "beat": "development",
+      "narration": "Otro mito: que en la Edad Media nadie bebía agua, solo cerveza. Bebían agua… y también mucha cerveza floja.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "laugh",
+          "expression": "laugh"
+        },
+        "props": [
+          {
+            "type": "amphora",
+            "x": 0.62,
+            "y": 0.8,
+            "scale": 0.5,
+            "color": "#8A6A4A",
+            "label": "CERVEZA"
+          },
+          {
+            "type": "splash",
+            "x": 0.78,
+            "y": 0.8,
+            "color": "#5CE1E6",
+            "at_word": 12
+          }
+        ],
+        "overlays": [
+          {
+            "type": "myth",
+            "text": "SOLO BEBÍAN CERVEZA",
+            "stamp": "¡FALSO!",
+            "y": 160,
+            "stamp_at": 1.8
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Los medievales sí bebían agua; la cerveza era un alimento más, de baja graduación",
+          "kind": "fact",
+          "source": "Jim Chevallier, «The Great Medieval Water Myth»; historiografía"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 1.8,
+          "gain_db": -6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p12",
+      "beat": "development",
+      "narration": "Tu mejor estrategia sería la de los ricos: huir al campo y alejarte de la ciudad. Es justo lo que cuenta Boccaccio en el Decamerón.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "x": 0.2,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "walk",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "cart",
+            "x": 0.6,
+            "y": 0.9,
+            "scale": 0.9,
+            "enter": "slide_right"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En el Decamerón (1348-1353), un grupo de jóvenes huye de Florencia al campo para escapar de la peste",
+          "kind": "fact",
+          "source": "Giovanni Boccaccio, Decamerón"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "huir"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p12b",
+      "beat": "development",
+      "narration": "Y una consecuencia inesperada: tras la epidemia faltaban tantos trabajadores que, en muchos sitios, subieron los salarios.",
+      "visual": {
+        "background": {
+          "type": "village"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "peasant",
+          "action": "celebrate",
+          "expression": "surprised"
+        },
+        "props": [
+          {
+            "type": "money",
+            "x": 0.68,
+            "y": 0.6,
+            "scale": 1.0,
+            "at_word": 12
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La escasez de mano de obra tras la peste negra elevó los salarios en buena parte de Europa occidental",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica; historiografía económica"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "salarios"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "p13",
+      "beat": "ending",
+      "narration": "Veredicto medieval: casi lanzar una moneda al aire. Si te contagias, malas noticias; si huyes a tiempo, puedes salir adelante.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.32,
+            "label": "EUROPA · 1348",
+            "at_word": 0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 1.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "moneda"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "t01",
+      "beat": "development",
+      "narration": "Quinta parada: noviembre de mil quinientos diecinueve. Llegas a Tenochtitlan, la capital mexica, construida sobre un lago.",
+      "visual": {
+        "background": {
+          "type": "tenochtitlan",
+          "window": 960
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.95,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "look_up",
+          "expression": "wow"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "5 · TENOCHTITLAN · 1519",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#2B6BE8"
+          }
+        ],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "Tenochtitlan"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "t02",
+      "beat": "development",
+      "narration": "Y te quedas con la boca abierta: es una de las ciudades más grandes del mundo, quizá con doscientas mil personas.",
+      "visual": {
+        "background": {
+          "type": "tenochtitlan",
+          "window": 1080
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.95,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "shock",
+          "expression": "wow"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 200000,
+            "prefix": "75.000-",
+            "suffix": " HABITANTES",
+            "at_word": 15,
+            "over": 0.8,
+            "y": 175,
+            "size": 84,
+            "sub": "ESTIMACIONES PARA 1519"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Las estimaciones de población de Tenochtitlan en 1519 van de unas 75.000-100.000 a 200.000 personas",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica; Anuario de Historia Regional y de las Fronteras (2022)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "doscientas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "t03",
+      "beat": "development",
+      "narration": "Más que Madrid o Sevilla en aquella época. Los soldados españoles escribieron que parecía cosa de encantamiento.",
+      "visual": {
+        "background": {
+          "type": "tenochtitlan",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "knight",
+            "hair": "#3A2A20",
+            "x": 0.25,
+            "y": 0.95,
+            "size": 0.85,
+            "action": "shock",
+            "expression": "wow",
+            "hat": "knight"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Bernal Díaz del Castillo comparó lo que vio con «las cosas de encantamiento que cuentan en el libro de Amadís»",
+          "kind": "fact",
+          "source": "Bernal Díaz del Castillo, Historia verdadera de la conquista de la Nueva España"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "encantamiento"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "t04",
+      "beat": "development",
+      "narration": "La ciudad se cruza por calzadas y canales, y el agua potable llega desde los manantiales de Chapultepec por un acueducto doble.",
+      "visual": {
+        "background": {
+          "type": "tenochtitlan",
+          "window": 1080
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.95,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "present",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "splash",
+            "x": 0.7,
+            "y": 0.6,
+            "color": "#5CE1E6",
+            "at_word": 14
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Un acueducto doble de más de 4 km llevaba agua dulce de Chapultepec a Tenochtitlan",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica; EBSCO Research Starters"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "acueducto"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "t04b",
+      "beat": "development",
+      "narration": "Y alrededor, las chinampas: huertos construidos sobre el lago, donde se cultivaban maíz, frijol y flores.",
+      "visual": {
+        "background": {
+          "type": "tenochtitlan",
+          "window": 1080
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.95,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "point_up",
+          "expression": "wow"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Las chinampas eran parcelas de cultivo construidas sobre el lago, muy productivas",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica; UNESCO (Xochimilco)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "chinampas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "t05",
+      "beat": "development",
+      "narration": "En el mercado de Tlatelolco se juntan decenas de miles de personas al día. Y puedes pagar con granos de cacao.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#6A3A20",
+          "c2": "#9A6A40",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "cacao",
+            "x": 0.5,
+            "y": 0.6,
+            "scale": 1.6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Mercado de Tlatelolco: unas 20.000-25.000 personas al día; el cacao servía como moneda",
+            "at_word": 4,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "El mercado de Tlatelolco recibía unas 20.000-25.000 personas diarias (los españoles hablaron de hasta 60.000); los granos de cacao se usaban como unidad de cambio",
+          "kind": "fact",
+          "source": "Jaffary, Osowski y Porter (Routledge); Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [
+        "cacao"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "t06",
+      "beat": "development",
+      "narration": "Comparada con muchas ciudades europeas de la época, Tenochtitlan era limpia: había gente encargada de recoger la basura.",
+      "visual": {
+        "background": {
+          "type": "tenochtitlan",
+          "window": 1080
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.95,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "celebrate",
+          "expression": "happy"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Las crónicas describen calles limpias y trabajadores dedicados a la limpieza de Tenochtitlan",
+          "kind": "fact",
+          "source": "Crónicas de la conquista; Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "t07",
+      "beat": "climax",
+      "narration": "Pero has llegado en el peor momento. En mil quinientos veinte, entre la guerra y una enfermedad nueva, todo se derrumba.",
+      "visual": {
+        "background": {
+          "type": "tenochtitlan",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "shake": 0.15
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at": 0.5,
+          "gain_db": -8
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "peor"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "t08",
+      "beat": "climax",
+      "narration": "La viruela, llegada de Europa, mata a muchísima gente que nunca había estado expuesta a ella. Hasta al gobernante Cuitláhuac.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#4A4458",
+          "c2": "#6E6680",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Epidemia de viruela de 1520: el tlatoani Cuitláhuac murió en diciembre de ese año",
+            "at_word": 2,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La viruela llegó en 1520 y causó una mortalidad enorme en una población sin inmunidad; Cuitláhuac murió de viruela en diciembre de 1520",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "viruela"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "t09",
+      "beat": "ending",
+      "narration": "Veredicto mexica: en mil quinientos diecinueve, una ciudad asombrosa. Un año después, uno de los momentos más peligrosos del viaje.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.42,
+            "label": "TENOCHTITLAN · 1519-1520",
+            "at_word": 0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 1.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "asombrosa",
+        "peligrosos"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m01",
+      "beat": "development",
+      "narration": "Mientras tanto, en España: Sanlúcar de Barrameda, veinte de septiembre de mil quinientos diecinueve. Te enrolas con Magallanes.",
+      "visual": {
+        "background": {
+          "type": "ship_deck"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "sailor",
+          "action": "look_up",
+          "expression": "excited"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "6 · SANLÚCAR · 1519",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#C9543A"
+          }
+        ],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "Magallanes"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m02",
+      "beat": "development",
+      "narration": "Cinco naos y unos doscientos cuarenta hombres van a buscar las islas de las Especias navegando hacia el oeste.",
+      "visual": {
+        "background": {
+          "type": "ocean"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "sailing_ship",
+            "x": 0.3,
+            "y": 0.55,
+            "scale": 0.6,
+            "flag": "none"
+          },
+          {
+            "type": "sailing_ship",
+            "x": 0.55,
+            "y": 0.55,
+            "scale": 0.5,
+            "flag": "none",
+            "seed": 1
+          },
+          {
+            "type": "sailing_ship",
+            "x": 0.78,
+            "y": 0.55,
+            "scale": 0.45,
+            "flag": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 239,
+            "prefix": "≈",
+            "suffix": " HOMBRES",
+            "at_word": 4,
+            "over": 0.7,
+            "y": 175,
+            "size": 100,
+            "sub": "5 NAOS · ENTRE 239 Y 265 SEGÚN LAS FUENTES"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La expedición zarpó de Sanlúcar el 20 de septiembre de 1519 con cinco naos y unos 239 hombres (las fuentes dan entre 239 y 265)",
+          "kind": "fact",
+          "source": "Armada Española, Cuadernos del Instituto de Historia y Cultura Naval"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "Especias"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m03",
+      "beat": "development",
+      "narration": "Tras cruzar el estrecho que hoy lleva su nombre, entran en un océano tan tranquilo que lo bautizan Pacífico.",
+      "visual": {
+        "background": {
+          "type": "ocean"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "sailing_ship",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 0.9,
+            "flag": "none",
+            "enter": "slide_left"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Magallanes cruzó en 1520 el estrecho que lleva su nombre y llamó «Pacífico» al océano por su calma",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "Pacífico"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m04",
+      "beat": "climax",
+      "narration": "Pero nadie imaginaba lo enorme que era: pasan más de tres meses sin pisar tierra y sin comida fresca.",
+      "visual": {
+        "background": {
+          "type": "ship_deck",
+          "night": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "sailor",
+          "action": "idle",
+          "expression": "worried"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 3,
+            "prefix": "+",
+            "suffix": " MESES",
+            "at_word": 11,
+            "over": 0.6,
+            "y": 175,
+            "size": 110,
+            "sub": "CRUZANDO EL PACÍFICO SIN TOCAR TIERRA"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La travesía del Pacífico duró más de tres meses sin avituallamiento",
+          "kind": "fact",
+          "source": "Antonio Pigafetta, Relación del primer viaje alrededor del mundo"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "tres"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m05",
+      "beat": "climax",
+      "narration": "El cronista Antonio Pigafetta lo apuntó todo: comían galleta hecha polvo, llena de gusanos, y cuero ablandado en agua de mar.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#C9A060",
+          "c2": "#E2C27A",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "food",
+            "kind": "bread",
+            "x": 0.35,
+            "y": 0.6,
+            "scale": 1.2
+          },
+          {
+            "type": "worm",
+            "x": 0.42,
+            "y": 0.5,
+            "scale": 0.6,
+            "at_word": 11
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Pigafetta cuenta que comían galleta reducida a polvo y agusanada, cuero de las vergas ablandado en el mar y serrín",
+          "kind": "fact",
+          "source": "Antonio Pigafetta, Relación del primer viaje alrededor del mundo"
+        }
+      ],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [
+        "Pigafetta",
+        "cuero"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m06",
+      "beat": "climax",
+      "narration": "Y una rata se vendía a medio ducado. Aun así, no había para todos.",
+      "visual": {
+        "background": {
+          "type": "ship_deck",
+          "night": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "sailor",
+          "action": "shock",
+          "expression": "angry"
+        },
+        "props": [
+          {
+            "type": "rat",
+            "x": 0.62,
+            "y": 0.9,
+            "enter": "slide_right"
+          },
+          {
+            "type": "coin",
+            "x": 0.75,
+            "y": 0.45,
+            "scale": 0.6,
+            "at_word": 6
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Según Pigafetta, las ratas llegaron a venderse a medio ducado cada una",
+          "kind": "fact",
+          "source": "Antonio Pigafetta, Relación del primer viaje alrededor del mundo"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "rata"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m07",
+      "beat": "climax",
+      "narration": "Y llega el escorbuto: a muchos se les hinchaban tanto las encías que no podían comer.",
+      "visual": {
+        "background": {
+          "type": "ship_deck",
+          "night": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "sailor",
+          "action": "idle",
+          "expression": "tired"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.25,
+          "focus": [
+            0.3,
+            0.6
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Pigafetta describe cómo a muchos les crecían las encías hasta impedirles comer, y murieron",
+          "kind": "fact",
+          "source": "Antonio Pigafetta, Relación del primer viaje alrededor del mundo"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "encías"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m08",
+      "beat": "climax",
+      "narration": "En abril de mil quinientos veintiuno, Magallanes muere en combate en la isla de Mactán, en las actuales Filipinas.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#4A4458",
+          "c2": "#6E6680",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "MACTÁN · 27 DE ABRIL DE 1521",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#4A4458"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Magallanes murió el 27 de abril de 1521 en la batalla de Mactán (Filipinas)",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "Magallanes"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m09",
+      "beat": "development",
+      "narration": "Al final, Juan Sebastián Elcano, un marino de Guetaria, toma el mando de la nao Victoria y vuelve por el otro lado del mundo.",
+      "visual": {
+        "background": {
+          "type": "ship_deck"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "sailor",
+            "hair": "#3A2A20",
+            "x": 0.35,
+            "y": 0.93,
+            "size": 0.95,
+            "action": "point_up",
+            "expression": "determined",
+            "mustache": true
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "JUAN SEBASTIÁN ELCANO",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#C9543A",
+            "at_word": 3
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Elcano, natural de Guetaria, regresó al mando de la Victoria por el océano Índico y el cabo de Buena Esperanza",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica; Armada Española"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "Elcano"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m10",
+      "beat": "climax",
+      "narration": "El seis de septiembre de mil quinientos veintidós, la Victoria llega a Sanlúcar con solo dieciocho hombres.",
+      "visual": {
+        "background": {
+          "type": "ocean"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "sailing_ship",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 0.9,
+            "flag": "none",
+            "enter": "slide_right"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 239,
+            "to": 18,
+            "suffix": " HOMBRES",
+            "at_word": 15,
+            "over": 1.0,
+            "y": 175,
+            "size": 120,
+            "sub": "COMPLETARON LA VUELTA EN LA VICTORIA"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "El 6 de septiembre de 1522 la Victoria llegó a Sanlúcar con 18 hombres",
+          "kind": "fact",
+          "source": "Armada Española; National Geographic"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 15
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "dieciocho"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m11",
+      "beat": "development",
+      "narration": "Y un detalle alucinante: al llegar a Cabo Verde descubrieron que en su diario les faltaba un día. Lo habían perdido dando la vuelta al mundo.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "calendar",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.2,
+            "from": 1522,
+            "to": 1522,
+            "label": "¿MIÉRCOLES?"
+          },
+          {
+            "type": "question",
+            "x": 0.72,
+            "y": 0.4,
+            "at_word": 15
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En Cabo Verde (1522) comprobaron que su cuenta de días iba un día por detrás: lo habían «perdido» al circunnavegar hacia el oeste",
+          "kind": "fact",
+          "source": "Antonio Pigafetta, Relación del primer viaje alrededor del mundo"
+        }
+      ],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [
+        "día"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "m12",
+      "beat": "ending",
+      "narration": "Veredicto de la vuelta al mundo: una hazaña histórica… pero de cada trece que salieron, solo uno la completó en la Victoria.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.35,
+            "label": "PRIMERA VUELTA AL MUNDO · 1519-1522",
+            "at_word": 0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 1.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "trece"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b01",
+      "beat": "development",
+      "narration": "Séptima parada: el mar Caribe, hacia mil setecientos veinte, la edad de oro de la piratería.",
+      "visual": {
+        "background": {
+          "type": "ocean"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "sailing_ship",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.0,
+            "enter": "slide_right"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "7 · CARIBE · ≈1720",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#1A1A22"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "piratería"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b01b",
+      "beat": "development",
+      "narration": "Muchos piratas eran antiguos marineros mercantes, hartos de pagas miserables y castigos brutales a bordo.",
+      "visual": {
+        "background": {
+          "type": "ship_deck"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "sailor",
+          "action": "talk",
+          "expression": "angry"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Gran parte de las tripulaciones piratas procedía de la marina mercante, huyendo de malas pagas y castigos",
+          "kind": "fact",
+          "source": "Marcus Rediker, Villains of All Nations (2004)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "castigos"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b02",
+      "beat": "development",
+      "narration": "Te enrolas en un barco pirata. Y te sorprenderá: los piratas tenían normas escritas.",
+      "visual": {
+        "background": {
+          "type": "ship_deck"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "sailor",
+          "action": "shock",
+          "expression": "surprised"
+        },
+        "props": [
+          {
+            "type": "note",
+            "x": 0.68,
+            "y": 0.5,
+            "scale": 1.0,
+            "at_word": 11
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Las tripulaciones piratas firmaban «artículos»: normas escritas de reparto y disciplina",
+          "kind": "fact",
+          "source": "Charles Johnson, Historia general de los piratas (1724)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "normas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b03",
+      "beat": "development",
+      "narration": "Las llamaban artículos: cómo repartir el botín, qué estaba prohibido… y hasta un seguro por heridas.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#1A1A22",
+          "c2": "#3A3A48",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "note",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.5,
+            "loop": "wobble"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [
+        "seguro"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b04",
+      "beat": "development",
+      "narration": "Ya en tiempos del bucanero Henry Morgan, el cronista Exquemelin contó que perder el brazo derecho se pagaba con seiscientas piezas de a ocho.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E6B830",
+          "c2": "#FFE48A",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "coin",
+            "x": 0.5,
+            "y": 0.5,
+            "scale": 1.5
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 600,
+            "suffix": " PIEZAS DE A OCHO",
+            "at_word": 19,
+            "over": 0.8,
+            "y": 160,
+            "size": 90,
+            "sub": "POR PERDER EL BRAZO DERECHO"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Según Exquemelin (1678), los bucaneros pagaban 600 piezas de a ocho por perder el brazo derecho",
+          "kind": "fact",
+          "source": "Alexandre O. Exquemelin, Piratas de América (1678)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "seiscientas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b05",
+      "beat": "development",
+      "narration": "Un ojo o un dedo, cien. Era casi una mutua… con espadas.",
+      "visual": {
+        "background": {
+          "type": "ship_deck"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "sailor",
+          "action": "laugh",
+          "expression": "laugh"
+        },
+        "props": [
+          {
+            "type": "coin",
+            "x": 0.7,
+            "y": 0.45,
+            "scale": 0.8
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Un ojo o un dedo se compensaban con 100 piezas de a ocho",
+          "kind": "fact",
+          "source": "Exquemelin (1678)"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b05b",
+      "beat": "development",
+      "narration": "Y no esperes una carrera larga: Barbanegra, el pirata más famoso, solo estuvo activo un par de años. Murió en combate en mil setecientos dieciocho.",
+      "visual": {
+        "background": {
+          "type": "ocean"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "sailing_ship",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 0.9
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "BARBANEGRA · †1718",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#1A1A22"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Barbanegra (Edward Teach) actuó como pirata hacia 1716-1718 y murió en combate en Ocracoke en noviembre de 1718",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at_word": 18,
+          "gain_db": -8
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "Barbanegra"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b06",
+      "beat": "climax",
+      "narration": "Pero tu mayor enemigo no es la Armada. Es una enfermedad: el escorbuto.",
+      "visual": {
+        "background": {
+          "type": "ship_deck",
+          "night": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "sailor",
+          "action": "shock",
+          "expression": "scared"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            2.0
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 2.0,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "escorbuto"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b07",
+      "beat": "development",
+      "narration": "Pasas semanas comiendo galleta seca y carne salada. Sin fruta ni verdura fresca, te falta vitamina C.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#C9A060",
+          "c2": "#E2C27A",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "food",
+            "kind": "bread",
+            "x": 0.35,
+            "y": 0.55,
+            "scale": 1.2
+          },
+          {
+            "type": "meat",
+            "x": 0.65,
+            "y": 0.55,
+            "scale": 1.2
+          },
+          {
+            "type": "lemon",
+            "x": 0.5,
+            "y": 0.3,
+            "scale": 0.8,
+            "crossed": true,
+            "cross_at": 1.5,
+            "at_word": 10
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "El escorbuto lo causa la falta de vitamina C, ausente en la galleta y la carne salada",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica; NIH"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "vitamina"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b07b",
+      "beat": "development",
+      "narration": "Y la galleta suele traer premio: gorgojos. Muchos marineros comían a oscuras para no verlos.",
+      "visual": {
+        "background": {
+          "type": "ship_deck",
+          "night": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "sailor",
+          "action": "shock",
+          "expression": "angry"
+        },
+        "props": [
+          {
+            "type": "food",
+            "kind": "bread",
+            "x": 0.66,
+            "y": 0.6,
+            "scale": 1.0
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La galleta de barco se infestaba a menudo de gorgojos y larvas",
+          "kind": "fact",
+          "source": "Royal Museums Greenwich"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b08",
+      "beat": "development",
+      "narration": "Primero llega el cansancio. Luego te sangran las encías, se te aflojan los dientes… y se te reabren heridas viejas.",
+      "visual": {
+        "background": {
+          "type": "ship_deck"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "sailor",
+          "action": "idle",
+          "expression": "tired"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.25,
+          "focus": [
+            0.3,
+            0.6
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Síntomas del escorbuto: cansancio, encías sangrantes, pérdida de dientes y reapertura de heridas cicatrizadas",
+          "kind": "fact",
+          "source": "NIH; historia de la medicina naval"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "encías",
+        "heridas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b09",
+      "beat": "climax",
+      "narration": "Según algunas estimaciones, entre mil quinientos y mil ochocientos el escorbuto mató a unos dos millones de marineros. Más que las batallas.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF6B5C",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "lemon",
+            "x": 0.5,
+            "y": 0.72,
+            "scale": 1.3,
+            "crossed": true,
+            "cross_at": 0.8,
+            "cross_r": 130
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 2000000,
+            "prefix": "≈",
+            "suffix": " MARINEROS",
+            "at_word": 14,
+            "over": 0.9,
+            "y": 300,
+            "size": 110,
+            "sub": "MUERTOS POR ESCORBUTO, 1500-1800 (ESTIMACIÓN)"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Se estima que el escorbuto mató a unos 2 millones de marineros entre 1500 y 1800, más que los combates",
+          "kind": "fact",
+          "source": "Estimaciones historiográficas recogidas por Popular Science y el Royal College of Physicians of Edinburgh"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "millones"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b10",
+      "beat": "development",
+      "narration": "La solución llegó en mil setecientos cuarenta y siete. El médico James Lind probó seis remedios con doce marineros enfermos.",
+      "visual": {
+        "background": {
+          "type": "ship_deck"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "victorian",
+            "hair": "#E8E0D0",
+            "x": 0.35,
+            "y": 0.93,
+            "size": 0.9,
+            "action": "present",
+            "expression": "determined"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "JAMES LIND · 1747",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#2B6BE8"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1747, a bordo del HMS Salisbury, James Lind dividió a 12 marineros con escorbuto en 6 parejas con remedios distintos",
+          "kind": "fact",
+          "source": "James Lind, Tratado del escorbuto (1753); James Lind Library"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "Lind"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b11",
+      "beat": "development",
+      "narration": "Solo se curaron los que comieron naranjas y limones. Es uno de los primeros ensayos clínicos controlados de la historia.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFE13A",
+          "c2": "#FFF09A",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "lemon",
+            "x": 0.4,
+            "y": 0.55,
+            "scale": 1.4
+          },
+          {
+            "type": "orange",
+            "x": 0.62,
+            "y": 0.55,
+            "scale": 1.3
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "El ensayo de Lind se considera uno de los primeros ensayos clínicos controlados",
+            "at_word": 10,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Solo mejoraron rápidamente los marineros que tomaron cítricos; se considera uno de los primeros ensayos clínicos",
+          "kind": "fact",
+          "source": "James Lind Library; Royal College of Physicians of Edinburgh"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at": 0.6
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "limones"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b12",
+      "beat": "development",
+      "narration": "Aunque la Marina británica tardó casi cincuenta años en dar zumo de limón a sus marineros.",
+      "visual": {
+        "background": {
+          "type": "ship_deck"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "sailor",
+          "action": "shrug",
+          "expression": "angry"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La Marina británica no introdujo raciones de cítricos hasta 1795",
+          "kind": "fact",
+          "source": "Royal College of Physicians of Edinburgh; USNI"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b12b",
+      "beat": "development",
+      "narration": "Por eso a los marineros británicos los llamaron «limeys»: por las limas que acabaron llevando a bordo.",
+      "visual": {
+        "background": {
+          "type": "ship_deck"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "sailor",
+          "action": "laugh",
+          "expression": "laugh"
+        },
+        "props": [
+          {
+            "type": "lemon",
+            "x": 0.68,
+            "y": 0.5,
+            "scale": 1.0,
+            "loop": "bob"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "El apodo «limey» para los marineros británicos procede de las raciones de cítricos (limas) contra el escorbuto",
+          "kind": "fact",
+          "source": "Oxford English Dictionary; Royal Museums Greenwich"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "limeys"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "b13",
+      "beat": "ending",
+      "narration": "Veredicto pirata: con limones y sin abordajes, meses. Sin fruta, en uno o dos meses el escorbuto te deja fuera de combate.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.5,
+            "label": "CARIBE · ≈1720",
+            "at_word": 0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 1.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "meses"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l01",
+      "beat": "development",
+      "narration": "Octava parada: Londres, mil ochocientos cincuenta y cuatro, la capital del mundo industrial.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.55
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "victorian",
+          "action": "look_up",
+          "expression": "dizzy"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "8 · LONDRES · 1854",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#5C4E3E"
+          }
+        ],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "Londres"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l02",
+      "beat": "development",
+      "narration": "Humo de carbón por todas partes, fábricas sin descanso y calles llenas de barro… y de cosas peores.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.9
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "victorian",
+          "action": "sweat",
+          "expression": "angry"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "pan_right",
+          "amount": 160
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l03",
+      "beat": "development",
+      "narration": "Si eres niño, quizá trabajes en una fábrica. Una ley de mil ochocientos treinta y tres lo prohibió a los menores de nueve años.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.55
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.65,
+          "outfit": "victorian",
+          "action": "sweat",
+          "expression": "tired"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Ley de Fábricas de 1833: prohibido el trabajo textil a menores de 9 años",
+            "at_word": 5,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La Ley de Fábricas de 1833 prohibió emplear a menores de 9 años en fábricas textiles",
+          "kind": "fact",
+          "source": "Factory Act 1833, Parlamento británico"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "nueve"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l04",
+      "beat": "development",
+      "narration": "Y limitó a nueve horas al día la jornada de los niños de nueve a trece. Antes, podían ser muchas más.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5C4E3E",
+          "c2": "#8A7460",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "clock",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.2
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 9,
+            "suffix": " HORAS AL DÍA",
+            "at_word": 3,
+            "over": 0.6,
+            "y": 160,
+            "size": 110,
+            "sub": "NIÑOS DE 9 A 13 AÑOS"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La misma ley limitó a 9 horas diarias el trabajo de los niños de 9 a 13 años",
+          "kind": "fact",
+          "source": "Factory Act 1833"
+        }
+      ],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l05",
+      "beat": "development",
+      "narration": "La esperanza de vida al nacer en Inglaterra rondaba los cuarenta años, y más de uno de cada cuatro niños moría antes de los cinco.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.55
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "victorian",
+          "action": "idle",
+          "expression": "worried"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 40,
+            "prefix": "≈",
+            "suffix": " AÑOS",
+            "at_word": 10,
+            "over": 0.6,
+            "y": 160,
+            "size": 110,
+            "sub": "ESPERANZA DE VIDA AL NACER (INGLATERRA, 1850)"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1850 la esperanza de vida al nacer en Inglaterra y Gales era de unos 40-42 años y más del 25 % de los niños moría antes de los 5",
+          "kind": "fact",
+          "source": "Estadísticas históricas de Inglaterra y Gales (Office for National Statistics; Cambridge Group)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "cuarenta"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l05b",
+      "beat": "development",
+      "narration": "Y ojo con lo que comes: a menudo el pan llevaba alumbre para parecer más blanco, y la leche venía aguada.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#F2EAD6",
+          "c2": "#FFF8E8",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "food",
+            "kind": "bread",
+            "x": 0.4,
+            "y": 0.55,
+            "scale": 1.3
+          },
+          {
+            "type": "food",
+            "kind": "water",
+            "x": 0.65,
+            "y": 0.55,
+            "scale": 1.1,
+            "at_word": 17
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En la Inglaterra victoriana era habitual adulterar el pan con alumbre y aguar la leche; lo denunció Arthur Hassall en The Lancet (1851-1854)",
+          "kind": "fact",
+          "source": "English Heritage; The Lancet"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "alumbre"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l06",
+      "beat": "climax",
+      "narration": "Y en agosto llega el gran peligro: el cólera, una diarrea tan brutal que puede matar en cuestión de horas.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.9
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "victorian",
+          "action": "shock",
+          "expression": "shock"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            1.4
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "El cólera provoca una diarrea acuosa grave que puede matar en horas si no se trata",
+          "kind": "fact",
+          "source": "OMS, nota descriptiva sobre el cólera"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 1.4,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "cólera",
+        "horas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l07",
+      "beat": "climax",
+      "narration": "En el barrio del Soho, a pocas calles de distancia, hay más de quinientas muertes en solo diez días.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF6B5C",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "water_pump",
+            "x": 0.5,
+            "y": 0.98,
+            "scale": 0.8,
+            "enter": "rise"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 500,
+            "prefix": "+",
+            "suffix": " MUERTES",
+            "at_word": 11,
+            "over": 0.7,
+            "y": 300,
+            "size": 140,
+            "sub": "EN 10 DÍAS · SOHO, 1854"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Snow contabilizó más de 500 muertes por cólera en diez días en un radio de unas 250 yardas en Soho",
+          "kind": "fact",
+          "source": "John Snow, Sobre el modo de transmisión del cólera (1855)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "quinientas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l08",
+      "beat": "development",
+      "narration": "Casi todos los médicos creen que el cólera se contagia por el aire sucio, el miasma.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.9
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "victorian",
+            "hair": "#4A4A4A",
+            "x": 0.35,
+            "y": 0.93,
+            "size": 0.9,
+            "action": "talk",
+            "expression": "smug",
+            "hat": "fedora"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "La teoría dominante atribuía el cólera al miasma, el aire viciado",
+          "kind": "fact",
+          "source": "Historiografía médica"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l09",
+      "beat": "development",
+      "narration": "Pero un médico, John Snow, no se lo cree. Marca en un mapa cada muerte, casa por casa.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.55
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "victorian",
+          "action": "think",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "dotted_path",
+            "x": 0.5,
+            "y": 0.6,
+            "at_word": 10
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "JOHN SNOW",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#2B6BE8",
+            "at_word": 4
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "Snow"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l09b",
+      "beat": "development",
+      "narration": "Y ve que casi todas rodean una bomba de agua: la de Broad Street.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.55
+        },
+        "character": {
+          "x": 0.22,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "victorian",
+          "action": "point_up",
+          "expression": "wow"
+        },
+        "props": [
+          {
+            "type": "water_pump",
+            "x": 0.66,
+            "y": 0.97,
+            "scale": 0.9,
+            "at_word": 6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "BROAD STREET",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#2B6BE8",
+            "at_word": 9
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "John Snow cartografió las muertes y vio que se concentraban alrededor de la bomba de Broad Street",
+          "kind": "fact",
+          "source": "John Snow (1855); CDC"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 9
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "bomba"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l10",
+      "beat": "climax",
+      "narration": "Convence a las autoridades y quitan la manivela de la bomba. Nadie más puede beber de ella.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.55
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "water_pump",
+            "x": 0.55,
+            "y": 0.97,
+            "scale": 1.0,
+            "handle": false,
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "8 de septiembre de 1854: retiran la manivela de la bomba de Broad Street",
+            "at_word": 2,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.2,
+          "focus": [
+            0.55,
+            0.75
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "El 8 de septiembre de 1854 se retiró la manivela de la bomba de Broad Street",
+          "kind": "fact",
+          "source": "CDC, MMWR (2004)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "crack",
+          "at_word": 6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "manivela"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l11",
+      "beat": "development",
+      "narration": "Algunos historiadores creen que la epidemia ya iba a menos. Pero Snow había demostrado algo enorme: el cólera viaja por el agua.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "splash",
+            "x": 0.5,
+            "y": 0.6,
+            "color": "#5CE1E6",
+            "at_word": 18
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "El brote ya remitía cuando se quitó la manivela; aun así, Snow probó el contagio por agua",
+            "at_word": 1,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "El brote ya estaba remitiendo cuando se retiró la manivela, pero Snow aportó pruebas del contagio por agua",
+          "kind": "fact",
+          "source": "JSTOR Daily; historiografía de la epidemiología"
+        }
+      ],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [
+        "agua"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l11b",
+      "beat": "development",
+      "narration": "Al año siguiente lo remató: los vecinos que bebían agua sacada del Támesis río abajo, contaminada, morían muchas veces más que los demás.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.55
+        },
+        "character": {
+          "x": 0.25,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "victorian",
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "splash",
+            "x": 0.6,
+            "y": 0.75,
+            "color": "#7A6A3A",
+            "at_word": 9
+          },
+          {
+            "type": "splash",
+            "x": 0.78,
+            "y": 0.75,
+            "color": "#5CE1E6",
+            "at_word": 14
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Snow comparó a los clientes de dos compañías de aguas: los de Southwark & Vauxhall (agua del Támesis contaminada) tuvieron muchas más muertes que los de Lambeth",
+          "kind": "fact",
+          "source": "John Snow, Sobre el modo de transmisión del cólera (1855)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "contaminada"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l12",
+      "beat": "development",
+      "narration": "Cuatro años después llega el Gran Hedor: el Támesis apesta tanto que el Parlamento aprueba la gran red de alcantarillas de Londres.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.9
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "victorian",
+          "action": "sweat",
+          "expression": "angry"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "1858 · EL GRAN HEDOR",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#5C4E3E"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Tras el «Gran Hedor» de 1858, el Parlamento aprobó la red de alcantarillado de Joseph Bazalgette",
+          "kind": "fact",
+          "source": "UK Parliament; historiografía"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "Hedor"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l12b",
+      "beat": "development",
+      "narration": "Aquel verano fue tan caluroso que en el Parlamento colgaron cortinas empapadas en cal para aguantar el olor.",
+      "visual": {
+        "background": {
+          "type": "london",
+          "smog": 0.9
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "victorian",
+          "action": "laugh",
+          "expression": "laugh"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Durante el Gran Hedor de 1858 se colgaron cortinas empapadas en cloruro de cal en el Parlamento",
+          "kind": "fact",
+          "source": "UK Parliament (historia del edificio)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "l13",
+      "beat": "ending",
+      "narration": "Veredicto londinense: si hierves el agua y no te toca la fábrica de niño, años. Si bebes de la bomba equivocada… quizá horas.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.72,
+            "label": "LONDRES · 1854",
+            "at_word": 0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 1.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "años",
+        "horas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c01",
+      "beat": "development",
+      "narration": "Novena y última parada: Panamá, mil ochocientos ochenta y cinco. Los franceses intentan abrir un canal entre dos océanos.",
+      "visual": {
+        "background": {
+          "type": "jungle_canal",
+          "rain": 0.3
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "look_up",
+          "expression": "hot",
+          "sweat": 0.5
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "9 · PANAMÁ · 1885",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#22B573"
+          }
+        ],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "Panamá"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c02",
+      "beat": "development",
+      "narration": "Lo dirige Ferdinand de Lesseps, el mismo que había abierto el canal de Suez. Parece imposible que salga mal.",
+      "visual": {
+        "background": {
+          "type": "jungle_canal",
+          "rain": 0.3
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "victorian",
+            "hair": "#E8E0D0",
+            "x": 0.35,
+            "y": 0.93,
+            "size": 0.9,
+            "action": "smug",
+            "expression": "smug",
+            "mustache": true,
+            "hat": "fedora"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Ferdinand de Lesseps, constructor del canal de Suez, dirigió el intento francés en Panamá desde 1881",
+          "kind": "fact",
+          "source": "Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "Suez"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c03",
+      "beat": "development",
+      "narration": "Pero aquí el enemigo no es la roca. Es la lluvia, la selva… y un bicho diminuto.",
+      "visual": {
+        "background": {
+          "type": "jungle_canal",
+          "rain": 0.9
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "sweat",
+          "expression": "worried",
+          "sweat": 0.9
+        },
+        "props": [
+          {
+            "type": "mosquito",
+            "x": 0.68,
+            "y": 0.4,
+            "at_word": 13,
+            "scale": 1.2
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 13,
+          "gain_db": -8
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "diminuto"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c04",
+      "beat": "climax",
+      "narration": "La fiebre amarilla y la malaria matan a miles de trabajadores. En la etapa francesa murieron más de veintidós mil personas.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF6B5C",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "mosquito",
+            "x": 0.5,
+            "y": 0.72,
+            "swarm": 12
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 22000,
+            "prefix": "+",
+            "suffix": " MUERTOS",
+            "at_word": 15,
+            "over": 0.8,
+            "y": 300,
+            "size": 130,
+            "sub": "OBRAS FRANCESAS DEL CANAL, 1881-1889"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Más de 22.000 trabajadores murieron durante el intento francés (1881-1889), muchos de malaria y fiebre amarilla",
+          "kind": "fact",
+          "source": "Linda Hall Library; Smithsonian Libraries"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "veintidós"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c04b",
+      "beat": "development",
+      "narration": "Y lo peor: los médicos no saben cómo se contagia. Muchos creen, otra vez, que es culpa del aire malo.",
+      "visual": {
+        "background": {
+          "type": "jungle_canal",
+          "rain": 0.9
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "linen",
+          "action": "shrug",
+          "expression": "worried"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c05",
+      "beat": "development",
+      "narration": "En los hospitales ponen las patas de las camas en cuencos de agua para frenar a las hormigas.",
+      "visual": {
+        "background": {
+          "type": "jungle_canal",
+          "rain": 0.3
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "mosquito_net",
+            "x": 0.6,
+            "y": 0.8,
+            "scale": 0.8
+          },
+          {
+            "type": "mosquito",
+            "x": 0.4,
+            "y": 0.4,
+            "swarm": 6
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En los hospitales franceses se ponían las patas de las camas en recipientes con agua contra las hormigas, lo que creaba criaderos de mosquitos",
+          "kind": "fact",
+          "source": "Smithsonian Libraries, «Make the Dirt Fly»; historiografía"
+        }
+      ],
+      "sfx": [],
+      "transition": "slide",
+      "emphasis": [
+        "agua"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c06",
+      "beat": "climax",
+      "narration": "Sin saberlo, estaban criando mosquitos justo al lado de los enfermos.",
+      "visual": {
+        "background": {
+          "type": "jungle_canal",
+          "rain": 0.9
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "mosquito",
+            "x": 0.5,
+            "y": 0.45,
+            "swarm": 10
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.2
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "mosquitos"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c07",
+      "beat": "development",
+      "narration": "Ya en mil ochocientos ochenta y uno, un médico cubano, Carlos Finlay, había propuesto que la fiebre amarilla la transmitía un mosquito.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#2B6BE8",
+          "c2": "#5C8FE6",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "victorian",
+            "hair": "#2A2A2A",
+            "x": 0.35,
+            "y": 0.93,
+            "size": 0.95,
+            "action": "present",
+            "expression": "determined",
+            "mustache": true
+          },
+          {
+            "type": "mosquito",
+            "x": 0.72,
+            "y": 0.45,
+            "scale": 1.3
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "CARLOS FINLAY · CUBA · 1881",
+            "x": 960,
+            "y": 80,
+            "size": 64,
+            "bg": "#E8392F"
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1881 Carlos J. Finlay propuso que el mosquito transmitía la fiebre amarilla",
+          "kind": "fact",
+          "source": "Linda Hall Library; Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [],
+      "transition": "zoom",
+      "emphasis": [
+        "Finlay"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c08",
+      "beat": "development",
+      "narration": "Casi nadie le hizo caso. Hasta que en mil novecientos el equipo de Walter Reed lo confirmó en Cuba.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#22B573",
+          "c2": "#6EE7A8",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Walter Reed confirmó en Cuba (1900) la transmisión de la fiebre amarilla por mosquitos",
+            "at_word": 6,
+            "y": 60
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1900 la comisión de Walter Reed confirmó en Cuba la hipótesis de Finlay",
+          "kind": "fact",
+          "source": "Linda Hall Library; Gavi"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "Reed"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c09",
+      "beat": "development",
+      "narration": "Cuando los estadounidenses retomaron la obra, el médico William Gorgas declaró la guerra a los mosquitos: secar charcos, mosquiteras y fumigación.",
+      "visual": {
+        "background": {
+          "type": "jungle_canal",
+          "rain": 0.3
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "npc",
+            "outfit": "police",
+            "hair": "#C8C8C8",
+            "x": 0.3,
+            "y": 0.93,
+            "size": 0.9,
+            "action": "point_up",
+            "expression": "determined",
+            "mustache": true
+          },
+          {
+            "type": "mosquito_net",
+            "x": 0.72,
+            "y": 0.8,
+            "scale": 0.7,
+            "at_word": 17
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [
+        {
+          "text": "Desde 1904, William Gorgas eliminó aguas estancadas, instaló mosquiteras y fumigó para controlar los mosquitos",
+          "kind": "fact",
+          "source": "Linda Hall Library; EBSCO Research Starters"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "Gorgas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c10",
+      "beat": "climax",
+      "narration": "A finales de mil novecientos cinco, la fiebre amarilla había desaparecido de la zona del canal.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#22B573",
+          "c2": "#6EE7A8",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "mosquito",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.6,
+            "crossed": true,
+            "cross_at": 1.0
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "A finales de 1905 ya no se registraban muertes por fiebre amarilla en Panamá",
+          "kind": "fact",
+          "source": "Linda Hall Library"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at": 1.0
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "desaparecido"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "c11",
+      "beat": "ending",
+      "narration": "Veredicto panameño: con los franceses, en temporada de lluvias, quizá semanas. Con mosquitero y unos años más tarde, toda una carrera.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.38,
+            "label": "PANAMÁ · 1885",
+            "at_word": 0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 1.0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "semanas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f01",
+      "beat": "climax",
+      "narration": "Hagamos el recuento. La época más peligrosa de las nueve es la peste negra: casi una moneda al aire.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#4A4458",
+          "c2": "#6E6680",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.32,
+            "label": "1.º MÁS PELIGROSA: PESTE NEGRA",
+            "at_word": 0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "flash",
+      "emphasis": [
+        "peste"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f02",
+      "beat": "climax",
+      "narration": "Muy cerca, la vuelta al mundo de Elcano y el canal de Panamá de los franceses. Y después, Tenochtitlan en mil quinientos veinte.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#1A1A22",
+          "c2": "#3A3A48",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "survival_meter",
+            "x": 0.5,
+            "y": 0.42,
+            "scale": 1.15,
+            "value": 0.35,
+            "label": "2.º VUELTA AL MUNDO · 3.º PANAMÁ 1885",
+            "at_word": 0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "Elcano",
+        "Panamá"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f02a",
+      "beat": "climax",
+      "narration": "En medio quedan el escorbuto pirata, los vikingos de las incursiones y los incendios de Roma.",
+      "visual": {
+        "background": {
+          "type": "fjord"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "shrug",
+          "expression": "surprised"
+        },
+        "props": [
+          {
+            "type": "longship",
+            "x": 0.7,
+            "y": 0.6,
+            "scale": 0.5
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f02b",
+      "beat": "climax",
+      "narration": "Y las más llevaderas, con dolor de espalda incluido: Egipto y el Londres de John Snow, si hierves el agua.",
+      "visual": {
+        "background": {
+          "type": "time_tunnel",
+          "window": 960
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.75,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "float",
+          "expression": "surprised"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "Egipto",
+        "Snow"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f02c",
+      "beat": "climax",
+      "narration": "Fíjate: en casi todas las épocas, lo que más mataba no eran las guerras, sino bacterias, virus, mosquitos y falta de vitaminas.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "mosquito",
+            "x": 0.3,
+            "y": 0.45,
+            "scale": 1.0
+          },
+          {
+            "type": "rat",
+            "x": 0.55,
+            "y": 0.6
+          },
+          {
+            "type": "lemon",
+            "x": 0.75,
+            "y": 0.45,
+            "scale": 0.8
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "bacterias",
+        "mosquitos"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f03",
+      "beat": "climax",
+      "narration": "Pero hay una época que gana a todas por goleada: la tuya.",
+      "visual": {
+        "background": {
+          "type": "backyard"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "celebrate",
+          "expression": "excited"
+        },
+        "props": [],
+        "overlays": [],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 9
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "tuya"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f04",
+      "beat": "ending",
+      "narration": "Hoy la esperanza de vida en el mundo ronda los setenta y tres años: casi el doble que en el Londres de John Snow.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#22B573",
+          "c2": "#6EE7A8",
+          "window": 960
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 73,
+            "suffix": " AÑOS",
+            "at_word": 11,
+            "over": 0.7,
+            "y": 300,
+            "size": 160,
+            "sub": "ESPERANZA DE VIDA MUNDIAL (OMS, 2023)"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "La esperanza de vida mundial fue de 73,3 años en 2023",
+          "kind": "fact",
+          "source": "OMS, Estimaciones Mundiales de Salud (2026)"
+        }
+      ],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "setenta"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f05",
+      "beat": "ending",
+      "narration": "¿Por qué? Agua limpia, antibióticos, vacunas, mosquiteras y fruta todo el año: justo lo que habría salvado a la gente de este viaje.",
+      "visual": {
+        "background": {
+          "type": "backyard"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "present",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "splash",
+            "x": 0.62,
+            "y": 0.5,
+            "color": "#5CE1E6",
+            "at_word": 4
+          },
+          {
+            "type": "lemon",
+            "x": 0.78,
+            "y": 0.42,
+            "scale": 0.7,
+            "at_word": 9
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [],
+      "transition": "whip",
+      "emphasis": [
+        "agua",
+        "antibióticos",
+        "vacunas"
+      ],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f06",
+      "beat": "ending",
+      "narration": "Así que la próxima vez que te quejes del wifi, acuérdate de los marineros de James Lind.",
+      "visual": {
+        "background": {
+          "type": "backyard"
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "laugh",
+          "expression": "laugh"
+        },
+        "props": [
+          {
+            "type": "wifi",
+            "x": 0.7,
+            "y": 0.4,
+            "scale": 1.0
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.08
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boing",
+          "at_word": 8
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [],
+      "pause_after": 0.08
+    },
+    {
+      "id": "f07",
+      "beat": "ending",
+      "narration": "¿Y tú? ¿A qué época viajarías? Te leo en comentarios, y si quieres más viajes así, suscríbete a Hipotéticos.",
+      "visual": {
+        "background": {
+          "type": "backyard"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.93,
+          "scale": 0.85,
+          "outfit": "casual",
+          "action": "talk",
+          "expression": "excited",
+          "actions": [
+            [
+              "w8",
+              "point_down"
+            ]
+          ]
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 960,
+            "y": 120,
+            "size": 70,
+            "at_word": 6,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 6
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.5
+    }
+  ],
+  "metadata": {
+    "format": "landscape",
+    "title": "¿Cuánto durarías en cada época de la historia? ⏳",
+    "hashtags": [
+      "#historia",
+      "#quepasariasi",
+      "#documental"
+    ],
+    "tags": [
+      "cuánto durarías",
+      "qué pasaría si",
+      "historia",
+      "viaje en el tiempo",
+      "antiguo egipto",
+      "pirámides",
+      "antigua roma",
+      "peste negra",
+      "edad media",
+      "piratas",
+      "escorbuto",
+      "londres victoriano",
+      "cólera",
+      "john snow",
+      "vikingos",
+      "tenochtitlan",
+      "aztecas",
+      "historia animada",
+      "canal de panamá",
+      "fiebre amarilla",
+      "elcano",
+      "magallanes",
+      "vuelta al mundo",
+      "carlos finlay",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿A qué época viajarías tú… y cuánto crees que durarías? ⏳👇",
+    "description": "Una máquina del tiempo te lanza a nueve épocas de la historia: las pirámides de Egipto, la Roma del gran incendio, una aldea vikinga, la peste negra, Tenochtitlan en 1519, la primera vuelta al mundo con Magallanes y Elcano, un barco pirata del Caribe, el Londres del cólera y el canal de Panamá. ¿Cuánto durarías en cada una? ⏳\n\nLeo lo comprueba con datos reales de arqueólogos, historiadores y médicos, y un medidor que va de «horas» a «toda la vida».\n\n{CAPITULOS}\n\n🧪 ALGUNOS DATOS DEL VÍDEO\n• Las pirámides no las levantaron esclavos: los obreros tenían tumbas junto a ellas, raciones del Estado y hasta atención médica (fracturas entablilladas).\n• Mojar la arena reduce a la mitad la fuerza necesaria para arrastrar un trineo (Physical Review Letters, 2014).\n• Roma pudo rondar el millón de habitantes; en el incendio del año 64 ardieron por completo 3 de sus 14 barrios (Tácito).\n• Vespasiano gravó la orina que se vendía a las lavanderías: de ahí «el dinero no huele» (Suetonio).\n• Los vikingos no llevaban cascos con cuernos (eso viene de una ópera de Wagner de 1876) y eran bastante limpios: en islandés, el sábado es «laugardagur», el día de lavarse.\n• Tenochtitlan pudo tener hasta 200.000 habitantes en 1519, con acueducto de agua dulce y un mercado al que acudían decenas de miles de personas; el cacao servía como moneda.\n• De los unos 239 hombres que salieron con Magallanes en 1519, solo 18 completaron la vuelta al mundo con Elcano en la Victoria (1522). En el Pacífico comieron cuero y ratas a medio ducado (Pigafetta).\n• La peste negra (1347-1351) mató a entre un tercio y la mitad de los europeos. Sin antibióticos, la bubónica mata al 30-60 % de los enfermos (OMS).\n• La máscara de pájaro del médico de la peste es del siglo XVII, no de 1348.\n• El escorbuto mató a unos 2 millones de marineros entre 1500 y 1800 (estimación). En 1747 James Lind demostró que los cítricos lo curaban.\n• En 1854, John Snow vinculó el cólera de Soho con la bomba de Broad Street.\n• En las obras francesas del canal de Panamá (1881-1889) murieron más de 22.000 personas, sobre todo de fiebre amarilla y malaria. El cubano Carlos Finlay propuso en 1881 que la transmitía un mosquito; Walter Reed lo confirmó en 1900 y William Gorgas la erradicó de la zona en 1905.\n• Hoy la esperanza de vida mundial es de 73,3 años (OMS, 2023).\n\n⚠️ Los «veredictos» del medidor son una estimación divulgativa para comparar épocas, no un cálculo científico.\n\n📚 Fuentes: Encyclopaedia Britannica; Zahi Hawass y Adel Okasha (Giza, 2010); Mark Lehner/AERA; Pierre Tallet (papiros de Merer, 2017); Fall et al., Physical Review Letters (2014); Tácito, Anales XV; Suetonio, Vida de Vespasiano; Glenn Storey, Antiquity (1997); Walter Scheidel; Bos et al., Nature (2011); OMS (peste, cólera, esperanza de vida); Boccaccio, Decamerón; Museo Nacional de Dinamarca; Universidad de York; Museo de Barcos Vikingos de Roskilde; Bernal Díaz del Castillo; Jaffary, Osowski y Porter; Antonio Pigafetta, Relación del primer viaje alrededor del mundo; Armada Española (Instituto de Historia y Cultura Naval); Exquemelin, Piratas de América (1678); Royal Museums Greenwich; James Lind Library; Royal College of Physicians of Edinburgh; Factory Act 1833; John Snow (1855); CDC; Linda Hall Library; Smithsonian Libraries.\n\n💬 ¿A qué época viajarías tú? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?».\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#historia #quepasariasi #egipto #roma #vikingos #tenochtitlan #pestenegra #piratas #documental",
+    "target_seconds": [
+      900,
+      1080
+    ],
+    "custom_thumbnail": true,
+    "chapters": {
+      "i01": "Intro: la máquina del tiempo",
+      "e01": "1 · Egipto, las pirámides (≈2560 a. C.)",
+      "r01": "2 · Roma y el gran incendio (64 d. C.)",
+      "v01": "3 · Los vikingos (≈900)",
+      "p01": "4 · La peste negra (1348)",
+      "t01": "5 · Tenochtitlan (1519)",
+      "m01": "6 · La primera vuelta al mundo (1519-1522)",
+      "b01": "7 · Piratas y escorbuto (≈1720)",
+      "l01": "8 · Londres y el cólera (1854)",
+      "c01": "9 · El canal de Panamá (1885)",
+      "f01": "La época más peligrosa… y la mejor"
+    }
+  }
+}

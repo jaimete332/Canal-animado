@@ -55,10 +55,14 @@ def _next_number() -> int:
     return max(nums, default=0) + 1
 
 
+def _dur(sec: float) -> str:
+    return f"{sec:.1f} s" if sec < 120 else f"{int(sec) // 60} min {int(sec) % 60:02d} s"
+
+
 def sheet(m: dict) -> str:
     return f"""# Publicar: «{m['title']}»
 
-**Vídeo:** `{m['_slug']}.mp4` ({m['duration_s']:.1f} s) · **Miniatura:** `miniatura.png` (1080×1920)
+**Vídeo:** `{m['_slug']}.mp4` ({_dur(m['duration_s'])}) · **Miniatura:** `miniatura.png` ({m.get('_thumb', '1080×1920')})
 
 ## Título ({len(m['title'])} caracteres)
 ```
@@ -107,6 +111,10 @@ def deliver(slug: str, src: Path | None = None) -> Path:
             shutil.copy(src / a, d / b)
     m = json.loads((d / "extra/metadata.json").read_text(encoding="utf-8"))
     m["_slug"] = slug
+    if (d / "miniatura.png").exists():
+        import cairo
+        im = cairo.ImageSurface.create_from_png(str(d / "miniatura.png"))
+        m["_thumb"] = f"{im.get_width()}×{im.get_height()}"
     (d / "PUBLICAR.md").write_text(sheet(m), encoding="utf-8")
     (d / "textos.txt").write_text(plain(m), encoding="utf-8")
     return d

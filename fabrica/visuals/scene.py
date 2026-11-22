@@ -17,7 +17,12 @@ from ..core.log import get_logger
 from .character import ACTIONS, Character, Pose, act
 from .draw import bounce01, clamp, ease_back, ease_in, ease_io, ease_out, lerp, noise1, saved
 from .overlays import OVERLAYS
-from .world import H, W, draw_background, draw_prop
+from .screen import LANDSCAPE
+from .screen import SH as H
+from .screen import SW as W
+from .world import H as BG_H
+from .world import W as BG_W
+from .world import draw_background, draw_prop
 
 log = get_logger("scene")
 TR_IN, TR_OUT = 0.22, 0.12
@@ -168,7 +173,18 @@ class SceneRenderer:
         ctx.set_antialias(cairo.ANTIALIAS_GOOD)
         with saved(ctx):
             self.camera(ctx, t)
-            draw_background(ctx, self.vis.get("background", {"type": "color"}), t, self.dur)
+            bg = self.vis.get("background", {"type": "color"})
+            if LANDSCAPE and not bg.get("native"):
+                # fondo vertical → franja horizontal ampliada; `window` = centro de la franja (y del lienzo vertical)
+                k = W / BG_W * bg.get("zoom", 0.75)
+                cy = bg.get("window", 1020)
+                with saved(ctx):
+                    ctx.translate(W / 2, H / 2)
+                    ctx.scale(k, k)
+                    ctx.translate(-BG_W / 2 - bg.get("window_x", 0), -cy)
+                    draw_background(ctx, bg, t, self.dur)
+            else:
+                draw_background(ctx, bg, t, self.dur)
             props = self.vis.get("props", [])
             for p in props:
                 if p.get("layer", "back") == "back":

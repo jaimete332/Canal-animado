@@ -13,7 +13,8 @@ import math
 from .draw import (INK, OUT, PAL, circle, clamp, col, darken, ease_back, ease_out, fill_stroke, lerp,
                    rrect, saved, text)
 
-W, H = 1080, 1920
+from .screen import SH as H  # noqa: E402
+from .screen import SW as W  # noqa: E402
 
 
 def _wrap(ctx, s: str, size: float, max_w: float, font="Lilita One") -> list[str]:
@@ -46,31 +47,32 @@ def _card(ctx, age, dur, tag, tag_color, body, y=250, icon="check"):
         ctx.scale(max(s, 1e-3), max(s, 1e-3))
         ctx.rotate(-0.02)
         ctx.translate(-W / 2, -(y + h / 2))
-        rrect(ctx, 90 + 8, y + 12, 900, h, 40)
+        x0 = W / 2 - 450
+        rrect(ctx, x0 + 8, y + 12, 900, h, 40)
         ctx.set_source_rgba(0, 0, 0, 0.3)
         ctx.fill()
-        rrect(ctx, 90, y, 900, h, 40)
+        rrect(ctx, x0, y, 900, h, 40)
         fill_stroke(ctx, (1, 1, 1), OUT)
         # etiqueta
         ctx.select_font_face("Lilita One")
         ctx.set_font_size(46)
         tw = ctx.text_extents(tag).width
-        rrect(ctx, 130, y - 38, tw + 120, 76, 38)
+        rrect(ctx, x0 + 40, y - 38, tw + 120, 76, 38)
         fill_stroke(ctx, tag_color, OUT)
-        circle(ctx, 172, y, 22)
+        circle(ctx, x0 + 82, y, 22)
         fill_stroke(ctx, (1, 1, 1), 4)
         ctx.set_source_rgb(*col(tag_color))
         ctx.set_line_width(7)
         if icon == "check":
-            ctx.move_to(161, y + 1)
-            ctx.line_to(170, y + 10)
-            ctx.line_to(185, y - 9)
+            ctx.move_to(x0 + 71, y + 1)
+            ctx.line_to(x0 + 80, y + 10)
+            ctx.line_to(x0 + 95, y - 9)
             ctx.stroke()
         else:  # varita/estrella
             from .draw import star
-            star(ctx, 172, y, 15)
+            star(ctx, x0 + 82, y, 15)
             ctx.fill()
-        text(ctx, tag, 205, y, 46, align="left", outline=6, shadow_off=0)
+        text(ctx, tag, x0 + 115, y, 46, align="left", outline=6, shadow_off=0)
         for i, ln in enumerate(lines):
             text(ctx, ln, W / 2, y + 85 + i * 66, size, color=INK, outline=0, shadow_off=0)
 

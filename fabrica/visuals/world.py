@@ -1011,7 +1011,8 @@ def draw_prop(ctx, p: dict, t: float, age: float | None = None):
     q["_age"] = age
     x, y = p.get("x", 540), p.get("y", 960)
     if 0 <= x <= 1.5 and 0 <= y <= 1.5 and not p.get("abs"):
-        x, y = x * W, y * H
+        from .screen import SH, SW
+        x, y = x * SW, y * SH
     s = p.get("scale", 1.0)
     rot = p.get("rot", 0.0)
     alpha = 1.0
@@ -1082,3 +1083,4 @@ from . import world3  # noqa: E402,F401
 from . import world4  # noqa: E402,F401
 from . import world5  # noqa: E402,F401
 from . import world6  # noqa: E402,F401
+from . import world7  # noqa: E402,F401

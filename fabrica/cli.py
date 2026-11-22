@@ -202,6 +202,22 @@ def _summary(res: dict):
     print("=" * 60)
 
 
+def _apply_story_format(a) -> None:
+    """Si el guion declara "format": "landscape" en metadata, activa ese perfil antes de cargar el motor."""
+    import json
+    import os
+    src = getattr(a, "story", None)
+    if not src and getattr(a, "slug", None):
+        src = load_config().path("paths.output") / a.slug / "script.json"
+    try:
+        fmt = json.loads(Path(src).read_text(encoding="utf-8")).get("metadata", {}).get("format") if src else None
+    except (OSError, ValueError):
+        fmt = None
+    if fmt and not os.environ.get("FABRICA_FORMAT"):
+        os.environ["FABRICA_FORMAT"] = fmt
+        load_config.cache_clear()
+
+
 def main(argv=None):
     setup_logging()
     ap = argparse.ArgumentParser(prog="fabrica", description="Fábrica de YouTube Shorts animados")
@@ -238,6 +254,7 @@ def main(argv=None):
     sub.add_parser("insights").set_defaults(f=cmd_insights)
     sub.add_parser("doctor").set_defaults(f=cmd_doctor)
     a = ap.parse_args(argv)
+    _apply_story_format(a)
     try:
         a.f(a)
     except (RuntimeError, PermissionError, FileNotFoundError) as e:

@@ -45,7 +45,18 @@ def load_config(path: str | None = None) -> Config:
     cfg_path = Path(path) if path else ROOT / "config.yaml"
     with open(cfg_path, encoding="utf-8") as f:
         data = yaml.safe_load(f) or {}
+    fmt = os.environ.get("FABRICA_FORMAT")  # p. ej. "landscape" para vídeos largos 16:9
+    if fmt and fmt in (data.get("formats") or {}):
+        _merge(data, data["formats"][fmt])
     return Config(data)
+
+
+def _merge(base: dict, over: dict) -> None:
+    for k, v in over.items():
+        if isinstance(v, dict) and isinstance(base.get(k), dict):
+            _merge(base[k], v)
+        else:
+            base[k] = v
 
 
 def env(name: str, default: str | None = None) -> str | None:

@@ -90,12 +90,13 @@ def _iso_dur(s: str) -> float:
 
 
 def fetch_api(queries: list[str], per_query: int = 25, months: int = 12, region: str = "ES",
-              max_duration: int = 180) -> list[Video]:
+              max_duration: int = 180, video_duration: str = "short", min_duration: int = 0) -> list[Video]:
+    """`video_duration`: short (<4 min) | medium (4-20 min) | long (>20 min), filtro de la búsqueda de YouTube."""
     after = (dt.datetime.utcnow() - dt.timedelta(days=30 * months)).strftime("%Y-%m-%dT%H:%M:%SZ")
     ids: list[str] = []
     for q in queries:
         lang = "en" if re.search(r"\b(what|would|happen)\b", q) else "es"
-        j = _get("search", part="id", q=q, type="video", videoDuration="short", order="viewCount",
+        j = _get("search", part="id", q=q, type="video", videoDuration=video_duration, order="viewCount",
                  maxResults=min(50, per_query), publishedAfter=after, regionCode=region if lang == "es" else None,
                  relevanceLanguage=lang)
         ids += [it["id"]["videoId"] for it in j.get("items", [])]
@@ -107,13 +108,14 @@ def fetch_api(queries: list[str], per_query: int = 25, months: int = 12, region:
         for it in j.get("items", []):
             sn, st, cd = it["snippet"], it.get("statistics", {}), it["contentDetails"]
             d = _iso_dur(cd.get("duration"))
-            if d and d > max_duration:
+            if d and (d > max_duration or d < min_duration):
                 continue
             vids.append(Video(title=sn["title"], channel=sn["channelTitle"], views=int(st.get("viewCount", 0)),
                               likes=int(st["likeCount"]) if "likeCount" in st else None,
                               comments=int(st["commentCount"]) if "commentCount" in st else None,
                               published=sn["publishedAt"], duration_s=d, lang=sn.get("defaultAudioLanguage", ""),
-                              url=f"https://youtube.com/shorts/{it['id']}", source="youtube_api",
+                              url=(f"https://youtube.com/shorts/{it['id']}" if video_duration == "short"
+                                   else f"https://youtube.com/watch?v={it['id']}"), source="youtube_api",
                               notes=(sn.get("description") or "")[:300]))
     return vids
 
