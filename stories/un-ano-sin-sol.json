@@ -9,7 +9,7 @@
     {
       "id": "s01",
       "beat": "hook",
-      "narration": "Imagina que pasas un año entero sin ver la luz del sol. Ni un rayo.",
+      "narration": "Imagina un año entero sin ver la luz del sol.",
       "visual": {
         "background": {
           "type": "backyard"
@@ -68,7 +68,8 @@
         "año",
         "sol"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s01.wav"
     },
     {
       "id": "s02",
@@ -124,7 +125,8 @@
       "emphasis": [
         "contando"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s02.wav"
     },
     {
       "id": "s03",
@@ -186,7 +188,8 @@
         "reloj",
         "luz"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s03.wav"
     },
     {
       "id": "s04",
@@ -236,7 +239,8 @@
       "emphasis": [
         "descontrola"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s04.wav"
     },
     {
       "id": "s05",
@@ -297,7 +301,8 @@
       "emphasis": [
         "Siffre"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s05.wav"
     },
     {
       "id": "s06",
@@ -353,7 +358,8 @@
       "emphasis": [
         "veinticuatro"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s06.wav"
     },
     {
       "id": "s07",
@@ -423,7 +429,8 @@
       "emphasis": [
         "ánimo"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s07.wav"
     },
     {
       "id": "s08",
@@ -486,7 +493,8 @@
         "vitamina",
         "huesos"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s08.wav"
     },
     {
       "id": "s09",
@@ -545,7 +553,8 @@
       "emphasis": [
         "debilitan"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s09.wav"
     },
     {
       "id": "s10",
@@ -612,7 +621,8 @@
         "marzo",
         "septiembre"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s10.wav"
     },
     {
       "id": "s11",
@@ -666,7 +676,8 @@
       "emphasis": [
         "noche"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s11.wav"
     },
     {
       "id": "s12",
@@ -739,7 +750,8 @@
         "quinientos",
         "cien"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s12.wav"
     },
     {
       "id": "s13",
@@ -804,7 +816,8 @@
       "emphasis": [
         "diez"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s13.wav"
     },
     {
       "id": "s14",
@@ -847,7 +860,8 @@
       "emphasis": [
         "sol"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s14.wav"
     },
     {
       "id": "s15",
@@ -895,7 +909,8 @@
       ],
       "transition": "zoom",
       "emphasis": [],
-      "pause_after": 0.35
+      "pause_after": 0.35,
+      "voice_clip": "assets/voice_eleven/un-ano-sin-sol/s15.wav"
     }
   ],
   "metadata": {

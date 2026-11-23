@@ -29,7 +29,7 @@ def lbl(txt, bg="#E8392F", at_word=None, y=300, size=66):
     return o
 
 
-sc("s01", "hook", "Imagina que pasas un año entero sin ver la luz del sol. Ni un rayo.", {
+sc("s01", "hook", "Imagina un año entero sin ver la luz del sol.", {
     "background": {"type": "backyard"},
     "character": leo(expression="shock", action="shock"),
     "props": [{"type": "sun", "x": 0.72, "y": 0.2, "scale": 1.3, "crossed": True, "cross_at": 1.6, "enter": "none"}],

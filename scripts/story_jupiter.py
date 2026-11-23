@@ -36,7 +36,7 @@ def clouds(depth, **kw):
     return {"type": "jupiter", "mode": "clouds", "depth": depth, **kw}
 
 
-sc("j01", "hook", "Una nave te suelta y caes hacia Júpiter, el gigante del sistema solar.", {
+sc("j01", "hook", "Una nave te suelta y caes hacia Júpiter.", {
     "background": APPROACH,
     "character": leo(y=0.52, scale=1.1, expression="shock"),
     "props": [],

@@ -9,7 +9,7 @@
     {
       "id": "j01",
       "beat": "hook",
-      "narration": "Una nave te suelta y caes hacia Júpiter, el gigante del sistema solar.",
+      "narration": "Una nave te suelta y caes hacia Júpiter.",
       "visual": {
         "background": {
           "type": "jupiter",
@@ -60,7 +60,8 @@
       "emphasis": [
         "Júpiter"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j01.wav"
     },
     {
       "id": "j02",
@@ -123,7 +124,8 @@
       "emphasis": [
         "mil"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j02.wav"
     },
     {
       "id": "j03",
@@ -173,7 +175,8 @@
       "emphasis": [
         "suelo"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j03.wav"
     },
     {
       "id": "j04",
@@ -237,7 +240,8 @@
         "radiación",
         "titanio"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j04.wav"
     },
     {
       "id": "j05",
@@ -302,7 +306,8 @@
       "emphasis": [
         "dos"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j05.wav"
     },
     {
       "id": "j06",
@@ -376,7 +381,8 @@
         "cuarenta",
         "siete"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j06.wav"
     },
     {
       "id": "j07",
@@ -427,7 +433,8 @@
         "ciento",
         "setenta"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j07.wav"
     },
     {
       "id": "j08",
@@ -498,7 +505,8 @@
         "doscientas",
         "treinta"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j08.wav"
     },
     {
       "id": "j09",
@@ -544,7 +552,8 @@
       "emphasis": [
         "Imagina"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j09.wav"
     },
     {
       "id": "j10",
@@ -599,7 +608,8 @@
       "emphasis": [
         "amoníaco"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j10.wav"
     },
     {
       "id": "j11",
@@ -662,7 +672,8 @@
       "emphasis": [
         "Roja"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j11.wav"
     },
     {
       "id": "j12",
@@ -713,7 +724,8 @@
         "presión",
         "calor"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j12.wav"
     },
     {
       "id": "j13",
@@ -782,7 +794,8 @@
       "emphasis": [
         "veintitrés"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j13.wav"
     },
     {
       "id": "j14",
@@ -856,7 +869,8 @@
         "cincuenta",
         "ocho"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j14.wav"
     },
     {
       "id": "j15",
@@ -898,7 +912,8 @@
       "emphasis": [
         "suelo"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j15.wav"
     },
     {
       "id": "j16",
@@ -949,7 +964,8 @@
       ],
       "transition": "zoom",
       "emphasis": [],
-      "pause_after": 0.35
+      "pause_after": 0.35,
+      "voice_clip": "assets/voice_eleven/caer-hacia-jupiter/j16.wav"
     }
   ],
   "metadata": {

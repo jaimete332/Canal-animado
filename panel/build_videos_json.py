@@ -13,6 +13,9 @@ CALENDARIO = {  # slug -> fecha y hora de publicación (hora de España)
     "ceniza-de-volcan": "2026-11-20T18:30",
     "agua-helada-del-titanic": "2026-11-21T18:30",
     "sin-casco-en-el-espacio": "2026-11-22T18:30",
+    "caer-de-un-avion": "2026-11-26T18:30",
+    "un-ano-sin-sol": "2026-11-27T18:30",
+    "caer-hacia-jupiter": "2026-11-28T18:30",
 }
 REPO_RAW = "https://github.com/jaimete332/Canal-animado/raw/claude/youtube-shorts-automation-qkjrhy/"
 

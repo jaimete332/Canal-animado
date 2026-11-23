@@ -16,5 +16,20 @@
  },
  "cuanto-durarias-en-cada-epoca": {
   "miniatura": "/_blob/6366c6fc1c5e4b932aec1f1d8cf1dfb2"
+ },
+ "caer-de-un-avion": {
+  "video": "/_blob/677fc1e482c30da30a42fb477cd038c6",
+  "miniatura": "/_blob/e04172162cc9c42c83d9beb8cae47308",
+  "video_mb": 19.2
+ },
+ "un-ano-sin-sol": {
+  "video": "/_blob/d31f6377e1be1c4171b5ebbc45bbd9c6",
+  "miniatura": "/_blob/b0360e64c87541db5efd53b8290e25ca",
+  "video_mb": 15.9
+ },
+ "caer-hacia-jupiter": {
+  "video": "/_blob/f1159e44511c48a19a9f0a28d99ab9bc",
+  "miniatura": "/_blob/2a3c14781f8203091fa30a67be195f7c",
+  "video_mb": 16.3
  }
 }

@@ -73,7 +73,8 @@
         "diez",
         "paracaídas"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a01.wav"
     },
     {
       "id": "a02",
@@ -139,7 +140,8 @@
       "emphasis": [
         "cincuenta"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a02.wav"
     },
     {
       "id": "a03",
@@ -199,7 +201,8 @@
         "fino",
         "oxígeno"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a03.wav"
     },
     {
       "id": "a04",
@@ -267,7 +270,8 @@
       "emphasis": [
         "conocimiento"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a04.wav"
     },
     {
       "id": "a05",
@@ -311,7 +315,8 @@
       "emphasis": [
         "frena"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a05.wav"
     },
     {
       "id": "a06",
@@ -371,7 +376,8 @@
       "emphasis": [
         "doscientos"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a06.wav"
     },
     {
       "id": "a07",
@@ -421,7 +427,8 @@
       "emphasis": [
         "terminal"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a07.wav"
     },
     {
       "id": "a08",
@@ -474,7 +481,8 @@
       "emphasis": [
         "coche"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a08.wav"
     },
     {
       "id": "a09",
@@ -515,7 +523,8 @@
       "emphasis": [
         "Casi"
       ],
-      "pause_after": 0.2
+      "pause_after": 0.2,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a09.wav"
     },
     {
       "id": "a10",
@@ -590,7 +599,8 @@
       "emphasis": [
         "Vulović"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a10.wav"
     },
     {
       "id": "a11",
@@ -654,7 +664,8 @@
       "emphasis": [
         "estalló"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a11.wav"
     },
     {
       "id": "a12",
@@ -708,7 +719,8 @@
       "emphasis": [
         "carrito"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a12.wav"
     },
     {
       "id": "a13",
@@ -765,7 +777,8 @@
       "emphasis": [
         "amortiguó"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a13.wav"
     },
     {
       "id": "a14",
@@ -818,7 +831,8 @@
       "emphasis": [
         "sobrevivió"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a14.wav"
     },
     {
       "id": "a15",
@@ -874,7 +888,8 @@
       "emphasis": [
         "récord"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a15.wav"
     },
     {
       "id": "a16",
@@ -923,7 +938,8 @@
       ],
       "transition": "zoom",
       "emphasis": [],
-      "pause_after": 0.35
+      "pause_after": 0.35,
+      "voice_clip": "assets/voice_eleven/caer-de-un-avion/a16.wav"
     }
   ],
   "metadata": {
