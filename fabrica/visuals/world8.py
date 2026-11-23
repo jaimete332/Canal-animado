@@ -1370,3 +1370,352 @@ PROPS.update({"pylon": _pylon, "bulb": _bulb, "fridge": _fridge, "candle": _cand
               "telegraph": _telegraph, "atm": _atm, "radio": _radio, "elevator": _elevator,
               "earth_night": _earth_night, "transformer": _transformer, "dam": _dam, "jerrycan": _jerrycan,
               "water_bottle": _water_bottle, "flashlight": _flashlight, "food_can": _food_can, "cow": _cow})
+
+
+# ============================================================================ FONDOS VERTICALES (Shorts)
+# Estos usan el lienzo vertical de siempre (world.W×world.H = 1080×1920), no la pantalla nativa.
+def _wv():
+    from .world import H as HH, W as WW
+    return WW, HH
+
+
+def bg_sky_fall(ctx, t, p):
+    """Caída libre: cielo que oscurece con la altura (`alt` 1 = 10 km, 0 = suelo), nubes y rayas que suben, y un suelo
+    que sube desde abajo con `ground` 0..1 (`snow`: ladera nevada con pinos)."""
+    WW, HH = _wv()
+    alt = clamp(p.get("alt", 1.0))
+    top = mix((0.30, 0.62, 0.98), (0.03, 0.07, 0.28), alt)
+    bot = mix((0.74, 0.90, 1.0), (0.22, 0.38, 0.70), alt)
+    ctx.rectangle(-500, -500, WW + 1000, HH + 1000)
+    ctx.set_source(linear_grad(ctx, 0, 0, 0, HH, [(0, top), (1, bot)]))
+    ctx.fill()
+    sp = p.get("speed", 1.0)
+    rng = np.random.default_rng(7)
+    n_cl = int(5 + 9 * (1 - alt))
+    for i in range(n_cl):  # nubes que suben (parallax); a 10 km hay pocas
+        k = 0.4 + 1.6 * (i / max(1, n_cl - 1))
+        x = rng.uniform(-100, WW + 100)
+        y = HH + 300 - ((t * 420 * sp * k + rng.uniform(0, 2400)) % (HH + 700))
+        with saved(ctx):
+            ctx.translate(x, y)
+            ctx.scale(0.8 * k, 0.8 * k)
+            for cx, cy, r in ((0, 0, 70), (70, -35, 80), (150, 0, 62), (75, 20, 70)):
+                circle(ctx, cx, cy, r)
+            ctx.set_source_rgba(1, 1, 1, 0.40 + 0.2 * (k / 2))
+            ctx.fill()
+    for i in range(26):  # rayas de velocidad
+        x = rng.uniform(0, WW)
+        y = HH - ((t * 1800 * sp * (0.6 + rng.random()) + rng.uniform(0, 2400)) % (HH + 500)) + 100
+        ctx.move_to(x, y)
+        ctx.line_to(x, y + rng.uniform(90, 220))
+        ctx.set_source_rgba(1, 1, 1, 0.22)
+        ctx.set_line_width(4)
+        ctx.stroke()
+    g = clamp(p.get("ground", 0.0))
+    if g > 0:
+        snow = p.get("snow", False)
+        y0 = HH - g * 1500
+        ctx.move_to(-300, y0 + 80)
+        for x in range(-300, WW + 400, 100):
+            ctx.line_to(x, y0 + 60 * math.sin(x * 0.006) - 40 * math.sin(x * 0.015))
+        ctx.line_to(WW + 400, HH + 600)
+        ctx.line_to(-300, HH + 600)
+        ctx.close_path()
+        fill_stroke(ctx, "#F4F8FF" if snow else "#5FA84A", OUT)
+        sc_ = 0.4 + g * 1.4
+        for i in range(14):
+            x = (i * 177) % (WW + 200) - 60
+            y = y0 + 140 + (i * 83) % 500 * g + 40
+            with saved(ctx):
+                ctx.translate(x, y)
+                ctx.scale(sc_, sc_)
+                for k in range(3):
+                    ctx.move_to(0, -150 + k * 45)
+                    ctx.line_to(-55 + k * 8, -80 + k * 45)
+                    ctx.line_to(55 - k * 8, -80 + k * 45)
+                    ctx.close_path()
+                    fill_stroke(ctx, "#2E7D45", OUT * 0.6)
+                rrect(ctx, -8, -20, 16, 30, 3)
+                fill_stroke(ctx, "#6B4226", OUT * 0.5)
+
+
+def bg_jupiter(ctx, t, p):
+    """Júpiter. mode «approach»: espacio con el limbo del planeta abajo; mode «clouds»: bandas que suben (caída) y
+    que se oscurecen y enrojecen con `depth` 0..1; `spot` muestra la Gran Mancha Roja; `lightning` activa rayos."""
+    WW, HH = _wv()
+    mode = p.get("mode", "clouds")
+    bands = ["#F2E3C6", "#D9A066", "#F6EBD6", "#C97B4A", "#EBD2A8", "#A8603A", "#F0DFC0", "#B5703F"]
+    if mode == "approach":
+        ctx.rectangle(-500, -500, WW + 1000, HH + 1000)
+        ctx.set_source(linear_grad(ctx, 0, 0, 0, HH, [(0, (0.02, 0.02, 0.1)), (1, (0.08, 0.05, 0.16))]))
+        ctx.fill()
+        rng = np.random.default_rng(3)
+        for _ in range(110):
+            circle(ctx, rng.uniform(0, WW), rng.uniform(0, HH * 0.8), rng.uniform(1.2, 3.2))
+            ctx.set_source_rgba(1, 1, 0.95, rng.uniform(0.4, 1.0))
+            ctx.fill()
+        cy = p.get("cy", 2350) - p.get("rise", 0.0) * 900
+        R = 1650
+        with saved(ctx):
+            circle(ctx, WW / 2, cy, R)
+            ctx.clip()
+            for k, c in enumerate(bands * 2):
+                y = cy - R + k * 190
+                ctx.rectangle(0, y, WW, 190)
+                ctx.set_source_rgb(*col(c))
+                ctx.fill()
+                ctx.move_to(0, y)
+                for x in range(0, WW + 40, 40):
+                    ctx.line_to(x, y + 8 * math.sin(x * 0.02 + t * 0.6 + k))
+                ctx.set_source_rgba(0.4, 0.2, 0.1, 0.25)
+                ctx.set_line_width(5)
+                ctx.stroke()
+            ellipse(ctx, 700, cy - R + 760, 190, 105)
+            ctx.set_source_rgb(0.78, 0.3, 0.2)
+            ctx.fill()
+            circle(ctx, WW / 2 - 260, cy + 400, R)
+            ctx.set_source_rgba(0, 0, 0.1, 0.5)
+            ctx.fill()
+        circle(ctx, WW / 2, cy, R)
+        ctx.set_source_rgb(*INK)
+        ctx.set_line_width(OUT * 1.4)
+        ctx.stroke()
+        return
+    depth = clamp(p.get("depth", 0.0))
+    scroll = t * p.get("speed", 520)
+    ctx.rectangle(-500, -500, WW + 1000, HH + 1000)
+    ctx.fill()
+    for k in range(-1, 14):
+        y = (k * 230 + scroll) % (230 * 14) - 230
+        c = col(bands[k % len(bands)])
+        c = mix(c, (0.55, 0.12, 0.05), depth * 0.75)
+        c = mix(c, (0.04, 0.02, 0.03), depth * depth * 0.8)
+        ctx.move_to(-100, y)
+        for x in range(-100, WW + 160, 60):
+            ctx.line_to(x, y + 14 * math.sin(x * 0.013 + t * 1.1 + k * 1.7))
+        ctx.line_to(WW + 100, y + 230)
+        for x in range(WW + 100, -160, -60):
+            ctx.line_to(x, y + 230 + 14 * math.sin(x * 0.013 + t * 1.1 + (k + 1) * 1.7))
+        ctx.close_path()
+        ctx.set_source_rgb(*c)
+        ctx.fill()
+    if p.get("spot"):
+        yy = (HH * 0.55 + scroll * 0.4) % (HH + 500) - 100
+        ellipse(ctx, WW * 0.62, yy, 330, 190)
+        ctx.set_source_rgb(0.76, 0.28, 0.18)
+        ctx.fill_preserve()
+        ctx.set_source_rgb(*INK)
+        ctx.set_line_width(OUT)
+        ctx.stroke()
+        ellipse(ctx, WW * 0.62, yy, 190, 105)
+        ctx.set_source_rgba(0.9, 0.5, 0.3, 0.6)
+        ctx.fill()
+    if p.get("lightning") and (t * 2.3) % 1 < 0.12:
+        ctx.rectangle(-100, -100, WW + 200, HH + 200)
+        ctx.set_source_rgba(1, 1, 0.85, 0.45)
+        ctx.fill()
+    # humo de la entrada: se oscurece por los bordes
+    ctx.rectangle(-100, -100, WW + 200, HH + 200)
+    ctx.set_source(radial_grad(ctx, WW / 2, HH / 2, 300, 1300, [(0, (0, 0, 0), 0), (1, (0.05, 0.0, 0.0), 0.55 * (0.3 + depth))]))
+    ctx.fill()
+
+
+def bg_polar(ctx, t, p):
+    """Noche polar: estrellas, aurora (`aurora`), suelo de nieve y una estación; `sun` muestra un resplandor en el horizonte."""
+    WW, HH = _wv()
+    ctx.rectangle(-500, -500, WW + 1000, HH + 1000)
+    ctx.set_source(linear_grad(ctx, 0, 0, 0, HH, [(0, (0.02, 0.03, 0.12)), (0.6, (0.07, 0.10, 0.26)), (1, (0.12, 0.16, 0.36))]))
+    ctx.fill()
+    rng = np.random.default_rng(9)
+    for _ in range(150):
+        circle(ctx, rng.uniform(0, WW), rng.uniform(0, HH * 0.65), rng.uniform(1.2, 3.4))
+        ctx.set_source_rgba(1, 1, 0.95, rng.uniform(0.3, 1.0) * (0.8 + 0.2 * math.sin(t * 2 + rng.uniform(0, 6))))
+        ctx.fill()
+    hz = HH * 0.66
+    if p.get("sun"):
+        for r, a in ((520, 0.18), (330, 0.28), (170, 0.5)):
+            circle(ctx, WW * 0.5, hz, r)
+            ctx.set_source_rgba(1, 0.55, 0.2, a)
+            ctx.fill()
+    a_ = clamp(p.get("aurora", 0.0))
+    for k, (c, y0) in enumerate((((0.3, 1.0, 0.55), 420), ((0.55, 0.4, 1.0), 300), ((0.3, 1.0, 0.75), 560))):
+        if a_ <= 0:
+            break
+        pts = [(x, y0 + 80 * math.sin(x * 0.006 + t * 0.7 + k) + 40 * math.sin(x * 0.014 - t * 1.2)) for x in range(-100, WW + 200, 40)]
+        ctx.move_to(*pts[0])
+        for x, y in pts:
+            ctx.line_to(x, y)
+        for x, y in reversed(pts):
+            ctx.line_to(x, y + 360 + 70 * math.sin(x * 0.01 + k))
+        ctx.close_path()
+        g = cairo.LinearGradient(0, y0 - 80, 0, y0 + 450)
+        g.add_color_stop_rgba(0, *c, 0.0)
+        g.add_color_stop_rgba(0.4, *c, 0.5 * a_)
+        g.add_color_stop_rgba(1, *c, 0.0)
+        ctx.set_source(g)
+        ctx.fill()
+    ctx.rectangle(-300, hz, WW + 600, HH - hz + 300)
+    ctx.set_source(linear_grad(ctx, 0, hz, 0, HH, [(0, (0.80, 0.86, 0.98)), (1, (0.55, 0.62, 0.82))]))
+    ctx.fill_preserve()
+    ctx.set_source_rgb(*INK)
+    ctx.set_line_width(OUT)
+    ctx.stroke()
+    # estación
+    bx, by = WW * 0.62, hz + 60
+    rrect(ctx, bx - 190, by - 130, 380, 130, 14)
+    fill_stroke(ctx, "#C9494A", OUT)
+    for k in range(4):
+        rrect(ctx, bx - 160 + k * 85, by - 100, 55, 45, 6)
+        fill_stroke(ctx, (1, 0.85, 0.45) if p.get("lit", True) else (0.15, 0.15, 0.25), OUT * 0.6)
+    limb(ctx, [(bx + 120, by - 130), (bx + 120, by - 290)], 10, "#6A6F80", out=OUT * 0.5)
+    rrect(ctx, bx + 120, by - 290, 90, 52, 4)
+    fill_stroke(ctx, "#FFD23F", OUT * 0.5)
+    for i in range(6):  # patas
+        limb(ctx, [(bx - 150 + i * 60, by), (bx - 150 + i * 60, by + 40)], 12, "#6A6F80", out=OUT * 0.4)
+
+
+def bg_cave(ctx, t, p):
+    """Cueva oscura con estalactitas, suelo de roca, una tienda y un farolillo (`lantern`)."""
+    WW, HH = _wv()
+    ctx.rectangle(-500, -500, WW + 1000, HH + 1000)
+    ctx.set_source(linear_grad(ctx, 0, 0, 0, HH, [(0, (0.07, 0.06, 0.09)), (1, (0.20, 0.16, 0.18))]))
+    ctx.fill()
+    rng = np.random.default_rng(11)
+    for i in range(9):  # estalactitas
+        x = i * WW / 8 + rng.uniform(-40, 40)
+        h = rng.uniform(220, 520)
+        w = rng.uniform(70, 130)
+        ctx.move_to(x - w, -50)
+        ctx.line_to(x + w, -50)
+        ctx.line_to(x + rng.uniform(-20, 20), h)
+        ctx.close_path()
+        fill_stroke(ctx, (0.30, 0.27, 0.32), OUT)
+    gy = HH * 0.72
+    ctx.move_to(-100, gy)
+    for x in range(-100, WW + 200, 60):
+        ctx.line_to(x, gy + 25 * math.sin(x * 0.012) + 18 * math.sin(x * 0.03))
+    ctx.line_to(WW + 100, HH + 100)
+    ctx.line_to(-100, HH + 100)
+    ctx.close_path()
+    fill_stroke(ctx, (0.34, 0.30, 0.33), OUT)
+    for i in range(7):  # estalagmitas
+        x = (i * 211 + 90) % (WW + 100)
+        h = 90 + (i * 53) % 150
+        ctx.move_to(x - 50, gy + 80)
+        ctx.line_to(x + 50, gy + 80)
+        ctx.line_to(x, gy + 80 - h)
+        ctx.close_path()
+        fill_stroke(ctx, (0.40, 0.36, 0.40), OUT * 0.7)
+    if p.get("tent", True):
+        tx = WW * 0.72
+        ctx.move_to(tx - 200, gy + 120)
+        ctx.line_to(tx, gy - 130)
+        ctx.line_to(tx + 200, gy + 120)
+        ctx.close_path()
+        fill_stroke(ctx, "#E8A33A", OUT)
+        ctx.move_to(tx, gy - 130)
+        ctx.line_to(tx - 55, gy + 120)
+        ctx.line_to(tx + 55, gy + 120)
+        ctx.close_path()
+        fill_stroke(ctx, "#8A5A1A", OUT * 0.7)
+    if p.get("lantern", True):
+        lx, ly = WW * 0.30, gy + 20
+        fl = _flicker(t, 4)
+        _glow(ctx, lx, ly - 60, 520 * fl, (1, 0.8, 0.4), 0.45)
+        rrect(ctx, lx - 28, ly - 90, 56, 80, 10)
+        fill_stroke(ctx, (1, 0.85, 0.4), OUT * 0.8)
+
+
+def _plane_tail(ctx, p, t):
+    """Cola de un avión rota con un carrito de comida dentro (Vesna Vulović); `smoke` añade humo."""
+    ctx.move_to(-260, -40)
+    ctx.curve_to(-120, -90, 120, -80, 300, -20)
+    ctx.line_to(300, 140)
+    ctx.curve_to(120, 190, -120, 190, -260, 120)
+    ctx.close_path()
+    fill_stroke(ctx, "#E9EEF5", OUT)
+    ctx.move_to(190, -60)
+    ctx.line_to(330, -330)
+    ctx.line_to(410, -330)
+    ctx.line_to(330, 0)
+    ctx.close_path()
+    fill_stroke(ctx, "#C9494A", OUT)
+    ctx.move_to(-260, -40)
+    ctx.line_to(-300, -20)
+    ctx.line_to(-270, 20)
+    ctx.line_to(-310, 60)
+    ctx.line_to(-260, 120)
+    ctx.set_source_rgb(*INK)
+    ctx.set_line_width(OUT)
+    ctx.stroke()
+    rrect(ctx, -140, 10, 150, 90, 8)
+    fill_stroke(ctx, "#C8CCD6", OUT * 0.8)
+    for x in (-120, -20):
+        circle(ctx, x, 112, 14)
+        fill_stroke(ctx, INK, 0)
+    for k in range(3):
+        rrect(ctx, -125 + k * 45, 24, 38, 26, 4)
+        fill_stroke(ctx, "#FF8A3D", OUT * 0.4)
+    if p.get("smoke", True):
+        for k in range(4):
+            ph = (t * 0.7 + k / 4) % 1
+            circle(ctx, -290 - 60 * ph, -10 - 120 * ph, 30 + 60 * ph)
+            ctx.set_source_rgba(0.25, 0.25, 0.28, 0.55 * (1 - ph))
+            ctx.fill()
+
+
+def _probe(ctx, p, t):
+    """Sonda de entrada (cápsula cónica con escudo térmico); `fire` 0..1 añade la llama del frenazo."""
+    f = clamp(p.get("fire", 1.0))
+    if f > 0:
+        for k in range(7):
+            ph = (t * 2.2 + k / 7) % 1
+            ellipse(ctx, 18 * math.sin(k * 3 + t * 9), -170 - ph * 330, 120 * (1 - ph * 0.6) * f, 140 * f)
+            ctx.set_source_rgba(1, 0.55 + 0.35 * ph, 0.1, 0.65 * (1 - ph))
+            ctx.fill()
+    ctx.move_to(-140, -90)
+    ctx.line_to(140, -90)
+    ctx.line_to(0, 150)
+    ctx.close_path()
+    fill_stroke(ctx, "#B8BDC9", OUT)
+    ctx.move_to(-140, -90)
+    ctx.curve_to(-70, -150, 70, -150, 140, -90)
+    ctx.close_path()
+    fill_stroke(ctx, "#8A4A2A", OUT)
+    circle(ctx, 0, -20, 34)
+    fill_stroke(ctx, "#5CE1E6", OUT * 0.7)
+
+
+BACKGROUNDS.update({"sky_fall": bg_sky_fall, "jupiter": bg_jupiter, "polar": bg_polar, "cave": bg_cave})
+def _jupiter_ball(ctx, p, t):
+    """Júpiter con bandas y Gran Mancha Roja (radio `r`)."""
+    r = p.get("r", 360)
+    bands = ["#F2E3C6", "#D9A066", "#F6EBD6", "#C97B4A", "#EBD2A8", "#A8603A", "#F0DFC0"]
+    with saved(ctx):
+        circle(ctx, 0, 0, r)
+        ctx.clip()
+        h = 2 * r / len(bands)
+        for k, c in enumerate(bands):
+            y = -r + k * h
+            ctx.rectangle(-r, y, 2 * r, h + 1)
+            ctx.set_source_rgb(*col(c))
+            ctx.fill()
+            ctx.move_to(-r, y)
+            for x in range(-int(r), int(r) + 20, 20):
+                ctx.line_to(x, y + 5 * math.sin(x * 0.03 + t * 0.5 + k))
+            ctx.set_source_rgba(0.4, 0.2, 0.1, 0.3)
+            ctx.set_line_width(4)
+            ctx.stroke()
+        ellipse(ctx, r * 0.28, r * 0.30, r * 0.22, r * 0.12)
+        ctx.set_source_rgb(0.78, 0.3, 0.2)
+        ctx.fill()
+        circle(ctx, -r * 0.35, -r * 0.3, r * 1.15)
+        ctx.set_source_rgba(0, 0, 0.1, 0.35)
+        ctx.fill()
+    circle(ctx, 0, 0, r)
+    ctx.set_source_rgb(*INK)
+    ctx.set_line_width(OUT)
+    ctx.stroke()
+
+
+PROPS.update({"plane_tail": _plane_tail, "probe": _probe, "jupiter_ball": _jupiter_ball})

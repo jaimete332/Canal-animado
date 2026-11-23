@@ -1,0 +1,948 @@
+{
+  "title": "¿Qué pasaría si no vieras la luz del sol en 1 año?",
+  "idea": "¿Qué pasaría si no vieras la luz del sol en 1 año?",
+  "slug": "un-ano-sin-sol",
+  "category": "ciencia",
+  "question": "¿Aguantarías un año sin sol?",
+  "music_mood": "mystery",
+  "scenes": [
+    {
+      "id": "s01",
+      "beat": "hook",
+      "narration": "Imagina que pasas un año entero sin ver la luz del sol. Ni un rayo.",
+      "visual": {
+        "background": {
+          "type": "backyard"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.78,
+          "scale": 1.3,
+          "action": "shock",
+          "expression": "shock"
+        },
+        "props": [
+          {
+            "type": "sun",
+            "x": 0.72,
+            "y": 0.2,
+            "scale": 1.3,
+            "crossed": true,
+            "cross_at": 1.6,
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿1 AÑO SIN",
+              "LUZ DEL SOL?"
+            ],
+            "y": 250,
+            "size": 110
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            1.6
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.0,
+          "gain_db": -7
+        },
+        {
+          "name": "hit",
+          "at": 1.6,
+          "gain_db": -5
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "año",
+        "sol"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s02",
+      "beat": "setup",
+      "narration": "Día uno: no pasa nada. Pero tu cuerpo ya está contando.",
+      "visual": {
+        "background": {
+          "type": "bedroom",
+          "night": false
+        },
+        "character": {
+          "x": 0.4,
+          "y": 0.78,
+          "scale": 1.3,
+          "action": "idle",
+          "expression": "neutral"
+        },
+        "props": [
+          {
+            "type": "calendar",
+            "x": 0.76,
+            "y": 0.35,
+            "scale": 1.0,
+            "loop": "bob",
+            "from": 1,
+            "to": 365,
+            "over": 3.5
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "DÍA 1",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#2B6BE8",
+            "at_word": 0
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "contando"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s03",
+      "beat": "development",
+      "narration": "Tu cerebro tiene un reloj interno que se pone en hora con la luz.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#5CE1E6",
+          "c2": "#8FF0F5"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "brain",
+            "x": 0.5,
+            "y": 0.52,
+            "scale": 1.5,
+            "enter": "pop"
+          },
+          {
+            "type": "clock",
+            "x": 0.78,
+            "y": 0.3,
+            "scale": 0.8,
+            "speed": 8,
+            "at_word": 4
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Reloj circadiano: la luz de la mañana lo pone en hora cada día",
+            "at_word": 3,
+            "y": 620
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "El reloj circadiano humano se sincroniza cada día con el ciclo de luz y oscuridad",
+          "kind": "fact",
+          "source": "NIGMS (NIH), «Circadian Rhythms»"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 4
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "reloj",
+        "luz"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s04",
+      "beat": "development",
+      "narration": "Sin luz, ese reloj se descontrola y tu sueño se desplaza.",
+      "visual": {
+        "background": {
+          "type": "bedroom",
+          "night": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.78,
+          "scale": 1.3,
+          "action": "idle",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "clock",
+            "x": 0.7,
+            "y": 0.35,
+            "scale": 1.0,
+            "speed": 30
+          },
+          {
+            "type": "zzz",
+            "x": 0.45,
+            "y": 0.55,
+            "scale": 0.8
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "clock",
+          "at": 0.1,
+          "gain_db": -10
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "descontrola"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s05",
+      "beat": "development",
+      "narration": "En mil novecientos setenta y dos, Michel Siffre vivió seis meses bajo tierra.",
+      "visual": {
+        "background": {
+          "type": "cave"
+        },
+        "character": {
+          "x": 0.45,
+          "y": 0.8,
+          "scale": 1.3,
+          "action": "idle",
+          "expression": "tired"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "MICHEL SIFFRE · 1972",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#E8392F",
+            "at_word": 6
+          },
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 205,
+            "suffix": " DÍAS",
+            "at_word": 10,
+            "over": 0.8,
+            "y": 480,
+            "size": 130,
+            "sub": "EN UNA CUEVA DE TEXAS"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1972 el geólogo Michel Siffre pasó unos 205 días en la cueva Midnight Cave (Texas) sin luz natural ni relojes",
+          "kind": "fact",
+          "source": "Michel Siffre; Wikipedia/prensa científica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 10
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "Siffre"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s06",
+      "beat": "development",
+      "narration": "Sin sol ni relojes, su ciclo de sueño se alargó más de veinticuatro horas.",
+      "visual": {
+        "background": {
+          "type": "cave"
+        },
+        "character": {
+          "x": 0.45,
+          "y": 0.8,
+          "scale": 1.3,
+          "action": "idle",
+          "expression": "surprised"
+        },
+        "props": [
+          {
+            "type": "clock",
+            "x": 0.78,
+            "y": 0.3,
+            "scale": 0.9,
+            "speed": -4
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Su reloj interno se alargó hasta unas 24,5 horas. Hoy se estima que dura de media 24,2",
+            "at_word": 4,
+            "y": 620
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "zoom_to": 1.12
+        }
+      },
+      "claims": [
+        {
+          "text": "Sin pistas de tiempo, el ciclo de Siffre se alargó hasta unas 24,5 horas; estudios posteriores (Czeisler, 1999) sitúan el periodo medio en 24,18 h",
+          "kind": "fact",
+          "source": "Czeisler et al., Science (1999); Michel Siffre"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 10
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "veinticuatro"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s07",
+      "beat": "development",
+      "narration": "Semana tres: estás cansado y de mal humor, porque la luz regula el ánimo.",
+      "visual": {
+        "background": {
+          "type": "bedroom",
+          "night": true
+        },
+        "character": {
+          "x": 0.45,
+          "y": 0.78,
+          "scale": 1.3,
+          "action": "idle",
+          "expression": "tired",
+          "extras": {
+            "eyebags": 0.5
+          }
+        },
+        "props": [
+          {
+            "type": "heart",
+            "x": 0.78,
+            "y": 0.4,
+            "scale": 0.7,
+            "bpm": 55,
+            "at_word": 6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "SEMANA 3",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#2B6BE8",
+            "at_word": 0
+          },
+          {
+            "type": "fact",
+            "text": "La falta de luz se asocia con depresión estacional y mal sueño",
+            "at_word": 8,
+            "y": 620
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La reducción de la luz natural se asocia con el trastorno afectivo estacional y alteraciones del sueño",
+          "kind": "fact",
+          "source": "NIMH (EE. UU.); Mayo Clinic"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "fall",
+          "at_word": 8,
+          "gain_db": -10
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "ánimo"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s08",
+      "beat": "development",
+      "narration": "Mes dos: tu piel apenas fabrica vitamina D, la que fortalece tus huesos.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FFD23F",
+          "c2": "#FFB300"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "bone",
+            "x": 0.5,
+            "y": 0.52,
+            "scale": 1.6,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "MES 2",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#2B6BE8",
+            "at_word": 0
+          },
+          {
+            "type": "fact",
+            "text": "La piel fabrica la vitamina D con los rayos UVB del sol",
+            "at_word": 4,
+            "y": 620
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La piel produce vitamina D al recibir rayos UVB del sol, y esta vitamina es clave para absorber calcio y fortalecer los huesos",
+          "kind": "fact",
+          "source": "NIH, Office of Dietary Supplements"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 4
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "vitamina",
+        "huesos"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s09",
+      "beat": "development",
+      "narration": "Sin ella, a la larga los huesos se debilitan y duelen.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF6B5C"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "bone",
+            "x": 0.5,
+            "y": 0.52,
+            "scale": 1.6,
+            "enter": "none",
+            "rot": 0.3,
+            "loop": "shake"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "La carencia prolongada de vitamina D puede causar osteomalacia: huesos blandos y dolor",
+            "at_word": 4,
+            "y": 620
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w6"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "La carencia prolongada de vitamina D en adultos puede provocar osteomalacia (huesos blandos y dolorosos)",
+          "kind": "fact",
+          "source": "NIH, Office of Dietary Supplements"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "crack",
+          "at_word": 6,
+          "gain_db": -5
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "debilitan"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s10",
+      "beat": "climax",
+      "narration": "En el Polo Sur el sol se esconde en marzo y no vuelve hasta septiembre.",
+      "visual": {
+        "background": {
+          "type": "polar",
+          "aurora": 0.0,
+          "sun": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.86,
+          "scale": 1.3,
+          "action": "idle",
+          "expression": "surprised",
+          "extras": {
+            "frost": 0.4
+          }
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "POLO SUR",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#2B6BE8",
+            "at_word": 0
+          },
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 6,
+            "suffix": " MESES",
+            "at_word": 8,
+            "over": 0.8,
+            "y": 480,
+            "size": 150,
+            "sub": "SIN SOL"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "En la estación del Polo Sur el sol se pone en torno al equinoccio de marzo y no sale hasta el de septiembre: unos seis meses de noche",
+          "kind": "fact",
+          "source": "NOAA"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at_word": 3
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "marzo",
+        "septiembre"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s11",
+      "beat": "climax",
+      "narration": "Seis meses de noche: allí cuesta dormir y el ánimo se resiente.",
+      "visual": {
+        "background": {
+          "type": "polar",
+          "aurora": 1.0,
+          "lit": true
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.86,
+          "scale": 1.3,
+          "action": "idle",
+          "expression": "tired",
+          "extras": {
+            "frost": 0.6,
+            "eyebags": 0.5
+          }
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Quienes pasan el invierno en bases antárticas suelen notar peor sueño y ánimo más bajo",
+            "at_word": 4,
+            "y": 620
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Las personas que invernan en estaciones antárticas suelen sufrir alteraciones del sueño y del estado de ánimo",
+          "kind": "fact",
+          "source": "Palinkas, estudios sobre invernantes en la Antártida"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "float",
+          "at": 0.2,
+          "gain_db": -10
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "noche"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s12",
+      "beat": "climax",
+      "narration": "Una oficina da quinientos lux de luz. Un día de sol, cien mil.",
+      "visual": {
+        "background": {
+          "type": "office"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "lamp",
+            "x": 0.28,
+            "y": 0.62,
+            "scale": 1.0
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 500,
+            "suffix": " LUX",
+            "at_word": 3,
+            "over": 0.8,
+            "y": 300,
+            "size": 140,
+            "sub": "UNA OFICINA"
+          },
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 100000,
+            "suffix": " LUX",
+            "at_word": 9,
+            "over": 0.8,
+            "y": 720,
+            "size": 140,
+            "color": "#FFD23F",
+            "sub": "UN DÍA DE SOL"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "La luz recomendada en una oficina ronda los 500 lux; el sol directo puede alcanzar unos 100.000 lux",
+          "kind": "fact",
+          "source": "Norma EN 12464-1; Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 3
+        },
+        {
+          "name": "hit",
+          "at_word": 9,
+          "gain_db": -6
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "quinientos",
+        "cien"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s13",
+      "beat": "climax",
+      "narration": "Por eso las lámparas contra la depresión de invierno dan diez mil lux.",
+      "visual": {
+        "background": {
+          "type": "bedroom",
+          "night": false
+        },
+        "character": {
+          "x": 0.3,
+          "y": 0.78,
+          "scale": 1.3,
+          "action": "idle",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "lamp",
+            "x": 0.7,
+            "y": 0.6,
+            "scale": 1.3,
+            "at_word": 3
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 10000,
+            "suffix": " LUX",
+            "at_word": 8,
+            "over": 0.8,
+            "y": 300,
+            "size": 140,
+            "sub": "LÁMPARA DE LUZ BRILLANTE"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Las lámparas de fototerapia para la depresión estacional suelen emitir unos 10.000 lux",
+          "kind": "fact",
+          "source": "Mayo Clinic"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 3
+        },
+        {
+          "name": "ding",
+          "at_word": 8
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "diez"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s14",
+      "beat": "ending",
+      "narration": "Con lámparas y suplementos lo llevarías mejor, pero nada se parece al sol.",
+      "visual": {
+        "background": {
+          "type": "backyard"
+        },
+        "character": {
+          "x": 0.35,
+          "y": 0.78,
+          "scale": 1.3,
+          "action": "present",
+          "expression": "happy"
+        },
+        "props": [
+          {
+            "type": "sun",
+            "x": 0.75,
+            "y": 0.22,
+            "scale": 1.2,
+            "enter": "pop",
+            "at_word": 11
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 11
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "sol"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "s15",
+      "beat": "ending",
+      "narration": "¿Tú aguantarías un año sin sol? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "backyard"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.3,
+          "action": "talk",
+          "expression": "excited",
+          "actions": [
+            [
+              "w6",
+              "point_down"
+            ]
+          ]
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 6,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 6
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.35
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasaría si no vieras la luz del sol en 1 año? 🌑",
+    "hashtags": [
+      "#quepasariasi",
+      "#sol",
+      "#cuerpohumano",
+      "#curiosidades",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasaría si",
+      "sin luz del sol",
+      "vitamina d",
+      "ritmo circadiano",
+      "michel siffre",
+      "polo sur",
+      "depresión estacional",
+      "cuerpo humano",
+      "curiosidades",
+      "ciencia",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Cuánto aguantarías tú sin ver el sol? 🌑👇",
+    "description": "¿Qué le pasaría a tu cuerpo si pasaras un año entero sin ver la luz del sol? 🌑\n\nLeo lo cuenta del día 1 al año: tu reloj interno, el ánimo, la vitamina D… con el experimento real de Michel Siffre en una cueva y los seis meses de noche del Polo Sur.\n\n🧪 DATOS REALES DEL VÍDEO\n• El reloj circadiano se pone en hora cada día con la luz.\n• En 1972, el geólogo Michel Siffre pasó unos 205 días en una cueva de Texas sin luz natural ni relojes; su ciclo de sueño se alargó hasta unas 24,5 horas. Estudios posteriores sitúan el periodo medio humano en 24,2 horas.\n• La piel fabrica vitamina D con los rayos UVB del sol; la carencia prolongada puede causar osteomalacia.\n• En el Polo Sur el sol se pone en marzo y no vuelve hasta septiembre: unos seis meses de noche.\n• Una oficina tiene unos 500 lux; un día de sol, hasta unos 100.000. Las lámparas contra la depresión estacional dan unos 10.000 lux.\n\n⚠️ Si tienes poca exposición a la luz o dudas sobre tu salud, consulta con un profesional sanitario.\n\n📚 Fuentes: NIGMS (NIH); NIMH; NIH Office of Dietary Supplements; NOAA; Czeisler et al., Science (1999); Michel Siffre; Mayo Clinic; norma EN 12464-1; Palinkas.\n\n💬 ¿Aguantarías un año sin sol? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?».\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #sol #cuerpohumano #curiosidades #shorts",
+    "target_seconds": [
+      50,
+      75
+    ],
+    "thumbnail": {
+      "scene": "s01",
+      "t": 1.8,
+      "lines": [
+        "¿1 AÑO SIN",
+        "LUZ DEL SOL?"
+      ],
+      "badge": "TU CUERPO CAMBIA",
+      "badge_pos": [
+        540,
+        1640
+      ],
+      "y": 260,
+      "crop_y": 0.5,
+      "h_shift": 800,
+      "h_scale": 0.8
+    }
+  }
+}

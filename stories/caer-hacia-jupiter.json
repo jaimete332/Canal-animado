@@ -1,0 +1,1001 @@
+{
+  "title": "¿Qué pasaría si cayeras hacia Júpiter?",
+  "idea": "¿Qué pasaría si cayeras hacia Júpiter?",
+  "slug": "caer-hacia-jupiter",
+  "category": "espacio",
+  "question": "¿Te atreverías a caer hacia Júpiter?",
+  "music_mood": "epic",
+  "scenes": [
+    {
+      "id": "j01",
+      "beat": "hook",
+      "narration": "Una nave te suelta y caes hacia Júpiter, el gigante del sistema solar.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "approach"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.52,
+          "scale": 1.1,
+          "action": "float",
+          "expression": "shock",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿CAER HACIA",
+              "JÚPITER?"
+            ],
+            "y": 250,
+            "size": 112
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.2
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.0,
+          "gain_db": -7
+        },
+        {
+          "name": "boom",
+          "at": 0.3,
+          "gain_db": -8
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "Júpiter"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j02",
+      "beat": "setup",
+      "narration": "Es tan grande que dentro cabrían más de mil Tierras.",
+      "visual": {
+        "background": {
+          "type": "space"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "jupiter_ball",
+            "x": 0.5,
+            "y": 0.62,
+            "r": 360,
+            "enter": "pop"
+          },
+          {
+            "type": "earth",
+            "x": 0.82,
+            "y": 0.2,
+            "scale": 0.35,
+            "at_word": 6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 1300,
+            "suffix": " TIERRAS",
+            "at_word": 6,
+            "over": 0.8,
+            "y": 330,
+            "size": 140,
+            "sub": "CABRÍAN DENTRO DE JÚPITER"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "El volumen de Júpiter equivale a más de 1.300 Tierras",
+          "kind": "fact",
+          "source": "NASA, ficha de datos de Júpiter"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "mil"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j03",
+      "beat": "setup",
+      "narration": "Pero ojo: no tiene suelo. Es una bola enorme de gas.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "approach"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.4,
+          "scale": 1.0,
+          "action": "float",
+          "expression": "surprised",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Júpiter es un gigante gaseoso: no tiene una superficie sólida",
+            "at_word": 3,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Júpiter es un gigante gaseoso sin superficie sólida",
+          "kind": "fact",
+          "source": "NASA Science, Júpiter"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 3
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "suelo"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j04",
+      "beat": "development",
+      "narration": "Su radiación es tan fuerte que Juno protege su electrónica con titanio.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "approach",
+          "rise": 0.4
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "sparks",
+            "x": 0.5,
+            "y": 0.5,
+            "n": 40
+          },
+          {
+            "type": "gem",
+            "x": 0.5,
+            "y": 0.52,
+            "scale": 2.0,
+            "color": "#B8BDC9",
+            "at_word": 9
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "SONDA JUNO · NASA",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#1B1B3A",
+            "at_word": 3
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La sonda Juno de la NASA protege su electrónica de la radiación de Júpiter con una bóveda de titanio",
+          "kind": "fact",
+          "source": "NASA/JPL, misión Juno"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 9
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "radiación",
+        "titanio"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j05",
+      "beat": "development",
+      "narration": "La gravedad también aprieta: pesarías dos veces y media más que en la Tierra.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "approach"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.52,
+          "scale": 1.2,
+          "action": "idle",
+          "expression": "tired",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [
+          {
+            "type": "gravity_arrows",
+            "x": 0.5,
+            "y": 0.5,
+            "scale": 1.0,
+            "at_word": 3
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 2.5,
+            "suffix": "×",
+            "at_word": 8,
+            "over": 0.8,
+            "y": 330,
+            "size": 170,
+            "decimals": 1,
+            "sub": "TU PESO EN JÚPITER"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La gravedad en las nubes altas de Júpiter es unas 2,5 veces la de la Tierra (24,8 m/s²)",
+          "kind": "fact",
+          "source": "NASA, ficha de datos de Júpiter"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 8,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "dos"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j06",
+      "beat": "development",
+      "narration": "Llegas a las nubes a unos cuarenta y siete kilómetros por segundo.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "clouds",
+          "depth": 0.05,
+          "speed": 900
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.55,
+          "scale": 1.15,
+          "action": "fall",
+          "expression": "scared",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [
+          {
+            "type": "speedlines",
+            "x": 0.5,
+            "y": 0.5,
+            "scale": 1.0
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 47,
+            "suffix": " KM/S",
+            "at_word": 7,
+            "over": 0.8,
+            "y": 330,
+            "size": 170,
+            "sub": "COMO LA SONDA GALILEO"
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w7"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "La sonda Galileo entró en la atmósfera de Júpiter el 7 de diciembre de 1995 a unos 47 km/s",
+          "kind": "fact",
+          "source": "NASA/JPL, dossier de prensa de la misión Galileo"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0,
+          "gain_db": -6
+        },
+        {
+          "name": "hit",
+          "at_word": 7,
+          "gain_db": -5
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "cuarenta",
+        "siete"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j07",
+      "beat": "development",
+      "narration": "Eso son ciento setenta mil kilómetros por hora.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "clouds",
+          "depth": 0.1,
+          "speed": 1100
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.55,
+          "scale": 1.15,
+          "action": "fall",
+          "expression": "shock",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 170000,
+            "suffix": " KM/H",
+            "at_word": 3,
+            "over": 0.8,
+            "y": 330,
+            "size": 140
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 3
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "ciento",
+        "setenta"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j08",
+      "beat": "climax",
+      "narration": "El aire te frena de golpe, con hasta doscientas treinta veces la gravedad.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "clouds",
+          "depth": 0.2,
+          "speed": 700
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.55,
+          "scale": 1.1,
+          "action": "squished",
+          "expression": "shock",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [
+          {
+            "type": "probe",
+            "x": 0.5,
+            "y": 0.28,
+            "scale": 0.9,
+            "fire": 1.0,
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 230,
+            "suffix": " G",
+            "at_word": 10,
+            "over": 0.8,
+            "y": 480,
+            "size": 170,
+            "sub": "FRENAZO DE LA SONDA GALILEO"
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w6"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "La sonda Galileo soportó una deceleración de hasta unas 230 veces la gravedad terrestre en la entrada",
+          "kind": "fact",
+          "source": "NASA/JPL, dossier de prensa de la misión Galileo"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at_word": 6,
+          "gain_db": -5
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "doscientas",
+        "treinta"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j09",
+      "beat": "climax",
+      "narration": "Ningún cuerpo humano aguanta eso. Imagina que tu traje sí.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "clouds",
+          "depth": 0.25,
+          "speed": 500
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.58,
+          "scale": 1.2,
+          "action": "fall",
+          "expression": "determined",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fiction",
+            "text": "Imaginemos un traje capaz de resistirlo todo",
+            "at_word": 6,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "Imagina"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j10",
+      "beat": "climax",
+      "narration": "Caes entre nubes de amoníaco y vientos de cientos de kilómetros por hora.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "clouds",
+          "depth": 0.35,
+          "speed": 420,
+          "lightning": true
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.6,
+          "scale": 1.2,
+          "action": "fall",
+          "expression": "scared",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Las nubes altas de Júpiter son de amoníaco; sus vientos superan los cientos de km/h",
+            "at_word": 0,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "shake": 0.12
+        }
+      },
+      "claims": [
+        {
+          "text": "Las nubes superiores de Júpiter son de hielo de amoníaco y sus vientos alcanzan cientos de kilómetros por hora",
+          "kind": "fact",
+          "source": "NASA Science, Júpiter"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "rumble",
+          "at": 0.1,
+          "gain_db": -8
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "amoníaco"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j11",
+      "beat": "climax",
+      "narration": "Hay tormentas más grandes que la Tierra, como la Gran Mancha Roja.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "clouds",
+          "depth": 0.3,
+          "speed": 300,
+          "spot": true
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.75,
+          "scale": 1.05,
+          "action": "fall",
+          "expression": "wow",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [
+          {
+            "type": "earth",
+            "x": 0.2,
+            "y": 0.2,
+            "scale": 0.28
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "GRAN MANCHA ROJA",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#E8392F",
+            "at_word": 6
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La Gran Mancha Roja es una tormenta más ancha que la Tierra que lleva siglos activa",
+          "kind": "fact",
+          "source": "NASA Science, Gran Mancha Roja"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sparkle",
+          "at_word": 6
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "Roja"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j12",
+      "beat": "climax",
+      "narration": "Cuanto más bajas, más aprietan la presión y el calor.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "clouds",
+          "depth": 0.6,
+          "speed": 350
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.6,
+          "scale": 1.2,
+          "action": "fall",
+          "expression": "hot",
+          "outfit": "suit",
+          "helmet": "dome",
+          "sweat": 1.0
+        },
+        "props": [
+          {
+            "type": "thermometer",
+            "x": 0.82,
+            "y": 0.5,
+            "scale": 0.9,
+            "level": 0.7,
+            "at_word": 4
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.1,
+          "gain_db": -9
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "presión",
+        "calor"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j13",
+      "beat": "climax",
+      "narration": "A unos doscientos kilómetros, la sonda Galileo soportó veintitrés veces la presión terrestre.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "clouds",
+          "depth": 0.8,
+          "speed": 250
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "probe",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.1,
+            "fire": 0.3,
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "200 KM DE PROFUNDIDAD",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#1B1B3A",
+            "at_word": 3
+          },
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 23,
+            "suffix": "×",
+            "at_word": 9,
+            "over": 0.8,
+            "y": 480,
+            "size": 170,
+            "sub": "LA PRESIÓN DE LA TIERRA"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La sonda Galileo transmitió hasta unos 200 km de profundidad, donde la presión era de unos 23 bar",
+          "kind": "fact",
+          "source": "NASA/JPL, misión Galileo"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 9
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "veintitrés"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j14",
+      "beat": "climax",
+      "narration": "Allí hacía más de ciento cincuenta grados, y dejó de emitir tras cincuenta y ocho minutos.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "clouds",
+          "depth": 0.95,
+          "speed": 200
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "probe",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.0,
+            "fire": 0.0,
+            "enter": "none",
+            "loop": "shake"
+          },
+          {
+            "type": "thermometer",
+            "x": 0.82,
+            "y": 0.45,
+            "scale": 0.9,
+            "level": 0.95
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 58,
+            "suffix": " MIN",
+            "at_word": 12,
+            "over": 0.8,
+            "y": 330,
+            "size": 170,
+            "sub": "HASTA QUE SE SILENCIÓ"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La sonda Galileo dejó de transmitir a unos 152 °C tras 58 minutos en la atmósfera de Júpiter",
+          "kind": "fact",
+          "source": "NASA/JPL, misión Galileo"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at_word": 9,
+          "gain_db": -6
+        },
+        {
+          "name": "tick",
+          "at_word": 12
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "cincuenta",
+        "ocho"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j15",
+      "beat": "ending",
+      "narration": "Y no hay suelo donde parar: solo gas cada vez más denso y caliente.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "clouds",
+          "depth": 1.0,
+          "speed": 150
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fiction",
+            "label": "HIPÓTESIS",
+            "text": "Más abajo el hidrógeno se vuelve líquido y, quizá, metálico",
+            "at_word": 0,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "pull_out"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "float",
+          "at": 0.1,
+          "gain_db": -9
+        }
+      ],
+      "transition": "circle",
+      "emphasis": [
+        "suelo"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "j16",
+      "beat": "ending",
+      "narration": "¿Tú te atreverías a caer hacia Júpiter? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "jupiter",
+          "mode": "approach"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.45,
+          "scale": 1.2,
+          "action": "talk",
+          "expression": "excited",
+          "outfit": "suit",
+          "helmet": "dome",
+          "actions": [
+            [
+              "w8",
+              "point_down"
+            ]
+          ]
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 8,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 8
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.35
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasaría si cayeras hacia Júpiter? 🪐",
+    "hashtags": [
+      "#quepasariasi",
+      "#jupiter",
+      "#espacio",
+      "#curiosidades",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasaría si",
+      "caer hacia júpiter",
+      "júpiter",
+      "sonda galileo",
+      "gran mancha roja",
+      "gigante gaseoso",
+      "espacio",
+      "curiosidades",
+      "ciencia",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Te atreverías a caer hacia Júpiter? 🪐👇",
+    "description": "Una nave te suelta y caes hacia Júpiter, el planeta más grande del sistema solar. ¿Cuánto aguantarías? 🪐\n\nLeo cae hacia Júpiter con una sonda real como guía: la Galileo, que entró en 1995 a 47 km/s y siguió transmitiendo 58 minutos.\n\n🧪 DATOS REALES DEL VÍDEO\n• El volumen de Júpiter equivale a más de 1.300 Tierras.\n• Es un gigante gaseoso: no tiene superficie sólida.\n• La sonda Juno protege su electrónica de la radiación con una bóveda de titanio.\n• La gravedad en sus nubes altas es unas 2,5 veces la de la Tierra.\n• La sonda Galileo entró en su atmósfera el 7 de diciembre de 1995 a unos 47 km/s (unos 170.000 km/h) y frenó con hasta unas 230 g.\n• A unos 200 km de profundidad la presión era de unos 23 bar y la temperatura rondaba los 152 °C; la sonda dejó de transmitir tras 58 minutos.\n• La Gran Mancha Roja es una tormenta más ancha que la Tierra.\n\n⚠️ Los tramos con el traje «imposible» y el interior profundo de Júpiter son hipotéticos: ningún humano sobreviviría a la entrada.\n\n📚 Fuentes: NASA Science (Júpiter y Gran Mancha Roja); NASA/JPL, dossier de prensa de la misión Galileo; NASA/JPL, misión Juno.\n\n💬 ¿Te atreverías? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?».\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #jupiter #espacio #curiosidades #shorts",
+    "target_seconds": [
+      50,
+      75
+    ],
+    "thumbnail": {
+      "scene": "j01",
+      "t": 1.6,
+      "lines": [
+        "¿CAER HACIA",
+        "JÚPITER?"
+      ],
+      "badge": "SIN SUELO",
+      "badge_pos": [
+        540,
+        1640
+      ],
+      "y": 260,
+      "crop_y": 0.5,
+      "h_shift": 800,
+      "h_scale": 0.8
+    }
+  }
+}
