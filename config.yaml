@@ -39,6 +39,13 @@ script:
 tts:
   provider: edge            # kokoro | piper | edge | elevenlabs | openai | google
   fallback: [piper, kokoro] # si Edge no responde (sin red), se usa voz local
+  # VOZ OFICIAL DEL CANAL desde 2026-11-23 para todos los vídeos nuevos: «Mario» de ElevenLabs, generada con el
+  # conector de ElevenLabs de Claude (una toma por escena) y aplicada como `voice_clip`. Ver scripts/voz_elevenlabs.py
+  # y la skill crear-short. `provider: edge` queda solo como respaldo para vídeos ya hechos y para regenerar.
+  eleven_connector:
+    voice_id: tomkxGQGz4b1kE0EM722   # Mario - Perfect Voice for Social Media Content and Narration (castellano)
+    model_id: eleven_v4
+    speed: 1.12                       # atempo sin cambiar el tono: la voz natural es más pausada que la de Edge
   lexicon:                  # pronunciación: palabra del guion -> cómo debe leerla la voz
     Buscetta: Buchetta
     Tommaso: Tomaso
