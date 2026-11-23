@@ -100,6 +100,47 @@ def _distribute(words: list[str], start: float, end: float) -> list[WordTiming]:
     return [WordTiming(x, float(edges[i]), float(edges[i + 1])) for i, x in enumerate(words)]
 
 
+_STRENGTH = {".": 3, "?": 3, "!": 3, "…": 3, ":": 2, ";": 2, ",": 1}
+
+
+def _align_clip_words(words: list[str], a: np.ndarray, sr: int, start: float, end: float,
+                      min_gap: float = 0.09) -> list[WordTiming]:
+    """Tiempos por palabra para un clip de voz ya grabado: las pausas reales del audio marcan los signos de
+    puntuación (la de mayor peso se empareja con la pausa más larga) y dentro de cada frase las palabras se
+    reparten por sílabas. Sin pausas detectables equivale a _distribute."""
+    win = int(sr * 0.01)
+    i0, i1 = int(start * sr), int(end * sr)
+    seg = a[i0:i1]
+    n = len(seg) // win
+    if n < 10 or len(words) < 2:
+        return _distribute(words, start, end)
+    db = 20 * np.log10(np.sqrt((seg[: n * win].reshape(n, win) ** 2).mean(axis=1)) + 1e-9)
+    silent = db < db.max() - 32
+    gaps, j = [], 0
+    while j < n:
+        if silent[j]:
+            k = j
+            while k < n and silent[k]:
+                k += 1
+            if j > 0 and k < n and (k - j) * 0.01 >= min_gap:
+                gaps.append((start + j * 0.01, start + k * 0.01))
+            j = k
+        else:
+            j += 1
+    bounds = [i for i, w in enumerate(words[:-1]) if w and w[-1] in _STRENGTH]
+    k = min(len(bounds), len(gaps))
+    if k == 0:
+        return _distribute(words, start, end)
+    bounds = sorted(sorted(bounds, key=lambda i: (-_STRENGTH[words[i][-1]], i))[:k])
+    gaps = sorted(sorted(gaps, key=lambda g: -(g[1] - g[0]))[:k])
+    out: list[WordTiming] = []
+    first, t_from = 0, start
+    for b, (g0, g1) in zip(bounds + [len(words) - 1], gaps + [(end, end)]):
+        out += _distribute(words[first: b + 1], t_from, g0)
+        first, t_from = b + 1, g1
+    return out
+
+
 class Narrator:
     def __init__(self, cache_dir: Path, provider: str | None = None):
         cfg = load_config()
@@ -160,7 +201,7 @@ class Narrator:
         _, off = trim_silence(a, SR)
         voiced, _ = trim_silence(a[int(off * SR):], SR)
         start, end = off, off + len(voiced) / SR
-        words = _distribute(text.split(), start + 0.03, end - 0.03)
+        words = _align_clip_words(text.split(), a, SR, start + 0.03, end - 0.03)
         a = np.concatenate([a, np.zeros(int(pause_after * SR), np.float32)])
         return (a / (np.abs(a).max() + 1e-9) * 0.89).astype(np.float32), words
 
