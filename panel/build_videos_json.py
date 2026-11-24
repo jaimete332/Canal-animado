@@ -16,6 +16,9 @@ CALENDARIO = {  # slug -> fecha y hora de publicación (hora de España)
     "caer-de-un-avion": "2026-11-26T18:30",
     "un-ano-sin-sol": "2026-11-27T18:30",
     "caer-hacia-jupiter": "2026-11-28T18:30",
+    "naufrago-sin-agua": "2026-11-29T18:30",
+    "ascensor-sin-comida-3-semanas": "2026-11-30T18:30",
+    "caer-desde-la-iss": "2026-12-01T18:30",
 }
 REPO_RAW = "https://github.com/jaimete332/Canal-animado/raw/claude/youtube-shorts-automation-qkjrhy/"
 
@@ -33,6 +36,8 @@ if out_f.exists():
     old = {v["slug"]: v for v in json.loads(out_f.read_text())}
 videos = []
 for d in sorted((ROOT / "PARA_SUBIR").glob("*_*/")):
+    if not d.name.split("_", 1)[0].isdigit() or not (d / "extra" / "metadata.json").exists():
+        continue  # carpetas sueltas (p. ej. la versión con otra voz de un Short ya entregado)
     slug = d.name.split("_", 1)[1]
     m = json.loads((d / "extra" / "metadata.json").read_text(encoding="utf-8"))
     a = {**{k: old.get(slug, {}).get(k) for k in ("video", "miniatura", "video_mb", "enlace")}, **assets.get(slug, {})}

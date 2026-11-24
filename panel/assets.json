@@ -31,5 +31,20 @@
   "video": "/_blob/f1159e44511c48a19a9f0a28d99ab9bc",
   "miniatura": "/_blob/2a3c14781f8203091fa30a67be195f7c",
   "video_mb": 16.3
+ },
+ "naufrago-sin-agua": {
+  "video": "/_blob/8394e88a19c9366d1b3dcf3f931db439",
+  "miniatura": "/_blob/bd004666c1611d72856c7a845a6cf6fb",
+  "video_mb": 12.6
+ },
+ "ascensor-sin-comida-3-semanas": {
+  "video": "/_blob/8ced4c2cba31337dc7d0bed9eb78a53c",
+  "miniatura": "/_blob/e919b23a722db60e284f4c39852492c8",
+  "video_mb": 14.8
+ },
+ "caer-desde-la-iss": {
+  "video": "/_blob/2f4363974bfb6419557e2b1dc3c2bd30",
+  "miniatura": "/_blob/e1bd067b5a083dd2b0ccb7b8ef2c0345",
+  "video_mb": 18.2
  }
 }

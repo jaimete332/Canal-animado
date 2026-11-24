@@ -81,7 +81,8 @@
         "mar",
         "agua"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n01.wav"
     },
     {
       "id": "n02",
@@ -132,7 +133,8 @@
       "emphasis": [
         "beberla"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n02.wav"
     },
     {
       "id": "n03",
@@ -192,7 +194,8 @@
         "treinta",
         "sal"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n03.wav"
     },
     {
       "id": "n04",
@@ -245,7 +248,8 @@
         "riñones",
         "menos"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n04.wav"
     },
     {
       "id": "n05",
@@ -317,7 +321,8 @@
       "emphasis": [
         "más"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n05.wav"
     },
     {
       "id": "n06",
@@ -386,7 +391,8 @@
         "peor",
         "nada"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n06.wav"
     },
     {
       "id": "n07",
@@ -453,7 +459,8 @@
       "emphasis": [
         "sed"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n07.wav"
     },
     {
       "id": "n08",
@@ -515,7 +522,8 @@
       "emphasis": [
         "tres"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n08.wav"
     },
     {
       "id": "n09",
@@ -585,7 +593,8 @@
         "Poon",
         "Lim"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n09.wav"
     },
     {
       "id": "n10",
@@ -638,7 +647,8 @@
       "emphasis": [
         "solo"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n10.wav"
     },
     {
       "id": "n11",
@@ -712,7 +722,8 @@
         "lluvia",
         "pescado"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n11.wav"
     },
     {
       "id": "n12",
@@ -798,7 +809,8 @@
         "ciento",
         "treinta"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n12.wav"
     },
     {
       "id": "n13",
@@ -852,7 +864,8 @@
       "emphasis": [
         "lluvia"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n13.wav"
     },
     {
       "id": "n14",
@@ -910,7 +923,8 @@
       ],
       "transition": "zoom",
       "emphasis": [],
-      "pause_after": 0.35
+      "pause_after": 0.35,
+      "voice_clip": "assets/voice_eleven/naufrago-sin-agua/n14.wav"
     }
   ],
   "metadata": {

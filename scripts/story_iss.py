@@ -138,16 +138,23 @@ sc("i12", "climax", "No sería rozamiento: sería la compresión del aire. Y tú
     "camera": {"move": "punch", "impacts": ["w10"]}},
    sfx=[{"name": "boom", "at_word": 10, "gain_db": -5}], transition="flash", emphasis=["compresión"])
 
-sc("i13", "ending", "Real: en dos mil veinticuatro, una pieza de una paleta de baterías de la ISS atravesó una casa en Florida.", {
+sc("i13", "ending", "Real: en dos mil veinticuatro,", {
+    "background": {"type": "backyard"},
+    "character": {"visible": False},
+    "props": [{"type": "debris", "x": 0.5, "y": 0.6}],
+    "overlays": [lbl("FLORIDA · MARZO 2024", "#1B1B3A", 2, y=300)],
+    "camera": {"move": "push_in"}},
+   sfx=[{"name": "ding", "at_word": 0}], transition="slide", emphasis=["Real", "veinticuatro"])
+
+sc("i13b", "ending", "una pieza de una paleta de baterías de la ISS atravesó una casa en Florida.", {
     "background": {"type": "backyard"},
     "character": {"visible": False},
     "props": [{"type": "debris", "x": 0.5, "y": 0.6}, {"type": "pow", "x": 0.5, "y": 0.35, "scale": 1.1, "at_word": 10}],
-    "overlays": [lbl("FLORIDA · MARZO 2024", "#1B1B3A", 2, y=300),
-                 {"type": "fact", "text": "Un trozo de metal de basura espacial de la ISS atravesó una vivienda de Naples, Florida", "at_word": 10, "y": 560}],
+    "overlays": [{"type": "fact", "text": "Un trozo de metal de basura espacial de la ISS atravesó una vivienda de Naples, Florida", "at_word": 10, "y": 560}],
     "camera": {"move": "punch", "impacts": ["w10"]}},
    claims=[F("Una paleta de baterías soltada por la ISS reentró el 8 de marzo de 2024 y un fragmento atravesó una casa en Naples, Florida",
              "NASA; Astronomy.com")],
-   sfx=[{"name": "boom", "at_word": 10, "gain_db": -6}], transition="slide", emphasis=["Florida"])
+   sfx=[{"name": "boom", "at_word": 10, "gain_db": -6}], transition="slide", emphasis=["paleta", "Florida"])
 
 sc("i14", "ending", "Así que no caerías en picado: arderías despacio. ¿Qué harías tú? Te leo en comentarios.", {
     "background": ORBIT,

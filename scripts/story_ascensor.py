@@ -109,16 +109,24 @@ sc("a08", "climax", "Estuvo cuarenta y una horas sin comida ni agua y salió cas
              "ABC News; CBS News")],
    sfx=[{"name": "hit", "at_word": 2, "gain_db": -5}], transition="whip", emphasis=["cuarenta", "una"])
 
-sc("a09", "climax", "Y el récord es de Andreas Mihavecz: dieciocho días olvidado en un calabozo austriaco, en mil novecientos setenta y nueve.", {
+sc("a09", "climax", "Y el récord es de Andreas Mihavecz:", {
     "background": {"type": "prison"},
     "character": leo(expression="tired", y=0.82, scale=1.1, action="idle"),
     "props": [],
-    "overlays": [lbl("ANDREAS MIHAVECZ · 1979", "#1B1B3A", 4, y=300),
-                 counter(18, " DÍAS", 12, sub="SIN COMIDA NI AGUA (SEGÚN GUINNESS)", y=480, size=150)],
+    "overlays": [lbl("ANDREAS MIHAVECZ", "#1B1B3A", 5, y=300)],
+    "camera": {"move": "push_in"}},
+   sfx=[{"name": "ding", "at_word": 5}], transition="slide", emphasis=["récord", "Mihavecz"])
+
+sc("a09b", "climax", "dieciocho días olvidado en un calabozo austriaco, en mil novecientos setenta y nueve.", {
+    "background": {"type": "prison"},
+    "character": leo(expression="sick", y=0.82, scale=1.1, action="idle"),
+    "props": [],
+    "overlays": [lbl("AUSTRIA · 1979", "#1B1B3A", 7, y=300),
+                 counter(18, " DÍAS", 0, sub="SIN COMIDA NI AGUA (SEGÚN GUINNESS)", y=480, size=150)],
     "camera": {"move": "push_in"}},
    claims=[F("En 1979 Andreas Mihavecz, de 18 años, pasó 18 días olvidado en un calabozo policial austriaco; Guinness lo recoge como récord de supervivencia sin comida ni agua",
              "Wikipedia; Guinness World Records; Reuters (1979)")],
-   sfx=[{"name": "ding", "at_word": 12}], transition="slide", emphasis=["dieciocho", "récord"])
+   sfx=[{"name": "ding", "at_word": 0}], transition="slide", emphasis=["dieciocho", "calabozo"])
 
 sc("a10", "climax", "Según cuentan, sobrevivió lamiendo la condensación de las paredes, y perdió veinticuatro kilos.", {
     "background": {"type": "prison"},

@@ -65,7 +65,8 @@
         "estación",
         "caes"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i01.wav"
     },
     {
       "id": "i02",
@@ -126,7 +127,8 @@
       "emphasis": [
         "cuatrocientos"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i02.wav"
     },
     {
       "id": "i03",
@@ -193,7 +195,8 @@
       "emphasis": [
         "noventa"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i03.wav"
     },
     {
       "id": "i04",
@@ -249,7 +252,8 @@
         "flotan",
         "libre"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i04.wav"
     },
     {
       "id": "i05",
@@ -325,7 +329,8 @@
         "veintiocho",
         "mil"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i05.wav"
     },
     {
       "id": "i06",
@@ -375,7 +380,8 @@
         "No",
         "caes"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i06.wav"
     },
     {
       "id": "i07",
@@ -424,7 +430,8 @@
       "emphasis": [
         "frenar"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i07.wav"
     },
     {
       "id": "i08",
@@ -486,7 +493,8 @@
       "emphasis": [
         "Meses"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i08.wav"
     },
     {
       "id": "i09",
@@ -534,7 +542,8 @@
       "emphasis": [
         "oxígeno"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i09.wav"
     },
     {
       "id": "i10",
@@ -607,7 +616,8 @@
       "emphasis": [
         "ocho"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i10.wav"
     },
     {
       "id": "i11",
@@ -685,7 +695,8 @@
         "comprime",
         "rojo"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i11.wav"
     },
     {
       "id": "i12",
@@ -734,12 +745,61 @@
       "emphasis": [
         "compresión"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i12.wav"
     },
     {
       "id": "i13",
       "beat": "ending",
-      "narration": "Real: en dos mil veinticuatro, una pieza de una paleta de baterías de la ISS atravesó una casa en Florida.",
+      "narration": "Real: en dos mil veinticuatro,",
+      "visual": {
+        "background": {
+          "type": "backyard"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "debris",
+            "x": 0.5,
+            "y": 0.6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "FLORIDA · MARZO 2024",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#1B1B3A",
+            "at_word": 2
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 0
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "Real",
+        "veinticuatro"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i13.wav"
+    },
+    {
+      "id": "i13b",
+      "beat": "ending",
+      "narration": "una pieza de una paleta de baterías de la ISS atravesó una casa en Florida.",
       "visual": {
         "background": {
           "type": "backyard"
@@ -762,15 +822,6 @@
           }
         ],
         "overlays": [
-          {
-            "type": "label",
-            "text": "FLORIDA · MARZO 2024",
-            "x": 540,
-            "y": 300,
-            "size": 66,
-            "bg": "#1B1B3A",
-            "at_word": 2
-          },
           {
             "type": "fact",
             "text": "Un trozo de metal de basura espacial de la ISS atravesó una vivienda de Naples, Florida",
@@ -801,9 +852,11 @@
       ],
       "transition": "slide",
       "emphasis": [
+        "paleta",
         "Florida"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i13b.wav"
     },
     {
       "id": "i14",
@@ -858,7 +911,8 @@
       ],
       "transition": "zoom",
       "emphasis": [],
-      "pause_after": 0.35
+      "pause_after": 0.35,
+      "voice_clip": "assets/voice_eleven/caer-desde-la-iss/i14.wav"
     }
   ],
   "metadata": {

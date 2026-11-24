@@ -69,7 +69,8 @@
         "ascensor",
         "Nadie"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a01.wav"
     },
     {
       "id": "a02",
@@ -114,7 +115,8 @@
       "emphasis": [
         "caer"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a02.wav"
     },
     {
       "id": "a03",
@@ -178,7 +180,8 @@
       "emphasis": [
         "Otis"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a03.wav"
     },
     {
       "id": "a04",
@@ -237,7 +240,8 @@
       "emphasis": [
         "aire"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a04.wav"
     },
     {
       "id": "a05",
@@ -299,7 +303,8 @@
         "agua",
         "semanas"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a05.wav"
     },
     {
       "id": "a06",
@@ -365,7 +370,8 @@
         "sin",
         "tres"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a06.wav"
     },
     {
       "id": "a07",
@@ -423,7 +429,8 @@
         "Nicholas",
         "White"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a07.wav"
     },
     {
       "id": "a08",
@@ -491,12 +498,13 @@
         "cuarenta",
         "una"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a08.wav"
     },
     {
       "id": "a09",
       "beat": "climax",
-      "narration": "Y el récord es de Andreas Mihavecz: dieciocho días olvidado en un calabozo austriaco, en mil novecientos setenta y nueve.",
+      "narration": "Y el récord es de Andreas Mihavecz:",
       "visual": {
         "background": {
           "type": "prison"
@@ -512,19 +520,65 @@
         "overlays": [
           {
             "type": "label",
-            "text": "ANDREAS MIHAVECZ · 1979",
+            "text": "ANDREAS MIHAVECZ",
             "x": 540,
             "y": 300,
             "size": 66,
             "bg": "#1B1B3A",
-            "at_word": 4
+            "at_word": 5
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 5
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "récord",
+        "Mihavecz"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a09.wav"
+    },
+    {
+      "id": "a09b",
+      "beat": "climax",
+      "narration": "dieciocho días olvidado en un calabozo austriaco, en mil novecientos setenta y nueve.",
+      "visual": {
+        "background": {
+          "type": "prison"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.1,
+          "action": "idle",
+          "expression": "sick"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "AUSTRIA · 1979",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#1B1B3A",
+            "at_word": 7
           },
           {
             "type": "counter",
             "from": 0,
             "to": 18,
             "suffix": " DÍAS",
-            "at_word": 12,
+            "at_word": 0,
             "over": 0.8,
             "y": 480,
             "size": 150,
@@ -545,15 +599,16 @@
       "sfx": [
         {
           "name": "ding",
-          "at_word": 12
+          "at_word": 0
         }
       ],
       "transition": "slide",
       "emphasis": [
         "dieciocho",
-        "récord"
+        "calabozo"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a09b.wav"
     },
     {
       "id": "a10",
@@ -614,7 +669,8 @@
         "condensación",
         "veinticuatro"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a10.wav"
     },
     {
       "id": "a11",
@@ -668,7 +724,8 @@
       "emphasis": [
         "sed"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a11.wav"
     },
     {
       "id": "a12",
@@ -713,7 +770,8 @@
       "emphasis": [
         "alarma"
       ],
-      "pause_after": 0.06
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a12.wav"
     },
     {
       "id": "a13",
@@ -762,7 +820,8 @@
       ],
       "transition": "zoom",
       "emphasis": [],
-      "pause_after": 0.35
+      "pause_after": 0.35,
+      "voice_clip": "assets/voice_eleven/ascensor-sin-comida-3-semanas/a13.wav"
     }
   ],
   "metadata": {
