@@ -1,0 +1,961 @@
+{
+  "title": "¿Qué pasaría si te quedaras atrapado en el mar sin agua 3 días?",
+  "idea": "¿Qué pasaría si te quedaras atrapado en el mar sin agua 3 días?",
+  "slug": "naufrago-sin-agua",
+  "category": "supervivencia",
+  "question": "¿Habrías sobrevivido en el mar sin agua?",
+  "music_mood": "tense",
+  "scenes": [
+    {
+      "id": "n01",
+      "beat": "hook",
+      "narration": "Flotas en mitad del mar, sin una gota de agua.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1000
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.97,
+          "scale": 1.25,
+          "action": "swim",
+          "expression": "shock",
+          "actions": [
+            [
+              "w5",
+              "shock"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "sea_front",
+            "abs": true,
+            "x": 0,
+            "y": 1500,
+            "layer": "front",
+            "enter": "none"
+          },
+          {
+            "type": "sun",
+            "x": 0.8,
+            "y": 0.18,
+            "scale": 1.2,
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿3 DÍAS SIN",
+              "AGUA EN EL MAR?"
+            ],
+            "y": 250,
+            "size": 104
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.3
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.0,
+          "gain_db": -7
+        },
+        {
+          "name": "splash",
+          "at": 0.3,
+          "gain_db": -8
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "mar",
+        "agua"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n02",
+      "beat": "setup",
+      "narration": "Estás rodeado de agua, pero no puedes beberla.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1000
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.97,
+          "scale": 1.25,
+          "action": "swim",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "sea_front",
+            "abs": true,
+            "x": 0,
+            "y": 1500,
+            "layer": "front",
+            "enter": "none"
+          },
+          {
+            "type": "water_bottle",
+            "x": 0.78,
+            "y": 0.5,
+            "scale": 0.8,
+            "at_word": 4
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 4
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "beberla"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n03",
+      "beat": "setup",
+      "narration": "El mar lleva unos treinta y cinco gramos de sal por litro.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#2B6BE8",
+          "c2": "#5C8FE6"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "water_bottle",
+            "x": 0.5,
+            "y": 0.78,
+            "scale": 1.5,
+            "label": "MAR",
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 35,
+            "suffix": " g DE SAL",
+            "at_word": 6,
+            "over": 0.8,
+            "y": 330,
+            "size": 130,
+            "sub": "POR CADA LITRO DE AGUA DE MAR"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "El agua de mar tiene una salinidad media de unos 35 g de sal por litro (≈3,5 %)",
+          "kind": "fact",
+          "source": "NOAA, National Ocean Service"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "treinta",
+        "sal"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n04",
+      "beat": "development",
+      "narration": "Y tus riñones solo pueden fabricar orina menos salada que el mar.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#3A1B2B"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "brain",
+            "x": 0.5,
+            "y": 0.55,
+            "scale": 1.0,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Los riñones humanos no pueden producir orina más salada que el agua de mar",
+            "at_word": 3,
+            "y": 300
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Los riñones humanos solo producen orina menos salada que el agua de mar",
+          "kind": "fact",
+          "source": "NOAA, National Ocean Service"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 3
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "riñones",
+        "menos"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n05",
+      "beat": "development",
+      "narration": "Así que, por cada trago de mar, perderías más agua de la que bebes.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1000
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.97,
+          "scale": 1.25,
+          "action": "swim",
+          "expression": "sick"
+        },
+        "props": [
+          {
+            "type": "sea_front",
+            "abs": true,
+            "x": 0,
+            "y": 1500,
+            "layer": "front",
+            "enter": "none"
+          },
+          {
+            "type": "water_bottle",
+            "x": 0.2,
+            "y": 0.62,
+            "scale": 0.7,
+            "label": "MAR",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "BEBES 1 L",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#2B6BE8",
+            "at_word": 4
+          },
+          {
+            "type": "label",
+            "text": "PIERDES MÁS",
+            "x": 540,
+            "y": 430,
+            "size": 66,
+            "bg": "#E8392F",
+            "at_word": 10
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 10,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "más"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n06",
+      "beat": "development",
+      "narration": "Beber del mar es peor que no beber nada. Te seca por dentro.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1000
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.97,
+          "scale": 1.25,
+          "action": "swim",
+          "expression": "scared"
+        },
+        "props": [
+          {
+            "type": "sea_front",
+            "abs": true,
+            "x": 0,
+            "y": 1500,
+            "layer": "front",
+            "enter": "none"
+          },
+          {
+            "type": "skull",
+            "x": 0.78,
+            "y": 0.45,
+            "scale": 0.8,
+            "at_word": 8
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Un náufrago sin agua dulce empeora si bebe agua de mar",
+            "at_word": 0,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w8"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Para un náufrago sin agua dulce, beber agua de mar es peor que no beber nada",
+          "kind": "fact",
+          "source": "Mental Floss, médico de medicina de montaña/salvamento; NOAA"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at_word": 8,
+          "gain_db": -7
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "peor",
+        "nada"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n07",
+      "beat": "development",
+      "narration": "Día uno: sed, dolor de cabeza y la boca pastosa bajo el sol.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1000
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.97,
+          "scale": 1.25,
+          "action": "swim",
+          "expression": "hot",
+          "sweat": 1.0
+        },
+        "props": [
+          {
+            "type": "sea_front",
+            "abs": true,
+            "x": 0,
+            "y": 1500,
+            "layer": "front",
+            "enter": "none"
+          },
+          {
+            "type": "sun",
+            "x": 0.8,
+            "y": 0.18,
+            "scale": 1.3,
+            "enter": "none"
+          },
+          {
+            "type": "heatwaves",
+            "x": 0.5,
+            "y": 0.5
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "DÍA 1",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#E8392F",
+            "at_word": 0
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 0
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "sed"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n08",
+      "beat": "climax",
+      "narration": "Sin agua, la mayoría aguanta unos tres días. Con calor, menos.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1000
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.95,
+          "scale": 1.25,
+          "action": "idle",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "sea_front",
+            "abs": true,
+            "x": 0,
+            "y": 1500,
+            "layer": "front",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 3,
+            "suffix": " DÍAS",
+            "at_word": 7,
+            "over": 0.8,
+            "y": 330,
+            "size": 170,
+            "sub": "SIN AGUA (ENTRE 3 Y 7 SEGÚN EL CALOR)"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Una persona suele sobrevivir unos 3 días sin agua (entre 3 y 7 según calor y esfuerzo)",
+          "kind": "fact",
+          "source": "Live Science; regla de supervivencia de los tres"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 7
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "tres"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n09",
+      "beat": "climax",
+      "narration": "Pero hay un caso real: Poon Lim, un marinero, en mil novecientos cuarenta y dos.",
+      "visual": {
+        "background": {
+          "type": "night_sky"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "lifeboat",
+            "x": 0.5,
+            "y": 0.72,
+            "scale": 0.8,
+            "people": 0,
+            "enter": "none"
+          },
+          {
+            "type": "sea_front",
+            "abs": true,
+            "x": 0,
+            "y": 1500,
+            "layer": "front",
+            "enter": "none",
+            "color": [
+              0.02,
+              0.05,
+              0.14
+            ]
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "POON LIM · 1942",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#1B1B3A",
+            "at_word": 5
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Poon Lim, mayordomo del SS Benlomond, sobrevivió solo en una balsa tras el hundimiento de su barco en noviembre de 1942",
+          "kind": "fact",
+          "source": "Wikipedia; Guinness World Records"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at": 0.1,
+          "gain_db": -9
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "Poon",
+        "Lim"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n10",
+      "beat": "climax",
+      "narration": "Torpedearon su barco y se quedó solo en una balsa diminuta.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1000
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.9,
+          "scale": 1.0,
+          "action": "idle",
+          "expression": "scared"
+        },
+        "props": [
+          {
+            "type": "lifeboat",
+            "x": 0.5,
+            "y": 0.68,
+            "scale": 0.8,
+            "people": 0,
+            "enter": "none"
+          },
+          {
+            "type": "sea_front",
+            "abs": true,
+            "x": 0,
+            "y": 1500,
+            "layer": "front",
+            "enter": "none"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "float",
+          "at": 0.1,
+          "gain_db": -9
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "solo"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n11",
+      "beat": "climax",
+      "narration": "Bebió agua de lluvia que recogía con una lona, y comía pescado y aves.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1000
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.9,
+          "scale": 1.0,
+          "action": "present",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "lifeboat",
+            "x": 0.5,
+            "y": 0.68,
+            "scale": 0.8,
+            "people": 0,
+            "enter": "none"
+          },
+          {
+            "type": "water_bottle",
+            "x": 0.2,
+            "y": 0.45,
+            "scale": 0.6,
+            "label": "LLUVIA",
+            "at_word": 3
+          },
+          {
+            "type": "sea_front",
+            "abs": true,
+            "x": 0,
+            "y": 1500,
+            "layer": "front",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Recogía lluvia con una cubierta de la balsa y pescaba con un anzuelo improvisado",
+            "at_word": 0,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Poon Lim recogió agua de lluvia en una lona y se alimentó de pescado y aves",
+          "kind": "fact",
+          "source": "Wikipedia; Guinness World Records"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 3
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "lluvia",
+        "pescado"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n12",
+      "beat": "climax",
+      "narration": "Aguantó ciento treinta y tres días. Es el récord de un náufrago solo en una balsa.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1000
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.9,
+          "scale": 1.0,
+          "action": "celebrate",
+          "expression": "proud"
+        },
+        "props": [
+          {
+            "type": "lifeboat",
+            "x": 0.5,
+            "y": 0.68,
+            "scale": 0.8,
+            "people": 0,
+            "enter": "none"
+          },
+          {
+            "type": "sea_front",
+            "abs": true,
+            "x": 0,
+            "y": 1500,
+            "layer": "front",
+            "enter": "none"
+          },
+          {
+            "type": "trophy",
+            "x": 0.8,
+            "y": 0.35,
+            "scale": 0.8,
+            "at_word": 8
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 133,
+            "suffix": " DÍAS",
+            "at_word": 2,
+            "over": 0.8,
+            "y": 330,
+            "size": 150,
+            "sub": "LA BALSA DE POON LIM"
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w2"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Poon Lim pasó 133 días a la deriva en el Atlántico Sur y fue rescatado por pescadores brasileños en 1943",
+          "kind": "fact",
+          "source": "Wikipedia; Guinness World Records"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 2,
+          "gain_db": -5
+        },
+        {
+          "name": "sparkle",
+          "at_word": 8
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "ciento",
+        "treinta"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n13",
+      "beat": "ending",
+      "narration": "La clave no era el mar. Era la lluvia.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1000
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.92,
+          "scale": 1.25,
+          "action": "point_up",
+          "expression": "excited"
+        },
+        "props": [
+          {
+            "type": "sea_front",
+            "abs": true,
+            "x": 0,
+            "y": 1500,
+            "layer": "front",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "NO BEBAS AGUA DE MAR",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "bg": "#E8392F",
+            "at_word": 0
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 0
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "lluvia"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "n14",
+      "beat": "ending",
+      "narration": "¿Tú habrías sobrevivido? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "ocean",
+          "level": 1000
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.92,
+          "scale": 1.25,
+          "action": "talk",
+          "expression": "excited",
+          "actions": [
+            [
+              "w4",
+              "point_down"
+            ]
+          ]
+        },
+        "props": [
+          {
+            "type": "sea_front",
+            "abs": true,
+            "x": 0,
+            "y": 1500,
+            "layer": "front",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 4,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 4
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.35
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasaría si te quedaras atrapado en el mar sin agua 3 días? 🌊",
+    "hashtags": [
+      "#quepasariasi",
+      "#supervivencia",
+      "#mar",
+      "#curiosidades",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasaría si",
+      "náufrago",
+      "beber agua de mar",
+      "sin agua 3 días",
+      "poon lim",
+      "supervivencia en el mar",
+      "curiosidades",
+      "ciencia",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Habrías sobrevivido en el mar sin agua? 🌊👇",
+    "description": "Flotas en mitad del mar, sin agua dulce. ¿Cuánto aguantarías? 🌊\n\nLeo se queda a la deriva y cuenta por qué no puedes beber del mar… y cómo un marinero real sobrevivió 133 días.\n\n🧪 DATOS REALES DEL VÍDEO\n• El agua de mar tiene unos 35 gramos de sal por litro.\n• Los riñones humanos solo producen orina menos salada que el agua de mar, así que beber mar te deshidrata.\n• Una persona suele aguantar unos 3 días sin agua (entre 3 y 7 según el calor y el esfuerzo).\n• Poon Lim, mayordomo del SS Benlomond, torpedeado en noviembre de 1942, pasó 133 días en una balsa en el Atlántico Sur. Bebió agua de lluvia y comió pescado y aves.\n\n📚 Fuentes: NOAA National Ocean Service («¿Por qué no podemos beber agua de mar?»); Mental Floss; Live Science (cuánto se sobrevive sin agua); Wikipedia y Guinness World Records (Poon Lim).\n\n💬 ¿Habrías sobrevivido? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?».\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #supervivencia #mar #curiosidades #shorts",
+    "target_seconds": [
+      50,
+      75
+    ],
+    "thumbnail": {
+      "scene": "n01",
+      "t": 1.6,
+      "lines": [
+        "¿3 DÍAS SIN",
+        "AGUA EN EL MAR?"
+      ],
+      "badge": "NO BEBAS DEL MAR",
+      "badge_pos": [
+        540,
+        1640
+      ],
+      "y": 260,
+      "crop_y": 0.5,
+      "h_shift": 0,
+      "h_scale": 0.9
+    }
+  }
+}

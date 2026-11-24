@@ -1,14 +1,14 @@
 {
- "updated": "2026-11-19",
- "source": "MEDIDO: YouTube Data API v3, 2 pasadas (12 meses × 9 consultas × 25 = 196 vídeos; 6 meses × 4 consultas × 50 = 198 vídeos; 334 únicos). Ver report_2026-11-19.md y report_2026-11-19_6m.md. OBSERVADO: reglas marcadas «(obs.)», deducidas a mano de títulos, duraciones y canales del top, más la investigación web inicial; no se han visto ni descargado los vídeos.",
- "n_videos": 334,
+ "updated": "2026-11-24",
+ "source": "MEDIDO: YouTube Data API v3, 2 pasadas (12 meses × 9 consultas × 25 = 196 vídeos; 6 meses × 4 consultas × 50 = 198 vídeos; 334 únicos). Ver report_2026-11-19.md y report_2026-11-19_6m.md. OBSERVADO: reglas marcadas «(obs.)», deducidas a mano de títulos, duraciones y canales del top, más la investigación web inicial; no se han visto ni descargado los vídeos. ACTUALIZACIÓN 2026-11-24 (MEDIDO, YouTube Data API v3): 9 consultas × 40 vídeos, últimos 6 meses, 307 únicos, 76 en el top; ver report_2026-11-24.md y analysis_2026-11-24.json.",
+ "n_videos": 307,
  "rules": [
   "Duración 50-75 s (medido: mediana del top 72 s a 12 meses y 61 s a 6 meses; mediana de los hipotéticos puros del top: 60 s). Nada por debajo de 45 s salvo un dato único muy visual.",
-  "Título con una cifra concreta cuando la idea la tenga (medido: 41-43 % en el top frente a 22-26 % en el resto): «5 segundos», «3 cabezas», «10.000 metros».",
-  "Título con 1-2 emojis al final, de reacción y no decorativos: 💀 para peligro/cuerpo, 🤯 para dato sorprendente, 😱/😳 para susto (medido: emoji en 49-53 % del top).",
-  "No gritar en el título: como mucho UNA palabra en mayúsculas, la del giro («¿Qué pasaría si te TRAGARAN VIVO? 💀»); medido: mayúsculas en 10-22 % del top frente a 34-37 % del resto.",
+  "Título con una cifra concreta cuando la idea la tenga (medido: 41-43 % en el top frente a 22-26 % en el resto): «5 segundos», «3 cabezas», «10.000 metros» (2026-11-24: la cifra discrimina menos, 37 % frente a 34 %: úsala cuando encaje, no a la fuerza.)",
+  "Título con 1-2 emojis al final, de reacción y no decorativos: 💀 para peligro/cuerpo, 🤯 para dato sorprendente, 😱/😳 para susto (medido: emoji en 49-53 % del top) (2026-11-24: emoji en el 50 % del top frente a 36 % del resto.)",
+  "No gritar en el título: como mucho UNA palabra en mayúsculas, la del giro («¿Qué pasaría si te TRAGARAN VIVO? 💀»); medido: mayúsculas en 10-22 % del top frente a 34-37 % del resto (2026-11-24: mayúsculas en el 16 % del top frente a 31 % del resto.)",
   "Título de 45-65 caracteres; nunca más de 70 (medido: mediana del top 55 y 66 caracteres).",
-  "No apoyar el título solo en «sobrevivir/morir/peligro»: el peligro va implícito en la situación, no en la palabra (medido: 6-10 % en el top frente a 18-33 % en el resto).",
+  "No apoyar el título solo en «sobrevivir/morir/peligro»: el peligro va implícito en la situación, no en la palabra (medido: 6-10 % en el top frente a 18-33 % en el resto) (2026-11-24: 4 % del top frente a 19 % del resto.)",
   "Situación concreta y cotidiana llevada al extremo, no abstracta: un objeto, un lugar o un momento reconocible («cargar el móvil», «fondo del océano», «un tren en marcha») (obs.).",
   "Gancho = la premisa ya ocurriendo en el primer segundo, en segunda persona y en presente («Caes al fondo del océano. A los 10 metros…»); sin presentación ni «hoy veremos» (obs.).",
   "Estructura en escalada: cada escena sube un nivel (más profundo, más tiempo, más grande) con un número en pantalla que avanza; el espectador se queda para ver el siguiente nivel (obs.).",
@@ -16,15 +16,20 @@
   "Final en bucle: la última frase enlaza con la primera o vuelve a la pregunta del título, para que la repetición parezca continua; alternativa, pregunta abierta concreta para comentarios («¿tú cuánto aguantarías?») (obs.).",
   "Pensar en serie: los canales que dominan el top repiten una plantilla fija con variaciones («¿Y si… en los 2000?», «parte 15/16»). Mantener plantilla visual y de título estable y variar solo la premisa (obs.).",
   "Fotograma de portada: el momento de máxima tensión con el personaje en primer plano y como mucho 3-4 palabras grandes de texto; elegirlo en el render como miniatura (obs., hipótesis a validar con métricas propias).",
-  "Humor ligero sí, burla no: una reacción exagerada del personaje por vídeo funciona; el tono general es de curiosidad, no de terror gráfico (obs.)."
+  "Humor ligero sí, burla no: una reacción exagerada del personaje por vídeo funciona; el tono general es de curiosidad, no de terror gráfico (obs.).",
+  "Tecnología y objetos cotidianos suben (medido 2026-11-24: tecnología es el tema de mayor mediana, 11,6 M, con 3 de sus 5 vídeos en el top): sirve el formato «¿Qué pasa dentro de [objeto cotidiano] cuando [acción]? 🤯» con 1-2 datos reales y verificables.",
+  "Casos reales contados como historia (un científico, un accidente, un récord) funcionan como giro de mitad o final (medido: «He put his head in a particle accelerator», 18,7 M, 73 s): mantener un caso real con nombre y año en cada Short.",
+  "Hay hueco para Shorts de 13-26 s con un único dato muy visual: 5 de los 20 primeros por vistas/día duran menos de 30 s (medido 2026-11-24). Hipótesis a validar con métricas propias: alternar 1 corto de dato único cada 3 Shorts de 55-70 s."
  ],
  "preferred_topics": [
   "cuerpo humano",
-  "historia",
+  "tecnología",
   "tierra / catástrofes",
-  "espacio"
+  "espacio",
+  "historia",
+  "animales"
  ],
- "topic_notes": "cuerpo humano es el único tema en el top en ambas pasadas (5 de 49 a 12 meses). historia, tierra/catástrofes y espacio tienen la mediana más alta a 12 meses (13-17 M) pero con muestras pequeñas (5-6 vídeos cada uno); a 6 meses bajan. supervivencia tiene muchos vídeos (29-55) pero mediana baja: saturado, usarlo solo con un giro concreto. dinero/poder rinde poco. El tema «tecnología» de informes anteriores estaba inflado por un fallo del clasificador (corregido el 2026-11-19).",
+ "topic_notes": "cuerpo humano es el único tema en el top en ambas pasadas (5 de 49 a 12 meses). historia, tierra/catástrofes y espacio tienen la mediana más alta a 12 meses (13-17 M) pero con muestras pequeñas (5-6 vídeos cada uno); a 6 meses bajan. supervivencia tiene muchos vídeos (29-55) pero mediana baja: saturado, usarlo solo con un giro concreto. dinero/poder rinde poco. El tema «tecnología» de informes anteriores estaba inflado por un fallo del clasificador (corregido el 2026-11-19). 2026-11-24 (6 meses): tecnología (5 vídeos, mediana 11,6 M, 3 en el top) > cuerpo humano (20 vídeos, 5,2 M, 6 en el top) > dinero / poder (4.7 M, 0 en el top) > animales (15, 2,8 M, 0 en el top) > tierra / catástrofes (12, 2,1 M, 3 en el top); supervivencia sigue saturada (49 vídeos, mediana 0,8 M).",
  "title_patterns": [
   "¿Qué pasaría si [acción concreta en 2.ª persona]? [emoji]",
   "¿Qué pasa dentro de [objeto cotidiano] cuando [acción]? 🤯",
@@ -40,16 +45,45 @@
   "What Happens If An Astronaut Gets Stuck Floating In Space? 😱",
   "¿Qué pasaría si un científico moderno viajara a la Edad de Piedra?",
   "¿Qué pasaría si todos los humanos saltáramos a la vez?",
-  "What If You Built a Dog With 3 Heads?! 🐕😱"
+  "What If You Built a Dog With 3 Heads?! 🐕😱",
+  "He Put His Head in a Particle Accelerator",
+  "What If You Built a Real Cyborg?! 🦾⚡"
  ],
  "references": [
-  {"channel": "Mateo Ferruz", "why": "Medido: 3 vídeos en el top; hipotéticos de cuerpo/peligro en 2.ª persona, 60-80 s, título con una palabra en mayúsculas y 💀"},
-  {"channel": "Curiosidades Humanas", "why": "Medido: 12-15 vídeos en el top; ejemplo extremo de serie con plantilla fija («¿Y si… en los 2000 en México?»). Copiar la idea de serie, no la temática"},
-  {"channel": "Zack D. Films", "why": "Medido: 3 vídeos en el top a 12 meses; «what happens if» en 3D, 30-35 s, objetos y física cotidiana"},
-  {"channel": "Descubrimiento", "why": "Medido: 2 en el top; viajes en el tiempo históricos en español"},
-  {"channel": "Hasta Que Funcione (@HastaQueFuncione3D)", "why": "Referente en español indicado por el usuario (no apareció en las búsquedas de la API)"}
+  {
+   "channel": "Mateo Ferruz",
+   "why": "Medido: 3 vídeos en el top; hipotéticos de cuerpo/peligro en 2.ª persona, 60-80 s, título con una palabra en mayúsculas y 💀"
+  },
+  {
+   "channel": "Curiosidades Humanas",
+   "why": "Medido: 12-15 vídeos en el top; ejemplo extremo de serie con plantilla fija («¿Y si… en los 2000 en México?»). Copiar la idea de serie, no la temática"
+  },
+  {
+   "channel": "Zack D. Films",
+   "why": "Medido: 3 vídeos en el top a 12 meses; «what happens if» en 3D, 30-35 s, objetos y física cotidiana"
+  },
+  {
+   "channel": "Descubrimiento",
+   "why": "Medido: 2 en el top; viajes en el tiempo históricos en español"
+  },
+  {
+   "channel": "Hasta Que Funcione (@HastaQueFuncione3D)",
+   "why": "Referente en español indicado por el usuario (no apareció en las búsquedas de la API)"
+  },
+  {
+   "channel": "The Why Side",
+   "why": "Medido 2026-11-24: 18,7 M vistas en 73 s con un caso científico real contado como historia"
+  },
+  {
+   "channel": "Mente misteriosa",
+   "why": "Medido 2026-11-24: «¿Qué pasa dentro de la pared al cargar tu móvil?» 16 M en 19 s; formato «dentro de un objeto cotidiano»"
+  }
  ],
  "noise_excluded": "El top por vistas/día incluye vídeos ajenos al nicho que entran por la búsqueda «y si» o «si fuera» (canciones infantiles, recetas, gameplays de Minecraft, parodias, fandubs, countryballs). Se ignoraron al sacar las reglas observadas.",
- "target_seconds": {"mediana_s": 61, "min_s": 50, "max_s": 75},
+ "target_seconds": {
+  "mediana_s": 61,
+  "min_s": 50,
+  "max_s": 75
+ },
  "principle": "Replicar patrones (estructura, ritmo, formato), nunca guiones, personajes, marcas ni miniaturas ajenas."
 }

@@ -1,0 +1,909 @@
+{
+  "title": "¿Qué pasaría si cayeras del espacio a la Tierra desde 400 km?",
+  "idea": "¿Qué pasaría si cayeras del espacio a la Tierra desde 400 km?",
+  "slug": "caer-desde-la-iss",
+  "category": "espacio",
+  "question": "¿Qué harías si cayeras desde la ISS?",
+  "music_mood": "epic",
+  "scenes": [
+    {
+      "id": "i01",
+      "beat": "hook",
+      "narration": "Te sueltas de la estación espacial. ¿Caes a la Tierra?",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 540,
+            "y": 1750,
+            "r": 700
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.55,
+          "scale": 1.2,
+          "action": "shock",
+          "expression": "shock",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿CAER DESDE",
+              "400 KM?"
+            ],
+            "y": 250,
+            "size": 112
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.3
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.0,
+          "gain_db": -7
+        },
+        {
+          "name": "boom",
+          "at": 0.3,
+          "gain_db": -8
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "estación",
+        "caes"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i02",
+      "beat": "setup",
+      "narration": "La estación orbita a unos cuatrocientos kilómetros de altura.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 540,
+            "y": 1750,
+            "r": 700
+          }
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "rocket",
+            "x": 0.5,
+            "y": 0.45,
+            "scale": 0.8,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 400,
+            "suffix": " KM",
+            "at_word": 5,
+            "over": 0.8,
+            "y": 330,
+            "size": 170,
+            "sub": "ALTURA DE LA ISS"
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "La Estación Espacial Internacional orbita a unos 400 km de altura",
+          "kind": "fact",
+          "source": "NASA, ISS Facts and Figures"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 5
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "cuatrocientos"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i03",
+      "beat": "setup",
+      "narration": "Ahí arriba la gravedad sigue siendo casi un noventa por ciento de la del suelo.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 540,
+            "y": 1750,
+            "r": 700
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.5,
+          "scale": 1.2,
+          "action": "float",
+          "expression": "surprised",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [
+          {
+            "type": "gravity_arrows",
+            "x": 0.5,
+            "y": 0.7,
+            "scale": 0.9,
+            "at_word": 4
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 90,
+            "suffix": " %",
+            "at_word": 10,
+            "over": 0.8,
+            "y": 330,
+            "size": 170,
+            "sub": "GRAVEDAD EN LA ISS"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "A la altura de la ISS la gravedad terrestre es aproximadamente el 90 % de la de la superficie",
+          "kind": "fact",
+          "source": "NASA, «¿Qué es la microgravedad?»"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 10
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "noventa"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i04",
+      "beat": "development",
+      "narration": "Entonces, ¿por qué flotan los astronautas? Porque están en caída libre.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 540,
+            "y": 1750,
+            "r": 700
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.5,
+          "scale": 1.2,
+          "action": "float",
+          "expression": "think",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Los astronautas flotan porque la estación y ellos caen alrededor de la Tierra a la vez",
+            "at_word": 5,
+            "y": 1350
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Los astronautas flotan porque están en caída libre continua alrededor de la Tierra, no porque no haya gravedad",
+          "kind": "fact",
+          "source": "NASA"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "float",
+          "at_word": 5,
+          "gain_db": -9
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "flotan",
+        "libre"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i05",
+      "beat": "development",
+      "narration": "No caen porque van de lado a unos veintiocho mil kilómetros por hora.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 540,
+            "y": 1750,
+            "r": 700
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.5,
+          "scale": 1.2,
+          "action": "float",
+          "expression": "wow",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [
+          {
+            "type": "speedlines",
+            "x": 0.5,
+            "y": 0.5,
+            "scale": 1.0
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 28000,
+            "suffix": " KM/H",
+            "at_word": 9,
+            "over": 0.8,
+            "y": 330,
+            "size": 140,
+            "sub": "VELOCIDAD ORBITAL"
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w9"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "La ISS viaja a unos 28.000 km/h (unos 7,7 km/s), tan rápido que al caer siempre «falla» la Tierra",
+          "kind": "fact",
+          "source": "NASA, ISS Facts and Figures"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0,
+          "gain_db": -6
+        },
+        {
+          "name": "hit",
+          "at_word": 9,
+          "gain_db": -5
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "veintiocho",
+        "mil"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i06",
+      "beat": "development",
+      "narration": "Si te sueltas, sigues dando vueltas junto a ella. No caes.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 540,
+            "y": 1750,
+            "r": 700
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.52,
+          "scale": 1.2,
+          "action": "float",
+          "expression": "surprised",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [
+          {
+            "type": "rocket",
+            "x": 0.82,
+            "y": 0.28,
+            "scale": 0.5,
+            "enter": "none"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 8
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "No",
+        "caes"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i07",
+      "beat": "development",
+      "narration": "Para bajar tendrías que frenar casi toda esa velocidad, y no hay nada que te frene.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 540,
+            "y": 1750,
+            "r": 700
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.52,
+          "scale": 1.2,
+          "action": "float",
+          "expression": "worried",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [
+          {
+            "type": "question",
+            "x": 0.8,
+            "y": 0.4,
+            "scale": 0.8,
+            "at_word": 12
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 12
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "frenar"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i08",
+      "beat": "climax",
+      "narration": "Solo el aire finísimo te irá bajando, poco a poco. Meses, según el Sol.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 540,
+            "y": 1750,
+            "r": 700
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.5,
+          "scale": 1.2,
+          "action": "float",
+          "expression": "tired",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [
+          {
+            "type": "calendar",
+            "x": 0.82,
+            "y": 0.4,
+            "scale": 0.8,
+            "at_word": 8
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Un satélite pequeño soltado desde la ISS tardó 144 días en caer; otros duran cerca de un año",
+            "at_word": 0,
+            "y": 1350
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Un CubeSat con freno aerodinámico soltado desde la ISS reentró tras 144 días; los satélites sin propulsión suelen durar cerca de un año según la actividad solar",
+          "kind": "fact",
+          "source": "Spaceflight101; Scientific American"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 8
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "Meses"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i09",
+      "beat": "climax",
+      "narration": "Y tu traje se quedaría sin oxígeno mucho antes. Imaginemos que no.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 540,
+            "y": 1750,
+            "r": 700
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.5,
+          "scale": 1.2,
+          "action": "float",
+          "expression": "scared",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fiction",
+            "text": "Imaginemos un traje que te mantiene vivo todo ese tiempo",
+            "at_word": 8,
+            "y": 1350
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 8
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "oxígeno"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i10",
+      "beat": "climax",
+      "narration": "Llegas por fin a la atmósfera a casi ocho kilómetros por segundo.",
+      "visual": {
+        "background": {
+          "type": "sky_fall",
+          "alt": 0.9,
+          "speed": 900
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.55,
+          "scale": 1.2,
+          "action": "fall",
+          "expression": "shock",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [
+          {
+            "type": "speedlines",
+            "x": 0.5,
+            "y": 0.5,
+            "scale": 1.0
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 7.7,
+            "suffix": " KM/S",
+            "at_word": 8,
+            "over": 0.8,
+            "y": 330,
+            "size": 150,
+            "decimals": 1,
+            "sub": "VELOCIDAD DE ENTRADA"
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w8"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "La velocidad orbital a esa altura es de unos 7,7 km/s",
+          "kind": "fact",
+          "source": "NASA, ISS Facts and Figures"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0,
+          "gain_db": -6
+        },
+        {
+          "name": "hit",
+          "at_word": 8,
+          "gain_db": -5
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "ocho"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i11",
+      "beat": "climax",
+      "narration": "El aire se comprime delante de ti y se pone al rojo vivo.",
+      "visual": {
+        "background": {
+          "type": "sky_fall",
+          "alt": 0.9,
+          "speed": 900
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.55,
+          "scale": 1.2,
+          "action": "fall",
+          "expression": "hot",
+          "outfit": "suit",
+          "helmet": "dome",
+          "sweat": 1.0
+        },
+        "props": [
+          {
+            "type": "sparks",
+            "x": 0.5,
+            "y": 0.5,
+            "n": 60
+          },
+          {
+            "type": "heatwaves",
+            "x": 0.5,
+            "y": 0.5
+          },
+          {
+            "type": "thermometer",
+            "x": 0.82,
+            "y": 0.5,
+            "scale": 0.9,
+            "level": 0.95,
+            "at_word": 6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "MÁS DE 1.000 °C",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#E8392F",
+            "at_word": 6
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "shake": 0.14
+        }
+      },
+      "claims": [
+        {
+          "text": "En la reentrada, el aire comprimido delante del objeto alcanza miles de grados; no es solo rozamiento",
+          "kind": "fact",
+          "source": "NASA, reentrada atmosférica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at_word": 6,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "comprime",
+        "rojo"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i12",
+      "beat": "climax",
+      "narration": "No sería rozamiento: sería la compresión del aire. Y tú no resistirías.",
+      "visual": {
+        "background": {
+          "type": "sky_fall",
+          "alt": 0.9,
+          "speed": 900
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.55,
+          "scale": 1.2,
+          "action": "squished",
+          "expression": "shock",
+          "outfit": "suit",
+          "helmet": "dome"
+        },
+        "props": [
+          {
+            "type": "burst",
+            "x": 0.5,
+            "y": 0.5,
+            "scale": 1.0
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w10"
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "boom",
+          "at_word": 10,
+          "gain_db": -5
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "compresión"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i13",
+      "beat": "ending",
+      "narration": "Real: en dos mil veinticuatro, una pieza de una paleta de baterías de la ISS atravesó una casa en Florida.",
+      "visual": {
+        "background": {
+          "type": "backyard"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "debris",
+            "x": 0.5,
+            "y": 0.6
+          },
+          {
+            "type": "pow",
+            "x": 0.5,
+            "y": 0.35,
+            "scale": 1.1,
+            "at_word": 10
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "FLORIDA · MARZO 2024",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#1B1B3A",
+            "at_word": 2
+          },
+          {
+            "type": "fact",
+            "text": "Un trozo de metal de basura espacial de la ISS atravesó una vivienda de Naples, Florida",
+            "at_word": 10,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w10"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Una paleta de baterías soltada por la ISS reentró el 8 de marzo de 2024 y un fragmento atravesó una casa en Naples, Florida",
+          "kind": "fact",
+          "source": "NASA; Astronomy.com"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at_word": 10,
+          "gain_db": -6
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "Florida"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "i14",
+      "beat": "ending",
+      "narration": "Así que no caerías en picado: arderías despacio. ¿Qué harías tú? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "space",
+          "earth": {
+            "x": 540,
+            "y": 1750,
+            "r": 700
+          }
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.5,
+          "scale": 1.2,
+          "action": "talk",
+          "expression": "excited",
+          "outfit": "suit",
+          "helmet": "dome",
+          "actions": [
+            [
+              "w11",
+              "point_down"
+            ]
+          ]
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 11,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 11
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.35
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasaría si cayeras del espacio a la Tierra desde 400 km? 🛰️",
+    "hashtags": [
+      "#quepasariasi",
+      "#espacio",
+      "#iss",
+      "#curiosidades",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasaría si",
+      "caer desde la iss",
+      "caer del espacio",
+      "estación espacial internacional",
+      "reentrada atmosférica",
+      "espacio",
+      "curiosidades",
+      "ciencia",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Qué harías tú si cayeras desde la ISS? 🛰️👇",
+    "description": "Te sueltas de la Estación Espacial Internacional, a 400 km de la Tierra. ¿Caerías de golpe? 🛰️\n\nSpoiler: no. Leo te explica por qué sigues en órbita y qué pasaría meses después, si llegaras a la atmósfera.\n\n🧪 DATOS REALES DEL VÍDEO\n• La ISS orbita a unos 400 km de altura y viaja a unos 28.000 km/h (unos 7,7 km/s).\n• A esa altura la gravedad es aproximadamente el 90 % de la de la superficie; los astronautas flotan porque están en caída libre continua.\n• Un objeto soltado desde la ISS sigue en órbita y desciende lentamente por el rozamiento del aire: un satélite pequeño con freno tardó 144 días y otros duran cerca de un año, según el Sol.\n• En la reentrada el aire comprimido delante del objeto alcanza miles de grados.\n• El 8 de marzo de 2024 reentró una paleta de baterías soltada desde la ISS y un fragmento atravesó una casa en Naples, Florida.\n\n⚠️ El traje que te mantiene vivo meses es hipotético; la ficción se marca como tal en el vídeo.\n\n📚 Fuentes: NASA (ISS Facts and Figures, microgravedad, reentrada); Spaceflight101; Scientific American; Astronomy.com.\n\n💬 ¿Qué harías tú? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?».\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #espacio #iss #curiosidades #shorts",
+    "target_seconds": [
+      50,
+      75
+    ],
+    "thumbnail": {
+      "scene": "i01",
+      "t": 1.6,
+      "lines": [
+        "¿CAER DESDE",
+        "400 KM?"
+      ],
+      "badge": "¿SIGUES EN ÓRBITA?",
+      "badge_pos": [
+        540,
+        1640
+      ],
+      "y": 260,
+      "crop_y": 0.5,
+      "h_shift": 0,
+      "h_scale": 0.9
+    }
+  }
+}

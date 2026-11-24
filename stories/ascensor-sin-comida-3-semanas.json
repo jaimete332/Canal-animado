@@ -1,0 +1,813 @@
+{
+  "title": "¿Qué pasaría si te quedaras encerrado en un ascensor sin comida 3 semanas?",
+  "idea": "¿Qué pasaría si te quedaras encerrado en un ascensor sin comida 3 semanas?",
+  "slug": "ascensor-sin-comida-3-semanas",
+  "category": "supervivencia",
+  "question": "¿Qué harías si te quedaras encerrado en un ascensor?",
+  "music_mood": "tense",
+  "scenes": [
+    {
+      "id": "a01",
+      "beat": "hook",
+      "narration": "Te quedas encerrado en un ascensor. Nadie te oye.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#1F2433"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.1,
+          "action": "shock",
+          "expression": "shock"
+        },
+        "props": [
+          {
+            "type": "elevator",
+            "x": 0.5,
+            "y": 0.9,
+            "scale": 1.2,
+            "alarm": true,
+            "display": "!",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿3 SEMANAS EN",
+              "UN ASCENSOR?"
+            ],
+            "y": 250,
+            "size": 104
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.3
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.0,
+          "gain_db": -7
+        },
+        {
+          "name": "hit",
+          "at": 0.3,
+          "gain_db": -6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "ascensor",
+        "Nadie"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a02",
+      "beat": "setup",
+      "narration": "Primero, tranquilo: el ascensor no se va a caer.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#1F2433"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.1,
+          "action": "talk",
+          "expression": "worried"
+        },
+        "props": [
+          {
+            "type": "elevator",
+            "x": 0.5,
+            "y": 0.9,
+            "scale": 1.2,
+            "alarm": false,
+            "display": "12",
+            "enter": "none"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "pop",
+          "at": 0.1
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "caer"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a03",
+      "beat": "setup",
+      "narration": "Desde mil ochocientos cincuenta y cuatro, los frenos de seguridad de Otis lo impiden.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#1F2433"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "newspaper",
+            "x": 0.5,
+            "y": 0.74,
+            "scale": 1.1,
+            "paper": "NEW YORK",
+            "headline": "FRENO DE SEGURIDAD\nDE ELISHA OTIS",
+            "year": "1854",
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "OTIS · 1854",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#1B1B3A",
+            "at_word": 3
+          },
+          {
+            "type": "fact",
+            "text": "Si el cable se rompe, el freno de seguridad agarra los raíles y detiene la cabina",
+            "at_word": 6,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1854 Elisha Otis demostró en Nueva York un freno de seguridad que detiene la cabina si se rompe el cable",
+          "kind": "fact",
+          "source": "Otis; ASME; Encyclopaedia Britannica"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 3
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "Otis"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a04",
+      "beat": "development",
+      "narration": "Tampoco te quedas sin aire: las cabinas no son herméticas.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#1F2433"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.1,
+          "action": "idle",
+          "expression": "surprised"
+        },
+        "props": [
+          {
+            "type": "elevator",
+            "x": 0.5,
+            "y": 0.9,
+            "scale": 1.2,
+            "alarm": false,
+            "display": "12",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "En un ascensor atascado no te quedas sin oxígeno: entra aire por el hueco y la ventilación",
+            "at_word": 0,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Un ascensor atascado no es hermético: no te quedas sin oxígeno",
+          "kind": "fact",
+          "source": "Stanford University, Cardinal Ready; Case Western Reserve University"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "float",
+          "at": 0.1,
+          "gain_db": -9
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "aire"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a05",
+      "beat": "development",
+      "narration": "Con agua, el cuerpo aguanta semanas sin comer.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#1F2433"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.1,
+          "action": "think",
+          "expression": "think"
+        },
+        "props": [
+          {
+            "type": "water_bottle",
+            "x": 0.8,
+            "y": 0.5,
+            "scale": 0.8,
+            "at_word": 1
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 3,
+            "suffix": " SEMANAS",
+            "at_word": 5,
+            "over": 0.8,
+            "y": 330,
+            "size": 140,
+            "sub": "SIN COMIDA, SI TIENES AGUA"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Con agua, una persona puede sobrevivir semanas sin comer",
+          "kind": "fact",
+          "source": "Live Science; MedicineNet"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 5
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "agua",
+        "semanas"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a06",
+      "beat": "development",
+      "narration": "Pero en un ascensor no hay agua. Y sin ella, aguantas unos tres días.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#1F2433"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.1,
+          "action": "idle",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "elevator",
+            "x": 0.5,
+            "y": 0.9,
+            "scale": 1.2,
+            "alarm": false,
+            "display": "12",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 3,
+            "suffix": " DÍAS",
+            "at_word": 10,
+            "over": 0.8,
+            "y": 330,
+            "size": 170,
+            "color": "#FF6B5C",
+            "sub": "SIN AGUA"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Sin agua, una persona suele aguantar unos 3 días (entre 3 y 7 según las condiciones)",
+          "kind": "fact",
+          "source": "Live Science"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 10,
+          "gain_db": -6
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "sin",
+        "tres"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a07",
+      "beat": "climax",
+      "narration": "En mil novecientos noventa y nueve, Nicholas White se quedó atrapado en Nueva York.",
+      "visual": {
+        "background": {
+          "type": "office"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "elevator",
+            "x": 0.5,
+            "y": 0.95,
+            "scale": 1.0,
+            "alarm": true,
+            "display": "--",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "NICHOLAS WHITE · 1999",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#1B1B3A",
+            "at_word": 3
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "En octubre de 1999 Nicholas White, de la revista Business Week, quedó atrapado en un ascensor del edificio McGraw-Hill de Nueva York",
+          "kind": "fact",
+          "source": "ABC News; CBS News; The New Yorker"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at": 0.1,
+          "gain_db": -9
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "Nicholas",
+        "White"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a08",
+      "beat": "climax",
+      "narration": "Estuvo cuarenta y una horas sin comida ni agua y salió casi delirando de sed.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#1F2433"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.1,
+          "action": "idle",
+          "expression": "sick"
+        },
+        "props": [
+          {
+            "type": "elevator",
+            "x": 0.5,
+            "y": 0.9,
+            "scale": 1.2,
+            "alarm": true,
+            "display": "39",
+            "enter": "none"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 41,
+            "suffix": " HORAS",
+            "at_word": 2,
+            "over": 0.8,
+            "y": 330,
+            "size": 160,
+            "sub": "ATRAPADO SIN COMIDA NI AGUA"
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w2"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Nicholas White pasó unas 41 horas en el ascensor, sin comida ni agua, hasta que lo vio un guardia por las cámaras",
+          "kind": "fact",
+          "source": "ABC News; CBS News"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 2,
+          "gain_db": -5
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "cuarenta",
+        "una"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a09",
+      "beat": "climax",
+      "narration": "Y el récord es de Andreas Mihavecz: dieciocho días olvidado en un calabozo austriaco, en mil novecientos setenta y nueve.",
+      "visual": {
+        "background": {
+          "type": "prison"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.1,
+          "action": "idle",
+          "expression": "tired"
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "ANDREAS MIHAVECZ · 1979",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#1B1B3A",
+            "at_word": 4
+          },
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 18,
+            "suffix": " DÍAS",
+            "at_word": 12,
+            "over": 0.8,
+            "y": 480,
+            "size": 150,
+            "sub": "SIN COMIDA NI AGUA (SEGÚN GUINNESS)"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "En 1979 Andreas Mihavecz, de 18 años, pasó 18 días olvidado en un calabozo policial austriaco; Guinness lo recoge como récord de supervivencia sin comida ni agua",
+          "kind": "fact",
+          "source": "Wikipedia; Guinness World Records; Reuters (1979)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 12
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "dieciocho",
+        "récord"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a10",
+      "beat": "climax",
+      "narration": "Según cuentan, sobrevivió lamiendo la condensación de las paredes, y perdió veinticuatro kilos.",
+      "visual": {
+        "background": {
+          "type": "prison"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.1,
+          "action": "idle",
+          "expression": "sick"
+        },
+        "props": [
+          {
+            "type": "water_pump",
+            "x": 0.82,
+            "y": 0.5,
+            "scale": 0.6,
+            "at_word": 6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 24,
+            "suffix": " KG",
+            "at_word": 9,
+            "over": 0.8,
+            "y": 330,
+            "size": 160,
+            "sub": "QUE PERDIÓ"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Mihavecz habría sobrevivido lamiendo la condensación de las paredes y perdió unos 24 kg",
+          "kind": "fact",
+          "source": "Wikipedia; prensa de 1979"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 9
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "condensación",
+        "veinticuatro"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a11",
+      "beat": "ending",
+      "narration": "Así que tres semanas sin comida son posibles; sin agua, no. Lo que mata es la sed.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#1F2433"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.1,
+          "action": "talk",
+          "expression": "determined"
+        },
+        "props": [
+          {
+            "type": "water_bottle",
+            "x": 0.8,
+            "y": 0.5,
+            "scale": 0.8,
+            "at_word": 11
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "LO QUE MATA ES LA SED",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#E8392F",
+            "at_word": 13
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 13,
+          "gain_db": -6
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "sed"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a12",
+      "beat": "ending",
+      "narration": "Si te pasa, pulsa la alarma y ahorra fuerzas. Alguien te oirá.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#1F2433"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.1,
+          "action": "point_up",
+          "expression": "smug"
+        },
+        "props": [
+          {
+            "type": "elevator",
+            "x": 0.5,
+            "y": 0.9,
+            "scale": 1.2,
+            "alarm": true,
+            "display": "12",
+            "enter": "none"
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at": 0.2
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "alarma"
+      ],
+      "pause_after": 0.06
+    },
+    {
+      "id": "a13",
+      "beat": "ending",
+      "narration": "¿Qué harías tú encerrado ahí? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#1F2433"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.55,
+          "scale": 1.2,
+          "action": "talk",
+          "expression": "excited",
+          "actions": [
+            [
+              "w5",
+              "point_down"
+            ]
+          ]
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 5,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 5
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.35
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasaría si te quedaras encerrado en un ascensor sin comida 3 semanas? 🛗",
+    "hashtags": [
+      "#quepasariasi",
+      "#ascensor",
+      "#supervivencia",
+      "#curiosidades",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasaría si",
+      "atrapado en un ascensor",
+      "sin comida 3 semanas",
+      "nicholas white",
+      "andreas mihavecz",
+      "supervivencia",
+      "curiosidades",
+      "ciencia",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Qué harías tú encerrado en un ascensor? 🛗👇",
+    "description": "Te quedas encerrado en un ascensor y nadie te oye. ¿Podrías aguantar tres semanas? 🛗\n\nLeo repasa qué pasa de verdad: el ascensor no cae, no te quedas sin aire… pero la sed te limita a unos días. Con dos casos reales.\n\n🧪 DATOS REALES DEL VÍDEO\n• En 1854 Elisha Otis demostró en Nueva York un freno de seguridad que detiene la cabina si se rompe el cable.\n• Un ascensor atascado no es hermético: no te quedas sin oxígeno.\n• Con agua, una persona puede sobrevivir semanas sin comer; sin agua, unos 3 días (entre 3 y 7 según las condiciones).\n• Octubre de 1999: Nicholas White pasó unas 41 horas atrapado en un ascensor de Nueva York, sin comida ni agua.\n• 1979: Andreas Mihavecz pasó 18 días olvidado en un calabozo austriaco; Guinness lo recoge como récord sin comida ni agua. Perdió unos 24 kg.\n\n📚 Fuentes: Otis y ASME (historia del freno de seguridad); Stanford Cardinal Ready y Case Western (aire en ascensores); Live Science; ABC News y CBS News (Nicholas White); Wikipedia, Guinness World Records y Reuters 1979 (Mihavecz).\n\n💬 ¿Qué harías tú? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasaría si…?».\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasariasi #ascensor #supervivencia #curiosidades #shorts",
+    "target_seconds": [
+      50,
+      75
+    ],
+    "thumbnail": {
+      "scene": "a01",
+      "t": 1.6,
+      "lines": [
+        "¿3 SEMANAS EN",
+        "UN ASCENSOR?"
+      ],
+      "badge": "SIN COMIDA NI AGUA",
+      "badge_pos": [
+        540,
+        1640
+      ],
+      "y": 260,
+      "crop_y": 0.5,
+      "h_shift": 0,
+      "h_scale": 0.9
+    }
+  }
+}
