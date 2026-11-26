@@ -6,6 +6,7 @@ Puntuación heurística (0-100) basada en patrones que suelen retener en Shorts:
   - visual (fácil de dibujar = más dinámico)  - novedad respecto a lo ya publicado
 Si hay LLM, se generan ideas nuevas y se puntúan también con el LLM.
 Si hay métricas de YouTube, la categoría con mejor retención recibe un bonus.
+Lo que funciona en el propio canal (data/research/own_winners.json → arquetipos de premisa) suma hasta +8.
 """
 from __future__ import annotations
 
@@ -73,6 +74,16 @@ SEED_IDEAS = [
     ("¿Qué pasaría si te persiguiera un guepardo 1 minuto?", "supervivencia"),
     ("¿Qué pasaría si los dinosaurios volvieran 24 horas?", "fantasía"),
     ("¿Qué pasaría si te congelaran y despertaras dentro de 100 años?", "fantasía"),
+    # Serie «Fórmula ganadora» (2026-11-26): premisa universal + un caso real con nombre y año contado a mitad del
+    # vídeo, como en los Shorts que mejor han funcionado (avión, jefe de la mafia, un año sin sol).
+    # Caso real orientativo (VERIFICAR con fuentes al escribir el guion):
+    ("¿Qué pasaría si saltaras desde la Torre Eiffel?", "supervivencia"),                # Franz Reichelt, 1912
+    ("¿Qué pasaría si vivieras 1 año sin dinero?", "vida"),                               # Mark Boyle, 2008
+    ("¿Qué pasaría si te encerraran en Alcatraz?", "historia"),                           # fuga de 1962
+    ("¿Qué pasaría si fueras espía en la Guerra Fría?", "historia"),                      # espías reales
+    ("¿Qué pasaría si te tocara la lotería de 300 millones?", "vida"),                    # ganadores arruinados
+    ("¿Qué pasaría si no usaras el móvil 1 año?", "vida"),                                # desintoxicación digital
+    ("¿Qué pasaría si fueras presidente del Gobierno un solo día?", "vida"),
 ]
 
 # Shorts ya producidos (PARA_SUBIR/ y samples/): cuentan como publicados para no repetirlos
@@ -84,10 +95,12 @@ def _already_made() -> list[str]:
 
 HOOK_WORDS = {
     "danger": ["atrapado", "encerrado", "agujero negro", "rayo", "volcán", "meteorito", "asteroide", "huracán",
-               "cayeras", "casco", "gladiador", "pirata", "titanic", "pompeya", "guepardo", "asediado"],
+               "cayeras", "casco", "gladiador", "pirata", "titanic", "pompeya", "guepardo", "asediado",
+               "saltaras", "encerraran", "guerra fría", "cárcel", "alcatraz"],
     "scale": ["centro", "todos", "todo el mundo", "año", "siglo", "a la vez", "más rápido", "nunca", "fosa", "everest"],
     "visual": ["marte", "océano", "luna", "júpiter", "sol", "dinosaurio", "volcán", "pirámide", "castillo", "vikingo",
-               "roma", "titanic", "pompeya", "huracán", "ascensor", "avión", "everest", "espacio", "mar"],
+               "roma", "titanic", "pompeya", "huracán", "ascensor", "avión", "everest", "espacio", "mar",
+               "torre", "eiffel", "alcatraz", "móvil", "lotería", "dinero", "presidente", "espía"],
     "science": ["tierra", "agua", "respiración", "oxígeno", "cuerpo", "dentro de", "comida", "luz", "girar",
                 "grados", "nivel del mar", "lluvia", "llover", "internet", "médico"],
 }
@@ -161,6 +174,15 @@ def _niche_bonus(idea: str) -> float:
     return 0.0
 
 
+def _own_bonus(idea: str) -> float:
+    """+0 a +8 si el molde de la premisa coincide con el de los Shorts que mejor han funcionado en NUESTRO canal."""
+    try:
+        from ..research.own import archetype_bonus
+        return archetype_bonus(idea)
+    except Exception:
+        return 0.0
+
+
 def ranked_ideas(n: int = 15) -> list[tuple[float, str]]:
     reg = Registry()
     published = [r["idea"] for r in reg.videos()] + _already_made()
@@ -170,7 +192,7 @@ def ranked_ideas(n: int = 15) -> list[tuple[float, str]]:
     for idea, cat in pool:
         if reg.is_duplicate(idea) or any(similarity(idea, p) >= 0.6 for p in published):
             continue
-        scored.append((round(min(100, heuristic_score(idea, published, bonus, cat) + _niche_bonus(idea)), 1), idea))
+        scored.append((round(min(100, heuristic_score(idea, published, bonus, cat) + _niche_bonus(idea) + _own_bonus(idea)), 1), idea))
     scored.sort(reverse=True)
     return scored[:n]
 

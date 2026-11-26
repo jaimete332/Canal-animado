@@ -12,6 +12,7 @@
   python -m fabrica tiktok-auth                              # autoriza tu cuenta de TikTok (una vez)
   python -m fabrica tiktok-upload centro-de-la-tierra [--draft]  # sube a TikTok (privado / borradores)
   python -m fabrica research [--from-file datos.json]        # investiga el nicho → guía de estilo
+  python -m fabrica research --own [--winner slug ...]       # qué funciona en NUESTRO canal (sin API)
   python -m fabrica style                                    # muestra la guía de estilo vigente
   python -m fabrica metrics                                  # descarga métricas de YouTube
   python -m fabrica insights                                 # aprendizajes para próximos guiones
@@ -147,6 +148,13 @@ def cmd_tiktok_upload(a):
 
 
 def cmd_research(a):
+    if a.winner or a.own:
+        from .research.own import add_winners, report_own_md, run_own
+        if a.winner:
+            add_winners(a.winner, nota=a.note or "", views=a.views, retention=a.retention)
+        res = run_own()
+        print(report_own_md(res))
+        return
     from .research.niche import run
     g = run(queries=a.queries, from_file=Path(a.from_file) if a.from_file else None, per_query=a.per_query,
             months=a.months)
@@ -248,7 +256,11 @@ def main(argv=None):
     s.set_defaults(f=cmd_tiktok_upload)
     s = sub.add_parser("research", help="investiga el nicho y actualiza la guía de estilo")
     s.add_argument("--queries", nargs="*"); s.add_argument("--from-file"); s.add_argument("--per-query", type=int, default=25)
-    s.add_argument("--months", type=int, default=12); s.set_defaults(f=cmd_research)
+    s.add_argument("--months", type=int, default=12)
+    s.add_argument("--own", action="store_true", help="solo analiza los Shorts ganadores del propio canal (sin API)")
+    s.add_argument("--winner", nargs="*", help="slugs de Shorts que mejor han funcionado (los declara el usuario)")
+    s.add_argument("--note"); s.add_argument("--views", type=int); s.add_argument("--retention", type=float, help="%% visto medio")
+    s.set_defaults(f=cmd_research)
     sub.add_parser("style", help="muestra la guía de estilo del nicho").set_defaults(f=cmd_style)
     sub.add_parser("metrics").set_defaults(f=cmd_metrics)
     sub.add_parser("insights").set_defaults(f=cmd_insights)

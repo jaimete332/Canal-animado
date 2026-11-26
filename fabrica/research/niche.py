@@ -265,6 +265,32 @@ def build_style_guide(a: dict) -> dict:
     }
 
 
+AUTO_RULE_PREFIXES = ("Título: usar", "Título: evitar", "Duración: apuntar a", "Título de unos", "Temas con más tirón ahora",
+                      "Ganchos de referencia")
+
+
+def merge_guide(old: dict | None, new: dict) -> dict:
+    """Fusiona la guía recién calculada con la existente SIN perder lo escrito a mano.
+
+    - Se conservan las reglas manuales (las que no empiezan por un prefijo automático), incluidas las «(propio…)».
+    - Las reglas automáticas de duración o longitud de título se omiten si ya hay una manual equivalente.
+    - Se conservan las claves que no calcula la investigación (topic_notes, references, own_channel, ...).
+    - Si `preferred_topics_locked` es true, tampoco se tocan los temas preferidos (cámbialo a false para refrescarlos).
+    """
+    if not old:
+        return new
+    manual = [r for r in old.get("rules", []) if not r.startswith(AUTO_RULE_PREFIXES)]
+    skip = tuple(p for p, m in (("Duración: apuntar a", "Duración"), ("Título de unos", "Título de"))
+                 if any(r.startswith(m) for r in manual))
+    auto = [r for r in new.get("rules", []) if not (skip and r.startswith(skip))]
+    merged = {**old, **{k: v for k, v in new.items() if k != "rules"}}
+    if old.get("preferred_topics_locked"):  # temas curados a mano: la investigación automática no los cambia
+        merged["preferred_topics"] = old["preferred_topics"]
+        auto = [r for r in auto if not r.startswith("Temas con más tirón ahora")]
+    merged["rules"] = auto + [r for r in manual if r not in auto]
+    return merged
+
+
 def report_md(a: dict, guide: dict, queries: list[str]) -> str:
     L = [f"# Investigación del nicho «¿qué pasaría si…?» — {dt.date.today().isoformat()}", "",
          f"Vídeos analizados: **{a['n_videos']}** · Top: **{a['n_top']}** · Consultas: {', '.join(queries)}", "",
@@ -300,13 +326,24 @@ def run(queries: list[str] | None = None, from_file: Path | None = None, **kw) -
     if not vids:
         raise RuntimeError("No se obtuvo ningún vídeo para analizar")
     a = analyze(vids)
-    guide = build_style_guide(a)
+    f_guide = OUT / "style_guide.json"
+    old_guide = json.loads(f_guide.read_text(encoding="utf-8")) if f_guide.exists() else None
+    if old_guide:  # copia de seguridad por si la fusión no es la que querías
+        (OUT / "style_guide.prev.json").write_text(json.dumps(old_guide, indent=1, ensure_ascii=False), encoding="utf-8")
+    guide = merge_guide(old_guide, build_style_guide(a))
     stamp = dt.date.today().isoformat()
     (OUT / f"videos_{stamp}.json").write_text(json.dumps([asdict(v) for v in vids], indent=1, ensure_ascii=False))
     (OUT / f"analysis_{stamp}.json").write_text(json.dumps(a, indent=1, ensure_ascii=False))
     (OUT / f"report_{stamp}.md").write_text(report_md(a, guide, queries), encoding="utf-8")
-    (OUT / "style_guide.json").write_text(json.dumps(guide, indent=1, ensure_ascii=False))
+    f_guide.write_text(json.dumps(guide, indent=1, ensure_ascii=False))
     log.info("Informe: %s", OUT / f"report_{stamp}.md")
+    try:  # lo propio pesa más: refrescar el análisis del canal si ya hay ganadores registrados
+        from .own import load_winners, run_own
+        if load_winners():
+            run_own()
+            guide = json.loads(f_guide.read_text(encoding="utf-8"))
+    except Exception as e:  # nunca romper la investigación por esto
+        log.warning("Análisis del canal propio omitido: %s", e)
     return guide
 
 

@@ -19,7 +19,13 @@
   "Humor ligero sí, burla no: una reacción exagerada del personaje por vídeo funciona; el tono general es de curiosidad, no de terror gráfico (obs.).",
   "Tecnología y objetos cotidianos suben (medido 2026-11-24: tecnología es el tema de mayor mediana, 11,6 M, con 3 de sus 5 vídeos en el top): sirve el formato «¿Qué pasa dentro de [objeto cotidiano] cuando [acción]? 🤯» con 1-2 datos reales y verificables.",
   "Casos reales contados como historia (un científico, un accidente, un récord) funcionan como giro de mitad o final (medido: «He put his head in a particle accelerator», 18,7 M, 73 s): mantener un caso real con nombre y año en cada Short.",
-  "Hay hueco para Shorts de 13-26 s con un único dato muy visual: 5 de los 20 primeros por vistas/día duran menos de 30 s (medido 2026-11-24). Hipótesis a validar con métricas propias: alternar 1 corto de dato único cada 3 Shorts de 55-70 s."
+  "Hay hueco para Shorts de 13-26 s con un único dato muy visual: 5 de los 20 primeros por vistas/día duran menos de 30 s (medido 2026-11-24). Hipótesis a validar con métricas propias: alternar 1 corto de dato único cada 3 Shorts de 55-70 s.",
+  "Premisa UNIVERSAL: una situación que cualquiera se ha imaginado alguna vez y que se entiende sin saber ciencia («caer de un avión», «ser el jefe de la mafia», «un año sin sol»). Los tres ganadores son de escala humana y cotidiana; los Shorts de espacio profundo o ciencia técnica (Marte, Júpiter, ISS, centro de la Tierra) no están entre ellos (propio, obs.)",
+  "Gancho en la situación y con consecuencia inmediata, en 12 palabras o menos, con ironía si encaja: «Estás a diez mil metros y caes del avión sin paracaídas»; «Eres el jefe de la mafia. Enhorabuena: tu vida es un infierno» (propio, obs.)",
+  "Giro a mitad del vídeo: pasar de los datos generales a UNA persona real con nombre y año y contar su historia con remate («Casi nadie sobrevive a algo así. Casi.» Vesna Vulović 1972; Provenzano y Al Capone, condenado por impuestos y no por sus crímenes; Michel Siffre seis meses bajo tierra) (propio, obs.)",
+  "Tono con humor seco: un comentario irónico cada 4-5 escenas («Muy glamuroso todo», «Por cierto, su tarjeta decía que vendía muebles usados»), sin burlarse de víctimas reales (propio, obs.)",
+  "Cierre con veredicto breve y pregunta que pide postura: «Casi todos los grandes capos acaban entre rejas… ¿Seguirías queriendo ser el jefe?» (propio, obs.)",
+  "Explotar y explorar: 2 de cada 3 Shorts siguen la fórmula ganadora (premisa universal + caso real con giro) y 1 de cada 3 prueba algo distinto; comparar sus métricas con las de los ganadores antes de tocar la fórmula (propio, obs.)"
  ],
  "preferred_topics": [
   "cuerpo humano",
@@ -85,5 +91,109 @@
   "min_s": 50,
   "max_s": 75
  },
- "principle": "Replicar patrones (estructura, ritmo, formato), nunca guiones, personajes, marcas ni miniaturas ajenas."
+ "principle": "Replicar patrones (estructura, ritmo, formato), nunca guiones, personajes, marcas ni miniaturas ajenas.",
+ "own_channel": {
+  "updated": "2026-11-26",
+  "n_ganadores": 3,
+  "ganadores": [
+   "caer-de-un-avion",
+   "jefe-de-la-mafia",
+   "un-ano-sin-sol"
+  ],
+  "arquetipos": {
+   "caída / altura extrema": 1.9,
+   "ser alguien con poder o un rol ajeno": 2.6,
+   "quitar algo universal de tu vida": 0.4,
+   "situación cotidiana llevada al extremo": 2.6,
+   "cuerpo humano / salud": 0.0
+  },
+  "rasgos": {
+   "titulo_chars": {
+    "ganadores": 52,
+    "resto": 50.5,
+    "consistente": false
+   },
+   "gancho_palabras": {
+    "ganadores": 12,
+    "resto": 10.0,
+    "consistente": false
+   },
+   "escenas": {
+    "ganadores": 15,
+    "resto": 15.5,
+    "consistente": false
+   },
+   "palabras": {
+    "ganadores": 173,
+    "resto": 184.5,
+    "consistente": false
+   },
+   "personas_con_nombre": {
+    "ganadores": 2,
+    "resto": 1.0,
+    "consistente": false
+   },
+   "anios_citados": {
+    "ganadores": 1,
+    "resto": 1.0,
+    "consistente": false
+   },
+   "caso_real_pct": {
+    "ganadores": 40,
+    "resto": 0.0,
+    "consistente": false
+   },
+   "caso_real_aparece_en": {
+    "ganadores": 0.42,
+    "resto": 0.53,
+    "consistente": false
+   },
+   "datos_por_100_palabras": {
+    "ganadores": 6.1,
+    "resto": 6.0,
+    "consistente": false
+   },
+   "contadores": {
+    "ganadores": 3,
+    "resto": 3.0,
+    "consistente": false
+   },
+   "datos_en_pantalla": {
+    "ganadores": 6,
+    "resto": 2.5,
+    "consistente": false
+   },
+   "frases_cortas": {
+    "ganadores": 2,
+    "resto": 3.0,
+    "consistente": false
+   },
+   "titulo_cifra": {
+    "ganadores": 0.67,
+    "resto": 0.64,
+    "consistente": false
+   },
+   "titulo_2a_persona": {
+    "ganadores": 1.0,
+    "resto": 0.93,
+    "consistente": false
+   },
+   "titulo_peligro": {
+    "ganadores": 0.0,
+    "resto": 0.0,
+    "consistente": false
+   },
+   "gancho_en_situacion": {
+    "ganadores": 1.0,
+    "resto": 0.86,
+    "consistente": false
+   },
+   "cierra_a_comentarios": {
+    "ganadores": 1.0,
+    "resto": 1.0,
+    "consistente": false
+   }
+  }
+ },
+ "preferred_topics_locked": true
 }

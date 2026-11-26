@@ -1,0 +1,524 @@
+{
+ "updated": "2026-11-26",
+ "n_ganadores": 3,
+ "n_resto": 14,
+ "ganadores": [
+  {
+   "slug": "caer-de-un-avion",
+   "fuente": "usuario",
+   "nota": "Declarado por el usuario como uno de los que mejor han funcionado (sin cifras).",
+   "declarado": "2026-11-26"
+  },
+  {
+   "slug": "jefe-de-la-mafia",
+   "fuente": "usuario",
+   "nota": "Declarado por el usuario como uno de los que mejor han funcionado (sin cifras).",
+   "declarado": "2026-11-26"
+  },
+  {
+   "slug": "un-ano-sin-sol",
+   "fuente": "usuario",
+   "nota": "Declarado por el usuario como uno de los que mejor han funcionado (sin cifras).",
+   "declarado": "2026-11-26"
+  }
+ ],
+ "rasgos": {
+  "titulo_chars": {
+   "ganadores": 52,
+   "resto": 50.5,
+   "consistente": false
+  },
+  "gancho_palabras": {
+   "ganadores": 12,
+   "resto": 10.0,
+   "consistente": false
+  },
+  "escenas": {
+   "ganadores": 15,
+   "resto": 15.5,
+   "consistente": false
+  },
+  "palabras": {
+   "ganadores": 173,
+   "resto": 184.5,
+   "consistente": false
+  },
+  "personas_con_nombre": {
+   "ganadores": 2,
+   "resto": 1.0,
+   "consistente": false
+  },
+  "anios_citados": {
+   "ganadores": 1,
+   "resto": 1.0,
+   "consistente": false
+  },
+  "caso_real_pct": {
+   "ganadores": 40,
+   "resto": 0.0,
+   "consistente": false
+  },
+  "caso_real_aparece_en": {
+   "ganadores": 0.42,
+   "resto": 0.53,
+   "consistente": false
+  },
+  "datos_por_100_palabras": {
+   "ganadores": 6.1,
+   "resto": 6.0,
+   "consistente": false
+  },
+  "contadores": {
+   "ganadores": 3,
+   "resto": 3.0,
+   "consistente": false
+  },
+  "datos_en_pantalla": {
+   "ganadores": 6,
+   "resto": 2.5,
+   "consistente": false
+  },
+  "frases_cortas": {
+   "ganadores": 2,
+   "resto": 3.0,
+   "consistente": false
+  },
+  "titulo_cifra": {
+   "ganadores": 0.67,
+   "resto": 0.64,
+   "consistente": false
+  },
+  "titulo_2a_persona": {
+   "ganadores": 1.0,
+   "resto": 0.93,
+   "consistente": false
+  },
+  "titulo_peligro": {
+   "ganadores": 0.0,
+   "resto": 0.0,
+   "consistente": false
+  },
+  "gancho_en_situacion": {
+   "ganadores": 1.0,
+   "resto": 0.86,
+   "consistente": false
+  },
+  "cierra_a_comentarios": {
+   "ganadores": 1.0,
+   "resto": 1.0,
+   "consistente": false
+  }
+ },
+ "arquetipos": {
+  "caída / altura extrema": {
+   "ganadores": 0.33,
+   "resto": 0.14,
+   "bonus": 1.9
+  },
+  "ser alguien con poder o un rol ajeno": {
+   "ganadores": 0.33,
+   "resto": 0.07,
+   "bonus": 2.6
+  },
+  "quitar algo universal de tu vida": {
+   "ganadores": 0.33,
+   "resto": 0.29,
+   "bonus": 0.4
+  },
+  "situación cotidiana llevada al extremo": {
+   "ganadores": 0.33,
+   "resto": 0.07,
+   "bonus": 2.6
+  },
+  "cuerpo humano / salud": {
+   "ganadores": 0.0,
+   "resto": 0.14,
+   "bonus": 0.0
+  }
+ },
+ "por_short": {
+  "100-dias-en-marte": {
+   "titulo": "¿Qué pasaría si vivieras 100 días en Marte?",
+   "titulo_chars": 43,
+   "titulo_cifra": true,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 11,
+   "gancho_en_situacion": true,
+   "escenas": 17,
+   "palabras": 189,
+   "personas_con_nombre": 0,
+   "anios_citados": 1,
+   "caso_real_pct": 0,
+   "caso_real_aparece_en": null,
+   "datos_por_100_palabras": 6.9,
+   "contadores": 2,
+   "datos_en_pantalla": 4,
+   "frases_cortas": 4,
+   "cierra_a_comentarios": true,
+   "arquetipos": []
+  },
+  "agua-helada-del-titanic": {
+   "titulo": "¿Qué pasaría si estuvieras 1 hora en el agua helada del Titanic?",
+   "titulo_chars": 64,
+   "titulo_cifra": true,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 13,
+   "gancho_en_situacion": false,
+   "escenas": 17,
+   "palabras": 234,
+   "personas_con_nombre": 2,
+   "anios_citados": 2,
+   "caso_real_pct": 0,
+   "caso_real_aparece_en": null,
+   "datos_por_100_palabras": 6.0,
+   "contadores": 4,
+   "datos_en_pantalla": 8,
+   "frases_cortas": 3,
+   "cierra_a_comentarios": true,
+   "arquetipos": []
+  },
+  "ascensor-sin-comida-3-semanas": {
+   "titulo": "¿Qué pasaría si te quedaras encerrado en un ascensor sin comida 3 semanas?",
+   "titulo_chars": 74,
+   "titulo_cifra": true,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 9,
+   "gancho_en_situacion": true,
+   "escenas": 14,
+   "palabras": 164,
+   "personas_con_nombre": 2,
+   "anios_citados": 3,
+   "caso_real_pct": 55,
+   "caso_real_aparece_en": 0.43,
+   "datos_por_100_palabras": 4.9,
+   "contadores": 5,
+   "datos_en_pantalla": 2,
+   "frases_cortas": 3,
+   "cierra_a_comentarios": true,
+   "arquetipos": [
+    "quitar algo universal de tu vida",
+    "situación cotidiana llevada al extremo"
+   ]
+  },
+  "caer-de-un-avion": {
+   "titulo": "¿Qué pasaría si cayeras de un avión a 10.000 metros?",
+   "titulo_chars": 52,
+   "titulo_cifra": true,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 13,
+   "gancho_en_situacion": true,
+   "escenas": 16,
+   "palabras": 173,
+   "personas_con_nombre": 1,
+   "anios_citados": 1,
+   "caso_real_pct": 40,
+   "caso_real_aparece_en": 0.56,
+   "datos_por_100_palabras": 6.4,
+   "contadores": 3,
+   "datos_en_pantalla": 7,
+   "frases_cortas": 2,
+   "cierra_a_comentarios": true,
+   "arquetipos": [
+    "caída / altura extrema",
+    "situación cotidiana llevada al extremo"
+   ]
+  },
+  "caer-desde-la-iss": {
+   "titulo": "¿Qué pasaría si cayeras del espacio a la Tierra desde 400 km?",
+   "titulo_chars": 61,
+   "titulo_cifra": true,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 10,
+   "gancho_en_situacion": true,
+   "escenas": 15,
+   "palabras": 183,
+   "personas_con_nombre": 0,
+   "anios_citados": 1,
+   "caso_real_pct": 0,
+   "caso_real_aparece_en": null,
+   "datos_por_100_palabras": 4.4,
+   "contadores": 4,
+   "datos_en_pantalla": 3,
+   "frases_cortas": 7,
+   "cierra_a_comentarios": true,
+   "arquetipos": [
+    "caída / altura extrema"
+   ]
+  },
+  "caer-hacia-jupiter": {
+   "titulo": "¿Qué pasaría si cayeras hacia Júpiter?",
+   "titulo_chars": 38,
+   "titulo_cifra": false,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 8,
+   "gancho_en_situacion": true,
+   "escenas": 16,
+   "palabras": 187,
+   "personas_con_nombre": 0,
+   "anios_citados": 0,
+   "caso_real_pct": 0,
+   "caso_real_aparece_en": null,
+   "datos_por_100_palabras": 5.3,
+   "contadores": 7,
+   "datos_en_pantalla": 2,
+   "frases_cortas": 1,
+   "cierra_a_comentarios": true,
+   "arquetipos": [
+    "caída / altura extrema"
+   ]
+  },
+  "ceniza-de-volcan": {
+   "titulo": "¿Qué le pasaría a tu cuerpo si respiraras ceniza de volcán 1 año?",
+   "titulo_chars": 65,
+   "titulo_cifra": true,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 12,
+   "gancho_en_situacion": true,
+   "escenas": 16,
+   "palabras": 217,
+   "personas_con_nombre": 3,
+   "anios_citados": 0,
+   "caso_real_pct": 0,
+   "caso_real_aparece_en": null,
+   "datos_por_100_palabras": 6.0,
+   "contadores": 2,
+   "datos_en_pantalla": 10,
+   "frases_cortas": 2,
+   "cierra_a_comentarios": true,
+   "arquetipos": [
+    "cuerpo humano / salud"
+   ]
+  },
+  "centro-de-la-tierra": {
+   "titulo": "¿Qué pasaría si cavaras hasta el centro de la Tierra?",
+   "titulo_chars": 53,
+   "titulo_cifra": false,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 11,
+   "gancho_en_situacion": true,
+   "escenas": 20,
+   "palabras": 186,
+   "personas_con_nombre": 0,
+   "anios_citados": 1,
+   "caso_real_pct": 0,
+   "caso_real_aparece_en": null,
+   "datos_por_100_palabras": 8.6,
+   "contadores": 3,
+   "datos_en_pantalla": 2,
+   "frases_cortas": 7,
+   "cierra_a_comentarios": true,
+   "arquetipos": []
+  },
+  "despertar-en-la-edad-media": {
+   "titulo": "¿Qué pasaría si te despertaras en la Edad Media?",
+   "titulo_chars": 48,
+   "titulo_cifra": false,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 13,
+   "gancho_en_situacion": true,
+   "escenas": 14,
+   "palabras": 177,
+   "personas_con_nombre": 0,
+   "anios_citados": 0,
+   "caso_real_pct": 0,
+   "caso_real_aparece_en": null,
+   "datos_por_100_palabras": 6.2,
+   "contadores": 3,
+   "datos_en_pantalla": 1,
+   "frases_cortas": 2,
+   "cierra_a_comentarios": true,
+   "arquetipos": []
+  },
+  "jefe-de-la-mafia": {
+   "titulo": "¿Qué pasaría si te convirtieras en el jefe de la mafia?",
+   "titulo_chars": 55,
+   "titulo_cifra": false,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 12,
+   "gancho_en_situacion": true,
+   "escenas": 14,
+   "palabras": 164,
+   "personas_con_nombre": 2,
+   "anios_citados": 1,
+   "caso_real_pct": 0,
+   "caso_real_aparece_en": null,
+   "datos_por_100_palabras": 6.1,
+   "contadores": 2,
+   "datos_en_pantalla": 1,
+   "frases_cortas": 2,
+   "cierra_a_comentarios": true,
+   "arquetipos": [
+    "ser alguien con poder o un rol ajeno"
+   ]
+  },
+  "la-luna-desapareciera": {
+   "titulo": "¿Qué pasaría si la Luna desapareciera?",
+   "titulo_chars": 38,
+   "titulo_cifra": false,
+   "titulo_2a_persona": false,
+   "titulo_peligro": false,
+   "gancho_palabras": 10,
+   "gancho_en_situacion": true,
+   "escenas": 13,
+   "palabras": 175,
+   "personas_con_nombre": 3,
+   "anios_citados": 0,
+   "caso_real_pct": 0,
+   "caso_real_aparece_en": null,
+   "datos_por_100_palabras": 5.1,
+   "contadores": 2,
+   "datos_en_pantalla": 1,
+   "frases_cortas": 1,
+   "cierra_a_comentarios": true,
+   "arquetipos": [
+    "quitar algo universal de tu vida"
+   ]
+  },
+  "naufrago-sin-agua": {
+   "titulo": "¿Qué pasaría si te quedaras atrapado en el mar sin agua 3 días?",
+   "titulo_chars": 63,
+   "titulo_cifra": true,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 10,
+   "gancho_en_situacion": false,
+   "escenas": 14,
+   "palabras": 165,
+   "personas_con_nombre": 1,
+   "anios_citados": 1,
+   "caso_real_pct": 39,
+   "caso_real_aparece_en": 0.57,
+   "datos_por_100_palabras": 4.2,
+   "contadores": 3,
+   "datos_en_pantalla": 3,
+   "frases_cortas": 5,
+   "cierra_a_comentarios": true,
+   "arquetipos": [
+    "quitar algo universal de tu vida"
+   ]
+  },
+  "sin-casco-en-el-espacio": {
+   "titulo": "¿Qué le pasaría a tu cuerpo 1 minuto sin casco en el espacio?",
+   "titulo_chars": 61,
+   "titulo_cifra": true,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 12,
+   "gancho_en_situacion": true,
+   "escenas": 17,
+   "palabras": 234,
+   "personas_con_nombre": 1,
+   "anios_citados": 2,
+   "caso_real_pct": 48,
+   "caso_real_aparece_en": 0.53,
+   "datos_por_100_palabras": 6.0,
+   "contadores": 3,
+   "datos_en_pantalla": 7,
+   "frases_cortas": 3,
+   "cierra_a_comentarios": true,
+   "arquetipos": [
+    "cuerpo humano / salud"
+   ]
+  },
+  "te-traga-una-ballena": {
+   "titulo": "¿Qué pasaría si te tragara una ballena?",
+   "titulo_chars": 39,
+   "titulo_cifra": true,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 10,
+   "gancho_en_situacion": true,
+   "escenas": 16,
+   "palabras": 192,
+   "personas_con_nombre": 0,
+   "anios_citados": 2,
+   "caso_real_pct": 0,
+   "caso_real_aparece_en": null,
+   "datos_por_100_palabras": 6.8,
+   "contadores": 1,
+   "datos_en_pantalla": 2,
+   "frases_cortas": 2,
+   "cierra_a_comentarios": true,
+   "arquetipos": []
+  },
+  "traicionar-a-la-mafia": {
+   "titulo": "¿Qué pasaría si traicionaras a la mafia?",
+   "titulo_chars": 40,
+   "titulo_cifra": false,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 10,
+   "gancho_en_situacion": true,
+   "escenas": 15,
+   "palabras": 168,
+   "personas_con_nombre": 6,
+   "anios_citados": 2,
+   "caso_real_pct": 74,
+   "caso_real_aparece_en": 0.27,
+   "datos_por_100_palabras": 7.1,
+   "contadores": 3,
+   "datos_en_pantalla": 1,
+   "frases_cortas": 2,
+   "cierra_a_comentarios": true,
+   "arquetipos": [
+    "ser alguien con poder o un rol ajeno"
+   ]
+  },
+  "un-ano-sin-sol": {
+   "titulo": "¿Qué pasaría si no vieras la luz del sol en 1 año?",
+   "titulo_chars": 50,
+   "titulo_cifra": true,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 10,
+   "gancho_en_situacion": true,
+   "escenas": 15,
+   "palabras": 187,
+   "personas_con_nombre": 2,
+   "anios_citados": 1,
+   "caso_real_pct": 70,
+   "caso_real_aparece_en": 0.27,
+   "datos_por_100_palabras": 5.3,
+   "contadores": 5,
+   "datos_en_pantalla": 6,
+   "frases_cortas": 1,
+   "cierra_a_comentarios": true,
+   "arquetipos": [
+    "quitar algo universal de tu vida"
+   ]
+  },
+  "una-semana-sin-dormir": {
+   "titulo": "¿Qué pasaría si no durmieras en una semana?",
+   "titulo_chars": 43,
+   "titulo_cifra": true,
+   "titulo_2a_persona": true,
+   "titulo_peligro": false,
+   "gancho_palabras": 9,
+   "gancho_en_situacion": true,
+   "escenas": 13,
+   "palabras": 154,
+   "personas_con_nombre": 1,
+   "anios_citados": 1,
+   "caso_real_pct": 39,
+   "caso_real_aparece_en": 0.54,
+   "datos_por_100_palabras": 7.8,
+   "contadores": 2,
+   "datos_en_pantalla": 3,
+   "frases_cortas": 3,
+   "cierra_a_comentarios": true,
+   "arquetipos": [
+    "quitar algo universal de tu vida"
+   ]
+  }
+ }
+}

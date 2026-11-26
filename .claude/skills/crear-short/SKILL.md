@@ -7,7 +7,11 @@ description: Crea un YouTube Short animado del canal «Hipotéticos» de princip
 
 ## 0 · Antes de escribir
 1. Lee la guía del nicho: `data/research/style_guide.json` (la mantiene la skill `investigar-nicho`).
-   Si tiene más de 30 días o no existe, propón actualizarla.
+   Si tiene más de 30 días o no existe, propón actualizarla. Las reglas marcadas **«(propio…)»** salen de los
+   Shorts que mejor han funcionado en ESTE canal y pesan más que las de la competencia: premisa universal, giro a
+   un caso real con nombre y año, humor seco, cierre con postura. Sigue la fórmula en 2 de cada 3 Shorts y prueba
+   algo distinto en el tercero. Si no hay ganadores registrados, pregunta cuáles han ido mejor
+   (`python -m fabrica research --winner <slug> ...`).
 2. Elige la idea: `python -m fabrica ideas` (puntúa y descarta duplicados del registro `data/registry.sqlite`).
 3. Mira el catálogo del motor para saber qué se puede dibujar:
    `python -c "from fabrica.script.writer import catalog; print(catalog())"`.
