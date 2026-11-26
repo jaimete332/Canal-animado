@@ -1719,3 +1719,39 @@ def _jupiter_ball(ctx, p, t):
 
 
 PROPS.update({"plane_tail": _plane_tail, "probe": _probe, "jupiter_ball": _jupiter_ball})
+
+
+# ============================================================================ zanahoria (Shorts de «comer X cada día»)
+def _carrot(ctx, p, t):
+    """Zanahoria(s) con hojas: `n` (1-6) en montón y `angle` (rad). El origen está en la punta, crece hacia arriba."""
+    n = max(1, min(6, int(p.get("n", 1))))
+    for i in range(n):
+        k = i - (n - 1) / 2
+        with saved(ctx):
+            ctx.translate(k * 78, (i % 2) * 26)
+            ctx.rotate(p.get("angle", 0.0) + k * 0.2)
+            for a in (-0.5, 0.0, 0.5):  # hojas
+                with saved(ctx):
+                    ctx.translate(0, -216)
+                    ctx.rotate(a)
+                    ellipse(ctx, 0, -58, 17, 62)
+                    fill_stroke(ctx, "#4E9A3A", OUT * 0.6)
+            ctx.new_path()
+            ctx.move_to(-48, -208)
+            ctx.curve_to(-54, -120, -16, -30, 0, 0)
+            ctx.curve_to(16, -30, 54, -120, 48, -208)
+            ctx.curve_to(32, -230, -32, -230, -48, -208)
+            ctx.close_path()
+            fill_stroke(ctx, "#FF8A1F", OUT)
+            for y, w in ((-170, 30), (-120, 24), (-70, 14)):  # surcos
+                ctx.move_to(-w, y)
+                ctx.line_to(-w + 22, y + 6)
+                ctx.set_source_rgba(0.62, 0.28, 0.02, 0.7)
+                ctx.set_line_width(OUT * 0.45)
+                ctx.stroke()
+            ellipse(ctx, -22, -150, 8, 34)
+            ctx.set_source_rgba(1, 1, 1, 0.3)
+            ctx.fill()
+
+
+PROPS.update({"carrot": _carrot})

@@ -1,0 +1,585 @@
+{
+  "title": "¿Qué pasa si aguantas un estornudo?",
+  "idea": "¿Qué pasa si aguantas un estornudo?",
+  "slug": "aguantar-un-estornudo",
+  "category": "cuerpo",
+  "question": "¿Aguantas los estornudos?",
+  "music_mood": "tense",
+  "scenes": [
+    {
+      "id": "e01",
+      "beat": "hook",
+      "narration": "Vas a estornudar y decides aguantarlo.",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.45,
+          "action": "idle",
+          "expression": "scared",
+          "extras": {
+            "swell": 0.15
+          }
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿AGUANTAR UN",
+              "ESTORNUDO?"
+            ],
+            "y": 250,
+            "size": 108
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.3
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.0,
+          "gain_db": -7
+        },
+        {
+          "name": "pop",
+          "at": 0.3,
+          "gain_db": -6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "estornudar",
+        "aguantarlo"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/aguantar-un-estornudo/e01.wav"
+    },
+    {
+      "id": "e02",
+      "beat": "setup",
+      "narration": "Te tapas la nariz y cierras la boca. Mala idea.",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.45,
+          "action": "shock",
+          "expression": "shock",
+          "extras": {
+            "swell": 0.5
+          }
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "NARIZ Y BOCA TAPADAS",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#E8392F",
+            "at_word": 2
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 9,
+          "gain_db": -6
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "Mala",
+        "idea"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/aguantar-un-estornudo/e02.wav"
+    },
+    {
+      "id": "e03",
+      "beat": "development",
+      "narration": "El aire no tiene salida y la presión se dispara dentro de tu cabeza.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF8A6B"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.55,
+          "action": "idle",
+          "expression": "dizzy",
+          "extras": {
+            "swell": 1.0
+          }
+        },
+        "props": [
+          {
+            "type": "pressure",
+            "x": 0.5,
+            "y": 0.55,
+            "r": 360,
+            "n": 8
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Bloquear nariz y boca para parar un estornudo es una maniobra peligrosa",
+            "at_word": 8,
+            "y": 300
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "shake": 0.12
+        }
+      },
+      "claims": [
+        {
+          "text": "Los autores del caso publicado advierten de que parar un estornudo tapando nariz y boca es una maniobra peligrosa",
+          "kind": "fact",
+          "source": "BMJ Case Reports (2018); NPR"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.1,
+          "gain_db": -8
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "presión",
+        "cabeza"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/aguantar-un-estornudo/e03.wav"
+    },
+    {
+      "id": "e04",
+      "beat": "climax",
+      "narration": "En dos mil dieciocho, un británico de treinta y cuatro años lo hizo.",
+      "visual": {
+        "background": {
+          "type": "color",
+          "color": "#1F2433"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "newspaper",
+            "x": 0.5,
+            "y": 0.72,
+            "scale": 1.1,
+            "paper": "BMJ CASE REPORTS",
+            "headline": "TAPÓ NARIZ Y BOCA\nPARA NO ESTORNUDAR",
+            "year": "2018",
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "HOMBRE DE 34 AÑOS · 2018",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#1B1B3A",
+            "at_word": 4
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "En enero de 2018 BMJ Case Reports publicó el caso de un hombre británico de 34 años que se rompió la garganta al aguantar un estornudo",
+          "kind": "fact",
+          "source": "BMJ Case Reports; NPR; ScienceDaily"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 4
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "dieciocho",
+        "treinta"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/aguantar-un-estornudo/e04.wav"
+    },
+    {
+      "id": "e05",
+      "beat": "climax",
+      "narration": "Se le desgarró la garganta.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF8A6B"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.84,
+          "scale": 1.6,
+          "action": "shock",
+          "expression": "shock",
+          "extras": {
+            "swell": 0.6
+          }
+        },
+        "props": [
+          {
+            "type": "pow",
+            "x": 0.5,
+            "y": 0.62,
+            "scale": 1.0,
+            "at_word": 3
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Desgarro en la parte posterior de la garganta",
+            "at_word": 3,
+            "y": 300
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w3"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "El paciente sufrió una rotura de la parte posterior de la faringe",
+          "kind": "fact",
+          "source": "BMJ Case Reports (2018); NPR"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "boom",
+          "at_word": 3,
+          "gain_db": -5
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "desgarró"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/aguantar-un-estornudo/e05.wav"
+    },
+    {
+      "id": "e06",
+      "beat": "climax",
+      "narration": "El aire se coló bajo la piel del cuello, y le crujía al tocarlo.",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.82,
+          "scale": 1.5,
+          "action": "idle",
+          "expression": "scared",
+          "extras": {
+            "swell": 0.7
+          }
+        },
+        "props": [
+          {
+            "type": "bubbles",
+            "x": 0.5,
+            "y": 0.62,
+            "at_word": 6
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Burbujas de aire bajo la piel del cuello: se oían crujidos al palparlo",
+            "at_word": 6,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Hubo enfisema subcutáneo extenso en el cuello y crepitación palpable del cuello al tórax",
+          "kind": "fact",
+          "source": "BMJ Case Reports (2018); CBS News"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sizzle",
+          "at_word": 6,
+          "gain_db": -8
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "crujía",
+        "cuello"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/aguantar-un-estornudo/e06.wav"
+    },
+    {
+      "id": "e07",
+      "beat": "ending",
+      "narration": "Pasó días en el hospital, alimentado por sonda.",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.84,
+          "scale": 1.45,
+          "action": "idle",
+          "expression": "tired"
+        },
+        "props": [
+          {
+            "type": "heart",
+            "x": 0.8,
+            "y": 0.5,
+            "scale": 0.5,
+            "bpm": 90
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "HOSPITAL",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#2B6BE8",
+            "at_word": 3
+          },
+          {
+            "type": "fact",
+            "text": "Sonda para alimentarlo y antibióticos intravenosos",
+            "at_word": 6,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Fue alimentado por sonda y tratado con antibióticos intravenosos hasta que bajó la inflamación (unos 7 días)",
+          "kind": "fact",
+          "source": "BMJ Case Reports (2018); NPR"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 3
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "hospital",
+        "sonda"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/aguantar-un-estornudo/e07.wav"
+    },
+    {
+      "id": "e08",
+      "beat": "ending",
+      "narration": "Se recuperó, pero los médicos avisaron: nunca aguantes un estornudo.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#E8392F",
+          "c2": "#FF8A6B"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.45,
+          "action": "point_up",
+          "expression": "determined",
+          "extras": {
+            "swell": 0.0
+          }
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "NUNCA LO AGUANTES",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#E8392F",
+            "at_word": 7
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Se recuperó por completo y se le aconsejó no taparse nariz y boca al estornudar",
+          "kind": "fact",
+          "source": "BMJ Case Reports (2018); NPR"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 7,
+          "gain_db": -6
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "nunca",
+        "estornudo"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/aguantar-un-estornudo/e08.wav"
+    },
+    {
+      "id": "e09",
+      "beat": "ending",
+      "narration": "¿Tú lo aguantas alguna vez? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.55,
+          "scale": 1.3,
+          "action": "talk",
+          "expression": "excited",
+          "actions": [
+            [
+              "w5",
+              "point_down"
+            ]
+          ]
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 5,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 5
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.3,
+      "voice_clip": "assets/voice_eleven/aguantar-un-estornudo/e09.wav"
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasa si aguantas un estornudo? 🤧😱",
+    "hashtags": [
+      "#quepasasi",
+      "#estornudo",
+      "#cuerpohumano",
+      "#curiosidades",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasa si",
+      "aguantar un estornudo",
+      "estornudo",
+      "garganta rota",
+      "bmj case reports",
+      "cuerpo humano",
+      "curiosidades",
+      "ciencia",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Aguantas los estornudos? 🤧👇",
+    "description": "Vas a estornudar y lo aguantas: te tapas la nariz y cierras la boca. ¿Qué puede pasar? 🤧\n\nUn caso real publicado en una revista médica enseña por qué no deberías hacerlo.\n\n🧪 DATOS REALES DEL VÍDEO\n• En enero de 2018, BMJ Case Reports publicó el caso de un hombre británico de 34 años que se rompió la parte posterior de la garganta al aguantar un estornudo tapándose nariz y boca.\n• El aire se coló bajo la piel del cuello (enfisema subcutáneo) y se notaban crujidos al palpar.\n• Estuvo hospitalizado con sonda de alimentación y antibióticos intravenosos; se recuperó por completo.\n• Los autores advierten de que bloquear nariz y boca para parar un estornudo es una maniobra peligrosa.\n\n⚠️ Es un caso excepcional y esto no es un consejo médico: ante cualquier dolor o hinchazón en el cuello tras estornudar, consulta a un médico.\n\n📚 Fuentes: BMJ Case Reports (enero de 2018); NPR; ScienceDaily; CBS News.\n\n💬 ¿Aguantas los estornudos? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasa si…?».\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasasi #estornudo #cuerpohumano #curiosidades #shorts",
+    "target_seconds": [
+      22,
+      38
+    ],
+    "thumbnail": {
+      "scene": "e03",
+      "t": 1.4,
+      "lines": [
+        "¿AGUANTAR UN",
+        "ESTORNUDO?"
+      ],
+      "badge": "NUNCA LO HAGAS",
+      "badge_pos": [
+        540,
+        1640
+      ],
+      "y": 260,
+      "crop_y": 0.5,
+      "h_shift": 0,
+      "h_scale": 0.9
+    }
+  }
+}

@@ -1,0 +1,903 @@
+{
+  "title": "¿Qué pasa si comes 10 zanahorias al día durante un mes?",
+  "idea": "¿Qué pasa si comes 10 zanahorias al día durante un mes?",
+  "slug": "diez-zanahorias-al-dia",
+  "category": "cuerpo",
+  "question": "¿Te volverías naranja comiendo zanahorias?",
+  "music_mood": "funny",
+  "scenes": [
+    {
+      "id": "z01",
+      "beat": "hook",
+      "narration": "Empiezas a comer diez zanahorias al día. Durante un mes.",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.34,
+          "y": 0.8,
+          "scale": 1.4,
+          "action": "idle",
+          "expression": "excited",
+          "extras": {
+            "tint": 0.0
+          }
+        },
+        "props": [
+          {
+            "type": "carrot",
+            "x": 0.74,
+            "y": 0.74,
+            "n": 6,
+            "scale": 0.85,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "title",
+            "lines": [
+              "¿10 ZANAHORIAS",
+              "AL DÍA?"
+            ],
+            "y": 250,
+            "size": 108
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            0.3
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "riser",
+          "at": 0.0,
+          "gain_db": -7
+        },
+        {
+          "name": "pop",
+          "at": 0.3,
+          "gain_db": -6
+        }
+      ],
+      "transition": "cut",
+      "emphasis": [
+        "diez",
+        "zanahorias"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z01.wav"
+    },
+    {
+      "id": "z02",
+      "beat": "setup",
+      "narration": "Primera semana: no notas nada. Las zanahorias son sanas, ¿no?",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.36,
+          "y": 0.8,
+          "scale": 1.4,
+          "action": "talk",
+          "expression": "smug",
+          "extras": {
+            "tint": 0.0
+          }
+        },
+        "props": [
+          {
+            "type": "carrot",
+            "x": 0.76,
+            "y": 0.74,
+            "n": 3,
+            "scale": 0.8
+          }
+        ],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "SEMANA 1",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#2B6BE8",
+            "at_word": 0
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 0
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "nada"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z02.wav"
+    },
+    {
+      "id": "z03",
+      "beat": "setup",
+      "narration": "Son naranjas por el betacaroteno, un pigmento natural.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FF8A1F",
+          "c2": "#FFB45C"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "carrot",
+            "x": 0.5,
+            "y": 0.78,
+            "n": 1,
+            "scale": 1.6,
+            "enter": "pop"
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "El betacaroteno es el pigmento naranja de las zanahorias",
+            "at_word": 4,
+            "y": 300
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "El betacaroteno es el pigmento que da el color naranja a las zanahorias",
+          "kind": "fact",
+          "source": "Cleveland Clinic"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 4
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "betacaroteno"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z03.wav"
+    },
+    {
+      "id": "z04",
+      "beat": "development",
+      "narration": "Una zanahoria mediana tiene unos cuatro miligramos.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FF8A1F",
+          "c2": "#FFB45C"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "carrot",
+            "x": 0.5,
+            "y": 0.8,
+            "n": 1,
+            "scale": 1.4
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 4,
+            "suffix": " mg",
+            "at_word": 5,
+            "over": 0.8,
+            "y": 330,
+            "size": 170,
+            "sub": "DE BETACAROTENO POR ZANAHORIA MEDIANA"
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "Una zanahoria mediana tiene unos 4 mg de betacaroteno",
+          "kind": "fact",
+          "source": "Cleveland Clinic"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 5
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "cuatro"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z04.wav"
+    },
+    {
+      "id": "z05",
+      "beat": "development",
+      "narration": "Diez al día son unos cuarenta miligramos. Ahí empieza el problema.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FF8A1F",
+          "c2": "#FFB45C"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "carrot",
+            "x": 0.5,
+            "y": 0.82,
+            "n": 6,
+            "scale": 1.1
+          }
+        ],
+        "overlays": [
+          {
+            "type": "counter",
+            "from": 0,
+            "to": 40,
+            "suffix": " mg/día",
+            "at_word": 4,
+            "over": 0.8,
+            "y": 330,
+            "size": 150,
+            "sub": "UMBRAL: 20-50 mg AL DÍA DURANTE SEMANAS"
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w4"
+          ]
+        }
+      },
+      "claims": [
+        {
+          "text": "Unos 20-50 mg de betacaroteno al día durante semanas (≈ 10 zanahorias diarias) pueden causar carotenemia",
+          "kind": "fact",
+          "source": "Cleveland Clinic"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 4,
+          "gain_db": -6
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "cuarenta",
+        "problema"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z05.wav"
+    },
+    {
+      "id": "z06",
+      "beat": "development",
+      "narration": "Tu cuerpo no lo gasta todo, y el sobrante se acumula en la piel.",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.4,
+          "action": "think",
+          "expression": "worried",
+          "extras": {
+            "tint": 0.25
+          }
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "El exceso de betacaroteno se deposita en la capa externa de la piel",
+            "at_word": 8,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "El exceso de betacaroteno se acumula en la capa más externa de la piel (estrato córneo)",
+          "kind": "fact",
+          "source": "DermNet; Wikipedia (carotenemia)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 8
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "acumula",
+        "piel"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z06.wav"
+    },
+    {
+      "id": "z07",
+      "beat": "development",
+      "narration": "Semana tres: tu piel empieza a ponerse amarillenta, casi naranja.",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.4,
+          "action": "shock",
+          "expression": "shock",
+          "extras": {
+            "tint": 1.0
+          }
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "SEMANA 3",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#E8392F",
+            "at_word": 0
+          }
+        ],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w5"
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 5,
+          "gain_db": -6
+        }
+      ],
+      "transition": "flash",
+      "emphasis": [
+        "naranja"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z07.wav"
+    },
+    {
+      "id": "z08",
+      "beat": "climax",
+      "narration": "Se nota primero en la nariz, las palmas y las plantas de los pies.",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.4,
+          "action": "present",
+          "expression": "wow",
+          "extras": {
+            "tint": 1.0
+          }
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "NARIZ · PALMAS · PLANTAS",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#1B1B3A",
+            "at_word": 5
+          },
+          {
+            "type": "fact",
+            "text": "Primero amarillea la nariz, los pliegues de la nariz, las palmas y las plantas",
+            "at_word": 0,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "La carotenodermia se ve primero en la nariz, los pliegues nasolabiales, las palmas y las plantas, antes de extenderse",
+          "kind": "fact",
+          "source": "DermNet; Wikipedia (carotenosis)"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 5
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "palmas",
+        "plantas"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z08.wav"
+    },
+    {
+      "id": "z09",
+      "beat": "climax",
+      "narration": "Se llama carotenemia y no es peligrosa.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FF8A1F",
+          "c2": "#FFB45C"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.78,
+          "scale": 1.25,
+          "action": "talk",
+          "expression": "happy",
+          "extras": {
+            "tint": 0.9
+          }
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "CAROTENEMIA",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#FF8A1F",
+            "at_word": 2
+          },
+          {
+            "type": "fact",
+            "text": "Es inofensiva y no requiere tratamiento",
+            "at_word": 4,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "La carotenemia es inofensiva y no requiere tratamiento",
+          "kind": "fact",
+          "source": "Cleveland Clinic; Wikipedia"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 2
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "carotenemia",
+        "peligrosa"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z09.wav"
+    },
+    {
+      "id": "z10",
+      "beat": "climax",
+      "narration": "No es ictericia: el blanco de tus ojos sigue blanco.",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.4,
+          "action": "point_up",
+          "expression": "wow",
+          "extras": {
+            "tint": 0.9
+          }
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "En la carotenemia el blanco de los ojos NO se vuelve amarillo; en la ictericia, sí",
+            "at_word": 4,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "En la carotenemia la esclerótica (blanco del ojo) se respeta, lo que la distingue de la ictericia",
+          "kind": "fact",
+          "source": "Cleveland Clinic; DermNet; Wikipedia"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 4
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "ojos",
+        "blanco"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z10.wav"
+    },
+    {
+      "id": "z11",
+      "beat": "climax",
+      "narration": "Y tampoco es intoxicación por vitamina A: el betacaroteno no la causa.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FF8A1F",
+          "c2": "#FFB45C"
+        },
+        "character": {
+          "visible": false
+        },
+        "props": [
+          {
+            "type": "carrot",
+            "x": 0.5,
+            "y": 0.8,
+            "n": 2,
+            "scale": 1.3
+          }
+        ],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "El exceso de betacaroteno NO produce toxicidad por vitamina A",
+            "at_word": 0,
+            "y": 300
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "El exceso de betacaroteno no provoca toxicidad por vitamina A",
+          "kind": "fact",
+          "source": "Cleveland Clinic"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 6
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "vitamina"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z11.wav"
+    },
+    {
+      "id": "z12",
+      "beat": "ending",
+      "narration": "En cuanto lo dejas, tu piel recupera su color en semanas o meses.",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.4,
+          "action": "talk",
+          "expression": "happy",
+          "extras": {
+            "tint": 0.35
+          }
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "SEMANAS O MESES",
+            "x": 540,
+            "y": 300,
+            "size": 66,
+            "bg": "#2B6BE8",
+            "at_word": 8
+          }
+        ],
+        "camera": {
+          "move": "push_in"
+        }
+      },
+      "claims": [
+        {
+          "text": "El color de la piel vuelve a la normalidad al reducir el betacaroteno, en semanas o meses",
+          "kind": "fact",
+          "source": "Cleveland Clinic; DermNet"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "tick",
+          "at_word": 7
+        }
+      ],
+      "transition": "whip",
+      "emphasis": [
+        "semanas",
+        "meses"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z12.wav"
+    },
+    {
+      "id": "z13",
+      "beat": "ending",
+      "narration": "Ojo: pasa igual con los suplementos de betacaroteno.",
+      "visual": {
+        "background": {
+          "type": "living_room"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.8,
+          "scale": 1.4,
+          "action": "point_down",
+          "expression": "worried",
+          "extras": {
+            "tint": 0.5
+          }
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "fact",
+            "text": "Los suplementos de betacaroteno también pueden causarla",
+            "at_word": 4,
+            "y": 560
+          }
+        ],
+        "camera": {
+          "move": "static"
+        }
+      },
+      "claims": [
+        {
+          "text": "Los suplementos de betacaroteno también pueden causar carotenemia",
+          "kind": "fact",
+          "source": "Cleveland Clinic"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "pop",
+          "at_word": 4
+        }
+      ],
+      "transition": "slide",
+      "emphasis": [
+        "suplementos"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z13.wav"
+    },
+    {
+      "id": "z14",
+      "beat": "ending",
+      "narration": "Así que sí, puedes ponerte naranja. Pero tendrías que insistir mucho.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FF8A1F",
+          "c2": "#FFB45C"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.78,
+          "scale": 1.3,
+          "action": "celebrate",
+          "expression": "smug",
+          "extras": {
+            "tint": 1.0
+          }
+        },
+        "props": [
+          {
+            "type": "carrot",
+            "x": 0.76,
+            "y": 0.8,
+            "n": 4,
+            "scale": 0.8
+          }
+        ],
+        "overlays": [],
+        "camera": {
+          "move": "punch",
+          "impacts": [
+            "w4"
+          ]
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "hit",
+          "at_word": 4,
+          "gain_db": -6
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [
+        "naranja",
+        "insistir"
+      ],
+      "pause_after": 0.06,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z14.wav"
+    },
+    {
+      "id": "z15",
+      "beat": "ending",
+      "narration": "¿Tú aguantarías un mes de zanahorias? Te leo en comentarios.",
+      "visual": {
+        "background": {
+          "type": "burst",
+          "c1": "#FF8A1F",
+          "c2": "#FFB45C"
+        },
+        "character": {
+          "x": 0.5,
+          "y": 0.55,
+          "scale": 1.3,
+          "action": "talk",
+          "expression": "excited",
+          "extras": {
+            "tint": 1.0
+          },
+          "actions": [
+            [
+              "w7",
+              "point_down"
+            ]
+          ]
+        },
+        "props": [],
+        "overlays": [
+          {
+            "type": "label",
+            "text": "COMENTA ABAJO",
+            "x": 540,
+            "y": 330,
+            "size": 70,
+            "at_word": 7,
+            "arrow": "down"
+          }
+        ],
+        "camera": {
+          "move": "zoom_burst"
+        }
+      },
+      "claims": [],
+      "sfx": [
+        {
+          "name": "ding",
+          "at_word": 7
+        }
+      ],
+      "transition": "zoom",
+      "emphasis": [],
+      "pause_after": 0.35,
+      "voice_clip": "assets/voice_eleven/diez-zanahorias-al-dia/z15.wav"
+    }
+  ],
+  "metadata": {
+    "title": "¿Qué pasa si comes 10 zanahorias al día durante un mes? 🥕😳",
+    "hashtags": [
+      "#quepasasi",
+      "#zanahoria",
+      "#cuerpohumano",
+      "#curiosidades",
+      "#shorts"
+    ],
+    "tags": [
+      "qué pasa si",
+      "comer zanahorias todos los días",
+      "carotenemia",
+      "piel naranja",
+      "betacaroteno",
+      "cuerpo humano",
+      "curiosidades",
+      "ciencia",
+      "animación",
+      "hipotéticos"
+    ],
+    "pinned_comment": "¿Aguantarías un mes de zanahorias? 🥕👇",
+    "description": "Comes diez zanahorias al día durante un mes. ¿Te vuelves naranja de verdad? 🥕\n\nLeo se convierte en el conejillo de indias: qué pasa con tu piel, por qué ocurre y cuándo se va.\n\n🧪 DATOS REALES DEL VÍDEO\n• Una zanahoria mediana tiene unos 4 mg de betacaroteno, el pigmento que las pone naranjas.\n• Unos 20-50 mg de betacaroteno al día durante semanas (≈ 10 zanahorias diarias) pueden causar carotenemia.\n• La carotenemia amarillea la piel, sobre todo en la nariz, los pliegues de la nariz, las palmas y las plantas de los pies.\n• Es inofensiva: no es toxicidad por vitamina A y el blanco de los ojos no cambia (en la ictericia, sí).\n• Se revierte al reducir el betacaroteno, en semanas o meses. También la causan los suplementos.\n\n⚠️ Esto no es un consejo médico: si notas la piel o los ojos amarillos, consulta a un médico para descartar otras causas.\n\n📚 Fuentes: Cleveland Clinic («¿Pueden las zanahorias ponerte la piel naranja?» y «Carotenemia»); DermNet NZ (carotenoderma); Wikipedia (carotenemia y carotenosis).\n\n💬 ¿Aguantarías un mes de zanahorias? Te leo en comentarios.\n🔔 Suscríbete a Hipotéticos para más «¿qué pasa si…?».\n\nMúsica y efectos de sonido originales del canal. Voz sintética.\n\n#quepasasi #zanahoria #cuerpohumano #curiosidades #shorts",
+    "target_seconds": [
+      50,
+      75
+    ],
+    "thumbnail": {
+      "scene": "z07",
+      "t": 1.6,
+      "lines": [
+        "¿10 ZANAHORIAS",
+        "AL DÍA?"
+      ],
+      "badge": "¡PIEL NARANJA!",
+      "badge_pos": [
+        540,
+        1640
+      ],
+      "y": 260,
+      "crop_y": 0.5,
+      "h_shift": 0,
+      "h_scale": 0.9
+    }
+  }
+}

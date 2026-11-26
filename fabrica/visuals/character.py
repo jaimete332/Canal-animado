@@ -80,6 +80,19 @@ class Character:
 
     # ------------------------------------------------------------------
     def draw(self, ctx: cairo.Context, pose: Pose) -> None:
+        """`extras["tint"]` = cantidad 0..1 de piel anaranjada (carotenemia); `tint_color` cambia el tono (p. ej. verde)."""
+        tint = float(pose.extras.get("tint", 0) or 0)
+        if not tint:
+            return self._draw(ctx, pose)
+        target = pose.extras.get("tint_color", (1.0, 0.58, 0.12))
+        old = (self.p["skin"], self.p["skin_sh"])
+        self.p["skin"], self.p["skin_sh"] = mix(old[0], target, 0.8 * tint), mix(old[1], darken(target, 0.1), 0.8 * tint)
+        try:
+            self._draw(ctx, pose)
+        finally:
+            self.p["skin"], self.p["skin_sh"] = old
+
+    def _draw(self, ctx: cairo.Context, pose: Pose) -> None:
         u = 100 * pose.scale
         with saved(ctx):
             ctx.translate(pose.x, pose.y)

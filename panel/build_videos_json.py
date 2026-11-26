@@ -19,6 +19,8 @@ CALENDARIO = {  # slug -> fecha y hora de publicación (hora de España)
     "naufrago-sin-agua": "2026-11-29T18:30",
     "ascensor-sin-comida-3-semanas": "2026-11-30T18:30",
     "caer-desde-la-iss": "2026-12-01T18:30",
+    "diez-zanahorias-al-dia": "2026-12-02T18:30",
+    "aguantar-un-estornudo": "2026-12-03T18:30",
 }
 REPO_RAW = "https://github.com/jaimete332/Canal-animado/raw/claude/youtube-shorts-automation-qkjrhy/"
 
