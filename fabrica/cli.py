@@ -148,8 +148,14 @@ def cmd_tiktok_upload(a):
 
 
 def cmd_research(a):
-    if a.winner or a.own:
-        from .research.own import add_winners, report_own_md, run_own
+    if a.metrics_template:
+        from .research.own import metrics_template
+        print("Rellena", metrics_template(), "con YouTube Studio y luego: python -m fabrica research --own --metrics <archivo.csv>")
+        return
+    if a.winner or a.own or a.metrics:
+        from .research.own import add_winners, import_metrics, report_own_md, run_own
+        if a.metrics:
+            print(len(import_metrics(Path(a.metrics))), "Shorts con métricas")
         if a.winner:
             add_winners(a.winner, nota=a.note or "", views=a.views, retention=a.retention)
         res = run_own()
@@ -157,7 +163,7 @@ def cmd_research(a):
         return
     from .research.niche import run
     g = run(queries=a.queries, from_file=Path(a.from_file) if a.from_file else None, per_query=a.per_query,
-            months=a.months)
+            months=a.months, outliers=a.outliers)
     print("\n".join(f"• {r}" for r in g["rules"]))
 
 
@@ -257,6 +263,9 @@ def main(argv=None):
     s = sub.add_parser("research", help="investiga el nicho y actualiza la guía de estilo")
     s.add_argument("--queries", nargs="*"); s.add_argument("--from-file"); s.add_argument("--per-query", type=int, default=25)
     s.add_argument("--months", type=int, default=12)
+    s.add_argument("--outliers", action="store_true", help="busca vídeos que despegaron en canales pequeños (≈3.600 unidades de cuota)")
+    s.add_argument("--metrics", help="CSV con métricas de Studio por Short (slug,views,likes,avg_view_pct,viewed_pct,...)")
+    s.add_argument("--metrics-template", action="store_true", help="crea la plantilla CSV con todos los Shorts")
     s.add_argument("--own", action="store_true", help="solo analiza los Shorts ganadores del propio canal (sin API)")
     s.add_argument("--winner", nargs="*", help="slugs de Shorts que mejor han funcionado (los declara el usuario)")
     s.add_argument("--note"); s.add_argument("--views", type=int); s.add_argument("--retention", type=float, help="%% visto medio")

@@ -18,6 +18,7 @@ Salidas en data/research/: own_winners.json (entrada), own_channel_<fecha>.json 
 """
 from __future__ import annotations
 
+import csv
 import datetime as dt
 import json
 import re
@@ -30,6 +31,8 @@ from .niche import OUT, _norm
 
 log = get_logger("research.own")
 WINNERS_FILE = OUT / "own_winners.json"
+METRICS_FILE = OUT / "own_metrics.csv"
+METRIC_COLS = ["views", "likes", "comments", "avg_view_pct", "viewed_pct", "subs_gained"]   # viewed_pct = «vistos» (no deslizados)
 STORIES = ROOT / "stories"
 TAG = "(propio"
 
@@ -142,6 +145,74 @@ def load_lessons() -> list[str]:
     return _winners_doc().get("lecciones", [])
 
 
+def _ranks(xs: list[float]) -> list[float]:
+    order = sorted(range(len(xs)), key=lambda i: xs[i])
+    r = [0.0] * len(xs)
+    i = 0
+    while i < len(order):
+        j = i
+        while j + 1 < len(order) and xs[order[j + 1]] == xs[order[i]]:
+            j += 1
+        for k in range(i, j + 1):
+            r[order[k]] = (i + j) / 2 + 1
+        i = j + 1
+    return r
+
+
+def spearman(x: list[float], y: list[float]) -> float | None:
+    if len(x) < 5 or len(set(x)) < 2 or len(set(y)) < 2:
+        return None
+    return round(statistics.correlation(_ranks(x), _ranks(y)), 2)
+
+
+def import_metrics(path: Path) -> dict[str, dict]:
+    """Importa métricas de YouTube Studio por Short (CSV con `slug` y columnas de METRIC_COLS, todas opcionales).
+    Acepta coma o punto y coma y decimales con coma. Se fusiona con lo ya guardado en own_metrics.csv."""
+    cur = load_metrics()
+    text = Path(path).read_text(encoding="utf-8-sig")
+    dialect = csv.excel_tab if "\t" in text.splitlines()[0] else (csv.excel if "," in text.splitlines()[0] else type("D", (csv.excel,), {"delimiter": ";"}))
+    for row in csv.DictReader(text.splitlines(), dialect=dialect):
+        slug = (row.get("slug") or "").strip()
+        if not slug or not (STORIES / f"{slug}.json").exists():
+            log.warning("Fila ignorada (slug desconocido): %r", slug)
+            continue
+        for c in METRIC_COLS:
+            v = (row.get(c) or "").strip().replace("%", "").replace(".", "" if c in ("views", "likes", "comments") else ".").replace(",", ".")
+            if v:
+                cur.setdefault(slug, {})[c] = float(v)
+    write_metrics(cur)
+    return cur
+
+
+def load_metrics() -> dict[str, dict]:
+    if not METRICS_FILE.exists():
+        return {}
+    out = {}
+    for row in csv.DictReader(METRICS_FILE.read_text(encoding="utf-8").splitlines()):
+        out[row["slug"]] = {c: float(row[c]) for c in METRIC_COLS if row.get(c)}
+    return out
+
+
+def write_metrics(m: dict[str, dict]) -> None:
+    OUT.mkdir(parents=True, exist_ok=True)
+    with METRICS_FILE.open("w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["slug", *METRIC_COLS])
+        for slug in sorted(m):
+            w.writerow([slug, *[m[slug].get(c, "") for c in METRIC_COLS]])
+
+
+def metrics_template() -> Path:
+    """Plantilla con todos los Shorts para rellenar con YouTube Studio (Analytics → Contenido → Shorts)."""
+    f = OUT / "own_metrics.template.csv"
+    with f.open("w", encoding="utf-8", newline="") as fh:
+        w = csv.writer(fh)
+        w.writerow(["slug", *METRIC_COLS])
+        for slug in _shorts():
+            w.writerow([slug, *[""] * len(METRIC_COLS)])
+    return f
+
+
 def metric_winners(top: int = 3) -> list[dict]:
     """Ganadores por métricas reales del registro (si ya se han descargado)."""
     try:
@@ -176,6 +247,12 @@ def _share(group, key):
 
 
 def analyze_own(winners: list[dict] | None = None) -> dict:
+    mets = load_metrics()
+    if winners is None and len(mets) >= 6:
+        key = "viewed_pct" if sum("viewed_pct" in m for m in mets.values()) >= 6 else "views"
+        ranked = sorted((s for s in mets if key in mets[s]), key=lambda s: mets[s][key], reverse=True)
+        k = max(3, len(ranked) // 4)
+        winners = [{"slug": s, "fuente": f"métricas ({key}={mets[s][key]:g})"} for s in ranked[:k]]
     winners = winners if winners is not None else (metric_winners() or load_winners())
     shorts = _shorts()
     wset = [w["slug"] for w in winners if w["slug"] in shorts]
@@ -204,8 +281,20 @@ def analyze_own(winners: list[dict] | None = None) -> dict:
         w_rate = round(sum(name in f["arquetipos"] for f in win) / len(win), 2)
         r_rate = round(sum(name in f["arquetipos"] for f in rest) / max(1, len(rest)), 2)
         arch[name] = {"ganadores": w_rate, "resto": r_rate, "bonus": round(max(0.0, min(8.0, 10 * (w_rate - r_rate))), 1)}
+    corr = {}
+    with_m = [s for s in feats if s in mets and mets[s]]
+    if len(with_m) >= 10:   # con menos de 10 Shorts con métricas una correlación no significa nada
+        for mname in METRIC_COLS:
+            ss = [s for s in with_m if mname in mets[s]]
+            if len(ss) < 10:
+                continue
+            for k in num + ["titulo_cifra", "titulo_2a_persona", "gancho_en_situacion"]:
+                r = spearman([float(feats[s][k] or 0) for s in ss], [mets[s][mname] for s in ss])
+                if r is not None and abs(r) >= 0.6:   # se prueban ~70 combinaciones: con 0,5 saldrían falsas por azar
+                    corr.setdefault(mname, {})[k] = {"rho": r, "n": len(ss)}
     return {"updated": dt.date.today().isoformat(), "n_ganadores": len(win), "n_resto": len(rest),
-            "ganadores": winners, "rasgos": comp, "arquetipos": arch,
+            "ganadores": winners, "rasgos": comp, "arquetipos": arch, "correlaciones": corr,
+            "n_con_metricas": len(with_m),
             "por_short": {s: feats[s] for s in feats}}
 
 
@@ -232,6 +321,11 @@ def own_rules(a: dict) -> list[str]:
         rules.append("Premisas ganadoras (arquetipos): " + "; ".join(
             f"{k} ({int(a['arquetipos'][k]['ganadores'] * 100)} % de los ganadores frente a {int(a['arquetipos'][k]['resto'] * 100)} % del resto)"
             for k in best) + f" {tag}.")
+    for mname, d in (a.get("correlaciones") or {}).items():
+        for k, v in sorted(d.items(), key=lambda kv: -abs(kv[1]["rho"]))[:3]:
+            sign = "más" if v["rho"] > 0 else "menos"
+            rules.append(f"HIPÓTESIS a confirmar con los próximos Shorts: más «{k}» ↔ {sign if v['rho'] < 0 else 'más'} «{mname}» "
+                         f"(Spearman {v['rho']}, n={v['n']}; se probaron muchos rasgos, puede ser azar) (propio, medido).")
     return rules + [f"{x} (propio, obs.)" if "(propio" not in x else x for x in load_lessons()]
 
 
@@ -244,6 +338,12 @@ def report_own_md(a: dict) -> str:
          "## Rasgos medidos (mediana o % de Shorts)", "", "| Rasgo | Ganadores | Resto | ¿Los 3 por encima? |", "|---|---|---|---|"]
     for k, d in a["rasgos"].items():
         L.append(f"| {k} | {d['ganadores']} | {d['resto']} | {'**sí**' if d['consistente'] else 'no'} |")
+    if a.get("correlaciones"):
+        L += ["", f"## Correlaciones rasgo ↔ métricas (Spearman, |ρ| ≥ 0,6; {a['n_con_metricas']} Shorts con métricas)", "",
+              "| Métrica | Rasgo | ρ | n |", "|---|---|---|---|"]
+        for mname, d in a["correlaciones"].items():
+            for k, v in sorted(d.items(), key=lambda kv: -abs(kv[1]["rho"])):
+                L.append(f"| {mname} | {k} | {v['rho']} | {v['n']} |")
     L += ["", "## Arquetipos de premisa", "", "| Arquetipo | Ganadores | Resto | Bonus en el banco de ideas |", "|---|---|---|---|"]
     for k, d in a["arquetipos"].items():
         L.append(f"| {k} | {d['ganadores']:.0%} | {d['resto']:.0%} | +{d['bonus']} |")

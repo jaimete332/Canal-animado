@@ -19,7 +19,13 @@ Es nuestra audiencia, nuestro personaje y nuestro formato: un Short propio que f
 
 ## Paso 0 · Lo propio primero (siempre, antes de mirar la competencia)
 
-1. **Averigua cuáles han ido mejor.** Si el usuario no lo ha dicho, pregúntaselo (con cifras si las tiene:
+0. **Pide las métricas de YouTube Studio de TODOS los Shorts** (es el dato que más falta): vistas, «me gusta»,
+   % visto medio y, sobre todo, **«vistos frente a deslizados»** (Analytics → Contenido → Shorts), que mide si el
+   gancho detiene el dedo. `python -m fabrica research --metrics-template` crea la plantilla
+   (`data/research/own_metrics.template.csv`); con ella rellena `python -m fabrica research --own --metrics archivo.csv`.
+   Con ≥ 10 Shorts con métricas el análisis correlaciona rasgos ↔ métricas (Spearman, |ρ| ≥ 0,6) y elige los
+   ganadores solo por el % de «vistos». Esas correlaciones salen como **hipótesis** (se prueban ~70 combinaciones).
+1. **Averigua cuáles han ido mejor.** Si no hay métricas, pregúntaselo al usuario (con cifras si las tiene:
    vistas y % visto medio). Regístralos:
    ```bash
    python -m fabrica research --winner caer-de-un-avion jefe-de-la-mafia un-ano-sin-sol \
@@ -44,6 +50,15 @@ Es nuestra audiencia, nuestro personaje y nuestro formato: un Short propio que f
    mandan a la API de YouTube ni a buscadores. Las consultas del Paso 1 son siempre genéricas del nicho.
 
 ## Paso 1 · Recoger datos del nicho (elige la mejor fuente disponible)
+
+**A0. Atípicos de canales pequeños (el paso que da con vídeos «top»).** El top por visualizaciones lo copan canales
+gigantes y anuncios; lo replicable son los vídeos que rindieron decenas de veces más que la media de **su propio**
+canal pequeño. `python -m fabrica research --outliers` busca por tramos mensuales (6 consultas × 6 tramos ≈ 3.600
+unidades de cuota), añade las estadísticas de cada canal (suscriptores, vistas/vídeo), descarta el ruido (videojuegos,
+fandom, deportes, política, anuncios) y compara los atípicos (≥ 8× su canal, canal ≤ 300 k vistas/vídeo, ≥ 100 k vistas)
+con el conjunto del formato en **forma de la pregunta, duración, tema y emoji**. Genera reglas «Atípicos: …» solo
+donde la diferencia es ≥ 10 puntos. Después **abre los vídeos de la tabla** (URLs en el informe) y analiza gancho,
+estructura y primer fotograma de los 5-10 mejores: es lo que no ve el análisis automático.
 
 **A. YouTube Data API (preferida, datos reales).** Necesita una clave gratuita de Google Cloud (YouTube Data API v3)
 en `YOUTUBE_API_KEY` (`.env`) o guardada como secreto de red para `www.googleapis.com` con el header `X-Goog-Api-Key`.
@@ -87,6 +102,9 @@ de título top frente al resto, temas, palabras, canales), `analysis_<fecha>.jso
 - **Explotar y explorar:** 2 de cada 3 Shorts siguen la fórmula ganadora; 1 de cada 3 prueba algo distinto
   (otro arquetipo, otro tipo de gancho) para no quedarse ciego a lo que podría rendir más.
 - Si propones ideas nuevas, que cada una lleve ya su **caso real con nombre y año** a verificar con fuentes.
+- Con el canal en 1.500-2.500 visitas por Short, **la duración no es la palanca** (medido: los atípicos duran igual que
+  el resto, mediana 58 s frente a 51 s). Lo que cambia es la premisa y los primeros 2 segundos: prueba formatos, no
+  longitudes.
 
 ## Paso 4 · Cerrar el ciclo (validar)
 

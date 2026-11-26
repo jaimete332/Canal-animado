@@ -1,8 +1,15 @@
 {
- "updated": "2026-11-24",
+ "updated": "2026-11-26",
  "source": "MEDIDO: YouTube Data API v3, 2 pasadas (12 meses × 9 consultas × 25 = 196 vídeos; 6 meses × 4 consultas × 50 = 198 vídeos; 334 únicos). Ver report_2026-11-19.md y report_2026-11-19_6m.md. OBSERVADO: reglas marcadas «(obs.)», deducidas a mano de títulos, duraciones y canales del top, más la investigación web inicial; no se han visto ni descargado los vídeos. ACTUALIZACIÓN 2026-11-24 (MEDIDO, YouTube Data API v3): 9 consultas × 40 vídeos, últimos 6 meses, 307 únicos, 76 en el top; ver report_2026-11-24.md y analysis_2026-11-24.json.",
- "n_videos": 307,
+ "n_videos": 560,
  "rules": [
+  "Título: usar pregunta «¿qué pasaría si…?» (aparece en el 55 % de los vídeos top).",
+  "Título: usar segunda persona (tú/te) (aparece en el 50 % de los vídeos top).",
+  "Título: usar con emoji (aparece en el 68 % de los vídeos top).",
+  "Atípicos: Tema «cuerpo humano» pesa 38 % de los vídeos que despegaron en canales pequeños frente a 17 % del conjunto (medido, n=32).",
+  "Atípicos: Forma de la pregunta «presente («qué pasa si…» / «what happens if…»)» pesa 59 % de los vídeos que despegaron en canales pequeños frente a 46 % del conjunto (medido, n=32).",
+  "Atípicos: Duración «51-65 s» pesa 38 % de los vídeos que despegaron en canales pequeños frente a 23 % del conjunto (medido, n=32).",
+  "Atípicos: Título «con emoji» pesa 59 % de los vídeos que despegaron en canales pequeños frente a 49 % del conjunto (medido, n=32).",
   "Duración 50-75 s (medido: mediana del top 72 s a 12 meses y 61 s a 6 meses; mediana de los hipotéticos puros del top: 60 s). Nada por debajo de 45 s salvo un dato único muy visual.",
   "Título con una cifra concreta cuando la idea la tenga (medido: 41-43 % en el top frente a 22-26 % en el resto): «5 segundos», «3 cabezas», «10.000 metros» (2026-11-24: la cifra discrimina menos, 37 % frente a 34 %: úsala cuando encaje, no a la fuerza.)",
   "Título con 1-2 emojis al final, de reacción y no decorativos: 💀 para peligro/cuerpo, 🤯 para dato sorprendente, 😱/😳 para susto (medido: emoji en 49-53 % del top) (2026-11-24: emoji en el 50 % del top frente a 36 % del resto.)",
@@ -44,16 +51,16 @@
   "¿Y si [personaje moderno] viajara a [época]?"
  ],
  "title_examples": [
-  "What If Time Stopped For 5 Seconds",
-  "¿Qué Pasa Dentro de la Pared al Cargar tu Móvil? 🤯",
-  "¿Qué pasaría si te TRAGARAN VIVO? 💀",
-  "¿Qué pasaría si caes al fondo del océano? 💀",
-  "What Happens If An Astronaut Gets Stuck Floating In Space? 😱",
-  "¿Qué pasaría si un científico moderno viajara a la Edad de Piedra?",
-  "¿Qué pasaría si todos los humanos saltáramos a la vez?",
-  "What If You Built a Dog With 3 Heads?! 🐕😱",
-  "He Put His Head in a Particle Accelerator",
-  "What If You Built a Real Cyborg?! 🦾⚡"
+  "What if you just booked it? Easy. | Booking.com",
+  "What If Humans Had Hummingbird Hearts 🤔",
+  "Nadie Sabe Qué PASA Si Tu MADRE Llega Al TRES 😨",
+  "What if Our Sun Disappeared 😱",
+  "¿Qué pasaría si cambiaras la forma en la que recorres tu ciudad?",
+  "What Would Happen If You Jumped Through a Hole in the Earth😱 #facts #shorts",
+  "What If You Built a Dog With 3 Heads?! 🐕😱 #shorts",
+  "What If The Hoover Dam Was Made Of Humans 😨",
+  "¿Qué pasa si siembras maíz y frijol juntos? 🌽🫘 #Shorts",
+  "⚡ ¿Qué Pasa Dentro de un Cargador Cuando Cargas tu Móvil? 😱🔌 #Electricidad"
  ],
  "references": [
   {
@@ -87,9 +94,9 @@
  ],
  "noise_excluded": "El top por vistas/día incluye vídeos ajenos al nicho que entran por la búsqueda «y si» o «si fuera» (canciones infantiles, recetas, gameplays de Minecraft, parodias, fandubs, countryballs). Se ignoraron al sacar las reglas observadas.",
  "target_seconds": {
-  "mediana_s": 61,
-  "min_s": 50,
-  "max_s": 75
+  "mediana_s": 49.0,
+  "min_s": 6,
+  "max_s": 84
  },
  "principle": "Replicar patrones (estructura, ritmo, formato), nunca guiones, personajes, marcas ni miniaturas ajenas.",
  "own_channel": {

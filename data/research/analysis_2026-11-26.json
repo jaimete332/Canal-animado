@@ -1,0 +1,1550 @@
+{
+ "outlier_profile": {
+  "n_relevantes": 250,
+  "n_atipicos": 32,
+  "forma": {
+   "presente («qué pasa si…» / «what happens if…»)": 59,
+   "condicional («qué pasaría si…»)": 41
+  },
+  "forma_base": {
+   "condicional («qué pasaría si…»)": 54,
+   "presente («qué pasa si…» / «what happens if…»)": 46
+  },
+  "duracion": {
+   "51-65 s": 38,
+   "21-35 s": 31,
+   ">65 s": 22,
+   "36-50 s": 6,
+   "≤20 s": 3
+  },
+  "duracion_base": {
+   "21-35 s": 28,
+   ">65 s": 27,
+   "51-65 s": 23,
+   "36-50 s": 16,
+   "≤20 s": 6
+  },
+  "tema": {
+   "cuerpo humano": 38,
+   "otro": 31,
+   "tierra / catástrofes": 9,
+   "espacio": 9,
+   "historia": 6,
+   "supervivencia": 3,
+   "tecnología": 3
+  },
+  "tema_base": {
+   "otro": 61,
+   "cuerpo humano": 17,
+   "espacio": 5,
+   "tierra / catástrofes": 4,
+   "supervivencia": 4,
+   "tecnología": 3,
+   "dinero / poder": 2,
+   "animales": 2,
+   "fantasía / poderes": 1,
+   "historia": 1
+  },
+  "emoji": {
+   "con emoji": 59,
+   "sin emoji": 41
+  },
+  "emoji_base": {
+   "sin emoji": 51,
+   "con emoji": 49
+  },
+  "duracion_mediana": {
+   "atipicos": 57.5,
+   "base": 49.0
+  },
+  "ejemplos": [
+   {
+    "title": "What Happens If You Eat Chia Seeds Every Day? 🌱🤯 | 3D Animation",
+    "views": 9651686,
+    "x": 164.0,
+    "duration_s": 30,
+    "channel": "BlueNova",
+    "subs": 11500,
+    "url": "https://youtube.com/shorts/auMVanZ6-QM"
+   },
+   {
+    "title": "⚙️🤯 ¿QUÉ PASA DENTRO DE UNA TRANSMISIÓN CUANDO CAMBIAS DE MARCHA? 🚗",
+    "views": 6105768,
+    "x": 160.5,
+    "duration_s": 26,
+    "channel": "CienciasIQ",
+    "subs": 75900,
+    "url": "https://youtube.com/shorts/SHlpnFVVuKA"
+   },
+   {
+    "title": "¿Qué pasaría si cambiaras la forma en la que recorres tu ciudad?",
+    "views": 35384755,
+    "x": 160.4,
+    "duration_s": 54,
+    "channel": "Unión Europea en México",
+    "subs": 1000,
+    "url": "https://youtube.com/shorts/89vn6UeNbK4"
+   },
+   {
+    "title": "What would happen if Earth fell into a black hole? #space #outerspace #blackhole #spacefacts",
+    "views": 4836159,
+    "x": 142.0,
+    "duration_s": 88,
+    "channel": "prodbeatsbymat",
+    "subs": 17500,
+    "url": "https://youtube.com/shorts/Zzs458AUj1M"
+   },
+   {
+    "title": "What Happens Inside Your Body After Eating a Cherry?",
+    "views": 6669738,
+    "x": 101.5,
+    "duration_s": 11,
+    "channel": "Dr.Edward",
+    "subs": 4270,
+    "url": "https://youtube.com/shorts/TLAo9IbRNPY"
+   },
+   {
+    "title": "¿Qué pasa si la manzana no es lo bastante grande?🍎✨#Shorts",
+    "views": 10770954,
+    "x": 46.7,
+    "duration_s": 57,
+    "channel": "Curiosidad Lab",
+    "subs": 120000,
+    "url": "https://youtube.com/shorts/dJ6BJbEmtKo"
+   },
+   {
+    "title": "Agua vs gaseosa: ¿qué pasa dentro de tu cuerpo? 😳",
+    "views": 5261813,
+    "x": 40.0,
+    "duration_s": 59,
+    "channel": "Clinica Santa Lucia",
+    "subs": 114000,
+    "url": "https://youtube.com/shorts/HLEelLniblM"
+   },
+   {
+    "title": "¿Qué pasa si te quitan la próstata?👇#próstata #saludmasculina #urología #cuerpohumano",
+    "views": 3034035,
+    "x": 37.6,
+    "duration_s": 65,
+    "channel": "Viral Curiosidades",
+    "subs": 9050,
+    "url": "https://youtube.com/shorts/56KOTgAZ7M4"
+   },
+   {
+    "title": "¿Qué Pasa Si Congelas una Burbuja Durante 24 Horas? 😱🫧❄️",
+    "views": 6675128,
+    "x": 33.1,
+    "duration_s": 52,
+    "channel": "Fact Rush",
+    "subs": 2430000,
+    "url": "https://youtube.com/shorts/8o1hJijfoI4"
+   },
+   {
+    "title": "💣 ¿Qué PASARÍA si explotara la BOMBA más PODEROSA bajo el OCÉANO? 🌊",
+    "views": 2162483,
+    "x": 31.1,
+    "duration_s": 59,
+    "channel": "Somos Modo Absurdo",
+    "subs": 7540,
+    "url": "https://youtube.com/shorts/vD0q9b1ny6w"
+   },
+   {
+    "title": "¿Qué pasa si comes 1 kiwi TODAS las noches por 21 días? 🥝💤",
+    "views": 7276571,
+    "x": 29.7,
+    "duration_s": 65,
+    "channel": "vive.fitttt",
+    "subs": 253000,
+    "url": "https://youtube.com/shorts/zpqnxryRhFE"
+   },
+   {
+    "title": "¿Qué pasaría si vendieras TACOS a los VIKINGOS? 🌮⚔️ (Parte 1) #fyp #humor #shorts #vikingos #tacos",
+    "views": 2782060,
+    "x": 27.4,
+    "duration_s": 69,
+    "channel": "Duda Infinita",
+    "subs": 28400,
+    "url": "https://youtube.com/shorts/RaQblW2VtC8"
+   },
+   {
+    "title": "¿Qué pasa si tu mano queda debajo de una máquina cortadora de papel? ✂️ #curiosidades #shorts",
+    "views": 2086259,
+    "x": 23.1,
+    "duration_s": 24,
+    "channel": "SuperMiau",
+    "subs": 47800,
+    "url": "https://youtube.com/shorts/8ouDi5i1fEk"
+   },
+   {
+    "title": "🍳 What Happens When You Eat Eggs Daily? 😱",
+    "views": 4543363,
+    "x": 22.4,
+    "duration_s": 72,
+    "channel": "Facto Nerd",
+    "subs": 13200,
+    "url": "https://youtube.com/shorts/FJPVpLTByEw"
+   },
+   {
+    "title": "¿Qué pasa si te entra chile en los ojos? 🌶️😱#ytshorts",
+    "views": 3903822,
+    "x": 22.0,
+    "duration_s": 26,
+    "channel": "Brain  Facto ",
+    "subs": 363000,
+    "url": "https://youtube.com/shorts/Z0-RUIyy9fY"
+   },
+   {
+    "title": "¿Qué Pasa Si Te TragAS un Diente? 😱🦷🔥",
+    "views": 3816672,
+    "x": 21.5,
+    "duration_s": 21,
+    "channel": "Brain  Facto ",
+    "subs": 363000,
+    "url": "https://youtube.com/shorts/yiwd9PE7ZYU"
+   },
+   {
+    "title": "¿QUÉ PASA SI TE ARRANCAS UNA CANA?",
+    "views": 2134951,
+    "x": 20.9,
+    "duration_s": 59,
+    "channel": "Cuentadato",
+    "subs": 2430,
+    "url": "https://youtube.com/shorts/-NKhjTOV62o"
+   },
+   {
+    "title": "What Happens When You Eat Watermelon? 🍉",
+    "views": 4185827,
+    "x": 20.6,
+    "duration_s": 21,
+    "channel": "NovaCurio",
+    "subs": 6630,
+    "url": "https://youtube.com/shorts/MoKrIOEVKsk"
+   },
+   {
+    "title": "What If Friction Disappeared 5 Seconds",
+    "views": 2968188,
+    "x": 20.1,
+    "duration_s": 49,
+    "channel": "Curious Q ",
+    "subs": 1830,
+    "url": "https://youtube.com/shorts/GhIkJqBgyzI"
+   },
+   {
+    "title": "¿Qué pasaría si todos los humanos saltáramos a la vez?",
+    "views": 3397518,
+    "x": 19.5,
+    "duration_s": 58,
+    "channel": "Situaciones Por Experimentar",
+    "subs": 14300,
+    "url": "https://youtube.com/shorts/NvqVVLE6930"
+   },
+   {
+    "title": "Nobody talks about what happens when water sits in copper…",
+    "views": 2154840,
+    "x": 18.7,
+    "duration_s": 58,
+    "channel": "FitLifeTV",
+    "subs": 1030000,
+    "url": "https://youtube.com/shorts/g8ru_Czeem8"
+   },
+   {
+    "title": "¿Qué pasaría si toda la Tierra estuviera hecha de diamantes? 😱🌍 #viral #shorts",
+    "views": 2491092,
+    "x": 17.7,
+    "duration_s": 26,
+    "channel": "Nest Loop",
+    "subs": 29500,
+    "url": "https://youtube.com/shorts/h3f7wq5Weyk"
+   },
+   {
+    "title": "¿Qué Pasaría Si Cayeras Por Un Agujero Que Atraviesa La Tierra? 🌎 #shorts",
+    "views": 4358957,
+    "x": 17.6,
+    "duration_s": 29,
+    "channel": "Tribus Ocultas",
+    "subs": 184000,
+    "url": "https://youtube.com/shorts/IjaDMP1gx80"
+   },
+   {
+    "title": "¿Qué Pasa Si El Chile Entra En Tus Ojos? 🌶️#shortvideo",
+    "views": 3864244,
+    "x": 16.7,
+    "duration_s": 26,
+    "channel": "Curios World Zone",
+    "subs": 519000,
+    "url": "https://youtube.com/shorts/RCyVMpX611I"
+   },
+   {
+    "title": "What if a black hole passed by Earth? You'd never see it coming. #whatif #space #simulation",
+    "views": 4930480,
+    "x": 16.4,
+    "duration_s": 65,
+    "channel": "Lunarzone Animates",
+    "subs": 32000,
+    "url": "https://youtube.com/shorts/9KLW4rp-ou8"
+   }
+  ]
+ },
+ "n_videos": 560,
+ "n_relevantes": 250,
+ "n_top": 62,
+ "outliers": [
+  {
+   "title": "Boeing 747 crash site at Universal studios Hollywood #shorts",
+   "channel": "SDF Plane Spotting",
+   "views": 7096758,
+   "subs": 27200,
+   "outlier_x": 1017.3,
+   "channel_avg_views": 6976,
+   "duration_s": 18,
+   "published": "2026-08-10",
+   "url": "https://youtube.com/shorts/lWmxnYU-hwo",
+   "like_rate": 0.0029,
+   "comment_rate": 5e-05
+  },
+  {
+   "title": "Me if I had a one wish willow (Obsession parody)",
+   "channel": "The Introverted Attorney",
+   "views": 29433173,
+   "subs": 63700,
+   "outlier_x": 462.9,
+   "channel_avg_views": 63589,
+   "duration_s": 61,
+   "published": "2026-07-05",
+   "url": "https://youtube.com/shorts/HjX64dxmImY",
+   "like_rate": 0.0427,
+   "comment_rate": 0.00036
+  },
+  {
+   "title": "#dcs F16 TARGETS SCUD SITE",
+   "channel": "Venom Cinematic",
+   "views": 11769263,
+   "subs": 90800,
+   "outlier_x": 411.9,
+   "channel_avg_views": 28570,
+   "duration_s": 52,
+   "published": "2026-08-24",
+   "url": "https://youtube.com/shorts/BXTa1CrgF8M",
+   "like_rate": 0.0075,
+   "comment_rate": 0.00014
+  },
+  {
+   "title": "GTA 6: qué pasa si le das tu arma al cajero",
+   "channel": "Centenoh",
+   "views": 1913911,
+   "subs": 19600,
+   "outlier_x": 313.6,
+   "channel_avg_views": 6102,
+   "duration_s": 59,
+   "published": "2026-11-20",
+   "url": "https://youtube.com/shorts/U-CgV3wVeeY",
+   "like_rate": 0.0529,
+   "comment_rate": 0.00075
+  },
+  {
+   "title": "Comment “BALL” if you need it! 🤩❤️ #volleyball #usa #volleyballplayer",
+   "channel": "BarkPocket",
+   "views": 18020633,
+   "subs": 95100,
+   "outlier_x": 305.5,
+   "channel_avg_views": 58987,
+   "duration_s": 13,
+   "published": "2026-10-09",
+   "url": "https://youtube.com/shorts/PhMuxVbmBAY",
+   "like_rate": 0.003,
+   "comment_rate": 1e-05
+  },
+  {
+   "title": "Comment “Halloween” if you want one! 😜🎃 #halloween #horror #halloweenprank #prank #projector",
+   "channel": "Vibra Calm",
+   "views": 23368833,
+   "subs": 54300,
+   "outlier_x": 235.6,
+   "channel_avg_views": 99196,
+   "duration_s": 15,
+   "published": "2026-10-25",
+   "url": "https://youtube.com/shorts/JI36oGVfvmY",
+   "like_rate": 0.004,
+   "comment_rate": 1e-05
+  },
+  {
+   "title": "What Happens If You Eat Chia Seeds Every Day? 🌱🤯 | 3D Animation",
+   "channel": "BlueNova",
+   "views": 9651686,
+   "subs": 11500,
+   "outlier_x": 164.0,
+   "channel_avg_views": 58856,
+   "duration_s": 30,
+   "published": "2026-07-09",
+   "url": "https://youtube.com/shorts/auMVanZ6-QM",
+   "like_rate": 0.0119,
+   "comment_rate": 3e-05
+  },
+  {
+   "title": "⚙️🤯 ¿QUÉ PASA DENTRO DE UNA TRANSMISIÓN CUANDO CAMBIAS DE MARCHA? 🚗",
+   "channel": "CienciasIQ",
+   "views": 6105768,
+   "subs": 75900,
+   "outlier_x": 160.5,
+   "channel_avg_views": 38031,
+   "duration_s": 26,
+   "published": "2026-08-22",
+   "url": "https://youtube.com/shorts/SHlpnFVVuKA",
+   "like_rate": 0.0111,
+   "comment_rate": 6e-05
+  },
+  {
+   "title": "¿Qué pasaría si cambiaras la forma en la que recorres tu ciudad?",
+   "channel": "Unión Europea en México",
+   "views": 35384755,
+   "subs": 1000,
+   "outlier_x": 160.4,
+   "channel_avg_views": 220596,
+   "duration_s": 54,
+   "published": "2026-10-05",
+   "url": "https://youtube.com/shorts/89vn6UeNbK4",
+   "like_rate": 0.0,
+   "comment_rate": null
+  },
+  {
+   "title": "Nespresso - Ne İstediğini Biliyorsan, Benzersiz Nespresso Lezzeti 15\"| TR",
+   "channel": "Nespresso",
+   "views": 43114440,
+   "subs": 877000,
+   "outlier_x": 154.4,
+   "channel_avg_views": 279197,
+   "duration_s": 16,
+   "published": "2026-06-03",
+   "url": "https://youtube.com/shorts/TVcDB_Ttelo",
+   "like_rate": 0.0,
+   "comment_rate": 0.0
+  },
+  {
+   "title": "TESTING IF AMERICAN PIMPLE PATCHES ARE JUST BANDAIDS VS KOREAN ONES",
+   "channel": "Floammi",
+   "views": 28528853,
+   "subs": 34400,
+   "outlier_x": 151.0,
+   "channel_avg_views": 188927,
+   "duration_s": 40,
+   "published": "2026-11-12",
+   "url": "https://youtube.com/shorts/t3Cf1k9iNug",
+   "like_rate": 0.0113,
+   "comment_rate": 9e-05
+  },
+  {
+   "title": "What would happen if Earth fell into a black hole? #space #outerspace #blackhole #spacefacts",
+   "channel": "prodbeatsbymat",
+   "views": 4836159,
+   "subs": 17500,
+   "outlier_x": 142.0,
+   "channel_avg_views": 34059,
+   "duration_s": 88,
+   "published": "2026-10-05",
+   "url": "https://youtube.com/shorts/Zzs458AUj1M",
+   "like_rate": 0.0155,
+   "comment_rate": 0.00055
+  },
+  {
+   "title": "¿Qué pasa si hablas SOLO español en Rusia? #rusia",
+   "channel": "ILIA | RUSIA REAL ",
+   "views": 36123372,
+   "subs": 142000,
+   "outlier_x": 140.2,
+   "channel_avg_views": 257580,
+   "duration_s": 26,
+   "published": "2026-09-05",
+   "url": "https://youtube.com/shorts/ukhwjTWUYJ0",
+   "like_rate": 0.0204,
+   "comment_rate": 6e-05
+  },
+  {
+   "title": "Que pasaría si Sonic muriera 😨 #suscribete #curiosidades #shorts #sonic",
+   "channel": "Zenitsuinsano2.0",
+   "views": 4317140,
+   "subs": 186000,
+   "outlier_x": 132.2,
+   "channel_avg_views": 32645,
+   "duration_s": 59,
+   "published": "2026-07-04",
+   "url": "https://youtube.com/shorts/sp3TjSLlRlQ",
+   "like_rate": 0.0297,
+   "comment_rate": 4e-05
+  },
+  {
+   "title": "Your Fingers Never Actually Touch (3D Zoom to Atoms)",
+   "channel": "How It Works 3D ",
+   "views": 9195665,
+   "subs": 9850,
+   "outlier_x": 114.2,
+   "channel_avg_views": 80548,
+   "duration_s": 63,
+   "published": "2026-11-13",
+   "url": "https://youtube.com/shorts/yFVO4W0hyOg",
+   "like_rate": 0.0143,
+   "comment_rate": 0.00063
+  },
+  {
+   "title": "If these are you kids, please have a word with them #criminals #ireland #busker #plumber #drummer",
+   "channel": "The PlumberDrummerUK",
+   "views": 22971393,
+   "subs": 34900,
+   "outlier_x": 105.9,
+   "channel_avg_views": 216932,
+   "duration_s": 80,
+   "published": "2026-07-21",
+   "url": "https://youtube.com/shorts/08F4RAuyXrk",
+   "like_rate": 0.0158,
+   "comment_rate": 0.00041
+  },
+  {
+   "title": "What Happens Inside Your Body After Eating a Cherry?",
+   "channel": "Dr.Edward",
+   "views": 6669738,
+   "subs": 4270,
+   "outlier_x": 101.5,
+   "channel_avg_views": 65686,
+   "duration_s": 11,
+   "published": "2026-08-29",
+   "url": "https://youtube.com/shorts/TLAo9IbRNPY",
+   "like_rate": 0.0031,
+   "comment_rate": 0.0
+  },
+  {
+   "title": "Que pasaría si... #futbol #mundial2026 #worldcup #football #planetafutbol #fifa",
+   "channel": "Súper Mapping México ",
+   "views": 1387473,
+   "subs": 5750,
+   "outlier_x": 96.1,
+   "channel_avg_views": 14434,
+   "duration_s": 48,
+   "published": "2026-09-15",
+   "url": "https://youtube.com/shorts/MlQNznQBDK8",
+   "like_rate": 0.008,
+   "comment_rate": 0.00012
+  },
+  {
+   "title": "TE LLEVAS EO CHICLE SOLO SI TE SABES LOS COLORES EN INGLÉS 🎨🤩🤯 #youtubeshorts #humor",
+   "channel": "Julieth Cerón Oficial",
+   "views": 25738447,
+   "subs": 1800000,
+   "outlier_x": 94.1,
+   "channel_avg_views": 273492,
+   "duration_s": 18,
+   "published": "2026-07-23",
+   "url": "https://youtube.com/shorts/cLxV-08oTzY",
+   "like_rate": 0.0049,
+   "comment_rate": null
+  },
+  {
+   "title": "What Happens If You Unplug a Bullet Train?",
+   "channel": "Dunebru",
+   "views": 1687528,
+   "subs": 3570,
+   "outlier_x": 89.8,
+   "channel_avg_views": 18791,
+   "duration_s": 66,
+   "published": "2026-11-15",
+   "url": "https://youtube.com/shorts/dUOQ090zXcY",
+   "like_rate": 0.0279,
+   "comment_rate": 0.00013
+  },
+  {
+   "title": "What Happens If You Kill the Father or Son in RDR2?  #rdr2 #reddeadredemption2",
+   "channel": "Redvenge",
+   "views": 17138209,
+   "subs": 81100,
+   "outlier_x": 86.1,
+   "channel_avg_views": 199130,
+   "duration_s": 31,
+   "published": "2026-09-18",
+   "url": "https://youtube.com/shorts/5Mt4qyLxPcU",
+   "like_rate": 0.0263,
+   "comment_rate": 8e-05
+  },
+  {
+   "title": "Comment “zombie” if you want this #explore #halloween",
+   "channel": "CreeporaZombie",
+   "views": 19501332,
+   "subs": 5980,
+   "outlier_x": 82.7,
+   "channel_avg_views": 235803,
+   "duration_s": 18,
+   "published": "2026-09-13",
+   "url": "https://youtube.com/shorts/RAU5QadA8XE",
+   "like_rate": 0.0043,
+   "comment_rate": 0.0
+  },
+  {
+   "title": "If Spirit Halloween had every FNAF animatronic #funny #skit #pov #fnaf #fivenightsatfreddys #memes",
+   "channel": "Willdotcom",
+   "views": 18922206,
+   "subs": 181000,
+   "outlier_x": 76.1,
+   "channel_avg_views": 248615,
+   "duration_s": 61,
+   "published": "2026-10-01",
+   "url": "https://youtube.com/shorts/oAkdfVOul-w",
+   "like_rate": 0.0069,
+   "comment_rate": 9e-05
+  },
+  {
+   "title": "If Bullet From Revolver Fire At A Rhino 😱",
+   "channel": "Mr Hat Films",
+   "views": 13248818,
+   "subs": 44000,
+   "outlier_x": 67.2,
+   "channel_avg_views": 197256,
+   "duration_s": 25,
+   "published": "2026-09-06",
+   "url": "https://youtube.com/shorts/-LvQlVxIMF0",
+   "like_rate": null,
+   "comment_rate": 4e-05
+  },
+  {
+   "title": "New Site🥰 Kitchen🥰 Site - Kilimanoor, TVM🥰 Contact - Sanoop 7907988036",
+   "channel": "Regal Art Interiors",
+   "views": 9934746,
+   "subs": 274000,
+   "outlier_x": 51.4,
+   "channel_avg_views": 193226,
+   "duration_s": 60,
+   "published": "2026-09-17",
+   "url": "https://youtube.com/shorts/fsuASMCxYlk",
+   "like_rate": 0.0142,
+   "comment_rate": 6e-05
+  },
+  {
+   "title": "¿QUÉ PASARÍA si MÉXICO y ARGENTINA juegan la FINAL del MUNDIAL? ⚽🏆",
+   "channel": "Skelly_fut",
+   "views": 3831598,
+   "subs": 176000,
+   "outlier_x": 48.1,
+   "channel_avg_views": 79610,
+   "duration_s": 67,
+   "published": "2026-06-09",
+   "url": "https://youtube.com/shorts/SQS_iXsfBVE",
+   "like_rate": 0.0187,
+   "comment_rate": 0.00051
+  },
+  {
+   "title": "What Happens If Peter Visits Aunt May’s Grave With the Symbiote?",
+   "channel": "The Controller Kingpin",
+   "views": 5430117,
+   "subs": 45600,
+   "outlier_x": 46.8,
+   "channel_avg_views": 115914,
+   "duration_s": 61,
+   "published": "2026-08-19",
+   "url": "https://youtube.com/shorts/7XwRrM4--Cw",
+   "like_rate": 0.0305,
+   "comment_rate": 6e-05
+  },
+  {
+   "title": "¿Qué pasa si la manzana no es lo bastante grande?🍎✨#Shorts",
+   "channel": "Curiosidad Lab",
+   "views": 10770954,
+   "subs": 120000,
+   "outlier_x": 46.7,
+   "channel_avg_views": 230610,
+   "duration_s": 57,
+   "published": "2026-08-18",
+   "url": "https://youtube.com/shorts/dJ6BJbEmtKo",
+   "like_rate": 0.0107,
+   "comment_rate": 1e-05
+  },
+  {
+   "title": "What Happens If You Try to Leave the GTA 6 Map? #shorts #shortsfeed #shortsvideo #gta6",
+   "channel": "Creepy Gamer",
+   "views": 6090041,
+   "subs": 33200,
+   "outlier_x": 46.0,
+   "channel_avg_views": 132271,
+   "duration_s": 47,
+   "published": "2026-11-20",
+   "url": "https://youtube.com/shorts/9hxDcOcePXI",
+   "like_rate": 0.014,
+   "comment_rate": 1e-05
+  },
+  {
+   "title": "Nadie te dice QUE PASARIA si Corea del Norte ATACA AHORA a EE.UU #eeuu #korea",
+   "channel": "Crónicas de Guerras",
+   "views": 3062732,
+   "subs": 3610,
+   "outlier_x": 45.3,
+   "channel_avg_views": 67608,
+   "duration_s": 87,
+   "published": "2026-08-20",
+   "url": "https://youtube.com/shorts/V8coDuj29cg",
+   "like_rate": 0.0096,
+   "comment_rate": 0.00036
+  },
+  {
+   "title": "Oliver tree and others would have been alive if this happened #youtubeshorts",
+   "channel": "hint me tv",
+   "views": 2716052,
+   "subs": 310000,
+   "outlier_x": 43.3,
+   "channel_avg_views": 62775,
+   "duration_s": 41,
+   "published": "2026-06-29",
+   "url": "https://youtube.com/shorts/TvtwS5Quuzk",
+   "like_rate": 0.027,
+   "comment_rate": 0.0074
+  },
+  {
+   "title": "New Site🔥 Full home tour🥰Part 1🥰 Site - Vallikunnam, Alappuzha 🥰 Contact -Sanoop 7907988036",
+   "channel": "Regal Art Interiors",
+   "views": 8121784,
+   "subs": 274000,
+   "outlier_x": 42.0,
+   "channel_avg_views": 193226,
+   "duration_s": 60,
+   "published": "2026-10-22",
+   "url": "https://youtube.com/shorts/-NQGymKNMQM",
+   "like_rate": 0.0151,
+   "comment_rate": 0.00012
+  },
+  {
+   "title": "What Will Happen If You 2 Revolvers Facing Each Other 😱",
+   "channel": "Mr Hat Films",
+   "views": 8287193,
+   "subs": 44000,
+   "outlier_x": 42.0,
+   "channel_avg_views": 197256,
+   "duration_s": 23,
+   "published": "2026-07-23",
+   "url": "https://youtube.com/shorts/LXVUt61FVW8",
+   "like_rate": 0.0055,
+   "comment_rate": 2e-05
+  },
+  {
+   "title": "What Happens If You Drop a Grenade Into a Tank Cannon?",
+   "channel": "StarBoi",
+   "views": 1998869,
+   "subs": 96700,
+   "outlier_x": 41.8,
+   "channel_avg_views": 47795,
+   "duration_s": 22,
+   "published": "2026-11-19",
+   "url": "https://youtube.com/shorts/o9m_78Xytns",
+   "like_rate": 0.002,
+   "comment_rate": 3e-05
+  },
+  {
+   "title": "Agua vs gaseosa: ¿qué pasa dentro de tu cuerpo? 😳",
+   "channel": "Clinica Santa Lucia",
+   "views": 5261813,
+   "subs": 114000,
+   "outlier_x": 40.0,
+   "channel_avg_views": 131486,
+   "duration_s": 59,
+   "published": "2026-06-04",
+   "url": "https://youtube.com/shorts/HLEelLniblM",
+   "like_rate": 0.0209,
+   "comment_rate": 0.00011
+  },
+  {
+   "title": "¿QUÉ PASARÍA si vas a una ESCUELA PÚBLICA en MÉXICO? 🎒🇲🇽",
+   "channel": "Skelly_fut",
+   "views": 3173588,
+   "subs": 176000,
+   "outlier_x": 39.9,
+   "channel_avg_views": 79610,
+   "duration_s": 64,
+   "published": "2026-06-10",
+   "url": "https://youtube.com/shorts/lOb4WD5lFU8",
+   "like_rate": 0.012,
+   "comment_rate": 0.0003
+  },
+  {
+   "title": "Que pasaria si Argentina y Mexico intercambiaran territorios? #parati #countryballs #paisesdelmundo",
+   "channel": "Countryballs__Argentina231",
+   "views": 4974540,
+   "subs": 36500,
+   "outlier_x": 38.6,
+   "channel_avg_views": 128976,
+   "duration_s": 66,
+   "published": "2026-08-23",
+   "url": "https://youtube.com/shorts/hS-9sx1t8pk",
+   "like_rate": 0.018,
+   "comment_rate": 0.00025
+  },
+  {
+   "title": "¿Qué pasa si te quitan la próstata?👇#próstata #saludmasculina #urología #cuerpohumano",
+   "channel": "Viral Curiosidades",
+   "views": 3034035,
+   "subs": 9050,
+   "outlier_x": 37.6,
+   "channel_avg_views": 80660,
+   "duration_s": 65,
+   "published": "2026-11-15",
+   "url": "https://youtube.com/shorts/56KOTgAZ7M4",
+   "like_rate": 0.0187,
+   "comment_rate": 0.00012
+  },
+  {
+   "title": "If you haven’t tried this method yet, I highly recommend you do bestie!🫧 #hair #washday #curlyhair",
+   "channel": "Claudia Silva",
+   "views": 10108600,
+   "subs": 227000,
+   "outlier_x": 37.4,
+   "channel_avg_views": 270601,
+   "duration_s": 62,
+   "published": "2026-08-11",
+   "url": "https://youtube.com/shorts/wFE0N_Akd3A",
+   "like_rate": 0.0323,
+   "comment_rate": 0.00018
+  },
+  {
+   "title": "que pasaría si japon y usa cambian de territorio?",
+   "channel": "𝕤𝕟𝕠𝕨𝕚☆🌨",
+   "views": 1985500,
+   "subs": 17700,
+   "outlier_x": 36.1,
+   "channel_avg_views": 54971,
+   "duration_s": 75,
+   "published": "2026-10-25",
+   "url": "https://youtube.com/shorts/HtTfhtdfneA",
+   "like_rate": 0.0198,
+   "comment_rate": 0.00026
+  },
+  {
+   "title": "Si te gusta mi vídeo, por favor dale un \"me gusta#shorts #funny #fyp #youtube",
+   "channel": "hgvfdujkhgdfj",
+   "views": 8302478,
+   "subs": 32900,
+   "outlier_x": 36.1,
+   "channel_avg_views": 229932,
+   "duration_s": 52,
+   "published": "2026-08-11",
+   "url": "https://youtube.com/shorts/u0iDmKL-ZVM",
+   "like_rate": 0.0102,
+   "comment_rate": 2e-05
+  },
+  {
+   "title": "Si te ríes pierdes Pt 250💀🤣 #shorts #siteriespierdes #intentanoreír #risas #gracioso #chistoso",
+   "channel": "Nyro",
+   "views": 6200100,
+   "subs": 179000,
+   "outlier_x": 35.3,
+   "channel_avg_views": 175843,
+   "duration_s": 12,
+   "published": "2026-09-08",
+   "url": "https://youtube.com/shorts/gsVNCY2Z5go",
+   "like_rate": 0.0066,
+   "comment_rate": 0.00013
+  },
+  {
+   "title": "What would happen if Superman dropped his 500,000 ton key? #science #superman",
+   "channel": "Ben Hopkins",
+   "views": 6510050,
+   "subs": 141000,
+   "outlier_x": 34.1,
+   "channel_avg_views": 191107,
+   "duration_s": 71,
+   "published": "2026-07-19",
+   "url": "https://youtube.com/shorts/4Ju6gkpGuGU",
+   "like_rate": 0.0271,
+   "comment_rate": 0.00031
+  },
+  {
+   "title": "¿Qué Pasa Si Congelas una Burbuja Durante 24 Horas? 😱🫧❄️",
+   "channel": "Fact Rush",
+   "views": 6675128,
+   "subs": 2430000,
+   "outlier_x": 33.1,
+   "channel_avg_views": 201872,
+   "duration_s": 52,
+   "published": "2026-08-12",
+   "url": "https://youtube.com/shorts/8o1hJijfoI4",
+   "like_rate": 0.0348,
+   "comment_rate": 0.00083
+  },
+  {
+   "title": "Si una persona te gusta #shorts #psicologia #amor #viral #desarrollopersonal",
+   "channel": "frases750",
+   "views": 5493277,
+   "subs": 220000,
+   "outlier_x": 33.0,
+   "channel_avg_views": 166630,
+   "duration_s": 41,
+   "published": "2026-06-20",
+   "url": "https://youtube.com/shorts/bCjZ8QvKFqc",
+   "like_rate": 0.0217,
+   "comment_rate": 0.00021
+  },
+  {
+   "title": "¿Qué pasaría si ARGENTINA DESAPARECIERA? 🇦🇷😢 #countryballs #argentina  #balls #malvinas #shorts",
+   "channel": " MapaVerso",
+   "views": 4416735,
+   "subs": 124000,
+   "outlier_x": 32.2,
+   "channel_avg_views": 136994,
+   "duration_s": 53,
+   "published": "2026-10-25",
+   "url": "https://youtube.com/shorts/WqD0VPEhzuA",
+   "like_rate": 0.0433,
+   "comment_rate": 0.01151
+  },
+  {
+   "title": "Que pasaría si despiertas en una partida de free fire",
+   "channel": "Hombre ia ",
+   "views": 2785073,
+   "subs": 60000,
+   "outlier_x": 31.9,
+   "channel_avg_views": 87423,
+   "duration_s": 90,
+   "published": "2026-06-22",
+   "url": "https://youtube.com/shorts/9aoW5yLdm_E",
+   "like_rate": 0.0407,
+   "comment_rate": 0.00012
+  },
+  {
+   "title": "What Happens If You IGNORE Lucia in GTA 6?",
+   "channel": "OutplayMode",
+   "views": 2235537,
+   "subs": 2010,
+   "outlier_x": 31.4,
+   "channel_avg_views": 71241,
+   "duration_s": 55,
+   "published": "2026-11-15",
+   "url": "https://youtube.com/shorts/LWdIcZKkgpM",
+   "like_rate": 0.0137,
+   "comment_rate": 0.00039
+  },
+  {
+   "title": "💣 ¿Qué PASARÍA si explotara la BOMBA más PODEROSA bajo el OCÉANO? 🌊",
+   "channel": "Somos Modo Absurdo",
+   "views": 2162483,
+   "subs": 7540,
+   "outlier_x": 31.1,
+   "channel_avg_views": 69543,
+   "duration_s": 59,
+   "published": "2026-11-15",
+   "url": "https://youtube.com/shorts/vD0q9b1ny6w",
+   "like_rate": 0.0188,
+   "comment_rate": 0.00012
+  },
+  {
+   "title": "¿Qué pasa si comes 1 kiwi TODAS las noches por 21 días? 🥝💤",
+   "channel": "vive.fitttt",
+   "views": 7276571,
+   "subs": 253000,
+   "outlier_x": 29.7,
+   "channel_avg_views": 245272,
+   "duration_s": 65,
+   "published": "2026-11-03",
+   "url": "https://youtube.com/shorts/zpqnxryRhFE",
+   "like_rate": 0.0235,
+   "comment_rate": 9e-05
+  },
+  {
+   "title": "¿Qué pasaría si vendieras TACOS a los VIKINGOS? 🌮⚔️ (Parte 1) #fyp #humor #shorts #vikingos #tacos",
+   "channel": "Duda Infinita",
+   "views": 2782060,
+   "subs": 28400,
+   "outlier_x": 27.4,
+   "channel_avg_views": 101404,
+   "duration_s": 69,
+   "published": "2026-11-05",
+   "url": "https://youtube.com/shorts/RaQblW2VtC8",
+   "like_rate": 0.0263,
+   "comment_rate": 6e-05
+  },
+  {
+   "title": "What Will Happen If You Fire A Shotgun Bullet From A Revolver 😱",
+   "channel": "Mr Hat Films",
+   "views": 5322697,
+   "subs": 44000,
+   "outlier_x": 27.0,
+   "channel_avg_views": 197256,
+   "duration_s": 26,
+   "published": "2026-07-06",
+   "url": "https://youtube.com/shorts/ZcLgApf2_Ek",
+   "like_rate": 0.0158,
+   "comment_rate": 0.00043
+  },
+  {
+   "title": "¿Que pasaría si Jax hubiese atacado a Pomni? || Digital Circus Edit || by:@Gooseworx and @GLITCH",
+   "channel": "Rapicrack",
+   "views": 2233967,
+   "subs": 33400,
+   "outlier_x": 26.9,
+   "channel_avg_views": 82913,
+   "duration_s": 51,
+   "published": "2026-06-27",
+   "url": "https://youtube.com/shorts/oVt-ZoP9Neo",
+   "like_rate": 0.0413,
+   "comment_rate": 0.00072
+  },
+  {
+   "title": "What Happens If You're BROKE in GTA 5? #gta #gta5 #gtav",
+   "channel": "L-LAB",
+   "views": 1617815,
+   "subs": 8750,
+   "outlier_x": 24.4,
+   "channel_avg_views": 66330,
+   "duration_s": 66,
+   "published": "2026-11-13",
+   "url": "https://youtube.com/shorts/SKCrY8LBR5s",
+   "like_rate": 0.0384,
+   "comment_rate": 4e-05
+  },
+  {
+   "title": "Woodpeckers Treat Everything Like a Job Site # #funny #birds #woodpecker #fyp",
+   "channel": "Misty Creatures ",
+   "views": 6723700,
+   "subs": 13700,
+   "outlier_x": 24.0,
+   "channel_avg_views": 279987,
+   "duration_s": 74,
+   "published": "2026-08-04",
+   "url": "https://youtube.com/shorts/aGMlw-09rT4",
+   "like_rate": 0.0253,
+   "comment_rate": 0.00113
+  },
+  {
+   "title": "¿Qué pasa si tu mano queda debajo de una máquina cortadora de papel? ✂️ #curiosidades #shorts",
+   "channel": "SuperMiau",
+   "views": 2086259,
+   "subs": 47800,
+   "outlier_x": 23.1,
+   "channel_avg_views": 90396,
+   "duration_s": 24,
+   "published": "2026-09-22",
+   "url": "https://youtube.com/shorts/8ouDi5i1fEk",
+   "like_rate": 0.0104,
+   "comment_rate": 1e-05
+  },
+  {
+   "title": "🍳 What Happens When You Eat Eggs Daily? 😱",
+   "channel": "Facto Nerd",
+   "views": 4543363,
+   "subs": 13200,
+   "outlier_x": 22.4,
+   "channel_avg_views": 203181,
+   "duration_s": 72,
+   "published": "2026-10-26",
+   "url": "https://youtube.com/shorts/FJPVpLTByEw",
+   "like_rate": null,
+   "comment_rate": 3e-05
+  },
+  {
+   "title": "si te quedas colgado de una pared durante 24 horas en Todos los GTA #gta #gta5 #gta6 #fyp",
+   "channel": "FukencioGTA ",
+   "views": 4616910,
+   "subs": 385000,
+   "outlier_x": 22.3,
+   "channel_avg_views": 206734,
+   "duration_s": 51,
+   "published": "2026-11-22",
+   "url": "https://youtube.com/shorts/gXgnrPAwg0o",
+   "like_rate": 0.0262,
+   "comment_rate": 7e-05
+  },
+  {
+   "title": "Si una persona te gusta por su cuerpo...#motivacion #reflexion #desarrollopersonal #jezuzero #frases",
+   "channel": "JEZUZERO",
+   "views": 4998007,
+   "subs": 476000,
+   "outlier_x": 22.1,
+   "channel_avg_views": 225741,
+   "duration_s": 41,
+   "published": "2026-06-08",
+   "url": "https://youtube.com/shorts/Etn7dgxuFAY",
+   "like_rate": 0.0467,
+   "comment_rate": 0.00047
+  },
+  {
+   "title": "¿Qué pasa si te entra chile en los ojos? 🌶️😱#ytshorts",
+   "channel": "Brain  Facto ",
+   "views": 3903822,
+   "subs": 363000,
+   "outlier_x": 22.0,
+   "channel_avg_views": 177623,
+   "duration_s": 26,
+   "published": "2026-10-14",
+   "url": "https://youtube.com/shorts/Z0-RUIyy9fY",
+   "like_rate": 0.0367,
+   "comment_rate": 2e-05
+  }
+ ],
+ "n_outliers": 96,
+ "top_videos": [
+  {
+   "title": "What if you just booked it? Easy. | Booking.com",
+   "channel": "Booking.com",
+   "views": 571483216,
+   "views_per_day": 3337357.3,
+   "duration_s": 16,
+   "like_rate": 0.0,
+   "url": "https://youtube.com/shorts/PWirW1fX2XY",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "Stuffy office? Go on. Book a destination with some fresh air. It’s easy. \n\n- Visit our website: https://www.booking.com/ \n- Find us on Facebook: https://www.facebook.com/bookingcomUS/ \n- Follow us on "
+  },
+  {
+   "title": "What If Humans Had Hummingbird Hearts 🤔",
+   "channel": "Zack D. Films",
+   "views": 32579073,
+   "views_per_day": 1709805.6,
+   "duration_s": 38,
+   "like_rate": 0.0192,
+   "url": "https://youtube.com/shorts/ob4_mDwWkM0",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": ""
+  },
+  {
+   "title": "Nadie Sabe Qué PASA Si Tu MADRE Llega Al TRES 😨",
+   "channel": "Gufy Green",
+   "views": 1625381,
+   "views_per_day": 767797.1,
+   "duration_s": 45,
+   "like_rate": 0.0198,
+   "url": "https://youtube.com/shorts/vhgx67lLcfc",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "En este pueblo ninguna madre ha llegado nunca al tres: se quedan en el dos y medio, como mucho en el dos y tres cuartos. Yo me pasé la vida intentándolo… hasta que llegó. 😨\n#shorts #animacion #histori"
+  },
+  {
+   "title": "What if Our Sun Disappeared 😱",
+   "channel": "FactoHolic",
+   "views": 58588758,
+   "views_per_day": 718767.2,
+   "duration_s": 83,
+   "like_rate": 0.0243,
+   "url": "https://youtube.com/shorts/cheZmAzbJME",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "#facts #factoholic #factaholic #facthilic #factholic"
+  },
+  {
+   "title": "¿Qué pasaría si cambiaras la forma en la que recorres tu ciudad?",
+   "channel": "Unión Europea en México",
+   "views": 35384755,
+   "views_per_day": 681849.6,
+   "duration_s": 54,
+   "like_rate": 0.0,
+   "url": "https://youtube.com/shorts/89vn6UeNbK4",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "¿Qué pasaría si cambiaras la forma en la que recorres tu ciudad?\n\nErasmo, de Guadalajara, empezó a andar en bici y descubrió nuevos lugares. Cuando Ana decidió volver a hacerlo en Toluca, y hoy impuls"
+  },
+  {
+   "title": "What Would Happen If You Jumped Through a Hole in the Earth😱 #facts #shorts",
+   "channel": "Sumiit Facts",
+   "views": 3761979,
+   "views_per_day": 667102.9,
+   "duration_s": 24,
+   "like_rate": null,
+   "url": "https://youtube.com/shorts/h_YiyJCKkuk",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "#ytshorts #explore #factsinhindi"
+  },
+  {
+   "title": "What If You Built a Dog With 3 Heads?! 🐕😱 #shorts",
+   "channel": "Dr. Tie",
+   "views": 9661530,
+   "views_per_day": 596569.9,
+   "duration_s": 77,
+   "like_rate": 0.0271,
+   "url": "https://youtube.com/shorts/DDPRBDir3uk",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": ""
+  },
+  {
+   "title": "What If The Hoover Dam Was Made Of Humans 😨",
+   "channel": "Zack D. Films",
+   "views": 14463258,
+   "views_per_day": 596113.3,
+   "duration_s": 38,
+   "like_rate": 0.0327,
+   "url": "https://youtube.com/shorts/orbNiULu_t0",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": ""
+  },
+  {
+   "title": "¿Qué pasa si siembras maíz y frijol juntos? 🌽🫘 #Shorts",
+   "channel": "Incredibel Planet",
+   "views": 8643014,
+   "views_per_day": 546453.9,
+   "duration_s": 61,
+   "like_rate": 0.0178,
+   "url": "https://youtube.com/shorts/Ah5qTmEHlrI",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "🌽🫘 ¿Qué pasaría si sembraras maíz y frijol en el mismo agujero?\n\nEn este video verás, paso a paso, cómo germinan las dos semillas, cómo crecen sus raíces bajo la tierra y cómo el frijol termina trepan"
+  },
+  {
+   "title": "⚡ ¿Qué Pasa Dentro de un Cargador Cuando Cargas tu Móvil? 😱🔌 #Electricidad",
+   "channel": "hecho Secreta",
+   "views": 17496135,
+   "views_per_day": 544786.0,
+   "duration_s": 22,
+   "like_rate": null,
+   "url": "https://youtube.com/shorts/pvPPgc3typQ",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "⚡ ¿Qué Pasa Dentro de un Cargador Cuando Cargas tu Móvil? 😱🔌\n\n\n⚡ ¿Alguna vez te has preguntado qué sucede dentro de un cargador cuando conectas tu móvil? 🔌🐭 ¡Descubre esta divertida representación de "
+  },
+  {
+   "title": "What If You Fell Overboard? 😱",
+   "channel": "Aquish",
+   "views": 9468709,
+   "views_per_day": 529659.1,
+   "duration_s": 61,
+   "like_rate": 0.0173,
+   "url": "https://youtube.com/shorts/FpxVsDJpuhI",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "#minecraft #shorts"
+  },
+  {
+   "title": "What if We Could Stop Time 😱",
+   "channel": "FactoHolic",
+   "views": 68366730,
+   "views_per_day": 480426.0,
+   "duration_s": 75,
+   "like_rate": 0.0234,
+   "url": "https://youtube.com/shorts/hmfsxpA_Amw",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "#factaholic #facts #facthilic #factholic #factoholic"
+  },
+  {
+   "title": "Y SI EL ARCANGEL MIGUEL SE ENFRENTA AL CHAVO TIENE HAMBRE? #shorts #chavodel8 #biblia",
+   "channel": "OnlyGOD",
+   "views": 2854816,
+   "views_per_day": 479764.0,
+   "duration_s": 70,
+   "like_rate": 0.0224,
+   "url": "https://youtube.com/shorts/MRKGL2LC8rQ",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "Y SI EL ARCANGEL MIGUEL SE ENFRENTA AL CHAVO TIENE HAMBRE? #shorts #chavodel8 #biblia #religion \n📱 Sígueme en redes sociales:\n➡️ TikTok: https://www.tiktok.com/@onlygodoficial\n➡️Facebook: https://www."
+  },
+  {
+   "title": "¿Qué Pasa Dentro de la Pared al Cargar tu Móvil? 🤯",
+   "channel": "Mente misteriosa",
+   "views": 16250948,
+   "views_per_day": 460582.3,
+   "duration_s": 19,
+   "like_rate": null,
+   "url": "https://youtube.com/shorts/XRMMQv3m50M",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "¿Qué Pasa Dentro de la Pared al Cargar tu Móvil? 🤯\n\n\n\n🔌🤯 ¿Alguna vez te has preguntado qué sucede dentro de la pared cuando conectas tu cargador?\n¡Imagina un pequeño trabajador que despierta al instan"
+  },
+  {
+   "title": "What If Your Hair Had Nerves 😱",
+   "channel": "Zack D. Films",
+   "views": 22326833,
+   "views_per_day": 426864.1,
+   "duration_s": 26,
+   "like_rate": 0.0311,
+   "url": "https://youtube.com/shorts/jgsIDwOiERQ",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": ""
+  },
+  {
+   "title": "What If You Were Chained To Your Crush?",
+   "channel": "CubeINC",
+   "views": 9539317,
+   "views_per_day": 354020.6,
+   "duration_s": 84,
+   "like_rate": 0.0254,
+   "url": "https://youtube.com/shorts/vz0AjMk0zuA",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "If you were chained to your crush for 1 TRILLION years, could you actually handle it?\n\n#roblox #shorts"
+  },
+  {
+   "title": "What If Time Stopped For 5 Seconds",
+   "channel": "Molli Kroni",
+   "views": 15554281,
+   "views_per_day": 341278.4,
+   "duration_s": 46,
+   "like_rate": 0.0265,
+   "url": "https://youtube.com/shorts/T2IXHs8UKd0",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": ""
+  },
+  {
+   "title": "What if You Become Invisible 😱",
+   "channel": "FactoHolic",
+   "views": 32799333,
+   "views_per_day": 340579.2,
+   "duration_s": 80,
+   "like_rate": 0.0309,
+   "url": "https://youtube.com/shorts/ajj8roMSkYs",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "#facts #factoholic #factaholic #facthilic #factholic"
+  },
+  {
+   "title": "What if You Fart in Space 😱",
+   "channel": "FactoHolic",
+   "views": 58937129,
+   "views_per_day": 338127.7,
+   "duration_s": 43,
+   "like_rate": 0.0201,
+   "url": "https://youtube.com/shorts/t7k7WPGMN_g",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "#factaholic #facts #facthilic #factholic #factoholic"
+  },
+  {
+   "title": "What Happens If You Average Everything?",
+   "channel": "Sambucha",
+   "views": 4298061,
+   "views_per_day": 328981.7,
+   "duration_s": 52,
+   "like_rate": 0.0343,
+   "url": "https://youtube.com/shorts/5bGwI6R_4_A",
+   "hook": "",
+   "thumbnail_text": "",
+   "notes": "Follow me here:\nInstagram ► https://www.instagram.com/sambucha\nX ► https://www.x.com/sambucha"
+  }
+ ],
+ "title_patterns": {
+  "pregunta «¿qué pasaría si…?»": {
+   "top": 0.55,
+   "resto": 0.47
+  },
+  "segunda persona (tú/te)": {
+   "top": 0.5,
+   "resto": 0.37
+  },
+  "número / cifra": {
+   "top": 0.16,
+   "resto": 0.16
+  },
+  "superlativo / extremo": {
+   "top": 0.08,
+   "resto": 0.09
+  },
+  "supervivencia / peligro": {
+   "top": 0.05,
+   "resto": 0.06
+  },
+  "tiempo concreto (días/años)": {
+   "top": 0.03,
+   "resto": 0.04
+  },
+  "con emoji": {
+   "top": 0.68,
+   "resto": 0.43
+  },
+  "en MAYÚSCULAS (alguna palabra)": {
+   "top": 0.21,
+   "resto": 0.29
+  }
+ },
+ "topics": {
+  "fantasía / poderes": {
+   "videos": 3,
+   "mediana_vistas": 23052715,
+   "en_top": 2
+  },
+  "tecnología": {
+   "videos": 8,
+   "mediana_vistas": 12101862,
+   "en_top": 4
+  },
+  "tierra / catástrofes": {
+   "videos": 17,
+   "mediana_vistas": 4930480,
+   "en_top": 4
+  },
+  "espacio": {
+   "videos": 13,
+   "mediana_vistas": 4836159,
+   "en_top": 5
+  },
+  "supervivencia": {
+   "videos": 11,
+   "mediana_vistas": 4298604,
+   "en_top": 3
+  },
+  "cuerpo humano": {
+   "videos": 42,
+   "mediana_vistas": 4077650,
+   "en_top": 8
+  },
+  "animales": {
+   "videos": 4,
+   "mediana_vistas": 3935574,
+   "en_top": 0
+  },
+  "dinero / poder": {
+   "videos": 4,
+   "mediana_vistas": 2931076,
+   "en_top": 0
+  },
+  "historia": {
+   "videos": 2,
+   "mediana_vistas": 2622621,
+   "en_top": 1
+  }
+ },
+ "top_words": [
+  [
+   "pasa",
+   16
+  ],
+  [
+   "pasaria",
+   13
+  ],
+  [
+   "happens",
+   8
+  ],
+  [
+   "earth",
+   3
+  ],
+  [
+   "cuando",
+   3
+  ],
+  [
+   "could",
+   3
+  ],
+  [
+   "were",
+   3
+  ],
+  [
+   "space",
+   3
+  ],
+  [
+   "shazam",
+   3
+  ],
+  [
+   "curiosidades",
+   3
+  ],
+  [
+   "tomas",
+   3
+  ],
+  [
+   "humans",
+   2
+  ],
+  [
+   "through",
+   2
+  ],
+  [
+   "with",
+   2
+  ],
+  [
+   "dentro",
+   2
+  ],
+  [
+   "movil",
+   2
+  ],
+  [
+   "time",
+   2
+  ],
+  [
+   "arcangel",
+   2
+  ],
+  [
+   "miguel",
+   2
+  ],
+  [
+   "enfrenta",
+   2
+  ],
+  [
+   "biblia",
+   2
+  ],
+  [
+   "prostata",
+   2
+  ],
+  [
+   "cuerpohumano",
+   2
+  ],
+  [
+   "oceano",
+   2
+  ],
+  [
+   "duck",
+   2
+  ]
+ ],
+ "duration_top": {
+  "mediana_s": 49.0,
+  "min_s": 6,
+  "max_s": 84
+ },
+ "title_len_top": {
+  "mediana": 47.0
+ },
+ "top_channels": [
+  [
+   "Zack D. Films",
+   6
+  ],
+  [
+   "FactoHolic",
+   4
+  ],
+  [
+   "Mateo Ferruz",
+   3
+  ],
+  [
+   "OnlyGOD",
+   2
+  ],
+  [
+   "YOSOYBORJAB",
+   2
+  ],
+  [
+   "Henreee",
+   2
+  ],
+  [
+   "Cosmo Teorías",
+   2
+  ],
+  [
+   "Soyalerios",
+   2
+  ],
+  [
+   "Booking.com",
+   1
+  ],
+  [
+   "Gufy Green",
+   1
+  ]
+ ],
+ "hooks": []
+}
