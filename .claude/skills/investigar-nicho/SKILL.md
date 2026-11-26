@@ -106,6 +106,12 @@ de título top frente al resto, temas, palabras, canales), `analysis_<fecha>.jso
   el resto, mediana 58 s frente a 51 s). Lo que cambia es la premisa y los primeros 2 segundos: prueba formatos, no
   longitudes.
 
+**Estrategia vigente (2026-11-26, decidida con el usuario):** objetivo = un viral de visitas; formatos A («¿Qué pasa si
+comes X cada día?») y B (micro-accidentes del cuerpo); tanda de 3 = A + B de 50-60 s + 1 corto de 25-35 s. El usuario
+no puede acceder a «vistos frente a deslizados» ni al % visto, así que se aprende de la investigación externa y de las
+cifras públicas. Se guarda en `style_guide.json` → `estrategia` y el banco de ideas la premia (+22). Revísala cada
+tanda con las vistas y los «me gusta» publicados; si un formato no supera a los demás tras 3 Shorts, cámbialo.
+
 ## Paso 4 · Cerrar el ciclo (validar)
 
 Cuando haya cifras de los Shorts publicados después de aplicar la guía:

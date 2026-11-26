@@ -32,7 +32,11 @@
   "Giro a mitad del vídeo: pasar de los datos generales a UNA persona real con nombre y año y contar su historia con remate («Casi nadie sobrevive a algo así. Casi.» Vesna Vulović 1972; Provenzano y Al Capone, condenado por impuestos y no por sus crímenes; Michel Siffre seis meses bajo tierra) (propio, obs.)",
   "Tono con humor seco: un comentario irónico cada 4-5 escenas («Muy glamuroso todo», «Por cierto, su tarjeta decía que vendía muebles usados»), sin burlarse de víctimas reales (propio, obs.)",
   "Cierre con veredicto breve y pregunta que pide postura: «Casi todos los grandes capos acaban entre rejas… ¿Seguirías queriendo ser el jefe?» (propio, obs.)",
-  "Explotar y explorar: 2 de cada 3 Shorts siguen la fórmula ganadora (premisa universal + caso real con giro) y 1 de cada 3 prueba algo distinto; comparar sus métricas con las de los ganadores antes de tocar la fórmula (propio, obs.)"
+  "Explotar y explorar: 2 de cada 3 Shorts siguen la fórmula ganadora (premisa universal + caso real con giro) y 1 de cada 3 prueba algo distinto; comparar sus métricas con las de los ganadores antes de tocar la fórmula (propio, obs.)",
+  "(decisión 2026-11-26) Objetivo: un viral de visitas. Cada tanda de 3 Shorts = formato A («¿Qué pasa si comes X todos los días?») 50-60 s + formato B (micro-accidente del cuerpo) 50-60 s + 1 Short corto de 25-35 s con un único dato muy visual; la fórmula «premisa universal + caso real» pasa a ser secundaria",
+  "(decisión, medido en atípicos) Título en PRESENTE y con acción cotidiana concreta: «¿Qué pasa si [comes/te pasa X] [cada día / N días]?» + 1-2 emojis (objeto + reacción 😱🤯); el presente pesa 59 % en los atípicos frente a 46 % del conjunto. Ejemplos ajenos como estructura, no para copiar: «¿Qué pasa si comes 1 kiwi todas las noches 21 días? 🥝💤», «¿Qué pasa si te entra chile en los ojos? 🌶️😱»",
+  "(decisión) Short corto de 25-35 s: 8-9 escenas, 70-95 palabras, `target_seconds` [22, 38]; gancho en la primera escena (≤ 2,5 s), UN dato central con número en pantalla y cierre en bucle que invite a volver a verlo",
+  "(decisión) Cada Short A/B lleva un dato o caso verificable con fuente (estudio, informe médico, caso publicado) y una consecuencia visual que se vea en pantalla (color de piel, órgano, objeto); sin consejos médicos ni burlas"
  ],
  "preferred_topics": [
   "cuerpo humano",
@@ -202,5 +206,20 @@
    }
   }
  },
- "preferred_topics_locked": true
+ "preferred_topics_locked": true,
+ "estrategia": {
+  "decidida": "2026-11-26",
+  "objetivo": "un viral de visitas (el canal está en 1.500-2.500 visitas y ~50 me gusta por Short)",
+  "formatos_prioritarios": {
+   "A": "«¿Qué pasa si comes X todos los días / N días?» (cuerpo y comida cotidiana con efecto real)",
+   "B": "micro-accidentes del cuerpo que «le pasan a cualquiera» (chile en los ojos, tragarse un diente, aguantar un estornudo)"
+  },
+  "tanda_de_3": [
+   "Short A de 50-60 s",
+   "Short B de 50-60 s",
+   "Short corto de 25-35 s (A o B, un solo dato muy visual)"
+  ],
+  "metricas_propias": "el usuario NO puede acceder a «vistos frente a deslizados» ni al % visto: aprender solo de la investigación externa y de las cifras públicas (vistas, me gusta)",
+  "evidencia": "data/research/report_2026-11-26.md: 560 vídeos, 32 atípicos de canales pequeños (≥8× su canal); cuerpo/comida 38 % vs 17 %; duración 51-65 s 38 % vs 23 %"
+ }
 }

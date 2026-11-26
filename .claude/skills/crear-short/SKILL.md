@@ -12,6 +12,9 @@ description: Crea un YouTube Short animado del canal «Hipotéticos» de princip
    un caso real con nombre y año, humor seco, cierre con postura. Sigue la fórmula en 2 de cada 3 Shorts y prueba
    algo distinto en el tercero. Si no hay ganadores registrados, pregunta cuáles han ido mejor
    (`python -m fabrica research --winner <slug> ...`).
+   Lee también `estrategia` en esa guía (objetivo y formatos vigentes). Tanda estándar: Short A (comer X cada día)
+   + Short B (micro-accidente del cuerpo) de 50-60 s + 1 **Short corto de 25-35 s** (8-9 escenas, 70-95 palabras,
+   `target_seconds` [22, 38], un único dato visual con número en pantalla, cierre en bucle).
 2. Elige la idea: `python -m fabrica ideas` (puntúa y descarta duplicados del registro `data/registry.sqlite`).
 3. Mira el catálogo del motor para saber qué se puede dibujar:
    `python -c "from fabrica.script.writer import catalog; print(catalog())"`.

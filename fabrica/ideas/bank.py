@@ -84,6 +84,21 @@ SEED_IDEAS = [
     ("¿Qué pasaría si te tocara la lotería de 300 millones?", "vida"),                    # ganadores arruinados
     ("¿Qué pasaría si no usaras el móvil 1 año?", "vida"),                                # desintoxicación digital
     ("¿Qué pasaría si fueras presidente del Gobierno un solo día?", "vida"),
+    # Series de los atípicos de canales pequeños (decisión 2026-11-26, ver estrategia en style_guide.json).
+    # Formato A «comer X cada día» (cuerpo y comida cotidiana). VERIFICAR el efecto con fuentes al escribir el guion:
+    ("¿Qué pasa si comes 3 zanahorias al día durante un mes?", "cuerpo"),               # carotenemia: piel anaranjada
+    ("¿Qué pasa si bebes agua con limón todas las mañanas?", "cuerpo"),
+    ("¿Qué pasa si comes un ajo crudo todos los días?", "cuerpo"),
+    ("¿Qué pasa si comes 2 plátanos al día durante 30 días?", "cuerpo"),
+    ("¿Qué pasa si comes nueces todos los días durante 1 mes?", "cuerpo"),
+    ("¿Qué pasa si tomas 5 cafés al día durante una semana?", "cuerpo"),
+    # Formato B «micro-accidentes del cuerpo» (le pasan a cualquiera):
+    ("¿Qué pasa si aguantas un estornudo?", "cuerpo"),                                  # caso publicado: garganta desgarrada (BMJ 2018)
+    ("¿Qué pasa si te tragas un chicle?", "cuerpo"),                                    # mito de los 7 años
+    ("¿Qué pasa si te tragas una pila de botón?", "cuerpo"),
+    ("¿Qué pasa si te pisas un clavo oxidado?", "cuerpo"),                              # tétanos
+    ("¿Qué pasa si te quedas dormido con las lentillas puestas?", "cuerpo"),
+    ("¿Qué pasa si te pega el hipo y no se te quita en años?", "cuerpo"),               # Charles Osborne, 1922-1990
 ]
 
 # Shorts ya producidos (PARA_SUBIR/ y samples/): cuentan como publicados para no repetirlos
@@ -174,6 +189,24 @@ def _niche_bonus(idea: str) -> float:
     return 0.0
 
 
+# Formatos prioritarios decididos el 2026-11-26 (style_guide.json → estrategia): presente + acción cotidiana del cuerpo.
+_FORMAT_A = re.compile(r"qu[eé] pasa si (?:comes|bebes|tomas|comieras|bebieras)\b.*(?:todos los d[ií]as|al d[ií]a|cada d[ií]a|todas las|durante|\d)|"
+                       r"qu[eé] pasa si (?:comes|bebes|tomas) un", re.I)
+_FORMAT_B = re.compile(r"qu[eé] pasa si (?:te|aguantas|tu)\b.*(?:traga|estornud|chicle|pila|clavo|lentill|hipo|ojos|diente|cana|pica|"
+                       r"muerde|pisas|dormido)|qu[eé] pasa si aguantas", re.I)
+
+
+def _strategy_bonus(idea: str) -> float:
+    """+22 si la idea es del formato A («comer X cada día») o B (micro-accidente del cuerpo), los priorizados para el viral."""
+    try:
+        from ..research.niche import style_guide
+        if not (style_guide() or {}).get("estrategia"):
+            return 0.0
+    except Exception:
+        return 0.0
+    return 22.0 if (_FORMAT_A.search(idea) or _FORMAT_B.search(idea)) else 0.0
+
+
 def _own_bonus(idea: str) -> float:
     """+0 a +8 si el molde de la premisa coincide con el de los Shorts que mejor han funcionado en NUESTRO canal."""
     try:
@@ -192,7 +225,7 @@ def ranked_ideas(n: int = 15) -> list[tuple[float, str]]:
     for idea, cat in pool:
         if reg.is_duplicate(idea) or any(similarity(idea, p) >= 0.6 for p in published):
             continue
-        scored.append((round(min(100, heuristic_score(idea, published, bonus, cat) + _niche_bonus(idea) + _own_bonus(idea)), 1), idea))
+        scored.append((round(min(100, heuristic_score(idea, published, bonus, cat) + _niche_bonus(idea) + _own_bonus(idea) + _strategy_bonus(idea)), 1), idea))
     scored.sort(reverse=True)
     return scored[:n]
 
